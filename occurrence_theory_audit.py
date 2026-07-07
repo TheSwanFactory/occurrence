@@ -204,7 +204,7 @@ def test_zero_divisor_graph(OT):
     print("\n" + "="*70)
     print("TEST 8: ZERO-DIVISOR CRACK TOPOLOGY")
     print("="*70)
-    print("Structural validation only: not part of the four algebra gates.")
+    print("Structural diagnostic: not one of the registered algebra gates.")
     
     zds = OT.sample_crack(84)
     
@@ -220,7 +220,7 @@ def test_zero_divisor_graph(OT):
     degrees = [len(graph[i]) for i in range(84)]
     is_four_regular = all(d == 4 for d in degrees)
     print(f"[T8] Zero-divisor graph: {len(zds)} vertices")
-    print(f"     4-regular diagnostic: {is_four_regular} (structural note, not a gate)")
+    print(f"     4-regularity check: {is_four_regular} (diagnostic, not a claimed gate)")
     print(f"     Diameter ~3, 7 components (one per Fano line)")
     
     # Residue conservation: octonion content of zx is algebra-internal
@@ -244,9 +244,9 @@ def test_no_autonomy(OT):
     print("\n" + "="*70)
     print("TEST 9: NO-AUTONOMY & FUNCTOR STABILIZER")
     print("="*70)
-    # T8 and T9 below are structural validation, not gate verification.
-    # Gates are composition, antisymmetry, quadratic identity, and Moufang.
-    # If those four pass, the algebra implementation is correct.
+    # This section reports structural diagnostics, not gate verification.
+    # The registered gates are composition, antisymmetry, quadratic identity,
+    # and Moufang; passing them certifies that the audit can proceed.
     
     # (i) L_x, R_x antisymmetric => continuous evolution isometric
     x = OT.rng.standard_normal(OT.dim)
@@ -279,7 +279,7 @@ def test_no_autonomy(OT):
         frontier = new
     
     print(f"[T9] Lie-closure dimension = {len(basis)}")
-    print(f"     Full End(𝕊) dimension = {OT.dim**2}; this comparison is structural, not a gate")
+    print(f"     Full End(𝕊) dimension = {OT.dim**2}; proper Lie closure is expected here")
 
 
 def test_invariant_measure(OT):
