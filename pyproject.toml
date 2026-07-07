@@ -13,8 +13,7 @@ authors = [
   { name = "The Swan Factory" }
 ]
 dependencies = [
-  "numpy",
-  "exceptional-algebras-lab"
+  "numpy"
 ]
 
 [project.scripts]
