@@ -16,6 +16,8 @@ measurement, interpretation, and conjecture using explicit ledger tags:
 
 ## Files
 
+- `topographo/` - reusable Python package for Cayley-Dickson algebra,
+  validation gates, operators, and SSD helpers.
 - `occurrence-theory.md` - main paper draft.
 - `occurrence_theory_audit.py` - numerical audit and verification script for
   the algebraic claims.
@@ -39,10 +41,36 @@ the audit at runtime.
 uv run python occurrence_theory_audit.py
 ```
 
-For editable console-script installation:
+For editable package installation:
 
 ```bash
 uv pip install -e .
+```
+
+After installation, the core math layer is importable without running the
+Occurrence Theory audit narrative:
+
+```python
+from topographo.core import CayleyDicksonAlgebra, verify_gates
+from topographo.ssd import SedenionAlgebra
+```
+
+API documentation is generated with `pdoc` and published to GitHub Pages:
+<https://theswanfactory.github.io/occurence/>
+
+To build it locally:
+
+```bash
+uv run pdoc \
+  topographo \
+  topographo.core \
+  topographo.core.algebra \
+  topographo.core.cayley_dickson \
+  topographo.core.gates \
+  topographo.ssd \
+  topographo.ssd.channel \
+  topographo.ssd.sedenion \
+  -o site
 ```
 
 ## Run the Audit

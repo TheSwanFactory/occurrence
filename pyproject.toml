@@ -3,12 +3,12 @@ requires = ["setuptools>=69"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "occurrence-theory"
+name = "topographo"
 version = "0.1.0"
-description = "Research notes and audit tooling for Occurrence Theory."
+description = "Reusable Cayley-Dickson and sedenion settlement math for Topographo."
 readme = "README.md"
 requires-python = ">=3.11"
-license = { text = "MIT" }
+license = "MIT"
 authors = [
   { name = "The Swan Factory" }
 ]
@@ -16,8 +16,22 @@ dependencies = [
   "numpy"
 ]
 
+[project.urls]
+Homepage = "https://github.com/TheSwanFactory/occurence"
+Documentation = "https://theswanfactory.github.io/occurence/"
+Source = "https://github.com/TheSwanFactory/occurence"
+Issues = "https://github.com/TheSwanFactory/occurence/issues"
+
 [project.scripts]
 occurrence-theory-audit = "occurrence_theory_audit:main"
 
 [tool.setuptools]
-py-modules = ["occurrence_theory_audit"]
+py-modules = ["occurrence_theory_audit", "exceptional_algebras_lab"]
+
+[tool.setuptools.packages.find]
+include = ["topographo*"]
+
+[dependency-groups]
+dev = [
+    "pdoc>=16.0.0",
+]

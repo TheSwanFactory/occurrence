@@ -1,0 +1,148 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Run audit scripts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python modules
+        run: |
+          uv run python -m py_compile \
+            occurrence_theory_audit.py \
+            exceptional_algebras_lab.py \
+            topographo/__init__.py \
+            topographo/core/__init__.py \
+            topographo/core/algebra.py \
+            topographo/core/cayley_dickson.py \
+            topographo/core/gates.py \
+            topographo/ssd/__init__.py \
+            topographo/ssd/channel.py \
+            topographo/ssd/sedenion.py
+
+      - name: Verify importable package API
+        run: |
+          uv run python - <<'PY'
+          from topographo.core import CayleyDicksonAlgebra, verify_gates
+          from topographo.ssd import SedenionAlgebra, average_metric_operator
+
+          assert all(result.passed for result in verify_gates())
+          assert CayleyDicksonAlgebra(8).dim == 8
+          sedenions = SedenionAlgebra()
+          assert average_metric_operator(sedenions, sedenions.sample_crack(4)).shape == (16, 16)
+          PY
+
+      - name: Verify isolated package install
+        run: |
+          uv pip install --target /tmp/topographo-install .
+          cd /tmp
+          PYTHONPATH=/tmp/topographo-install "${pythonLocation}/bin/python" - <<'PY'
+          import exceptional_algebras_lab
+          import occurrence_theory_audit
+          import topographo
+
+          assert hasattr(exceptional_algebras_lab, "cayley_dickson_table")
+          assert hasattr(occurrence_theory_audit, "main")
+          assert hasattr(topographo, "CayleyDicksonAlgebra")
+          PY
+
+      - name: Build distribution
+        run: uv build
+
+      - name: Build API documentation
+        run: |
+          uv run pdoc \
+            topographo \
+            topographo.core \
+            topographo.core.algebra \
+            topographo.core.cayley_dickson \
+            topographo.core.gates \
+            topographo.ssd \
+            topographo.ssd.channel \
+            topographo.ssd.sedenion \
+            -o site
+
+      - name: Run Occurrence Theory audit
+        run: uv run python occurrence_theory_audit.py
+
+      - name: Run Occurrence Theory audit console script
+        run: uv run occurrence-theory-audit
+
+      - name: Run exceptional algebra lab reproduction
+        run: uv run python exceptional_algebras_lab.py
+
+      - name: Upload distribution artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-dist
+          path: dist/*
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  publish:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    needs: audit
+    if: startsWith(github.ref, 'refs/tags/v')
+    environment:
+      name: pypi
+      url: https://pypi.org/project/topographo/
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Download distribution artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-dist
+          path: dist
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  pages:
+    name: Publish API docs
+    runs-on: ubuntu-latest
+    needs: audit
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

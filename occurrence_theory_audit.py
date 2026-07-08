@@ -31,80 +31,37 @@ Gates (must pass):
 """
 
 import numpy as np
-from itertools import combinations
 import sys
+from pathlib import Path
 
 # ============================================================================
 # ALGEBRA ACCESS
 # ============================================================================
 
 try:
-    from exceptional_algebras_lab import cayley_dickson_table
-    VERIFIED = True
+    from topographo.core import CayleyDicksonAlgebra, cayley_dickson_table
 except ImportError:
-    print("ERROR: exceptional_algebras_lab not found.")
-    print("This script requires the verified algebra implementation.")
-    print("The standalone Cayley-Dickson implementation is known to be buggy.")
-    print("Cannot proceed.")
-    sys.exit(1)
+    repo_root = Path(__file__).resolve().parent
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    try:
+        from topographo.core import CayleyDicksonAlgebra, cayley_dickson_table
+    except ImportError:
+        print("ERROR: topographo.core not found.")
+        print("This script requires the verified algebra implementation.")
+        print("Cannot proceed.")
+        sys.exit(1)
 
 
 # ============================================================================
 # CORE ALGEBRAIC OPERATORS
 # ============================================================================
 
-class OTAlgebra:
+class OTAlgebra(CayleyDicksonAlgebra):
     """Core Occurrence Theory algebra on 𝕊 (sedenions)."""
     
     def __init__(self, dim=16):
-        self.dim = dim
-        self.C = cayley_dickson_table(dim)
-        self.e = np.eye(dim)
-        self.rng = np.random.default_rng(42)
-    
-    def mul(self, x, y):
-        """Sedenion multiplication: x * y."""
-        return np.einsum('i,j,ijk->k', x, y, self.C)
-    
-    def Lop(self, x):
-        """Left multiplication operator L_x."""
-        return np.einsum('i,ijk->kj', x, self.C)
-    
-    def Rop(self, x):
-        """Right multiplication operator R_x."""
-        return np.einsum('j,ijk->ki', x, self.C)
-    
-    def stepv(self, X, Z):
-        """Vectorized step: X_{t+1} = Z * X_t / ||Z * X_t||."""
-        ZC = np.einsum('ni,ijk->njk', Z, self.C)
-        return np.einsum('njk,nj->nk', ZC, X)
-    
-    def conjugate(self, x):
-        """Conjugation: x -> (x[0], -x[1:])."""
-        return np.concatenate([[x[0]], -x[1:]])
-    
-    def sample_crack(self, n):
-        """Sample n random unit zero divisors."""
-        zds = []
-        for i, j in combinations(range(1, self.dim), 2):
-            for s in (1, -1):
-                u = (self.e[i] + s * self.e[j]) / np.sqrt(2)
-                Lu = self.Lop(u)
-                if np.linalg.svd(Lu, compute_uv=False)[-1] < 1e-9:
-                    zds.append(u)
-        ZD = np.array(zds)
-        return ZD[self.rng.integers(0, len(zds), n)]
-    
-    def sample_pure_pair(self, n):
-        """Sample n random unit pure-pair events from the crack (continuum)."""
-        A = self.rng.standard_normal((n, 8))
-        A[:, 0] = 0
-        A /= np.linalg.norm(A, axis=1, keepdims=True)
-        B = self.rng.standard_normal((n, 8))
-        B[:, 0] = 0
-        B -= np.sum(B * A, axis=1, keepdims=True) * A
-        B /= np.linalg.norm(B, axis=1, keepdims=True)
-        return np.concatenate([A, B], axis=1) / np.sqrt(2)
+        super().__init__(dim, seed=42)
 
 
 # ============================================================================
