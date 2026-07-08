@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.0] - 2026-07-08
+
+### Changed
+
+- Bumped the package version for the test coverage milestone tracked in #8.
+
 ## [0.1.1] - 2026-07-08
 
 ### Added
@@ -25,5 +31,6 @@ All notable changes to this project are documented in this file.
   algebra reproduction module.
 - GitHub Actions audit workflow and `pdoc` documentation setup.
 
+[0.2.0]: https://github.com/TheSwanFactory/occurence/releases/tag/v0.2.0
 [0.1.1]: https://github.com/TheSwanFactory/occurence/releases/tag/v0.1.1
 [0.1.0]: https://github.com/TheSwanFactory/occurence/releases/tag/v0.1.0

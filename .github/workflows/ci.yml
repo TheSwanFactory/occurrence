@@ -45,6 +45,9 @@ jobs:
             topographo/ssd/channel.py \
             topographo/ssd/sedenion.py
 
+      - name: Run unit tests
+        run: uv run pytest
+
       - name: Verify importable package API
         run: |
           uv run python - <<'PY'
