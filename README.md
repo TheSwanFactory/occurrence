@@ -27,6 +27,7 @@ measurement, interpretation, and conjecture using explicit ledger tags:
   generate the paper.
 - `.github/workflows/audit.yml` - CI workflow that compiles and runs the audit
   scripts.
+- `CHANGELOG.md` - release history for the package and audit artifacts.
 - `LICENSE` - MIT license.
 
 ## Requirements
@@ -54,6 +55,11 @@ Occurrence Theory audit narrative:
 from topographo.core import CayleyDicksonAlgebra, verify_gates
 from topographo.ssd import SedenionAlgebra
 ```
+
+For exact finite crack certificates, use `basis_zero_divisors()` to enumerate
+the full 84-point design. `sample_crack(n)` samples from that design with
+replacement and is intended for stochastic diagnostics, not machine-zero
+theorem gates.
 
 API documentation is generated with `pdoc` and published to GitHub Pages:
 <https://theswanfactory.github.io/occurence/>
