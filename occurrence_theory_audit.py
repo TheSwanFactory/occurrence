@@ -84,7 +84,7 @@ def verify_gates(OT):
     xy = mul_octave(x, y)
     comp_err = abs(np.linalg.norm(xy) - np.linalg.norm(x) * np.linalg.norm(y))
     print(f"[G1] Composition ||xy|| = ||x||||y||: {comp_err:.2e} {'✓' if comp_err < 1e-12 else '✗ FAIL'}")
-    all_pass = all_pass and (comp_err < 1e-12)
+    all_pass = all_pass and bool(comp_err < 1e-12)
     
     # Gate 2: Antisymmetry of L_x (on octonions)
     def Lop_8(a):
@@ -92,13 +92,13 @@ def verify_gates(OT):
     L = Lop_8(x)
     antisym_err = np.linalg.norm(L + L.T)
     print(f"[G2] Antisymmetry ||L_x + L_x^T||: {antisym_err:.2e} {'✓' if antisym_err < 1e-12 else '✗ FAIL'}")
-    all_pass = all_pass and (antisym_err < 1e-12)
+    all_pass = all_pass and bool(antisym_err < 1e-12)
     
     # Gate 3: Quadratic identity for pure x (on octonions)
     x2 = mul_octave(x, x)
     quad_err = np.linalg.norm(x2 + e8[0])
     print(f"[G3] Quadratic x² = -e₀: {quad_err:.2e} {'✓' if quad_err < 1e-12 else '✗ FAIL'}")
-    all_pass = all_pass and (quad_err < 1e-12)
+    all_pass = all_pass and bool(quad_err < 1e-12)
     
     # Gate 4: Moufang identity on octonions
     a, b, c = e8[1], e8[2], e8[3]
@@ -106,7 +106,7 @@ def verify_gates(OT):
     rhs = mul_octave(mul_octave(a, mul_octave(b, c)), a)
     moufang_err = np.linalg.norm(lhs - rhs)
     print(f"[G4] Moufang (ab)(ca) = a(bc)a: {moufang_err:.2e} {'✓' if moufang_err < 1e-12 else '✗ FAIL'}")
-    all_pass = all_pass and (moufang_err < 1e-12)
+    all_pass = all_pass and bool(moufang_err < 1e-12)
     
     print()
     if all_pass:
