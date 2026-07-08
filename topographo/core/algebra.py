@@ -1,4 +1,14 @@
-"""Validated Cayley-Dickson algebra operators."""
+"""Validated Cayley-Dickson algebra operators for TGT computations.
+
+This module is the main numerical surface for building Topographical Graph
+Theory diagnostics. It turns a Cayley-Dickson structure tensor into concrete
+operations on vectors and matrices: multiplication, left/right multiplication
+operators, metric transport, alternators, and crack-event sampling.
+
+Use this layer when you want to define graph vertices as algebra elements and
+define edges from multiplication-derived tests such as annihilation, rank
+deficiency, or settlement strain.
+"""
 
 from __future__ import annotations
 
@@ -10,7 +20,25 @@ from topographo.core.cayley_dickson import cayley_dickson_table
 
 
 class CayleyDicksonAlgebra:
-    """Finite-dimensional real Cayley-Dickson algebra with operator helpers."""
+    """Finite-dimensional real Cayley-Dickson algebra with operator helpers.
+
+    Parameters
+    ----------
+    dim:
+        Algebra dimension. It must be a positive power of two. The default,
+        `16`, is the sedenion algebra used by SSD/TGT.
+    seed:
+        Random seed used by the sampling helpers. Pass `None` for NumPy's
+        non-deterministic default seeding.
+
+    Notes
+    -----
+    The class stores the structure tensor `C` where
+    `e_i * e_j = sum_k C[i, j, k] e_k`. Most methods are thin tensor
+    contractions over `C`, which keeps the graph/channel definitions explicit:
+    vertices are vectors, transitions are multiplication operators, and graph
+    predicates are numerical tests on those operators.
+    """
 
     def __init__(self, dim: int = 16, *, seed: int | None = 42):
         self.dim = dim
@@ -50,7 +78,12 @@ class CayleyDicksonAlgebra:
         return np.concatenate([[x[0]], -x[1:]])
 
     def sample_basis_zero_divisors(self, n: int) -> np.ndarray:
-        """Sample from basis-form unit zero divisors in this algebra."""
+        """Sample from basis-form unit zero divisors in this algebra.
+
+        In dimension 16 this samples the finite 84-element basic crack used by
+        the audit as a design for the continuum zero-divisor orbit. These
+        samples are the usual starting vertices for TGT zero-divisor graphs.
+        """
         zero_divisors = []
         for i, j in combinations(range(1, self.dim), 2):
             for sign in (1, -1):
@@ -64,7 +97,13 @@ class CayleyDicksonAlgebra:
         return samples[self.rng.integers(0, len(samples), n)]
 
     def sample_pure_pair(self, n: int) -> np.ndarray:
-        """Sample random unit pure-pair events for the sedenion crack model."""
+        """Sample random unit pure-pair events for the sedenion crack model.
+
+        This gives continuum-style crack events rather than the finite
+        basis-form design. Use it when graph or channel diagnostics should be
+        tested against random zero-divisor events instead of the 84-point
+        sample.
+        """
         if self.dim != 16:
             raise ValueError("pure-pair sampling is currently defined for dim=16")
         a = self.rng.standard_normal((n, 8))
