@@ -20,7 +20,10 @@ measurement, interpretation, and conjecture using explicit ledger tags:
   validation gates, operators, and SSD helpers.
 - `occurrence-theory.md` - main paper draft.
 - `occurrence_theory_audit.py` - numerical audit and verification script for
-  the algebraic claims.
+  the algebraic claims. Every printed `[C]`/`[G]` line is a computed number
+  checked against a threshold; the script exits nonzero if any fails.
+- `VERIFICATION.md` - independent re-derivation of the paper's computational
+  claims, and the corrections it produced.
 - `exceptional_algebras_lab.py` - supporting exceptional algebra reproduction
   module used by the audit.
 - `occurrence_theory_prompt.md` - source prompt and writing constraints used to
@@ -92,6 +95,11 @@ To save the output:
 ```bash
 uv run python occurrence_theory_audit.py > audit_results.txt
 ```
+
+The audit exits `0` only if every certificate meets its threshold, and `1`
+otherwise, so it is safe to gate CI on it. A passing run means the paper's
+`[C]`-tagged claims reproduce on this implementation. It does not mean the
+paper's `[I]` interpretations are correct; those are not tested.
 
 After installation, the same audit is also available as:
 
