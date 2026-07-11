@@ -42,9 +42,11 @@ Drop a file named `occurrence_<paper>_<yourhandle>.<ext>` into this directory.
 If it is code, keep it self-contained: reproduce the algebra yourself rather
 than importing `topographo`, so your result is a genuinely independent check.
 
-## Future slots (`-ii`-aware seams)
+## Tools for reviewers
 
-- `occurrence_ii_audit.py` — the Paper II canonical audit (arrives with the
-  `-ii` PR).
-- `occurrence_ii_<handle>.*` — Paper II reviewer results. Incoming reviewer:
-  **solomonjoseph**.
+Non-review helpers that support the standing audit obligations live here under
+plain descriptive names (no `occurrence_` prefix):
+
+- `g2_su3_branching.md` — a SageMath recipe that computes the G₂ ⊃ SU(3)
+  branching, for the §10.1 representation-theory check and the Conjecture C3
+  `8 ⊕ 6` question.
