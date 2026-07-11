@@ -20,12 +20,11 @@
 #   - The real question: what the 14 (adjoint) branches to, and whether it is
 #     8 ⊕ 6.
 #
-# Expectation (confirm by running, not asserted): the textbook branching of the
-# G2 adjoint under this SU(3) is 8 ⊕ 3 ⊕ 3bar (dims [3,3,8]) — NOT 8 ⊕ 6. The 6
-# is the symmetric SU(3) irrep, distinct from 3 ⊕ 3bar. If the run reproduces
-# 8 ⊕ 3 ⊕ 3bar, then C3's 8 ⊕ 6 refers to a different SU(3) embedding, reads
-# 3 ⊕ 3bar as one 6-real-dim block, or needs restating — which is exactly the
-# §10.1 audit call this script exists to make concrete.
+# Result (confirmed by running): the G2 adjoint branches under this SU(3) as
+# 8 ⊕ 3 ⊕ 3bar (dims [3,3,8]) — a gluon-like octet plus a quark/antiquark pair —
+# NOT 8 ⊕ 6. The 6 is the symmetric SU(3) irrep, distinct from 3 ⊕ 3bar, so the
+# paper's earlier "8 ⊕ 6" was an error; §10.1 / C3 now read 8 ⊕ 3 ⊕ 3bar. This
+# script asserts that decomposition below.
 
 # G2 and its maximal SU(3) = A2 subgroup (from the extended Dynkin diagram,
 # i.e. the "long-root" SU(3): the one under which the 7 = 3 + 3bar + 1).
@@ -57,7 +56,10 @@ adjoint = G2(0, 1) if G2(0, 1).degree() == 14 else G2(1, 0)
 show_branch("7  (standard)", seven)                 # sanity: expect 3 + 3bar + 1
 dims14 = show_branch("14 (adjoint 𝔤₂)", adjoint)
 
-# Compare against the paper's C3 conjecture: 8 ⊕ 6.
-print("C3 conjecture: 14 = 8 ⊕ 6  ->  dims [6, 8]")
+# Assert the corrected decomposition and refute the earlier 8 ⊕ 6.
 print("Computed branching dims:", dims14)
-print("Matches 8 ⊕ 6?", dims14 == [6, 8])
+print("= 8 ⊕ 3 ⊕ 3bar  (dims [3, 3, 8])?", dims14 == [3, 3, 8])
+print("= 8 ⊕ 6         (dims [6, 8])   ?", dims14 == [6, 8])
+assert dims14 == [3, 3, 8], f"expected 8 + 3 + 3bar, got dims {dims14}"
+print("\nCONFIRMED: 14 = 8 ⊕ 3 ⊕ 3bar (gluon octet + quark + antiquark).")
+print("The paper's earlier 8 ⊕ 6 is refuted (3 ⊕ 3bar is not the symmetric 6).")

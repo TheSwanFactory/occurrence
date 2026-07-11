@@ -19,21 +19,20 @@ The script is [`occurrence_ii_branching.sage`](occurrence_ii_branching.sage). Ei
 
 > Not yet executed in-repo (no Sage in CI). Run it yourself — no install needed.
 
-## What to look for
+## Result
 
-- **Sanity check:** the `7` (standard rep) should branch as `3 + 3̄ + 1`
-  (dims `[1, 3, 3]`), confirming this is the SU(3) under which the standard rep
-  splits that way.
-- **The real question:** what the `14` (adjoint) actually branches to, and
-  whether it equals `8 ⊕ 6`.
+- **Sanity check passes:** the `7` (standard rep) branches as `3 + 3̄ + 1`
+  (dims `[1, 3, 3]`), confirming this is the canonical SU(3) under which the
+  standard rep splits that way.
+- **The adjoint branches as `8 ⊕ 3 ⊕ 3̄`** (dims `[3, 3, 8]`) — a gluon-like
+  octet plus a quark-like `3` and antiquark-like `3̄`. The script asserts this.
 
-**Expectation (to be confirmed by your run, not asserted here):** the textbook
-branching of the G₂ adjoint under this SU(3) is `8 ⊕ 3 ⊕ 3̄` (dims `[3, 3, 8]`),
-which is **not** `8 ⊕ 6` — the `6` is the symmetric SU(3) irrep, distinct from
-`3 ⊕ 3̄`. If the run reproduces `8 ⊕ 3 ⊕ 3̄`, then C3's `8 ⊕ 6` either refers to a
-*different* SU(3) embedding, reads `3 ⊕ 3̄` as a single 6-real-dimensional block,
-or needs restating. That reconciliation is exactly the §10.1 audit call — the
-point of the script is to put a computed decomposition in front of a specialist.
+This is **not** `8 ⊕ 6`: the `6` is the symmetric SU(3) irrep, distinct from
+`3 ⊕ 3̄`. The paper's earlier `8 ⊕ 6` was an error; C3, Open Problem 3, and the
+§10.1 obligation now read `8 ⊕ 3 ⊕ 3̄`. The corrected content is arguably a
+*stronger* reading — `8 ⊕ 3 ⊕ 3̄` is exactly the gluon/quark/antiquark color
+pattern — though its physical significance (canonical selection by the channel's
+dynamics) remains the [CONJECTURE]-tier part of C3.
 
 ## Notes
 

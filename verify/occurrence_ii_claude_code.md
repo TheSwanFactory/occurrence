@@ -58,3 +58,29 @@ the earlier integrity review (`occurrence_ii_grok.md`) to the full spectrum, the
 complex structure J, the coherence constant, and the annihilation lattice.
 
 **Status: PASSED — full [FORCED] claim set, independently reproduced.**
+
+---
+
+## Addendum — representation-theory check (§10.1 / C3)
+
+Separate from the numerical audit above, I ran the G₂ ⊃ SU(3) branching for the
+Conjecture C3 claim, using SageMath (see `verify/occurrence_ii_branching.sage`).
+This is pure group theory — independent of the channel data.
+
+**Finding — the C3 decomposition was stated wrong.** Under the canonical
+(long-root) SU(3) ⊂ G₂ (verified by the sanity check `7 = 3 ⊕ 3̄ ⊕ 1`), the
+adjoint branches as:
+
+```text
+14  =  8  ⊕  3  ⊕  3̄        (dims [3, 3, 8])
+```
+
+not `8 ⊕ 6` as earlier drafts had it. The `6` is the symmetric SU(3) irrep,
+which does not appear; `3 ⊕ 3̄ ≠ 6`.
+
+**Assessment:** this is a correction, not a refutation of C3's spirit — and it
+arguably strengthens it. `8 ⊕ 3 ⊕ 3̄` is precisely the gluon-octet / quark /
+antiquark color pattern. The math (the branching itself) is now settled; the
+open, [CONJECTURE]-tier question is whether the channel's dynamics *canonically
+selects* this SU(3) and gives the content physical meaning. The paper (C3, Open
+Problem 3, §10.1) has been updated to `8 ⊕ 3 ⊕ 3̄`.
