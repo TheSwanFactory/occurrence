@@ -3,6 +3,16 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.2.1] - 2026-07-10
+
+### Added
+
+- Make the audit falsifiable and add supporting tests and diagnostics (see PR #11)
+
+### Fixed
+
+- Correct three misstatements in the paper and tighten audit certificate behavior (PR #11)
+
 ## [0.2.0] - 2026-07-08
 
 ### Added

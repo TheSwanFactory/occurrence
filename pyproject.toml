@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "topographo"
-version = "0.2.0"
+version = "0.2.1"
 description = "Reusable Cayley-Dickson and sedenion settlement math for Topographo."
 readme = "README.md"
 requires-python = ">=3.11"
