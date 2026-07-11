@@ -47,6 +47,6 @@ than importing `topographo`, so your result is a genuinely independent check.
 Non-review helpers that support the standing audit obligations live here under
 plain descriptive names (no `occurrence_` prefix):
 
-- `g2_su3_branching.md` — a SageMath recipe that computes the G₂ ⊃ SU(3)
-  branching, for the §10.1 representation-theory check and the Conjecture C3
-  `8 ⊕ 6` question.
+- `g2_su3_branching.sage` (with `.md` explainer) — a SageMath script that
+  computes the G₂ ⊃ SU(3) branching, for the §10.1 representation-theory check
+  and the Conjecture C3 `8 ⊕ 6` question.
