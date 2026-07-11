@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "topographo"
 version = "0.4.0"
 description = "Reusable Cayley-Dickson and sedenion settlement math for Topographo."
-readme = "README.md"
+readme = "topographo/README.md"
 requires-python = ">=3.11"
 license = "MIT"
 authors = [

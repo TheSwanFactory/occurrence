@@ -21,7 +21,9 @@ The repository is split along a **library / consumer** seam:
 - **`topographo/`** — the reusable Python library: Cayley-Dickson algebra,
   validation gates, operators, SSD helpers, and the exceptional-algebra
   (Albert / F4 / G2) layer. Ships to PyPI with its own tests and CI
-  (`topographo.yml`).
+  (`topographo.yml`). See [`topographo/README.md`](topographo/README.md) for
+  the library's own overview, install, and usage — that file is also the PyPI
+  long description.
 - **`verify/`** — the consumer side: all paper verification. Each paper has a
   canonical, CI-gating audit (`occurrence_<paper>_audit.py`), the tests that
   guard it, and independent reviewer cells; its CI (`occurrence.yml`) installs
@@ -35,9 +37,7 @@ shared ground-truth data in `data/`.
 ## Requirements
 
 The audit script requires Python 3.11 or newer and NumPy, plus the `topographo`
-package (which it imports for the verified algebra). The exceptional-algebra
-(Albert / F4 / G2) reproduction now lives inside the package as
-`topographo.exceptional`.
+package (which it imports for the verified algebra).
 
 `uv` is the preferred runner for local audit work:
 
@@ -51,38 +51,10 @@ For editable package installation:
 uv pip install -e .
 ```
 
-After installation, the core math layer is importable without running the
-Occurrence Theory audit narrative:
-
-```python
-from topographo.core import CayleyDicksonAlgebra, verify_gates
-from topographo.ssd import SedenionAlgebra
-```
-
-For exact finite crack certificates, use `basis_zero_divisors()` to enumerate
-the full 84-point design. `sample_crack(n)` samples from that design with
-replacement and is intended for stochastic diagnostics, not machine-zero
-theorem gates.
-
-API documentation is generated with `pdoc` and published to GitHub Pages:
-<https://theswanfactory.github.io/occurrence/>
-
-To build it locally:
-
-```bash
-uv run pdoc \
-  topographo \
-  topographo.core \
-  topographo.core.algebra \
-  topographo.core.cayley_dickson \
-  topographo.core.gates \
-  topographo.ssd \
-  topographo.ssd.channel \
-  topographo.ssd.sedenion \
-  topographo.exceptional \
-  topographo.exceptional.lab \
-  -o site
-```
+The reusable library — its own install, import examples, layout, and API
+documentation — is documented in [`topographo/README.md`](topographo/README.md).
+API docs are published to GitHub Pages:
+<https://theswanfactory.github.io/occurrence/>.
 
 ## Run the Audit
 
