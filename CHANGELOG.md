@@ -3,7 +3,7 @@
 
 All notable changes to this project are documented in this file.
 
-## [Unreleased]
+## [0.4.0] - 2026-07-11
 
 ### Added
 
@@ -17,12 +17,14 @@ All notable changes to this project are documented in this file.
   from the `.npz` alone. Adapted from `born-channel`'s `santa physics.py` into
   the certificate-ledger / exit-code form used by `occurrence_i_audit.py`.
 - `occurrence-theory-ii.md` — the top-level Paper II slot.
-- `Occurrence_Theory.pdf` — the Paper II explainer.
+- `docs/Occurrence_Theory.pdf` — the Paper II explainer.
 
 ### Changed
 
 - `occurrence.yml` now runs the Paper II audit as an exit-code gate and triggers
   on `data/**`.
+- Move `docs/occurrence_theory_prompt.md` and `docs/Occurrence_Theory.pdf` into
+  `docs/`; streamline the README's structure section.
 
 ## [0.3.0] - 2026-07-11
 

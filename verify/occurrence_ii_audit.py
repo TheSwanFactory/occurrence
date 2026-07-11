@@ -369,7 +369,7 @@ def main():
     print("  thresholds. It does NOT mean the paper's physical [READING]s are")
     print("  correct; those are interpretations and are not tested here.")
     print()
-    print("For details, see: occurrence-theory-ii.md and Occurrence_Theory.pdf")
+    print("For details, see: occurrence-theory-ii.md and docs/Occurrence_Theory.pdf")
     print()
     return 0
 

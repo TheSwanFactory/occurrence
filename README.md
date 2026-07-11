@@ -1,6 +1,6 @@
 # Occurrence Theory
 
-This repository contains a draft research paper and verification script for
+This repository contains draft research papers and their verification for
 Occurrence Theory (OT), defined as an oriented form of Sedenion Settlement
 Dynamics (SSD).
 
@@ -14,29 +14,23 @@ measurement, interpretation, and conjecture using explicit ledger tags:
 - `[I]` interpretation
 - `[X]` conjecture
 
-## Files
+## Layout
 
-- `topographo/` - reusable Python **package** (the library) for Cayley-Dickson
-  algebra, validation gates, operators, SSD helpers, and the exceptional-algebra
-  (Albert / F4 / G2) layer. Ships to PyPI with its own tests under
-  `topographo/tests/`.
-- `verify/` - the **consumer** side: all Paper verification. Holds the canonical
-  first-party audits, the tests that guard them, and independent reviewer
-  results. See `verify/README.md` for the naming convention.
-- `occurrence-theory.md` - main paper draft (Paper I).
-- `verify/occurrence_i_audit.py` - numerical audit and verification script for
-  the Paper I algebraic claims. Every printed `[C]`/`[G]` line is a computed
-  number checked against a threshold; the script exits nonzero if any fails.
-- `verify/occurrence_i_cabarius.md` - independent re-derivation of the paper's
-  computational claims (reviewer: cabarius), and the corrections it produced.
-- `occurrence_theory_prompt.md` - source prompt and writing constraints used to
-  generate the paper.
-- `.github/workflows/topographo.yml` - library CI: tests, builds, and releases
-  the `topographo` package.
-- `.github/workflows/occurrence.yml` - consumer CI: installs `topographo`, runs
-  the audit exit-code gate and the `verify/` tests.
-- `CHANGELOG.md` - release history for the package and audit artifacts.
-- `LICENSE` - MIT license.
+The repository is split along a **library / consumer** seam:
+
+- **`topographo/`** — the reusable Python library: Cayley-Dickson algebra,
+  validation gates, operators, SSD helpers, and the exceptional-algebra
+  (Albert / F4 / G2) layer. Ships to PyPI with its own tests and CI
+  (`topographo.yml`).
+- **`verify/`** — the consumer side: all paper verification. Each paper has a
+  canonical, CI-gating audit (`occurrence_<paper>_audit.py`), the tests that
+  guard it, and independent reviewer cells; its CI (`occurrence.yml`) installs
+  `topographo` and runs the audits as exit-code gates. See
+  [`verify/README.md`](verify/README.md) for the naming convention.
+
+The papers live at the top level — `occurrence-theory.md` (Paper I) and
+`occurrence-theory-ii.md` (Paper II) — with supporting material in `docs/` and
+shared ground-truth data in `data/`.
 
 ## Requirements
 

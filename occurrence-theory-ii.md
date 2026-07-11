@@ -9,7 +9,7 @@ with **Bench d'Claude** (Anthropic)
 **[C]** computation (exact numerical certificate, threshold 10⁻¹²); **[M]** measurement (Monte Carlo, with error bars); **[READING]** physical interpretation (not forced). Claims without tags are definitions or conventions.
 
 > **Status.** This is the Paper II landing slot introduced by the `-ii` work.
-> The narrative document is the explainer PDF [`Occurrence_Theory.pdf`](Occurrence_Theory.pdf);
+> The narrative document is the explainer PDF [`docs/Occurrence_Theory.pdf`](docs/Occurrence_Theory.pdf);
 > the machine-checked ledger is [`verify/occurrence_ii_audit.py`](verify/occurrence_ii_audit.py),
 > which runs on the shared ground-truth family [`data/kraus84.npz`](data/kraus84.npz).
 > Prose paragraphs of the paper are filled in incrementally against that ledger.
