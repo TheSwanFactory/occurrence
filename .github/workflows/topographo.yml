@@ -102,7 +102,7 @@ jobs:
           path: dist/*
 
       - name: Upload Pages artifact
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -133,7 +133,10 @@ jobs:
     name: Publish API docs
     runs-on: ubuntu-latest
     needs: package
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    # The github-pages environment only allows the default branch, so restrict
+    # deploys to main. Tag pushes (v*) and branch dispatches build docs but do
+    # not deploy them.
+    if: github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write
