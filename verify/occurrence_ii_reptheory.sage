@@ -141,6 +141,16 @@ autoerr = max(np.linalg.norm(
 check("exp(g2) elements are genuine octonion automorphisms", autoerr < 1e-9)
 
 Sf = np.array(S, dtype=float)
+
+# sanity check: Phi actually commutes with the concrete G2 action.
+# R(g) X = g X g^T, i.e. on vec-space R(g) = g16 (x) g16; a symmetry iff
+# [S, g16 (x) g16] = 0. Fast confidence boost that G2 really is a symmetry.
+g16chk, _ = random_g()
+Rg = np.kron(g16chk, g16chk)
+commerr = float(np.max(np.abs(Sf @ Rg - Rg @ Sf)))
+check("Phi commutes with the concrete G2 action ([S, g(x)g] = 0)",
+      commerr < 1e-9, detail=f"||[S, R(g)]|| = {commerr:.1e}")
+
 w, Vf = np.linalg.eigh(Sf)
 groups = {}
 for idx, ev in enumerate(w):
@@ -201,9 +211,13 @@ print(f"  14 (adjoint) -> {d14}   (8 + 3 + 3bar)")
 check("7 branches as 3 + 3bar + 1", d7 == [1, 3, 3])
 check("the adjoint 14 branches as 8 + 3 + 3bar (NOT 8 + 6)", d14 == [3, 3, 8])
 d_psector = sorted(d7 + d7)                                # the actual p-sector is 7 + 7
-print(f"  p-sector = 7 + 7 -> {d_psector}   (2*(3 + 3bar + 1); NO octet)")
+print(f"  p-sector  = 7 + 7  -> {d_psector}   (2*(3 + 3bar + 1); NO octet)")
 check("p-sector (7+7) branches as 2*(3 + 3bar + 1), containing no octet",
       d_psector == [1, 1, 3, 3, 3, 3])
+# where the gauge story now lives: the +/-3/7 sectors are 7 + 14 as G2-modules.
+d_37 = sorted(d7 + d14)
+print(f"  +/-3/7    = 7 + 14 -> {d_37}   (8 + 2*3 + 2*3bar + 1; CONTAINS the octet)")
+check("+/-3/7 sector (7+14) contains exactly one gluon octet 8", d_37.count(8) == 1)
 
 # ===========================================================================
 # 4. DESIGN-THEOREM INVARIANTS   (§10.2 / OT Theorem 3.13)

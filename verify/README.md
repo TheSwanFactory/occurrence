@@ -41,3 +41,6 @@ construction) rather than trusting the library under review.
 
 Drop a file named `occurrence_<paper>_<yourhandle>.<ext>` into this directory,
 keeping it self-contained per the independence rule above.
+
+Current reviewer cells include `codex_sol` reviews of Papers I and II in
+`occurrence_i_codex_sol.{py,md}` and `occurrence_ii_codex_sol.{py,md}`.

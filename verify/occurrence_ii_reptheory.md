@@ -35,8 +35,12 @@ the irrational pair `±2√3/7` as the exact factor `x² − 12/49`.
 
 ### 2. G₂-module structure of every eigenspace (§10.1)
 
-Building the concrete G₂ = Aut(𝕆) action (via `Der(𝕆)`, dim 14) and reading
-each Φ-eigenspace as a G₂-module over the irreps `{1, 7, 14, 27}`:
+First a sanity check that G₂ genuinely *is* a symmetry: with the concrete action
+`R(g)X = g X gᵀ` (i.e. `g₁₆ ⊗ g₁₆` on vec-space), `‖[S, R(g)]‖ = 1.3·10⁻¹⁶` —
+Φ commutes with the G₂ action, so the eigenspaces really are G₂-modules.
+
+Building that action (via `Der(𝕆)`, dim 14) and reading each Φ-eigenspace as a
+G₂-module over the irreps `{1, 7, 14, 27}`:
 
 ```text
 λ = ±1     dim 1    :  1
@@ -56,17 +60,19 @@ sector. This also confirms the earlier point that multiplicities like `21, 42,
 ### 3. G₂ → SU(3) branching (Conjecture C3)
 
 ```text
-7            → 3 ⊕ 3̄ ⊕ 1
-14 (adjoint) → 8 ⊕ 3 ⊕ 3̄        (NOT 8 ⊕ 6)
-𝔭-sector = 7 ⊕ 7 → 2·(3 ⊕ 3̄ ⊕ 1)   ← no gluon octet
+7             → 3 ⊕ 3̄ ⊕ 1
+14 (adjoint)  → 8 ⊕ 3 ⊕ 3̄              (NOT 8 ⊕ 6)
+𝔭-sector = 7 ⊕ 7  → 2·(3 ⊕ 3̄ ⊕ 1)     ← no gluon octet
+±3/7-sector = 7 ⊕ 14 → 8 ⊕ 2·3 ⊕ 2·3̄ ⊕ 1   ← contains the octet
 ```
 
 **Consequence for C3.** Because the 𝔭-sector is `7 ⊕ 7`, it branches with **no
-octet**. A gluon `8` appears only alongside an adjoint `14`, i.e. in the ±3/7
-sectors. So C3's original hope — color-gauge structure *in the distinguished
-𝔭-sector* — is not supported; if a gauge story exists it must live in the ±3/7
-sectors. (This corrected two successive misstatements — `8 ⊕ 6`, then
-`8 ⊕ 3 ⊕ 3̄` — that had been attached to the 𝔭-sector.)
+octet**. A gluon `8` appears only alongside an adjoint `14` — i.e. in the ±3/7
+sectors, which branch as `8 ⊕ 2·3 ⊕ 2·3̄ ⊕ 1` (checked directly). So C3's
+original hope — color-gauge structure *in the distinguished 𝔭-sector* — is not
+supported; if a gauge story exists, **the ±3/7 sectors are where it lives.**
+(This corrected two successive misstatements — `8 ⊕ 6`, then `8 ⊕ 3 ⊕ 3̄` — that
+had been attached to the 𝔭-sector.)
 
 ### 4. Design-Theorem invariants (§10.2 / OT Theorem 3.13)
 
