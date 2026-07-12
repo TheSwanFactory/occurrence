@@ -1,58 +1,84 @@
-# G₂ ⊃ SU(3) branching — a runnable check for §10.1 / Conjecture C3
+# Exact & representation-theory verification (SageMath)
 
-**Targets:** the §10.1 representation-theory audit obligation and Conjecture C3 /
-Open Problem 3 — *does the 14-dimensional (adjoint-`𝔤₂`) sector decompose as
-**8 ⊕ 6** under an SU(3) ⊂ G₂?*
+**Paper:** Occurrence Theory II — The Born Channel
+**Verifier:** claude_code (Anthropic), via SageMath 10.9
+**Script:** [`occurrence_ii_reptheory.sage`](occurrence_ii_reptheory.sage)
+(`sage verify/occurrence_ii_reptheory.sage` → exit `0`)
 
-This is a **recipe, not a completed review**: it computes the actual G₂ → SU(3)
-branching so a reviewer can compare it against the paper's `8 ⊕ 6` conjecture.
-It is pure representation theory about the symmetry group and does **not** touch
-`topographo` or the released `.npz`.
+The exact / symbolic complement to the floating-point numpy audit
+(`occurrence_ii_audit.py`): it does what numpy cannot — **exact linear algebra
+over ℚ** and honest **G₂ / SU(3) representation theory**. Independent of
+`topographo`; loads only `data/kraus84.npz`.
 
 ## How to run
 
-The script is [`occurrence_ii_branching.sage`](occurrence_ii_branching.sage). Either:
+`sage verify/occurrence_ii_reptheory.sage`, or paste into
+[SageMathCell](https://sagecell.sagemath.org). Confirmed locally with
+SageMath 10.9 (exit `0`, every check `OK`).
 
-- `sage verify/occurrence_ii_branching.sage`, or
-- paste it into **[SageMathCell](https://sagecell.sagemath.org)** (free, no
-  login) and press *Evaluate*.
+## Results
 
-> Not yet executed in-repo (no Sage in CI). Run it yourself — no install needed.
+### 1. Exact spectrum over ℚ (upgrades Theorem 3.2 to theorem-grade)
 
-## Result
-
-Confirmed locally with SageMath 10.9 (`sage verify/occurrence_ii_branching.sage`,
-exit `0`):
+`S = Σₐ μₐ Kₐ⊗Kₐ` has **rational** entries (`√2·Kₐ` is integral), so this is
+exact, not numerical. The minimal polynomial `m(S) = 0` holds exactly for
+`x·(x∓1/7)(x∓3/7)(x∓1)(x²−12/49)`, and exact ranks over ℚ give the
+multiplicities:
 
 ```text
-7  (standard): dim 7
-    1 x A2(1,0) (dim 3)   1 x A2(0,1) (dim 3)   1 x A2(0,0) (dim 1)
-    -> dims [1, 3, 3]
-14 (adjoint 𝔤₂): dim 14
-    1 x A2(1,1) (dim 8)   1 x A2(1,0) (dim 3)   1 x A2(0,1) (dim 3)
-    -> dims [3, 3, 8]
-= 8 ⊕ 3 ⊕ 3bar? True     = 8 ⊕ 6? False
+   1: 1     3/7: 21    1/7: 42    0: 100    -1/7: 42   -3/7: 21   -1: 1
+   ±2√3/7: 28  (14 each)          total: 256
 ```
 
-- **Sanity check passes:** the `7` (standard rep) branches as `3 + 3̄ + 1`
-  (dims `[1, 3, 3]`), confirming this is the canonical SU(3) under which the
-  standard rep splits that way.
-- **The adjoint branches as `8 ⊕ 3 ⊕ 3̄`** (dims `[3, 3, 8]`) — a gluon-like
-  octet plus a quark-like `3` and antiquark-like `3̄`. The script asserts this.
+So Theorem 3.2's spectrum and multiplicities are **proven exactly**, including
+the irrational pair `±2√3/7` as the exact factor `x² − 12/49`.
 
-This is **not** `8 ⊕ 6`: the `6` is the symmetric SU(3) irrep, distinct from
-`3 ⊕ 3̄`. The paper's earlier `8 ⊕ 6` was an error; C3, Open Problem 3, and the
-§10.1 obligation now read `8 ⊕ 3 ⊕ 3̄`. The corrected content is arguably a
-*stronger* reading — `8 ⊕ 3 ⊕ 3̄` is exactly the gluon/quark/antiquark color
-pattern — though its physical significance (canonical selection by the channel's
-dynamics) remains the [CONJECTURE]-tier part of C3.
+### 2. G₂-module structure of every eigenspace (§10.1)
 
-## Notes
+Building the concrete G₂ = Aut(𝕆) action (via `Der(𝕆)`, dim 14) and reading
+each Φ-eigenspace as a G₂-module over the irreps `{1, 7, 14, 27}`:
 
-- G₂ has (up to conjugacy) essentially one maximal `A2` = SU(3); the `"extended"`
-  branching rule is the standard way to obtain it in Sage. If the paper intends
-  a *non*-maximal or differently-embedded SU(3), swap in that embedding and
-  rerun — the comparison logic is unchanged.
-- A reviewer who confirms or refutes `8 ⊕ 6` should record the result as a
-  proper reviewer cell, e.g. `verify/occurrence_ii_<yourhandle>.md`, citing the
-  embedding used.
+```text
+λ = ±1     dim 1    :  1
+λ = ±𝔭     dim 14   :  7 ⊕ 7          ← NOT the adjoint
+λ = ±3/7   dim 21   :  7 ⊕ 14
+λ = ±1/7   dim 42   :  1 ⊕ 2·7 ⊕ 27
+λ = 0      dim 100  :  4·1 ⊕ 2·7 ⊕ 2·14 ⊕ 2·27
+totals over End(ℝ¹⁶):  8·1 ⊕ 12·7 ⊕ 4·14 ⊕ 4·27
+```
+
+**Key finding.** The distinguished dim-14 irrational (𝔭) sector is **7 ⊕ 7**,
+*not* the adjoint 𝔤₂ — the coincidence `14 = dim 𝔤₂` is just that. The four
+adjoint (`14`) copies live in the **±3/7 sectors** (`7 ⊕ 14`) and the `0`
+sector. This also confirms the earlier point that multiplicities like `21, 42,
+72` are dimensions of **reducible** G₂-modules, not irreps.
+
+### 3. G₂ → SU(3) branching (Conjecture C3)
+
+```text
+7            → 3 ⊕ 3̄ ⊕ 1
+14 (adjoint) → 8 ⊕ 3 ⊕ 3̄        (NOT 8 ⊕ 6)
+𝔭-sector = 7 ⊕ 7 → 2·(3 ⊕ 3̄ ⊕ 1)   ← no gluon octet
+```
+
+**Consequence for C3.** Because the 𝔭-sector is `7 ⊕ 7`, it branches with **no
+octet**. A gluon `8` appears only alongside an adjoint `14`, i.e. in the ±3/7
+sectors. So C3's original hope — color-gauge structure *in the distinguished
+𝔭-sector* — is not supported; if a gauge story exists it must live in the ±3/7
+sectors. (This corrected two successive misstatements — `8 ⊕ 6`, then
+`8 ⊕ 3 ⊕ 3̄` — that had been attached to the 𝔭-sector.)
+
+### 4. Design-Theorem invariants (§10.2 / OT Theorem 3.13)
+
+The space of G₂-invariant symmetric forms on the pencil `W = 7 ⊕ 7` is
+**3-dimensional**. So `E[zzᵀ] = P_W/14` is **not** forced by G₂-invariance
+alone (a 3-parameter family is invariant); the specific measure is doing real
+work. The §10.2 proof obligation must establish that, not merely invoke
+symmetry.
+
+## Status
+
+Exact spectrum, eigenspace naming, branching, and invariants all reproduce
+(exit `0`). The section-2/3 finding (𝔭-sector = `7 ⊕ 7`) is a substantive
+correction to Conjecture C3 and is flagged in the paper for author/specialist
+review.

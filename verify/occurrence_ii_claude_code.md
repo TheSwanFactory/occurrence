@@ -59,6 +59,8 @@ complex structure J, the coherence constant, and the annihilation lattice.
 
 **Status: PASSED — full [FORCED] claim set, independently reproduced.**
 
-*Representation theory (§10.1 / C3) is a separate concern and is checked in its
-own cell, `occurrence_ii_branching` — it found the G₂ ⊃ SU(3) branching to be
-`8 ⊕ 3 ⊕ 3̄`, correcting the paper's earlier `8 ⊕ 6`.*
+*Representation theory (§10.1 / C3) is a separate concern, checked in its own
+cell `occurrence_ii_reptheory` (exact spectrum over ℚ, G₂-module naming of every
+eigenspace, SU(3) branching, Design-Theorem invariants). Its notable finding:
+the 𝔭-sector is `7 ⊕ 7`, not the adjoint 𝔤₂ — so it carries no gluon octet,
+which corrects Conjecture C3.*

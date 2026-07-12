@@ -309,7 +309,7 @@ If composition breaks the quotient structure, or if paths interfere incorrectly,
 - The 14-dimensional antisymmetric eigenspace of Φ at eigenvalue 𝔭 is invariant under Φ (Theorem 3.5).
 - The multiplicity 14 equals dim 𝔤₂, the dimension of the adjoint representation of G₂.
 - The sedenion automorphism group G₂ has SU(3) as the stabilizer of chosen imaginary octonion directions (representation theory).
-- Under that canonical (long-root) SU(3) ⊂ G₂ — the one under which the standard **7** splits as **3 ⊕ 3̄ ⊕ 1** — the adjoint **14** is *forced* to branch as **8 ⊕ 3 ⊕ 3̄**: a gluon-like octet plus a quark-like **3** and antiquark-like **3̄**. Verified by direct computation (`verify/occurrence_ii_branching.sage`). (Earlier drafts wrote this as 8 ⊕ 6; that was an error — `3 ⊕ 3̄` is not the symmetric **6**.)
+- **Crucial caveat, verified in `verify/occurrence_ii_reptheory.sage`:** as a G₂-module the dim-14 𝔭-sector is **7 ⊕ 7** (two copies of the standard rep), **not** the adjoint 𝔤₂ — the coincidence 14 = dim 𝔤₂ notwithstanding. Under the canonical (long-root) SU(3) ⊂ G₂ (for which **7 = 3 ⊕ 3̄ ⊕ 1**) the 𝔭-sector therefore branches as **2·(3 ⊕ 3̄ ⊕ 1)**, containing **no gluon octet**. The adjoint **14** copies — which *do* branch as **8 ⊕ 3 ⊕ 3̄** — sit instead in the ±3/7 sectors (each is **7 ⊕ 14**). (Earlier drafts placed an `8 ⊕ 6`, then an `8 ⊕ 3 ⊕ 3̄`, in the 𝔭-sector; both were wrong.)
 
 **Important caveat:**
 The doubling axis e₈ is fixed by the full G₂ action. The SU(3) ⊂ G₂ is the stabilizer of an imaginary octonion direction (perpendicular to e₈), not of e₈ itself. The complex structure J = L_{e₈} and the imaginary octonion direction are distinct structures.
@@ -318,10 +318,12 @@ The doubling axis e₈ is fixed by the full G₂ action. The SU(3) ⊂ G₂ is t
 The appearance of G₂ and the possible emergence of an SU(3) sector naturally invite comparison with earlier proposals relating exceptional algebra to particle physics (e.g. Baez & Huerta; Furey). Unlike those approaches, the present work begins from an exactly computable quantum channel rather than from algebraic identifications; whether the resulting structures coincide remains open.
 
 **Open:**
-The appearance of G₂ alone is *not* evidence for gauge theory, and the group-theoretic branching above is not in question — it is forced. The conjecture is the stronger, more testable claim that the *dynamically selected* structures of the Born Channel canonically pick out this SU(3), giving the forced **8 ⊕ 3 ⊕ 3̄** content genuine physical significance: does the Born Channel dynamics canonically select an imaginary octonion direction—or another geometric structure—whose G₂ stabilizer is this SU(3)? If so, is the resulting gluon/quark/antiquark content the observed color gauge structure rather than a coincidence of dimensions?
+The appearance of G₂ alone is *not* evidence for gauge theory, and the branching facts above are forced, not in question. The verified module structure sharpens — and complicates — the conjecture: a gluon octet appears **only** where an adjoint **14** does, i.e. in the ±3/7 sectors (each **7 ⊕ 14**), **not** in the special irrational 𝔭-sector, which is **7 ⊕ 7** with no octet. So the original hope — that the distinguished 𝔭-sector is itself the color-gauge sector — is not supported by the representation theory. The open question is whether the channel's dynamics nonetheless canonically singles out an SU(3) under which some sector's content (most plausibly the adjoint **14** in the ±3/7 sectors) carries genuine color-gauge significance.
 
 **Falsifier:**
-If the channel does not canonically select such a structure, or if the forced **8 ⊕ 3 ⊕ 3̄** content cannot be given color-gauge significance, C3 fails.
+If the channel selects no canonical SU(3), or if no sector's SU(3) content can be given color-gauge significance, C3 fails. (The 𝔭-sector specifically cannot supply it: it contains no octet.)
+
+> **Reassessment note.** This subsection was revised after `verify/occurrence_ii_reptheory.sage` showed the 𝔭-sector is `7 ⊕ 7`, not the adjoint. The relocation of the gauge question from the 𝔭-sector to the ±3/7 sectors is a substantive change to C3 and warrants author/specialist review.
 
 ---
 
@@ -367,7 +369,7 @@ If a system is verified to instantiate the Born Channel and does not display �
 
 The five conjectures rest on exact mathematics, but several components require independent verification by specialists:
 
-1. **Representation theory (for C3):** Determine whether the Born Channel canonically selects an imaginary octonion direction, or another geometric structure, whose stabilizer inside G₂ is SU(3). The decomposition under that SU(3) is already computed — the 14 branches as 8 ⊕ 3 ⊕ 3̄ (`verify/occurrence_ii_branching.sage`); what remains is certifying the *canonical selection* and its physical reading.
+1. **Representation theory (for C3):** Determine whether the Born Channel canonically selects an imaginary octonion direction, or another geometric structure, whose stabilizer inside G₂ is SU(3). The G₂-module structure of every eigenspace is already computed (`verify/occurrence_ii_reptheory.sage`): notably the 𝔭-sector is `7 ⊕ 7` (no octet), while the adjoint `14` (branching `8 ⊕ 3 ⊕ 3̄`) lives in the ±3/7 sectors. What remains is whether any of this is *canonically selected* and physically meaningful.
 
 2. **Lindblad embeddability (for C4):** Determine whether Φ embeds in a continuous Markov semigroup via a complete-positive, trace-preserving generator canonically derived from the channel. If so, what is the resulting generator?
 
@@ -411,7 +413,7 @@ The five conjectures rest on exact mathematics, but several components require i
 | C5: Observable 𝔭 in realized Born Channel | CONJECTURE | Physical realization unknown |
 | **—** | **—** | **—** |
 | Lindblad embeddability (canonical selection) | OPEN | Necessary for C4 |
-| Canonical selection of the color SU(3) (its 14 = 8 ⊕ 3 ⊕ 3̄ branching is forced) | OPEN | Necessary for C3 |
+| Color-gauge significance of an SU(3) sector (the 𝔭-sector is `7 ⊕ 7`, no octet; the octet lives in the ±3/7 adjoint `14`s) | OPEN | Necessary for C3 |
 | Uniqueness of sedenions | OPEN | Fundamental question |
 
 ---
@@ -436,7 +438,7 @@ Runtime for the full ledger is under one minute on commodity hardware. Readers a
 
 **Standing audit obligations.** Because every theorem in §2–7 is load-bearing — unlike OT-I, this paper does not survive the failure of any one of them — we record the three verifications that most deserve fully independent treatment beyond the existing audits:
 
-1. **Representation theory.** Every multiplicity identification (G₂ sectors, so(7), the SU(3) stabilizer in C3) should be checked by a specialist in exceptional Lie groups. The numerical multiplicities are machine-verified; their representation-theoretic *names* are not yet fully certified. One piece is now confirmed: the 14-dim sector's G₂ ⊃ SU(3) branching is 8 ⊕ 3 ⊕ 3̄ (`verify/occurrence_ii_branching.sage`), correcting the earlier 8 ⊕ 6.
+1. **Representation theory.** Every multiplicity identification (G₂ sectors, so(7), the SU(3) stabilizer in C3) should be checked by a specialist in exceptional Lie groups. The numerical multiplicities are machine-verified, and their G₂-module structure is now computed exactly (`verify/occurrence_ii_reptheory.sage`): the eigenspaces decompose over the irreps `{1, 7, 14, 27}` — e.g. the ±3/7 sectors are `7 ⊕ 14`, and, notably, the 𝔭-sector is `7 ⊕ 7`, **not** the adjoint. This already corrected two earlier misstatements (the `8 ⊕ 6`, then `8 ⊕ 3 ⊕ 3̄`, wrongly attributed to the 𝔭-sector). A specialist should confirm these names and their physical reading.
 2. **OT Theorem 3.13 (Design Theorem) — Audit Priority.** The claim that the continuum sampling measure and 84-point uniform measure yield identical channels because both satisfy E[zzᵀ] = P_W/14 is mathematically powerful and is the foundation of this paper's mathematical finiteness. An independent formal proof is essential before publication. Currently verified by numerical agreement to 2.4·10⁻¹⁸; proof-level independence is required.
 3. **The Firewall Theorem.** Theorem 1.1's proof is constructive-by-program; a formal proof (that the listed derived objects suffice to generate everything used in §2–7 without sedenion input) would upgrade it from verified practice to certified mathematics.
 
@@ -660,7 +662,7 @@ Does the exact Born quotient identity extend to composition? Do path sums give i
 *Open:* Composition law, interference patterns, measurement structure.
 
 **Conjecture C3 (Gauge Structure).** [OPEN]
-Does the Born Channel canonically select an imaginary octonion direction whose G₂ stabilizer is SU(3)? Under that SU(3) the 14 is forced to branch as 8 ⊕ 3 ⊕ 3̄ (gluon octet, quark, antiquark); does that content carry genuine color-gauge significance?
+Does the Born Channel canonically select an imaginary octonion direction whose G₂ stabilizer is SU(3)? Note the 𝔭-sector is `7 ⊕ 7` (no octet); the gluon octet appears only in the ±3/7 sectors' adjoint `14`s (branching `8 ⊕ 3 ⊕ 3̄`). Does any such content carry genuine color-gauge significance?
 
 *Established:* The 𝔭-sector (14-dim antisymmetric) is G₂-invariant, multiplicity 14 = dim 𝔤₂.
 *Open:* Canonical selection, SU(3) decomposition, physical identification.
@@ -690,7 +692,7 @@ Is the stationary spine share s* = 0.13172(5) a rational number or algebraic con
 A naive *real* generator is ruled out — Φ is singular and its −1 mode is simple, so it has no real logarithm (Remark 4.4) — so any embedding must be conditional or complexified. Is there nonetheless a canonical CPTP/Lindblad embedding Φ = exp(L) derived from the Born Channel's operator algebra? If so, does it reproduce the peripheral ℤ₂ at settlement times?
 
 **Open Problem 3** (SU(3) decomposition of 𝔭-sector).
-Under the canonical SU(3) ⊂ G₂ the 14-dimensional antisymmetric sector branches as 8 ⊕ 3 ⊕ 3̄ (verified; `verify/occurrence_ii_branching.sage`). Is that SU(3) canonically selected by the channel's dynamics, and does the resulting gluon/quark/antiquark content have physical significance?
+Verified (`verify/occurrence_ii_reptheory.sage`): the dim-14 𝔭-sector is `7 ⊕ 7`, branching under the canonical SU(3) as `2·(3 ⊕ 3̄ ⊕ 1)` — no octet; the adjoint `14` (branching `8 ⊕ 3 ⊕ 3̄`) lives in the ±3/7 sectors. Is any SU(3) canonically selected by the channel's dynamics, and does its content have physical significance?
 
 **Open Problem 4** (Continuum limit of Σ).
 What is the long-time geometric limit of the oriented settlement process on the annihilation lattice? Is a connected continuum manifold obtained? What are its dimension and metric?
