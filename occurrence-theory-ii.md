@@ -305,25 +305,24 @@ If composition breaks the quotient structure, or if paths interfere incorrectly,
 
 ### Conjecture C3: Gauge Structure
 
-**Established:**
-- The 14-dimensional antisymmetric eigenspace of Φ at eigenvalue 𝔭 is invariant under Φ (Theorem 3.5).
-- The multiplicity 14 equals dim 𝔤₂, the dimension of the adjoint representation of G₂.
-- The sedenion automorphism group G₂ has SU(3) as the stabilizer of chosen imaginary octonion directions (representation theory).
-- **Crucial caveat, verified in `verify/occurrence_ii_reptheory.sage`:** as a G₂-module the dim-14 𝔭-sector is **7 ⊕ 7** (two copies of the standard rep), **not** the adjoint 𝔤₂ — the coincidence 14 = dim 𝔤₂ notwithstanding. Under the canonical (long-root) SU(3) ⊂ G₂ (for which **7 = 3 ⊕ 3̄ ⊕ 1**) the 𝔭-sector therefore branches as **2·(3 ⊕ 3̄ ⊕ 1)**, containing **no gluon octet**. The adjoint **14** copies — which *do* branch as **8 ⊕ 3 ⊕ 3̄** — sit instead in the ±3/7 sectors (each is **7 ⊕ 14**). (Earlier drafts placed an `8 ⊕ 6`, then an `8 ⊕ 3 ⊕ 3̄`, in the 𝔭-sector; both were wrong.)
+**Established** (all G₂-module structure machine-verified in `verify/occurrence_ii_reptheory.sage`; provenance in [docs/ot-ii-sage-p-sector-saga.md](docs/ot-ii-sage-p-sector-saga.md)):
+
+- The 14-dimensional antisymmetric eigenspace of Φ at eigenvalue 𝔭 is invariant under Φ (Theorem 3.5), and its multiplicity 14 equals dim 𝔤₂.
+- The eigenspaces are genuine G₂-modules: Φ commutes with the concrete G₂ = Aut(𝕆) action to machine precision (‖[Φ, g⊗g]‖ ≈ 10⁻¹⁶), and every sector decomposes over the irreps {**1**, **7**, **14**, **27**}.
+- **The 𝔭-sector is `7 ⊕ 7`, not the adjoint.** The coincidence 14 = dim 𝔤₂ notwithstanding, the character satisfies χ = 2·χ₇, so under the canonical (long-root) SU(3) ⊂ G₂ (for which **7 = 3 ⊕ 3̄ ⊕ 1**) the 𝔭-sector branches as **2·(3 ⊕ 3̄ ⊕ 1)** — two matter families, **no gluon octet**.
+- **The octet lives in the ±3/7 sectors.** The true adjoint **14** copies sit there (each sector is **7 ⊕ 14**), branching as **8 ⊕ 2·(3 ⊕ 3̄) ⊕ 1** — one octet plus two matter families.
 
 **Important caveat:**
 The doubling axis e₈ is fixed by the full G₂ action. The SU(3) ⊂ G₂ is the stabilizer of an imaginary octonion direction (perpendicular to e₈), not of e₈ itself. The complex structure J = L_{e₈} and the imaginary octonion direction are distinct structures.
 
 **Relation to prior work:**
-The appearance of G₂ and the possible emergence of an SU(3) sector naturally invite comparison with earlier proposals relating exceptional algebra to particle physics (e.g. Baez & Huerta; Furey). Unlike those approaches, the present work begins from an exactly computable quantum channel rather than from algebraic identifications; whether the resulting structures coincide remains open.
+The appearance of G₂ and a candidate SU(3) sector invites comparison with earlier proposals relating exceptional algebra to particle physics (e.g. Baez & Huerta; Furey). Unlike those approaches, the present work begins from an exactly computable quantum channel rather than from algebraic identifications; whether the resulting structures coincide remains open.
 
 **Open:**
-The appearance of G₂ alone is *not* evidence for gauge theory, and the branching facts above are forced, not in question. The verified module structure sharpens — and complicates — the conjecture: a gluon octet appears **only** where an adjoint **14** does, i.e. in the ±3/7 sectors (each **7 ⊕ 14**), **not** in the special irrational 𝔭-sector, which is **7 ⊕ 7** with no octet. So the original hope — that the distinguished 𝔭-sector is itself the color-gauge sector — is not supported by the representation theory. The open question is whether the channel's dynamics nonetheless canonically singles out an SU(3) under which some sector's content (most plausibly the adjoint **14** in the ±3/7 sectors) carries genuine color-gauge significance.
+The appearance of G₂ alone is *not* evidence for gauge theory, and the branching facts above are forced. The verified module structure refutes the original hope that the distinguished irrational 𝔭-sector is itself the color-gauge sector: it is **7 ⊕ 7** with no octet. The open question is whether the channel's dynamics nonetheless canonically single out an SU(3) under which some sector's content — most plausibly the adjoint **14** in the ±3/7 sectors — carries genuine color-gauge significance, and whether the 𝔭-sector's two matter families and the ±3/7 octet admit a single gauge-theoretic reading (the restated **Open Problem 3**). The multiplet content is verified; its physical interpretation remains [CONJECTURE] pending specialist review.
 
 **Falsifier:**
 If the channel selects no canonical SU(3), or if no sector's SU(3) content can be given color-gauge significance, C3 fails. (The 𝔭-sector specifically cannot supply it: it contains no octet.)
-
-> **Reassessment note.** This subsection was revised after `verify/occurrence_ii_reptheory.sage` showed the 𝔭-sector is `7 ⊕ 7`, not the adjoint. The gauge question has accordingly been reframed (see the restated **Open Problem 3**): the octet lives in the ±3/7 sectors (`8 ⊕ 2·(3 ⊕ 3̄) ⊕ 1`), the 𝔭-sector supplies two matter families (`2·(3 ⊕ 3̄ ⊕ 1)`), and the open question is whether these sectors admit a unified gauge-theoretic reading. The multiplet content is verified; its physical interpretation remains [CONJECTURE] pending specialist review.
 
 ---
 
@@ -369,7 +368,7 @@ If a system is verified to instantiate the Born Channel and does not display �
 
 The five conjectures rest on exact mathematics, but several components require independent verification by specialists:
 
-1. **Representation theory (for C3):** Determine whether the Born Channel canonically selects an imaginary octonion direction, or another geometric structure, whose stabilizer inside G₂ is SU(3). The G₂-module structure of every eigenspace is already computed (`verify/occurrence_ii_reptheory.sage`): notably the 𝔭-sector is `7 ⊕ 7` (no octet), while the adjoint `14` (branching `8 ⊕ 3 ⊕ 3̄`) lives in the ±3/7 sectors. What remains is whether any of this is *canonically selected* and physically meaningful.
+1. **Representation theory (for C3):** Determine whether the Born Channel canonically selects an imaginary octonion direction, or another geometric structure, whose stabilizer inside G₂ is SU(3). The G₂-module structure of every eigenspace is already computed (`verify/occurrence_ii_reptheory.sage`): notably the 𝔭-sector is `7 ⊕ 7` (no octet), while the ±3/7 sectors are `7 ⊕ 14` (branching `8 ⊕ 2·(3 ⊕ 3̄) ⊕ 1`, the octet coming from the adjoint `14`). What remains is whether any of this is *canonically selected* and physically meaningful.
 
 2. **Lindblad embeddability (for C4):** Determine whether Φ embeds in a continuous Markov semigroup via a complete-positive, trace-preserving generator canonically derived from the channel. If so, what is the resulting generator?
 
@@ -662,7 +661,7 @@ Does the exact Born quotient identity extend to composition? Do path sums give i
 *Open:* Composition law, interference patterns, measurement structure.
 
 **Conjecture C3 (Gauge Structure).** [OPEN]
-Does the Born Channel canonically select an imaginary octonion direction whose G₂ stabilizer is SU(3)? Note the 𝔭-sector is `7 ⊕ 7` (no octet); the gluon octet appears only in the ±3/7 sectors' adjoint `14`s (branching `8 ⊕ 3 ⊕ 3̄`). Does any such content carry genuine color-gauge significance?
+Does the Born Channel canonically select an imaginary octonion direction whose G₂ stabilizer is SU(3)? Note the 𝔭-sector is `7 ⊕ 7` (no octet); the gluon octet appears only in the ±3/7 sectors, each `7 ⊕ 14` (branching `8 ⊕ 2·(3 ⊕ 3̄) ⊕ 1`, the octet coming from the adjoint `14`). Does any such content carry genuine color-gauge significance?
 
 *Established:* The 𝔭-sector (14-dim antisymmetric) is G₂-invariant, multiplicity 14 = dim 𝔤₂.
 *Open:* Canonical selection, SU(3) decomposition, physical identification.
