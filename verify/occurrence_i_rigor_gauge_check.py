@@ -152,8 +152,8 @@ for seed in (1,2,3):
     print(f"  seed {seed}: standard = {m_std:.6f} +/- {se_std:.6f}   swapped = {m_swp:.6f} +/- {se_swp:.6f}   "
           f"diff = {diff:+.6f}  ({diff/combined_se:+.2f} sigma)")
 
-print("\n[Test D] Reproducing the ORIGINAL Test-14-D3 conditions exactly (N=1000, T=30, 1 seed) for comparison:")
+print("\n[Test D] Reported Test-14-D3 scale under the gauge-equivalent discrete design (N=1000, T=30):")
 m_std_orig, se_std_orig = estimate_spine_share(False, N=1000, T=30, burn_in=0, seed=7)
 m_swp_orig, se_swp_orig = estimate_spine_share(True,  N=1000, T=30, burn_in=0, seed=7)
 print(f"  standard = {m_std_orig:.5f} +/- {se_std_orig:.5f}   swapped = {m_swp_orig:.5f} +/- {se_swp_orig:.5f}")
-print(f"  (paper's raw run reported standard=0.13240, swapped=0.13761)")
+print(f"  (the historical run used a different continuum, endpoint-only, uncoupled protocol)")

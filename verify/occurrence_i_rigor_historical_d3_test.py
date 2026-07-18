@@ -7,9 +7,11 @@ This script answers two questions separately:
 2. Is there a detectable finite-time e0-vs-e1 initialization effect when the
    orientation and event streams are held fixed?
 
-Proposition 4.2 itself is tested pointwise in
-occurrence_i_rigor_gauge_check.py; this script diagnoses the historical
-experiment rather than re-proving the theorem.
+The historical verdict purported to make retained/sampled role exchange
+detectable, which concerns Theorem 3.10(6). Proposition 4.2's separate
+left/right-handedness claim is tested pointwise in
+occurrence_i_rigor_gauge_check.py. This script diagnoses the historical
+experiment rather than proving either theorem.
 """
 import argparse
 import numpy as np

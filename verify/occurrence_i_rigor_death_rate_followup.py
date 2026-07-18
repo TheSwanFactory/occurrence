@@ -6,8 +6,8 @@ once sample size, run length, or death-tolerance convention are accounted for?
 Tests three specific hypotheses, each cheap to falsify:
   (1) N-dependence: does a small-N point estimate drift toward 1e-3, i.e. was
       the paper's figure plausibly a noisy small-sample reading of the same
-      underlying ~2e-4 rate? (This is exactly how the Prop 4.2 discrepancy
-      resolved -- worth checking whether this one resolves the same way.)
+      underlying ~2e-4 rate? (This is how the historical D3 role-exchange
+      statistic ultimately resolved -- worth checking the same hypothesis.)
   (2) Tolerance-convention dependence: is the measured rate sensitive to the
       norm threshold used to declare a trajectory "dead"?
   (3) Time-horizon dependence: does the rate keep climbing at longer T, i.e.

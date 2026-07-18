@@ -121,16 +121,18 @@ separate file) is the natural next step and is left as a suggestion rather
 than done here, to keep this PR to documentation plus, at most, one
 additive test.
 
-## 6. Addendum: Proposition 4.2 (slot-handedness is gauge), checked two more ways
+## 6. Addendum: handedness gauge and the historical role-exchange experiment
 
 A concern surfaced from primary-source session material (not from this
-repository) reported that an early, unreplicated numerical run appeared to
-show the *opposite* of Prop 4.2 — that swapping which slot is retained vs.
-sampled gives a real, non-gauge asymmetry (a single Monte Carlo run,
+repository): an early, unreplicated numerical run treated swapping which
+variable is retained vs. sampled as a detectable, algebra-internal asymmetry
+(a single Monte Carlo run,
 N=1000 trajectories, T=30 steps, one seed, no error bars, comparing spine
-share under the two orientations: 0.13240 vs. 0.13761). Since this
-directly contradicts a stated theorem, it was checked here two ways,
-independently of everything above.
+share under the two role assignments: 0.13240 vs. 0.13761). That historical
+verdict was in tension with Theorem 3.10(6)'s role-exchange invisibility, not
+with Proposition 4.2's narrower left/right-handedness gauge. Both results rest
+on the same conjugation identity, which is why the two questions were initially
+blurred; they are separated below.
 
 **6.1 Exact algebraic check.** Built the standard chain
 `x_{t+1} = z_t·x_t` and, in parallel, the swapped chain
@@ -143,7 +145,7 @@ the two orientations to have identical spine-share statistics in the
 idealized (infinite-precision) limit — Prop 4.2 holds pointwise, not just
 on average.
 
-**6.2 Empirical replication.** Reran the reported scale
+**6.2 Historical role-exchange experiment.** Reran the reported scale
 (N=1000, T=30, no burn-in) with the gauge-equivalent chain construction
 from §6.1 at 5 independent seeds:
 
@@ -166,7 +168,7 @@ while the swapped chain started at the non-conjugate state e₁; it sampled
 the continuum crack rather than the discrete 84-point design used here; and
 the two loops consumed one RNG stream sequentially rather than sharing a
 conjugation-coupled event stream. These differences establish that the
-historical comparison never tested Proposition 4.2's hypothesis; they do not,
+historical comparison never tested Proposition 4.2's coupling; they do not,
 by themselves, establish how much each difference contributed to the observed
 finite-sample gap.
 
@@ -184,14 +186,12 @@ conditioning — see 6.3), the story is the same: diffs of +1.50σ, −0.74σ,
 −0.97σ, and the spine share itself (0.1317–0.1319) lands on cabarius's
 independently reported 0.131745 ± 0.000041.
 
-**Conclusion: Prop 4.2 is correct.** This follows from the exact coupling,
-not from a post-hoc noise explanation. The historical finding is exactly
-reproducible but is neither sampling noise nor a rival result: its mismatched
-initial conditions and uncoupled design define a different finite-time
-comparison outside the theorem's coupling conditions. Under that experiment's
-actual reference distribution, the numerical gap is consistent with Monte
-Carlo variation; the earlier five-seed discrete-design comparison was simply
-the wrong reference distribution for establishing that fact.
+**Conclusion.** Proposition 4.2 is correct by the exact coupling in §6.1.
+Separately, the historical role-exchange statistic is exactly reproducible but
+does not contradict Theorem 3.10(6): under its actual reference distribution,
+the numerical gap is ordinary Monte Carlo variation. The earlier five-seed
+discrete-design comparison was simply the wrong reference distribution for
+establishing that fact.
 
 **6.3 A genuine numerical hazard, worth documenting regardless of the above.**
 Reaching T≳500 at N=8000 in double precision requires care: this chain's
@@ -207,9 +207,9 @@ Implementing that (discard a trajectory once its norm underflows below a
 tolerance, exclude it from all further steps and statistics) resolves it.
 
 **6.3.1 Follow-up: is the death-rate discrepancy just noise, the way the
-Prop 4.2 concern was?** The death rate measured here, ~2.0–2.4×10⁻⁴ per
+historical D3 concern was?** The death rate measured here, ~2.0–2.4×10⁻⁴ per
 step, runs about 4–5× lower than the paper's stated ~1.0×10⁻³ per step
-(the same §5.6 measurement). Given that the Prop 4.2 concern above turned
+(the same §5.6 measurement). Given that the historical D3 concern above turned
 out to be an unreplicated-small-sample artifact, the natural next
 hypothesis was that this is the same shape of problem. It checked out
 differently. Three specific, falsifiable hypotheses, tested in

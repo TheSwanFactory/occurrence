@@ -140,7 +140,7 @@ def run_survival(retained_on_left, N, T, burn_in, seed, death_tol=1e-9):
 
 
 if __name__ == "__main__":
-    print("[Test D] Original Test-14-D3 conditions (N=1000, T=30, no burn-in), 5 seeds each orientation:")
+    print("[Test D] Reported Test-14-D3 scale under the gauge-equivalent discrete design, 5 seeds:")
     for seed in range(1, 6):
         m_std, se_std, na_std, dr_std, _, _ = run_survival(False, N=1000, T=30, burn_in=0, seed=seed)
         m_swp, se_swp, na_swp, dr_swp, _, _ = run_survival(True, N=1000, T=30, burn_in=0, seed=seed + 50)
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         cse = np.sqrt(se_std ** 2 + se_swp ** 2)
         print(f"  seed {seed}: std={m_std:.5f}+/-{se_std:.5f} (alive {na_std}/1000)   "
               f"swp={m_swp:.5f}+/-{se_swp:.5f} (alive {na_swp}/1000)   diff={diff:+.5f} ({diff / cse:+.2f}sig)")
-    print("  (original single run: standard=0.13240, swapped=0.13761)")
+    print("  (historical values 0.13240/0.13761 used a continuum, endpoint-only, uncoupled protocol)")
 
     print("\n[Test C] Larger N, longer T=400 (safely below underflow regime), burn=100, 3 seeds each:")
     for seed in range(1, 4):
