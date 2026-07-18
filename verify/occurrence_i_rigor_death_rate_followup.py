@@ -15,10 +15,11 @@ Tests three specific hypotheses, each cheap to falsify:
       run would see?
 
 Result (see occurrence_i_rigor.md Sec 6.3 for the write-up): none of the
-three hold up. The rate is stable at ~2.0-2.6e-4 across N in [200, 20000],
-T in [30, 800], and death_tol across ten orders of magnitude. This is a
-genuine discrepancy with the paper's stated figure, not resolved by this
-pass -- unlike the Prop 4.2 concern, which was noise.
+three hold up. The mortality hazard is stable at ~2.0-2.6e-4 across N in
+[200, 20000], T in [30, 800], and death_tol across ten orders of magnitude.
+These tests vary conditions within the survival-conditioned protocol; the
+later resolution showed that the paper's ~1.0e-3 value measures rejected
+annihilating proposals under event resampling, a different observable.
 """
 import numpy as np
 import sys
@@ -53,17 +54,17 @@ if __name__ == "__main__":
     print("=== Hypothesis 1: N-sweep at T=30, single seed each ===")
     print("    (does the point estimate drift toward 1e-3 at low N?)")
     for N in (200, 500, 1000, 2000, 4000, 8000, 20000):
-        m, se, na, dr = run_survival(False, N=N, T=30, burn_in=0, seed=7, death_tol=1e-9)
-        total_steps = N * 30
-        n_deaths = round(dr * total_steps)
-        dr_err = np.sqrt(max(n_deaths, 1)) / total_steps
+        m, se, na, dr, n_deaths, at_risk_steps = run_survival(
+            False, N=N, T=30, burn_in=0, seed=7, death_tol=1e-9
+        )
+        dr_err = np.sqrt(max(n_deaths, 1)) / at_risk_steps
         print(f"  N={N:6d}: death_rate={dr:.4e} +/- {dr_err:.1e}  (n_deaths={n_deaths})")
     print("  -> no drift toward 1e-3; noisy but centered near 2-4e-4 throughout.\n")
 
     print("=== Hypothesis 2: sensitivity to the death-tolerance threshold ===")
     print("    (N=8000, T=200, seed=1)")
     for tol in (1e-12, 1e-9, 1e-6, 1e-4, 1e-3, 1e-2, 1e-1):
-        m, se, na, dr = run_survival(False, N=8000, T=200, burn_in=0, seed=1, death_tol=tol)
+        m, se, na, dr, _, _ = run_survival(False, N=8000, T=200, burn_in=0, seed=1, death_tol=tol)
         print(f"  death_tol={tol:.0e}:  death_rate={dr:.4e}  (alive at end: {na}/8000)")
     print("  -> flat across 10 orders of magnitude in the threshold; deaths are a")
     print("     hard collapse to exact 0.0, not a graded approach.\n")

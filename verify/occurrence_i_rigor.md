@@ -148,23 +148,29 @@ on average.
 
 | seed | standard | swapped | diff | significance |
 |---|---|---|---|---|
-| 1 | 0.13258 | 0.13255 | +0.00002 | 0.02σ |
-| 2 | 0.13267 | 0.13304 | −0.00037 | 0.35σ |
-| 3 | 0.13252 | 0.13179 | +0.00073 | 0.69σ |
-| 4 | 0.13090 | 0.13181 | −0.00090 | 0.85σ |
-| 5 | 0.13268 | 0.13094 | +0.00174 | 1.66σ |
+| 1 | 0.13258 | 0.13255 | +0.00002 | 0.03σ |
+| 2 | 0.13267 | 0.13304 | −0.00037 | 0.42σ |
+| 3 | 0.13252 | 0.13179 | +0.00073 | 0.81σ |
+| 4 | 0.13090 | 0.13181 | −0.00090 | 1.02σ |
+| 5 | 0.13268 | 0.13094 | +0.00174 | 1.91σ |
 
-No seed exceeds 1.7σ, and the sign of the gap flips unpredictably across
-seeds. The original run's 0.13240 vs. 0.13761 sits well inside this noise
-band — one unreplicated draw, not a reproducible effect. At a larger and
+No replicated seed shows a consistent direction. However, the original
+0.13240 vs. 0.13761 gap is larger than every gap in this five-seed sample,
+so these reruns do **not** establish that it was ordinary sampling noise.
+The exact coupling in §6.1 proves that a correctly implemented pair of
+chains cannot differ in this observable; the historical result therefore
+indicates an implementation, coupling, or protocol mismatch that cannot be
+diagnosed from the reported aggregates alone. At a larger and
 longer horizon (N=8000, T=400, burn-in=100, 3 seeds, with survival
-conditioning — see 6.3), the story is the same: diffs of +1.26σ, −0.62σ,
-−0.81σ, and the spine share itself (0.1317–0.1319) lands on cabarius's
+conditioning — see 6.3), the story is the same: diffs of +1.50σ, −0.74σ,
+−0.97σ, and the spine share itself (0.1317–0.1319) lands on cabarius's
 independently reported 0.131745 ± 0.000041.
 
-**Conclusion: Prop 4.2 is correct.** The unreplicated finding reported from
-primary-source material was noise from a single small-sample run and
-should not be treated as a rival result to the paper's stated theorem.
+**Conclusion: Prop 4.2 is correct.** This follows from the exact coupling,
+not from a post-hoc noise explanation. The unreplicated finding reported
+from primary-source material conflicts with that identity and should be
+treated as evidence of an unidentified implementation or protocol mismatch,
+not as a rival result to the theorem and not as confirmed sampling noise.
 
 **6.3 A genuine numerical hazard, worth documenting regardless of the above.**
 Reaching T≳500 at N=8000 in double precision requires care: this chain's

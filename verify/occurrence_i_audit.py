@@ -826,7 +826,7 @@ def test_minimality_necessity(OT):
     print("[D3] Uniqueness:")
     print("     Swapping event/state gives different dynamics.")
     print("     The two orientations are related by conjugation (algebra involution).")
-    print("     Only one is stable (events live on crack; states reach crack and annihilate).")
+    print("     Conjugation intertwines them, so slot handedness is gauge-equivalent.")
     print()
     
     print("[I4] Relationship to existing mathematics (Section 7 of the paper):")
