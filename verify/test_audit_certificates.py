@@ -120,3 +120,66 @@ def test_main_does_not_print_success_when_a_certificate_fails(monkeypatch, capsy
     out = capsys.readouterr().out
     assert "RESULT: FAIL" in out
     assert "RESULT: PASS" not in out
+
+
+def test_sign_pair_forces_equilibrium_and_is_minimal():
+    """Remark 3.6a: a 2-point sign pair gives E[M_z] = I exactly, and 2 is minimal.
+
+    Guards the certificates C9j/C9k/C9l. The mechanism is that L_{e_k} is a signed
+    permutation, so M_{e_k} = I and the cross terms cancel between the signs.
+    """
+    import numpy as np
+    from topographo.core import CayleyDicksonAlgebra
+
+    A = CayleyDicksonAlgebra(16, seed=42)
+    d, sq = A.dim, 1.0 / np.sqrt(2.0)
+    eye = np.eye(d)
+
+    # every basis unit is orthogonal under left multiplication
+    for k in range(1, d):
+        L = A.Lop(eye[k])
+        assert np.abs(L.T @ L - eye).max() < 1e-12
+
+    # all 42 sign pairs average to the identity
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            zp, zm = np.zeros(d), np.zeros(d)
+            zp[i] = zm[i] = sq
+            zp[j + 8], zm[j + 8] = sq, -sq
+            Lp, Lm = A.Lop(zp), A.Lop(zm)
+            assert np.abs((Lp.T @ Lp + Lm.T @ Lm) / 2 - eye).max() < 1e-12
+
+    # n = 1 cannot: the single-Kraus spectrum is {0^4, 1^8, 2^4}, never I
+    z = A.basis_zero_divisors()[0]
+    L = A.Lop(z)
+    spec = np.sort(np.linalg.eigvalsh(L.T @ L))
+    assert np.abs(spec - np.array([0.0] * 4 + [1.0] * 8 + [2.0] * 4)).max() < 1e-12
+
+
+def test_pair_does_not_reproduce_the_channel():
+    """Remark 3.6a, second half: Thm 3.13 does NOT inherit the 2-point shortcut.
+
+    Guards C9m/C9n. Equilibrium is a first-moment condition on M (2 points);
+    the channel is a second-moment condition on z (needs the design).
+    """
+    import numpy as np
+    from topographo.core import CayleyDicksonAlgebra
+
+    A = CayleyDicksonAlgebra(16, seed=42)
+    d, sq = A.dim, 1.0 / np.sqrt(2.0)
+    zp, zm = np.zeros(d), np.zeros(d)
+    zp[1] = zm[1] = sq
+    zp[10], zm[10] = sq, -sq
+
+    P_W = np.eye(d)
+    P_W[0, 0] = 0.0
+    P_W[8, 8] = 0.0
+    pair_moment = (np.outer(zp, zp) + np.outer(zm, zm)) / 2
+    assert np.linalg.norm(pair_moment - P_W / 14) > 1e-2   # NOT Aut-invariant
+
+    def channel(zs):
+        return sum(np.kron(A.Lop(z).T, A.Lop(z).T) for z in zs) / len(zs)
+
+    assert np.abs(channel([zp, zm]) - channel(A.basis_zero_divisors())).max() > 1e-2
