@@ -746,7 +746,7 @@ def test_alignment(OT):
 
 
 def test_event_state_symmetry(OT):
-    """Test 13b: Event/state role symmetry."""
+    """Test 13b: role-exchange symmetry and left/right handedness."""
     print("\n" + "="*70)
     print("TEST 13B: EVENT/STATE ROLE SYMMETRY")
     print("="*70)
@@ -768,8 +768,34 @@ def test_event_state_symmetry(OT):
         errs.append(np.linalg.norm(conj_zx - xz))
     
     certify("C13b", "conj(z*x) = x*z (worst over random pure pairs)", max(errs))
+    print("      => the identity underlying Thm 3.10(6) holds exactly.")
+
+    # Dedicated certificate for Theorem 3.10(6), on its stated domain:
+    # z lies on the crack and x is unit pure. Compute tau from its defining
+    # operator T_z = L_(z^2) - L_z^2, independently of the norm-ledger formula.
+    # J = R_e8 defines the Hermitian overlap A.
+    J = OT.Rop(OT.e[8])
+    tau_exchange_errors = []
+    alignment_exchange_errors = []
+    for z in OT.sample_crack(200):
+        x = OT.rng.standard_normal(OT.dim)
+        x[0] = 0
+        x /= np.linalg.norm(x)
+        Lz = OT.Lop(z)
+        Lx = OT.Lop(x)
+        Tz = OT.Lop(OT.mul(z, z)) - Lz @ Lz
+        Tx = OT.Lop(OT.mul(x, x)) - Lx @ Lx
+        tau_zx = x @ Tz @ x
+        tau_xz = z @ Tx @ z
+        alignment_zx = np.dot(z, x) ** 2 + np.dot(J @ z, x) ** 2
+        alignment_xz = np.dot(x, z) ** 2 + np.dot(J @ x, z) ** 2
+        tau_exchange_errors.append(abs(tau_zx - tau_xz))
+        alignment_exchange_errors.append(abs(alignment_zx - alignment_xz))
+
+    certify("C13c-tau", "tau(z,x) = tau(x,z) on crack/pure pairs", max(tau_exchange_errors))
+    certify("C13c-A", "A(z,x) = A(x,z) on crack/pure pairs", max(alignment_exchange_errors))
     print("      => Thm 3.10(6): the invariant transition functionals are")
-    print("         EXCHANGE-SYMMETRIC. tau(z,x) = tau(x,z) and A(z,x) = A(x,z).")
+    print("         EXCHANGE-SYMMETRIC under retained/sampled role exchange.")
     print("         The algebra cannot DETECT which slot is event and which is")
     print("         state; the two outcomes are conjugates. Hence the role bit is")
     print("         external (Thm 3.8) and undetectable internally -- which is")
@@ -824,9 +850,9 @@ def test_minimality_necessity(OT):
     print()
     
     print("[D3] Uniqueness:")
-    print("     Swapping event/state gives different dynamics.")
-    print("     The two orientations are related by conjugation (algebra involution).")
-    print("     Only one is stable (events live on crack; states reach crack and annihilate).")
+    print("     Retained vs. sampled is an external role assignment (Thm 3.8).")
+    print("     Its invariant transition functionals are role-exchange symmetric (Thm 3.10(6)).")
+    print("     Separately, moving a fixed retained role left-to-right is conjugation-gauge (Prop 4.2).")
     print()
     
     print("[I4] Relationship to existing mathematics (Section 7 of the paper):")
