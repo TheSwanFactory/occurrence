@@ -524,7 +524,7 @@ def test_invariant_measure(OT):
     for v in eigenvalues:
         key = round(float(allowed[np.abs(allowed - v).argmin()]), 6)
         multiplicity[key] = multiplicity.get(key, 0) + 1
-    print("[C12f] spectrum with multiplicities (G_2 representation dimensions):")
+    print("[C12f] spectrum with multiplicities (eigenspaces are G_2 modules):")
     for value in sorted(multiplicity):
         print(f"       {value:+.6f}  x{multiplicity[value]}")
     certify_equal("C12g", "multiplicities sum to dim End(R^16)",
