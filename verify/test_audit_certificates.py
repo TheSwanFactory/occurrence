@@ -183,3 +183,37 @@ def test_pair_does_not_reproduce_the_channel():
         return sum(np.kron(A.Lop(z).T, A.Lop(z).T) for z in zs) / len(zs)
 
     assert np.abs(channel([zp, zm]) - channel(A.basis_zero_divisors())).max() > 1e-2
+
+
+def test_fourteen_points_reproduce_channel_and_are_minimal():
+    """Remark 3.6a: a 14-point sign design reproduces Phi, and 14 is minimal."""
+    import numpy as np
+    from topographo.core import CayleyDicksonAlgebra
+
+    A = CayleyDicksonAlgebra(16, seed=42)
+    d, sq = A.dim, 1.0 / np.sqrt(2.0)
+    eye = np.eye(d)
+
+    # A cyclic derangement gives seven disjoint supports; both signs on each
+    # support cancel cross terms and cover every coordinate of W exactly twice.
+    z14 = []
+    for i in range(1, 8):
+        j = i % 7 + 1
+        z14.extend((sq * (eye[i] + eye[j + 8]),
+                    sq * (eye[i] - eye[j + 8])))
+
+    P_W = eye.copy()
+    P_W[0, 0] = P_W[8, 8] = 0.0
+    moment14 = sum(np.outer(z, z) for z in z14) / len(z14)
+    assert np.abs(moment14 - P_W / 14).max() < 1e-12
+
+    def channel(zs):
+        return sum(np.kron(A.Lop(z).T, A.Lop(z).T) for z in zs) / len(zs)
+
+    z84 = A.basis_zero_divisors()
+    assert np.abs(channel(z14) - channel(z84)).max() < 1e-12
+
+    # Choi rank equals the dimension of the Kraus-vector span. Since L_z e0=z,
+    # z -> L_z is injective on the 14-dimensional pencil W.
+    kraus_vectors = np.stack([A.Lop(z).reshape(-1) for z in z84])
+    assert np.linalg.matrix_rank(kraus_vectors) == 14

@@ -504,8 +504,8 @@ def test_invariant_measure(OT):
     # But the shortcut does NOT extend to the channel. Thm 3.13 needs the full
     # second moment P_W/14, and a pair misses it badly -- so Phi_pair != Phi_84.
     # Forced equilibrium is a first-moment condition on M and needs 2 points;
-    # reproducing Phi is a second-moment condition on z and needs the design.
-    # The 84 is doing two separable jobs and only one of them is cheap.
+    # reproducing Phi is a second-moment condition on z. Fourteen points suffice
+    # and are minimal; the 84-point design supplies symmetry, not minimality.
     #
     # Scope: this is a statement about the BASIS-FORM crack (the 84). It leans
     # on L_{e_k} being a signed permutation, which is a basis fact, not a
@@ -564,6 +564,26 @@ def test_invariant_measure(OT):
           f"needs the second moment -- Thm 3.13 does not inherit the shortcut)")
     if chan_gap < 1e-3:
         certify("C9n", "pair channel must NOT equal Phi_84", 1.0)
+
+    # A cyclic derangement selects seven disjoint supports. Taking both signs
+    # on each support cancels every cross term and uses each coordinate of W
+    # exactly twice, so these 14 points have second moment P_W/14.
+    z14 = []
+    for i in range(1, 8):
+        j = i % 7 + 1
+        z14.extend(_sign_pair(i, j))
+    moment14 = sum(np.outer(z, z) for z in z14) / len(z14)
+    certify("C9o", "||E[z z^T] - P_W/14|| on the minimal 14-point design",
+            np.linalg.norm(moment14 - P_W / 14))
+    certify("C9p", "||Phi_14 - Phi_84||_max",
+            np.abs(_channel(z14) - _channel(zds)).max())
+
+    # The Choi rank is the dimension of the Kraus-vector span. Here that span
+    # is {L_z : z in W}, which has dimension 14 because L_z e_0 = z. Any
+    # n-point Kraus representation has Choi rank at most n.
+    kraus_vectors = np.stack([L.reshape(-1) for L in Ls])
+    certify_equal("C9q", "Choi rank of Phi (14-point channel lower bound)",
+                  np.linalg.matrix_rank(kraus_vectors), 14)
 
     # Continuum: random pure pairs. Monte Carlo, NOT a machine-zero certificate.
     acc = np.zeros((OT.dim, OT.dim))
