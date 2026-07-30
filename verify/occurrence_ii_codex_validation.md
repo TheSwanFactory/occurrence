@@ -8,7 +8,8 @@ unchanged in the parent commit.
 
 ## Confirmed
 
-- The reviewer script completed with 76 forced checks passed and none failed.
+- The reviewer script completed with all 83 forced checks passed and none
+  failed, including its optional exact-over-ℚ layer under `python-flint`.
 - `dim so(7) = 21`; the irrational eigenspaces are `7 ⊕ 7`, not `so(7)`.
 - Multiplicities 21 and 42 are not irreducible G₂ representation dimensions.
   The computed eigenspaces decompose over `{1, 7, 14, 27}`.
@@ -42,10 +43,10 @@ unchanged in the parent commit.
 - The reported quenched exponent changes materially with annihilation and
   restart conventions. The revision withdraws five-digit precision pending a
   canonical convention instead of selecting one estimate.
-- The exact-over-Q layer of the reviewer script was skipped locally because
-  `python-flint` was unavailable. The same characteristic-polynomial and
-  representation claims are covered independently by the repository's Sage
-  verification workflow.
+- With transient `python-flint`, the exact characteristic polynomial, symmetric
+  and antisymmetric sector factorizations, Choi rank, kernel dimension, simple
+  `-1` mode, and orthogonal similarity of the released artifact all pass over
+  ℚ. These claims are also independently covered by the Sage workflow.
 
 ## Resulting changes
 
