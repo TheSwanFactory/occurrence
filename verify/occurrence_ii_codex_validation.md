@@ -13,9 +13,10 @@ unchanged in the parent commit.
 - `dim so(7) = 21`; the irrational eigenspaces are `7 ⊕ 7`, not `so(7)`.
 - Multiplicities 21 and 42 are not irreducible G₂ representation dimensions.
   The computed eigenspaces decompose over `{1, 7, 14, 27}`.
-- The second-moment identity gives an exact 14-operator mixed-orthogonal
-  realization of the channel. Injectivity of `z ↦ L_z` on the pencil proves
-  Choi rank 14.
+- The second-moment identity gives an exact 14-operator random-unitary
+  realization of the complex-linearly extended channel; its unitaries are real
+  orthogonal signed permutations. Injectivity of `z ↦ L_z` on the pencil
+  proves Choi rank 14.
 - Self-adjointness does not imply non-primitivity; the peripheral `-1` mode
   does.
 - The Firewall Theorem cannot include the Section 2 provenance claim.

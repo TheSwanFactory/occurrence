@@ -87,7 +87,7 @@ and there are exactly 7 · 6 · 2 = **84** of them. The diagonal case i = j give
 
 **Remark.** Σ as a manifold is the G₂-orbit of any one such z, diffeomorphic to G₂/SU(2) ≅ V₂(Im 𝕆) (dimension 11); the 84 basic diagonals are the lattice points of that orbit in the standard frame, and the invariant measure μ restricts to the uniform measure on them [OT, Def. 3.4; Moreno 1998]. Theorem 3.6 of [OT] (the design theorem) proves that the channel depends on the sampling measure only through its second moment, and that the uniform-84 and continuum measures share E[zzᵀ] = P_W/14 exactly; the discrete and continuum channels therefore **coincide at the linear level**. Everything below may be read on the 84 without loss.
 
-**Definition 2.2 (The Kraus family).** K = {K₁, …, K₈₄} with Kₐ = L_{zₐ}, weighted by μₐ = 1/84. Each Kₐ is antisymmetric (Kₐᵀ = −Kₐ) since zₐ is purely imaginary. The released `data/kraus84.npz` stores the orthogonally similar right-multiplication convention R_z = −C L_z C, where C is sedenion conjugation; see `data/README.md`. This changes matrix entries and whether the concrete clock is written L_{e₈} or R_{e₈}, but no channel spectrum or invariant.
+**Definition 2.2 (The Kraus family).** K = {K₁, …, K₈₄} with Kₐ = L_{zₐ}, weighted by μₐ = 1/84. Each Kₐ is antisymmetric (Kₐᵀ = −Kₐ) since zₐ is purely imaginary. The released `data/kraus84.npz` stores the orthogonally similar right-multiplication convention R_z = −C L_z C, where C is sedenion conjugation; see `data/README.md`. This changes matrix entries and whether the concrete clock is written L_{e₈} or R_{e₈}, but preserves all basis-independent channel invariants.
 
 **Definition 2.3 (The Born Channel).** For X ∈ End(ℝ¹⁶),
 
@@ -252,13 +252,13 @@ The asymptotic algebra of the Born Channel is span{I, J} ≅ ℂ, and the evolut
 
 ## 7. What the channel is, in standard language
 
-For readers from quantum information: Φ is a unital, trace-preserving, self-adjoint qudit channel on d = 16 with Choi rank exactly 14, a minimal mixed-orthogonal representation by 14 signed permutation matrices, an 84-event zero-divisor realization by real antisymmetric rank-12 matrices, peripheral spectrum ℤ₂, spectral gap 1 − 𝔭, and a multiplicity structure organized by G₂ ⊃ SU(3) representation theory. It is non-primitive because of its peripheral −1 mode, not because it is self-adjoint. Its distinguishing features against generic channels of this size:
+For readers from quantum information: after complex-linear extension from M₁₆(ℝ) to M₁₆(ℂ), Φ is a unital, trace-preserving, self-adjoint qudit channel on d = 16 with Choi rank exactly 14, a minimal random-unitary — specifically random-orthogonal — representation by 14 signed permutation matrices, an 84-event zero-divisor realization by real antisymmetric rank-12 matrices, peripheral spectrum ℤ₂, spectral gap 1 − 𝔭, and a multiplicity structure organized by G₂ ⊃ SU(3) representation theory. It is non-primitive because of its peripheral −1 mode, not because it is self-adjoint. Its distinguishing features against generic channels of this size:
 
 **Proposition 7.1 (Minimal channel form). [FORCED]** Since z ↦ L_z is linear and E[zzᵀ] = P_W/14,
 
   Φ(X) = (1/14) Σ_{i ∈ {1,…,7,9,…,15}} L_{e_i}ᵀ X L_{e_i}.
 
-Each L_{e_i} is an orthogonal signed permutation. The Kraus-vector span has dimension 14 because L_z e₀ = z on W, so the Choi rank is exactly 14 and no smaller Kraus representation exists. Thus 84 is forced at the event/crack level, while the channel remembers only the second moment and admits a 14-operator mixed-orthogonal form.
+Each L_{e_i} is an orthogonal signed permutation. The Kraus-vector span has dimension 14 because L_z e₀ = z on W, so the Choi rank is exactly 14 and no smaller Kraus representation exists. Thus 84 is forced at the event/crack level, while the channel remembers only the second moment and admits a 14-operator random-unitary (indeed random-orthogonal) form.
 
 1. the 84-event realization is not chosen but forced by the basic zero-divisor selection principle;
 2. the spectrum is exact and almost entirely rational (sevenths), with a single irrational pair;
@@ -517,7 +517,7 @@ This paper uses a small set of named objects that carry the entire structure of 
 
 **CPTP** — Completely Positive Trace Preserving. A map T on matrices is CPTP if it is (1) completely positive: T ⊗ I is positive on all tensor extensions, and (2) trace-preserving: Tr(T(X)) = Tr(X) for all X. The Born Channel is CPTP.
 
-**Kraus family** — A representation of a CPTP map as Φ(X) = Σₐ KₐᵀXKₐ. The Born Channel has an 84-operator zero-divisor realization and a minimal 14-operator mixed-orthogonal realization.
+**Kraus family** — A representation of a CPTP map as Φ(X) = Σₐ KₐᵀXKₐ. The Born Channel has an 84-operator zero-divisor realization and a minimal 14-operator random-unitary realization whose unitaries are real orthogonal signed permutations.
 
 **Firewall** — The principle that nonassociativity is used once (to select which 84 operators form Φ) and then exits the stage. All theorems in §3–7 are expressed entirely in terms of the Kraus family (K, μ) without further sedenion input; §2 records the algebraic provenance of that family.
 
