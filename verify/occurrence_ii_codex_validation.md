@@ -24,6 +24,8 @@ unchanged in the parent commit.
 - `Var[τ] = 1/18` follows exactly from the eventwise spectrum and the spherical
   fourth-moment identity.
 - `1/8 + 1/147 = 0.131802721…`; the printed `0.131723` was an arithmetic error.
+  The candidate itself is retained only as an addendum to Open Problem 1, not
+  promoted to a correction or theorem.
 - Rank `12/16` is not a settlement survival probability.
 
 ## Confirmed with qualification

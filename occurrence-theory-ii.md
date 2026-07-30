@@ -218,7 +218,7 @@ Verified: max deviation 1.2·10⁻¹⁵ over random samples. The transported spi
 - stationary spine share s\* ≈ 0.1318 — an enrichment over the uniform value 2/16 = 0.125;
 - a negative quenched Lyapunov estimate whose value depends on how annihilation and restart steps are scored, while the annealed exponent is exactly 0 (Theorem 4.1).
 
-The gap between annealed and quenched exponents is sensitive to how exact annihilations and restarts are scored; λ_q is therefore not a five-digit invariant until that convention is fixed. Survivors are systematically spine-enriched, while the bounded stationary share s\* is stable across the tested conventions. The candidate 1/8 + 1/147 = 0.131802721… agrees with the new independent simulations, but an exact derivation remains open ([OT] Open Problem 1).
+The gap between annealed and quenched exponents is sensitive to how exact annihilations and restarts are scored; λ_q is therefore not a five-digit invariant until that convention is fixed. Survivors are systematically spine-enriched, while the bounded stationary share s\* is stable across the tested conventions. The closed form remains Open Problem 1; an independent-review addendum there records suggestive evidence for one candidate without promoting it to a result.
 
 ### 4.4 Continuous-time limit (deferred to Conjecture C4)
 
@@ -691,7 +691,13 @@ Is the irrational spectral constant 𝔭 observable? Any verified realization mu
 These are explicit questions requiring specialist input or further computation.
 
 **Open Problem 1** (Closed form of s*).
-Is the stationary spine share exactly 1/8 + 1/147 = 0.131802721…? Independent simulation supports this candidate, but an exact derivation is still required.
+Is the stationary spine share s* a rational number or algebraic constant?
+
+**Addendum (independent review, July 2026).** The previously proposed candidate
+
+  1/8 + 1/147 = 0.131802721…
+
+was mis-evaluated as 0.131723 in an earlier draft. Independent simulations near 0.13183 are consistent with the correctly evaluated candidate, so it remains suggestive. This is not a solution: no exact derivation is known, and a search for a stationary polynomial-coboundary identity through degree six found none. A rational or non-polynomial mechanism remains possible.
 
 **Open Problem 2** (Lindblad embedding and C4).
 A naive *real* generator is ruled out — Φ is singular and its −1 mode is simple, so it has no real logarithm (Remark 4.4) — so any embedding must be conditional or complexified. Is there nonetheless a canonical CPTP/Lindblad embedding Φ = exp(L) derived from the Born Channel's operator algebra? If so, does it reproduce the peripheral ℤ₂ at settlement times?
