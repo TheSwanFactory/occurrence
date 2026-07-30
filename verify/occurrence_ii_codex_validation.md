@@ -31,6 +31,11 @@ unchanged in the parent commit.
 - The independent chain run reproduced `s* = 0.13183(4)`, consistent with the
   rational candidate. Numerical agreement is not an exact solution, so the
   revised paper keeps the derivation open.
+- A complete search over all 136 quadratic coboundaries found no pointwise
+  stationary identity for `s* = 1/8 + 1/147`: the fresh-state RMS residual is
+  `2.5e-3`, not machine zero. The simplest analytic proof therefore fails;
+  higher-degree or rational identities remain possible. See
+  `verify/occurrence_ii_sstar_coboundary.py`.
 - The reported quenched exponent changes materially with annihilation and
   restart conventions. The revision withdraws five-digit precision pending a
   canonical convention instead of selecting one estimate.
