@@ -1,18 +1,46 @@
 # Occurrence Theory
 
-This repository contains draft research papers and their verification for
-Occurrence Theory (OT), defined as an oriented form of Sedenion Settlement
-Dynamics (SSD).
+## What this is
 
-The central object is the Aut-invariant settlement channel on the sedenion
-zero-divisor crack. The paper separates theorem, exact computation,
-measurement, interpretation, and conjecture using explicit ledger tags:
+**Sedenions** are a 16-dimensional number system built by doubling the
+octonions (the same [Cayley–Dickson construction](https://en.wikipedia.org/wiki/Cayley%E2%80%93Dickson_construction)
+that turns the reals into complex numbers, then quaternions, then octonions).
+Each doubling costs a familiar property — complex numbers lose ordering,
+quaternions lose commutativity, octonions lose associativity. Sedenions lose
+one thing further: they have genuine [zero divisors](https://en.wikipedia.org/wiki/Zero_divisor),
+nonzero elements `x`, `y` with `xy = 0`. That singular set is the object this
+repo studies.
 
-- `[T]` theorem
-- `[C]` computation
-- `[M]` measurement
-- `[I]` interpretation
-- `[X]` conjecture
+**Sedenion Settlement Dynamics (SSD)** averages left-multiplication over the
+zero-divisor set, weighted by the unique measure invariant under the
+algebra's automorphism group. The result is a single, exactly-solvable
+linear channel. The paper proves — as theorems, not conjectures — that this
+averaging always settles to the identity (equilibrium is forced, not
+assumed), that the algebra cannot generate any internal dynamics beyond
+rigid rotations (`No-Autonomy`), and computes the channel's full 256×256
+eigenvalue spectrum exactly, in closed form (sevenths and `2√3/7`, with
+multiplicities given by `G₂` representation dimensions).
+
+**Occurrence Theory (OT)** is SSD plus exactly one added ingredient: a rule
+for which side of each multiplication is *retained* (carried forward) and
+which is *sampled* (drawn fresh from the zero-divisor set). That single bit
+turns the static algebra into a genuine Markov chain — a sequence of
+*occurrences*. The paper proves this bit cannot be derived from the algebra
+itself, is unique up to a gauge symmetry, and is the minimal addition needed
+to get any dynamics at all.
+
+Every claim in the paper is tagged so a reader knows exactly what kind of
+evidence backs it:
+
+- `[T]` theorem (proved from stated identities)
+- `[C]` computation (exact numerical certificate, threshold 10⁻¹²)
+- `[M]` measurement (Monte Carlo, with error bars)
+- `[I]` interpretation (not proved — a reading of the math, priced at zero)
+- `[X]` conjecture (stated, not proved)
+
+The `[T]`/`[C]` layer (SSD) stands on its own; the `[I]` layer (words like
+"time," "generation," "occurrence" itself) is explicitly optional and
+separable from it.
 
 ## Layout
 

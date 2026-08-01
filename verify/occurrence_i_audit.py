@@ -484,6 +484,107 @@ def test_invariant_measure(OT):
     certify("C9d", "||E[z z^T] - P_W/14|| on the 84-design",
             np.linalg.norm(second_moment - P_W / 14))
 
+    # ------------------------------------------------------------------
+    # Thm 3.6 vs Thm 3.13: the two theorems have DIFFERENT minimal designs.
+    #
+    # Thm 3.6 says Aut-invariance is SUFFICIENT for forced equilibrium. It is
+    # not necessary, and the gap is large: a TWO-POINT measure already forces
+    # E[M_z] = I exactly. Take the sign pair
+    #     z_+- = (e_i +- e_{j+8}) / sqrt(2),   i, j in 1..7, i != j
+    # (the two basis-form crack elements sharing a support). Then
+    #     M_{z_+} + M_{z_-} = 2 (M_a + M_b),   a = e_i/sqrt(2), b = e_{j+8}/sqrt(2)
+    # because L is linear in its subscript and the cross terms L_a^T L_b +
+    # L_b^T L_a cancel between the two signs. Each L_{e_k} is a signed
+    # permutation matrix (CD structure constants are 0, +-1), hence orthogonal,
+    # hence M_{e_k} = I, so M_a = M_b = I/2 and the pair average is exactly I.
+    #
+    # n = 1 cannot work: M_z has spectrum {0^4, 1^8, 2^4} (BCDI), so a single
+    # Kraus operator is never I. Therefore 2 is MINIMAL.
+    #
+    # But the shortcut does NOT extend to the channel. Thm 3.13 needs the full
+    # second moment P_W/14, and a pair misses it badly -- so Phi_pair != Phi_84.
+    # Forced equilibrium is a first-moment condition on M and needs 2 points;
+    # reproducing Phi is a second-moment condition on z. Fourteen points suffice
+    # and are minimal; the 84-point design supplies symmetry, not minimality.
+    #
+    # Scope: this is a statement about the BASIS-FORM crack (the 84). It leans
+    # on L_{e_k} being a signed permutation, which is a basis fact, not a
+    # property of general z in Sigma.
+    # Provenance: found 2026-07-26 while probing learned bilinear structure
+    # tensors in a separate project (erda-ai), where the crack of a trained
+    # "cube" is the analogous object. Claude Opus 5, at drernie's direction.
+    # ------------------------------------------------------------------
+    d = OT.dim
+    sq = 1.0 / np.sqrt(2.0)
+
+    def _sign_pair(i, j):
+        zp, zm = np.zeros(d), np.zeros(d)
+        zp[i] = zm[i] = sq
+        zp[j + 8], zm[j + 8] = sq, -sq
+        return zp, zm
+
+    worst_pair = 0.0
+    for i in range(1, 8):
+        for j in range(1, 8):
+            if i == j:
+                continue
+            zp, zm = _sign_pair(i, j)
+            Lp, Lm = OT.Lop(zp), OT.Lop(zm)
+            worst_pair = max(worst_pair, np.linalg.norm(
+                (Lp.T @ Lp + Lm.T @ Lm) / 2 - np.eye(d)))
+    certify("C9j", "||E[M_z] - I|| on the minimal 2-point sign pair (worst of 42)",
+            worst_pair)
+
+    unit_err = max(np.linalg.norm(OT.Lop(np.eye(d)[k]).T @ OT.Lop(np.eye(d)[k]) - np.eye(d))
+                   for k in range(1, d))
+    certify("C9k", "||M_{e_k} - I|| for every basis unit (the mechanism)", unit_err)
+
+    # n = 1 is impossible: report the single-Kraus spectrum that rules it out.
+    single = np.sort(np.linalg.eigvalsh(Ls[0].T @ Ls[0]))
+    certify_equal("C9l", "single M_z spectrum {0^4, 1^8, 2^4} (so n=1 cannot give I)",
+                  [round(float(v), 9) for v in single],
+                  [0.0] * 4 + [1.0] * 8 + [2.0] * 4)
+
+    # ...and the pair is NOT Aut-invariant, nor does it reproduce the channel.
+    zp, zm = _sign_pair(1, 2)
+    pair_moment = (np.outer(zp, zp) + np.outer(zm, zm)) / 2
+    pair_gap = np.linalg.norm(pair_moment - P_W / 14)
+    print(f"[C9m] ||E[z z^T] - P_W/14|| on the 2-point pair = {pair_gap:.3e} "
+          f"(LARGE by design: the pair is NOT Aut-invariant, yet C9e holds -- "
+          f"Thm 3.6's hypothesis is sufficient, not necessary)")
+    if pair_gap < 1e-3:
+        certify("C9m", "pair second moment must NOT match P_W/14", 1.0)
+
+    def _channel(zs):
+        return sum(np.kron(OT.Lop(z).T, OT.Lop(z).T) for z in zs) / len(zs)
+
+    chan_gap = np.abs(_channel([zp, zm]) - _channel(zds)).max()
+    print(f"[C9n] ||Phi_pair - Phi_84||_max = {chan_gap:.3e} "
+          f"(LARGE by design: forced equilibrium needs 2 points, the CHANNEL "
+          f"needs the second moment -- Thm 3.13 does not inherit the shortcut)")
+    if chan_gap < 1e-3:
+        certify("C9n", "pair channel must NOT equal Phi_84", 1.0)
+
+    # A cyclic derangement selects seven disjoint supports. Taking both signs
+    # on each support cancels every cross term and uses each coordinate of W
+    # exactly twice, so these 14 points have second moment P_W/14.
+    z14 = []
+    for i in range(1, 8):
+        j = i % 7 + 1
+        z14.extend(_sign_pair(i, j))
+    moment14 = sum(np.outer(z, z) for z in z14) / len(z14)
+    certify("C9o", "||E[z z^T] - P_W/14|| on the minimal 14-point design",
+            np.linalg.norm(moment14 - P_W / 14))
+    certify("C9p", "||Phi_14 - Phi_84||_max",
+            np.abs(_channel(z14) - _channel(zds)).max())
+
+    # The Choi rank is the dimension of the Kraus-vector span. Here that span
+    # is {L_z : z in W}, which has dimension 14 because L_z e_0 = z. Any
+    # n-point Kraus representation has Choi rank at most n.
+    kraus_vectors = np.stack([L.reshape(-1) for L in Ls])
+    certify_equal("C9q", "Choi rank of Phi (14-point channel lower bound)",
+                  np.linalg.matrix_rank(kraus_vectors), 14)
+
     # Continuum: random pure pairs. Monte Carlo, NOT a machine-zero certificate.
     acc = np.zeros((OT.dim, OT.dim))
     continuum_samples = 3000
