@@ -195,7 +195,7 @@ Adjoin the single OT orientation bit: at each step an event z is *sampled* from 
 
 **Definition 4.1 (Event-strain).** τₐ(x) = ‖Kₐ x‖² − 1.
 
-**Theorem 4.1 (Mean Strain Balance). [FORCED]** For *every* unit x, Eₐ[τₐ(x)] = 0 exactly (a restatement of Theorem 3.1). Verified: max over 2000 random states of |E[τ | x]| = 6.8·10⁻¹⁶. Strain is expended and recovered event-by-event with zero mean at every state — not merely in equilibrium.
+**Proposition 4.1 (Mean Strain Balance). [FORCED]** For *every* unit x, Eₐ[τₐ(x)] = 0 exactly (a restatement of Theorem 3.1). Verified: max over 2000 random states of |E[τ | x]| = 6.8·10⁻¹⁶. Strain is expended and recovered event-by-event with zero mean at every state — not merely in equilibrium.
 
 **Theorem 4.2 (Strain variance). [FORCED]** For uniform x, conditionally on every event, Var[τ] = 1/18 = 0.0555…. Indeed Mₐ has spectrum {0⁴, 1⁸, 2⁴}, so Tr Mₐ = 16 and Tr Mₐ² = 24; the standard spherical fourth-moment identity gives E[(xᵀMₐx)²] = ((Tr Mₐ)² + 2 Tr Mₐ²)/(16·18), hence Var(xᵀMₐx − 1) = 1/18.
 
@@ -216,7 +216,7 @@ Verified: max deviation 1.2·10⁻¹⁵ over random samples. The transported spi
 **[MEASURED]** Simulations of the oriented chain give:
 
 - stationary spine share s\* ≈ 0.1318 — an enrichment over the uniform value 2/16 = 0.125;
-- a negative quenched Lyapunov estimate whose value depends on how annihilation and restart steps are scored, while the annealed exponent is exactly 0 (Theorem 4.1).
+- a negative quenched Lyapunov estimate whose value depends on how annihilation and restart steps are scored, while the annealed exponent is exactly 0 (Proposition 4.1).
 
 The gap between annealed and quenched exponents is sensitive to how exact annihilations and restarts are scored; λ_q is therefore not a five-digit invariant until that convention is fixed. Survivors are systematically spine-enriched, while the bounded stationary share s\* is stable across the tested conventions. The closed form remains Open Problem 1; an independent-review addendum there records suggestive evidence for one candidate without promoting it to a result.
 
@@ -298,7 +298,7 @@ If the seven components remain disconnected under any coarse-graining, or if a c
 
 **Established:**
 - The single-step Born quotient is exact: s(x′) · (1 + τ) = |⟨z, x⟩_ℂ|² (Theorem 4.3).
-- Mean strain balance holds pointwise: E[τ | x] = 0 for every state (Theorem 4.1).
+- Mean strain balance holds pointwise: E[τ | x] = 0 for every state (Proposition 4.1).
 - Variance is constant: Var[τ] = 1/18 (Theorem 4.2).
 
 **Open:**
@@ -406,7 +406,7 @@ The five conjectures rest on exact mathematics, but several components require i
 | The irrational pair ±𝔭 (confined to antisymmetric sector, origin under investigation) | FORCED | Theorem 3.4 |
 | The 14-dim G₂-invariant antisymmetric sector | FORCED | Proposition 3.4a |
 | Born quotient identity (single step, pointwise exact) | FORCED | Theorem 4.3 |
-| Mean strain balance: E[τ \| x] = 0 (normalization cost) | FORCED | Theorem 4.1 |
+| Mean strain balance: E[τ \| x] = 0 (normalization cost) | FORCED | Proposition 4.1 |
 | No real Lindblad lift (Φ singular; −1 mode simple) | FORCED | Theorem 3.2 / Remark 4.4 |
 | Peripheral spectrum {±1}; peripheral algebra span{I, J} ≅ ℂ with exact ℤ₂ automorphism | FORCED | Theorem 5.1 |
 | 4-regular annihilation graph (seven disconnected components, Fano structure) | FORCED | Theorem 6.1 |
@@ -596,7 +596,7 @@ These theorems characterize how states flow under the Born Channel and oriented 
 **OT-I, Theorem 3.5 (Annealed Exponent).** [FORCED]
 The annealed Lyapunov exponent λ_a = E[log ‖L_z x‖] = 0 exactly. On average, the oriented chain neither grows nor shrinks.
 
-**OT-II, Theorem 4.1 (Mean Strain Balance).** [FORCED]
+**OT-II, Proposition 4.1 (Mean Strain Balance).** [FORCED]
 For every unit state x, Eₐ[τₐ(x)] = 0 exactly, where τₐ is the normalization strain. Strain is expended and recovered at every step. Verified: max |E[τ|x]| = 6.8·10⁻¹⁶ over 2000 random states.
 
 **OT-II, Theorem 4.2 (Strain Variance).** [FORCED]
