@@ -1,0 +1,72 @@
+name: sage
+
+# Exact symbolic verification with SageMath. Kept in its own workflow (not folded
+# into occurrence.yml) because it runs inside the Sage Docker image rather than
+# the uv/setup-python host environment, and has a different reliability profile.
+# Non-gating by design: a red here is informative, not a merge blocker, unless
+# this workflow is explicitly marked a required check in branch protection.
+#
+# It discovers and runs EVERY *.sage file in the repo, so new reviewer cells are
+# picked up automatically with no edit to this file.
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**/*.sage"
+      - ".github/workflows/sage.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.sage"
+      - ".github/workflows/sage.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  sage:
+    name: Run all Sage verification cells
+    runs-on: ubuntu-latest
+    container:
+      image: sagemath/sagemath:latest
+      # Run as root so actions/checkout can write/own the workspace without
+      # "dubious ownership" git errors inside the container.
+      options: --user root
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Report Sage version
+        run: sage --version
+
+      - name: Run every *.sage file
+        shell: bash
+        run: |
+          set -uo pipefail
+          # Deterministic order; skip the git dir.
+          mapfile -t files < <(find . -path ./.git -prune -o -name '*.sage' -print | sort)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No .sage files found."
+            exit 0
+          fi
+          echo "Found ${#files[@]} Sage file(s):"
+          printf '  %s\n' "${files[@]}"
+          failed=0
+          for f in "${files[@]}"; do
+            echo "::group::sage $f"
+            if sage "$f"; then
+              echo "PASS: $f"
+            else
+              echo "::error file=$f::Sage cell failed"
+              failed=1
+            fi
+            echo "::endgroup::"
+          done
+          if [ "$failed" -ne 0 ]; then
+            echo "One or more Sage cells failed."
+            exit 1
+          fi
+          echo "All Sage cells passed."
