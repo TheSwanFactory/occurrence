@@ -18,7 +18,7 @@ We present an exact, finite quantum channel derived from the zero-divisor struct
 2. the channel is completely positive trace-preserving (CPTP) (Theorem 3.1);
 3. its spectrum consists of exactly nine eigenvalues whose eigenspaces decompose into G₂ irreducibles of dimensions 1, 7, 14, and 27: symmetric sector {1, 3/7, 0, −1/7, −3/7} with multiplicities {1, 7, 72, 42, 14}, and antisymmetric sector {𝔭, 3/7, 1/7, 0, −3/7, −𝔭, −1} with multiplicities {14, 14, 42, 28, 7, 14, 1} (Theorem 3.2);
 4. its unique −1 eigenmode is an orthogonal complex structure J with J² = −I, identifying a canonical copy of ℂ inside the dynamics (Theorem 3.3);
-5. the transported spine weight obeys the exact identity s′·(1 + τ) = |⟨z, x⟩_ℂ|², a Born-rule quotient of Hermitian modulus over normalization cost (Theorem 4.1);
+5. the transported spine weight obeys the exact identity s′·(1 + τ) = |⟨z, x⟩_ℂ|², a Born-rule quotient of Hermitian modulus over normalization cost (Theorem 4.3);
 6. the peripheral spectrum of Φ is exactly {+1, −1}, both simple, so the asymptotic algebra of the channel is span{I, J} ≅ ℂ, on which the surviving evolution is unitary (Theorem 5.1);
 7. the annihilation lattice on the 84 events is exactly 4-regular with seven 12-vertex components of diameter 3, labeled by the points of the Fano plane (Theorem 6.1);
 8. the previously open eigenvalue 𝔭 is resolved: it is the unique irrational eigenvalue of Φ, confined to the antisymmetric sector, with multiplicity 14 and value (2√3)·(1/7) — the triad-closure slope divided by the spectral quantization (Theorem 3.4).
