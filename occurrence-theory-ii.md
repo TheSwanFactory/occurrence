@@ -16,9 +16,9 @@ We present an exact, finite quantum channel derived from the zero-divisor struct
 
 1. the family has exactly 84 members (Theorem 2.1);
 2. the channel is completely positive trace-preserving (CPTP) (Theorem 3.1);
-3. its spectrum consists of exactly nine eigenvalues, with multiplicities given by G₂ representation dimensions: symmetric sector {1, 3/7, 0, −1/7, −3/7} with multiplicities {1, 7, 72, 42, 14}, and antisymmetric sector {𝔭, 3/7, 1/7, 0, −3/7, −𝔭, −1} with multiplicities {14, 14, 42, 28, 7, 14, 1} (Theorem 3.2);
+3. its spectrum consists of exactly nine eigenvalues whose eigenspaces decompose into G₂ irreducibles of dimensions 1, 7, 14, and 27: symmetric sector {1, 3/7, 0, −1/7, −3/7} with multiplicities {1, 7, 72, 42, 14}, and antisymmetric sector {𝔭, 3/7, 1/7, 0, −3/7, −𝔭, −1} with multiplicities {14, 14, 42, 28, 7, 14, 1} (Theorem 3.2);
 4. its unique −1 eigenmode is an orthogonal complex structure J with J² = −I, identifying a canonical copy of ℂ inside the dynamics (Theorem 3.3);
-5. the transported spine weight obeys the exact identity s′·(1 + τ) = |⟨z, x⟩_ℂ|², a Born-rule quotient of Hermitian modulus over normalization cost (Theorem 4.1);
+5. the transported spine weight obeys the exact identity s′·(1 + τ) = |⟨z, x⟩_ℂ|², a Born-rule quotient of Hermitian modulus over normalization cost (Theorem 4.3);
 6. the peripheral spectrum of Φ is exactly {+1, −1}, both simple, so the asymptotic algebra of the channel is span{I, J} ≅ ℂ, on which the surviving evolution is unitary (Theorem 5.1);
 7. the annihilation lattice on the 84 events is exactly 4-regular with seven 12-vertex components of diameter 3, labeled by the points of the Fano plane (Theorem 6.1);
 8. the previously open eigenvalue 𝔭 is resolved: it is the unique irrational eigenvalue of Φ, confined to the antisymmetric sector, with multiplicity 14 and value (2√3)·(1/7) — the triad-closure slope divided by the spectral quantization (Theorem 3.4).
@@ -47,13 +47,13 @@ The central structural fact of this paper — and the reason it can be verified 
 
 The sedenion algebra 𝕊 is used exactly once: to determine which 84 operators constitute the Kraus family, and which measure weights them. Once selected, the operators are ordinary real matrices. The map x ↦ Lₓ is not a homomorphism — that failure *is* the nonassociativity — but the Lₓ themselves compose associatively, and the algebra they generate is all of End(ℝ¹⁶) [OT, Thm. 3.8(c)]. No sedenionic structure survives inside it.
 
-**Theorem 1.1 (Firewall Theorem). [FORCED]** Let K = {L_{zₐ}} be the operator family induced by the 84 standard zero divisors and μ the uniform weight. Then every theorem in Sections 2–7 of this paper is expressible, and is verified, entirely in terms of (K, μ) — without reference to the underlying nonassociative multiplication. In particular the events (zₐ = Kₐ e₀), the pencil and spine projectors (from E[zzᵀ]), the annihilation relation (Kₐ zᵦ = 0), the complex structure J (the −1 eigenmode of Φ), the strain functional (τₐ(x) = ‖Kₐ x‖² − 1), and the full spectral decomposition are all recoverable from the family alone.
+**Theorem 1.1 (Firewall Theorem). [FORCED]** Let K be the operator family induced by the 84 standard zero divisors and μ the uniform weight. Then every theorem in Sections 3–7 of this paper is expressible, and is verified, entirely in terms of (K, μ) — without reference to the underlying nonassociative multiplication. In particular the events, the pencil and spine projectors (from E[zzᵀ]), the annihilation relation, the complex structure J (the −1 eigenmode of Φ), the strain functional (τₐ(x) = ‖Kₐ x‖² − 1), and the full spectral decomposition are recoverable from the family alone. Theorem 2.1 remains a provenance theorem about which sedenion candidates generate K and therefore lies outside the firewall.
 
 *Verification.* Constructive: `verify/occurrence_ii_audit.py` derives every [FORCED] and [MEASURED] result in this paper from the data file (K, μ) behind an explicit provenance firewall, importing no algebraic apparatus. The proof of the theorem is the program.
 
 **This yields the paper's thesis:** the data file `data/kraus84.npz` — the array K of shape (84, 16, 16) and the weight vector μ — is the paper's *only load-bearing artifact*. The sedenions are its provenance, not its prerequisite. OT-I was fundamentally about the algebra; this paper is fundamentally about the channel. The algebra selects; the channel is what there is to study.
 
-**On sedenion history.** The sedenion algebra has a history in speculative physics, some of it fringe. This paper inverts that direction: the nonassociative multiplication is used *once*, to select which 84 operators form the Kraus family and which measure weights them. Every result in §2–7 thereafter is independent of sedenion multiplication. The channel's interest is mathematical (it has forced structure and symmetry), conjectural-physical (if conjectures C1–C5 hold), and not algebraic. The firewall and the artifact-based reproducibility mitigate sedenion baggage entirely.
+**On sedenion history.** The sedenion algebra has a history in speculative physics, some of it fringe. This paper inverts that direction: the nonassociative multiplication is used *once*, to select which 84 operators form the Kraus family and which measure weights them. Every result in §3–7 thereafter is independent of sedenion multiplication. The channel's interest is mathematical (it has forced structure and symmetry), conjectural-physical (if conjectures C1–C5 hold), and not algebraic. The firewall and the artifact-based reproducibility mitigate sedenion baggage entirely.
 
 ### 1.3 Relation to prior work
 
@@ -65,7 +65,7 @@ What does not appear in the prior literature, to the best of our knowledge after
 
 **Every [FORCED] claim in this paper is reproducible from the released artifacts** (`data/kraus84.npz`, `verify/occurrence_ii_audit.py`, and the audit suite of [OT-repo]). An independent re-derivation from a from-scratch Cayley–Dickson implementation (PR #11, cabarius) reproduces the crack size, both moment identities, the full spectrum with multiplicities, and the dynamical constants within stated error. Readers are asked not to accept any numerical claim they have not run.
 
-**Pre-publication audit requirement (non-optional).** Before submission, `data/kraus84.npz` and `verify/occurrence_ii_audit.py` will be released to independent auditors for verification of all [FORCED] claims in §2–7. This verification is a standing requirement, not optional, and includes the three specific audit obligations listed in §10.
+**Pre-publication audit requirement (non-optional).** Before submission, `data/kraus84.npz` and `verify/occurrence_ii_audit.py` will be released to independent auditors for verification of all [FORCED] claims in §2–7. This verification is a standing requirement, not optional, and includes the three specific audit obligations listed in §11.
 
 ---
 
@@ -87,7 +87,7 @@ and there are exactly 7 · 6 · 2 = **84** of them. The diagonal case i = j give
 
 **Remark.** Σ as a manifold is the G₂-orbit of any one such z, diffeomorphic to G₂/SU(2) ≅ V₂(Im 𝕆) (dimension 11); the 84 basic diagonals are the lattice points of that orbit in the standard frame, and the invariant measure μ restricts to the uniform measure on them [OT, Def. 3.4; Moreno 1998]. Theorem 3.6 of [OT] (the design theorem) proves that the channel depends on the sampling measure only through its second moment, and that the uniform-84 and continuum measures share E[zzᵀ] = P_W/14 exactly; the discrete and continuum channels therefore **coincide at the linear level**. Everything below may be read on the 84 without loss.
 
-**Definition 2.2 (The Kraus family).** K = {K₁, …, K₈₄} with Kₐ = L_{zₐ}, weighted by μₐ = 1/84. Each Kₐ is antisymmetric (Kₐᵀ = −Kₐ) since zₐ is purely imaginary.
+**Definition 2.2 (The Kraus family).** K = {K₁, …, K₈₄} with Kₐ = L_{zₐ}, weighted by μₐ = 1/84. Each Kₐ is antisymmetric (Kₐᵀ = −Kₐ) since zₐ is purely imaginary. The released `data/kraus84.npz` stores the orthogonally similar right-multiplication convention R_z = −C L_z C, where C is sedenion conjugation; see `data/README.md`. This changes matrix entries and whether the concrete clock is written L_{e₈} or R_{e₈}, but preserves all basis-independent channel invariants.
 
 **Definition 2.3 (The Born Channel).** For X ∈ End(ℝ¹⁶),
 
@@ -150,9 +150,9 @@ Equivalently, writing Mᵤ = LᵤᵀLᵤ (spectrum {0⁴, 1⁸, 2⁴} for every 
 | −𝔭 | −2√3 | 14 |
 | −1 | −7 | 1 |
 
-Every eigenvalue lies in (1/7)·{0, ±1, ±3, ±2√3, ±7}; every multiplicity is a G₂-representation dimension; the sole −1 is the parity of OT Theorem 3.9(b), and 2√3 is the slope constant of the triad-closure cubic. Note the sector asymmetry: +1/7 (mult 42) occurs only antisymmetrically, −1/7 (mult 42) only symmetrically, and the irrational pair ±𝔭 is confined entirely to the antisymmetric sector. By OT Theorem 3.13 (the design theorem), this is exactly the spectrum of the continuum channel as well. Verified to 4.9·10⁻¹⁵ in the independent audit.
+Every eigenvalue lies in (1/7)·{0, ±1, ±3, ±2√3, ±7}; every eigenspace is a G₂-module built from irreducibles of dimensions {1, 7, 14, 27}. In particular, 42 = 1 ⊕ 7 ⊕ 7 ⊕ 27, 72 = 4·1 ⊕ 2·7 ⊕ 2·27, and 28 = 14 ⊕ 14. The sole −1 is the parity of OT Theorem 3.9(b), and 2√3 is the slope constant of the triad-closure cubic. Note the sector asymmetry: +1/7 (mult 42) occurs only antisymmetrically, −1/7 (mult 42) only symmetrically, and the irrational pair ±𝔭 is confined entirely to the antisymmetric sector. By OT Theorem 3.13 (the design theorem), this is exactly the spectrum of the continuum channel as well. Verified to 4.9·10⁻¹⁵ in the independent audit.
 
-**Audit obligation (Lie theory).** The identification of multiplicities 1, 7, 14, 21, 42 as G₂ irrep dimensions and their explicit branching into symmetric vs. antisymmetric sectors of End(ℝ¹⁶) must be certified by an independent specialist in exceptional Lie groups. Numerical verification to machine precision is necessary but not sufficient; the representation-theoretic naming of these sectors is the audit priority.
+**Audit obligation (Lie theory).** The decomposition of the eigenspaces into G₂ irreducibles {1, 7, 14, 27} and their branching into symmetric vs. antisymmetric sectors of End(ℝ¹⁶) must be certified by an independent specialist in exceptional Lie groups. Numerical verification to machine precision is necessary but not sufficient; the representation-theoretic naming of these sectors is the audit priority.
 
 **Remark (matrix trace).** As a 256×256 matrix Φ has trace 0, forced by the ±-symmetry of the spectrum. *Trace-preserving as a channel* and *traceless as a matrix* are different statements; conflating them was an error in an earlier draft of [OT], caught in external review.
 
@@ -166,7 +166,7 @@ i.e., J is an orthogonal complex structure on ℝ¹⁶; concretely J = L_{e₈},
 
 **This is the paper's first structural surprise.** The imaginary unit of quantum mechanics is not installed; it is an eigenvector. A purely dissipative, real, finite channel manufactures ℂ as its only period-2 invariant. ℝ¹⁶ becomes ℂ⁸ with multiplication by i given by J, and the spine S becomes the canonical complex line ℂ·e₀. **[FORCED]**; the *identification* of this line with the quantum state's phase plane is **[READING]**.
 
-### 3.4 Resolution of Open Problem 7: the irrational spectral constant
+### 3.4 The irrational spectral constant
 
 **Definition 3.5 (The irrational spectral constant).** Let
 
@@ -180,10 +180,10 @@ $$\gamma_{\mathfrak{p}} := -\log \mathfrak{p} \approx 0.7035.$$
 
 **Theorem 3.4 (Origin of 𝔭). [FORCED]**
 (a) The eigenvectors of eigenvalue ±𝔭 lie entirely in the antisymmetric sector: for the computed eigenbasis, the antisymmetric projection carries fraction 1.000000 of the norm and the symmetric projection 0.000000.
-(b) Each sign carries multiplicity 14 = dim so(7), the dimension of the antisymmetric traceless algebra on the 7-dimensional pencil block — a G₂ representation dimension.
+(b) Each sign carries multiplicity 14, but the eigenspace is 7 ⊕ 7 as a G₂-module, not the adjoint 14 and not so(7), whose dimension is 21.
 (c) The value factors as (2√3) · (1/7): the slope of the triad-closure cubic times the universal spectral quantization 1/7 of Theorem 3.2.
 
-The three invariants — triad slope, seventh-quantization, so(7) sector — are algebraically independent, and their coincidence at this eigenvalue is forced, not contingent. What remains open is not the constant's *origin* but its *meaning*: any proposed physical role (coherence rate, two-time correlator scale) is **[READING]**.
+The factorization links the triad slope and seventh-quantization in this spectrum. It does not by itself establish that these are algebraically independent invariants or give the multiplicity a Lie-algebra interpretation. Any proposed physical role (coherence rate, two-time correlator scale) remains **[READING]**.
 
 ---
 
@@ -195,9 +195,9 @@ Adjoin the single OT orientation bit: at each step an event z is *sampled* from 
 
 **Definition 4.1 (Event-strain).** τₐ(x) = ‖Kₐ x‖² − 1.
 
-**Theorem 4.1 (Mean Strain Balance). [FORCED]** For *every* unit x, Eₐ[τₐ(x)] = 0 exactly (a restatement of Theorem 3.1). Verified: max over 2000 random states of |E[τ | x]| = 6.8·10⁻¹⁶. Strain is expended and recovered event-by-event with zero mean at every state — not merely in equilibrium.
+**Proposition 4.1 (Mean Strain Balance). [FORCED]** For *every* unit x, Eₐ[τₐ(x)] = 0 exactly (a restatement of Theorem 3.1). Verified: max over 2000 random states of |E[τ | x]| = 6.8·10⁻¹⁶. Strain is expended and recovered event-by-event with zero mean at every state — not merely in equilibrium.
 
-**Theorem 4.2 (Strain variance). [MEASURED / exact]** Over uniform x and uniform events, Var[τ] = 1/18 = 0.0555… (Monte Carlo 0.0557 ± stat.). The value 1/18 is exact [OT, §5].
+**Theorem 4.2 (Strain variance). [FORCED]** For uniform x, conditionally on every event, Var[τ] = 1/18 = 0.0555…. Indeed Mₐ has spectrum {0⁴, 1⁸, 2⁴}, so Tr Mₐ = 16 and Tr Mₐ² = 24; the standard spherical fourth-moment identity gives E[(xᵀMₐx)²] = ((Tr Mₐ)² + 2 Tr Mₐ²)/(16·18), hence Var(xᵀMₐx − 1) = 1/18.
 
 ### 4.2 The Born quotient
 
@@ -213,12 +213,12 @@ Verified: max deviation 1.2·10⁻¹⁵ over random samples. The transported spi
 
 ### 4.3 The oriented chain's constants
 
-**[MEASURED]** Long-run simulation of the oriented chain (3 seeds × 60 000 steps here; 10⁷-step runs in [OT]) gives:
+**[MEASURED]** Simulations of the oriented chain give:
 
-- stationary spine share s\* = 0.13172(5) — an enrichment over the uniform value 2/16 = 0.125;
-- quenched Lyapunov exponent λq = −0.01773(3), while the annealed exponent is exactly 0 (Theorem 4.1).
+- stationary spine share s\* ≈ 0.1318 — an enrichment over the uniform value 2/16 = 0.125;
+- a negative quenched Lyapunov estimate whose value depends on how annihilation and restart steps are scored, while the annealed exponent is exactly 0 (Proposition 4.1).
 
-The gap between annealed and quenched exponents is pure Jensen curvature: survivors are systematically spine-enriched, and the arrow of the process is paid for in fluctuation, not in mean. The closed form of s\* is open (candidate 1/8 + 1/147 sits at 1.7σ; [OT] Open Problem 1).
+The gap between annealed and quenched exponents is sensitive to how exact annihilations and restarts are scored; λ_q is therefore not a five-digit invariant until that convention is fixed. Survivors are systematically spine-enriched, while the bounded stationary share s\* is stable across the tested conventions. The closed form remains Open Problem 1; an independent-review addendum there records suggestive evidence for one candidate without promoting it to a result.
 
 ### 4.4 Continuous-time limit (deferred to Conjecture C4)
 
@@ -252,12 +252,18 @@ The asymptotic algebra of the Born Channel is span{I, J} ≅ ℂ, and the evolut
 
 ## 7. What the channel is, in standard language
 
-For readers from quantum information: Φ is a unital, trace-preserving, self-adjoint (hence non-primitive) qudit channel on d = 16 with Choi rank ≤ 84, Kraus operators proportional to real antisymmetric matrices of rank 12, peripheral spectrum ℤ₂, spectral gap 1 − 𝔭, and a multiplicity structure organized by G₂ ⊃ SU(3) representation theory. Its distinguishing features against generic channels of this size:
+For readers from quantum information: after complex-linear extension from M₁₆(ℝ) to M₁₆(ℂ), Φ is a unital, trace-preserving, self-adjoint qudit channel on d = 16 with Choi rank exactly 14, a minimal random-unitary — specifically random-orthogonal — representation by 14 signed permutation matrices, an 84-event zero-divisor realization by real antisymmetric rank-12 matrices, peripheral spectrum ℤ₂, spectral gap 1 − 𝔭, and a multiplicity structure organized by G₂ ⊃ SU(3) representation theory. It is non-primitive because of its peripheral −1 mode, not because it is self-adjoint. Its distinguishing features against generic channels of this size:
 
-1. the Kraus family is not chosen but *forced* (unique Aut-invariant family from a nonassociative selection principle);
+**Proposition 7.1 (Minimal channel form). [FORCED]** Since z ↦ L_z is linear and E[zzᵀ] = P_W/14,
+
+  Φ(X) = (1/14) Σ_{i ∈ {1,…,7,9,…,15}} L_{e_i}ᵀ X L_{e_i}.
+
+Each L_{e_i} is an orthogonal signed permutation. The Kraus-vector span has dimension 14 because L_z e₀ = z on W, so the Choi rank is exactly 14 and no smaller Kraus representation exists. Thus 84 is forced at the event/crack level, while the channel remembers only the second moment and admits a 14-operator random-unitary (indeed random-orthogonal) form.
+
+1. the 84-event realization is not chosen but forced by the basic zero-divisor selection principle;
 2. the spectrum is exact and almost entirely rational (sevenths), with a single irrational pair;
 3. the asymptotic (decoherence-free) algebra is a canonical complex structure rather than a generic commutant;
-4. every constant of the model — s\*, λq, 1/18, 𝔭, the 7×12 lattice — is reproducible from an .npz file by any linear-algebra solver.
+4. every exact constant of the channel — 1/18, 𝔭, and the 7×12 lattice — is reproducible from an .npz file by any linear-algebra solver; chain estimates such as s\* and λq additionally require an explicit annihilation/restart convention.
 
 Nothing in this section requires, or mentions, sedenions. That is the firewall doing its work.
 
@@ -292,7 +298,7 @@ If the seven components remain disconnected under any coarse-graining, or if a c
 
 **Established:**
 - The single-step Born quotient is exact: s(x′) · (1 + τ) = |⟨z, x⟩_ℂ|² (Theorem 4.3).
-- Mean strain balance holds pointwise: E[τ | x] = 0 for every state (Theorem 4.1).
+- Mean strain balance holds pointwise: E[τ | x] = 0 for every state (Proposition 4.1).
 - Variance is constant: Var[τ] = 1/18 (Theorem 4.2).
 
 **Open:**
@@ -307,7 +313,7 @@ If composition breaks the quotient structure, or if paths interfere incorrectly,
 
 **Established** (all G₂-module structure machine-verified in `verify/occurrence_ii_reptheory.sage`; provenance in [docs/ot-ii-sage-p-sector-saga.md](docs/ot-ii-sage-p-sector-saga.md)):
 
-- The 14-dimensional antisymmetric eigenspace of Φ at eigenvalue 𝔭 is invariant under Φ (Theorem 3.5), and its multiplicity 14 equals dim 𝔤₂.
+- The 14-dimensional antisymmetric eigenspace of Φ at eigenvalue 𝔭 is invariant under Φ and decomposes as 7 ⊕ 7 under G₂ (Proposition 3.4a).
 - The eigenspaces are genuine G₂-modules: Φ commutes with the concrete G₂ = Aut(𝕆) action to machine precision (‖[Φ, g⊗g]‖ ≈ 10⁻¹⁶), and every sector decomposes over the irreps {**1**, **7**, **14**, **27**}.
 - **The 𝔭-sector is `7 ⊕ 7`, not the adjoint.** The coincidence 14 = dim 𝔤₂ notwithstanding, the character satisfies χ = 2·χ₇, so under the canonical (long-root) SU(3) ⊂ G₂ (for which **7 = 3 ⊕ 3̄ ⊕ 1**) the 𝔭-sector branches as **2·(3 ⊕ 3̄ ⊕ 1)** — two matter families, **no gluon octet**.
 - **The octet lives in the ±3/7 sectors.** The true adjoint **14** copies sit there (each sector is **7 ⊕ 14**), branching as **8 ⊕ 2·(3 ⊕ 3̄) ⊕ 1** — one octet plus two matter families.
@@ -398,9 +404,9 @@ The five conjectures rest on exact mathematics, but several components require i
 | Spectrum: nine levels, quantized in sevenths (except ±𝔭) | FORCED | Theorem 3.2 |
 | The complex structure J (−1 eigenmode, J² = −I) | FORCED | Theorem 3.3 |
 | The irrational pair ±𝔭 (confined to antisymmetric sector, origin under investigation) | FORCED | Theorem 3.4 |
-| The 14-dim G₂-invariant antisymmetric sector | FORCED | Theorem 3.5 |
+| The 14-dim G₂-invariant antisymmetric sector | FORCED | Proposition 3.4a |
 | Born quotient identity (single step, pointwise exact) | FORCED | Theorem 4.3 |
-| Mean strain balance: E[τ \| x] = 0 (normalization cost) | FORCED | Theorem 4.1 |
+| Mean strain balance: E[τ \| x] = 0 (normalization cost) | FORCED | Proposition 4.1 |
 | No real Lindblad lift (Φ singular; −1 mode simple) | FORCED | Theorem 3.2 / Remark 4.4 |
 | Peripheral spectrum {±1}; peripheral algebra span{I, J} ≅ ℂ with exact ℤ₂ automorphism | FORCED | Theorem 5.1 |
 | 4-regular annihilation graph (seven disconnected components, Fano structure) | FORCED | Theorem 6.1 |
@@ -425,7 +431,7 @@ The channel itself—independent of any physical interpretation—is the princip
 
 ---
 
-## 10. Reproducibility and audit obligations
+## 11. Reproducibility and audit obligations
 
 All results are reproducible from:
 
@@ -437,9 +443,9 @@ Runtime for the full ledger is under one minute on commodity hardware. Readers a
 
 **Standing audit obligations.** Because every theorem in §2–7 is load-bearing — unlike OT-I, this paper does not survive the failure of any one of them — we record the three verifications that most deserve fully independent treatment beyond the existing audits:
 
-1. **Representation theory.** Every multiplicity identification (G₂ sectors, so(7), the SU(3) stabilizer in C3) should be checked by a specialist in exceptional Lie groups. The numerical multiplicities are machine-verified, and their G₂-module structure is now computed exactly (`verify/occurrence_ii_reptheory.sage`): the eigenspaces decompose over the irreps `{1, 7, 14, 27}` — e.g. the ±3/7 sectors are `7 ⊕ 14`, and, notably, the 𝔭-sector is `7 ⊕ 7`, **not** the adjoint. This already corrected two earlier misstatements (the `8 ⊕ 6`, then `8 ⊕ 3 ⊕ 3̄`, wrongly attributed to the 𝔭-sector). A specialist should confirm these names and their physical reading.
+1. **Representation theory.** Every G₂-sector and SU(3)-stabilizer identification should be checked by a specialist in exceptional Lie groups. The numerical multiplicities are machine-verified, and their G₂-module structure is now computed exactly (`verify/occurrence_ii_reptheory.sage`): the eigenspaces decompose over the irreps `{1, 7, 14, 27}` — e.g. the ±3/7 sectors are `7 ⊕ 14`, and, notably, the 𝔭-sector is `7 ⊕ 7`, **not** the adjoint. A specialist should confirm these names and their physical reading.
 2. **OT Theorem 3.13 (Design Theorem) — Audit Priority.** The claim that the continuum sampling measure and 84-point uniform measure yield identical channels because both satisfy E[zzᵀ] = P_W/14 is mathematically powerful and is the foundation of this paper's mathematical finiteness. An independent formal proof is essential before publication. Currently verified by numerical agreement to 2.4·10⁻¹⁸; proof-level independence is required.
-3. **The Firewall Theorem.** Theorem 1.1's proof is constructive-by-program; a formal proof (that the listed derived objects suffice to generate everything used in §2–7 without sedenion input) would upgrade it from verified practice to certified mathematics.
+3. **The Firewall Theorem.** Theorem 1.1's proof is constructive-by-program; a formal proof (that the listed derived objects suffice to generate everything used in §3–7 without sedenion input) would upgrade it from verified practice to certified mathematics. Section 2 is explicitly provenance and lies outside the firewall.
 
 ---
 
@@ -511,9 +517,9 @@ This paper uses a small set of named objects that carry the entire structure of 
 
 **CPTP** — Completely Positive Trace Preserving. A map T on matrices is CPTP if it is (1) completely positive: T ⊗ I is positive on all tensor extensions, and (2) trace-preserving: Tr(T(X)) = Tr(X) for all X. The Born Channel is CPTP.
 
-**Kraus family** — A representation of a CPTP map as Φ(X) = Σₐ KₐᵀXKₐ. For the Born Channel, the Kₐ are the 84 left-multiplication operators by zero divisors, and the family is uniquely selected by sedenion structure.
+**Kraus family** — A representation of a CPTP map as Φ(X) = Σₐ KₐᵀXKₐ. The Born Channel has an 84-operator zero-divisor realization and a minimal 14-operator random-unitary realization whose unitaries are real orthogonal signed permutations.
 
-**Firewall** — The principle that nonassociativity is used once (to select which 84 operators form Φ) and then exits the stage. All theorems in §2–7 are expressed entirely in terms of the Kraus family (K, μ) without further sedenion input.
+**Firewall** — The principle that nonassociativity is used once (to select which 84 operators form Φ) and then exits the stage. All theorems in §3–7 are expressed entirely in terms of the Kraus family (K, μ) without further sedenion input; §2 records the algebraic provenance of that family.
 
 **[FORCED]** — A claim that is a computable consequence of the Born Channel's definition, verified to machine precision. Theorems tagged [FORCED] do not depend on physical interpretation.
 
@@ -534,7 +540,7 @@ This appendix catalogues all established results, measured quantities, and open 
 These theorems characterize the Born Channel's Kraus family and its fundamental structure. All are [FORCED].
 
 **OT-II, Theorem 2.1 (The 84 Standard Zero Divisors).** [FORCED]
-The 84 standard unit zero divisors of 𝕊 are exactly the vectors (eᵢ ± e_{8+j})/√2 with i, j ∈ {1, …, 7}, i ≠ j. Each has ker L_z of dimension 4 and rank L_z = 12. The Aut(𝕊)-invariant Kraus family {L_{z_a}} is unique.
+The 84 standard unit zero divisors of 𝕊 are exactly the vectors (eᵢ ± e_{8+j})/√2 with i, j ∈ {1, …, 7}, i ≠ j. Each has ker L_z of dimension 4 and rank L_z = 12. Uniqueness of this family under Aut(𝕊) is a separate algebraic claim not established by the released channel artifacts.
 
 **OT-II, Theorem 3.1 (Doubly Stochastic Channel).** [FORCED]
 Σₐ μₐ KₐᵀKₐ = I and Φ(I) = I. The Born Channel is defined as a Heisenberg-picture superoperator Φ: End(ℝ¹⁶) → End(ℝ¹⁶), where Φ(X) = Σₐ μₐ KₐᵀXKₐ. This is self-adjoint with respect to the Hilbert-Schmidt inner product. Its Schrödinger dual—the map on density operators ρ ↦ Σₐ μₐ Kₐ ρ Kₐᵀ—is completely positive and trace-preserving (CPTP). The invariance of the maximally mixed state (I) and exactness of trace bookkeeping follow from both pictures. Verified: ‖E[KᵀK] − I‖ = 1.0·10⁻¹⁴.
@@ -565,14 +571,14 @@ Let 𝔭 := 2√3/7 ≈ 0.494871659 be the unique positive irrational eigenvalue
 
 **OT-II, Theorem 3.4 (Origin of 𝔭).** [FORCED]
 (a) Eigenvectors of ±𝔭 lie entirely in the antisymmetric sector (frac_antisym = 1.0000, frac_sym = 0.0000).
-(b) Multiplicity is 14 = dim so(7), where so(7) is the Lie algebra of antisymmetric 7×7 matrices (the sedenion pencil block). This is a G₂ representation dimension.
-(c) The value factors as (2√3)·(1/7): triad slope × spectral quantization. These three invariants are algebraically independent; their coincidence is forced.
+(b) Multiplicity is 14, and the eigenspace is 7 ⊕ 7 as a G₂-module. It is neither the adjoint 14 nor so(7), whose dimension is 21.
+(c) The value factors as (2√3)·(1/7): triad slope × spectral quantization. The factorization is exact; no algebraic-independence or Lie-algebra interpretation is claimed.
 
 **OT-II, Theorem 3.3 (Canonical Complex Structure).** [FORCED]
 The −1 eigenmode of Φ, when reshaped and normalized, is an orthogonal complex structure J satisfying J² = −I and Jᵀ = −J. Geometrically, J = L_{e₈}. Verified: ‖J² + I‖ = 5.0·10⁻¹⁵.
 
-**OT-II, Theorem 3.5 (The 𝔭-Sector).** [FORCED]
-The 14-dimensional antisymmetric eigenspace at eigenvalue 𝔭 is invariant under Φ. If X lies in the eigenspace, then Φ(X) = 𝔭 X remains in it. This sector is where sedenion triad geometry is most visible. Verified: ‖Φ(X₁₄) − 𝔭 X₁₄‖ = 1.2·10⁻¹⁵.
+**OT-II, Proposition 3.4a (The 𝔭-Sector).** [FORCED]
+The 14-dimensional antisymmetric eigenspace at eigenvalue 𝔭 is invariant under Φ and decomposes as 7 ⊕ 7 under G₂. If X lies in the eigenspace, then Φ(X) = 𝔭 X remains in it. Verified: ‖Φ(X₁₄) − 𝔭 X₁₄‖ = 1.2·10⁻¹⁵.
 
 **OT-II, Theorem 5.1 (Peripheral Algebra).** [FORCED]
 The peripheral spectrum (eigenvalues of modulus 1) is exactly {+1, −1}, both simple, with spectral gap 1 − 𝔭 ≈ 0.505 to the rest. The asymptotic algebra is span{I, J} ≅ ℂ with exact ℤ₂ automorphism: I → I, J → −J → J. For every X ∈ End(ℝ¹⁶),
@@ -590,11 +596,11 @@ These theorems characterize how states flow under the Born Channel and oriented 
 **OT-I, Theorem 3.5 (Annealed Exponent).** [FORCED]
 The annealed Lyapunov exponent λ_a = E[log ‖L_z x‖] = 0 exactly. On average, the oriented chain neither grows nor shrinks.
 
-**OT-II, Theorem 4.1 (Mean Strain Balance).** [FORCED]
+**OT-II, Proposition 4.1 (Mean Strain Balance).** [FORCED]
 For every unit state x, Eₐ[τₐ(x)] = 0 exactly, where τₐ is the normalization strain. Strain is expended and recovered at every step. Verified: max |E[τ|x]| = 6.8·10⁻¹⁶ over 2000 random states.
 
-**OT-II, Theorem 4.2 (Strain Variance).** [MEASURED / exact]
-Over uniform states and events, Var[τ] = 1/18 = 0.0556… (Monte Carlo: 0.0557 ± stat.). The variance is constant and exact.
+**OT-II, Theorem 4.2 (Strain Variance).** [FORCED]
+For uniform states, conditionally on every event, Var[τ] = 1/18 = 0.0556…. This follows exactly from the eventwise spectrum {0⁴, 1⁸, 2⁴} and the spherical fourth-moment identity.
 
 **OT-II, Theorem 4.3 (Born Transport Identity).** [FORCED]
 Along every transition x → x′ = Kx/‖Kx‖, the exact identity holds:
@@ -604,7 +610,7 @@ s(x′) · (1 + τ) = |⟨z, x⟩_ℂ|²
 The transported spine weight (s(x′)) is the Hermitian modulus (numerator) divided by the normalization cost (denominator). Verified: max deviation 1.2·10⁻¹⁵.
 
 **OT-I, Theorem 3.6 (Quenched vs. Annealed).** [MEASURED]
-The quenched Lyapunov exponent λ_q ≈ −0.0177 < 0, while the annealed exponent λ_a = 0. The gap is pure Jensen curvature: survivors are enriched; the cost is paid in fluctuation, not mean. This reveals the arrow of time in the process.
+The quenched Lyapunov estimate is negative, while the annealed exponent λ_a = 0. Its numerical value depends materially on the convention for annihilation and restart steps; no five-digit value is claimed until that convention is canonicalized.
 
 ---
 
@@ -626,7 +632,7 @@ E[zzᵀ] = (1/84) Σz zzᵀ = P_W / 14, where P_W projects onto the 14-dimension
 ### B.5 Foundational Results
 
 **Theorem 1.1 (Firewall Principle).** [FORCED]
-Let K = {L_{z_a}} be the 84 left-multiplication operators by standard zero divisors and μ the uniform weight. Every theorem in §2–7 is expressible and verified entirely in terms of (K, μ) without reference to the underlying nonassociative multiplication. Events z_a = K_a e₀, pencil and spine projectors, annihilation relations, complex structure J (the −1 eigenmode), strain functional τ_a(x), and full spectral decomposition are all recoverable from the family alone.
+Let K be the 84-operator realization induced by standard zero divisors and μ the uniform weight. Every theorem in §3–7 is expressible and verified entirely in terms of (K, μ) without reference to the underlying nonassociative multiplication. Events, pencil and spine projectors, annihilation relations, complex structure J (the −1 eigenmode), strain functional τ_a(x), and full spectral decomposition are all recoverable from the family alone. Theorem 2.1 is the algebraic provenance statement that selects K and lies outside the firewall.
 
 *Implication:* All [FORCED] results can be independently verified from the data file (`data/kraus84.npz`) behind an explicit provenance firewall. No algebraic assumptions needed beyond the given operators.
 
@@ -637,10 +643,10 @@ Let K = {L_{z_a}} be the 84 left-multiplication operators by standard zero divis
 These are empirical properties derived from Monte Carlo simulation of the oriented chain, with stated error bars and reproducible error analysis.
 
 **OT-I, Theorem 3.7 (Stationary Spine Share).** [MEASURED]
-Long-run simulation (3 seeds × 60,000 steps; 10⁷-step runs in [OT]) gives stationary spine share s* = 0.13172(5), an enrichment over the uniform 2/16 = 0.125. The closed form remains open. A candidate rational approximation 1/8 + 1/147 ≈ 0.131723 is consistent with simulation but sits at 1.7σ from the measured value, hence not conclusively identified.
+Long-run simulations give a stationary spine share near s* = 0.1318, an enrichment over the uniform 2/16 = 0.125. Independent runs give 0.13183(4), consistent with 1/8 + 1/147 = 0.131802721…. This numerical agreement motivates an exact derivation but does not prove the closed form.
 
-**OT-I, Theorem 3.1 (Settlement Survival).** [MEASURED]
-Average probability of nonzero settlement: P_survive ≈ 3/4 by geometry (rank 12 out of 16). Verified: Long-run simulation agrees to 10⁻⁴.
+**Settlement survival along the oriented chain. [MEASURED]**
+Rank 12/16 is a dimension ratio, not a survival probability. A continuously distributed state hits a fixed four-dimensional kernel with probability zero; along the implemented discrete chain, independent simulation measures an annihilation rate near 2.4·10⁻⁴ per settlement under the audit threshold. The threshold and restart convention must be stated with any quoted rate.
 
 ---
 
@@ -685,7 +691,13 @@ Is the irrational spectral constant 𝔭 observable? Any verified realization mu
 These are explicit questions requiring specialist input or further computation.
 
 **Open Problem 1** (Closed form of s*).
-Is the stationary spine share s* = 0.13172(5) a rational number or algebraic constant? Candidates: 1/8 + 1/147 ≈ 0.1317.
+Is the stationary spine share s* a rational number or algebraic constant?
+
+**Addendum (independent review, July 2026).** The previously proposed candidate
+
+  1/8 + 1/147 = 0.131802721…
+
+was mis-evaluated as 0.131723 in an earlier draft. Independent simulations near 0.13183 are consistent with the correctly evaluated candidate, so it remains suggestive. This is not a solution: no exact derivation is known, and a search for a stationary polynomial-coboundary identity through degree six found none. A rational or non-polynomial mechanism remains possible.
 
 **Open Problem 2** (Lindblad embedding and C4).
 A naive *real* generator is ruled out — Φ is singular and its −1 mode is simple, so it has no real logarithm (Remark 4.4) — so any embedding must be conditional or complexified. Is there nonetheless a canonical CPTP/Lindblad embedding Φ = exp(L) derived from the Born Channel's operator algebra? If so, does it reproduce the peripheral ℤ₂ at settlement times?

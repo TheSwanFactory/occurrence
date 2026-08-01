@@ -218,8 +218,8 @@ def main():
             float(worst_mean), tol=1e-9)
     certify("C", "Born rule  max |s'(1+tau) - |<z,x>_C|^2|",
             float(worst_born), tol=1e-9)
-    print(f"Temperature: Var[tau] = {np.var(taus):.5f}  "
-          f"(theory 1/18 = {1/18:.5f})  [MEASURED]")
+    print(f"Strain variance cross-check: Var[tau] = {np.var(taus):.5f}  "
+          f"(exact theory 1/18 = {1/18:.5f})")
     print("Transported probability = Hermitian modulus / normalization cost.")
     print("[READING] numerator = Born probability; denominator = energy; "
           "variance = temperature.\n")
@@ -228,7 +228,7 @@ def main():
     # PART 5: THE SIGNATURE  2*sqrt(3)/7  [C]
     # ========================================================================
     print("=" * 68)
-    print("5. THE COHERENCE CONSTANT (Open Problem 7's eigenvalue, as observable)")
+    print("5. THE COHERENCE CONSTANT (the irrational eigenvalue, as observable)")
     print("=" * 68)
     target = 2 * np.sqrt(3) / 7
     idx = np.argmin(np.abs(evals - target))
@@ -254,7 +254,7 @@ def main():
     print("=" * 68)
     print("6. THE ORIENTED CHAIN (add one bit: retained vs sampled)")
     print("=" * 68)
-    s_stars, lams = [], []
+    s_stars, lams, deaths = [], [], 0
     for seed in range(3):
         rg = np.random.default_rng(seed)
         x = rg.standard_normal(d); x /= np.linalg.norm(x)
@@ -263,6 +263,7 @@ def main():
             Kx = K[rg.integers(0, n)] @ x
             nrm = np.linalg.norm(Kx)
             if nrm < 1e-14:
+                deaths += 1
                 x = rg.standard_normal(d); x /= np.linalg.norm(x); continue
             x = Kx / nrm
             if t > 5000:
@@ -273,7 +274,9 @@ def main():
           f"{np.std(s_stars):.5f}   (uniform would be 2/16 = 0.125)  [MEASURED]")
     print(f"Quenched Lyapunov  lambda_q = {np.mean(lams):.5f} +/- "
           f"{np.std(lams):.5f}   (annealed exponent is exactly 0)  [MEASURED]")
-    print("Survivors are spine-enriched; the gap to zero is pure Jensen curvature.")
+    print(f"Convention: ||Kx|| < 1e-14 restarts the chain and is not scored "
+          f"({deaths} restarts).")
+    print("Survivors are spine-enriched; lambda_q depends on this restart convention.")
     print("[READING] the arrow of time and its thermodynamic cost.\n")
 
     # ========================================================================
