@@ -9,6 +9,7 @@ on:
   pull_request:
     paths:
       - "verify/**"
+      - "data/**"
       - "occurrence-theory*.md"
       - "pyproject.toml"
       - "uv.lock"
@@ -18,6 +19,7 @@ on:
       - main
     paths:
       - "verify/**"
+      - "data/**"
       - "occurrence-theory*.md"
       - "pyproject.toml"
       - "uv.lock"
@@ -72,6 +74,9 @@ jobs:
 
       - name: Run Occurrence I audit (exit-code gate)
         run: python verify/occurrence_i_audit.py
+
+      - name: Run Occurrence II audit (exit-code gate)
+        run: python verify/occurrence_ii_audit.py
 
       - name: Run verification tests
         run: python -m pytest verify/
