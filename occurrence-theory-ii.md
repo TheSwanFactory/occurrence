@@ -57,7 +57,7 @@ The sedenion algebra 𝕊 is used exactly once: to determine which 84 operators 
 
 ### 1.3 Relation to prior work
 
-The 84 standard zero divisors of 𝕊 are classical objects: identified by Cawagas, organized by Moreno's homogeneous-space description of the pair variety [Moreno 1998; Moreno 2005], given combinatorial structure by de Marrais's "assessor" and box-kite analysis, reduced to seven triples with cycles and modes by Wilmot, and recently treated as a naturally reductive homogeneous space in the differential-geometric literature (arXiv:2411.18881). The exceptional group G₂ = Aut(𝕆) and its representation theory are likewise standard since Cartan.
+The 84 standard zero divisors of 𝕊 are classical objects: identified by Cawagas, organized by Moreno's homogeneous-space description of the pair variety [Moreno 1998; Moreno 2005], given combinatorial structure by de Marrais's "assessor" and box-kite analysis, reduced to seven triples with cycles and modes by Wilmot, and recently treated as a naturally reductive homogeneous space in the differential-geometric literature ([arXiv:2411.18881](https://arxiv.org/abs/2411.18881)). The exceptional group G₂ = Aut(𝕆) and its representation theory are likewise standard since Cartan.
 
 What does not appear in the prior literature, to the best of our knowledge after a systematic search, is any of the following: the treatment of the 84 left-multiplication operators as a *Kraus family*; the settlement channel Φ and its nine-eigenvalue spectrum; the identification of the canonical complex structure as the channel's −1 eigenmode; the Born-quotient transport identity; the peripheral-spectrum route from dissipation to unitarity; or the constant 𝔭 in any physical or spectral role. The algebraic raw material is known. The dynamical object built from it appears to be new. Numerous authors have explored octonionic and exceptional-algebraic approaches to physics; the present work differs in taking an exactly computable finite Kraus channel as the primary mathematical object, with the underlying nonassociative algebra entering only through the selection of the Kraus family.
 
@@ -773,17 +773,17 @@ This paper is a product of the same collaborative protocol as [OT]. External ind
 
 ## References
 
-- [OT] E. N. Prabhakar, *Occurrence Theory: An Orientation of Sedenion Settlement Dynamics*, v1.3 (2026). http://ihack.us/occurrence-theory/
-- G. Moreno, *The zero divisors of the Cayley–Dickson algebras over the real numbers*, Bol. Soc. Mat. Mexicana (3) 4 (1998) 13–28; arXiv:q-alg/9710013.
-- G. Moreno, *Constructing zero divisors in the higher dimensional Cayley-Dickson algebras*, arXiv:math/0512517 (2005).
-- R. B. Brown, *On generalized Cayley–Dickson algebras*, Pacific J. Math. 20 (1967) 415–422.
-- R. E. Cawagas, *On the structure and zero divisors of the Cayley–Dickson sedenion algebra* (2004).
-- R. P. C. de Marrais, *The 42 Assessors and the Box-Kites they fly*, arXiv:math/0011260.
-- G. P. Wilmot, *Structure of the Cayley–Dickson algebras*, arXiv:2505.11747.
-- *The geometry of sedenion zero divisors*, arXiv:2411.18881 (2024).
-- K. Kraus, *General state changes in quantum theory*, Ann. Phys. 64 (1971) 311–335.
+- [OT] E. N. Prabhakar, *Occurrence Theory: An Orientation of Sedenion Settlement Dynamics*, v1.3 (2026). <http://ihack.us/occurrence-theory/>
+- G. Moreno, *The zero divisors of the Cayley–Dickson algebras over the real numbers*, Bol. Soc. Mat. Mexicana (3) 4 (1998) 13–28; [arXiv:q-alg/9710013](https://arxiv.org/abs/q-alg/9710013).
+- G. Moreno, *Constructing zero divisors in the higher dimensional Cayley-Dickson algebras*, [arXiv:math/0512517](https://arxiv.org/abs/math/0512517) (2005).
+- R. B. Brown, *[On generalized Cayley–Dickson algebras](https://projecteuclid.org/euclid.pjm/1102992693)*, Pacific J. Math. 20 (1967) 415–422.
+- R. E. Cawagas, *[On the structure and zero divisors of the Cayley–Dickson sedenion algebra](https://doi.org/10.7151/dmgaa.1088)*, Discuss. Math. Gen. Algebra Appl. 24 (2004) 251–265.
+- R. P. C. de Marrais, *The 42 Assessors and the Box-Kites they fly*, [arXiv:math/0011260](https://arxiv.org/abs/math/0011260).
+- G. P. Wilmot, *Structure of the Cayley–Dickson algebras*, [arXiv:2505.11747](https://arxiv.org/abs/2505.11747).
+- *The geometry of sedenion zero divisors*, [arXiv:2411.18881](https://arxiv.org/abs/2411.18881) (2024).
+- K. Kraus, *[General state changes in quantum theory](https://doi.org/10.1016/0003-4916(71)90108-4)*, Ann. Phys. 64 (1971) 311–335.
 - M. Nielsen, I. Chuang, *Quantum Computation and Quantum Information*, CUP (2000), ch. 8.
-- The Born Exegeses, Books 1–9, and commentaries: ihack.us/occurrence-theory/ and radicalcentrism.org, Interludes 15A–15B (2026).
+- The Born Exegeses, Books 1–9, and commentaries: [ihack.us/occurrence-theory](http://ihack.us/occurrence-theory/) and [radicalcentrism.org](https://radicalcentrism.org), Interludes 15A–15B (2026).
 
 ---
 
