@@ -57,7 +57,7 @@ The sedenion algebra 𝕊 is used exactly once: to determine which 84 operators 
 
 ### 1.3 Relation to prior work
 
-The 84 standard zero divisors of 𝕊 are classical objects: identified by Cawagas, organized by Moreno's homogeneous-space description of the pair variety [Moreno 1998], given combinatorial structure by de Marrais's "assessor" and box-kite analysis, reduced to seven triples with cycles and modes by Wilmot, and recently treated as a naturally reductive homogeneous space in the differential-geometric literature (arXiv:2411.18881). The exceptional group G₂ = Aut(𝕆) and its representation theory are likewise standard since Cartan.
+The 84 standard zero divisors of 𝕊 are classical objects: identified by Cawagas, organized by Moreno's homogeneous-space description of the pair variety [Moreno 1998; Moreno 2005], given combinatorial structure by de Marrais's "assessor" and box-kite analysis, reduced to seven triples with cycles and modes by Wilmot, and recently treated as a naturally reductive homogeneous space in the differential-geometric literature (arXiv:2411.18881). The exceptional group G₂ = Aut(𝕆) and its representation theory are likewise standard since Cartan.
 
 What does not appear in the prior literature, to the best of our knowledge after a systematic search, is any of the following: the treatment of the 84 left-multiplication operators as a *Kraus family*; the settlement channel Φ and its nine-eigenvalue spectrum; the identification of the canonical complex structure as the channel's −1 eigenmode; the Born-quotient transport identity; the peripheral-spectrum route from dissipation to unitarity; or the constant 𝔭 in any physical or spectral role. The algebraic raw material is known. The dynamical object built from it appears to be new. Numerous authors have explored octonionic and exceptional-algebraic approaches to physics; the present work differs in taking an exactly computable finite Kraus channel as the primary mathematical object, with the underlying nonassociative algebra entering only through the selection of the Kraus family.
 
@@ -85,7 +85,7 @@ and there are exactly 7 · 6 · 2 = **84** of them. The diagonal case i = j give
 
 *Verification.* Exhaustive rank computation over all 98 candidates: 84 have rank 12; the 14 diagonal candidates have rank 16. (§Part 0 of `verify/occurrence_ii_audit.py`; independently PR #11.)
 
-**Remark.** Σ as a manifold is the G₂-orbit of any one such z, diffeomorphic to G₂/SU(2) ≅ V₂(Im 𝕆) (dimension 11); the 84 basic diagonals are the lattice points of that orbit in the standard frame, and the invariant measure μ restricts to the uniform measure on them [OT, Def. 3.4; Moreno 1998]. Theorem 3.6 of [OT] (the design theorem) proves that the channel depends on the sampling measure only through its second moment, and that the uniform-84 and continuum measures share E[zzᵀ] = P_W/14 exactly; the discrete and continuum channels therefore **coincide at the linear level**. Everything below may be read on the 84 without loss.
+**Remark.** Σ as a manifold is the G₂-orbit of any one such z, diffeomorphic to G₂/SU(2) ≅ V₂(Im 𝕆) (dimension 11); the 84 basic diagonals are the lattice points of that orbit in the standard frame, and the invariant measure μ restricts to the uniform measure on them [OT, Def. 3.4; Moreno 2005]. Theorem 3.6 of [OT] (the design theorem) proves that the channel depends on the sampling measure only through its second moment, and that the uniform-84 and continuum measures share E[zzᵀ] = P_W/14 exactly; the discrete and continuum channels therefore **coincide at the linear level**. Everything below may be read on the 84 without loss.
 
 **Definition 2.2 (The Kraus family).** K = {K₁, …, K₈₄} with Kₐ = L_{zₐ}, weighted by μₐ = 1/84. Each Kₐ is antisymmetric (Kₐᵀ = −Kₐ) since zₐ is purely imaginary. The released `data/kraus84.npz` stores the orthogonally similar right-multiplication convention R_z = −C L_z C, where C is sedenion conjugation; see `data/README.md`. This changes matrix entries and whether the concrete clock is written L_{e₈} or R_{e₈}, but preserves all basis-independent channel invariants.
 
@@ -775,6 +775,7 @@ This paper is a product of the same collaborative protocol as [OT]. External ind
 
 - [OT] E. N. Prabhakar, *Occurrence Theory: An Orientation of Sedenion Settlement Dynamics*, v1.3 (2026). http://ihack.us/occurrence-theory/
 - G. Moreno, *The zero divisors of the Cayley–Dickson algebras over the real numbers*, Bol. Soc. Mat. Mexicana (3) 4 (1998) 13–28; arXiv:q-alg/9710013.
+- G. Moreno, *Constructing zero divisors in the higher dimensional Cayley-Dickson algebras*, arXiv:math/0512517 (2005).
 - R. B. Brown, *On generalized Cayley–Dickson algebras*, Pacific J. Math. 20 (1967) 415–422.
 - R. E. Cawagas, *On the structure and zero divisors of the Cayley–Dickson sedenion algebra* (2004).
 - R. P. C. de Marrais, *The 42 Assessors and the Box-Kites they fly*, arXiv:math/0011260.
