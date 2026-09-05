@@ -3,7 +3,7 @@
 This module is the main numerical surface for building Topographical Graph
 Theory diagnostics. It turns a Cayley-Dickson structure tensor into concrete
 operations on vectors and matrices: multiplication, left/right multiplication
-operators, metric transport, alternators, and crack-event sampling.
+operators, metric transport, and alternators.
 
 Use this layer when you want to define graph vertices as algebra elements and
 define edges from multiplication-derived tests such as annihilation, rank
@@ -11,8 +11,6 @@ deficiency, or settlement strain.
 """
 
 from __future__ import annotations
-
-from itertools import combinations
 
 import numpy as np
 
@@ -28,8 +26,8 @@ class CayleyDicksonAlgebra:
         Algebra dimension. It must be a positive power of two. The default,
         `16`, is the sedenion algebra used by SSD/TGT.
     seed:
-        Random seed used by the sampling helpers. Pass `None` for NumPy's
-        non-deterministic default seeding.
+        Random seed available to specialized sampling helpers. Pass `None` for
+        NumPy's non-deterministic default seeding.
 
     Notes
     -----
@@ -38,6 +36,9 @@ class CayleyDicksonAlgebra:
     contractions over `C`, which keeps the graph/channel definitions explicit:
     vertices are vectors, transitions are multiplication operators, and graph
     predicates are numerical tests on those operators.
+
+    Sedenion-specific zero-divisor construction and sampling live on
+    :class:`topographo.ssd.SedenionAlgebra`.
     """
 
     def __init__(self, dim: int = 16, *, seed: int | None = 42):
@@ -77,50 +78,6 @@ class CayleyDicksonAlgebra:
         """Cayley-Dickson conjugation."""
         return np.concatenate([[x[0]], -x[1:]])
 
-    def basis_zero_divisors(self) -> np.ndarray:
-        """Return the full basis-form unit zero-divisor design.
-
-        In dimension 16 this is the finite 84-element basic crack used by the
-        audit as a design for the continuum zero-divisor orbit. Use this
-        deterministic design for exact finite certificates such as the
-        `E[M_z] = I` equilibrium check.
-        """
-        zero_divisors = []
-        for i, j in combinations(range(1, self.dim), 2):
-            for sign in (1, -1):
-                u = (self.e[i] + sign * self.e[j]) / np.sqrt(2)
-                singular_values = np.linalg.svd(self.left_operator(u), compute_uv=False)
-                if singular_values[-1] < 1e-9:
-                    zero_divisors.append(u)
-        if not zero_divisors:
-            raise ValueError("no basis-form zero divisors found")
-        return np.array(zero_divisors)
-
-    def sample_basis_zero_divisors(self, n: int) -> np.ndarray:
-        """Sample with replacement from basis-form unit zero divisors."""
-        zero_divisors = self.basis_zero_divisors()
-        return zero_divisors[self.rng.integers(0, len(zero_divisors), n)]
-
-    def sample_pure_pair(self, n: int) -> np.ndarray:
-        """Sample random unit pure-pair events for the sedenion crack model.
-
-        This gives continuum-style crack events rather than the finite
-        basis-form design. Use it when graph or channel diagnostics should be
-        tested against random zero-divisor events instead of the 84-point
-        sample.
-        """
-        if self.dim != 16:
-            raise ValueError("pure-pair sampling is currently defined for dim=16")
-        a = self.rng.standard_normal((n, 8))
-        a[:, 0] = 0
-        a /= np.linalg.norm(a, axis=1, keepdims=True)
-        b = self.rng.standard_normal((n, 8))
-        b[:, 0] = 0
-        b -= np.sum(b * a, axis=1, keepdims=True) * a
-        b /= np.linalg.norm(b, axis=1, keepdims=True)
-        return np.concatenate([a, b], axis=1) / np.sqrt(2)
-
-    # Backward-compatible aliases used by the current audit script.
+    # Backward-compatible operator aliases used by the audit scripts.
     Lop = left_operator
     Rop = right_operator
-    sample_crack = sample_basis_zero_divisors

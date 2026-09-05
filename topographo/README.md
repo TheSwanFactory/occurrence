@@ -43,7 +43,8 @@ averages the operator action `L_z.T @ X @ L_z` over crack events.
 The reusable TGT/SSD layer is separated from the interpretive Occurrence Theory
 layer, which lives outside this package.
 
-- `topographo.core` — Cayley-Dickson construction, multiplication operators,
+- `topographo.core` — one exact signed-basis specification for Cayley-Dickson
+  multiplication, the derived NumPy structure tensor, multiplication operators,
   and mandatory validation gates. It does not know about Occurrence Theory,
   event/state language, or report formatting.
 - `topographo.ssd` — the sedenion-specific wrapper (`SedenionAlgebra`) and small
@@ -99,19 +100,24 @@ for i, left_i in enumerate(operators):
             graph[i].append(j)
 ```
 
-For exact finite crack certificates, use `basis_zero_divisors()` to enumerate
-the full 84-point design. `sample_crack(n)` samples from that design with
-replacement and is intended for stochastic diagnostics, not machine-zero
-theorem gates.
+For exact finite crack certificates, use `SedenionAlgebra.basis_zero_divisors()`
+to enumerate the full 84-point design. `sample_crack(n)` samples from that
+design with replacement and is intended for stochastic diagnostics, not
+machine-zero theorem gates. These dimension-16 helpers belong to
+`SedenionAlgebra`; generic `CayleyDicksonAlgebra` supplies only algebra and
+operator operations.
 
 ## Exact ordered-event machine
 
 `topographo.ssd.exact_machine` provides immutable 16-component rational values,
 exact Cayley–Dickson arithmetic, explicitly parenthesized expressions, ordered
 left-multiplication traces, replay validation, and projective ray execution.
-It uses the convention pinned by programming handoff 061.11, which differs from
-the NumPy implementation's convention; do not transfer signed basis witnesses
-between them without an explicit convention map.
+It exposes the convention pinned by programming handoff 061.11 as an explicit
+coordinate presentation of the same algebra used by the NumPy backend. The map
+`Phi(a, b) = (conj(a), b)` converts 061.11 values to core coordinates;
+`to_core_coordinates()` and `from_core_coordinates()` provide the checked
+boundary. Both backends derive multiplication from the single exact integer
+signed-basis table in `topographo.core`.
 
 ```python
 from topographo.ssd import exact_machine as exact

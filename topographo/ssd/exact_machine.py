@@ -7,10 +7,10 @@ the convention pinned by the Occurrence Theory 061.11 programming handoff::
     conj((a, b)) = (conj(a), -b)
     (a, b)(c, d) = (ac - d*conj(b), conj(a)*d + c*b)
 
-That convention is intentionally local to this exact machine.  It differs
-from the convention used by :mod:`topographo.core.cayley_dickson`, so basis
-labels and witnesses must not be transferred between the implementations
-without an explicit convention map.
+The exact machine exposes the coordinate presentation pinned by programming
+handoff 061.11. Multiplication is derived from the package's single exact
+signed-basis table in core coordinates through the explicit map
+``Phi(a, b) = (conj(a), b)``.
 """
 
 from __future__ import annotations
@@ -21,11 +21,16 @@ from dataclasses import dataclass
 from fractions import Fraction
 from typing import Any, TypeAlias
 
+from topographo.core.cayley_dickson import signed_basis_table
+
 DIMENSION = 16
 CONVENTION = "(a,b)(c,d) = (ac - d*conj(b), conj(a)*d + c*b)"
 Value: TypeAlias = tuple[Fraction, ...]
 FractionInput: TypeAlias = Fraction | int | str
 JsonObject: TypeAlias = dict[str, Any]
+
+_COORDINATE_SIGNS = (1,) + (-1,) * 7 + (1,) * 8
+_CORE_TABLE = signed_basis_table(DIMENSION)
 
 
 def _fraction(raw: FractionInput, *, where: str) -> Fraction:
@@ -130,37 +135,41 @@ def conj(operand: Value) -> Value:
     return _conj(_checked(operand, where="operand"))
 
 
-def _add(
-    left: tuple[Fraction, ...], right: tuple[Fraction, ...]
-) -> tuple[Fraction, ...]:
-    return tuple(a + b for a, b in zip(left, right, strict=True))
+def to_core_coordinates(operand: Value) -> Value:
+    """Apply ``Phi(a, b) = (conj(a), b)`` to a 061.11 value."""
+
+    operand = _checked(operand, where="operand")
+    return tuple(
+        sign * coefficient
+        for sign, coefficient in zip(_COORDINATE_SIGNS, operand, strict=True)
+    )
 
 
-def _sub(
-    left: tuple[Fraction, ...], right: tuple[Fraction, ...]
-) -> tuple[Fraction, ...]:
-    return tuple(a - b for a, b in zip(left, right, strict=True))
+def from_core_coordinates(operand: Value) -> Value:
+    """Convert a core-coordinate value to the public 061.11 presentation."""
 
-
-def _mul(
-    left: tuple[Fraction, ...], right: tuple[Fraction, ...]
-) -> tuple[Fraction, ...]:
-    if len(left) == 1:
-        return (left[0] * right[0],)
-    halfway = len(left) // 2
-    a, b = left[:halfway], left[halfway:]
-    c, d = right[:halfway], right[halfway:]
-    first = _sub(_mul(a, c), _mul(d, _conj(b)))
-    second = _add(_mul(_conj(a), d), _mul(c, b))
-    return first + second
+    operand = _checked(operand, where="operand")
+    return tuple(
+        sign * coefficient
+        for sign, coefficient in zip(_COORDINATE_SIGNS, operand, strict=True)
+    )
 
 
 def mul(left: Value, right: Value) -> Value:
-    """Multiply two values without reassociation."""
+    """Multiply two 061.11 values through the shared exact core table."""
 
-    left = _checked(left, where="left operand")
-    right = _checked(right, where="right operand")
-    return _mul(left, right)
+    core_left = to_core_coordinates(_checked(left, where="left operand"))
+    core_right = to_core_coordinates(_checked(right, where="right operand"))
+    product = [Fraction(0) for _ in range(DIMENSION)]
+    for left_index, left_coefficient in enumerate(core_left):
+        if not left_coefficient:
+            continue
+        for right_index, right_coefficient in enumerate(core_right):
+            if not right_coefficient:
+                continue
+            result, sign = _CORE_TABLE[left_index][right_index]
+            product[result] += sign * left_coefficient * right_coefficient
+    return from_core_coordinates(tuple(product))
 
 
 def norm2(operand: Value) -> Fraction:

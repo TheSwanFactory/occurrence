@@ -90,11 +90,18 @@ occurrence-theory-audit
 ```
 """
 
-from topographo.core import CayleyDicksonAlgebra, GateResult, cayley_dickson_table, verify_gates
+from topographo.core import (
+    CayleyDicksonAlgebra,
+    GateResult,
+    cayley_dickson_table,
+    signed_basis_table,
+    verify_gates,
+)
 
 __all__ = [
     "CayleyDicksonAlgebra",
     "GateResult",
     "cayley_dickson_table",
+    "signed_basis_table",
     "verify_gates",
 ]

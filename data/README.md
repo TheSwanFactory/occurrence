@@ -5,6 +5,12 @@ Cayley–Dickson convention
 
 `(a,b)(c,d) = (ac - d conjugate(b), conjugate(a)d + cb)`.
 
+The package's canonical signed-basis table is stored in the historical core
+coordinate presentation. The exact 061.11 machine reaches that same table via
+`Phi(a,b) = (conjugate(a), b)`, which negates coordinates `e1` through `e7`.
+This coordinate conversion is distinct from the left/right handedness relation
+below.
+
 The paper is written using left multiplication `L_z`. The two families are
 orthogonally similar:
 

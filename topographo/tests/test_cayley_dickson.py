@@ -1,13 +1,38 @@
+import hashlib
+
 import numpy as np
 import pytest
 
-from topographo.core import CayleyDicksonAlgebra, cayley_dickson_table
+from topographo.core import (
+    CayleyDicksonAlgebra,
+    cayley_dickson_table,
+    signed_basis_table,
+)
 
 
-def test_cayley_dickson_table_requires_positive_power_of_two():
+def test_cayley_dickson_tables_require_positive_power_of_two():
     for dim in (0, -2, 3, 6):
         with pytest.raises(ValueError, match="positive power of two"):
+            signed_basis_table(dim)
+        with pytest.raises(ValueError, match="positive power of two"):
             cayley_dickson_table(dim)
+
+
+def test_signed_basis_table_is_exact_immutable_and_canonical():
+    signed = signed_basis_table(16)
+    tensor = cayley_dickson_table(16)
+
+    assert signed is signed_basis_table(16)
+    assert tensor.dtype == np.float64
+    for left, row in enumerate(signed):
+        for right, (result, sign) in enumerate(row):
+            assert 0 <= result < 16
+            assert sign in (-1, 1)
+            assert tensor[left, right, result] == sign
+            assert np.count_nonzero(tensor[left, right]) == 1
+
+    digest = hashlib.sha256(tensor.astype(np.int8).tobytes()).hexdigest()
+    assert digest == "56bc5617d33423fa49c943424d8fa39d4677aaa9b830f3c7a11a52c0942c1e21"
 
 
 def test_quaternion_basis_multiplication_matches_convention():
@@ -70,4 +95,6 @@ def test_conjugate_flips_nonreal_coordinates():
     algebra = CayleyDicksonAlgebra(8)
     x = np.arange(8, dtype=float)
 
-    np.testing.assert_array_equal(algebra.conjugate(x), np.array([0, -1, -2, -3, -4, -5, -6, -7]))
+    np.testing.assert_array_equal(
+        algebra.conjugate(x), np.array([0, -1, -2, -3, -4, -5, -6, -7])
+    )
