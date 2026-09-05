@@ -10,6 +10,8 @@ structure-preserving:
 
 - `SedenionAlgebra` fixes `CayleyDicksonAlgebra` at dimension 16.
 - `average_metric_operator()` averages `M_z` over a supplied event sample.
+- `exact_machine` implements exact rational arithmetic and ordered events under
+  the convention pinned by programming handoff 061.11.
 
 Higher-level claims about invariant measures, exact channel spectra, and
 oriented Markov dynamics remain in the audit/paper layer until their API shape
@@ -17,9 +19,11 @@ is stable.
 """
 
 from topographo.ssd.channel import average_metric_operator
+from topographo.ssd import exact_machine
 from topographo.ssd.sedenion import SedenionAlgebra
 
 __all__ = [
     "SedenionAlgebra",
     "average_metric_operator",
+    "exact_machine",
 ]

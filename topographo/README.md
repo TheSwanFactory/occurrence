@@ -47,7 +47,8 @@ layer, which lives outside this package.
   and mandatory validation gates. It does not know about Occurrence Theory,
   event/state language, or report formatting.
 - `topographo.ssd` — the sedenion-specific wrapper (`SedenionAlgebra`) and small
-  channel diagnostics used by the settlement audit.
+  channel diagnostics used by the settlement audit, plus the exact-rational
+  ordered-event machine (`exact_machine`).
 - `topographo.exceptional` — the exceptional-algebra layer: the 27-dimensional
   Albert algebra `J3(O)` and its F4/G2 structure (Peirce/Hessian analysis,
   determinant invariants, anisotropy). Generic exceptional-algebra math, not
@@ -102,6 +103,26 @@ For exact finite crack certificates, use `basis_zero_divisors()` to enumerate
 the full 84-point design. `sample_crack(n)` samples from that design with
 replacement and is intended for stochastic diagnostics, not machine-zero
 theorem gates.
+
+## Exact ordered-event machine
+
+`topographo.ssd.exact_machine` provides immutable 16-component rational values,
+exact Cayley–Dickson arithmetic, explicitly parenthesized expressions, ordered
+left-multiplication traces, replay validation, and projective ray execution.
+It uses the convention pinned by programming handoff 061.11, which differs from
+the NumPy implementation's convention; do not transfer signed basis witnesses
+between them without an explicit convention map.
+
+```python
+from topographo.ssd import exact_machine as exact
+
+initial = exact.basis(4)
+result = exact.run(initial, [exact.basis(2), exact.basis(1)])
+
+assert result.state == exact.mul(
+    exact.basis(1), exact.mul(exact.basis(2), initial)
+)
+```
 
 ## Validation gates
 

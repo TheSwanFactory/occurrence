@@ -3,6 +3,17 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.4.1] - 2026-09-04
+
+### Added
+
+- Add `topographo.ssd.exact_machine`, an exact-rational sedenion implementation
+  with ordered event traces, exact replay, and projective ray execution under
+  the convention pinned by programming handoff 061.11.
+- Add deterministic conformance tests, witness searches, machine-readable
+  results, and observations for noncommutativity, nonassociativity,
+  alternativity failure, zero divisors, norm failure, and ordered programs.
+
 ## [0.4.0] - 2026-07-11
 
 ### Added
