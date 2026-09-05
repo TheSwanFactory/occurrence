@@ -1,28 +1,43 @@
 name: topographo
 
-# The library workflow: builds, tests, and releases the reusable `topographo`
-# package. It owns build / PyPI publish / API-docs pages. The consumer-side
-# audit lives in occurrence.yml.
+# Build and test topographo once, publish that exact artifact after a forward
+# version bump reaches main, and record successful releases with a tag/release.
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_prerelease:
+        description: Publish the committed prerelease to production PyPI
+        required: false
+        default: false
+        type: boolean
+      expected_version:
+        description: Exact committed PEP 440 prerelease (for example, 0.4.3rc1)
+        required: false
+        type: string
+      confirmation:
+        description: Type publish-to-pypi to authorize the prerelease upload
+        required: false
+        type: string
   pull_request:
     paths:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
       - "pyproject.toml"
       - "uv.lock"
+      - "CHANGELOG.md"
+      - ".github/scripts/**"
       - ".github/workflows/topographo.yml"
   push:
     branches:
       - main
-    tags:
-      - "v*"
     paths:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
       - "pyproject.toml"
       - "uv.lock"
+      - "CHANGELOG.md"
+      - ".github/scripts/**"
       - ".github/workflows/topographo.yml"
 
 permissions:
@@ -34,10 +49,25 @@ jobs:
     runs-on: ubuntu-latest
     env:
       UV_PYTHON: "3.12"
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+      production_release: ${{ steps.release.outputs.production_release }}
+      prerelease_release: ${{ steps.release.outputs.prerelease_release }}
+      prerelease: ${{ steps.release.outputs.prerelease }}
 
     steps:
-      - name: Check out repository
+      - name: Check out repository with release history
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Fetch default branch for prerelease dispatch comparison
+        if: github.event_name == 'workflow_dispatch' && inputs.publish_prerelease
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: >-
+          git fetch --no-tags origin
+          "+refs/heads/${DEFAULT_BRANCH}:refs/remotes/origin/${DEFAULT_BRANCH}"
 
       - name: Install uv
         uses: astral-sh/setup-uv@v7
@@ -52,15 +82,33 @@ jobs:
       - name: Check lockfile is in sync with pyproject.toml
         run: uv lock --check
 
-      - name: Check tag matches project version
-        if: startsWith(github.ref, 'refs/tags/v')
+      - name: Validate release metadata and decision
+        id: release
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_REF: ${{ github.ref }}
+          EVENT_BEFORE: ${{ github.event.before }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          PUBLISH_PRERELEASE: ${{ inputs.publish_prerelease }}
+          EXPECTED_VERSION: ${{ inputs.expected_version }}
+          CONFIRMATION: ${{ inputs.confirmation }}
         run: |
-          project_version="$(uv version --short --frozen)"
-          tag_version="${GITHUB_REF_NAME#v}"
-          if [ "$project_version" != "$tag_version" ]; then
-            echo "::error::Tag ${GITHUB_REF_NAME} does not match pyproject.toml version ${project_version}."
-            exit 1
+          args=(
+            validate-source
+            --event-name "$EVENT_NAME"
+            --ref "$EVENT_REF"
+            --before "$EVENT_BEFORE"
+            --base-sha "$BASE_SHA"
+            --baseline-ref "refs/remotes/origin/${DEFAULT_BRANCH}"
+            --expected-version "$EXPECTED_VERSION"
+            --confirmation "$CONFIRMATION"
+            --github-output "$GITHUB_OUTPUT"
+          )
+          if [ "$PUBLISH_PRERELEASE" = "true" ]; then
+            args+=(--publish-prerelease)
           fi
+          uv run --frozen python .github/scripts/topographo_release.py "${args[@]}"
 
       - name: Run package tests
         run: uv run --frozen pytest topographo/tests
@@ -105,6 +153,13 @@ jobs:
       - name: Build distribution
         run: uv build
 
+      - name: Verify built distribution metadata
+        env:
+          VERSION: ${{ steps.release.outputs.version }}
+        run: >-
+          uv run --frozen python .github/scripts/topographo_release.py
+          verify-dist --dist-dir dist --version "$VERSION"
+
       - name: Build API documentation
         run: |
           uv run --frozen pdoc \
@@ -127,7 +182,7 @@ jobs:
           path: dist/*
 
       - name: Upload Pages artifact
-        if: github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
@@ -136,7 +191,69 @@ jobs:
     name: Publish to PyPI
     runs-on: ubuntu-latest
     needs: package
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: >-
+      needs.package.outputs.production_release == 'true' &&
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main'
+    concurrency:
+      group: topographo-pypi-release
+      cancel-in-progress: false
+    environment:
+      name: pypi
+      url: https://pypi.org/project/topographo/
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      preflight_passed: ${{ steps.preflight.outputs.preflight_passed }}
+      upload_succeeded: ${{ steps.upload.outcome == 'success' }}
+
+    steps:
+      - name: Check out release support code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Download tested distribution artifacts
+        uses: actions/download-artifact@v7
+        with:
+          name: python-dist
+          path: dist
+
+      - name: Verify artifact, tag, and PyPI availability
+        id: preflight
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          python .github/scripts/topographo_release.py verify-dist --dist-dir dist --version "$VERSION"
+          python .github/scripts/topographo_release.py check-tag --version "$VERSION" --commit "$RELEASE_COMMIT"
+          python .github/scripts/topographo_release.py check-index --base-url https://pypi.org/pypi --version "$VERSION"
+          echo "preflight_passed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Publish tested distributions to PyPI
+        id: upload
+        continue-on-error: true
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  reconcile-publish:
+    name: Reconcile interrupted PyPI publication
+    runs-on: ubuntu-latest
+    needs:
+      - package
+      - publish
+    if: >-
+      always() &&
+      needs.package.outputs.production_release == 'true' &&
+      needs.publish.result == 'success' &&
+      needs.publish.outputs.preflight_passed == 'true' &&
+      needs.publish.outputs.upload_succeeded != 'true'
+    concurrency:
+      group: topographo-pypi-release
+      cancel-in-progress: false
     environment:
       name: pypi
       url: https://pypi.org/project/topographo/
@@ -145,23 +262,168 @@ jobs:
       id-token: write
 
     steps:
-      - name: Download distribution artifacts
+      - name: Check out release support code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Download tested distribution artifacts
         uses: actions/download-artifact@v7
         with:
           name: python-dist
           path: dist
 
-      - name: Publish package distributions to PyPI
+      - name: Verify remote subset and prepare missing artifacts
+        id: reconcile
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+        run: >-
+          python .github/scripts/reconcile_topographo_index.py prepare
+          --base-url https://pypi.org/pypi
+          --version "$VERSION"
+          --dist-dir dist
+          --missing-dir missing-dist
+          --github-output "$GITHUB_OUTPUT"
+
+      - name: Publish only verified missing artifacts
+        if: steps.reconcile.outputs.has_missing == 'true'
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: missing-dist/
+
+      - name: Verify complete PyPI publication
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+        run: >-
+          python .github/scripts/reconcile_topographo_index.py verify
+          --base-url https://pypi.org/pypi
+          --version "$VERSION"
+          --dist-dir dist
+
+  prerelease-publish:
+    name: Publish prerelease to PyPI
+    runs-on: ubuntu-latest
+    needs: package
+    if: >-
+      needs.package.outputs.prerelease_release == 'true' &&
+      github.event_name == 'workflow_dispatch' &&
+      inputs.publish_prerelease
+    concurrency:
+      group: topographo-pypi-release
+      cancel-in-progress: false
+    environment:
+      name: pypi
+      url: https://pypi.org/project/topographo/
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Check out release support code
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Download tested distribution artifacts
+        uses: actions/download-artifact@v7
+        with:
+          name: python-dist
+          path: dist
+
+      - name: Verify artifact and PyPI availability
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+        run: |
+          python .github/scripts/topographo_release.py verify-dist --dist-dir dist --version "$VERSION"
+          python .github/scripts/topographo_release.py check-index --base-url https://pypi.org/pypi --version "$VERSION"
+
+      - name: Publish tested prerelease to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+
+  release-record:
+    name: Create release tag and GitHub Release
+    runs-on: ubuntu-latest
+    needs:
+      - package
+      - publish
+      - reconcile-publish
+    if: >-
+      always() &&
+      needs.package.outputs.production_release == 'true' &&
+      needs.publish.result == 'success' &&
+      (needs.publish.outputs.upload_succeeded == 'true' ||
+       needs.reconcile-publish.result == 'success')
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out published commit
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Download published distribution artifacts
+        uses: actions/download-artifact@v7
+        with:
+          name: python-dist
+          path: dist
+
+      - name: Verify or create release tag
+        id: tag
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          python .github/scripts/topographo_release.py check-tag \
+            --version "$VERSION" \
+            --commit "$RELEASE_COMMIT" \
+            --github-output "$GITHUB_OUTPUT"
+          if [ "$(grep '^tag_exists=' "$GITHUB_OUTPUT" | tail -1 | cut -d= -f2)" != "true" ]; then
+            git tag "v${VERSION}" "$RELEASE_COMMIT"
+            if ! git push origin "refs/tags/v${VERSION}"; then
+              python .github/scripts/topographo_release.py check-tag \
+                --version "$VERSION" --commit "$RELEASE_COMMIT"
+            fi
+          fi
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.tag.outputs.tag }}
+          VERSION: ${{ needs.package.outputs.version }}
+          PRERELEASE: ${{ needs.package.outputs.prerelease }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+          else
+            args=(
+              release create "$TAG" dist/*
+              --verify-tag
+              --generate-notes
+              --title "topographo ${VERSION}"
+            )
+            if [ "$PRERELEASE" = "true" ]; then
+              args+=(--prerelease)
+            fi
+            gh "${args[@]}"
+          fi
 
   pages:
     name: Publish API docs
     runs-on: ubuntu-latest
     needs: package
-    # The github-pages environment only allows the default branch, so restrict
-    # deploys to main. Tag pushes (v*) and branch dispatches build docs but do
-    # not deploy them.
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write

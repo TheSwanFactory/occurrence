@@ -5,15 +5,28 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-09-04
+
 ### Changed
 
+- Publish `topographo` from the tested `python-dist` artifact when a forward
+  PEP 440 version bump reaches `main`, rather than requiring a manually pushed
+  tag.
+- Validate release versions against the prior commit, the editable `uv.lock`
+  entry, a dated changelog heading, built distribution metadata, and package
+  index availability before publication.
+- Keep PyPI Trusted Publishing, serialize uploads, and create the matching tag
+  and GitHub Release only after PyPI accepts the package.
+- Allow an explicitly confirmed PEP 440 prerelease on a feature branch to be
+  published through workflow dispatch to production PyPI. Stable versions
+  remain blocked from manual publication, and normal installers ignore
+  prereleases unless users opt in or request an exact version.
 - CI now rejects a stale `uv.lock` before running either the library or
   occurrence verification suites.
 - CI installs the occurrence environment from the lockfile and freezes every
   `uv run`, preventing jobs from silently repairing and then discarding lockfile
   drift.
-- CI pins uv to Python 3.12 and rejects release tags that do not match the
-  project version.
+- CI pins uv to Python 3.12.
 
 ## [0.4.1] - 2026-09-04
 
@@ -123,6 +136,9 @@ All notable changes to this project are documented in this file.
   algebra reproduction module.
 - GitHub Actions audit workflow and `pdoc` documentation setup.
 
+[0.4.2]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.2
+[0.4.1]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.1
+[0.4.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.0
 [0.3.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.3.0
 [0.2.1]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.2.1
 [0.2.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.2.0
