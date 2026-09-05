@@ -1,38 +1,70 @@
-"""Cayley-Dickson structure tensor construction."""
+"""Exact Cayley-Dickson signed-basis and structure-table construction."""
 
 from __future__ import annotations
 
+from functools import cache
+from typing import TypeAlias
+
 import numpy as np
 
+SignedBasisProduct: TypeAlias = tuple[int, int]
+SignedBasisTable: TypeAlias = tuple[tuple[SignedBasisProduct, ...], ...]
 
-def cayley_dickson_table(dim: int) -> np.ndarray:
-    """Return C[i, j, k] with e_i * e_j = sum_k C[i, j, k] e_k.
 
-    The dimension must be a positive power of two. The construction uses the
-    standard real Cayley-Dickson doubling convention used by the audit scripts.
-    """
+def _validate_dimension(dim: int) -> None:
     if dim < 1 or dim & (dim - 1):
         raise ValueError("dim must be a positive power of two")
 
-    def conjugate(x: np.ndarray) -> np.ndarray:
-        return np.concatenate([[x[0]], -x[1:]])
 
-    def mul(a: np.ndarray, b: np.ndarray) -> np.ndarray:
-        n = len(a)
-        if n == 1:
-            return np.array([a[0] * b[0]])
-        half = n // 2
-        a1, a2, b1, b2 = a[:half], a[half:], b[:half], b[half:]
-        z1 = mul(a1, b1) - mul(conjugate(b2), a2)
-        z2 = mul(b2, a1) + mul(a2, conjugate(b1))
-        return np.concatenate([z1, z2])
+@cache
+def signed_basis_table(dim: int) -> SignedBasisTable:
+    """Return the exact product index and sign for every ordered basis pair.
 
-    table = np.zeros((dim, dim, dim))
-    for i in range(dim):
-        for j in range(dim):
-            ei = np.zeros(dim)
-            ej = np.zeros(dim)
-            ei[i] = 1.0
-            ej[j] = 1.0
-            table[i, j] = mul(ei, ej)
-    return table
+    Each cell is ``(result_index, sign)`` and represents
+    ``e_i * e_j = sign * e_result_index``. The immutable integer table is the
+    canonical multiplication specification used by all package backends.
+    """
+
+    _validate_dimension(dim)
+    if dim == 1:
+        return (((0, 1),),)
+
+    half = dim // 2
+    lower = signed_basis_table(half)
+    rows: list[tuple[SignedBasisProduct, ...]] = []
+    for left in range(dim):
+        row: list[SignedBasisProduct] = []
+        for right in range(dim):
+            if left < half and right < half:
+                result, sign = lower[left][right]
+            elif left < half:
+                result, sign = lower[right - half][left]
+                result += half
+            elif right < half:
+                result, sign = lower[left - half][right]
+                if right:
+                    sign = -sign
+                result += half
+            else:
+                result, sign = lower[right - half][left - half]
+                if right == half:
+                    sign = -sign
+            row.append((result, sign))
+        rows.append(tuple(row))
+    return tuple(rows)
+
+
+def cayley_dickson_table(dim: int) -> np.ndarray:
+    """Return ``C[i, j, k]`` with ``e_i * e_j = sum_k C[i, j, k] e_k``.
+
+    The public NumPy tensor preserves the historical ``float64`` API and core
+    coordinates. It is derived directly from :func:`signed_basis_table`, whose
+    integer entries are the package's single algebraic specification.
+    """
+
+    table = signed_basis_table(dim)
+    tensor = np.zeros((dim, dim, dim))
+    for left, row in enumerate(table):
+        for right, (result, sign) in enumerate(row):
+            tensor[left, right, result] = sign
+    return tensor

@@ -6,20 +6,21 @@ This directory runs the 061.11 programming handoff against the reusable
 an exact executable rational subalgebra of the real sedenions; it does not
 represent every real coefficient.
 
-The reference multiplication recursively splits a vector into `(a, b)` and
-pins this Cayley–Dickson convention:
+The public exact API pins the programming handoff's coordinate presentation:
 
 ```text
-conj(scalar) = scalar
 conj((a,b)) = (conj(a), -b)
 mul((a,b),(c,d)) = (mul(a,c) - mul(d,conj(b)),
                      mul(conj(a),d) + mul(c,b))
 ```
 
-This is the handoff's convention, not the convention used by the existing
-floating-point `topographo.core.cayley_dickson` implementation. Signs and basis
-labels from one implementation must not be transferred to the other without an
-explicit convention map.
+This is a coordinate presentation of the same abstract algebra used by
+`topographo.core`, not a second multiplication implementation. The exact and
+NumPy backends derive products from one integer signed-basis table in core
+coordinates. The explicit involution
+`Phi(a,b) = (conj(a), b)` maps the 061.11 presentation to core coordinates;
+the checked helpers are `to_core_coordinates()` and
+`from_core_coordinates()`.
 
 No reassociation is performed. An ordered event program left-multiplies each
 event, so events `[z1, z2]` produce `z2*(z1*initial)`, which need not equal

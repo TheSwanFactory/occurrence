@@ -11,6 +11,8 @@ def test_sedenion_algebra_fixes_dimension():
     assert algebra.dim == 16
     assert algebra.C.shape == (16, 16, 16)
     assert algebra.e.shape == (16, 16)
+    with pytest.raises(ValueError, match="dimension 16"):
+        SedenionAlgebra(8)
 
 
 def test_basis_zero_divisors_are_the_full_unit_crack_design():
@@ -19,6 +21,17 @@ def test_basis_zero_divisors_are_the_full_unit_crack_design():
 
     assert events.shape == (84, 16)
     np.testing.assert_allclose(np.linalg.norm(events, axis=1), 1.0)
+
+    expected = np.array(
+        [
+            (algebra.e[lower] + sign * algebra.e[8 + upper]) / np.sqrt(2)
+            for lower in range(1, 8)
+            for upper in range(1, 8)
+            if lower != upper
+            for sign in (1, -1)
+        ]
+    )
+    np.testing.assert_array_equal(events, expected)
 
     smallest_singular_values = [
         np.linalg.svd(algebra.left_operator(event), compute_uv=False)[-1]
@@ -66,6 +79,12 @@ def test_pure_pair_sampling_returns_unit_orthogonal_pure_pairs():
     np.testing.assert_allclose(np.sum(lower * upper, axis=1), 0.0, atol=1e-12)
 
 
-def test_pure_pair_sampling_is_sedenion_only():
-    with pytest.raises(ValueError, match="dim=16"):
-        CayleyDicksonAlgebra(8).sample_pure_pair(1)
+def test_generic_algebra_has_no_sedenion_crack_api():
+    generic = CayleyDicksonAlgebra(8)
+    for name in (
+        "basis_zero_divisors",
+        "sample_basis_zero_divisors",
+        "sample_crack",
+        "sample_pure_pair",
+    ):
+        assert not hasattr(generic, name)

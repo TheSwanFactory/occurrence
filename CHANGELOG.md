@@ -5,6 +5,26 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-09-04
+
+### Added
+
+- Add `signed_basis_table()` as the canonical immutable integer specification
+  for Cayley–Dickson basis multiplication.
+- Add checked `to_core_coordinates()` and `from_core_coordinates()` helpers for
+  the explicit 061.11 map `Phi(a, b) = (conj(a), b)`.
+
+### Changed
+
+- Derive both the NumPy structure tensor and exact-rational sedenion products
+  from one signed-basis table while preserving historical core coordinates and
+  exact-machine outputs.
+- Move basis crack construction and pure-pair sampling from generic
+  `CayleyDicksonAlgebra` to the dimension-specific `SedenionAlgebra`; callers
+  using those helpers should migrate to the specialized class.
+- Document the core and 061.11 forms as coordinate presentations of one
+  Cayley–Dickson algebra.
+
 ## [0.4.2] - 2026-09-04
 
 ### Changed
@@ -136,6 +156,7 @@ All notable changes to this project are documented in this file.
   algebra reproduction module.
 - GitHub Actions audit workflow and `pdoc` documentation setup.
 
+[0.5.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.5.0
 [0.4.2]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.2
 [0.4.1]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.1
 [0.4.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.0

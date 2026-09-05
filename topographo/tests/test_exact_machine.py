@@ -2,8 +2,10 @@ import json
 import random
 from fractions import Fraction
 
+import numpy as np
 import pytest
 
+from topographo.core import CayleyDicksonAlgebra
 from topographo.ssd import exact_machine as s
 
 
@@ -76,14 +78,30 @@ def test_all_256_ordered_basis_products_are_signed_basis_values() -> None:
             assert s.norm2(product) == 1
 
 
-def test_recursive_complex_quaternion_and_octonion_embeddings() -> None:
+def test_coordinate_map_is_explicit_involution() -> None:
+    operand = s.value(range(16))
+    expected = s.value([0, -1, -2, -3, -4, -5, -6, -7, *range(8, 16)])
+
+    assert s.to_core_coordinates(operand) == expected
+    assert s.from_core_coordinates(expected) == operand
+    assert s.from_core_coordinates(s.to_core_coordinates(operand)) == operand
+
+
+def test_exact_and_numpy_backends_agree_through_coordinate_map() -> None:
+    core = CayleyDicksonAlgebra(16)
     rng = random.Random(6112026)
-    for active in (2, 4, 8):
-        for _ in range(20):
-            left = random_value(rng, active)
-            right = random_value(rng, active)
-            lower_product = s._mul(left[:active], right[:active])
-            assert s.mul(left, right) == lower_product + (Fraction(0),) * (16 - active)
+    pairs = [
+        (s.basis(left), s.basis(right))
+        for left in range(16)
+        for right in range(16)
+    ]
+    pairs.extend((random_value(rng), random_value(rng)) for _ in range(30))
+
+    for left, right in pairs:
+        core_left = np.array(s.to_core_coordinates(left), dtype=float)
+        core_right = np.array(s.to_core_coordinates(right), dtype=float)
+        expected = np.array(s.to_core_coordinates(s.mul(left, right)), dtype=float)
+        np.testing.assert_array_equal(core.mul(core_left, core_right), expected)
 
 
 def test_embedded_quaternions_are_associative() -> None:

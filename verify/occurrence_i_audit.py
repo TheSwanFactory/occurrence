@@ -69,16 +69,16 @@ def certify_equal(tag, label, got, want):
 # ============================================================================
 
 try:
-    from topographo.core import CayleyDicksonAlgebra, cayley_dickson_table
+    from topographo.ssd import SedenionAlgebra
 except ImportError:
     repo_root = Path(__file__).resolve().parent.parent
     if str(repo_root) not in sys.path:
         sys.path.insert(0, str(repo_root))
     try:
-        from topographo.core import CayleyDicksonAlgebra, cayley_dickson_table
+        from topographo.ssd import SedenionAlgebra
     except ImportError:
-        print("ERROR: topographo.core not found.")
-        print("This script requires the verified algebra implementation.")
+        print("ERROR: topographo.ssd not found.")
+        print("This script requires the verified sedenion implementation.")
         print("Cannot proceed.")
         sys.exit(1)
 
@@ -87,9 +87,9 @@ except ImportError:
 # CORE ALGEBRAIC OPERATORS
 # ============================================================================
 
-class OTAlgebra(CayleyDicksonAlgebra):
+class OTAlgebra(SedenionAlgebra):
     """Core Occurrence Theory algebra on 𝕊 (sedenions)."""
-    
+
     def __init__(self, dim=16):
         super().__init__(dim, seed=42)
 

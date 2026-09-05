@@ -129,9 +129,9 @@ def test_sign_pair_forces_equilibrium_and_is_minimal():
     permutation, so M_{e_k} = I and the cross terms cancel between the signs.
     """
     import numpy as np
-    from topographo.core import CayleyDicksonAlgebra
+    from topographo.ssd import SedenionAlgebra
 
-    A = CayleyDicksonAlgebra(16, seed=42)
+    A = SedenionAlgebra(16, seed=42)
     d, sq = A.dim, 1.0 / np.sqrt(2.0)
     eye = np.eye(d)
 
@@ -165,9 +165,9 @@ def test_pair_does_not_reproduce_the_channel():
     the channel is a second-moment condition on z (needs the design).
     """
     import numpy as np
-    from topographo.core import CayleyDicksonAlgebra
+    from topographo.ssd import SedenionAlgebra
 
-    A = CayleyDicksonAlgebra(16, seed=42)
+    A = SedenionAlgebra(16, seed=42)
     d, sq = A.dim, 1.0 / np.sqrt(2.0)
     zp, zm = np.zeros(d), np.zeros(d)
     zp[1] = zm[1] = sq
@@ -188,9 +188,9 @@ def test_pair_does_not_reproduce_the_channel():
 def test_fourteen_points_reproduce_channel_and_are_minimal():
     """Remark 3.6a: a 14-point sign design reproduces Phi, and 14 is minimal."""
     import numpy as np
-    from topographo.core import CayleyDicksonAlgebra
+    from topographo.ssd import SedenionAlgebra
 
-    A = CayleyDicksonAlgebra(16, seed=42)
+    A = SedenionAlgebra(16, seed=42)
     d, sq = A.dim, 1.0 / np.sqrt(2.0)
     eye = np.eye(d)
 
