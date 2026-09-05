@@ -3,6 +3,18 @@
 
 All notable changes to this project are documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- CI now rejects a stale `uv.lock` before running either the library or
+  occurrence verification suites.
+- CI installs the occurrence environment from the lockfile and freezes every
+  `uv run`, preventing jobs from silently repairing and then discarding lockfile
+  drift.
+- CI pins uv to Python 3.12 and rejects release tags that do not match the
+  project version.
+
 ## [0.4.1] - 2026-09-04
 
 ### Added

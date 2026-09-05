@@ -32,6 +32,8 @@ jobs:
   audit:
     name: Run occurrence audit and verification
     runs-on: ubuntu-latest
+    env:
+      UV_PYTHON: "3.12"
 
     steps:
       - name: Check out repository
@@ -47,8 +49,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install topographo (plus pytest for the verify suite)
-        run: uv pip install --system . pytest
+      - name: Check lockfile is in sync with pyproject.toml
+        run: uv lock --check
+
+      - name: Install the locked environment
+        # pytest comes from the locked dev dependency group. The package
+        # workflow separately verifies a non-editable installation.
+        run: uv sync --frozen
 
       - name: Reviewer-independence guard
         # Reviewer cells (occurrence_<paper>_<handle>.*, i.e. everything under
@@ -73,10 +80,10 @@ jobs:
           echo "Reviewer-independence guard passed."
 
       - name: Run Occurrence I audit (exit-code gate)
-        run: python verify/occurrence_i_audit.py
+        run: uv run --frozen python verify/occurrence_i_audit.py
 
       - name: Run Occurrence II audit (exit-code gate)
-        run: python verify/occurrence_ii_audit.py
+        run: uv run --frozen python verify/occurrence_ii_audit.py
 
       - name: Run verification tests
-        run: python -m pytest verify/
+        run: uv run --frozen python -m pytest verify/
