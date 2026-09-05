@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       publish_prerelease:
-        description: Publish the committed prerelease to TestPyPI
+        description: Publish the committed prerelease to production PyPI
         required: false
         default: false
         type: boolean
@@ -16,7 +16,7 @@ on:
         required: false
         type: string
       confirmation:
-        description: Type publish-to-testpypi to authorize the test upload
+        description: Type publish-to-pypi to authorize the prerelease upload
         required: false
         type: string
   pull_request:
@@ -52,7 +52,7 @@ jobs:
     outputs:
       version: ${{ steps.release.outputs.version }}
       production_release: ${{ steps.release.outputs.production_release }}
-      test_release: ${{ steps.release.outputs.test_release }}
+      prerelease_release: ${{ steps.release.outputs.prerelease_release }}
       prerelease: ${{ steps.release.outputs.prerelease }}
 
     steps:
@@ -303,20 +303,20 @@ jobs:
           --version "$VERSION"
           --dist-dir dist
 
-  test-publish:
-    name: Publish prerelease to TestPyPI
+  prerelease-publish:
+    name: Publish prerelease to PyPI
     runs-on: ubuntu-latest
     needs: package
     if: >-
-      needs.package.outputs.test_release == 'true' &&
+      needs.package.outputs.prerelease_release == 'true' &&
       github.event_name == 'workflow_dispatch' &&
       inputs.publish_prerelease
     concurrency:
-      group: topographo-testpypi-release
+      group: topographo-pypi-release
       cancel-in-progress: false
     environment:
-      name: testpypi
-      url: https://test.pypi.org/project/topographo/
+      name: pypi
+      url: https://pypi.org/project/topographo/
     permissions:
       contents: read
       id-token: write
@@ -336,17 +336,15 @@ jobs:
           name: python-dist
           path: dist
 
-      - name: Verify artifact and TestPyPI availability
+      - name: Verify artifact and PyPI availability
         env:
           VERSION: ${{ needs.package.outputs.version }}
         run: |
           python .github/scripts/topographo_release.py verify-dist --dist-dir dist --version "$VERSION"
-          python .github/scripts/topographo_release.py check-index --base-url https://test.pypi.org/pypi --version "$VERSION"
+          python .github/scripts/topographo_release.py check-index --base-url https://pypi.org/pypi --version "$VERSION"
 
-      - name: Publish tested prerelease to TestPyPI
+      - name: Publish tested prerelease to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://test.pypi.org/legacy/
 
   release-record:
     name: Create release tag and GitHub Release

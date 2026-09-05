@@ -22,7 +22,7 @@ PROJECT_FILE = Path("pyproject.toml")
 LOCK_FILE = Path("uv.lock")
 CHANGELOG_FILE = Path("CHANGELOG.md")
 ZERO_SHA = "0" * 40
-TEST_CONFIRMATION = "publish-to-testpypi"
+PRERELEASE_CONFIRMATION = "publish-to-pypi"
 
 
 class ReleaseError(RuntimeError):
@@ -146,7 +146,7 @@ def command_validate_source(args: argparse.Namespace) -> None:
     validate_lockfile(current_raw)
 
     production_release = False
-    test_release = False
+    prerelease_release = False
     event = args.event_name
 
     if event == "push" and args.ref == "refs/heads/main":
@@ -156,10 +156,10 @@ def command_validate_source(args: argparse.Namespace) -> None:
     elif event == "pull_request":
         validate_forward_change(current_raw, current, args.base_sha, "pull request")
     elif event == "workflow_dispatch" and args.publish_prerelease:
-        if args.confirmation != TEST_CONFIRMATION:
+        if args.confirmation != PRERELEASE_CONFIRMATION:
             fail(
-                "TestPyPI publication requires confirmation exactly equal to "
-                f"{TEST_CONFIRMATION!r}."
+                "PyPI prerelease publication requires confirmation exactly equal to "
+                f"{PRERELEASE_CONFIRMATION!r}."
             )
         if args.expected_version != current_raw:
             fail(
@@ -169,15 +169,15 @@ def command_validate_source(args: argparse.Namespace) -> None:
         parse_canonical_version(args.expected_version, "Expected prerelease version")
         if current.pre is None:
             fail(
-                "Manual publication is restricted to PEP 440 prereleases with an "
-                "a, b, or rc segment and can target TestPyPI only."
+                "Manual publication to PyPI is restricted to PEP 440 prereleases "
+                "with an a, b, or rc segment."
             )
         changed = validate_forward_change(
-            current_raw, current, args.baseline_ref, "TestPyPI dispatch"
+            current_raw, current, args.baseline_ref, "PyPI prerelease dispatch"
         )
         if not changed:
-            fail("TestPyPI dispatch version must be newer than the default branch.")
-        test_release = True
+            fail("PyPI prerelease version must be newer than the default branch.")
+        prerelease_release = True
     else:
         print(f"{event}: validation/build only; no package publication requested.")
 
@@ -186,7 +186,7 @@ def command_validate_source(args: argparse.Namespace) -> None:
         {
             "version": current_raw,
             "production_release": str(production_release).lower(),
-            "test_release": str(test_release).lower(),
+            "prerelease_release": str(prerelease_release).lower(),
             "prerelease": str(current.is_prerelease).lower(),
         },
     )

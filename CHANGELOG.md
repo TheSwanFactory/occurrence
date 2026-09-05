@@ -18,8 +18,9 @@ All notable changes to this project are documented in this file.
 - Keep PyPI Trusted Publishing, serialize uploads, and create the matching tag
   and GitHub Release only after PyPI accepts the package.
 - Allow an explicitly confirmed PEP 440 prerelease on a feature branch to be
-  tested through workflow dispatch against TestPyPI; manual dispatch can never
-  publish to production PyPI.
+  published through workflow dispatch to production PyPI. Stable versions
+  remain blocked from manual publication, and normal installers ignore
+  prereleases unless users opt in or request an exact version.
 - CI now rejects a stale `uv.lock` before running either the library or
   occurrence verification suites.
 - CI installs the occurrence environment from the lockfile and freezes every
