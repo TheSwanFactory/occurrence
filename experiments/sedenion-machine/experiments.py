@@ -11,32 +11,32 @@ from collections.abc import Callable, Iterable
 from fractions import Fraction
 from pathlib import Path
 
-from topographo.ssd import exact_machine as s
+from topographo.ssd import codec, exact, machine, observers, projective
 
 SEED = 6112026
 HERE = Path(__file__).resolve().parent
 
 
-def sparse_values() -> list[s.Value]:
-    values: list[s.Value] = []
+def sparse_values() -> list[exact.Value]:
+    values: list[exact.Value] = []
     for left, right in itertools.combinations(range(1, 16), 2):
         for left_sign, right_sign in itertools.product((1, -1), repeat=2):
             coefficients = [0] * 16
             coefficients[left] = left_sign
             coefficients[right] = right_sign
-            values.append(s.value(coefficients))
+            values.append(exact.value(coefficients))
     return values
 
 
-def vector_json(vector: s.Value) -> list[str]:
-    return s.value_to_json(vector)
+def vector_json(vector: exact.Value) -> list[str]:
+    return codec.value_to_json(vector)
 
 
 def witness2(
     name: str,
-    candidates: Iterable[s.Value],
-    predicate: Callable[[s.Value, s.Value], bool],
-) -> tuple[s.Value, s.Value]:
+    candidates: Iterable[exact.Value],
+    predicate: Callable[[exact.Value, exact.Value], bool],
+) -> tuple[exact.Value, exact.Value]:
     choices = list(candidates)
     for left in choices:
         for right in choices:
@@ -45,23 +45,29 @@ def witness2(
     raise RuntimeError(f"required {name} witness was not found")
 
 
-def noncommutative_witness() -> tuple[s.Value, s.Value]:
-    bases = [s.basis(index) for index in range(16)]
-    return witness2("noncommutativity", bases, lambda x, y: s.mul(x, y) != s.mul(y, x))
+def noncommutative_witness() -> tuple[exact.Value, exact.Value]:
+    bases = [exact.basis(index) for index in range(16)]
+    return witness2(
+        "noncommutativity",
+        bases,
+        lambda x, y: exact.mul(x, y) != exact.mul(y, x),
+    )
 
 
-def nonassociative_witness() -> tuple[s.Value, s.Value, s.Value]:
-    bases = [s.basis(index) for index in range(16)]
+def nonassociative_witness() -> tuple[exact.Value, exact.Value, exact.Value]:
+    bases = [exact.basis(index) for index in range(16)]
     for x in bases:
         for y in bases:
             for z in bases:
-                if s.mul(s.mul(x, y), z) != s.mul(x, s.mul(y, z)):
+                if exact.mul(exact.mul(x, y), z) != exact.mul(
+                    x, exact.mul(y, z)
+                ):
                     return x, y, z
     raise RuntimeError("required nonassociativity witness was not found")
 
 
-def alternative_failure_witness() -> tuple[s.Value, s.Value]:
-    bases = [s.basis(index) for index in range(16)]
+def alternative_failure_witness() -> tuple[exact.Value, exact.Value]:
+    bases = [exact.basis(index) for index in range(16)]
     sparse = sparse_values()
     for left_candidates, right_candidates in (
         (bases, bases),
@@ -70,39 +76,45 @@ def alternative_failure_witness() -> tuple[s.Value, s.Value]:
         (sparse, sparse),
     ):
         for x in left_candidates:
-            xx = s.mul(x, x)
+            xx = exact.mul(x, x)
             for y in right_candidates:
-                if s.mul(xx, y) != s.mul(x, s.mul(x, y)):
+                if exact.mul(xx, y) != exact.mul(x, exact.mul(x, y)):
                     return x, y
     raise RuntimeError("required alternativity-failure witness was not found")
 
 
-def zero_divisor_witness() -> tuple[s.Value, s.Value]:
-    def predicate(x: s.Value, y: s.Value) -> bool:
-        return x != s.zero() and y != s.zero() and s.mul(x, y) == s.zero()
+def zero_divisor_witness() -> tuple[exact.Value, exact.Value]:
+    def predicate(x: exact.Value, y: exact.Value) -> bool:
+        return (
+            x != exact.zero()
+            and y != exact.zero()
+            and exact.mul(x, y) == exact.zero()
+        )
 
-    bases = [s.basis(index) for index in range(16)]
+    bases = [exact.basis(index) for index in range(16)]
     try:
         return witness2("zero-divisor", bases, predicate)
     except RuntimeError:
         return witness2("zero-divisor", sparse_values(), predicate)
 
 
-def random_nonzero(rng: random.Random) -> s.Value:
+def random_nonzero(rng: random.Random) -> exact.Value:
     while True:
-        candidate = s.value([rng.randint(-2, 2) for _ in range(16)])
-        if candidate != s.zero():
+        candidate = exact.value([rng.randint(-2, 2) for _ in range(16)])
+        if candidate != exact.zero():
             return candidate
 
 
-def trace_json(result: s.RunResult | s.Annihilated) -> list[dict[str, object]]:
+def trace_json(
+    result: machine.Completed | machine.Annihilated,
+) -> list[dict[str, object]]:
     return [
         {
             "step": index,
             "event": vector_json(step.event),
             "before": vector_json(step.before),
             "after": vector_json(step.after),
-            "norm2": str(step.norm2),
+            "norm2": str(observers.squared_norm(step)),
         }
         for index, step in enumerate(result.trace, start=1)
     ]
@@ -114,16 +126,16 @@ def generate_results() -> dict[str, object]:
     alt_x, alt_y = alternative_failure_witness()
     divisor_x, divisor_y = zero_divisor_witness()
 
-    left_assoc = s.mul(s.mul(assoc_x, assoc_y), assoc_z)
-    right_assoc = s.mul(assoc_x, s.mul(assoc_y, assoc_z))
-    annihilation = s.run(divisor_y, [divisor_x])
-    forward = s.run(s.one(), [noncomm_x, noncomm_y])
-    reverse = s.run(s.one(), [noncomm_y, noncomm_x])
+    left_assoc = exact.mul(exact.mul(assoc_x, assoc_y), assoc_z)
+    right_assoc = exact.mul(assoc_x, exact.mul(assoc_y, assoc_z))
+    annihilation = machine.run(divisor_y, [divisor_x])
+    forward = machine.run(exact.one(), [noncomm_x, noncomm_y])
+    reverse = machine.run(exact.one(), [noncomm_y, noncomm_x])
 
     # With events [a, b], the transition endpoint is b*(a*x), not (b*a)*x.
     collapse_a, collapse_b, collapse_x = assoc_y, assoc_x, assoc_z
-    ordered = s.run(collapse_x, [collapse_a, collapse_b])
-    collapsed = s.mul(s.mul(collapse_b, collapse_a), collapse_x)
+    ordered = machine.run(collapse_x, [collapse_a, collapse_b])
+    collapsed = exact.mul(exact.mul(collapse_b, collapse_a), collapse_x)
     if ordered.state == collapsed:
         raise RuntimeError("required ordered-program collapse witness was not found")
 
@@ -132,29 +144,36 @@ def generate_results() -> dict[str, object]:
     sampled_events = [random_nonzero(rng) for _ in range(8)]
     replay_samples: dict[str, object] = {}
     for length in (1, 2, 4, 8):
-        sample = s.run(sampled_initial, sampled_events[:length])
+        sample = machine.run(sampled_initial, sampled_events[:length])
         replay_samples[str(length)] = {
             "endpoint": vector_json(sample.state),
-            "norm2": str(s.norm2(sample.state)),
+            "norm2": str(exact.norm2(sample.state)),
             "zero_hits": [
                 index
                 for index, step in enumerate(sample.trace, start=1)
-                if step.after == s.zero()
+                if step.after == exact.zero()
             ],
         }
 
-    ray_initial = s.value([1, 2] + [0] * 14)
-    ray_events = [s.value([0, 1, 1] + [0] * 13), s.basis(4)]
-    ray_base = s.run_ray(ray_initial, ray_events)
-    ray_scaled = s.run_ray(
-        s.scale(-3, ray_initial),
-        [s.scale(5, ray_events[0]), s.scale(-2, ray_events[1])],
+    projective_initial = exact.value([1, 2] + [0] * 14)
+    projective_events = [exact.value([0, 1, 1] + [0] * 13), exact.basis(4)]
+    projective_base = projective.run_projective(
+        projective_initial, projective_events
     )
-    if ray_base != ray_scaled or not isinstance(ray_base, s.RayResult):
-        raise RuntimeError("ray rescaling invariance check failed")
-    ray_annihilated = s.run_ray(divisor_y, [divisor_x])
-    assert isinstance(ray_annihilated, s.Annihilated), (
-        "ray zero-divisor experiment did not annihilate"
+    projective_scaled = projective.run_projective(
+        exact.scale(-3, projective_initial),
+        [
+            exact.scale(5, projective_events[0]),
+            exact.scale(-2, projective_events[1]),
+        ],
+    )
+    if projective_base != projective_scaled or not isinstance(
+        projective_base, machine.Completed
+    ):
+        raise RuntimeError("projective rescaling invariance check failed")
+    projective_annihilated = projective.run_projective(divisor_y, [divisor_x])
+    assert isinstance(projective_annihilated, machine.Annihilated), (
+        "projective zero-divisor experiment did not annihilate"
     )
 
     return {
@@ -166,7 +185,7 @@ def generate_results() -> dict[str, object]:
             "module": "topographo.ssd.exact_machine",
             "convention": {
                 "conj": "conj((a,b)) = (conj(a), -b)",
-                "mul": s.CONVENTION,
+                "mul": exact.CONVENTION,
             },
         },
         "coverage": {
@@ -179,8 +198,8 @@ def generate_results() -> dict[str, object]:
             "noncommutativity": {
                 "x": vector_json(noncomm_x),
                 "y": vector_json(noncomm_y),
-                "x*y": vector_json(s.mul(noncomm_x, noncomm_y)),
-                "y*x": vector_json(s.mul(noncomm_y, noncomm_x)),
+                "x*y": vector_json(exact.mul(noncomm_x, noncomm_y)),
+                "y*x": vector_json(exact.mul(noncomm_y, noncomm_x)),
             },
             "nonassociativity": {
                 "x": vector_json(assoc_x),
@@ -188,29 +207,35 @@ def generate_results() -> dict[str, object]:
                 "z": vector_json(assoc_z),
                 "(x*y)*z": vector_json(left_assoc),
                 "x*(y*z)": vector_json(right_assoc),
-                "difference": vector_json(s.sub(left_assoc, right_assoc)),
+                "difference": vector_json(exact.sub(left_assoc, right_assoc)),
             },
             "alternativity_failure": {
                 "x": vector_json(alt_x),
                 "y": vector_json(alt_y),
-                "(x*x)*y": vector_json(s.mul(s.mul(alt_x, alt_x), alt_y)),
-                "x*(x*y)": vector_json(s.mul(alt_x, s.mul(alt_x, alt_y))),
+                "(x*x)*y": vector_json(
+                    exact.mul(exact.mul(alt_x, alt_x), alt_y)
+                ),
+                "x*(x*y)": vector_json(
+                    exact.mul(alt_x, exact.mul(alt_x, alt_y))
+                ),
             },
             "zero_divisors": {
                 "x": vector_json(divisor_x),
                 "y": vector_json(divisor_y),
-                "x*y": vector_json(s.mul(divisor_x, divisor_y)),
+                "x*y": vector_json(exact.mul(divisor_x, divisor_y)),
             },
             "norm_multiplicativity_failure": {
-                "norm2(x*y)": str(s.norm2(s.mul(divisor_x, divisor_y))),
-                "norm2(x)*norm2(y)": str(s.norm2(divisor_x) * s.norm2(divisor_y)),
+                "norm2(x*y)": str(exact.norm2(exact.mul(divisor_x, divisor_y))),
+                "norm2(x)*norm2(y)": str(
+                    exact.norm2(divisor_x) * exact.norm2(divisor_y)
+                ),
             },
         },
         "experiments": {
             "nonassociative_bracketings": {
                 "left": vector_json(left_assoc),
                 "right": vector_json(right_assoc),
-                "difference": vector_json(s.sub(left_assoc, right_assoc)),
+                "difference": vector_json(exact.sub(left_assoc, right_assoc)),
             },
             "annihilation": {
                 "state": vector_json(annihilation.state),
@@ -234,11 +259,11 @@ def generate_results() -> dict[str, object]:
                 "prefixes": replay_samples,
             },
             "ray_mode": {
-                "endpoint": vector_json(ray_base.state),
+                "endpoint": vector_json(projective_base.state),
                 "rescaling_invariant": True,
                 "annihilation": {
-                    "step": ray_annihilated.step,
-                    "trace": trace_json(ray_annihilated),
+                    "step": projective_annihilated.step,
+                    "trace": trace_json(projective_annihilated),
                 },
             },
         },
@@ -315,13 +340,13 @@ def observations(results: dict[str, object]) -> str:
         )
         + ". Absence of sampled zero hits is only an observation of this distribution.",
         "",
-        "Ray mode produced the same canonical endpoint after independently rescaling the initial state and every event by nonzero rationals. The zero-divisor pair returned explicit `Annihilated(step=1)`.",
+        "Projective mode produced the same canonical endpoint after independently rescaling the initial state and every event by nonzero rationals. The zero-divisor pair returned explicit `Annihilated(step=1)`.",
         "",
     ]
     return "\n".join(lines)
 
 
-def check_results(results: dict[str, object]) -> None:
+def check_artifacts(results: dict[str, object]) -> None:
     expected = json.loads((HERE / "results.json").read_text(encoding="utf-8"))
     if not isinstance(expected, dict):
         raise TypeError("results.json must contain an object")
@@ -334,7 +359,13 @@ def check_results(results: dict[str, object]) -> None:
     actual_implementation["python"] = expected_implementation.get("python")
     if results != expected:
         raise RuntimeError("generated experiment results differ from results.json")
-    print("all generated experiment results match results.json")
+
+    expected_observations = (HERE / "observations.md").read_text(encoding="utf-8")
+    if observations(results) != expected_observations:
+        raise RuntimeError(
+            "generated experiment observations differ from observations.md"
+        )
+    print("all generated experiment artifacts match committed files")
 
 
 def main() -> None:
@@ -343,7 +374,7 @@ def main() -> None:
         raise SystemExit("usage: experiments.py [--check]")
     results = generate_results()
     if arguments == ["--check"]:
-        check_results(results)
+        check_artifacts(results)
         return
     (HERE / "results.json").write_text(
         json.dumps(results, indent=2, sort_keys=True) + "\n", encoding="utf-8"

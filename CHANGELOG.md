@@ -5,6 +5,31 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-09-04
+
+### Added
+
+- Add exact rational arithmetic backed by the shared Cayley–Dickson signed-basis
+  table, typed expression and program nodes, a policy-driven transition engine,
+  projective-state handling, trace observers, and an isolated JSON codec.
+- Add direct tests for ordered left action, shared raw/projective execution,
+  projective equivalence (including negative scaling), annihilation, and layer
+  boundaries.
+- Add a pinned Ruff lint gate to the package workflow.
+
+### Changed
+
+- Split `topographo.ssd.exact_machine` into explicit algebra, program, machine,
+  projective, observer, and codec layers while retaining the original module as
+  a compatibility facade.
+- Rename projective execution to `run_projective`; retain `run_ray` as a
+  compatibility alias and document equivalence under every nonzero rational
+  scalar.
+- Use one `Completed` result for raw and projective success, keep
+  `Annihilated` explicit, and derive squared norm outside transition data.
+- Preserve the deterministic experiment result schema and make `--check`
+  validate both `results.json` and `observations.md`.
+
 ## [0.5.0] - 2026-09-04
 
 ### Added
@@ -156,6 +181,7 @@ All notable changes to this project are documented in this file.
   algebra reproduction module.
 - GitHub Actions audit workflow and `pdoc` documentation setup.
 
+[0.6.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.6.0
 [0.5.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.5.0
 [0.4.2]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.2
 [0.4.1]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.1

@@ -6,8 +6,9 @@ algebraic substrate needed to reproduce the computational claims:
 
 - `signed_basis_table(dim)` builds the canonical exact integer product table;
   `cayley_dickson_table(dim)` derives the public NumPy structure tensor from it.
-- `CayleyDicksonAlgebra` wraps multiplication, conjugation, left/right
-  multiplication operators, `M_x`, and `T_x`.
+- `CayleyDicksonAlgebra` provides floating-point multiplication and operators;
+  `ExactCayleyDicksonAlgebra` provides exact rational arithmetic from the same
+  signed-basis table.
 - `verify_gates()` runs the four mandatory validation checks used by the
   paper before accepting numerical certificates.
 
@@ -21,10 +22,12 @@ from topographo.core.cayley_dickson import (
     cayley_dickson_table,
     signed_basis_table,
 )
+from topographo.core.exact import ExactCayleyDicksonAlgebra
 from topographo.core.gates import GateResult, verify_gates
 
 __all__ = [
     "CayleyDicksonAlgebra",
+    "ExactCayleyDicksonAlgebra",
     "GateResult",
     "cayley_dickson_table",
     "signed_basis_table",

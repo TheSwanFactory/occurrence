@@ -47,9 +47,10 @@ layer, which lives outside this package.
   multiplication, the derived NumPy structure tensor, multiplication operators,
   and mandatory validation gates. It does not know about Occurrence Theory,
   event/state language, or report formatting.
-- `topographo.ssd` — the sedenion-specific wrapper (`SedenionAlgebra`) and small
-  channel diagnostics used by the settlement audit, plus the exact-rational
-  ordered-event machine (`exact_machine`).
+- `topographo.ssd` — the sedenion-specific wrapper (`SedenionAlgebra`), small
+  channel diagnostics, and layered exact-rational execution. Exact algebra,
+  typed programs, raw execution, projective state, observers, and JSON codecs
+  have separate modules; `exact_machine` remains as a compatibility facade.
 - `topographo.exceptional` — the exceptional-algebra layer: the 27-dimensional
   Albert algebra `J3(O)` and its F4/G2 structure (Peirce/Hessian analysis,
   determinant invariants, anisotropy). Generic exceptional-algebra math, not
@@ -109,25 +110,37 @@ operator operations.
 
 ## Exact ordered-event machine
 
-`topographo.ssd.exact_machine` provides immutable 16-component rational values,
-exact Cayley–Dickson arithmetic, explicitly parenthesized expressions, ordered
-left-multiplication traces, replay validation, and projective ray execution.
-It exposes the convention pinned by programming handoff 061.11 as an explicit
-coordinate presentation of the same algebra used by the NumPy backend. The map
+The exact implementation has explicit responsibility boundaries:
+
+- `topographo.core.exact` derives exact rational arithmetic from the canonical
+  signed-basis table.
+- `topographo.ssd.exact` adapts that backend to the pinned 061.11 coordinates.
+- `topographo.ssd.program` defines typed, fully parenthesized expressions and
+  immutable ordered event programs.
+- `topographo.ssd.machine` performs repeated left action through one
+  policy-driven transition engine; raw execution continues through zero.
+- `topographo.ssd.projective` identifies every nonzero rational scaling,
+  including negative scaling, and returns `Annihilated` for a zero product.
+- `topographo.ssd.observers` derives measurements such as squared norm, while
+  `topographo.ssd.codec` owns JSON encoding and exact replay validation.
+
+`topographo.ssd.exact_machine` remains as a compatibility facade for the 0.4
+API. Both exact and NumPy backends use the same algebraic specification. The map
 `Phi(a, b) = (conj(a), b)` converts 061.11 values to core coordinates;
 `to_core_coordinates()` and `from_core_coordinates()` provide the checked
-boundary. Both backends derive multiplication from the single exact integer
-signed-basis table in `topographo.core`.
+boundary.
 
 ```python
-from topographo.ssd import exact_machine as exact
+from topographo.ssd import exact, machine, program, projective
 
 initial = exact.basis(4)
-result = exact.run(initial, [exact.basis(2), exact.basis(1)])
+events = program.Program([exact.basis(2), exact.basis(1)])
+result = machine.run(initial, events)
 
 assert result.state == exact.mul(
     exact.basis(1), exact.mul(exact.basis(2), initial)
 )
+assert projective.run_projective(initial, events).state == result.state
 ```
 
 ## Validation gates

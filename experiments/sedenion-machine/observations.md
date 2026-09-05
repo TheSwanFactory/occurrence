@@ -20,4 +20,4 @@ The zero-divisor event annihilated its nonzero initial state exactly at step 1. 
 
 Fixed-seed (6112026) dense vectors used independent uniform integer coefficients in `[-2, 2]`, rejecting all-zero draws. Prefixes of length 1, 2, 4, and 8 had zero-hit lists: 1: [], 2: [], 4: [], 8: []. Absence of sampled zero hits is only an observation of this distribution.
 
-Ray mode produced the same canonical endpoint after independently rescaling the initial state and every event by nonzero rationals. The zero-divisor pair returned explicit `Annihilated(step=1)`.
+Projective mode produced the same canonical endpoint after independently rescaling the initial state and every event by nonzero rationals. The zero-divisor pair returned explicit `Annihilated(step=1)`.
