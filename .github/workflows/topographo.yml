@@ -9,6 +9,7 @@ on:
   pull_request:
     paths:
       - "topographo/**"
+      - "experiments/sedenion-machine/**"
       - "pyproject.toml"
       - "uv.lock"
       - ".github/workflows/topographo.yml"
@@ -19,6 +20,7 @@ on:
       - "v*"
     paths:
       - "topographo/**"
+      - "experiments/sedenion-machine/**"
       - "pyproject.toml"
       - "uv.lock"
       - ".github/workflows/topographo.yml"
@@ -48,17 +50,23 @@ jobs:
       - name: Run package tests
         run: uv run pytest topographo/tests
 
+      - name: Verify exact sedenion experiment artifacts
+        run: uv run python experiments/sedenion-machine/experiments.py --check
+
       - name: Verify importable package API
         run: |
           uv run python - <<'PY'
           from topographo.core import CayleyDicksonAlgebra, verify_gates
-          from topographo.ssd import SedenionAlgebra, average_metric_operator
+          from topographo.ssd import SedenionAlgebra, average_metric_operator, exact_machine
           from topographo.exceptional import Albert
 
           assert all(result.passed for result in verify_gates())
           assert CayleyDicksonAlgebra(8).dim == 8
           sedenions = SedenionAlgebra()
           assert average_metric_operator(sedenions, sedenions.sample_crack(4)).shape == (16, 16)
+          assert exact_machine.mul(
+              exact_machine.basis(1), exact_machine.basis(1)
+          ) == exact_machine.scale(-1, exact_machine.one())
           import numpy as np
           assert Albert().det(np.array([2, 3, 5] + [0] * 24, float)) == 30.0
           PY
@@ -70,11 +78,13 @@ jobs:
           PYTHONPATH=/tmp/topographo-install "${pythonLocation}/bin/python" - <<'PY'
           import topographo
           import topographo.exceptional
+          from topographo.ssd import exact_machine
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
           # topographo.exceptional reuses the core table; it carries no copy.
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
+          assert exact_machine.DIMENSION == 16
           PY
 
       - name: Build distribution

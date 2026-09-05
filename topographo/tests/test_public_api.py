@@ -20,4 +20,5 @@ def test_subpackage_exports_are_explicit():
     assert set(ssd.__all__) == {
         "SedenionAlgebra",
         "average_metric_operator",
+        "exact_machine",
     }
