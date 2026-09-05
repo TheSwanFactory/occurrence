@@ -32,6 +32,8 @@ jobs:
   package:
     name: Build and test topographo
     runs-on: ubuntu-latest
+    env:
+      UV_PYTHON: "3.12"
 
     steps:
       - name: Check out repository
@@ -47,15 +49,28 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check lockfile is in sync with pyproject.toml
+        run: uv lock --check
+
+      - name: Check tag matches project version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          project_version="$(uv version --short --frozen)"
+          tag_version="${GITHUB_REF_NAME#v}"
+          if [ "$project_version" != "$tag_version" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match pyproject.toml version ${project_version}."
+            exit 1
+          fi
+
       - name: Run package tests
-        run: uv run pytest topographo/tests
+        run: uv run --frozen pytest topographo/tests
 
       - name: Verify exact sedenion experiment artifacts
-        run: uv run python experiments/sedenion-machine/experiments.py --check
+        run: uv run --frozen python experiments/sedenion-machine/experiments.py --check
 
       - name: Verify importable package API
         run: |
-          uv run python - <<'PY'
+          uv run --frozen python - <<'PY'
           from topographo.core import CayleyDicksonAlgebra, verify_gates
           from topographo.ssd import SedenionAlgebra, average_metric_operator, exact_machine
           from topographo.exceptional import Albert
@@ -92,7 +107,7 @@ jobs:
 
       - name: Build API documentation
         run: |
-          uv run pdoc \
+          uv run --frozen pdoc \
             topographo \
             topographo.core \
             topographo.core.algebra \
