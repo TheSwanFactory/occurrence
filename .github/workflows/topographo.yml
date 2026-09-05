@@ -110,6 +110,16 @@ jobs:
           fi
           uv run --frozen python .github/scripts/topographo_release.py "${args[@]}"
 
+      - name: Lint exact machine layers
+        run: |
+          uv run --frozen ruff check --select E4,E7,E9,F,I \
+            topographo/core \
+            topographo/ssd \
+            topographo/tests/test_exact_machine.py \
+            topographo/tests/test_machine_layers.py \
+            topographo/tests/test_public_api.py \
+            experiments/sedenion-machine/experiments.py
+
       - name: Run package tests
         run: uv run --frozen pytest topographo/tests
 
@@ -119,17 +129,30 @@ jobs:
       - name: Verify importable package API
         run: |
           uv run --frozen python - <<'PY'
-          from topographo.core import CayleyDicksonAlgebra, verify_gates
-          from topographo.ssd import SedenionAlgebra, average_metric_operator, exact_machine
+          from topographo.core import CayleyDicksonAlgebra, ExactCayleyDicksonAlgebra, verify_gates
+          from topographo.ssd import (
+              SedenionAlgebra,
+              average_metric_operator,
+              codec,
+              exact,
+              exact_machine,
+              machine,
+              observers,
+              program,
+              projective,
+          )
           from topographo.exceptional import Albert
 
           assert all(result.passed for result in verify_gates())
           assert CayleyDicksonAlgebra(8).dim == 8
+          assert ExactCayleyDicksonAlgebra(8).dim == 8
           sedenions = SedenionAlgebra()
           assert average_metric_operator(sedenions, sedenions.sample_crack(4)).shape == (16, 16)
-          assert exact_machine.mul(
-              exact_machine.basis(1), exact_machine.basis(1)
-          ) == exact_machine.scale(-1, exact_machine.one())
+          result = machine.run(exact.basis(4), program.Program([exact.basis(2)]))
+          assert observers.squared_norm(result.trace[0]) == exact.norm2(result.state)
+          assert codec.replay_serialized(codec.serialize_run(exact.one(), [])) == machine.run(exact.one(), [])
+          assert projective.run_projective(exact.one(), []).state == exact.one()
+          assert exact_machine.run is machine.run
           import numpy as np
           assert Albert().det(np.array([2, 3, 5] + [0] * 24, float)) == 30.0
           PY
@@ -141,13 +164,16 @@ jobs:
           PYTHONPATH=/tmp/topographo-install "${pythonLocation}/bin/python" - <<'PY'
           import topographo
           import topographo.exceptional
-          from topographo.ssd import exact_machine
+          from topographo.core import ExactCayleyDicksonAlgebra
+          from topographo.ssd import codec, exact, exact_machine, machine, observers, program, projective
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
           # topographo.exceptional reuses the core table; it carries no copy.
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
-          assert exact_machine.DIMENSION == 16
+          assert ExactCayleyDicksonAlgebra(16).dim == 16
+          assert exact_machine.run is machine.run
+          assert all((codec, exact, observers, program, projective))
           PY
 
       - name: Build distribution
@@ -167,6 +193,7 @@ jobs:
             topographo.core \
             topographo.core.algebra \
             topographo.core.cayley_dickson \
+            topographo.core.exact \
             topographo.core.gates \
             topographo.ssd \
             topographo.ssd.channel \

@@ -14,6 +14,7 @@ def test_top_level_exports_core_api():
 def test_subpackage_exports_are_explicit():
     assert set(core.__all__) == {
         "CayleyDicksonAlgebra",
+        "ExactCayleyDicksonAlgebra",
         "GateResult",
         "cayley_dickson_table",
         "signed_basis_table",
@@ -22,5 +23,11 @@ def test_subpackage_exports_are_explicit():
     assert set(ssd.__all__) == {
         "SedenionAlgebra",
         "average_metric_operator",
+        "codec",
+        "exact",
         "exact_machine",
+        "machine",
+        "observers",
+        "program",
+        "projective",
     }
