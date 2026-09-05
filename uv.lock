@@ -315,7 +315,7 @@ wheels = [
 
 [[package]]
 name = "topographo"
-version = "0.4.1"
+version = "0.4.2"
 source = { editable = "." }
 dependencies = [
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
@@ -324,6 +324,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "packaging" },
     { name = "pdoc" },
     { name = "pytest" },
 ]
@@ -333,6 +334,7 @@ requires-dist = [{ name = "numpy" }]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "packaging", specifier = "==26.2" },
     { name = "pdoc", specifier = ">=16.0.0" },
     { name = "pytest", specifier = ">=9.1.1" },
 ]
