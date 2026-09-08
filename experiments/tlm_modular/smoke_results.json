@@ -1,0 +1,137 @@
+{
+  "c1_c5": {
+    "c1_events": 84,
+    "c1_pairs": 336,
+    "c2_deg": {
+      "4": 84
+    },
+    "c3_control_blocks": 0,
+    "c3_fips_blocks": 56,
+    "c4_differing_thirds": 336,
+    "c5_broken_laws": [
+      "cyclic block closure (six ordered edges recover a Steiner-like triple)",
+      "Pasch/FIPS generative third = sedenion cyclic action on the certified edge",
+      "compatibility of forced third with projective left action of the sedenion Event",
+      "global Pasch component count of the basic FIPS design (fourteen components in the certified census)"
+    ]
+  },
+  "config": {
+    "OPTIMIZER_SCAFFOLDING": true,
+    "adapt_budget_steps": 20,
+    "adapt_head": "linear_readout",
+    "admission": "masked",
+    "batch_size": 64,
+    "control_name": "degree_matched_rewiring",
+    "control_seed": 0,
+    "d_ff": 64,
+    "d_model": 32,
+    "init_x0": "datum_dependent_embedding",
+    "init_z0": "datum_dependent_frame_logits",
+    "live_ab_ba_feedback": false,
+    "lr": 0.001,
+    "n_closure_steps": 1,
+    "n_heads": 2,
+    "n_layers": 1,
+    "notes": [
+      "Datum-dependent x0/z0 escape the four-partner bottleneck under fixed init.",
+      "Masked admission is for smoke stability; do not report mask rate as learned success.",
+      "Primary control C is non-isomorphic rewiring (C1-C5), not permutation conjugacy."
+    ],
+    "p": 13,
+    "reset_policy": "per_example",
+    "science_p": 97,
+    "seed": 0,
+    "smoke_steps": 20,
+    "staged_sync_forward": true,
+    "step_order": [
+      "read",
+      "phi",
+      "third",
+      "action",
+      "commit"
+    ],
+    "t1u_unrestricted": false,
+    "train_fraction": 0.5
+  },
+  "device": "mps",
+  "models": {
+    "A": {
+      "adapt": {
+        "skipped": false,
+        "steps": 20
+      },
+      "alternate_role_budgeted_head": {
+        "a": 0.10869564861059189,
+        "b": 0.10869564861059189,
+        "c": 0.06521739065647125,
+        "macro": 0.09420289595921834
+      },
+      "alternate_role_zero_shot": {
+        "a": 0.08695652335882187,
+        "b": 0.06521739065647125,
+        "c": 0.0,
+        "macro": 0.05072463800509771
+      },
+      "final_train_loss": 2.38063907623291,
+      "forward_completion_accuracy": 0.0,
+      "n_params": 9581,
+      "relation_transfer_gap_budgeted": -0.09420289595921834,
+      "relation_transfer_gap_zero_shot": -0.05072463800509771,
+      "wall_clock_sec": 4.9307767080608755
+    },
+    "B": {
+      "adapt": {
+        "skipped": false,
+        "steps": 20
+      },
+      "alternate_role_budgeted_head": {
+        "a": 0.10869564861059189,
+        "b": 0.08695652335882187,
+        "c": 0.021739130839705467,
+        "macro": 0.07246376760303974
+      },
+      "alternate_role_zero_shot": {
+        "a": 0.08695652335882187,
+        "b": 0.06521739065647125,
+        "c": 0.021739130839705467,
+        "macro": 0.0579710149516662
+      },
+      "final_train_loss": 2.42193603515625,
+      "forward_completion_accuracy": 0.024096384644508362,
+      "n_params": 22041,
+      "relation_transfer_gap_budgeted": -0.04836738295853138,
+      "relation_transfer_gap_zero_shot": -0.03387463030715784,
+      "wall_clock_sec": 0.4810320839751512
+    },
+    "C": {
+      "adapt": {
+        "skipped": false,
+        "steps": 20
+      },
+      "alternate_role_budgeted_head": {
+        "a": 0.17391304671764374,
+        "b": 0.06521739065647125,
+        "c": 0.021739130839705467,
+        "macro": 0.08695652273794015
+      },
+      "alternate_role_zero_shot": {
+        "a": 0.10869564861059189,
+        "b": 0.043478261679410934,
+        "c": 0.021739130839705467,
+        "macro": 0.05797101370990276
+      },
+      "final_train_loss": 2.4324686527252197,
+      "forward_completion_accuracy": 0.024096384644508362,
+      "n_params": 22041,
+      "relation_transfer_gap_budgeted": -0.06286013809343179,
+      "relation_transfer_gap_zero_shot": -0.0338746290653944,
+      "wall_clock_sec": 0.12639045796822757
+    }
+  },
+  "param_counts": {
+    "A": 9581,
+    "B": 22041,
+    "C": 22041
+  },
+  "torch_version": "2.14.0"
+}

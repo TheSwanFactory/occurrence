@@ -216,3 +216,11 @@ and Moufang checks before its numerical certificates are trusted.
 ## License
 
 MIT.
+
+## Issue 005 Milestone T adapters (0.8.1)
+
+- `ssd.fips_adapter` — hard FIPS index/tensor path and declared STE learning adapter
+  (exact Fraction conformance stays in `fips_basic` / frames; no optimizer imports).
+- `ssd.structural_control` — matched non-isomorphic degree-matched rewiring with C1–C5 checks.
+- Training smoke lives in `experiments/tlm_modular/` (torch optional; not a CI GPU job).
+

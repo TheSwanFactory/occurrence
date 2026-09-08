@@ -5,6 +5,28 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-09-08
+
+### Added
+
+- Add Issue-005 Milestone T (TLM-1) smoke harness under `experiments/tlm_modular/`:
+  capacity-matched baseline A, exact-FIPS TLM B, and matched non-isomorphic
+  structural control C, with pinned init/reset/staging/admission/adaptation
+  config, alternate-role triple partitioning, and wall-clock logging.
+- Add `topographo.ssd.fips_adapter`, the hard FIPS index/tensor path and declared
+  STE learning-adapter smoke (exact hard forward matches `fips_basic` fixtures;
+  no optimizer imports in Outcome/Futurator runtime modules).
+- Add `topographo.ssd.structural_control`, degree-matched rewiring control with
+  mechanical C1–C5 certificates (event/pair counts, degree histogram, destroyed
+  Pasch/cyclic closure, not mere relabeling, documented broken laws).
+- Add package tests for structural control C1–C5, FIPS adapter conformance, and
+  alternate-role data partitioning (torch not required for CI unit tests).
+
+### Changed
+
+- Export `fips_adapter` and `structural_control` from `topographo.ssd` alongside
+  the Futurator-gate modules without widening the `exact_machine` facade.
+
 ## [0.8.0] - 2026-09-08
 
 ### Added

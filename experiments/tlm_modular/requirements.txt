@@ -1,0 +1,3 @@
+# Recorded on thebeast.lan for topographo 0.8.1 TLM-1 smoke
+torch==2.14.0
+numpy
