@@ -92,3 +92,15 @@ result quotient / multi-head composition outside the 15 Fixed classes** — the
 
 Physical Test Realization; published grokking SOTA; softmax-as-OT-law; waiting for
 another Quilt theory turn — this PR *is* the capacity answer.
+
+
+## p=13 Theory-41 word-slot coarse-grain
+
+Diagnostic for Issue 007 correction (Theory-41 `e_c = ∑_{q(w)=c} e_w` on injective p=13 embed):
+
+```bash
+uv run --frozen python experiments/tlm_fixed_head/probe_p13_coarse_grain.py
+```
+
+Artifact: `p13_coarse_grain_report.json`. Branch: `experiment/007-p13-word-slot-coarse-grain`.
+Does **not** choose a 007 fork.
