@@ -26,9 +26,12 @@ def test_subpackage_exports_are_explicit():
         "codec",
         "exact",
         "exact_machine",
+        "fips_basic",
         "frames",
         "machine",
         "observers",
+        "outcome_runtime",
         "program",
         "projective",
+        "seal",
     }

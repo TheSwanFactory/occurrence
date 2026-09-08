@@ -5,6 +5,32 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-09-08
+
+### Added
+
+- Add `topographo.ssd.outcome_runtime`, the Issue-005 Futurator gate: Outcome-aware
+  `ask(presentation, admissibility, enacted_law)` yielding `ConstitutedOutcome` or
+  typed `NonAdmission`, with `NativeLeftAction`, `ProjectiveNativeLeftAction`, and
+  `FipsClosure` laws. Projective `zx=0` constitutes `AnnihilationBoundary` (not
+  NonAdmission). Sealed Event frames are `EventDenotation`; `OperationalFrame`
+  remains the Theory 068.02 unit in `frames`.
+- Add `topographo.ssd.fips_basic`, the certified finite basic FIPS table (84 Events,
+  56 blocks, 336 ordered pairs) regenerated from the frames Event/edge predicates,
+  with forced unique `third` lookup, cyclic block closure, and a pinned SHA-256
+  checksum.
+- Add `topographo.ssd.seal` with `classify` / `seal` / `resolve` and a Theory-39
+  public-collision witness: identical FIPS `(P, delta)` class, distinct sealed
+  evaluations; classify-only `PublicEventView` cannot execute Event action.
+- Add package tests for the 005.04 §1 Futurator acceptance suite (Outcome, FIPS,
+  and seal witnesses).
+
+### Changed
+
+- Export `outcome_runtime`, `fips_basic`, and `seal` from `topographo.ssd` alongside
+  the existing exact machine layers and `frames` without widening the
+  `exact_machine` compatibility facade.
+
 ## [0.7.0] - 2026-09-07
 
 ### Added
