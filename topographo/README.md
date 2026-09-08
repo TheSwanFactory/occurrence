@@ -165,6 +165,41 @@ result = round_step(pair, "AB")
 assert result.complete
 ```
 
+
+## Futurator gate (Outcome / FIPS / seal)
+
+Issue-005 Milestone F adds Outcome-aware `ask` without identifying Futurator with
+soft μ-or-bottom:
+
+- `topographo.ssd.outcome_runtime`: `ask(presentation, admissibility, enacted_law)`
+  returns `ConstitutedOutcome` or typed `NonAdmission`. Laws include
+  `NativeLeftAction`, `ProjectiveNativeLeftAction`, and `FipsClosure`.
+  Projective zero products constitute `AnnihilationBoundary`.
+- `topographo.ssd.fips_basic`: certified finite table (84/56/336) and forced
+  `third` — never ranked candidates.
+- `topographo.ssd.seal`: `classify` / `seal` / `resolve` with a Theory-39 witness
+  that public incidence ≠ sealed evaluator denotation.
+
+Sealed Event frames use `EventDenotation`. Do not confuse them with
+`OperationalFrame` from Theory 068.02 (`ssd.frames`), which owns retained Native
+or Cyclic state and local round policies. Non-goals for this gate: Theory-41
+effect runtime, physical SCE family guards, and optimizer/loss imports in the
+Outcome path (`Fut≠μ|⊥`).
+
+```python
+from topographo.ssd.outcome_runtime import (
+    Admissibility,
+    Presentation,
+    ProjectiveNativeLeftAction,
+    ask,
+)
+from topographo.ssd.seal import seal
+from topographo.ssd import exact
+
+z = seal(exact.add(exact.basis(1), exact.basis(10)))
+outcome = ask(Presentation((z, exact.one())), Admissibility(True), ProjectiveNativeLeftAction())
+```
+
 ## Validation gates
 
 The validation gates are deliberately conservative. They catch sign-convention

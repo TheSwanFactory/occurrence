@@ -142,11 +142,14 @@ jobs:
               codec,
               exact,
               exact_machine,
+              fips_basic,
               frames,
               machine,
               observers,
+              outcome_runtime,
               program,
               projective,
+              seal,
           )
           from topographo.exceptional import Albert
 
@@ -160,6 +163,9 @@ jobs:
           assert codec.replay_serialized(codec.serialize_run(exact.one(), [])) == machine.run(exact.one(), [])
           assert projective.run_projective(exact.one(), []).state == exact.one()
           assert frames.is_event(exact.add(exact.basis(1), exact.basis(10)))
+          assert len(fips_basic.EVENTS) == 84
+          assert seal.classify(seal.seal(exact.add(exact.basis(1), exact.basis(10)))).label
+          assert outcome_runtime.ask is not None
           assert exact_machine.run is machine.run
           import numpy as np
           assert Albert().det(np.array([2, 3, 5] + [0] * 24, float)) == 30.0
@@ -173,7 +179,7 @@ jobs:
           import topographo
           import topographo.exceptional
           from topographo.core import ExactCayleyDicksonAlgebra
-          from topographo.ssd import codec, exact, exact_machine, frames, machine, observers, program, projective
+          from topographo.ssd import codec, exact, exact_machine, fips_basic, frames, machine, observers, outcome_runtime, program, projective, seal
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
@@ -181,7 +187,7 @@ jobs:
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
           assert ExactCayleyDicksonAlgebra(16).dim == 16
           assert exact_machine.run is machine.run
-          assert all((codec, exact, frames, observers, program, projective))
+          assert all((codec, exact, fips_basic, frames, observers, outcome_runtime, program, projective, seal))
           PY
 
       - name: Build distribution

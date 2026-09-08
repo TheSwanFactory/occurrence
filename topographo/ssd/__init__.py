@@ -15,6 +15,10 @@ The exact ordered-event implementation is split into explicit public layers:
 - `codec` owns the optional JSON wire format and replay validation.
 - `exact_machine` preserves the original combined API as a compatibility facade.
 - `frames` provides the Theory 068.02 mutual Operational-Frame machine (Native/Cyclic state, seed guard, and explicit round policies).
+- `outcome_runtime` provides Outcome-aware `ask` (Futurator gate): presentation + admissibility + enacted law.
+- `fips_basic` provides the certified finite FIPS table (84/56/336) and forced `third`.
+- `seal` provides classify/seal/resolve and the Theory-39 collision witness.
+  Sealed frames are `EventDenotation`; `OperationalFrame` remains the 068 unit in `frames`.
 
 Higher-level claims about invariant measures, exact channel spectra, and
 oriented Markov dynamics remain in the audit/paper layer until their API shape
@@ -25,11 +29,14 @@ from topographo.ssd import (
     codec,
     exact,
     exact_machine,
+    fips_basic,
     frames,
     machine,
     observers,
+    outcome_runtime,
     program,
     projective,
+    seal,
 )
 from topographo.ssd.channel import average_metric_operator
 from topographo.ssd.sedenion import SedenionAlgebra
@@ -40,9 +47,12 @@ __all__ = [
     "codec",
     "exact",
     "exact_machine",
+    "fips_basic",
     "frames",
     "machine",
     "observers",
+    "outcome_runtime",
     "program",
     "projective",
+    "seal",
 ]
