@@ -14,6 +14,7 @@ The exact ordered-event implementation is split into explicit public layers:
 - `observers` derives measurements from policy-independent transitions.
 - `codec` owns the optional JSON wire format and replay validation.
 - `exact_machine` preserves the original combined API as a compatibility facade.
+- `frames` provides the Theory 068.02 mutual Operational-Frame machine (Native/Cyclic state, seed guard, and explicit round policies).
 
 Higher-level claims about invariant measures, exact channel spectra, and
 oriented Markov dynamics remain in the audit/paper layer until their API shape
@@ -24,6 +25,7 @@ from topographo.ssd import (
     codec,
     exact,
     exact_machine,
+    frames,
     machine,
     observers,
     program,
@@ -38,6 +40,7 @@ __all__ = [
     "codec",
     "exact",
     "exact_machine",
+    "frames",
     "machine",
     "observers",
     "program",

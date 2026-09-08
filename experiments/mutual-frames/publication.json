@@ -1,0 +1,54 @@
+{
+  "implementation_commit": "84024c5c43cc8f229f7d1ef7eb9f860acdc4e36b",
+  "base_commit": "5395412c810b7edf2d3c1f0f2524bb8ab492b377",
+  "remote_push": false,
+  "python": "3.12.13",
+  "topographo": "0.7.0",
+  "numpy": "2.5.3",
+  "checks": {
+    "unittest": "7 passed",
+    "full_replay": "results.json and traces.json.gz byte-identical"
+  },
+  "files": {
+    "068.02-HC-minimal-mutual-operational-frame-machine-result.md": {
+      "bytes": 18721,
+      "sha256": "24948dd7f5b8c9c89b14514c529d66626c4c1976478afb586ae1df046b617421"
+    },
+    "README.md": {
+      "bytes": 3103,
+      "sha256": "236ff7dc5cfab8c541891d28bdcccee6ccac15f85f437df22efb9bf636c104da"
+    },
+    "analyze_traces.py": {
+      "bytes": 1778,
+      "sha256": "218df0b386003e170f7d5efe330d19a7fbf657c7d4d4618cf8634d61acd1e060"
+    },
+    "audit.py": {
+      "bytes": 13563,
+      "sha256": "c428f1fe95217331e4ae2a085b73a526a6562ce438806686330d044956165a79"
+    },
+    "ordering_metrics.json": {
+      "bytes": 3529,
+      "sha256": "b9537cc702b31ec3c7ac430ee4fe659370dde20dbe70e2d729cc80fc06cd1ca2"
+    },
+    "requirements.txt": {
+      "bytes": 31,
+      "sha256": "b4e90d3da556e0320351012c6704563d03cceedafb425f2d57cddb19858f5de3"
+    },
+    "results.json": {
+      "bytes": 189709,
+      "sha256": "c852b2e1ba954bed1a3314168fb6f45e0bc3949ff0e331b08ed733e75f5e8ccd"
+    },
+    "runtime.py": {
+      "bytes": 6767,
+      "sha256": "1a1042128b3be76f5456fbce2d148373b712f11e1e41c7c212c8fe920159b5ef"
+    },
+    "test_runtime.py": {
+      "bytes": 3556,
+      "sha256": "1c28db0bbf0b1a3e41de8b0c8bf3f87263d753fa551acaa7784984a242d1affe"
+    },
+    "traces.json.gz": {
+      "bytes": 2073460,
+      "sha256": "4615ba353e0db078e48c7954c603543994a8904a60df9cb0d996d145f91d1c9c"
+    }
+  }
+}

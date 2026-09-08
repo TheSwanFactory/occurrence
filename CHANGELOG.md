@@ -5,6 +5,26 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-09-07
+
+### Added
+
+- Add `topographo.ssd.frames`, the Theory 068.02 mutual Operational-Frame
+  machine: Native/Cyclic retained state, certified Event/edge predicates, seed
+  guard, local `step`/`advance`, and explicit serial/snapshot `round_step`
+  policies over the released exact projective engine.
+- Add package tests for the seven 068.02 behavioral witnesses (exact SCE
+  ordering, guard/eigenspace agreement, unavailable presentation, explicit law
+  choice, cyclic autonomy, and kernel non-retention).
+- Add `experiments/mutual-frames/` with the finite census audit, compressed
+  traces, ordering metrics, and Quilt/Theory 068.02 provenance notes. The
+  multi-minute full census remains a manual `audit.py` run, not default CI.
+
+### Changed
+
+- Export the `frames` module from `topographo.ssd` alongside the existing exact
+  machine layers without widening the `exact_machine` compatibility facade.
+
 ## [0.6.0] - 2026-09-04
 
 ### Added
@@ -181,6 +201,7 @@ All notable changes to this project are documented in this file.
   algebra reproduction module.
 - GitHub Actions audit workflow and `pdoc` documentation setup.
 
+[0.7.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.7.0
 [0.6.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.6.0
 [0.5.0]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.5.0
 [0.4.2]: https://github.com/TheSwanFactory/occurrence/releases/tag/v0.4.2

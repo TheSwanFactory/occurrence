@@ -23,6 +23,7 @@ on:
     paths:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
+      - "experiments/mutual-frames/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -34,6 +35,7 @@ on:
     paths:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
+      - "experiments/mutual-frames/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -118,7 +120,11 @@ jobs:
             topographo/tests/test_exact_machine.py \
             topographo/tests/test_machine_layers.py \
             topographo/tests/test_public_api.py \
-            experiments/sedenion-machine/experiments.py
+            topographo/tests/test_frames.py \
+            experiments/sedenion-machine/experiments.py \
+            experiments/mutual-frames/runtime.py \
+            experiments/mutual-frames/audit.py \
+            experiments/mutual-frames/analyze_traces.py
 
       - name: Run package tests
         run: uv run --frozen pytest topographo/tests
@@ -136,6 +142,7 @@ jobs:
               codec,
               exact,
               exact_machine,
+              frames,
               machine,
               observers,
               program,
@@ -152,6 +159,7 @@ jobs:
           assert observers.squared_norm(result.trace[0]) == exact.norm2(result.state)
           assert codec.replay_serialized(codec.serialize_run(exact.one(), [])) == machine.run(exact.one(), [])
           assert projective.run_projective(exact.one(), []).state == exact.one()
+          assert frames.is_event(exact.add(exact.basis(1), exact.basis(10)))
           assert exact_machine.run is machine.run
           import numpy as np
           assert Albert().det(np.array([2, 3, 5] + [0] * 24, float)) == 30.0
@@ -165,7 +173,7 @@ jobs:
           import topographo
           import topographo.exceptional
           from topographo.core import ExactCayleyDicksonAlgebra
-          from topographo.ssd import codec, exact, exact_machine, machine, observers, program, projective
+          from topographo.ssd import codec, exact, exact_machine, frames, machine, observers, program, projective
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
@@ -173,7 +181,7 @@ jobs:
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
           assert ExactCayleyDicksonAlgebra(16).dim == 16
           assert exact_machine.run is machine.run
-          assert all((codec, exact, observers, program, projective))
+          assert all((codec, exact, frames, observers, program, projective))
           PY
 
       - name: Build distribution

@@ -1,0 +1,6086 @@
+{
+  "base_commit": "5395412c810b7edf2d3c1f0f2524bb8ab492b377",
+  "boundaries": [
+    "Presentation wiring is explicit experimental input, not derived from OT.",
+    "Snapshot equality holds conditional on a shared incoming pair; it does not implement a synchronization protocol.",
+    "Cyclic frames ignore external offers; asymmetric execution is not reciprocal after entry.",
+    "Undefined projective or unavailable presentation halts a valid trajectory; it is not a physical terminal state.",
+    "No continuous universality or necessity of a new coordination primitive is inferred."
+  ],
+  "census": {
+    "CC": {
+      "AB_BA_both_complete_different_endpoint": 0,
+      "AB_BA_same_signature": 112896,
+      "AB_complete": 112896,
+      "AB_cyclic": 225792,
+      "BA_complete": 112896,
+      "BA_cyclic": 225792,
+      "both_serial_equal_snapshot": 112896,
+      "cases": 112896,
+      "fips_block_order_difference": 0,
+      "seed_guard_order_difference": 0,
+      "snapshot_AB_complete": 112896,
+      "snapshot_AB_cyclic": 225792,
+      "status_order_difference": 0
+    },
+    "NC:founding": {
+      "AB_BA_both_complete_different_endpoint": 26208,
+      "AB_BA_same_signature": 672,
+      "AB_complete": 26880,
+      "AB_cyclic": 28224,
+      "AB_native": 26880,
+      "AB_undefined_projective": 1344,
+      "BA_complete": 26880,
+      "BA_cyclic": 28224,
+      "BA_native": 26880,
+      "BA_undefined_projective": 1344,
+      "both_serial_equal_snapshot": 672,
+      "cases": 28224,
+      "fips_block_order_difference": 0,
+      "seed_guard_order_difference": 12096,
+      "snapshot_AB_complete": 26880,
+      "snapshot_AB_cyclic": 28224,
+      "snapshot_AB_native": 26880,
+      "snapshot_AB_undefined_projective": 1344,
+      "status_order_difference": 1344
+    },
+    "NC:sce": {
+      "AB_BA_both_complete_different_endpoint": 26208,
+      "AB_BA_same_signature": 672,
+      "AB_complete": 26880,
+      "AB_cyclic": 28224,
+      "AB_native": 20160,
+      "AB_seeded": 6720,
+      "AB_undefined_projective": 1344,
+      "BA_complete": 26880,
+      "BA_cyclic": 28224,
+      "BA_native": 20160,
+      "BA_seeded": 6720,
+      "BA_undefined_projective": 1344,
+      "both_serial_equal_snapshot": 672,
+      "cases": 28224,
+      "fips_block_order_difference": 12432,
+      "seed_guard_order_difference": 12096,
+      "snapshot_AB_complete": 26880,
+      "snapshot_AB_cyclic": 28224,
+      "snapshot_AB_native": 20160,
+      "snapshot_AB_seeded": 6720,
+      "snapshot_AB_undefined_projective": 1344,
+      "status_order_difference": 13440
+    },
+    "NN:founding/founding": {
+      "AB_BA_both_complete_different_endpoint": 3024,
+      "AB_BA_same_signature": 336,
+      "AB_complete": 3024,
+      "AB_native": 9744,
+      "AB_presentation_unavailable": 3696,
+      "AB_undefined_projective": 672,
+      "BA_complete": 3024,
+      "BA_native": 9744,
+      "BA_presentation_unavailable": 3696,
+      "BA_undefined_projective": 672,
+      "both_serial_equal_snapshot": 336,
+      "cases": 7056,
+      "fips_block_order_difference": 0,
+      "seed_guard_order_difference": 6384,
+      "snapshot_AB_complete": 6720,
+      "snapshot_AB_native": 13440,
+      "snapshot_AB_undefined_projective": 672,
+      "status_order_difference": 3696
+    },
+    "NN:founding/sce": {
+      "AB_BA_both_complete_different_endpoint": 3024,
+      "AB_BA_same_signature": 336,
+      "AB_complete": 3024,
+      "AB_native": 8064,
+      "AB_presentation_unavailable": 3696,
+      "AB_seeded": 1680,
+      "AB_undefined_projective": 672,
+      "BA_complete": 3024,
+      "BA_native": 8064,
+      "BA_presentation_unavailable": 3696,
+      "BA_seeded": 1680,
+      "BA_undefined_projective": 672,
+      "both_serial_equal_snapshot": 336,
+      "cases": 7056,
+      "fips_block_order_difference": 2688,
+      "seed_guard_order_difference": 6384,
+      "snapshot_AB_complete": 6720,
+      "snapshot_AB_native": 11760,
+      "snapshot_AB_seeded": 1680,
+      "snapshot_AB_undefined_projective": 672,
+      "status_order_difference": 6384
+    },
+    "NN:sce/founding": {
+      "AB_BA_both_complete_different_endpoint": 3024,
+      "AB_BA_same_signature": 336,
+      "AB_complete": 3024,
+      "AB_native": 8064,
+      "AB_presentation_unavailable": 3696,
+      "AB_seeded": 1680,
+      "AB_undefined_projective": 672,
+      "BA_complete": 3024,
+      "BA_native": 8064,
+      "BA_presentation_unavailable": 3696,
+      "BA_seeded": 1680,
+      "BA_undefined_projective": 672,
+      "both_serial_equal_snapshot": 336,
+      "cases": 7056,
+      "fips_block_order_difference": 2688,
+      "seed_guard_order_difference": 6384,
+      "snapshot_AB_complete": 6720,
+      "snapshot_AB_native": 11760,
+      "snapshot_AB_seeded": 1680,
+      "snapshot_AB_undefined_projective": 672,
+      "status_order_difference": 6384
+    },
+    "NN:sce/sce": {
+      "AB_BA_both_complete_different_endpoint": 3024,
+      "AB_BA_same_signature": 336,
+      "AB_complete": 3024,
+      "AB_native": 6384,
+      "AB_presentation_unavailable": 3696,
+      "AB_seeded": 3360,
+      "AB_undefined_projective": 672,
+      "BA_complete": 3024,
+      "BA_native": 6384,
+      "BA_presentation_unavailable": 3696,
+      "BA_seeded": 3360,
+      "BA_undefined_projective": 672,
+      "both_serial_equal_snapshot": 336,
+      "cases": 7056,
+      "fips_block_order_difference": 2688,
+      "seed_guard_order_difference": 6384,
+      "snapshot_AB_complete": 6720,
+      "snapshot_AB_native": 10080,
+      "snapshot_AB_seeded": 3360,
+      "snapshot_AB_undefined_projective": 672,
+      "status_order_difference": 6384
+    },
+    "rational_partners:founding": {
+      "AB_BA_both_complete_different_endpoint": 80,
+      "AB_BA_same_signature": 0,
+      "AB_complete": 80,
+      "AB_native": 160,
+      "BA_complete": 80,
+      "BA_native": 160,
+      "both_serial_equal_snapshot": 0,
+      "cases": 80,
+      "fips_block_order_difference": 0,
+      "seed_guard_order_difference": 0,
+      "snapshot_AB_complete": 80,
+      "snapshot_AB_native": 160,
+      "status_order_difference": 0
+    },
+    "rational_partners:sce": {
+      "AB_BA_both_complete_different_endpoint": 80,
+      "AB_BA_same_signature": 0,
+      "AB_complete": 80,
+      "AB_seeded": 160,
+      "BA_complete": 80,
+      "BA_seeded": 160,
+      "both_serial_equal_snapshot": 0,
+      "cases": 80,
+      "fips_block_order_difference": 0,
+      "seed_guard_order_difference": 0,
+      "snapshot_AB_complete": 80,
+      "snapshot_AB_seeded": 160,
+      "status_order_difference": 0
+    }
+  },
+  "cyclic_repeated_steps": 10080,
+  "finite_geometry": {
+    "blocks": 56,
+    "events": 84,
+    "ordered_edges": 336,
+    "pasch_components": 14
+  },
+  "primary_verdict": "D \u2014 NON-SERIALIZABLE / LAW-CONFLICT BOUNDARY",
+  "rational_partner_vectors": 80,
+  "repeated_canonical_sce": {
+    "AB": [
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e1": "1",
+                  "e10": "1"
+                }
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e15": "1",
+              "e4": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e15": "1",
+                  "e4": "1"
+                }
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e14": "-1",
+              "e5": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      }
+    ],
+    "BA": [
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e1": "1",
+                  "e10": "1"
+                }
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e14": "-1",
+              "e5": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e15": "1",
+                  "e4": "1"
+                }
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e1": "1",
+              "e10": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      }
+    ],
+    "snapshot_AB": [
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e1": "1",
+                  "e10": "1"
+                }
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e15": "1",
+              "e4": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "type": "Native",
+                "x": {
+                  "e15": "1",
+                  "e4": "1"
+                }
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": {
+              "e1": "1",
+              "e10": "1"
+            },
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local.enacted_transition",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "peer.presentation_interface"
+            },
+            "seed_guard": true,
+            "status": "seeded"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      },
+      {
+        "complete": true,
+        "decisions": [
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "A",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          },
+          {
+            "before": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e14": "-1",
+                  "e5": "1"
+                },
+                "s": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "observer_slot": "B",
+            "post_state": {
+              "enacted_transition": "sce",
+              "retained_state": {
+                "r": {
+                  "e15": "1",
+                  "e4": "1"
+                },
+                "s": {
+                  "e1": "1",
+                  "e10": "1"
+                },
+                "type": "Cyclic"
+              }
+            },
+            "presented": null,
+            "provenance": {
+              "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+              "global_semantic_selector": false,
+              "law": "local retained Cyclic type: Outcome 15 continuation",
+              "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+              "presentation": "local.retained_state.ordered_edge"
+            },
+            "seed_guard": null,
+            "status": "cyclic"
+          }
+        ]
+      }
+    ]
+  },
+  "runtime_fields": [
+    "retained_state",
+    "enacted_transition"
+  ],
+  "symmetry_basis_checks": 2048,
+  "topographo": "0.7.0",
+  "trace_archive": {
+    "bytes": 2073460,
+    "cases": 197728,
+    "distinct_decisions": 18848,
+    "sha256": "4615ba353e0db078e48c7954c603543994a8904a60df9cb0d996d145f91d1c9c"
+  },
+  "witnesses": {
+    "NC:founding": {
+      "initial": [
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "r": {
+              "e1": "1",
+              "e10": "-1"
+            },
+            "s": {
+              "e15": "-1",
+              "e4": "1"
+            },
+            "type": "Cyclic"
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e14": "1",
+                    "e5": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e15": "-1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e15": "-1",
+                    "e4": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e14": "1",
+                "e5": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e14": "1",
+                    "e5": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e15": "-1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        }
+      }
+    },
+    "NC:sce": {
+      "initial": [
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "r": {
+              "e1": "1",
+              "e10": "-1"
+            },
+            "s": {
+              "e15": "-1",
+              "e4": "1"
+            },
+            "type": "Cyclic"
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e15": "-1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e14": "1",
+                "e5": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e15": "-1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "-1"
+                  },
+                  "s": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "-1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": null,
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local retained Cyclic type: Outcome 15 continuation",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "local.retained_state.ordered_edge"
+              },
+              "seed_guard": null,
+              "status": "cyclic"
+            }
+          ]
+        }
+      }
+    },
+    "NN:founding/founding": {
+      "initial": [
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e3": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1",
+                    "e14": "1",
+                    "e5": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1",
+                    "e7": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        }
+      }
+    },
+    "NN:founding/sce": {
+      "initial": [
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e3": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "s": {
+                    "e1": "1",
+                    "e10": "-1",
+                    "e14": "1",
+                    "e5": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1",
+                    "e7": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        }
+      }
+    },
+    "NN:sce/founding": {
+      "initial": [
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e3": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e3": "1"
+                  },
+                  "s": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1",
+                    "e14": "1",
+                    "e5": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1",
+                    "e7": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e3": "1"
+                  },
+                  "s": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        }
+      }
+    },
+    "NN:sce/sce": {
+      "initial": [
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "-1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e3": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e3": "1"
+                  },
+                  "s": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "s": {
+                    "e1": "1",
+                    "e10": "-1",
+                    "e14": "1",
+                    "e5": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1",
+                    "e7": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e13": "-1",
+                "e2": "1",
+                "e6": "1",
+                "e9": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "-1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e3": "1"
+                  },
+                  "s": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e3": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e3": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e13": "-1",
+                    "e2": "1",
+                    "e6": "1",
+                    "e9": "-1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "-1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": false,
+              "status": "native"
+            }
+          ]
+        }
+      }
+    },
+    "annihilation": {
+      "complete": false,
+      "decisions": [
+        {
+          "before": {
+            "enacted_transition": "sce",
+            "retained_state": {
+              "type": "Native",
+              "x": {
+                "e1": "1",
+                "e10": "1"
+              }
+            }
+          },
+          "observer_slot": "A",
+          "post_state": null,
+          "presented": {
+            "e15": "-1",
+            "e4": "1"
+          },
+          "provenance": {
+            "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+            "global_semantic_selector": false,
+            "law": "local.enacted_transition",
+            "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+            "presentation": "peer.presentation_interface"
+          },
+          "seed_guard": false,
+          "status": "undefined_projective"
+        },
+        {
+          "before": {
+            "enacted_transition": "sce",
+            "retained_state": {
+              "type": "Native",
+              "x": {
+                "e15": "-1",
+                "e4": "1"
+              }
+            }
+          },
+          "observer_slot": "B",
+          "post_state": null,
+          "presented": {
+            "e1": "1",
+            "e10": "1"
+          },
+          "provenance": {
+            "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+            "global_semantic_selector": false,
+            "law": "local.enacted_transition",
+            "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+            "presentation": "peer.presentation_interface"
+          },
+          "seed_guard": false,
+          "status": "undefined_projective"
+        }
+      ]
+    },
+    "canonical_sce": {
+      "initial": [
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e15": "1",
+              "e4": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e15": "1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e15": "1",
+                    "e4": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "s": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e14": "-1",
+                "e5": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "s": {
+                    "e15": "1",
+                    "e4": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e14": "-1",
+                "e5": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e15": "1",
+                    "e4": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "s": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e15": "1",
+                    "e4": "1"
+                  },
+                  "s": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e15": "1",
+                "e4": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e15": "1",
+                    "e4": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "s": {
+                    "e14": "-1",
+                    "e5": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        }
+      }
+    },
+    "rational_partners:founding": {
+      "initial": [
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "founding",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e13": "1",
+              "e14": "-1",
+              "e15": "1",
+              "e4": "1",
+              "e5": "1",
+              "e6": "1",
+              "e7": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "1",
+                "e14": "-1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "1",
+                "e6": "1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "-1",
+                "e14": "1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "-1",
+                "e6": "-1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "-1",
+                "e14": "1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "-1",
+                "e6": "-1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "1",
+                "e14": "-1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "1",
+                "e6": "1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            },
+            {
+              "before": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "founding",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "native"
+            }
+          ]
+        }
+      }
+    },
+    "rational_partners:sce": {
+      "initial": [
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e1": "1",
+              "e10": "1"
+            }
+          }
+        },
+        {
+          "enacted_transition": "sce",
+          "retained_state": {
+            "type": "Native",
+            "x": {
+              "e12": "-1",
+              "e13": "1",
+              "e14": "-1",
+              "e15": "1",
+              "e4": "1",
+              "e5": "1",
+              "e6": "1",
+              "e7": "1"
+            }
+          }
+        }
+      ],
+      "policies": {
+        "AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  },
+                  "s": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "1",
+                "e14": "-1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "1",
+                "e6": "1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "s": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "-1",
+                "e14": "1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "-1",
+                "e6": "-1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "BA": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "s": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "-1",
+                "e14": "1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "-1",
+                "e6": "-1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "s": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        },
+        "snapshot_AB": {
+          "complete": true,
+          "decisions": [
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e1": "1",
+                    "e10": "1"
+                  }
+                }
+              },
+              "observer_slot": "A",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  },
+                  "s": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e12": "-1",
+                "e13": "1",
+                "e14": "-1",
+                "e15": "1",
+                "e4": "1",
+                "e5": "1",
+                "e6": "1",
+                "e7": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            },
+            {
+              "before": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "type": "Native",
+                  "x": {
+                    "e12": "-1",
+                    "e13": "1",
+                    "e14": "-1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "1",
+                    "e6": "1",
+                    "e7": "1"
+                  }
+                }
+              },
+              "observer_slot": "B",
+              "post_state": {
+                "enacted_transition": "sce",
+                "retained_state": {
+                  "r": {
+                    "e1": "1",
+                    "e10": "1"
+                  },
+                  "s": {
+                    "e12": "-1",
+                    "e13": "-1",
+                    "e14": "1",
+                    "e15": "1",
+                    "e4": "1",
+                    "e5": "-1",
+                    "e6": "-1",
+                    "e7": "1"
+                  },
+                  "type": "Cyclic"
+                }
+              },
+              "presented": {
+                "e1": "1",
+                "e10": "1"
+              },
+              "provenance": {
+                "admissibility": "local certified Event/domain/seed predicates on shown inputs",
+                "global_semantic_selector": false,
+                "law": "local.enacted_transition",
+                "post_state": "exact local left action / ordered-edge rotation on shown inputs",
+                "presentation": "peer.presentation_interface"
+              },
+              "seed_guard": true,
+              "status": "seeded"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -26,6 +26,7 @@ def test_subpackage_exports_are_explicit():
         "codec",
         "exact",
         "exact_machine",
+        "frames",
         "machine",
         "observers",
         "program",
