@@ -1,0 +1,322 @@
+{
+  "census_checksum": "46007a3aca22aa28c0d1d1f90610bbac570386a72bb66f6d1898d9df6259e659",
+  "probes": "007.02 characterization: coord MI, within-class word MI, rank/g1/g4, residual energy",
+  "p13": {
+    "p": 13,
+    "H_c_bits": 3.7004397181410926,
+    "MI": {
+      "c_given_word": 3.7004397181410926,
+      "c_given_class": 0.5961761475678933,
+      "c_given_quantized_coords_8bins": 0.0920487301653461,
+      "c_given_rank": 0.07859522656573015,
+      "c_given_g1_nonzero": 0.01691874770462931,
+      "c_given_g4_nonzero": 0.01691874770462931,
+      "c_word_given_class": 3.1042635705731993
+    },
+    "interpretation_hints": {
+      "if_coord_MI_near_class_MI": "class quantization is not the main choke; Fixed image already poor for c",
+      "if_coord_MI_near_word_MI": "Fixed coords still carry task info; discrete 15-class quotient discards it",
+      "if_MI_word_given_class_high": "within a Fixed class, word identity still predicts c \u2014 quotient is the choke",
+      "if_MI_word_given_class_near_0": "once class is known, word adds little about c \u2014 collapse already in Fixed"
+    },
+    "per_class_summary": {
+      "mean_MI_c_word_in_class": 2.213490794912136,
+      "mean_H_c_given_class": 2.213490794912136,
+      "classes_with_single_c": 2
+    },
+    "per_class": [
+      {
+        "class_id": 1,
+        "n_pairs": 13,
+        "n_distinct_words": 13,
+        "n_distinct_c": 7,
+        "H_c_given_class": 2.6235166412180155,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 2.6235166412180155
+      },
+      {
+        "class_id": 2,
+        "n_pairs": 3,
+        "n_distinct_words": 3,
+        "n_distinct_c": 3,
+        "H_c_given_class": 1.584962500721156,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 1.584962500721156
+      },
+      {
+        "class_id": 3,
+        "n_pairs": 39,
+        "n_distinct_words": 39,
+        "n_distinct_c": 13,
+        "H_c_given_class": 3.593094526554556,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 3.593094526554556
+      },
+      {
+        "class_id": 4,
+        "n_pairs": 1,
+        "n_distinct_words": 1,
+        "n_distinct_c": 1,
+        "H_c_given_class": 0.0,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 0.0
+      },
+      {
+        "class_id": 5,
+        "n_pairs": 14,
+        "n_distinct_words": 14,
+        "n_distinct_c": 7,
+        "H_c_given_class": 2.807354922057604,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 2.807354922057604
+      },
+      {
+        "class_id": 7,
+        "n_pairs": 28,
+        "n_distinct_words": 28,
+        "n_distinct_c": 10,
+        "H_c_given_class": 3.2359263506290334,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 3.2359263506290334
+      },
+      {
+        "class_id": 9,
+        "n_pairs": 15,
+        "n_distinct_words": 15,
+        "n_distinct_c": 13,
+        "H_c_given_class": 3.589898095464287,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 3.589898095464287
+      },
+      {
+        "class_id": 10,
+        "n_pairs": 1,
+        "n_distinct_words": 1,
+        "n_distinct_c": 1,
+        "H_c_given_class": 0.0,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 0.0
+      },
+      {
+        "class_id": 11,
+        "n_pairs": 39,
+        "n_distinct_words": 39,
+        "n_distinct_c": 11,
+        "H_c_given_class": 3.378619450231472,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 3.378619450231472
+      },
+      {
+        "class_id": 12,
+        "n_pairs": 3,
+        "n_distinct_words": 3,
+        "n_distinct_c": 3,
+        "H_c_given_class": 1.584962500721156,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 1.584962500721156
+      },
+      {
+        "class_id": 13,
+        "n_pairs": 13,
+        "n_distinct_words": 13,
+        "n_distinct_c": 4,
+        "H_c_given_class": 1.95006375643621,
+        "H_c_given_word_in_class": 0.0,
+        "MI_c_word_in_class": 1.95006375643621
+      }
+    ],
+    "residual_HS_energy": {
+      "same_class_diff_c": {
+        "n": 2050,
+        "mean": 14.928315911730534,
+        "std": 5.9176417582289655,
+        "median": 15.809523809523798
+      },
+      "same_class_same_c": {
+        "n": 168,
+        "mean": 14.192743764172324,
+        "std": 4.643144387660107,
+        "median": 15.809523809523798
+      },
+      "note": "mean HS energy of M-E_Fix(M) for embedded-pair comparisons; not a causal proof"
+    },
+    "fence": "configured probe + formal Fixed head; not physical Test Realization"
+  },
+  "p97": {
+    "p": 97,
+    "H_c_bits": 6.599912842187142,
+    "MI": {
+      "c_given_word": 6.099753420356979,
+      "c_given_class": 0.22948067757389534,
+      "c_given_quantized_coords_8bins": 0.12724003263288353,
+      "c_given_rank": 0.053706082078435635,
+      "c_given_g1_nonzero": 0.03136456709535285,
+      "c_given_g4_nonzero": 0.06926251336923439,
+      "c_word_given_class": 5.870272742783084
+    },
+    "interpretation_hints": {
+      "if_coord_MI_near_class_MI": "class quantization is not the main choke; Fixed image already poor for c",
+      "if_coord_MI_near_word_MI": "Fixed coords still carry task info; discrete 15-class quotient discards it",
+      "if_MI_word_given_class_high": "within a Fixed class, word identity still predicts c \u2014 quotient is the choke",
+      "if_MI_word_given_class_near_0": "once class is known, word adds little about c \u2014 collapse already in Fixed"
+    },
+    "per_class_summary": {
+      "mean_MI_c_word_in_class": 5.754714230608035,
+      "mean_H_c_given_class": 6.2598626161599125,
+      "classes_with_single_c": 0
+    },
+    "per_class": [
+      {
+        "class_id": 0,
+        "n_pairs": 440,
+        "n_distinct_words": 336,
+        "n_distinct_c": 71,
+        "H_c_given_class": 5.835980310492174,
+        "H_c_given_word_in_class": 0.4727272727272727,
+        "MI_c_word_in_class": 5.363253037764902
+      },
+      {
+        "class_id": 1,
+        "n_pairs": 342,
+        "n_distinct_words": 252,
+        "n_distinct_c": 91,
+        "H_c_given_class": 6.3399979240499285,
+        "H_c_given_word_in_class": 0.5263157894736842,
+        "MI_c_word_in_class": 5.813682134576244
+      },
+      {
+        "class_id": 2,
+        "n_pairs": 992,
+        "n_distinct_words": 756,
+        "n_distinct_c": 96,
+        "H_c_given_class": 6.505473817832028,
+        "H_c_given_word_in_class": 0.4758064516129032,
+        "MI_c_word_in_class": 6.029667366219125
+      },
+      {
+        "class_id": 3,
+        "n_pairs": 1030,
+        "n_distinct_words": 756,
+        "n_distinct_c": 96,
+        "H_c_given_class": 6.516237917960635,
+        "H_c_given_word_in_class": 0.5320388349514563,
+        "MI_c_word_in_class": 5.9841990830091785
+      },
+      {
+        "class_id": 4,
+        "n_pairs": 332,
+        "n_distinct_words": 252,
+        "n_distinct_c": 92,
+        "H_c_given_class": 6.314067080092504,
+        "H_c_given_word_in_class": 0.48192771084337355,
+        "MI_c_word_in_class": 5.832139369249131
+      },
+      {
+        "class_id": 5,
+        "n_pairs": 234,
+        "n_distinct_words": 168,
+        "n_distinct_c": 61,
+        "H_c_given_class": 5.686239988973778,
+        "H_c_given_word_in_class": 0.5641025641025642,
+        "MI_c_word_in_class": 5.122137424871214
+      },
+      {
+        "class_id": 6,
+        "n_pairs": 880,
+        "n_distinct_words": 672,
+        "n_distinct_c": 97,
+        "H_c_given_class": 6.497692269859524,
+        "H_c_given_word_in_class": 0.4727272727272727,
+        "MI_c_word_in_class": 6.024964997132251
+      },
+      {
+        "class_id": 7,
+        "n_pairs": 908,
+        "n_distinct_words": 672,
+        "n_distinct_c": 94,
+        "H_c_given_class": 6.391021325220525,
+        "H_c_given_word_in_class": 0.5198237885462555,
+        "MI_c_word_in_class": 5.871197536674269
+      },
+      {
+        "class_id": 8,
+        "n_pairs": 880,
+        "n_distinct_words": 672,
+        "n_distinct_c": 97,
+        "H_c_given_class": 6.508433210061038,
+        "H_c_given_word_in_class": 0.4727272727272727,
+        "MI_c_word_in_class": 6.035705937333765
+      },
+      {
+        "class_id": 9,
+        "n_pairs": 235,
+        "n_distinct_words": 168,
+        "n_distinct_c": 97,
+        "H_c_given_class": 5.788227584546281,
+        "H_c_given_word_in_class": 0.5702127659574469,
+        "MI_c_word_in_class": 5.218014818588834
+      },
+      {
+        "class_id": 10,
+        "n_pairs": 332,
+        "n_distinct_words": 252,
+        "n_distinct_c": 88,
+        "H_c_given_class": 6.275900816411087,
+        "H_c_given_word_in_class": 0.48192771084337355,
+        "MI_c_word_in_class": 5.793973105567714
+      },
+      {
+        "class_id": 11,
+        "n_pairs": 1030,
+        "n_distinct_words": 756,
+        "n_distinct_c": 96,
+        "H_c_given_class": 6.502688455315327,
+        "H_c_given_word_in_class": 0.5320388349514563,
+        "MI_c_word_in_class": 5.97064962036387
+      },
+      {
+        "class_id": 12,
+        "n_pairs": 992,
+        "n_distinct_words": 756,
+        "n_distinct_c": 97,
+        "H_c_given_class": 6.514338871325712,
+        "H_c_given_word_in_class": 0.4758064516129032,
+        "MI_c_word_in_class": 6.038532419712809
+      },
+      {
+        "class_id": 13,
+        "n_pairs": 342,
+        "n_distinct_words": 252,
+        "n_distinct_c": 92,
+        "H_c_given_class": 6.3112751416905395,
+        "H_c_given_word_in_class": 0.5263157894736842,
+        "MI_c_word_in_class": 5.784959352216855
+      },
+      {
+        "class_id": 14,
+        "n_pairs": 440,
+        "n_distinct_words": 336,
+        "n_distinct_c": 76,
+        "H_c_given_class": 5.910364528567629,
+        "H_c_given_word_in_class": 0.4727272727272727,
+        "MI_c_word_in_class": 5.4376372558403565
+      }
+    ],
+    "residual_HS_energy": {
+      "same_class_diff_c": {
+        "n": 349702,
+        "mean": 15.340529119895539,
+        "std": 4.9555285085446545,
+        "median": 15.809523809523796
+      },
+      "same_class_same_c": {
+        "n": 5549,
+        "mean": 15.500347552969632,
+        "std": 5.638965630282982,
+        "median": 15.809523809523794
+      },
+      "note": "mean HS energy of M-E_Fix(M) for embedded-pair comparisons; not a causal proof"
+    },
+    "fence": "configured probe + formal Fixed head; not physical Test Realization"
+  }
+}

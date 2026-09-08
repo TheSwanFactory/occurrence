@@ -83,12 +83,22 @@ probe embedding:
 | 97 | 3.91 | 0.23 bits | 89.4 | ~chance | **yes** (info + measured) |
 
 Raw word labels retain far more MI to `c` than the 15-class quotient (e.g. ~6.1
-bits at p=97), so any useful modular readout needs **word-level labels and/or a
-result quotient / multi-head composition outside the 15 Fixed classes** — the
-15-class Fixed projection alone does not injectively or usefully encode
-`(a,b)→c` for science-scale `p`.
+bits at p=97). That pins a **failure mode of the 15-class vocabulary under this
+probe**, not yet the full obstruction locus — see `characterize_obstruction.py`
+and Quilt 007.02/007.03 before choosing a result interface.
 
 ## Out of scope
 
 Physical Test Realization; published grokking SOTA; softmax-as-OT-law; waiting for
 another Quilt theory turn — this PR *is* the capacity answer.
+
+## Obstruction characterization (Issue 007 — no fork)
+
+Diagnostic-only probes (not a product head):
+
+```bash
+uv run --frozen python experiments/tlm_fixed_head/characterize_obstruction.py
+```
+
+Writes `characterization_probe.json`. See Quilt `007.02` (agenda) / `007.03` (results).
+Does not choose a result-interface fork.
