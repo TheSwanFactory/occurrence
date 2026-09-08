@@ -19,6 +19,8 @@ The exact ordered-event implementation is split into explicit public layers:
 - `fips_basic` provides the certified finite FIPS table (84/56/336) and forced `third`.
 - `seal` provides classify/seal/resolve and the Theory-39 collision witness.
   Sealed frames are `EventDenotation`; `OperationalFrame` remains the 068 unit in `frames`.
+- `fips_adapter` provides hard FIPS index/tensor path and the declared STE learning adapter.
+- `structural_control` provides the matched non-isomorphic third-map control and C1–C5 checks.
 
 Higher-level claims about invariant measures, exact channel spectra, and
 oriented Markov dynamics remain in the audit/paper layer until their API shape
@@ -29,6 +31,7 @@ from topographo.ssd import (
     codec,
     exact,
     exact_machine,
+    fips_adapter,
     fips_basic,
     frames,
     machine,
@@ -37,6 +40,7 @@ from topographo.ssd import (
     program,
     projective,
     seal,
+    structural_control,
 )
 from topographo.ssd.channel import average_metric_operator
 from topographo.ssd.sedenion import SedenionAlgebra
@@ -47,6 +51,7 @@ __all__ = [
     "codec",
     "exact",
     "exact_machine",
+    "fips_adapter",
     "fips_basic",
     "frames",
     "machine",
@@ -55,4 +60,5 @@ __all__ = [
     "program",
     "projective",
     "seal",
+    "structural_control",
 ]

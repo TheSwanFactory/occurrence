@@ -24,6 +24,7 @@ on:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
       - "experiments/mutual-frames/**"
+      - "experiments/tlm_modular/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -36,6 +37,7 @@ on:
       - "topographo/**"
       - "experiments/sedenion-machine/**"
       - "experiments/mutual-frames/**"
+      - "experiments/tlm_modular/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -121,10 +123,15 @@ jobs:
             topographo/tests/test_machine_layers.py \
             topographo/tests/test_public_api.py \
             topographo/tests/test_frames.py \
+            topographo/tests/test_fips_adapter.py \
+            topographo/tests/test_structural_control.py \
+            topographo/tests/test_tlm_modular_data.py \
             experiments/sedenion-machine/experiments.py \
             experiments/mutual-frames/runtime.py \
             experiments/mutual-frames/audit.py \
-            experiments/mutual-frames/analyze_traces.py
+            experiments/mutual-frames/analyze_traces.py \
+            experiments/tlm_modular/config.py \
+            experiments/tlm_modular/data.py
 
       - name: Run package tests
         run: uv run --frozen pytest topographo/tests
@@ -142,6 +149,7 @@ jobs:
               codec,
               exact,
               exact_machine,
+              fips_adapter,
               fips_basic,
               frames,
               machine,
@@ -150,6 +158,7 @@ jobs:
               program,
               projective,
               seal,
+              structural_control,
           )
           from topographo.exceptional import Albert
 
@@ -164,6 +173,8 @@ jobs:
           assert projective.run_projective(exact.one(), []).state == exact.one()
           assert frames.is_event(exact.add(exact.basis(1), exact.basis(10)))
           assert len(fips_basic.EVENTS) == 84
+          assert fips_adapter.N_EVENTS == 84
+          assert structural_control.assert_c1_c5()
           assert seal.classify(seal.seal(exact.add(exact.basis(1), exact.basis(10)))).label
           assert outcome_runtime.ask is not None
           assert exact_machine.run is machine.run
@@ -179,7 +190,7 @@ jobs:
           import topographo
           import topographo.exceptional
           from topographo.core import ExactCayleyDicksonAlgebra
-          from topographo.ssd import codec, exact, exact_machine, fips_basic, frames, machine, observers, outcome_runtime, program, projective, seal
+          from topographo.ssd import codec, exact, exact_machine, fips_adapter, fips_basic, frames, machine, observers, outcome_runtime, program, projective, seal, structural_control
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
@@ -187,7 +198,7 @@ jobs:
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
           assert ExactCayleyDicksonAlgebra(16).dim == 16
           assert exact_machine.run is machine.run
-          assert all((codec, exact, fips_basic, frames, observers, outcome_runtime, program, projective, seal))
+          assert all((codec, exact, fips_adapter, fips_basic, frames, observers, outcome_runtime, program, projective, seal, structural_control))
           PY
 
       - name: Build distribution

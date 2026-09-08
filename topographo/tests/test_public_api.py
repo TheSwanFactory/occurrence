@@ -26,6 +26,7 @@ def test_subpackage_exports_are_explicit():
         "codec",
         "exact",
         "exact_machine",
+        "fips_adapter",
         "fips_basic",
         "frames",
         "machine",
@@ -34,4 +35,5 @@ def test_subpackage_exports_are_explicit():
         "program",
         "projective",
         "seal",
+        "structural_control",
     }
