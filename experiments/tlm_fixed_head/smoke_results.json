@@ -1,0 +1,60 @@
+{
+  "ci": {
+    "p": 13,
+    "steps": 100,
+    "seed": 0,
+    "wall_clock_sec": 0.603286833036691,
+    "capacity": {
+      "n_classes": 15,
+      "class_bits": 3.9068905956085187,
+      "word_label_bits": 12.784634845557521,
+      "mi_c_given_class_bits": 0.5961761475678928,
+      "mi_c_given_word_bits": 3.7004397181410926,
+      "max_class_collision_for_pair": 13,
+      "mean_class_collision_for_pair": 6.636363636363637,
+      "fatal_for_p_info": false
+    },
+    "accuracy": {
+      "A_residue_mlp_test": 0.0,
+      "A_train": 1.0,
+      "B_fixed15_class_mlp_test": 0.05882352963089943,
+      "B_train": 0.2118644118309021,
+      "Bp_residue_plus_class_test": 0.0,
+      "Bp_train": 1.0,
+      "chance": 0.07692307692307693
+    },
+    "bottleneck_fatal_15class": true,
+    "interpretation": "Positive usefulness would require B to beat chance materially, or Bp to beat A. A negative result (15-class fatal) is an accepted measured answer to 006.13.",
+    "fence": "configured formal Fixed head \u2260 physical Outcome/Test Realization",
+    "census_checksum_sha256": "46007a3aca22aa28c0d1d1f90610bbac570386a72bb66f6d1898d9df6259e659"
+  },
+  "science": {
+    "p": 97,
+    "steps": 120,
+    "seed": 0,
+    "wall_clock_sec": 0.7833749999990687,
+    "capacity": {
+      "n_classes": 15,
+      "class_bits": 3.9068905956085187,
+      "word_label_bits": 12.784634845557521,
+      "mi_c_given_class_bits": 0.22948067757389445,
+      "mi_c_given_word_bits": 6.09975342035696,
+      "max_class_collision_for_pair": 97,
+      "mean_class_collision_for_pair": 89.4,
+      "fatal_for_p_info": true
+    },
+    "accuracy": {
+      "A_residue_mlp_test": 0.057031527161598206,
+      "A_train": 1.0,
+      "B_fixed15_class_mlp_test": 0.016294721513986588,
+      "B_train": 0.030367445200681686,
+      "Bp_residue_plus_class_test": 0.0038965640123933554,
+      "Bp_train": 1.0,
+      "chance": 0.010309278350515464
+    },
+    "bottleneck_fatal_15class": true,
+    "interpretation": "Positive usefulness would require B to beat chance materially, or Bp to beat A. A negative result (15-class fatal) is an accepted measured answer to 006.13.",
+    "fence": "configured formal Fixed head \u2260 physical Outcome/Test Realization",
+    "census_checksum_sha256": "46007a3aca22aa28c0d1d1f90610bbac570386a72bb66f6d1898d9df6259e659"
+  }
+}

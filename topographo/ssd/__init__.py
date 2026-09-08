@@ -21,6 +21,7 @@ The exact ordered-event implementation is split into explicit public layers:
   Sealed frames are `EventDenotation`; `OperationalFrame` remains the 068 unit in `frames`.
 - `fips_adapter` provides hard FIPS index/tensor path and the declared STE learning adapter.
 - `structural_control` provides the matched non-isomorphic third-map control and C1–C5 checks.
+- `fixed_head` provides the Issue-006 two-step Fixed projection/twirl existence adapter and Theory-27 readout.
 
 Higher-level claims about invariant measures, exact channel spectra, and
 oriented Markov dynamics remain in the audit/paper layer until their API shape
@@ -33,6 +34,7 @@ from topographo.ssd import (
     exact_machine,
     fips_adapter,
     fips_basic,
+    fixed_head,
     frames,
     machine,
     observers,
@@ -53,6 +55,7 @@ __all__ = [
     "exact_machine",
     "fips_adapter",
     "fips_basic",
+    "fixed_head",
     "frames",
     "machine",
     "observers",

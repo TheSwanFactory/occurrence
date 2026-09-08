@@ -28,6 +28,7 @@ def test_subpackage_exports_are_explicit():
         "exact_machine",
         "fips_adapter",
         "fips_basic",
+        "fixed_head",
         "frames",
         "machine",
         "observers",
