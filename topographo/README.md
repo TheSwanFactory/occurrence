@@ -224,3 +224,9 @@ MIT.
 - `ssd.structural_control` — matched non-isomorphic degree-matched rewiring with C1–C5 checks.
 - Training smoke lives in `experiments/tlm_modular/` (torch optional; not a CI GPU job).
 
+
+## Fixed head (0.8.2)
+
+`topographo.ssd.fixed_head` exposes the Issue-006 configured two-step Fixed
+projection/twirl existence adapter and Theory-27 readout. See
+`experiments/tlm_fixed_head/README.md` for the capacity probe and physical fence.

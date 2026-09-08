@@ -1,0 +1,42 @@
+[
+  {
+    "class_bits": 3.9068905956085187,
+    "fatal_for_p": false,
+    "injective_pair_to_class": false,
+    "max_class_collision_for_pair": 13,
+    "mean_class_collision_for_pair": 6.636363636363637,
+    "mi_c_given_class_bits": 0.5961761475678928,
+    "mi_c_given_word_bits": 3.7004397181410926,
+    "n_classes": 15,
+    "n_modular_outputs": 13,
+    "n_modular_pairs": 169,
+    "n_words": 7056,
+    "notes": [
+      "Embedding residues into Event indices is a configured probe map, not a physical Event-space realization.",
+      "injective_pair_to_class means each modular pair lands in a unique Fixed class under the probe embedding (almost never true for large p).",
+      "fatal_for_p marks an information bottleneck: 15 classes vs p outputs with weak class\u2192c mutual information under this embedding."
+    ],
+    "p": 13,
+    "word_label_bits": 12.784634845557521
+  },
+  {
+    "class_bits": 3.9068905956085187,
+    "fatal_for_p": true,
+    "injective_pair_to_class": false,
+    "max_class_collision_for_pair": 97,
+    "mean_class_collision_for_pair": 89.4,
+    "mi_c_given_class_bits": 0.22948067757389445,
+    "mi_c_given_word_bits": 6.09975342035696,
+    "n_classes": 15,
+    "n_modular_outputs": 97,
+    "n_modular_pairs": 9409,
+    "n_words": 7056,
+    "notes": [
+      "Embedding residues into Event indices is a configured probe map, not a physical Event-space realization.",
+      "injective_pair_to_class means each modular pair lands in a unique Fixed class under the probe embedding (almost never true for large p).",
+      "fatal_for_p marks an information bottleneck: 15 classes vs p outputs with weak class\u2192c mutual information under this embedding."
+    ],
+    "p": 97,
+    "word_label_bits": 12.784634845557521
+  }
+]

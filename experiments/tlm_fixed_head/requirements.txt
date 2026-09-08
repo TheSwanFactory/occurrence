@@ -1,0 +1,2 @@
+# Optional local usefulness smoke only; package CI needs numpy via topographo.
+torch>=2.0

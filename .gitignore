@@ -228,3 +228,6 @@ Thumbs.db
 
 # Local environment overrides
 .env.*
+
+# local agent scratch
+.scratch/

@@ -5,6 +5,27 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+## [0.8.2] - 2026-09-08
+
+### Added
+
+- Add Issue-006 two-step Fixed-head **existence adapter** in
+  `topographo.ssd.fixed_head`: Fixed 05b generators `g0,g1,g3,g4`, Kraus lifts for
+  the 84 basic Events, HS Fixed projection `E_Fix`, Theory-27 readout
+  `P(w|[x])=<x,B_w x>/<x,x>`, and the Owner-accepted 006.12 census pins
+  (7056 words → 15 Fixed classes, span dim 4, one-step firewall, normalization).
+- Add `experiments/tlm_fixed_head/` capacity / usefulness probe answering 006.13
+  for modular arithmetic (`p=13` CI, `p=97` science): alphabet collision / MI
+  report, linear readout smoke vs softmax scaffolding, and an explicit verdict on
+  whether the 15-class bottleneck is fatal.
+- Add package tests for the Fixed census and CI-safe capacity flags (torch not
+  required for default CI).
+
+### Changed
+
+- Export `fixed_head` from `topographo.ssd` alongside the Futurator-gate and
+  TLM-1 adapters without widening the `exact_machine` facade.
+
 ## [0.8.1] - 2026-09-08
 
 ### Added
