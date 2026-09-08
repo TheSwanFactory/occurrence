@@ -1,0 +1,101 @@
+{
+  "CC": {
+    "both_serial_complete": 112896,
+    "both_serial_complete_different_endpoint": 0,
+    "both_serial_complete_same_endpoint": 112896,
+    "cases": 112896,
+    "complete_snapshot_matches_either_serial": 112896,
+    "presented_input_order_difference": 0,
+    "same_incomplete_endpoint": 0,
+    "slot_both_cyclic_edge_difference": 0,
+    "slot_post_type_difference": 0
+  },
+  "NC:founding": {
+    "both_serial_complete": 26208,
+    "both_serial_complete_different_endpoint": 26208,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 28224,
+    "complete_snapshot_matches_either_serial": 26880,
+    "presented_input_order_difference": 28224,
+    "same_incomplete_endpoint": 672,
+    "slot_both_cyclic_edge_difference": 0,
+    "slot_post_type_difference": 0
+  },
+  "NC:sce": {
+    "both_serial_complete": 26208,
+    "both_serial_complete_different_endpoint": 26208,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 28224,
+    "complete_snapshot_matches_either_serial": 26880,
+    "presented_input_order_difference": 28224,
+    "same_incomplete_endpoint": 672,
+    "slot_both_cyclic_edge_difference": 672,
+    "slot_post_type_difference": 12096
+  },
+  "NN:founding/founding": {
+    "both_serial_complete": 3024,
+    "both_serial_complete_different_endpoint": 3024,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 7056,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 6720,
+    "same_incomplete_endpoint": 336,
+    "slot_both_cyclic_edge_difference": 0,
+    "slot_post_type_difference": 0
+  },
+  "NN:founding/sce": {
+    "both_serial_complete": 3024,
+    "both_serial_complete_different_endpoint": 3024,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 7056,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 6720,
+    "same_incomplete_endpoint": 336,
+    "slot_both_cyclic_edge_difference": 336,
+    "slot_post_type_difference": 2688
+  },
+  "NN:sce/founding": {
+    "both_serial_complete": 3024,
+    "both_serial_complete_different_endpoint": 3024,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 7056,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 6720,
+    "same_incomplete_endpoint": 336,
+    "slot_both_cyclic_edge_difference": 336,
+    "slot_post_type_difference": 2688
+  },
+  "NN:sce/sce": {
+    "both_serial_complete": 3024,
+    "both_serial_complete_different_endpoint": 3024,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 7056,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 6720,
+    "same_incomplete_endpoint": 336,
+    "slot_both_cyclic_edge_difference": 672,
+    "slot_post_type_difference": 5376
+  },
+  "rational_partners:founding": {
+    "both_serial_complete": 80,
+    "both_serial_complete_different_endpoint": 80,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 80,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 80,
+    "same_incomplete_endpoint": 0,
+    "slot_both_cyclic_edge_difference": 0,
+    "slot_post_type_difference": 0
+  },
+  "rational_partners:sce": {
+    "both_serial_complete": 80,
+    "both_serial_complete_different_endpoint": 80,
+    "both_serial_complete_same_endpoint": 0,
+    "cases": 80,
+    "complete_snapshot_matches_either_serial": 0,
+    "presented_input_order_difference": 80,
+    "same_incomplete_endpoint": 0,
+    "slot_both_cyclic_edge_difference": 160,
+    "slot_post_type_difference": 0
+  }
+}

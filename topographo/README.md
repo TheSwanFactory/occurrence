@@ -51,6 +51,8 @@ layer, which lives outside this package.
   channel diagnostics, and layered exact-rational execution. Exact algebra,
   typed programs, raw execution, projective state, observers, and JSON codecs
   have separate modules; `exact_machine` remains as a compatibility facade.
+  `frames` adds the Theory 068.02 mutual Operational-Frame machine (Native/Cyclic
+  state, seed guard, and explicit round policies) without widening that facade.
 - `topographo.exceptional` — the exceptional-algebra layer: the 27-dimensional
   Albert algebra `J3(O)` and its F4/G2 structure (Peirce/Hessian analysis,
   determinant invariants, anisotropy). Generic exceptional-algebra math, not
@@ -141,6 +143,26 @@ assert result.state == exact.mul(
     exact.basis(1), exact.mul(exact.basis(2), initial)
 )
 assert projective.run_projective(initial, events).state == result.state
+```
+
+
+## Mutual Operational-Frame machine
+
+`topographo.ssd.frames` exposes the certified Theory 068.02 local machine:
+`OperationalFrame` with Native or Cyclic retained state, Event/edge predicates,
+seed guard, `step` / `advance`, and explicit serial or snapshot `round_step`
+policies. Presentation wiring is an experimental input; no global selector is
+inferred. See `experiments/mutual-frames/` for the finite census audit.
+
+```python
+from topographo.ssd import exact
+from topographo.ssd.frames import Native, OperationalFrame, round_step
+
+a = exact.add(exact.basis(1), exact.basis(10))
+b = exact.add(exact.basis(4), exact.basis(15))
+pair = (OperationalFrame(Native(a)), OperationalFrame(Native(b)))
+result = round_step(pair, "AB")
+assert result.complete
 ```
 
 ## Validation gates
