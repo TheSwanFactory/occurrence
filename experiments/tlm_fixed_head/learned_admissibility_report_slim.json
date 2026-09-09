@@ -1,0 +1,153 @@
+{
+  "source": "017.09 learned geometric-admissibility Futurator \u2014 native-structure milestone",
+  "commit": "36a99121c262c2fab2bf2ecefc3d8621be41f6b1",
+  "pr": "https://github.com/TheSwanFactory/occurrence/pull/45",
+  "implementation_revision": {
+    "mul": "structure constants from topographo.ssd.sedenion.SedenionAlgebra.mul",
+    "rejected": "box prototype custom CD sed_mul (failed 017.07 witness: zw\u21920)",
+    "helpers_reused": "occ/ray_key/witness patterns from probe_futurator_program_space.py",
+    "cyc_proxy": "finite FIPS-style: zw!=0 and [zw] a basic-Event ray (=336 ordered FIPS edges on 84 catalogue); NOT full continuous C",
+    "soft_train_exact_eval": "soft Cyc score (max |cos| to basic catalogue) during training; exact hard proxy + projective ray equality at evaluation",
+    "arm_B_freeze": "true native basic-Event assignment \u03b5* (not a wrong fixed assignment)",
+    "vocab_selection": "greedy densest FIPS subgraph, n_vocab=16, score=edges+2*disagree \u2014 critical fix for prior true_adm 0\u20136 failure",
+    "box_report_appendix": "learned_admissibility_report_box_v1.json"
+  },
+  "witness_check": {
+    "mul_source": "topographo.ssd.sedenion.SedenionAlgebra.mul",
+    "w_x": "vec16:[-1.0, 0.0, 0.0, 0.0]...",
+    "z_wx": "vec16:[0.0, -2.0, 0.0, 0.0]...",
+    "z_w": "vec16:[0.0, 0.0, 0.0, 0.0]...",
+    "zw_x": "vec16:[0.0, -2.0, 0.0, 0.0]...",
+    "P_seq_key": "vec16:[-0.0, 1.0, -0.0, -0.0]...",
+    "P_grp_key": "vec16:[-0.0, 0.7071067812, -0.0, -0.0]...",
+    "disagree": true,
+    "matches_01707_expected": true
+  },
+  "task": {
+    "kind": "native-structure from fixed hidden OT-compatible denotations",
+    "n_vocab": 16,
+    "holdout": 0.35,
+    "split": "over pair combinations, not repeats",
+    "target_rule": "grp when seq/grp disagree and grp defined; else seq (else grp if seq undefined)",
+    "r_primary": "e4",
+    "steps": 500,
+    "lr": 0.05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fixed_true_idx": [
+      0,
+      57,
+      46,
+      13,
+      68,
+      79,
+      1,
+      56,
+      47,
+      12,
+      69,
+      78,
+      2,
+      59,
+      45,
+      25
+    ],
+    "within_vocab_fips_edges": 58
+  },
+  "r_sensitivity": {
+    "e4": {
+      "n_train": 149,
+      "n_test": 75,
+      "true_adm": 58,
+      "true_disagree": 39,
+      "oracle_train": 1.0,
+      "oracle_test": 1.0
+    },
+    "e3": {
+      "n_train": 167,
+      "n_test": 89,
+      "true_adm": 58,
+      "true_disagree": 6,
+      "oracle_train": 1.0,
+      "oracle_test": 1.0
+    },
+    "e5": {
+      "n_train": 147,
+      "n_test": 77,
+      "true_adm": 58,
+      "true_disagree": 39,
+      "oracle_train": 1.0,
+      "oracle_test": 1.0
+    }
+  },
+  "summary": {
+    "A_learn_den_learn_pol": {
+      "train_mean": 0.0,
+      "train_std": 0.0,
+      "test_mean": 0.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "gap_std": 0.0,
+      "n_seeds": 3
+    },
+    "B_freeze_true_den_learn_pol": {
+      "train_mean": 0.9953379953379953,
+      "train_std": 0.006593070220853575,
+      "test_mean": 0.9095473251028806,
+      "test_std": 0.033584079503712845,
+      "gap_mean": 0.0857906702351147,
+      "gap_std": 0.027359039945243434,
+      "n_seeds": 3
+    },
+    "C_learn_den_force_seq": {
+      "train_mean": 0.0,
+      "train_std": 0.0,
+      "test_mean": 0.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "gap_std": 0.0,
+      "n_seeds": 3
+    },
+    "D_shuffled_admissibility": {
+      "train_mean": 0.0,
+      "train_std": 0.0,
+      "test_mean": 0.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "gap_std": 0.0,
+      "n_seeds": 3
+    },
+    "E_mul_ambient": {
+      "train_mean": 0.022658520097587564,
+      "train_std": 0.006733676584182462,
+      "test_mean": 0.00874485596707819,
+      "test_std": 0.006215558628392269,
+      "gap_mean": 0.013913664130509375,
+      "gap_std": 0.011323062644236742,
+      "n_seeds": 3
+    },
+    "F_generic_mlp": {
+      "train_mean": 0.0,
+      "train_std": 0.0,
+      "test_mean": 0.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "gap_std": 0.0,
+      "n_seeds": 3
+    },
+    "oracle_true_eps_correct_branch": {
+      "train_mean": 1.0,
+      "train_std": 0.0,
+      "test_mean": 1.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "n_seeds": 3,
+      "note": "diagnostic upper bound"
+    }
+  },
+  "fence": "configured experiment; not physical program selection / modular grokking; stage-1 native-structure only",
+  "note": "Full seed tables in PR #45 learned_admissibility_report.json; this is Quilt slim."
+}

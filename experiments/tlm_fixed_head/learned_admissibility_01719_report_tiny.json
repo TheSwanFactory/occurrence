@@ -1,0 +1,178 @@
+{
+  "source": "017.19 exact evaluator reconciliation and recovery validation",
+  "primary_verdict": "recovery result survives exact reconciliation",
+  "test_mean_std_HA_idx_exact": {
+    "Rec_CE": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      }
+    },
+    "Rec_ray": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      }
+    },
+    "Baseline_freeze": {
+      "H": {
+        "mean": 0.4572222222222222,
+        "std": 0.04203418166187534,
+        "values": [
+          0.41333333333333333,
+          0.4444444444444444,
+          0.5138888888888888
+        ],
+        "n": 3
+      },
+      "A": {
+        "mean": 0.4049382716049383,
+        "std": 0.03044155063194556,
+        "values": [
+          0.4,
+          0.37037037037037035,
+          0.4444444444444444
+        ],
+        "n": 3
+      },
+      "idx_match_over_16": {
+        "mean": 9.666666666666666,
+        "std": 1.8856180831641267,
+        "values": [
+          7.0,
+          11.0,
+          11.0
+        ],
+        "n": 3
+      }
+    },
+    "B": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "A": {
+        "mean": 0.9095473251028806,
+        "std": 0.033584079503712845,
+        "values": [
+          0.92,
+          0.8641975308641975,
+          0.9444444444444444
+        ],
+        "n": 3
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      }
+    },
+    "ForceSeq_long": {
+      "H": {
+        "mean": 0.3781275720164609,
+        "std": 0.06743906184304699,
+        "values": [
+          0.29333333333333333,
+          0.38271604938271603,
+          0.4583333333333333
+        ],
+        "n": 3
+      },
+      "A": {
+        "mean": 0.3433333333333333,
+        "std": 0.056240225488194504,
+        "values": [
+          0.28,
+          0.3333333333333333,
+          0.4166666666666667
+        ],
+        "n": 3
+      },
+      "idx_match_over_16": {
+        "mean": 8.666666666666666,
+        "std": 1.8856180831641267,
+        "values": [
+          6.0,
+          10.0,
+          10.0
+        ],
+        "n": 3
+      }
+    }
+  },
+  "root_cause_one_liner": "exact.mul applies Phi=diag(signs) before/after core Cayley\u2013Dickson; float SedenionAlgebra.C is the core table used directly on Value coords",
+  "legacy_census_reaffirmed": {
+    "source": "/Users/ernest/GitHub/occurrence/experiments/tlm_fixed_head/01715_artifacts/learned_admissibility_01715_per_example.jsonl",
+    "total_rows": 6720,
+    "disagree_rows": 496,
+    "expected": {
+      "total_compared": 6720,
+      "total_disagreements": 496
+    },
+    "matches_01716_ledger": true
+  },
+  "fence": "configured finite FIPS proxy; exact reconciliation; Issue 017 not closed; no modular grokking / OT-advantage claim without 017.09 controls"
+}

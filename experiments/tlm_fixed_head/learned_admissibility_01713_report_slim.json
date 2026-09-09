@@ -1,0 +1,998 @@
+{
+  "source": "017.13 discrete curriculum / two-phase training \u2014 responds to 017.12 \u00a710.1",
+  "in_reply_to": "017.12-GrokBot-discrete-catalogue-denotation-result.md",
+  "implementation": {
+    "mul": "structure constants from topographo.ssd.sedenion.SedenionAlgebra.mul",
+    "helpers_reused": "learned_admissibility_01709.py (Geometry, task, Policy, soft_program, exact_eval); learned_admissibility_01711_discrete.py (DiscreteCatalogueDenotation, train_arm_discrete)",
+    "denotation_head": "DiscreteCatalogueDenotation: logits (n_vocab \u00d7 84); train Gumbel-Softmax hard=True STE; eval argmax catalogue vector",
+    "curriculum": {
+      "N1_phase1": 800,
+      "N2_phase2": 800,
+      "budget_choice": "800+800 of 1600 curriculum budget (documented)",
+      "A_cur": "phase1 force-seq \u03b5 \u2192 phase2 joint \u03b5+\u03c0",
+      "A_cur_freeze": "phase1 force-seq \u03b5 \u2192 phase2 \u03c0 only (\u03b5 frozen)",
+      "A_joint": "single-phase A @ 800 (017.12 control)"
+    },
+    "cyc_proxy": "finite FIPS-style: zw!=0 and [zw] a basic-Event ray; NOT full continuous C",
+    "soft_train_exact_eval": "soft Cyc score during training; exact hard proxy + projective ray equality at evaluation",
+    "vocab_selection": "same greedy densest FIPS subgraph as 017.10/017.12, n_vocab=16",
+    "arms": "A_cur / A_cur_freeze / A_joint / B / C + Oracle",
+    "steps_curriculum": 1600,
+    "steps_baselines": 800,
+    "lr": 0.05,
+    "gumbel_tau": 1.0
+  },
+  "witness_check": {
+    "disagree": true,
+    "matches_01707_expected": true,
+    "mul_source": "topographo.ssd.sedenion.SedenionAlgebra.mul"
+  },
+  "task": {
+    "kind": "native-structure from fixed hidden OT-compatible denotations",
+    "n_vocab": 16,
+    "holdout": 0.35,
+    "split": "over pair combinations, not repeats",
+    "target_rule": "grp when seq/grp disagree and grp defined; else seq (else grp if seq undefined)",
+    "r_primary": "e4",
+    "steps_curriculum": 1600,
+    "steps_baselines": 800,
+    "lr": 0.05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fixed_true_idx": [
+      0,
+      57,
+      46,
+      13,
+      68,
+      79,
+      1,
+      56,
+      47,
+      12,
+      69,
+      78,
+      2,
+      59,
+      45,
+      25
+    ],
+    "within_vocab_fips_edges": 58
+  },
+  "summary": {
+    "A_cur": {
+      "train_mean": 0.251269470754074,
+      "train_std": 0.06452538626431802,
+      "test_mean": 0.18616194895022709,
+      "test_std": 0.02629697514178855,
+      "gap_mean": 0.06510752180384693,
+      "gap_std": 0.03824010128971439,
+      "n_seeds": 3
+    },
+    "A_cur_freeze": {
+      "train_mean": 0.49228618541975194,
+      "train_std": 0.055484573149724714,
+      "test_mean": 0.40856807511737087,
+      "test_std": 0.03149435258850437,
+      "gap_mean": 0.08371811030238101,
+      "gap_std": 0.050946285559903944,
+      "n_seeds": 3
+    },
+    "A_joint": {
+      "train_mean": 0.03654476498937082,
+      "train_std": 0.03271699780562982,
+      "test_mean": 0.034978291444994807,
+      "test_std": 0.03129442641673244,
+      "gap_mean": 0.0015664735443760164,
+      "gap_std": 0.017893234926550327,
+      "n_seeds": 3
+    },
+    "B_freeze_true_den_learn_pol": {
+      "train_mean": 0.9953379953379953,
+      "train_std": 0.006593070220853575,
+      "test_mean": 0.9095473251028806,
+      "test_std": 0.033584079503712845,
+      "gap_mean": 0.0857906702351147,
+      "gap_std": 0.027359039945243434,
+      "n_seeds": 3
+    },
+    "C_learn_discrete_den_force_seq": {
+      "train_mean": 0.4065061810084969,
+      "train_std": 0.059673258433356434,
+      "test_mean": 0.36890062597809076,
+      "test_std": 0.038109565718054975,
+      "gap_mean": 0.037605555030406135,
+      "gap_std": 0.05702681415716411,
+      "n_seeds": 3
+    },
+    "oracle_true_eps_correct_branch": {
+      "train_mean": 1.0,
+      "train_std": 0.0,
+      "test_mean": 1.0,
+      "test_std": 0.0,
+      "gap_mean": 0.0,
+      "n_seeds": 3,
+      "note": "diagnostic upper bound"
+    }
+  },
+  "admissibility_graph_diagnostics": {
+    "A_cur": {
+      "adm_edge_count_before_mean": 11.333333333333334,
+      "adm_edge_count_after_mean": 33.333333333333336,
+      "adm_edge_count_after_std": 6.599663291074444,
+      "jaccard_mean": 0.3206018518518518,
+      "recall_mean": 0.37931034482758624,
+      "task_relevant_disagree_edges_mean": 14.333333333333334,
+      "jaccard_phase1_mean": 0.6888287882202689,
+      "adm_edge_count_after_phase1_mean": 52.666666666666664,
+      "catalogue_idx_match_phase1_mean": 9.666666666666666,
+      "catalogue_idx_match_phase2_mean": 5.666666666666667,
+      "phase2_grp_choice_fraction_test_mean": 0.07312504269327574
+    },
+    "A_cur_freeze": {
+      "adm_edge_count_before_mean": 11.333333333333334,
+      "adm_edge_count_after_mean": 52.666666666666664,
+      "adm_edge_count_after_std": 4.109609335312651,
+      "jaccard_mean": 0.6888287882202689,
+      "recall_mean": 0.7701149425287356,
+      "task_relevant_disagree_edges_mean": 30.666666666666668,
+      "jaccard_phase1_mean": 0.6888287882202689,
+      "adm_edge_count_after_phase1_mean": 52.666666666666664,
+      "catalogue_idx_match_phase1_mean": 9.666666666666666,
+      "catalogue_idx_match_phase2_mean": 9.666666666666666,
+      "phase2_grp_choice_fraction_test_mean": 0.12475352112676057
+    },
+    "A_joint": {
+      "adm_edge_count_before_mean": 11.333333333333334,
+      "adm_edge_count_after_mean": 16.666666666666668,
+      "adm_edge_count_after_std": 2.494438257849294,
+      "jaccard_mean": 0.05758030758030758,
+      "recall_mean": 0.06896551724137931,
+      "task_relevant_disagree_edges_mean": 3.0
+    },
+    "B_freeze_true_den_learn_pol": {
+      "adm_edge_count_before_mean": 58.0,
+      "adm_edge_count_after_mean": 58.0,
+      "adm_edge_count_after_std": 0.0,
+      "jaccard_mean": 1.0,
+      "recall_mean": 1.0,
+      "task_relevant_disagree_edges_mean": 39.0
+    },
+    "C_learn_discrete_den_force_seq": {
+      "adm_edge_count_before_mean": 11.333333333333334,
+      "adm_edge_count_after_mean": 52.666666666666664,
+      "adm_edge_count_after_std": 4.109609335312651,
+      "jaccard_mean": 0.6888287882202689,
+      "recall_mean": 0.7701149425287356,
+      "task_relevant_disagree_edges_mean": 30.666666666666668
+    }
+  },
+  "seed_results_slim": [
+    {
+      "seed": 0,
+      "n_train": 146,
+      "vocab_stats_brief": {
+        "true_adm_pairs_all": 58,
+        "true_disagree_pairs_all": 39,
+        "n_train_pairs": null,
+        "n_test_pairs": null
+      },
+      "oracle_train": 1.0,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "A_cur",
+          "param_count_trainable_final": 2978,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": false,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": false,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 146,
+              "exact_success": 0.2671232876712329,
+              "adm_fraction": 0.1476510067114094,
+              "disagree_among_adm": 0.6363636363636364,
+              "grp_choice_fraction": 0.14383561643835616,
+              "seq_choice_fraction": 0.8561643835616438
+            },
+            "test": {
+              "n": 73,
+              "exact_success": 0.1917808219178082,
+              "adm_fraction": 0.13333333333333333,
+              "disagree_among_adm": 0.6,
+              "grp_choice_fraction": 0.1232876712328767,
+              "seq_choice_fraction": 0.8767123287671232
+            }
+          },
+          "generalization_gap": 0.07534246575342468,
+          "train_mean_abs_cosine_surrogate": 0.3881412148475647,
+          "hard_adm_frac_learned_denotations": 0.125,
+          "adm_edge_count_before": 6,
+          "adm_edge_count_after_phase1": 52,
+          "adm_edge_count_after": 32,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.896551724137931,
+          "adm_edge_jaccard_with_true": 0.40625,
+          "adm_edge_recall_vs_true": 0.4482758620689655,
+          "adm_edge_recall_vs_true_phase1": 0.896551724137931,
+          "task_relevant_disagree_edges_in_learned_graph": 16,
+          "task_relevant_disagree_edges_phase1": 36,
+          "catalogue_idx_exact_match_to_true_phase1": 7,
+          "catalogue_idx_exact_match_to_true": 4,
+          "catalogue_ray_match_to_true": 4,
+          "unique_catalogue_indices": 13,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.4854304790496826,
+            "phase2_mean_w_grp_trace_mean": 0.4071727693080902,
+            "phase2_exact_grp_choice_fraction_train": 0.14383561643835616,
+            "phase2_exact_grp_choice_fraction_test": 0.1232876712328767,
+            "phase2_exact_seq_choice_fraction_train": 0.8561643835616438,
+            "phase2_exact_seq_choice_fraction_test": 0.8767123287671232
+          },
+          "wall_sec": 2.111170768737793,
+          "exact_train": 0.2671232876712329,
+          "exact_test": 0.1917808219178082,
+          "grp_choice_fraction_train": 0.14383561643835616,
+          "grp_choice_fraction_test": 0.1232876712328767
+        },
+        {
+          "arm": "A_cur_freeze",
+          "param_count_trainable_final": 1634,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": true,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 149,
+              "exact_success": 0.4161073825503356,
+              "adm_fraction": 0.24161073825503357,
+              "disagree_among_adm": 0.7222222222222222,
+              "grp_choice_fraction": 0.18120805369127516,
+              "seq_choice_fraction": 0.8187919463087249
+            },
+            "test": {
+              "n": 75,
+              "exact_success": 0.4,
+              "adm_fraction": 0.21333333333333335,
+              "disagree_among_adm": 0.625,
+              "grp_choice_fraction": 0.16,
+              "seq_choice_fraction": 0.84
+            }
+          },
+          "generalization_gap": 0.01610738255033556,
+          "train_mean_abs_cosine_surrogate": 0.5154745578765869,
+          "hard_adm_frac_learned_denotations": 0.203125,
+          "adm_edge_count_before": 6,
+          "adm_edge_count_after_phase1": 52,
+          "adm_edge_count_after": 52,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.896551724137931,
+          "adm_edge_jaccard_with_true": 0.896551724137931,
+          "adm_edge_recall_vs_true": 0.896551724137931,
+          "adm_edge_recall_vs_true_phase1": 0.896551724137931,
+          "task_relevant_disagree_edges_in_learned_graph": 36,
+          "task_relevant_disagree_edges_phase1": 36,
+          "catalogue_idx_exact_match_to_true_phase1": 7,
+          "catalogue_idx_exact_match_to_true": 7,
+          "catalogue_ray_match_to_true": 7,
+          "unique_catalogue_indices": 12,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.3263777792453766,
+            "phase2_mean_w_grp_trace_mean": 0.3001289893599117,
+            "phase2_exact_grp_choice_fraction_train": 0.18120805369127516,
+            "phase2_exact_grp_choice_fraction_test": 0.16,
+            "phase2_exact_seq_choice_fraction_train": 0.8187919463087249,
+            "phase2_exact_seq_choice_fraction_test": 0.84
+          },
+          "wall_sec": 1.3778431415557861,
+          "exact_train": 0.4161073825503356,
+          "exact_test": 0.4,
+          "grp_choice_fraction_train": 0.18120805369127516,
+          "grp_choice_fraction_test": 0.16
+        },
+        {
+          "arm": "A_joint",
+          "param_count_trainable": 2978,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 144,
+              "exact_success": 0.020833333333333332,
+              "adm_fraction": 0.06040268456375839,
+              "disagree_among_adm": 0.7777777777777778,
+              "grp_choice_fraction": 0.034722222222222224,
+              "seq_choice_fraction": 0.9652777777777778
+            },
+            "test": {
+              "n": 74,
+              "exact_success": 0.0,
+              "adm_fraction": 0.09333333333333334,
+              "disagree_among_adm": 0.42857142857142855,
+              "grp_choice_fraction": 0.013513513513513514,
+              "seq_choice_fraction": 0.9864864864864865
+            }
+          },
+          "generalization_gap": 0.020833333333333332,
+          "train_mean_abs_cosine_surrogate": 0.1859835386276245,
+          "hard_adm_frac_learned_denotations": 0.0625,
+          "adm_edge_count_before": 6,
+          "adm_edge_count_after": 16,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.027777777777777776,
+          "adm_edge_recall_vs_true": 0.034482758620689655,
+          "task_relevant_disagree_edges_in_learned_graph": 2,
+          "catalogue_idx_exact_match_to_true": 0,
+          "catalogue_ray_match_to_true": 0,
+          "unique_catalogue_indices": 14,
+          "wall_sec": 1.3399920463562012,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": false,
+          "exact_train": 0.020833333333333332,
+          "exact_test": 0.0,
+          "grp_choice_fraction_train": 0.034722222222222224,
+          "grp_choice_fraction_test": 0.013513513513513514
+        },
+        {
+          "arm": "B_freeze_true_den_learn_pol",
+          "param_count_trainable": 1634,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 149,
+              "exact_success": 1.0,
+              "adm_fraction": 0.2751677852348993,
+              "disagree_among_adm": 0.6829268292682927,
+              "grp_choice_fraction": 0.18791946308724833,
+              "seq_choice_fraction": 0.8120805369127517
+            },
+            "test": {
+              "n": 75,
+              "exact_success": 0.92,
+              "adm_fraction": 0.22666666666666666,
+              "disagree_among_adm": 0.6470588235294118,
+              "grp_choice_fraction": 0.06666666666666667,
+              "seq_choice_fraction": 0.9333333333333333
+            }
+          },
+          "generalization_gap": 0.07999999999999996,
+          "train_mean_abs_cosine_surrogate": 0.9999987483024597,
+          "hard_adm_frac_learned_denotations": 0.2265625,
+          "adm_edge_count_before": 58,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_recall_vs_true": 1.0,
+          "task_relevant_disagree_edges_in_learned_graph": 39,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "wall_sec": 0.5619640350341797,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": true,
+          "exact_train": 1.0,
+          "exact_test": 0.92,
+          "grp_choice_fraction_train": 0.18791946308724833,
+          "grp_choice_fraction_test": 0.06666666666666667
+        },
+        {
+          "arm": "C_learn_discrete_den_force_seq",
+          "param_count_trainable": 1344,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 149,
+              "exact_success": 0.3221476510067114,
+              "adm_fraction": 0.24161073825503357,
+              "disagree_among_adm": 0.7222222222222222,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            },
+            "test": {
+              "n": 75,
+              "exact_success": 0.3466666666666667,
+              "adm_fraction": 0.21333333333333335,
+              "disagree_among_adm": 0.625,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            }
+          },
+          "generalization_gap": -0.02451901565995529,
+          "train_mean_abs_cosine_surrogate": 0.4780397415161133,
+          "hard_adm_frac_learned_denotations": 0.203125,
+          "adm_edge_count_before": 6,
+          "adm_edge_count_after": 52,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.896551724137931,
+          "adm_edge_recall_vs_true": 0.896551724137931,
+          "task_relevant_disagree_edges_in_learned_graph": 36,
+          "catalogue_idx_exact_match_to_true": 7,
+          "catalogue_ray_match_to_true": 7,
+          "unique_catalogue_indices": 12,
+          "wall_sec": 0.7501981258392334,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "freeze_to_true": false,
+          "exact_train": 0.3221476510067114,
+          "exact_test": 0.3466666666666667,
+          "grp_choice_fraction_train": 0.0,
+          "grp_choice_fraction_test": 0.0
+        }
+      ],
+      "n_test": 73
+    },
+    {
+      "seed": 1,
+      "n_train": 137,
+      "vocab_stats_brief": {
+        "true_adm_pairs_all": 58,
+        "true_disagree_pairs_all": 39,
+        "n_train_pairs": null,
+        "n_test_pairs": null
+      },
+      "oracle_train": 1.0,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "A_cur",
+          "param_count_trainable_final": 2978,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": false,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": false,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 137,
+              "exact_success": 0.32116788321167883,
+              "adm_fraction": 0.17482517482517482,
+              "disagree_among_adm": 0.56,
+              "grp_choice_fraction": 0.08759124087591241,
+              "seq_choice_fraction": 0.9124087591240876
+            },
+            "test": {
+              "n": 79,
+              "exact_success": 0.21518987341772153,
+              "adm_fraction": 0.16049382716049382,
+              "disagree_among_adm": 0.7692307692307693,
+              "grp_choice_fraction": 0.05063291139240506,
+              "seq_choice_fraction": 0.9493670886075949
+            }
+          },
+          "generalization_gap": 0.1059780097939573,
+          "train_mean_abs_cosine_surrogate": 0.4657750129699707,
+          "hard_adm_frac_learned_denotations": 0.1640625,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after_phase1": 48,
+          "adm_edge_count_after": 42,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.5588235294117647,
+          "adm_edge_jaccard_with_true": 0.3888888888888889,
+          "adm_edge_recall_vs_true": 0.4827586206896552,
+          "adm_edge_recall_vs_true_phase1": 0.6551724137931034,
+          "task_relevant_disagree_edges_in_learned_graph": 18,
+          "task_relevant_disagree_edges_phase1": 26,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "catalogue_idx_exact_match_to_true": 8,
+          "catalogue_ray_match_to_true": 8,
+          "unique_catalogue_indices": 11,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.2667483389377594,
+            "phase2_mean_w_grp_trace_mean": 0.2490857357487959,
+            "phase2_exact_grp_choice_fraction_train": 0.08759124087591241,
+            "phase2_exact_grp_choice_fraction_test": 0.05063291139240506,
+            "phase2_exact_seq_choice_fraction_train": 0.9124087591240876,
+            "phase2_exact_seq_choice_fraction_test": 0.9493670886075949
+          },
+          "wall_sec": 2.0672497749328613,
+          "exact_train": 0.32116788321167883,
+          "exact_test": 0.21518987341772153,
+          "grp_choice_fraction_train": 0.08759124087591241,
+          "grp_choice_fraction_test": 0.05063291139240506
+        },
+        {
+          "arm": "A_cur_freeze",
+          "param_count_trainable_final": 1634,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": true,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 142,
+              "exact_success": 0.5140845070422535,
+              "adm_fraction": 0.18181818181818182,
+              "disagree_among_adm": 0.6153846153846154,
+              "grp_choice_fraction": 0.11971830985915492,
+              "seq_choice_fraction": 0.8802816901408451
+            },
+            "test": {
+              "n": 80,
+              "exact_success": 0.375,
+              "adm_fraction": 0.2222222222222222,
+              "disagree_among_adm": 0.7777777777777778,
+              "grp_choice_fraction": 0.0875,
+              "seq_choice_fraction": 0.9125
+            }
+          },
+          "generalization_gap": 0.1390845070422535,
+          "train_mean_abs_cosine_surrogate": 0.6309936046600342,
+          "hard_adm_frac_learned_denotations": 0.1875,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after_phase1": 48,
+          "adm_edge_count_after": 48,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.5588235294117647,
+          "adm_edge_jaccard_with_true": 0.5588235294117647,
+          "adm_edge_recall_vs_true": 0.6551724137931034,
+          "adm_edge_recall_vs_true_phase1": 0.6551724137931034,
+          "task_relevant_disagree_edges_in_learned_graph": 26,
+          "task_relevant_disagree_edges_phase1": 26,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 12,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.2273579239845276,
+            "phase2_mean_w_grp_trace_mean": 0.23696185385479646,
+            "phase2_exact_grp_choice_fraction_train": 0.11971830985915492,
+            "phase2_exact_grp_choice_fraction_test": 0.0875,
+            "phase2_exact_seq_choice_fraction_train": 0.8802816901408451,
+            "phase2_exact_seq_choice_fraction_test": 0.9125
+          },
+          "wall_sec": 1.372081995010376,
+          "exact_train": 0.5140845070422535,
+          "exact_test": 0.375,
+          "grp_choice_fraction_train": 0.11971830985915492,
+          "grp_choice_fraction_test": 0.0875
+        },
+        {
+          "arm": "A_joint",
+          "param_count_trainable": 2978,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 134,
+              "exact_success": 0.08208955223880597,
+              "adm_fraction": 0.04195804195804196,
+              "disagree_among_adm": 0.6666666666666666,
+              "grp_choice_fraction": 0.014925373134328358,
+              "seq_choice_fraction": 0.9850746268656716
+            },
+            "test": {
+              "n": 79,
+              "exact_success": 0.0759493670886076,
+              "adm_fraction": 0.08641975308641975,
+              "disagree_among_adm": 0.5714285714285714,
+              "grp_choice_fraction": 0.02531645569620253,
+              "seq_choice_fraction": 0.9746835443037974
+            }
+          },
+          "generalization_gap": 0.006140185150198374,
+          "train_mean_abs_cosine_surrogate": 0.2717955708503723,
+          "hard_adm_frac_learned_denotations": 0.0546875,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after": 14,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.09090909090909091,
+          "adm_edge_recall_vs_true": 0.10344827586206896,
+          "task_relevant_disagree_edges_in_learned_graph": 4,
+          "catalogue_idx_exact_match_to_true": 4,
+          "catalogue_ray_match_to_true": 4,
+          "unique_catalogue_indices": 12,
+          "wall_sec": 1.3391189575195312,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": false,
+          "exact_train": 0.08208955223880597,
+          "exact_test": 0.0759493670886076,
+          "grp_choice_fraction_train": 0.014925373134328358,
+          "grp_choice_fraction_test": 0.02531645569620253
+        },
+        {
+          "arm": "B_freeze_true_den_learn_pol",
+          "param_count_trainable": 1634,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 143,
+              "exact_success": 0.986013986013986,
+              "adm_fraction": 0.23776223776223776,
+              "disagree_among_adm": 0.5882352941176471,
+              "grp_choice_fraction": 0.13286713286713286,
+              "seq_choice_fraction": 0.8671328671328671
+            },
+            "test": {
+              "n": 81,
+              "exact_success": 0.8641975308641975,
+              "adm_fraction": 0.2962962962962963,
+              "disagree_among_adm": 0.7916666666666666,
+              "grp_choice_fraction": 0.09876543209876543,
+              "seq_choice_fraction": 0.9012345679012346
+            }
+          },
+          "generalization_gap": 0.12181645514978856,
+          "train_mean_abs_cosine_surrogate": 0.9959030747413635,
+          "hard_adm_frac_learned_denotations": 0.2265625,
+          "adm_edge_count_before": 58,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_recall_vs_true": 1.0,
+          "task_relevant_disagree_edges_in_learned_graph": 39,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "wall_sec": 0.566547155380249,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": true,
+          "exact_train": 0.986013986013986,
+          "exact_test": 0.8641975308641975,
+          "grp_choice_fraction_train": 0.13286713286713286,
+          "grp_choice_fraction_test": 0.09876543209876543
+        },
+        {
+          "arm": "C_learn_discrete_den_force_seq",
+          "param_count_trainable": 1344,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 142,
+              "exact_success": 0.4507042253521127,
+              "adm_fraction": 0.18181818181818182,
+              "disagree_among_adm": 0.6153846153846154,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            },
+            "test": {
+              "n": 80,
+              "exact_success": 0.3375,
+              "adm_fraction": 0.2222222222222222,
+              "disagree_among_adm": 0.7777777777777778,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            }
+          },
+          "generalization_gap": 0.11320422535211266,
+          "train_mean_abs_cosine_surrogate": 0.5846615433692932,
+          "hard_adm_frac_learned_denotations": 0.1875,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after": 48,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.5588235294117647,
+          "adm_edge_recall_vs_true": 0.6551724137931034,
+          "task_relevant_disagree_edges_in_learned_graph": 26,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 12,
+          "wall_sec": 0.7540798187255859,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "freeze_to_true": false,
+          "exact_train": 0.4507042253521127,
+          "exact_test": 0.3375,
+          "grp_choice_fraction_train": 0.0,
+          "grp_choice_fraction_test": 0.0
+        }
+      ],
+      "n_test": 79
+    },
+    {
+      "seed": 2,
+      "n_train": 145,
+      "vocab_stats_brief": {
+        "true_adm_pairs_all": 58,
+        "true_disagree_pairs_all": 39,
+        "n_train_pairs": null,
+        "n_test_pairs": null
+      },
+      "oracle_train": 1.0,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "A_cur",
+          "param_count_trainable_final": 2978,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": false,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": false,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 145,
+              "exact_success": 0.16551724137931034,
+              "adm_fraction": 0.1118421052631579,
+              "disagree_among_adm": 0.8823529411764706,
+              "grp_choice_fraction": 0.09655172413793103,
+              "seq_choice_fraction": 0.903448275862069
+            },
+            "test": {
+              "n": 66,
+              "exact_success": 0.15151515151515152,
+              "adm_fraction": 0.08333333333333333,
+              "disagree_among_adm": 0.8333333333333334,
+              "grp_choice_fraction": 0.045454545454545456,
+              "seq_choice_fraction": 0.9545454545454546
+            }
+          },
+          "generalization_gap": 0.014002089864158823,
+          "train_mean_abs_cosine_surrogate": 0.3586212396621704,
+          "hard_adm_frac_learned_denotations": 0.1015625,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after_phase1": 58,
+          "adm_edge_count_after": 26,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.6111111111111112,
+          "adm_edge_jaccard_with_true": 0.16666666666666666,
+          "adm_edge_recall_vs_true": 0.20689655172413793,
+          "adm_edge_recall_vs_true_phase1": 0.7586206896551724,
+          "task_relevant_disagree_edges_in_learned_graph": 9,
+          "task_relevant_disagree_edges_phase1": 30,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "catalogue_idx_exact_match_to_true": 5,
+          "catalogue_ray_match_to_true": 5,
+          "unique_catalogue_indices": 14,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.4145826995372772,
+            "phase2_mean_w_grp_trace_mean": 0.3631941202808829,
+            "phase2_exact_grp_choice_fraction_train": 0.09655172413793103,
+            "phase2_exact_grp_choice_fraction_test": 0.045454545454545456,
+            "phase2_exact_seq_choice_fraction_train": 0.903448275862069,
+            "phase2_exact_seq_choice_fraction_test": 0.9545454545454546
+          },
+          "wall_sec": 2.067598581314087,
+          "exact_train": 0.16551724137931034,
+          "exact_test": 0.15151515151515152,
+          "grp_choice_fraction_train": 0.09655172413793103,
+          "grp_choice_fraction_test": 0.045454545454545456
+        },
+        {
+          "arm": "A_cur_freeze",
+          "param_count_trainable_final": 1634,
+          "steps": 1600,
+          "lr": 0.05,
+          "freeze_eps_phase2": true,
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true,
+            "budget_note": "800+800 curriculum budget; single-phase baselines remain at 800 (matched to 017.12). Curriculum has more wall steps by design."
+          },
+          "exact": {
+            "train": {
+              "n": 150,
+              "exact_success": 0.5466666666666666,
+              "adm_fraction": 0.2565789473684211,
+              "disagree_among_adm": 0.717948717948718,
+              "grp_choice_fraction": 0.18666666666666668,
+              "seq_choice_fraction": 0.8133333333333334
+            },
+            "test": {
+              "n": 71,
+              "exact_success": 0.4507042253521127,
+              "adm_fraction": 0.2361111111111111,
+              "disagree_among_adm": 0.7647058823529411,
+              "grp_choice_fraction": 0.1267605633802817,
+              "seq_choice_fraction": 0.8732394366197183
+            }
+          },
+          "generalization_gap": 0.09596244131455395,
+          "train_mean_abs_cosine_surrogate": 0.6298527717590332,
+          "hard_adm_frac_learned_denotations": 0.2265625,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after_phase1": 58,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true_phase1": 0.6111111111111112,
+          "adm_edge_jaccard_with_true": 0.6111111111111112,
+          "adm_edge_recall_vs_true": 0.7586206896551724,
+          "adm_edge_recall_vs_true_phase1": 0.7586206896551724,
+          "task_relevant_disagree_edges_in_learned_graph": 30,
+          "task_relevant_disagree_edges_phase1": 30,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 11,
+          "branch_frequencies_phase2": {
+            "phase2_mean_w_grp_final": 0.33239415287971497,
+            "phase2_mean_w_grp_trace_mean": 0.3151953448267544,
+            "phase2_exact_grp_choice_fraction_train": 0.18666666666666668,
+            "phase2_exact_grp_choice_fraction_test": 0.1267605633802817,
+            "phase2_exact_seq_choice_fraction_train": 0.8133333333333334,
+            "phase2_exact_seq_choice_fraction_test": 0.8732394366197183
+          },
+          "wall_sec": 1.3817138671875,
+          "exact_train": 0.5466666666666666,
+          "exact_test": 0.4507042253521127,
+          "grp_choice_fraction_train": 0.18666666666666668,
+          "grp_choice_fraction_test": 0.1267605633802817
+        },
+        {
+          "arm": "A_joint",
+          "param_count_trainable": 2978,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 149,
+              "exact_success": 0.006711409395973154,
+              "adm_fraction": 0.08552631578947369,
+              "disagree_among_adm": 0.6923076923076923,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            },
+            "test": {
+              "n": 69,
+              "exact_success": 0.028985507246376812,
+              "adm_fraction": 0.05555555555555555,
+              "disagree_among_adm": 0.75,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            }
+          },
+          "generalization_gap": -0.022274097850403657,
+          "train_mean_abs_cosine_surrogate": 0.166981503367424,
+          "hard_adm_frac_learned_denotations": 0.078125,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after": 20,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.05405405405405406,
+          "adm_edge_recall_vs_true": 0.06896551724137931,
+          "task_relevant_disagree_edges_in_learned_graph": 3,
+          "catalogue_idx_exact_match_to_true": 1,
+          "catalogue_ray_match_to_true": 1,
+          "unique_catalogue_indices": 15,
+          "wall_sec": 1.3255901336669922,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": false,
+          "exact_train": 0.006711409395973154,
+          "exact_test": 0.028985507246376812,
+          "grp_choice_fraction_train": 0.0,
+          "grp_choice_fraction_test": 0.0
+        },
+        {
+          "arm": "B_freeze_true_den_learn_pol",
+          "param_count_trainable": 1634,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 152,
+              "exact_success": 1.0,
+              "adm_fraction": 0.2631578947368421,
+              "disagree_among_adm": 0.7,
+              "grp_choice_fraction": 0.18421052631578946,
+              "seq_choice_fraction": 0.8157894736842105
+            },
+            "test": {
+              "n": 72,
+              "exact_success": 0.9444444444444444,
+              "adm_fraction": 0.25,
+              "disagree_among_adm": 0.6111111111111112,
+              "grp_choice_fraction": 0.09722222222222222,
+              "seq_choice_fraction": 0.9027777777777778
+            }
+          },
+          "generalization_gap": 0.05555555555555558,
+          "train_mean_abs_cosine_surrogate": 0.9999982118606567,
+          "hard_adm_frac_learned_denotations": 0.2265625,
+          "adm_edge_count_before": 58,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_recall_vs_true": 1.0,
+          "task_relevant_disagree_edges_in_learned_graph": 39,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "wall_sec": 0.574146032333374,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "freeze_to_true": true,
+          "exact_train": 1.0,
+          "exact_test": 0.9444444444444444,
+          "grp_choice_fraction_train": 0.18421052631578946,
+          "grp_choice_fraction_test": 0.09722222222222222
+        },
+        {
+          "arm": "C_learn_discrete_den_force_seq",
+          "param_count_trainable": 1344,
+          "steps": 800,
+          "lr": 0.05,
+          "exact": {
+            "train": {
+              "n": 150,
+              "exact_success": 0.44666666666666666,
+              "adm_fraction": 0.2565789473684211,
+              "disagree_among_adm": 0.717948717948718,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            },
+            "test": {
+              "n": 71,
+              "exact_success": 0.4225352112676056,
+              "adm_fraction": 0.2361111111111111,
+              "disagree_among_adm": 0.7647058823529411,
+              "grp_choice_fraction": 0.0,
+              "seq_choice_fraction": 1.0
+            }
+          },
+          "generalization_gap": 0.02413145539906103,
+          "train_mean_abs_cosine_surrogate": 0.5675227046012878,
+          "hard_adm_frac_learned_denotations": 0.2265625,
+          "adm_edge_count_before": 14,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_jaccard_with_true": 0.6111111111111112,
+          "adm_edge_recall_vs_true": 0.7586206896551724,
+          "task_relevant_disagree_edges_in_learned_graph": 30,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 11,
+          "wall_sec": 0.761444091796875,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "freeze_to_true": false,
+          "exact_train": 0.44666666666666666,
+          "exact_test": 0.4225352112676056,
+          "grp_choice_fraction_train": 0.0,
+          "grp_choice_fraction_test": 0.0
+        }
+      ],
+      "n_test": 66
+    }
+  ],
+  "fence": "configured experiment; discrete curriculum over finite FIPS proxy; not physical program selection / modular grokking; Issue 017 not closed"
+}
