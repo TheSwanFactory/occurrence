@@ -115,3 +115,14 @@ uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.
 - Strict: `P_seq=Occ(a,Occ(b,r))` vs `P_grp=Occ(Cyc(a,b),r)` on exact §5 witness + finite FIPS-proxy scan
 - Control: generalized Mul trees / bilateral brackets (ambient, not OT-native)
 - Artifact: `futurator_program_space_report.json`
+
+
+## 017 Futurator program-space / learned admissibility
+
+- `probe_futurator_program_space.py` — 017.07/017.08 exact witness + FIPS-proxy scan
+- `learned_admissibility_01709.py` — 017.09 native-structure learned geometric-admissibility arms A–F
+- Draft result: `017.10-GrokBot-learned-geometric-admissibility-result.md`
+- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`
+
+Finite FIPS Cyc proxy only; not physical OT / modular grokking.
+

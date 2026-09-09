@@ -1,0 +1,2247 @@
+{
+  "source": "017.09 learned geometric-admissibility Futurator \u2014 first milestone",
+  "cyc_proxy": "zw!=0 and [zw] matches a basic-Event ray (017.08-style finite proxy; not full continuous C)",
+  "task": "native-structure: hidden true basic-Event denotations; target = P_grp if Cyc else P_seq; hold out pair combinations",
+  "witness_check": {
+    "w_x": [
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "z_wx": [
+      -0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "z_w": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "zw_x": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "P_seq_key": [
+      0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      1.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0,
+      -0.0
+    ],
+    "P_grp_key": [
+      "zero"
+    ],
+    "disagree": true
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "summary": {
+    "A_learn_den_learn_pol": {
+      "train_mean": 0.0,
+      "test_mean": 0.0,
+      "gap_mean": 0.0,
+      "test_std": 0.0
+    },
+    "B_fixed_den_learn_pol": {
+      "train_mean": 0.0,
+      "test_mean": 0.0,
+      "gap_mean": 0.0,
+      "test_std": 0.0
+    },
+    "C_learn_den_force_seq": {
+      "train_mean": 0.0,
+      "test_mean": 0.0,
+      "gap_mean": 0.0,
+      "test_std": 0.0
+    },
+    "D_shuffled_admissibility": {
+      "train_mean": 0.0,
+      "test_mean": 0.0,
+      "gap_mean": 0.0,
+      "test_std": 0.0
+    },
+    "E_mul_ambient": {
+      "train_mean": 0.00546448087431694,
+      "test_mean": 0.009523809523809523,
+      "gap_mean": -0.004059328649492583,
+      "test_std": 0.013468700594029479
+    },
+    "F_generic_mlp": {
+      "train_mean": 0.0,
+      "test_mean": 0.0,
+      "gap_mean": 0.0,
+      "test_std": 0.0
+    }
+  },
+  "seed_results": [
+    {
+      "seed": 0,
+      "n_train": 63,
+      "n_test": 34,
+      "true_adm_pairs": 2,
+      "arms": [
+        {
+          "arm": "A_learn_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.0732312873005867,
+          "wall_sec": 9.7206449508667,
+          "exact": {
+            "train": {
+              "n": 63,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.98,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 2,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5559085011482239,
+            0.638344407081604,
+            0.656984806060791,
+            0.6585260629653931,
+            0.6604388952255249,
+            0.6605393290519714,
+            0.6605978012084961,
+            0.6606557965278625,
+            0.6606965661048889
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "B_fixed_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.698923647403717,
+          "wall_sec": 2.8344509601593018,
+          "exact": {
+            "train": {
+              "n": 63,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.98,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 2,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239,
+            0.5559085011482239
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "C_learn_den_force_seq",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.2651546895503998,
+          "wall_sec": 5.78574538230896,
+          "exact": {
+            "train": {
+              "n": 63,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.98,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 2,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5559085011482239,
+            0.5417388677597046,
+            0.5594697594642639,
+            0.5624430775642395,
+            0.5626280307769775,
+            0.5626650452613831,
+            0.5626785755157471,
+            0.5626805424690247,
+            0.562680721282959
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "D_shuffled_admissibility",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": true,
+          "train_loss_surrogate_final": 1.0501770475457306e-07,
+          "wall_sec": 8.304042100906372,
+          "exact": {
+            "train": {
+              "n": 62,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.016129032258064516
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.98,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 2,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5206066370010376,
+            0.4478145241737366,
+            0.471653014421463,
+            0.5170460939407349,
+            0.49026817083358765,
+            0.4721377491950989,
+            0.4889886677265167,
+            0.5034632682800293,
+            0.500728189945221
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "E_mul_ambient",
+          "fence": "ambient Mul, not OT-native",
+          "param_count": 1794,
+          "exact": {
+            "train": {
+              "n": 63,
+              "exact_success": 0.0
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "wall_sec": 7.547916650772095,
+          "train_loss_surrogate_final": 0.25799718499183655
+        },
+        {
+          "arm": "F_generic_mlp",
+          "fence": "generic control; not native consequence",
+          "param_count": 3312,
+          "exact": {
+            "train": {
+              "n": 63,
+              "exact_success": 0.0
+            },
+            "test": {
+              "n": 34,
+              "exact_success": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "wall_sec": 0.19618630409240723,
+          "note": "exact success uses projective match of MLP output to native target ray (lenient control metric)"
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "n_train": 65,
+      "n_test": 35,
+      "true_adm_pairs": 6,
+      "arms": [
+        {
+          "arm": "A_learn_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.12764014303684235,
+          "wall_sec": 9.668241262435913,
+          "exact": {
+            "train": {
+              "n": 65,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 35,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.94,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 6,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5677958130836487,
+            0.5829406380653381,
+            0.622772216796875,
+            0.6249540448188782,
+            0.6294084787368774,
+            0.6230896711349487,
+            0.6197624206542969,
+            0.6402625441551208,
+            0.6446118950843811
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "B_fixed_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.7069879174232483,
+          "wall_sec": 2.4144322872161865,
+          "exact": {
+            "train": {
+              "n": 65,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 35,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.94,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 6,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487,
+            0.5677958130836487
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "C_learn_den_force_seq",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.17511194944381714,
+          "wall_sec": 5.938573837280273,
+          "exact": {
+            "train": {
+              "n": 65,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 35,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.94,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 6,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5677958130836487,
+            0.5419166684150696,
+            0.5519384741783142,
+            0.5383280515670776,
+            0.5327993631362915,
+            0.5379310846328735,
+            0.5388458371162415,
+            0.5386749505996704,
+            0.5395026803016663
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "D_shuffled_admissibility",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": true,
+          "train_loss_surrogate_final": 0.15930551290512085,
+          "wall_sec": 8.443322658538818,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.06557377049180328
+            },
+            "test": {
+              "n": 31,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.12903225806451613
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 0.94,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 6,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.519314706325531,
+            0.546383798122406,
+            0.4970763027667999,
+            0.47617465257644653,
+            0.4825054705142975,
+            0.5300461649894714,
+            0.4678237736225128,
+            0.5213188529014587,
+            0.46339643001556396
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "E_mul_ambient",
+          "fence": "ambient Mul, not OT-native",
+          "param_count": 1794,
+          "exact": {
+            "train": {
+              "n": 65,
+              "exact_success": 0.0
+            },
+            "test": {
+              "n": 35,
+              "exact_success": 0.02857142857142857
+            }
+          },
+          "generalization_gap": -0.02857142857142857,
+          "wall_sec": 7.569252014160156,
+          "train_loss_surrogate_final": 0.22416353225708008
+        },
+        {
+          "arm": "F_generic_mlp",
+          "fence": "generic control; not native consequence",
+          "param_count": 3312,
+          "exact": {
+            "train": {
+              "n": 65,
+              "exact_success": 0.0
+            },
+            "test": {
+              "n": 35,
+              "exact_success": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "wall_sec": 0.2210686206817627,
+          "note": "exact success uses projective match of MLP output to native target ray (lenient control metric)"
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "n_train": 61,
+      "n_test": 33,
+      "true_adm_pairs": 0,
+      "arms": [
+        {
+          "arm": "A_learn_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.19249124825000763,
+          "wall_sec": 9.934036016464233,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 1.0,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 0,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5554568767547607,
+            0.557637095451355,
+            0.5770449638366699,
+            0.5814832448959351,
+            0.5833445191383362,
+            0.5800839066505432,
+            0.5820891857147217,
+            0.5869863629341125,
+            0.5865631699562073
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "B_fixed_den_learn_pol",
+          "param_count": 1794,
+          "learn_den": false,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.6900134682655334,
+          "wall_sec": 2.750973701477051,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 1.0,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 0,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607,
+            0.5554568767547607
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "C_learn_den_force_seq",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": false,
+          "force_seq": true,
+          "destroy_adm": false,
+          "train_loss_surrogate_final": 0.05994229018688202,
+          "wall_sec": 5.89543890953064,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 1.0,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 0,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5554568767547607,
+            0.5539937019348145,
+            0.5617193579673767,
+            0.5684260725975037,
+            0.5409917831420898,
+            0.5250767469406128,
+            0.5617787837982178,
+            0.5877087712287903,
+            0.5942842364311218
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "D_shuffled_admissibility",
+          "param_count": 1794,
+          "learn_den": true,
+          "learn_pol": true,
+          "force_seq": false,
+          "destroy_adm": true,
+          "train_loss_surrogate_final": 0.06458065658807755,
+          "wall_sec": 8.64662480354309,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0,
+              "adm_fraction": 0.0,
+              "disagree_among_adm": 0.0,
+              "grp_choice_fraction": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "admissibility_overlap_with_true": 1.0,
+          "adm_edge_count": 0,
+          "true_adm_edge_count": 0,
+          "unique_denotation_rays": 10,
+          "mean_soft_adm_trace": [
+            0.5438039302825928,
+            0.5155638456344604,
+            0.49725478887557983,
+            0.4586786925792694,
+            0.5490475296974182,
+            0.5030333995819092,
+            0.4761181175708771,
+            0.4471583068370819,
+            0.48539474606513977
+          ],
+          "graph_after": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "arm": "E_mul_ambient",
+          "fence": "ambient Mul, not OT-native",
+          "param_count": 1794,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.01639344262295082
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0
+            }
+          },
+          "generalization_gap": 0.01639344262295082,
+          "wall_sec": 7.642358303070068,
+          "train_loss_surrogate_final": 0.2800232768058777
+        },
+        {
+          "arm": "F_generic_mlp",
+          "fence": "generic control; not native consequence",
+          "param_count": 3312,
+          "exact": {
+            "train": {
+              "n": 61,
+              "exact_success": 0.0
+            },
+            "test": {
+              "n": 33,
+              "exact_success": 0.0
+            }
+          },
+          "generalization_gap": 0.0,
+          "wall_sec": 0.1969316005706787,
+          "note": "exact success uses projective match of MLP output to native target ray (lenient control metric)"
+        }
+      ]
+    }
+  ],
+  "fence": "configured experiment; not physical program selection / modular grokking"
+}
