@@ -20,6 +20,18 @@ All notable changes to this project are documented in this file.
   target (the `017.24` GroupedFirst trap), a learned policy reported without the
   `008.01` section 8 baselines, and the `007.05` section 8 decoder invalidity
   conditions. No learning code yet.
+- Promote `Sand` to the exact rational path in `experiments/tlm_multitoken/native.py`
+  alongside `Occ` and `Cyc`, completing the three certified `017.04` constructors
+  on one evaluator. It previously existed only as a float helper in
+  `probe_futurator_program_space.py` and so could not be scored. Ill-typed terms
+  (wrong role in a slot) raise, while undefinedness (annihilation, or `Cyc` off the
+  336 admissible pairs) is returned as `None` and reported.
+- Add `topographo/tests/test_multitoken_native.py`: cross-checks `occ` / `cyc`
+  against the 017 exact evaluator, rebuilds `P_seq` / `P_grp` from the
+  constructors, and pins the full 84x84 `Sand` census (6720 defined, 336
+  undefined, 1008 degenerate, 5712 non-trivial, and zero coincidences with `Occ`).
+  Records that the Theory-065 edge identity forces `Sand(e,r) = [r]` on all 336
+  admissible ordered pairs, so `Sand` is dead on the `Cyc` domain.
 
 ### Changed
 

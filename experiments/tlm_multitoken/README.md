@@ -42,6 +42,40 @@ Sand : (E,R) ⇀ R
 Ambient `Mul` is **not** promoted to OT occurrence. It appears only as the fenced
 control in ladder arm C.
 
+`native.py` supplies all three on one exact path, separating **ill-typed** (wrong
+role in a slot, raises `TypeError`) from **undefined** (well-typed, but the exact
+value annihilates or `Cyc` falls outside the 336 admissible pairs, returns
+`None`). Undefinedness is reportable data; an ill-typed term is not a program.
+
+### What the Sand census constrains
+
+`Sand` only became scoreable on the exact path here, so its structure was worth a
+full census over the 7056 ordered Event pairs before designing the program space:
+
+| Quantity | Value |
+|---|---|
+| Ordered Event pairs | 7056 |
+| Admissible Cyc edges | 336 |
+| `Sand` defined | 6720 |
+| `Sand` undefined | 336 |
+| `Sand(e,r) = [r]` (degenerate) | 1008 |
+| `Sand` non-trivial | 5712 |
+| `Sand` projectively equal to `Occ` | **0** |
+
+Two consequences for the signature search:
+
+- **`Sand` is a genuine constructor.** It never coincides with `Occ` on
+  `Event × Event`, and at the 017 retained context `r = e4` both are total on the
+  84 Events and disagree on all 84. So adding `Sand` genuinely widens the program
+  space rather than relabelling `Occ`.
+- **`Sand` is dead on the Cyc domain.** The Theory-065 edge identity
+  `(e*r)*e = 2||e||² r` is exactly what `is_edge` tests, so every one of the 336
+  admissible ordered pairs forces `Sand(e,r) = [r]`. A `Sand` node placed on an
+  admissible edge contributes no endpoint information, and the enumeration must
+  not count those placements as legal alternatives.
+
+Pinned in `topographo/tests/test_multitoken_native.py`.
+
 ## Interface layering (Quilt 007.05)
 
 Klein's fair-grokking conjecture separates externally stipulated interface from
@@ -131,6 +165,7 @@ endpoint — so exact native scoring here is not the asymmetry Klein identifies.
 | Component | Source |
 |---|---|
 | Exact Phi-correct evaluator, `exact_occ` / `exact_p_seq` / `exact_p_grp` | `experiments/tlm_fixed_head/learned_admissibility_01719_exact_eval.py` |
+| Strict constructors on one exact path, `occ` / `cyc` / `sand` | `native.py` (this directory), cross-checked against the above |
 | Cyc admissibility, forced third (84 / 56 / 336) | `topographo.ssd.fips_basic` |
 | Exact rational Values, projective equivalence | `topographo.ssd.exact`, `topographo.ssd.projective` |
 | GroupedFirst / ForceSeq reference numbers | `experiments/tlm_fixed_head/learned_admissibility_01723_final_audit.py` |
@@ -155,5 +190,6 @@ OT-native; a free decoder used to obtain success.
 ## How to run
 
 ```bash
-uv run --frozen pytest topographo/tests/test_multitoken_reporting.py -q
+uv run --frozen pytest topographo/tests/test_multitoken_reporting.py \
+  topographo/tests/test_multitoken_native.py -q
 ```
