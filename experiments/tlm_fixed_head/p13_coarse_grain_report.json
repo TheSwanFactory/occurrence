@@ -1,0 +1,338 @@
+{
+  "p": 13,
+  "verdict": {
+    "solves_p13_ot_native_modular_interface": false,
+    "reasons": [
+      "Only 11 distinct class-count multisets among 13 results (duplicate groups [[1, 12], [2, 11]]).",
+      "span_rank(e_c)=4 equals dim(C)=4; effects live in Fixed image.",
+      "Unique strict argmax winners under 20k random preparations: [3, 6, 7, 10] (not all 13).",
+      "Score spreads tiny (mean 1.992e-04); soft margins not useful.",
+      "Equal e_w within a Fixed class still implies P(w|x)=P(w'|x); coarse-graining helps only via unequal n_ck \u2014 here that is insufficient for full separation."
+    ]
+  },
+  "n_unique_n_ck_rows": 11,
+  "duplicate_n_ck_groups": [
+    [
+      1,
+      12
+    ],
+    [
+      2,
+      11
+    ]
+  ],
+  "span_rank_of_e_c": 4,
+  "singular_values": [
+    0.026669646929747694,
+    0.001080905786354046,
+    0.00038030894117582265,
+    0.00029846359833216686,
+    7.210817791428485e-19,
+    1.2192796471440365e-19,
+    8.655409356934045e-20,
+    2.0005430113088568e-20
+  ],
+  "pairwise_hs": {
+    "min": 0.0,
+    "max": 0.001078446407269094,
+    "mean": 0.0005857626837800346,
+    "near_duplicates": 2
+  },
+  "unique_strict_argmax_counts": {
+    "3": 519,
+    "6": 1595,
+    "7": 713,
+    "10": 10525
+  },
+  "top_argmax_tie_sets": [
+    [
+      [
+        10
+      ],
+      10525
+    ],
+    [
+      [
+        2,
+        11
+      ],
+      6648
+    ],
+    [
+      [
+        6
+      ],
+      1595
+    ],
+    [
+      [
+        7
+      ],
+      713
+    ],
+    [
+      [
+        3
+      ],
+      519
+    ]
+  ],
+  "fraction_unique_argmax": 0.6676,
+  "score_spread": {
+    "mean": 0.0001992212746182828,
+    "min": 6.79713556656341e-05,
+    "max": 0.000522929113266386
+  },
+  "generator_prep_argmax": {
+    "e0": 0,
+    "e8": 0,
+    "e0+e8": 0,
+    "v0": 2,
+    "v8": 2,
+    "uniform": 2
+  },
+  "n_ck": [
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      2,
+      0,
+      0,
+      0,
+      3,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      2,
+      1,
+      0,
+      0,
+      4,
+      0,
+      1,
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      1,
+      1,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      4,
+      0,
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      0,
+      4,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      5,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      4,
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      2,
+      1,
+      3,
+      0
+    ],
+    [
+      0,
+      4,
+      1,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      0,
+      0,
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      2,
+      0,
+      1,
+      0,
+      4,
+      0,
+      0,
+      0
+    ]
+  ],
+  "e_c_hs_norms": [
+    0.007653811046783706,
+    0.007091294981314668,
+    0.00766978979287501,
+    0.00765556034653155,
+    0.007092104197351991,
+    0.007092104197351991,
+    0.00765556034653155,
+    0.007654560795626841,
+    0.007088866778955662,
+    0.007097496613122962,
+    0.007670537979892207,
+    0.00766978979287501,
+    0.007091294981314668
+  ],
+  "notes": [
+    "residue embed injective on 0..12: True",
+    "e_c sums over the p^2 embedded modular words only (n=169), each contributing e_w=Q_class/N_WORDS; Theory-41 packing of those slots."
+  ],
+  "fence": "configured formal Fixed effects + Theory-41 slot sum; not physical Test Realization",
+  "branch": "experiment/007-p13-word-slot-coarse-grain"
+}

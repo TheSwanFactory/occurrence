@@ -103,6 +103,17 @@ uv run --frozen python experiments/tlm_fixed_head/characterize_obstruction.py
 Writes `characterization_probe.json`. See Quilt `007.02` (agenda) / `007.03` (results).
 Does not choose a result-interface fork.
 
+## p=13 Theory-41 word-slot coarse-grain
+
+Diagnostic for Issue 007 correction (Theory-41 `e_c = ∑_{q(w)=c} e_w` on injective p=13 embed):
+
+```bash
+uv run --frozen python experiments/tlm_fixed_head/probe_p13_coarse_grain.py
+```
+
+Artifact: `p13_coarse_grain_report.json`. Branch: `experiment/007-p13-word-slot-coarse-grain`.
+Does **not** choose a 007 fork. Quilt: `007.04`.
+
 ## Futurator / Outcome 017 (finite FIPS proxy)
 
 **Fence:** configured finite FIPS-proxy experiments on OT two-program family
@@ -147,4 +158,4 @@ Pinned 017.22/017.24 manifest SHA256:
 `81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e`.
 
 Also retained (Issue 006/007 capacity probes): `smoke.py`, `capacity.py`,
-`characterize_obstruction.py` — separate from the 017 Futurator ladder.
+`characterize_obstruction.py`, `probe_p13_coarse_grain.py` — separate from the 017 Futurator ladder.
