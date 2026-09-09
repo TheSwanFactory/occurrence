@@ -1,0 +1,95 @@
+{
+  "source": "017.17 catalogue-recovery / representation lift under freeze",
+  "verdict": "YES \u2014 catalogue recovery raised H materially toward B (\u0394H\u22480.543; fraction of gap closed\u22481.00)",
+  "test_mean_std_HA_idx": {
+    "Rec_CE": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0
+      }
+    },
+    "Rec_ray": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0
+      }
+    },
+    "Baseline_freeze": {
+      "H": {
+        "mean": 0.4572222222222222,
+        "std": 0.04203418166187534
+      },
+      "A": {
+        "mean": 0.4049382716049383,
+        "std": 0.03044155063194556
+      },
+      "idx_match_over_16": {
+        "mean": 9.666666666666666,
+        "std": 1.8856180831641267
+      }
+    },
+    "B": {
+      "H": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "A": {
+        "mean": 0.9095473251028806,
+        "std": 0.033584079503712845
+      },
+      "idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0
+      }
+    },
+    "ForceSeq_long": {
+      "H": {
+        "mean": 0.3781275720164609,
+        "std": 0.06743906184304699
+      },
+      "A": {
+        "mean": 0.3433333333333333,
+        "std": 0.056240225488194504
+      },
+      "idx_match_over_16": {
+        "mean": 8.666666666666666,
+        "std": 1.8856180831641267
+      }
+    }
+  },
+  "delta_H_vs_Baseline_freeze": {
+    "Rec_CE": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534
+    },
+    "Rec_ray": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534
+    },
+    "B": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534
+    },
+    "ForceSeq_long": {
+      "mean": -0.0790946502057613,
+      "std": 0.029034022780570264
+    }
+  },
+  "fence": "configured experiment on finite FIPS proxy; catalogue-recovery under freeze; Rec_CE is true-index teacher diagnostic; Issue 017 not closed; no modular grokking claim"
+}
