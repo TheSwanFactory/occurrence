@@ -121,8 +121,13 @@ uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.
 
 - `probe_futurator_program_space.py` — 017.07/017.08 exact witness + FIPS-proxy scan
 - `learned_admissibility_01709.py` — 017.09 native-structure learned geometric-admissibility arms A–F
-- Draft result: `017.10-GrokBot-learned-geometric-admissibility-result.md`
-- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`
+- `learned_admissibility_01711_discrete.py` — 017.11 discrete/catalogue denotation head (Gumbel-STE); arms A/B/C/D + oracle
+- Draft experiment/result: `017.11-…experiment.md`, `017.12-…result.md`; prior result `017.10-…result.md`
+- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json` (+ slim)
 
 Finite FIPS Cyc proxy only; not physical OT / modular grokking.
+
+### 017.11 status (brief)
+
+Discrete catalogue head **unlocks hard FIPS edges** (A ~17 edges; C ~53) vs continuous 017.10's hard-adm 0. Primary arm A still fails held-out exact (~0.035); B ~0.91; C ~0.37 with strong graph recovery. Issue 017 **not** closed.
 
