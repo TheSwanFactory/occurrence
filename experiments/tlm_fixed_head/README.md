@@ -123,8 +123,9 @@ uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.
 - `learned_admissibility_01709.py` — 017.09 native-structure learned geometric-admissibility arms A–F
 - `learned_admissibility_01711_discrete.py` — 017.11 discrete/catalogue denotation head (Gumbel-STE); arms A/B/C/D + oracle
 - `learned_admissibility_01713_curriculum.py` — 017.13 discrete curriculum / two-phase (force-seq ε warm-start → unlock π)
-- Draft experiment/result: `017.11`/`017.12` discrete head; `017.13`/`017.14` curriculum; prior `017.10`
-- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json`, `learned_admissibility_01713_report.json` (+ slim)
+- `learned_admissibility_01715_ceiling.py` — 017.15 evaluation-only recovered-geometry ceiling / policy shortfall
+- Draft experiment/result: `017.11`/`017.12` discrete head; `017.13`/`017.14` curriculum; `017.15`/`017.16` ceiling; prior `017.10`
+- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json`, `learned_admissibility_01713_report.json`, `learned_admissibility_01715_report.json` (+ slim/tiny); per-example under `01715_artifacts/`
 
 Finite FIPS Cyc proxy only; not physical OT / modular grokking.
 
@@ -135,4 +136,8 @@ Discrete catalogue head **unlocks hard FIPS edges** (A ~17 edges; C ~53) vs cont
 ### 017.13 / 017.14 status (brief)
 
 Curriculum (800 force-seq ε → 800 unlock π): **A_cur** exact test ~0.19; **A_cur_freeze** (~ε frozen in phase2) ~0.41 — both rise materially above A_joint ~0.035. Joint phase2 degrades recovered geometry; freeze preserves C-like graph. Issue 017 **not** closed.
+
+### 017.15 / 017.16 status (brief)
+
+Ceiling audit at frozen hard denotations: recovered **H≈0.46** vs true-ε* **H=1.0**; freeze policy **A≈0.41** so **H−A≈0.05** while **1−H≈0.54**. Joint phase2 cuts H (~0.46→0.20). Primary diagnosis: **reachability** deficit dominates branch-selection. Issue 017 **not** closed.
 
