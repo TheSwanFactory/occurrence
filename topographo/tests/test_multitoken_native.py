@@ -12,28 +12,34 @@ from pathlib import Path
 
 import pytest
 
-# The 017 ladder scripts import each other by bare module name, so they are only
-# importable with their own directory on the path. Issue 017 is closure-ready and
-# is not modified to accommodate this test.
-_TLM_FIXED_HEAD = Path(__file__).resolve().parents[2] / "experiments" / "tlm_fixed_head"
-if str(_TLM_FIXED_HEAD) not in sys.path:
-    sys.path.insert(0, str(_TLM_FIXED_HEAD))
-
-from learned_admissibility_01719_exact_eval import (  # noqa: E402
-    exact_occ,
-    exact_p_grp,
-    exact_p_seq,
-)
-
-from experiments.tlm_multitoken.native import (  # noqa: E402
+from experiments.tlm_multitoken.native import (
     cyc,
     occ,
     rays_equal,
     sand,
     sand_is_identity_on_edges,
 )
-from topographo.ssd import exact, fips_basic  # noqa: E402
-from topographo.ssd.frames import is_edge, is_event, ray  # noqa: E402
+from topographo.ssd import exact, fips_basic
+from topographo.ssd.frames import is_edge, is_event, ray
+
+
+def _exact_eval_017():
+    """Import the 017 exact evaluator, or skip.
+
+    Two obstacles, neither of which justifies touching Issue 017 now that it is
+    closure-ready: the ladder scripts import each other by bare module name, so
+    their directory must be on the path, and the module imports ``torch``, which
+    default CI deliberately does not install. The cross-check therefore runs
+    locally and skips in CI; every other test in this file is self-contained.
+    """
+    tlm_fixed_head = Path(__file__).resolve().parents[2] / "experiments" / "tlm_fixed_head"
+    if str(tlm_fixed_head) not in sys.path:
+        sys.path.insert(0, str(tlm_fixed_head))
+    try:
+        import learned_admissibility_01719_exact_eval as evaluator
+    except ImportError as error:  # pragma: no cover - depends on the environment
+        pytest.skip(f"017 ladder evaluator unavailable: {error}")
+    return evaluator
 
 
 def _event(index: int) -> exact.Value:
@@ -88,12 +94,13 @@ def test_retained_slot_accepts_any_nonzero_ray():
 
 
 def test_occ_matches_the_017_exact_evaluator():
+    evaluator = _exact_eval_017()
     r = exact.basis(4)
     checked = 0
     for i in range(24):
         e = _event(i)
         mine = occ(e, r)
-        theirs = exact_occ(e, r)
+        theirs = evaluator.exact_occ(e, r)
         if theirs is None:
             assert mine is None
         else:
@@ -105,12 +112,13 @@ def test_occ_matches_the_017_exact_evaluator():
 
 def test_p_seq_and_p_grp_rebuild_from_the_constructors():
     """The 017 two-program family is Occ/Cyc composition, nothing more."""
+    evaluator = _exact_eval_017()
     r = exact.basis(4)
     seen_seq = seen_grp = 0
     for a, b, _ in fips_basic.ORDERED_EDGES[:40]:
         inner = occ(b, r)
         mine_seq = occ(a, inner) if inner is not None else None
-        theirs_seq = exact_p_seq(a, b, r)
+        theirs_seq = evaluator.exact_p_seq(a, b, r)
         assert (mine_seq is None) == (theirs_seq is None)
         if theirs_seq is not None:
             assert rays_equal(mine_seq, theirs_seq)
@@ -118,7 +126,7 @@ def test_p_seq_and_p_grp_rebuild_from_the_constructors():
 
         third = cyc(a, b)
         mine_grp = occ(third, r) if third is not None else None
-        theirs_grp = exact_p_grp(a, b, r)
+        theirs_grp = evaluator.exact_p_grp(a, b, r)
         assert (mine_grp is None) == (theirs_grp is None)
         if theirs_grp is not None:
             assert rays_equal(mine_grp, theirs_grp)
