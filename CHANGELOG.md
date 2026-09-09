@@ -11,6 +11,15 @@ All notable changes to this project are documented in this file.
   coarse-grain probe in `topographo/tests/test_p13_coarse_grain_00704.py`: the
   11/13 distinct class-count rows, the `{1,12}` / `{2,11}` effect collisions,
   `span_rank(e_c)=4`, and the strict-argmax survey counts.
+- Add `experiments/tlm_multitoken/` for Issue-008 multi-token native composition:
+  the `008.01` plan and a machine-checked reporting contract in `reporting.py`.
+  Arms declare which interface layer they exercise (`supplied_tree` /
+  `selected_tree` / `recovered_dens`, the `007.05` layering), and validation
+  refuses a claim whose layer was never exercised, an arm that both supplies and
+  selects a bracketing, a tree-selection claim against an availability-rule
+  target (the `017.24` GroupedFirst trap), a learned policy reported without the
+  `008.01` section 8 baselines, and the `007.05` section 8 decoder invalidity
+  conditions. No learning code yet.
 
 ### Changed
 
