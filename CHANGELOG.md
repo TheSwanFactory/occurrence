@@ -20,6 +20,20 @@ All notable changes to this project are documented in this file.
   target (the `017.24` GroupedFirst trap), a learned policy reported without the
   `008.01` section 8 baselines, and the `007.05` section 8 decoder invalidity
   conditions. No learning code yet.
+- Add `experiments/tlm_multitoken/probe_program_space.py`, the `008.01` section 3
+  signature search, with its exhaustive artifact `program_space_report.json` and
+  the result write-up `008.02-signature-search-result.md`. Condition 3 is settled
+  by an **availability ceiling** — the best accuracy reachable by any function of
+  the availability pattern, which bounds GroupedFirst, ForceSeq, and the random
+  legal selector at once — rather than by beating one hand-written rule.
+  Exhaustive over all 7056 `E^2 R` and 592704 `E^3 R` inputs at `r = e4`.
+  Finding: with `Occ` and `Cyc` alone, 93% of `E^2 R` and 88% of `E^3 R` inputs
+  admit exactly one legal program, so the ceiling is 0.973 and 0.936 and nothing
+  through `E^3 R` qualifies; adding `Sand` lifts the joint domain to 98.6% and the
+  headroom to 0.733 at `E^2 R` and 0.856 at `E^3 R`. This narrows `017.24`
+  section 3: the GroupedFirst coincidence was real, but the deeper cause is
+  Occ/Cyc-only program-space sparsity, and no target construction can defeat an
+  availability rule there.
 - Promote `Sand` to the exact rational path in `experiments/tlm_multitoken/native.py`
   alongside `Occ` and `Cyc`, completing the three certified `017.04` constructors
   on one evaluator. It previously existed only as a float helper in

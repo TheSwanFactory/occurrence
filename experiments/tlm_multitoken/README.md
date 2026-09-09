@@ -4,20 +4,32 @@ Plan for Quilt `008.01`: does a learned policy over strict OT-admissible program
 trees add held-out predictive value on short multi-token sequences **beyond**
 deterministic availability and fixed-bracketing baselines?
 
-Status: **plan + reporting contract only.** No learning code yet. The program
-signature search is the prerequisite and lands first.
+Status: **signature search complete, no learning code yet.** See
+[`008.02-signature-search-result.md`](008.02-signature-search-result.md).
+
+Headline: the `017.24` obstruction is the **constructor set**, not the token count.
+With `Occ` and `Cyc` only, 93 % of `E^2 R` inputs and 88 % of `E^3 R` inputs admit
+exactly one legal program, so availability already fixes the endpoint and no target
+construction can defeat an availability rule. Admitting `Sand` — the third
+constructor `017.04` certified, previously float-only — lifts the joint domain to
+98.6 % and opens 0.73 headroom at `E^2 R` already. Ladder A should run at `E^3 R`
+with all three constructors.
 
 ## Why the Outcome 017 benchmark cannot be reused
 
-`017.24` section 3 settles it. On the pinned two-program family the deterministic
-GroupedFirst rule scores test `A = 1.000`, `H = 1.000` on the Native arm, matching
-the learned policy exactly (`ΔA = 0.000`). The native target generator prefers the
-grouped endpoint whenever legal branches disagree, so an availability rule
-coincides with the preferred tree by construction.
+`017.24` section 3 records the symptom. On the pinned two-program family the
+deterministic GroupedFirst rule scores test `A = 1.000`, `H = 1.000` on the Native
+arm, matching the learned policy exactly (`ΔA = 0.000`), because the native target
+generator prefers the grouped endpoint whenever legal branches disagree.
 
-That is a negative result for *learned* composition on that benchmark, and it is
-why `008.01` section 4 installs a firewall: the target relation must be specified
+`008.01` section 4 responds by installing a firewall: the target must be specified
 independently of the candidate policy and must not reduce to an availability rule.
+
+The signature search shows the firewall is **necessary but not sufficient**. Even
+under a target built to defeat availability rules, the Occ/Cyc-only program space
+leaves an availability ceiling of 0.973 at `E^2 R` and 0.936 at `E^3 R`, because
+almost every input admits only one legal program. Full numbers in
+[`008.02`](008.02-signature-search-result.md).
 
 ## Files
 
@@ -27,6 +39,8 @@ independently of the candidate policy and must not reduce to an availability rul
 | `native.py` | strict `Occ` / `Cyc` / `Sand` on the exact rational path |
 | `programs.py` | planar term calculus and program-tree enumeration |
 | `probe_program_space.py` | the `008.01` section 3 signature search |
+| `program_space_report.json` | exhaustive sweep artifact, all 84 Events |
+| `008.02-signature-search-result.md` | the result and its handoff |
 
 ## Prerequisite: find the signature
 
@@ -38,7 +52,16 @@ starting at `E^3 R`, satisfying all three of:
 3. no single deterministic rule over local branch availability — GroupedFirst
    included — reproduces the target assignment by construction.
 
-If `E^3 R` fails any of the three, move minimally upward and record why.
+**Answered.** Formally the smallest qualifying signature is `E^2 R`, but only once
+`Sand` is admitted; with `Occ` and `Cyc` alone nothing through `E^3 R` qualifies.
+008 should still run at `E^3 R`, since `E^2 R` is the 017 setting and would not
+answer the multi-token question, and `E^3 R` carries 20 programs, 0.856 headroom,
+36 availability patterns, and eight Cyc-free bracketings to hold out.
+
+Condition 3 is settled by a **ceiling**, not by beating one rule: any availability
+rule is a function of the availability pattern alone, so the best achievable
+accuracy over all such rules is computable and bounds GroupedFirst, ForceSeq, and
+the random legal selector simultaneously.
 
 Strict constructors only, reusing what Outcome 017 already certified:
 
@@ -126,6 +149,8 @@ not. `DecoderAudit` records each condition per decoder.
 
 ## Experimental ladder (008.01 section 5)
 
+Run at `E^3 R` with all three constructors, per `008.02`.
+
 | Arm | Configuration | Layers |
 |---|---|---|
 | **A** | true / frozen denotations + learned tree policy — **primary first test** | `selected_tree` |
@@ -198,7 +223,18 @@ OT-native; a free decoder used to obtain success.
 
 ## How to run
 
+CI-safe pins (seconds, no torch):
+
 ```bash
 uv run --frozen pytest topographo/tests/test_multitoken_reporting.py \
-  topographo/tests/test_multitoken_native.py -q
+  topographo/tests/test_multitoken_native.py \
+  topographo/tests/test_multitoken_programs.py \
+  topographo/tests/test_multitoken_program_space.py -q
+```
+
+Exhaustive signature sweep (about 25 CPU-minutes, manual, not CI):
+
+```bash
+uv run --frozen python experiments/tlm_multitoken/probe_program_space.py \
+  --signatures 2 3 --out experiments/tlm_multitoken/program_space_report.json
 ```
