@@ -1,0 +1,12 @@
+{
+  "manifest_sha256": "81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e",
+  "GroupedFirst_Native_test_A": 1.0,
+  "learned_Native_test_A": 1.0,
+  "delta_A": 0.0,
+  "order_one_liner": "CONDITIONAL on favorable first-max. CORRECTED perm scoring (physical from permuted argmax). seed0: ties=0 tokens []; first-max 16/16; perm_match16=[16,16] preserve_map=True; altH=[None,None] | seed1: ties=1 tokens [0]; first-max 16/16; perm_match16=[15,16] preserve_map=False; altH=[0.8888888888888888,1.0] | seed2: ties=0 tokens []; first-max 16/16; perm_match16=[16,16] preserve_map=True; altH=[None,None]",
+  "graph_one_liner": "Saved rewired masks (n=9): identical_labeled=0, isomorphic_under_relabeling=0, non_isomorphic=9. 017.22 'non_isomorphic_edge_set' only meant different labeled edges \u2014 superseded.",
+  "graph_counts": {
+    "non_isomorphic": 9
+  },
+  "synthetic_ok": true
+}

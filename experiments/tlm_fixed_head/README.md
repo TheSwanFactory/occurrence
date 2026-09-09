@@ -103,46 +103,48 @@ uv run --frozen python experiments/tlm_fixed_head/characterize_obstruction.py
 Writes `characterization_probe.json`. See Quilt `007.02` (agenda) / `007.03` (results).
 Does not choose a result-interface fork.
 
+## Futurator / Outcome 017 (finite FIPS proxy)
 
-## Futurator program-space smoke (Outcome 017.07)
+**Fence:** configured finite FIPS-proxy experiments on OT two-program family
+`P_seq` / `P_grp`. Not modular grokking; not a language-model result; not physical
+Event supply. Issue 017 is **closure-ready / closed-pending-Owner** after 017.24.
 
-Compare strict OT programs vs ambient Mul control (no decoder):
+### Main entrypoints (discoverable)
+
+| Script | Role |
+|---|---|
+| `probe_futurator_program_space.py` | 017.07/017.08 exact witness + FIPS-proxy scan |
+| `learned_admissibility_01709.py` | continuous geometric-admissibility arms |
+| `learned_admissibility_01711_discrete.py` | discrete/catalogue denotation head |
+| `learned_admissibility_01713_curriculum.py` | two-phase curriculum |
+| `learned_admissibility_01715_ceiling.py` | recovered-geometry ceiling / policy shortfall |
+| `learned_admissibility_01717_catalogue_recovery.py` | Rec_CE / Rec_ray catalogue recovery |
+| `learned_admissibility_01719_exact_eval.py` | exact evaluator reconciliation |
+| `learned_admissibility_01721_structural_controls.py` | Cyc vs Ambient vs Rewired controls |
+| `learned_admissibility_01723_final_audit.py` | **final:** order/graph audit fixes + GroupedFirst |
+| `test_01719_exact_evaluator.py` / `test_01721_phi_and_controls.py` / `test_01723_final_audit.py` | unit regressions |
+
+### Banked arc (through 017.24)
+
+- **017.08** smoke: exact §5 witness; Occ≠Sand; ambient Mul control; 192/288 FIPS disagree
+- **017.10** continuous dens: primary A fails; geometry matters when given (B≈0.91)
+- **017.12** discrete head unlocks hard FIPS edges; A still weak held-out
+- **017.14** curriculum; freeze-ε stronger (~0.41)
+- **017.16** reachability dominates (`1−H≫H−A`)
+- **017.18** Rec_ray raises H→1.0 / idx 16/16 (train-only)
+- **017.20** Phi root-cause; recovery survives exact scorer
+- **017.22** Native/Ambient/Rewired controls (Phi forward); Native A=H=1.0 under training
+- **017.24** corrected order audit (seed1 perm not robust); exact non-iso on 9 masks;
+  **GroupedFirst Native A=1.0 = learned Native** (learned π adds no accuracy here)
 
 ```bash
 uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.py
+uv run python -m unittest discover -s experiments/tlm_fixed_head -p 'test_017*.py' -v
+uv run python experiments/tlm_fixed_head/learned_admissibility_01723_final_audit.py
 ```
 
-- Strict: `P_seq=Occ(a,Occ(b,r))` vs `P_grp=Occ(Cyc(a,b),r)` on exact §5 witness + finite FIPS-proxy scan
-- Control: generalized Mul trees / bilateral brackets (ambient, not OT-native)
-- Artifact: `futurator_program_space_report.json`
+Pinned 017.22/017.24 manifest SHA256:
+`81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e`.
 
-
-## 017 Futurator program-space / learned admissibility
-
-- `probe_futurator_program_space.py` — 017.07/017.08 exact witness + FIPS-proxy scan
-- `learned_admissibility_01709.py` — 017.09 native-structure learned geometric-admissibility arms A–F
-- `learned_admissibility_01711_discrete.py` — 017.11 discrete/catalogue denotation head (Gumbel-STE); arms A/B/C/D + oracle
-- `learned_admissibility_01713_curriculum.py` — 017.13 discrete curriculum / two-phase (force-seq ε warm-start → unlock π)
-- `learned_admissibility_01715_ceiling.py` — 017.15 evaluation-only recovered-geometry ceiling / policy shortfall
-- `learned_admissibility_01717_catalogue_recovery.py` — 017.17 catalogue-recovery under freeze (Rec_CE / Rec_ray)
-- Draft experiment/result: `017.11`/`017.12` discrete head; `017.13`/`017.14` curriculum; `017.15`/`017.16` ceiling; `017.17`/`017.18` catalogue-recovery; prior `017.10`
-- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json`, `learned_admissibility_01713_report.json`, `learned_admissibility_01715_report.json`, `learned_admissibility_01717_report.json` (+ slim/tiny); per-example under `01715_artifacts/`; checkpoints under `01717_artifacts/`
-
-Finite FIPS Cyc proxy only; not physical OT / modular grokking.
-
-### 017.11 / 017.12 status (brief)
-
-Discrete catalogue head **unlocks hard FIPS edges** (A ~17 edges; C ~53) vs continuous 017.10's hard-adm 0. Primary arm A still fails held-out exact (~0.035); B ~0.91; C ~0.37 with strong graph recovery.
-
-### 017.13 / 017.14 status (brief)
-
-Curriculum (800 force-seq ε → 800 unlock π): **A_cur** exact test ~0.19; **A_cur_freeze** (~ε frozen in phase2) ~0.41 — both rise materially above A_joint ~0.035. Joint phase2 degrades recovered geometry; freeze preserves C-like graph. Issue 017 **not** closed.
-
-### 017.15 / 017.16 status (brief)
-
-Ceiling audit at frozen hard denotations: recovered **H≈0.46** vs true-ε* **H=1.0**; freeze policy **A≈0.41** so **H−A≈0.05** while **1−H≈0.54**. Joint phase2 cuts H (~0.46→0.20). Primary diagnosis: **reachability** deficit dominates branch-selection. Issue 017 **not** closed.
-
-### 017.17 / 017.18 status (brief)
-
-Catalogue-recovery under freeze: **Rec_CE** (true-index teacher diagnostic) and **Rec_ray** (train-only P_seq inverse votes) both reach **H=1.0**, idx **16/16**, A≈0.92 — matching B; Baseline_freeze remains H≈0.46 / idx~10/16. Longer force-seq alone does not lift H. Issue 017 **not** closed.
-
+Also retained (Issue 006/007 capacity probes): `smoke.py`, `capacity.py`,
+`characterize_obstruction.py` — separate from the 017 Futurator ladder.
