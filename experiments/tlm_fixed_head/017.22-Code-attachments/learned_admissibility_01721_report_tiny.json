@@ -1,0 +1,25 @@
+{
+  "verdict": "both",
+  "table": {
+    "Native": {
+      "A": 1.0,
+      "H": 1.0
+    },
+    "ForceSeq": {
+      "A": 0.8219958847736626,
+      "H": 0.8219958847736626
+    },
+    "Ambient": {
+      "A": 0.8266255144032922,
+      "H": 1.0
+    },
+    "Rewired": {
+      "A": 0.8180658436213992,
+      "H": 0.8745953360768176
+    }
+  },
+  "manifest_sha256": "81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e",
+  "phi_ok": true,
+  "conditional_first_max": true,
+  "tie_one_liner": "CONDITIONAL on favorable first-max. seed0: ties=0 tokens []; first-max 16/16; perm 16/16=True; altH=[None,None] | seed1: ties=1 tokens [0]; first-max 16/16; perm 16/16=True; altH=[0.8888888888888888,1.0] | seed2: ties=0 tokens []; first-max 16/16; perm 16/16=True; altH=[None,None]"
+}

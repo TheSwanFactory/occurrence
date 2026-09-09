@@ -102,3 +102,49 @@ uv run --frozen python experiments/tlm_fixed_head/characterize_obstruction.py
 
 Writes `characterization_probe.json`. See Quilt `007.02` (agenda) / `007.03` (results).
 Does not choose a result-interface fork.
+
+## Futurator / Outcome 017 (finite FIPS proxy)
+
+**Fence:** configured finite FIPS-proxy experiments on OT two-program family
+`P_seq` / `P_grp`. Not modular grokking; not a language-model result; not physical
+Event supply. Issue 017 is **closure-ready / closed-pending-Owner** after 017.24.
+
+### Main entrypoints (discoverable)
+
+| Script | Role |
+|---|---|
+| `probe_futurator_program_space.py` | 017.07/017.08 exact witness + FIPS-proxy scan |
+| `learned_admissibility_01709.py` | continuous geometric-admissibility arms |
+| `learned_admissibility_01711_discrete.py` | discrete/catalogue denotation head |
+| `learned_admissibility_01713_curriculum.py` | two-phase curriculum |
+| `learned_admissibility_01715_ceiling.py` | recovered-geometry ceiling / policy shortfall |
+| `learned_admissibility_01717_catalogue_recovery.py` | Rec_CE / Rec_ray catalogue recovery |
+| `learned_admissibility_01719_exact_eval.py` | exact evaluator reconciliation |
+| `learned_admissibility_01721_structural_controls.py` | Cyc vs Ambient vs Rewired controls |
+| `learned_admissibility_01723_final_audit.py` | **final:** order/graph audit fixes + GroupedFirst |
+| `test_01719_exact_evaluator.py` / `test_01721_phi_and_controls.py` / `test_01723_final_audit.py` | unit regressions |
+
+### Banked arc (through 017.24)
+
+- **017.08** smoke: exact §5 witness; Occ≠Sand; ambient Mul control; 192/288 FIPS disagree
+- **017.10** continuous dens: primary A fails; geometry matters when given (B≈0.91)
+- **017.12** discrete head unlocks hard FIPS edges; A still weak held-out
+- **017.14** curriculum; freeze-ε stronger (~0.41)
+- **017.16** reachability dominates (`1−H≫H−A`)
+- **017.18** Rec_ray raises H→1.0 / idx 16/16 (train-only)
+- **017.20** Phi root-cause; recovery survives exact scorer
+- **017.22** Native/Ambient/Rewired controls (Phi forward); Native A=H=1.0 under training
+- **017.24** corrected order audit (seed1 perm not robust); exact non-iso on 9 masks;
+  **GroupedFirst Native A=1.0 = learned Native** (learned π adds no accuracy here)
+
+```bash
+uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.py
+uv run python -m unittest discover -s experiments/tlm_fixed_head -p 'test_017*.py' -v
+uv run python experiments/tlm_fixed_head/learned_admissibility_01723_final_audit.py
+```
+
+Pinned 017.22/017.24 manifest SHA256:
+`81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e`.
+
+Also retained (Issue 006/007 capacity probes): `smoke.py`, `capacity.py`,
+`characterize_obstruction.py` — separate from the 017 Futurator ladder.

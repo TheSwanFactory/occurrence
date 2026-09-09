@@ -1,0 +1,526 @@
+{
+  "task": "017.23",
+  "result": "017.24",
+  "manifest_sha256": "81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e",
+  "pinned_source_commit": "0f9e4c9d8f3f129554927ef429d9a15344992831",
+  "no_new_training": true,
+  "synthetic_order_regressions": {
+    "untied_invariant_under_reorder": true,
+    "untied_selected_physicals": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "tied_can_change_selected_physical": true,
+    "tied_selected_physicals_observed": [
+      2,
+      6
+    ],
+    "ok": true
+  },
+  "corrected_order_audit_summary": {
+    "conditional": true,
+    "per_seed": {
+      "0": {
+        "n_tied": 0,
+        "tied_tokens": [],
+        "first_max_match": 16,
+        "min_perm_match16": 16,
+        "max_perm_match16": 16,
+        "all_perms_preserve_physical_map": true,
+        "alt_H": {
+          "min": null,
+          "max": null,
+          "n_combos": 0,
+          "combos": []
+        }
+      },
+      "1": {
+        "n_tied": 1,
+        "tied_tokens": [
+          0
+        ],
+        "first_max_match": 16,
+        "min_perm_match16": 15,
+        "max_perm_match16": 16,
+        "all_perms_preserve_physical_map": false,
+        "alt_H": {
+          "min": 0.8888888888888888,
+          "max": 1.0,
+          "n_combos": 2,
+          "combos": [
+            {
+              "den": [
+                0,
+                57,
+                46,
+                13,
+                68,
+                79,
+                1,
+                56,
+                47,
+                12,
+                69,
+                78,
+                2,
+                59,
+                45,
+                25
+              ],
+              "test_H": 1.0,
+              "matches_true": true
+            },
+            {
+              "den": [
+                13,
+                57,
+                46,
+                13,
+                68,
+                79,
+                1,
+                56,
+                47,
+                12,
+                69,
+                78,
+                2,
+                59,
+                45,
+                25
+              ],
+              "test_H": 0.8888888888888888,
+              "matches_true": false
+            }
+          ]
+        }
+      },
+      "2": {
+        "n_tied": 0,
+        "tied_tokens": [],
+        "first_max_match": 16,
+        "min_perm_match16": 16,
+        "max_perm_match16": 16,
+        "all_perms_preserve_physical_map": true,
+        "alt_H": {
+          "min": null,
+          "max": null,
+          "n_combos": 0,
+          "combos": []
+        }
+      }
+    },
+    "corrected_scoring_note": "match16 is computed from physical Event identities obtained by first-max (argmax) on permuted storage columns mapped back via perm[k]. 017.22 incorrectly scored unpermuted argmax for every permutation."
+  },
+  "graph_audit_summary": {
+    "classification_counts": {
+      "non_isomorphic": 9
+    },
+    "n_masks": 9,
+    "note": "Exact nx.is_isomorphic on undirected projections of saved masks. 017.22 flag non_isomorphic_edge_set only meant different labeled edge sets.",
+    "per_mask_classifications": {
+      "0": [
+        {
+          "mask_id": "rewire0_seed101",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            1
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire1_seed202",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            5
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire2_seed303",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            5
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        }
+      ],
+      "1": [
+        {
+          "mask_id": "rewire0_seed1101",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            6
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire1_seed1202",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            2
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire2_seed1303",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            3
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        }
+      ],
+      "2": [
+        {
+          "mask_id": "rewire0_seed2101",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            4
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire1_seed2202",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            5
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        },
+        {
+          "mask_id": "rewire2_seed2303",
+          "classification": "non_isomorphic",
+          "degree_sequence_match": true,
+          "triangles": [
+            18,
+            3
+          ],
+          "cc_sizes": [
+            [
+              4,
+              6,
+              6
+            ],
+            [
+              16
+            ]
+          ],
+          "self_loops": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "grouped_first": {
+    "Native": {
+      "test_A": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ]
+      },
+      "test_G": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ]
+      },
+      "test_grp_selection": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ]
+      }
+    },
+    "Ambient": {
+      "test_A": {
+        "mean": 0.530329218106996,
+        "std": 0.009645620011277342,
+        "values": [
+          0.52,
+          0.5432098765432098,
+          0.5277777777777778
+        ]
+      },
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ]
+      },
+      "test_G": {
+        "mean": 0.3856172839506173,
+        "std": 0.0276070197320353,
+        "values": [
+          0.3466666666666667,
+          0.4074074074074074,
+          0.4027777777777778
+        ]
+      },
+      "test_grp_selection": {
+        "mean": 0.8552880658436214,
+        "std": 0.020713308169587167,
+        "values": [
+          0.8266666666666667,
+          0.8641975308641975,
+          0.875
+        ]
+      }
+    },
+    "Rewired": {
+      "test_A": {
+        "mean": 0.7935733882030179,
+        "std": 0.05371995805221814,
+        "values": [
+          0.8133333333333334,
+          0.7201646090534979,
+          0.8472222222222223
+        ]
+      },
+      "test_H": {
+        "mean": 0.8745953360768176,
+        "std": 0.036901464006749186,
+        "values": [
+          0.8933333333333334,
+          0.8230452674897119,
+          0.9074074074074074
+        ]
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ]
+      },
+      "test_G": {
+        "mean": 0.10130315500685871,
+        "std": 0.013686178412667102,
+        "values": [
+          0.08888888888888889,
+          0.09465020576131687,
+          0.12037037037037039
+        ]
+      },
+      "test_grp_selection": {
+        "mean": 0.18232510288065842,
+        "std": 0.011759794802547872,
+        "values": [
+          0.1688888888888889,
+          0.19753086419753085,
+          0.18055555555555558
+        ]
+      }
+    }
+  },
+  "paired_vs_learned_01722": {
+    "Native": {
+      "GroupedFirst_test_A": 1.0,
+      "GroupedFirst_test_H": 1.0,
+      "learned_test_A": 1.0,
+      "learned_test_H": 1.0,
+      "delta_A_GF_minus_learned": 0.0,
+      "delta_H_GF_minus_learned": 0.0
+    },
+    "Ambient": {
+      "GroupedFirst_test_A": 0.530329218106996,
+      "GroupedFirst_test_H": 1.0,
+      "learned_test_A": 0.8266255144032922,
+      "learned_test_H": 1.0,
+      "delta_A_GF_minus_learned": -0.2962962962962963,
+      "delta_H_GF_minus_learned": 0.0
+    },
+    "Rewired": {
+      "GroupedFirst_test_A": 0.7935733882030179,
+      "GroupedFirst_test_H": 0.8745953360768176,
+      "learned_test_A": 0.8180658436213992,
+      "learned_test_H": 0.8745953360768176,
+      "delta_A_GF_minus_learned": -0.024492455418381298,
+      "delta_H_GF_minus_learned": 0.0
+    }
+  },
+  "ForceSeq_learned_reference": {
+    "A": 0.8219958847736626,
+    "H": 0.8219958847736626
+  },
+  "native_n_fail_test": 0,
+  "native_n_miss_despite_h_test": 0,
+  "one_liners": {
+    "order": "CONDITIONAL on favorable first-max. CORRECTED perm scoring (physical from permuted argmax). seed0: ties=0 tokens []; first-max 16/16; perm_match16=[16,16] preserve_map=True; altH=[None,None] | seed1: ties=1 tokens [0]; first-max 16/16; perm_match16=[15,16] preserve_map=False; altH=[0.8888888888888888,1.0] | seed2: ties=0 tokens []; first-max 16/16; perm_match16=[16,16] preserve_map=True; altH=[None,None]",
+    "graph": "Saved rewired masks (n=9): identical_labeled=0, isomorphic_under_relabeling=0, non_isomorphic=9. 017.22 'non_isomorphic_edge_set' only meant different labeled edges \u2014 superseded.",
+    "grouped_first": "Native GroupedFirst test A=1.000000 (H=1.000000) vs learned Native A=1.000000; \u0394A(GF\u2212learned)=0.000000"
+  },
+  "elapsed_sec": 2.4379870891571045,
+  "deps": {
+    "torch": "2.14.0",
+    "numpy": "2.5.1",
+    "networkx": "3.6.1"
+  }
+}

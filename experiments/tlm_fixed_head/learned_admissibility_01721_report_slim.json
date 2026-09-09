@@ -1,0 +1,360 @@
+{
+  "verdict": {
+    "verdict": "both",
+    "ceiling_evidence": true,
+    "policy_evidence": true,
+    "notes": [
+      "Native >> ForceSeq on H and A: branch choice is useful on this benchmark.",
+      "Native ceiling (H) exceeds rewired masks \u2192 mask\u2194target alignment.",
+      "Native and Ambient both near H=1: ceiling saturated; equal H not evidence of equivalence.",
+      "Native beats Ambient on A at comparable H \u2192 policy/generalization benefit from Cyc gating."
+    ],
+    "table_means": {
+      "Native": {
+        "A": 1.0,
+        "H": 1.0
+      },
+      "ForceSeq": {
+        "A": 0.8219958847736626,
+        "H": 0.8219958847736626
+      },
+      "Ambient": {
+        "A": 0.8266255144032922,
+        "H": 1.0
+      },
+      "Rewired": {
+        "A": 0.8180658436213992,
+        "H": 0.8745953360768176
+      }
+    }
+  },
+  "manifest_sha256": "81a4700e8cf1bac0f66e473d144c4ccb003fe26f8cb7175108fe8884effd107e",
+  "aggregates": {
+    "Native": {
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ],
+        "n": 3
+      },
+      "train_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "train_A": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      }
+    },
+    "ForceSeq": {
+      "test_H": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n": 3
+      },
+      "train_H": {
+        "mean": 0.8293366235789409,
+        "std": 0.02183374437218129,
+        "values": [
+          0.8120805369127517,
+          0.8601398601398601,
+          0.8157894736842105
+        ],
+        "n": 3
+      },
+      "train_A": {
+        "mean": 0.8293366235789409,
+        "std": 0.02183374437218129,
+        "values": [
+          0.8120805369127517,
+          0.8601398601398601,
+          0.8157894736842105
+        ],
+        "n": 3
+      }
+    },
+    "Ambient": {
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.8266255144032922,
+        "std": 0.04338662654828907,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8611111111111112
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.3856172839506173,
+        "std": 0.0276070197320353,
+        "values": [
+          0.3466666666666667,
+          0.4074074074074074,
+          0.4027777777777778
+        ],
+        "n": 3
+      },
+      "train_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "train_A": {
+        "mean": 0.8801284521436411,
+        "std": 0.024394342854600175,
+        "values": [
+          0.8657718120805369,
+          0.8601398601398601,
+          0.9144736842105263
+        ],
+        "n": 3
+      }
+    },
+    "Rewired": {
+      "test_H": {
+        "mean": 0.8745953360768176,
+        "std": 0.036901464006749186,
+        "values": [
+          0.8933333333333334,
+          0.8230452674897119,
+          0.9074074074074074
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.8180658436213992,
+        "std": 0.04674871761364025,
+        "values": [
+          0.84,
+          0.7530864197530863,
+          0.8611111111111112
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.10130315500685871,
+        "std": 0.013686178412667102,
+        "values": [
+          0.08888888888888889,
+          0.09465020576131687,
+          0.12037037037037039
+        ],
+        "n": 3
+      },
+      "train_H": {
+        "mean": 0.8830078287425516,
+        "std": 0.005257962789559149,
+        "values": [
+          0.8791946308724833,
+          0.8904428904428906,
+          0.8793859649122807
+        ],
+        "n": 3
+      },
+      "train_A": {
+        "mean": 0.8822308279655507,
+        "std": 0.0041592710509034845,
+        "values": [
+          0.8791946308724833,
+          0.8881118881118882,
+          0.8793859649122807
+        ],
+        "n": 3
+      }
+    }
+  },
+  "paired_vs_Native": {
+    "ForceSeq": {
+      "delta_A_mean": -0.17800411522633744,
+      "delta_H_mean": -0.17800411522633744
+    },
+    "Ambient": {
+      "delta_A_mean": -0.1733744855967078,
+      "delta_H_mean": 0.0
+    },
+    "Rewired": {
+      "delta_A_mean": -0.18193415637860086,
+      "delta_H_mean": -0.12540466392318242
+    }
+  },
+  "tie_order_audit_per_seed_slim": {
+    "0": {
+      "n_tied_tokens": 0,
+      "tied_tokens": [],
+      "first_max_match_over_16": 16,
+      "alt_test_H_range": {
+        "min": null,
+        "max": null,
+        "n_combos": 0
+      },
+      "first_max_recovery_16_16_all_perms": true
+    },
+    "1": {
+      "n_tied_tokens": 1,
+      "tied_tokens": [
+        0
+      ],
+      "first_max_match_over_16": 16,
+      "alt_test_H_range": {
+        "min": 0.8888888888888888,
+        "max": 1.0,
+        "n_combos": 2
+      },
+      "first_max_recovery_16_16_all_perms": true
+    },
+    "2": {
+      "n_tied_tokens": 0,
+      "tied_tokens": [],
+      "first_max_match_over_16": 16,
+      "alt_test_H_range": {
+        "min": null,
+        "max": null,
+        "n_combos": 0
+      },
+      "first_max_recovery_16_16_all_perms": true
+    }
+  },
+  "primary_comparison_conditional_on_favorable_first_max": true,
+  "arithmetic_phi_ok": true,
+  "target_provenance": {
+    "designated_benchmark": "reconstructed exact preferred targets (017.20 mirror)",
+    "old_float_vs_exact_ray_match_by_seed": {
+      "0": {
+        "train_ray_match": 127,
+        "train_n": 149,
+        "test_ray_match": 63,
+        "test_n": 75
+      },
+      "1": {
+        "train_ray_match": 121,
+        "train_n": 143,
+        "test_ray_match": 69,
+        "test_n": 81
+      },
+      "2": {
+        "train_ray_match": 129,
+        "train_n": 152,
+        "test_ray_match": 61,
+        "test_n": 72
+      }
+    },
+    "interpretation": "old stored float targets do NOT all match exact preferred rays; 017.18/017.20 performance is preserved on a corrected exact benchmark rather than literal endpoint equivalence of stored float targets"
+  },
+  "wall_sec": 14.421617984771729
+}

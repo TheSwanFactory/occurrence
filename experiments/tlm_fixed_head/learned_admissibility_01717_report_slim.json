@@ -1,0 +1,1294 @@
+{
+  "source": "017.17 catalogue-recovery / representation lift under freeze",
+  "in_reply_to": "017.16-GrokBot-recovered-geometry-ceiling-and-policy-regret-result.md \u00a76",
+  "implementation": {
+    "mul": "structure constants from topographo.ssd.sedenion.SedenionAlgebra.mul",
+    "evaluator_exact": "existing float projective_key / rays_equal (legacy exact_eval)",
+    "evaluator_ceiling": "017.15-style float H/A/S/G (all examples in denominator)",
+    "host": "thebeast",
+    "device": "cpu",
+    "N1": 800,
+    "N2": 800,
+    "lr": 0.05,
+    "gumbel_tau": 1.0,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "std_convention": "population std (np.std ddof=0), seed-averaged means",
+    "arms": [
+      "Rec_CE",
+      "Rec_ray",
+      "Baseline_freeze",
+      "B",
+      "ForceSeq_long"
+    ],
+    "Rec_CE_fence": "uses TRUE \u03b5* catalogue indices as phase-1 CE teacher (diagnostic); not held-out pair targets",
+    "Rec_ray_supervision": "train-set only P_seq program-inverse catalogue votes \u2192 hard CE; no true_idx; no held-out targets; no preferred-tree labels"
+  },
+  "witness_check": {
+    "disagree": true,
+    "matches_01707_expected": true
+  },
+  "task": {
+    "n_vocab": 16,
+    "holdout": 0.35,
+    "r": "e4",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fixed_true_idx": [
+      0,
+      57,
+      46,
+      13,
+      68,
+      79,
+      1,
+      56,
+      47,
+      12,
+      69,
+      78,
+      2,
+      59,
+      45,
+      25
+    ],
+    "within_vocab_fips_edges": 58
+  },
+  "summary": {
+    "Rec_CE": {
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ],
+        "n": 3
+      },
+      "catalogue_idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      },
+      "adm_edge_jaccard_with_true": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "exact_test": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      }
+    },
+    "Rec_ray": {
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ],
+        "n": 3
+      },
+      "catalogue_idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      },
+      "adm_edge_jaccard_with_true": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "exact_test": {
+        "mean": 0.9177366255144032,
+        "std": 0.03407949103081954,
+        "values": [
+          0.96,
+          0.8765432098765432,
+          0.9166666666666666
+        ],
+        "n": 3
+      }
+    },
+    "Baseline_freeze": {
+      "test_H": {
+        "mean": 0.4572222222222222,
+        "std": 0.04203418166187534,
+        "values": [
+          0.41333333333333333,
+          0.4444444444444444,
+          0.5138888888888888
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.4049382716049383,
+        "std": 0.03044155063194556,
+        "values": [
+          0.4,
+          0.37037037037037035,
+          0.4444444444444444
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.3655555555555556,
+        "std": 0.03654863156310785,
+        "values": [
+          0.3466666666666667,
+          0.3333333333333333,
+          0.4166666666666667
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.12216049382716049,
+        "std": 0.022467948686589162,
+        "values": [
+          0.09333333333333334,
+          0.14814814814814814,
+          0.125
+        ],
+        "n": 3
+      },
+      "catalogue_idx_match_over_16": {
+        "mean": 9.666666666666666,
+        "std": 1.8856180831641267,
+        "values": [
+          7.0,
+          11.0,
+          11.0
+        ],
+        "n": 3
+      },
+      "adm_edge_jaccard_with_true": {
+        "mean": 0.6888287882202689,
+        "std": 0.14842531540515883,
+        "values": [
+          0.896551724137931,
+          0.5588235294117647,
+          0.6111111111111112
+        ],
+        "n": 3
+      },
+      "exact_test": {
+        "mean": 0.40856807511737087,
+        "std": 0.03149435258850437,
+        "values": [
+          0.4,
+          0.375,
+          0.4507042253521127
+        ],
+        "n": 3
+      }
+    },
+    "B": {
+      "test_H": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.9095473251028806,
+        "std": 0.033584079503712845,
+        "values": [
+          0.92,
+          0.8641975308641975,
+          0.9444444444444444
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.8219958847736626,
+        "std": 0.04007437115698557,
+        "values": [
+          0.8533333333333334,
+          0.7654320987654321,
+          0.8472222222222222
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.25765432098765434,
+        "std": 0.028936860033832085,
+        "values": [
+          0.22666666666666666,
+          0.2962962962962963,
+          0.25
+        ],
+        "n": 3
+      },
+      "catalogue_idx_match_over_16": {
+        "mean": 16.0,
+        "std": 0.0,
+        "values": [
+          16.0,
+          16.0,
+          16.0
+        ],
+        "n": 3
+      },
+      "adm_edge_jaccard_with_true": {
+        "mean": 1.0,
+        "std": 0.0,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "n": 3
+      },
+      "exact_test": {
+        "mean": 0.9095473251028806,
+        "std": 0.033584079503712845,
+        "values": [
+          0.92,
+          0.8641975308641975,
+          0.9444444444444444
+        ],
+        "n": 3
+      }
+    },
+    "ForceSeq_long": {
+      "test_H": {
+        "mean": 0.3781275720164609,
+        "std": 0.06743906184304699,
+        "values": [
+          0.29333333333333333,
+          0.38271604938271603,
+          0.4583333333333333
+        ],
+        "n": 3
+      },
+      "test_A": {
+        "mean": 0.3433333333333333,
+        "std": 0.056240225488194504,
+        "values": [
+          0.28,
+          0.3333333333333333,
+          0.4166666666666667
+        ],
+        "n": 3
+      },
+      "test_S": {
+        "mean": 0.3040946502057613,
+        "std": 0.05167224265316076,
+        "values": [
+          0.25333333333333335,
+          0.2839506172839506,
+          0.375
+        ],
+        "n": 3
+      },
+      "test_G": {
+        "mean": 0.09563786008230453,
+        "std": 0.040612759868292984,
+        "values": [
+          0.04,
+          0.13580246913580246,
+          0.1111111111111111
+        ],
+        "n": 3
+      },
+      "catalogue_idx_match_over_16": {
+        "mean": 8.666666666666666,
+        "std": 1.8856180831641267,
+        "values": [
+          6.0,
+          10.0,
+          10.0
+        ],
+        "n": 3
+      },
+      "adm_edge_jaccard_with_true": {
+        "mean": 0.5844155844155844,
+        "std": 0.03823273102306428,
+        "values": [
+          0.5714285714285714,
+          0.6363636363636364,
+          0.5454545454545454
+        ],
+        "n": 3
+      },
+      "exact_test": {
+        "mean": 0.35386071764870874,
+        "std": 0.0566537129479456,
+        "values": [
+          0.28378378378378377,
+          0.35526315789473684,
+          0.4225352112676056
+        ],
+        "n": 3
+      }
+    }
+  },
+  "delta_H_vs_Baseline_freeze": {
+    "Rec_CE": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534,
+      "values": [
+        0.5866666666666667,
+        0.5555555555555556,
+        0.48611111111111116
+      ],
+      "n": 3
+    },
+    "Rec_ray": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534,
+      "values": [
+        0.5866666666666667,
+        0.5555555555555556,
+        0.48611111111111116
+      ],
+      "n": 3
+    },
+    "B": {
+      "mean": 0.5427777777777778,
+      "std": 0.04203418166187534,
+      "values": [
+        0.5866666666666667,
+        0.5555555555555556,
+        0.48611111111111116
+      ],
+      "n": 3
+    },
+    "ForceSeq_long": {
+      "mean": -0.0790946502057613,
+      "std": 0.029034022780570264,
+      "values": [
+        -0.12,
+        -0.06172839506172839,
+        -0.055555555555555525
+      ],
+      "n": 3
+    }
+  },
+  "verdict": "YES \u2014 catalogue recovery raised H materially toward B (\u0394H\u22480.543; fraction of gap closed\u22481.00)",
+  "seed_results_slim": [
+    {
+      "seed": 0,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "Rec_CE",
+          "teacher": "true_ce",
+          "teacher_detail": {
+            "kind": "true_epsilon_star_indices",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Rec_CE uses TRUE catalogue indices as CE teacher (diagnostic upper bound); not held-out pair targets; disclose fence"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7746157646179199,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.96,
+            "S": 0.8533333333333334,
+            "G": 0.22666666666666666,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.040000000000000036,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 58,
+              "grp_only": 11,
+              "both": 6
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 1.0,
+            "S": 0.8120805369127517,
+            "G": 0.2751677852348993
+          },
+          "exact_train": 1.0,
+          "exact_test": 0.96
+        },
+        {
+          "arm": "Rec_ray",
+          "teacher": "ray_vote_ce",
+          "teacher_detail": {
+            "kind": "train_ray_program_implied_votes",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false,
+            "vote_meta": {
+              "train_pairs": 149,
+              "train_pairs_with_program_hit": 134,
+              "train_pairs_miss": 15,
+              "use_grp_inverse": false,
+              "programs": "P_seq",
+              "supervision": "train-set targets only; catalogue votes from program inverse; no true_idx; no held-out targets; no preferred-tree labels",
+              "vote_argmax_match_to_true": 16
+            }
+          },
+          "fence_notes": [
+            "Rec_ray uses train-set-only P_seq inverse votes (no true_idx, no held-out targets, no preferred-tree labels)"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7600960731506348,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.96,
+            "S": 0.8533333333333334,
+            "G": 0.22666666666666666,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.040000000000000036,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 58,
+              "grp_only": 11,
+              "both": 6
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 1.0,
+            "S": 0.8120805369127517,
+            "G": 0.2751677852348993
+          },
+          "exact_train": 1.0,
+          "exact_test": 0.96
+        },
+        {
+          "arm": "Baseline_freeze",
+          "teacher": "force_seq_proj_loss",
+          "teacher_detail": {
+            "kind": "force_seq_warmstart",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Baseline_freeze = A_cur_freeze reproduction (force-seq \u2192 freeze \u03c0)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 1.410675048828125,
+          "catalogue_idx_exact_match_to_true": 7,
+          "catalogue_ray_match_to_true": 7,
+          "unique_catalogue_indices": 12,
+          "adm_edge_jaccard_with_true": 0.896551724137931,
+          "adm_edge_count_after": 52,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.896551724137931,
+          "catalogue_idx_exact_match_to_true_phase1": 7,
+          "ceiling_test": {
+            "H": 0.41333333333333333,
+            "A": 0.4,
+            "S": 0.3466666666666667,
+            "G": 0.09333333333333334,
+            "one_minus_H": 0.5866666666666667,
+            "H_minus_A": 0.013333333333333308,
+            "four_way_counts": {
+              "neither": 44,
+              "seq_only": 24,
+              "grp_only": 5,
+              "both": 2
+            }
+          },
+          "ceiling_train": {
+            "H": 0.4228187919463087,
+            "A": 0.4161073825503356,
+            "S": 0.3221476510067114,
+            "G": 0.15436241610738255
+          },
+          "exact_train": 0.4161073825503356,
+          "exact_test": 0.4
+        },
+        {
+          "arm": "B",
+          "teacher": "true_epsilon_star_frozen",
+          "teacher_detail": {
+            "kind": "freeze_true_den_learn_pol",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false
+          },
+          "fence_notes": [
+            "B = true \u03b5* frozen; learn \u03c0 only (sanity / upper geometry)"
+          ],
+          "curriculum": {
+            "n1_phase1": 0,
+            "n2_phase2_learn_pi": 800,
+            "total_steps": 800,
+            "freeze_eps_phase2": true
+          },
+          "steps": 800,
+          "lr": 0.05,
+          "wall_sec": 0.5191531181335449,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.92,
+            "S": 0.8533333333333334,
+            "G": 0.22666666666666666,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.07999999999999996,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 58,
+              "grp_only": 11,
+              "both": 6
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 1.0,
+            "S": 0.8120805369127517,
+            "G": 0.2751677852348993
+          },
+          "exact_train": 1.0,
+          "exact_test": 0.92
+        },
+        {
+          "arm": "ForceSeq_long",
+          "teacher": "force_seq_proj_loss_long",
+          "teacher_detail": {
+            "kind": "force_seq_long_warmstart",
+            "uses_true_idx": false,
+            "n1_long": 1600
+          },
+          "fence_notes": [
+            "ForceSeq_long: phase1 force-seq for N1+N2=1600 then freeze \u03c0 @ N2 (budget control vs Rec_* 800+800)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 1600,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 2400,
+            "freeze_eps_phase2": true
+          },
+          "steps": 2400,
+          "lr": 0.05,
+          "wall_sec": 2.1301426887512207,
+          "catalogue_idx_exact_match_to_true": 6,
+          "catalogue_ray_match_to_true": 6,
+          "unique_catalogue_indices": 11,
+          "adm_edge_jaccard_with_true": 0.5714285714285714,
+          "adm_edge_count_after": 52,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.6896551724137931,
+          "catalogue_idx_exact_match_to_true_phase1": 6,
+          "ceiling_test": {
+            "H": 0.29333333333333333,
+            "A": 0.28,
+            "S": 0.25333333333333335,
+            "G": 0.04,
+            "one_minus_H": 0.7066666666666667,
+            "H_minus_A": 0.013333333333333308,
+            "four_way_counts": {
+              "neither": 53,
+              "seq_only": 19,
+              "grp_only": 3,
+              "both": 0
+            }
+          },
+          "ceiling_train": {
+            "H": 0.30201342281879195,
+            "A": 0.28859060402684567,
+            "S": 0.2348993288590604,
+            "G": 0.11409395973154363
+          },
+          "exact_train": 0.2925170068027211,
+          "exact_test": 0.28378378378378377
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "Rec_CE",
+          "teacher": "true_ce",
+          "teacher_detail": {
+            "kind": "true_epsilon_star_indices",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Rec_CE uses TRUE catalogue indices as CE teacher (diagnostic upper bound); not held-out pair targets; disclose fence"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7670774459838867,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.8765432098765432,
+            "S": 0.7654320987654321,
+            "G": 0.2962962962962963,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.12345679012345678,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 57,
+              "grp_only": 19,
+              "both": 5
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 0.9790209790209791,
+            "S": 0.8601398601398601,
+            "G": 0.23776223776223776
+          },
+          "exact_train": 0.9790209790209791,
+          "exact_test": 0.8765432098765432
+        },
+        {
+          "arm": "Rec_ray",
+          "teacher": "ray_vote_ce",
+          "teacher_detail": {
+            "kind": "train_ray_program_implied_votes",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false,
+            "vote_meta": {
+              "train_pairs": 143,
+              "train_pairs_with_program_hit": 133,
+              "train_pairs_miss": 10,
+              "use_grp_inverse": false,
+              "programs": "P_seq",
+              "supervision": "train-set targets only; catalogue votes from program inverse; no true_idx; no held-out targets; no preferred-tree labels",
+              "vote_argmax_match_to_true": 16
+            }
+          },
+          "fence_notes": [
+            "Rec_ray uses train-set-only P_seq inverse votes (no true_idx, no held-out targets, no preferred-tree labels)"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7688579559326172,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.8765432098765432,
+            "S": 0.7654320987654321,
+            "G": 0.2962962962962963,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.12345679012345678,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 57,
+              "grp_only": 19,
+              "both": 5
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 0.9790209790209791,
+            "S": 0.8601398601398601,
+            "G": 0.23776223776223776
+          },
+          "exact_train": 0.9790209790209791,
+          "exact_test": 0.8765432098765432
+        },
+        {
+          "arm": "Baseline_freeze",
+          "teacher": "force_seq_proj_loss",
+          "teacher_detail": {
+            "kind": "force_seq_warmstart",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Baseline_freeze = A_cur_freeze reproduction (force-seq \u2192 freeze \u03c0)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 1.392786979675293,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 12,
+          "adm_edge_jaccard_with_true": 0.5588235294117647,
+          "adm_edge_count_after": 48,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.6551724137931034,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "ceiling_test": {
+            "H": 0.4444444444444444,
+            "A": 0.37037037037037035,
+            "S": 0.3333333333333333,
+            "G": 0.14814814814814814,
+            "one_minus_H": 0.5555555555555556,
+            "H_minus_A": 0.07407407407407407,
+            "four_way_counts": {
+              "neither": 45,
+              "seq_only": 24,
+              "grp_only": 9,
+              "both": 3
+            }
+          },
+          "ceiling_train": {
+            "H": 0.5104895104895105,
+            "A": 0.5104895104895105,
+            "S": 0.44755244755244755,
+            "G": 0.11188811188811189
+          },
+          "exact_train": 0.5140845070422535,
+          "exact_test": 0.375
+        },
+        {
+          "arm": "B",
+          "teacher": "true_epsilon_star_frozen",
+          "teacher_detail": {
+            "kind": "freeze_true_den_learn_pol",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false
+          },
+          "fence_notes": [
+            "B = true \u03b5* frozen; learn \u03c0 only (sanity / upper geometry)"
+          ],
+          "curriculum": {
+            "n1_phase1": 0,
+            "n2_phase2_learn_pi": 800,
+            "total_steps": 800,
+            "freeze_eps_phase2": true
+          },
+          "steps": 800,
+          "lr": 0.05,
+          "wall_sec": 0.5165219306945801,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.8641975308641975,
+            "S": 0.7654320987654321,
+            "G": 0.2962962962962963,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.13580246913580252,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 57,
+              "grp_only": 19,
+              "both": 5
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 0.986013986013986,
+            "S": 0.8601398601398601,
+            "G": 0.23776223776223776
+          },
+          "exact_train": 0.986013986013986,
+          "exact_test": 0.8641975308641975
+        },
+        {
+          "arm": "ForceSeq_long",
+          "teacher": "force_seq_proj_loss_long",
+          "teacher_detail": {
+            "kind": "force_seq_long_warmstart",
+            "uses_true_idx": false,
+            "n1_long": 1600
+          },
+          "fence_notes": [
+            "ForceSeq_long: phase1 force-seq for N1+N2=1600 then freeze \u03c0 @ N2 (budget control vs Rec_* 800+800)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 1600,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 2400,
+            "freeze_eps_phase2": true
+          },
+          "steps": 2400,
+          "lr": 0.05,
+          "wall_sec": 2.0976686477661133,
+          "catalogue_idx_exact_match_to_true": 10,
+          "catalogue_ray_match_to_true": 10,
+          "unique_catalogue_indices": 12,
+          "adm_edge_jaccard_with_true": 0.6363636363636364,
+          "adm_edge_count_after": 50,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.7241379310344828,
+          "catalogue_idx_exact_match_to_true_phase1": 10,
+          "ceiling_test": {
+            "H": 0.38271604938271603,
+            "A": 0.3333333333333333,
+            "S": 0.2839506172839506,
+            "G": 0.13580246913580246,
+            "one_minus_H": 0.617283950617284,
+            "H_minus_A": 0.04938271604938271,
+            "four_way_counts": {
+              "neither": 50,
+              "seq_only": 20,
+              "grp_only": 8,
+              "both": 3
+            }
+          },
+          "ceiling_train": {
+            "H": 0.42657342657342656,
+            "A": 0.42657342657342656,
+            "S": 0.3706293706293706,
+            "G": 0.1048951048951049
+          },
+          "exact_train": 0.4420289855072464,
+          "exact_test": 0.35526315789473684
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "oracle_test": 1.0,
+      "arms": [
+        {
+          "arm": "Rec_CE",
+          "teacher": "true_ce",
+          "teacher_detail": {
+            "kind": "true_epsilon_star_indices",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Rec_CE uses TRUE catalogue indices as CE teacher (diagnostic upper bound); not held-out pair targets; disclose fence"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7744288444519043,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.9166666666666666,
+            "S": 0.8472222222222222,
+            "G": 0.25,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.08333333333333337,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 54,
+              "grp_only": 11,
+              "both": 7
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 0.9802631578947368,
+            "S": 0.8157894736842105,
+            "G": 0.2631578947368421
+          },
+          "exact_train": 0.9802631578947368,
+          "exact_test": 0.9166666666666666
+        },
+        {
+          "arm": "Rec_ray",
+          "teacher": "ray_vote_ce",
+          "teacher_detail": {
+            "kind": "train_ray_program_implied_votes",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false,
+            "vote_meta": {
+              "train_pairs": 152,
+              "train_pairs_with_program_hit": 136,
+              "train_pairs_miss": 16,
+              "use_grp_inverse": false,
+              "programs": "P_seq",
+              "supervision": "train-set targets only; catalogue votes from program inverse; no true_idx; no held-out targets; no preferred-tree labels",
+              "vote_argmax_match_to_true": 16
+            }
+          },
+          "fence_notes": [
+            "Rec_ray uses train-set-only P_seq inverse votes (no true_idx, no held-out targets, no preferred-tree labels)"
+          ],
+          "curriculum": {
+            "n1_phase1_catalogue_teacher": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 0.7711927890777588,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "catalogue_idx_exact_match_to_true_phase1": 16,
+          "idx_frozen_phase1_to_phase2": true,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.9166666666666666,
+            "S": 0.8472222222222222,
+            "G": 0.25,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.08333333333333337,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 54,
+              "grp_only": 11,
+              "both": 7
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 0.9802631578947368,
+            "S": 0.8157894736842105,
+            "G": 0.2631578947368421
+          },
+          "exact_train": 0.9802631578947368,
+          "exact_test": 0.9166666666666666
+        },
+        {
+          "arm": "Baseline_freeze",
+          "teacher": "force_seq_proj_loss",
+          "teacher_detail": {
+            "kind": "force_seq_warmstart",
+            "uses_true_idx": false,
+            "uses_heldout_targets": false,
+            "uses_preferred_tree_labels": false
+          },
+          "fence_notes": [
+            "Baseline_freeze = A_cur_freeze reproduction (force-seq \u2192 freeze \u03c0)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 800,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 1600,
+            "freeze_eps_phase2": true
+          },
+          "steps": 1600,
+          "lr": 0.05,
+          "wall_sec": 1.4000928401947021,
+          "catalogue_idx_exact_match_to_true": 11,
+          "catalogue_ray_match_to_true": 11,
+          "unique_catalogue_indices": 11,
+          "adm_edge_jaccard_with_true": 0.6111111111111112,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.7586206896551724,
+          "catalogue_idx_exact_match_to_true_phase1": 11,
+          "ceiling_test": {
+            "H": 0.5138888888888888,
+            "A": 0.4444444444444444,
+            "S": 0.4166666666666667,
+            "G": 0.125,
+            "one_minus_H": 0.48611111111111116,
+            "H_minus_A": 0.06944444444444442,
+            "four_way_counts": {
+              "neither": 35,
+              "seq_only": 28,
+              "grp_only": 7,
+              "both": 2
+            }
+          },
+          "ceiling_train": {
+            "H": 0.5394736842105263,
+            "A": 0.5394736842105263,
+            "S": 0.4407894736842105,
+            "G": 0.1513157894736842
+          },
+          "exact_train": 0.5466666666666666,
+          "exact_test": 0.4507042253521127
+        },
+        {
+          "arm": "B",
+          "teacher": "true_epsilon_star_frozen",
+          "teacher_detail": {
+            "kind": "freeze_true_den_learn_pol",
+            "uses_true_idx": true,
+            "uses_heldout_targets": false
+          },
+          "fence_notes": [
+            "B = true \u03b5* frozen; learn \u03c0 only (sanity / upper geometry)"
+          ],
+          "curriculum": {
+            "n1_phase1": 0,
+            "n2_phase2_learn_pi": 800,
+            "total_steps": 800,
+            "freeze_eps_phase2": true
+          },
+          "steps": 800,
+          "lr": 0.05,
+          "wall_sec": 0.5207722187042236,
+          "catalogue_idx_exact_match_to_true": 16,
+          "catalogue_ray_match_to_true": 16,
+          "unique_catalogue_indices": 16,
+          "adm_edge_jaccard_with_true": 1.0,
+          "adm_edge_count_after": 58,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 1.0,
+          "ceiling_test": {
+            "H": 1.0,
+            "A": 0.9444444444444444,
+            "S": 0.8472222222222222,
+            "G": 0.25,
+            "one_minus_H": 0.0,
+            "H_minus_A": 0.05555555555555558,
+            "four_way_counts": {
+              "neither": 0,
+              "seq_only": 54,
+              "grp_only": 11,
+              "both": 7
+            }
+          },
+          "ceiling_train": {
+            "H": 1.0,
+            "A": 1.0,
+            "S": 0.8157894736842105,
+            "G": 0.2631578947368421
+          },
+          "exact_train": 1.0,
+          "exact_test": 0.9444444444444444
+        },
+        {
+          "arm": "ForceSeq_long",
+          "teacher": "force_seq_proj_loss_long",
+          "teacher_detail": {
+            "kind": "force_seq_long_warmstart",
+            "uses_true_idx": false,
+            "n1_long": 1600
+          },
+          "fence_notes": [
+            "ForceSeq_long: phase1 force-seq for N1+N2=1600 then freeze \u03c0 @ N2 (budget control vs Rec_* 800+800)"
+          ],
+          "curriculum": {
+            "n1_phase1_force_seq_eps": 1600,
+            "n2_phase2_unlock_pi_freeze_eps": 800,
+            "total_steps": 2400,
+            "freeze_eps_phase2": true
+          },
+          "steps": 2400,
+          "lr": 0.05,
+          "wall_sec": 2.1249442100524902,
+          "catalogue_idx_exact_match_to_true": 10,
+          "catalogue_ray_match_to_true": 10,
+          "unique_catalogue_indices": 13,
+          "adm_edge_jaccard_with_true": 0.5454545454545454,
+          "adm_edge_count_after": 44,
+          "true_adm_edge_count": 58,
+          "adm_edge_recall_vs_true": 0.6206896551724138,
+          "catalogue_idx_exact_match_to_true_phase1": 10,
+          "ceiling_test": {
+            "H": 0.4583333333333333,
+            "A": 0.4166666666666667,
+            "S": 0.375,
+            "G": 0.1111111111111111,
+            "one_minus_H": 0.5416666666666667,
+            "H_minus_A": 0.04166666666666663,
+            "four_way_counts": {
+              "neither": 39,
+              "seq_only": 25,
+              "grp_only": 6,
+              "both": 2
+            }
+          },
+          "ceiling_train": {
+            "H": 0.45394736842105265,
+            "A": 0.45394736842105265,
+            "S": 0.3684210526315789,
+            "G": 0.13157894736842105
+          },
+          "exact_train": 0.46,
+          "exact_test": 0.4225352112676056
+        }
+      ]
+    }
+  ],
+  "fence": "configured experiment on finite FIPS proxy; catalogue-recovery under freeze; Rec_CE is true-index teacher diagnostic; Issue 017 not closed; no modular grokking claim",
+  "wall_sec_total": 19.400578022003174
+}
