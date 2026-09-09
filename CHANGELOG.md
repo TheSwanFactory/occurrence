@@ -5,6 +5,24 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Add CI-safe regression pins for the Issue-007 `007.04` p=13 Theory-41 word-slot
+  coarse-grain probe in `topographo/tests/test_p13_coarse_grain_00704.py`: the
+  11/13 distinct class-count rows, the `{1,12}` / `{2,11}` effect collisions,
+  `span_rank(e_c)=4`, and the strict-argmax survey counts.
+
+### Changed
+
+- Make `experiments/tlm_fixed_head/probe_p13_coarse_grain.py` reproduce its own
+  published `007.04` artifact. The script previously emitted a reduced schema and
+  selected winners with `argsort(...)[-1]`, which credits the highest index of a
+  tied maximum; results 2 and 11 carry identical effects, so that reported 6648
+  phantom wins for result 11. Winners are now credited only when the maximum is
+  attained by exactly one result, tie sets are reported separately, and the
+  script emits the published verdict / duplicate-group / singular-value /
+  `fraction_unique_argmax = 0.6676` fields.
+
 ## [0.8.2] - 2026-09-08
 
 ### Added
