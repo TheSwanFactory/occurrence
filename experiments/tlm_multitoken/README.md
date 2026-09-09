@@ -19,6 +19,15 @@ That is a negative result for *learned* composition on that benchmark, and it is
 why `008.01` section 4 installs a firewall: the target relation must be specified
 independently of the candidate policy and must not reduce to an availability rule.
 
+## Files
+
+| File | Role |
+|---|---|
+| `reporting.py` | interface layering + decoder-validity contract (`007.05`) |
+| `native.py` | strict `Occ` / `Cyc` / `Sand` on the exact rational path |
+| `programs.py` | planar term calculus and program-tree enumeration |
+| `probe_program_space.py` | the `008.01` section 3 signature search |
+
 ## Prerequisite: find the signature
 
 `008.01` section 3 asks for the smallest exposed-input signature, preferably

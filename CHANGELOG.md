@@ -26,6 +26,12 @@ All notable changes to this project are documented in this file.
   `probe_futurator_program_space.py` and so could not be scored. Ill-typed terms
   (wrong role in a slot) raise, while undefinedness (annihilation, or `Cyc` off the
   336 admissible pairs) is returned as `None` and reported.
+- Add `experiments/tlm_multitoken/programs.py`, the planar role-typed term
+  calculus from `017.04` as an enumerable program space. Shape counts match their
+  closed forms: `C(2n,n)` programs for `E^n R` with the full constructor set
+  (1, 2, 6, 20, 70, 252) and the Catalan numbers when `Sand` is withheld
+  (1, 1, 2, 5, 14, 42). The `E^2 R` Occ/Cyc subset is exactly the 017
+  two-program family `P_seq` / `P_grp`.
 - Add `topographo/tests/test_multitoken_native.py`: cross-checks `occ` / `cyc`
   against the 017 exact evaluator, rebuilds `P_seq` / `P_grp` from the
   constructors, and pins the full 84x84 `Sand` census (6720 defined, 336
