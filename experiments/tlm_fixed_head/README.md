@@ -102,3 +102,16 @@ uv run --frozen python experiments/tlm_fixed_head/characterize_obstruction.py
 
 Writes `characterization_probe.json`. See Quilt `007.02` (agenda) / `007.03` (results).
 Does not choose a result-interface fork.
+
+
+## Futurator program-space smoke (Outcome 017.07)
+
+Compare strict OT programs vs ambient Mul control (no decoder):
+
+```bash
+uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.py
+```
+
+- Strict: `P_seq=Occ(a,Occ(b,r))` vs `P_grp=Occ(Cyc(a,b),r)` on exact §5 witness + finite FIPS-proxy scan
+- Control: generalized Mul trees / bilateral brackets (ambient, not OT-native)
+- Artifact: `futurator_program_space_report.json`
