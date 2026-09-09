@@ -122,12 +122,17 @@ uv run --frozen python experiments/tlm_fixed_head/probe_futurator_program_space.
 - `probe_futurator_program_space.py` — 017.07/017.08 exact witness + FIPS-proxy scan
 - `learned_admissibility_01709.py` — 017.09 native-structure learned geometric-admissibility arms A–F
 - `learned_admissibility_01711_discrete.py` — 017.11 discrete/catalogue denotation head (Gumbel-STE); arms A/B/C/D + oracle
-- Draft experiment/result: `017.11-…experiment.md`, `017.12-…result.md`; prior result `017.10-…result.md`
-- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json` (+ slim)
+- `learned_admissibility_01713_curriculum.py` — 017.13 discrete curriculum / two-phase (force-seq ε warm-start → unlock π)
+- Draft experiment/result: `017.11`/`017.12` discrete head; `017.13`/`017.14` curriculum; prior `017.10`
+- Reports: `futurator_program_space_report.json`, `learned_admissibility_report.json`, `learned_admissibility_01711_report.json`, `learned_admissibility_01713_report.json` (+ slim)
 
 Finite FIPS Cyc proxy only; not physical OT / modular grokking.
 
-### 017.11 status (brief)
+### 017.11 / 017.12 status (brief)
 
-Discrete catalogue head **unlocks hard FIPS edges** (A ~17 edges; C ~53) vs continuous 017.10's hard-adm 0. Primary arm A still fails held-out exact (~0.035); B ~0.91; C ~0.37 with strong graph recovery. Issue 017 **not** closed.
+Discrete catalogue head **unlocks hard FIPS edges** (A ~17 edges; C ~53) vs continuous 017.10's hard-adm 0. Primary arm A still fails held-out exact (~0.035); B ~0.91; C ~0.37 with strong graph recovery.
+
+### 017.13 / 017.14 status (brief)
+
+Curriculum (800 force-seq ε → 800 unlock π): **A_cur** exact test ~0.19; **A_cur_freeze** (~ε frozen in phase2) ~0.41 — both rise materially above A_joint ~0.035. Joint phase2 degrades recovered geometry; freeze preserves C-like graph. Issue 017 **not** closed.
 
