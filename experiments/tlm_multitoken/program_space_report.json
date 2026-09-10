@@ -1,0 +1,225 @@
+{
+  "retained_context": "e4",
+  "n_events_used": 84,
+  "target_relation": "latent bracketing grammar over Event sign bits; index = (bits) mod n_programs over the enumerated program list",
+  "availability_ceiling_definition": "best accuracy achievable by ANY function of the availability pattern; upper bounds GroupedFirst, ForceSeq and every availability rule",
+  "acceptance_thresholds": {
+    "min_joint_domain_share": 0.1,
+    "min_disagreement_rate": 0.1,
+    "min_learned_headroom": 0.1
+  },
+  "smallest_qualifying_signature": {
+    "Occ+Cyc": null,
+    "Occ+Cyc+Sand": "E^2 R"
+  },
+  "signatures": [
+    {
+      "n_events": 2,
+      "signature": "E^2 R",
+      "constructors": "Cyc+Occ",
+      "n_programs": 2,
+      "n_cyc_free_programs": 1,
+      "n_inputs": 7056,
+      "defined_histogram": {
+        "0": 192,
+        "1": 6576,
+        "2": 288
+      },
+      "per_program_defined": {
+        "Occ(a1,Occ(a2,r))": 6816,
+        "Occ(Cyc(a1,a2),r)": 336
+      },
+      "inputs_with_two_or_more_defined": 288,
+      "inputs_with_endpoint_disagreement": 192,
+      "endpoint_disagreement_rate_given_two": 0.6666666666666666,
+      "n_availability_patterns": 4,
+      "largest_pattern_share": 0.9251700680272109,
+      "max_distinct_endpoints_in_a_pattern": 2,
+      "target_defined": 3576,
+      "target_program_pool": [
+        "Occ(a1,Occ(a2,r))",
+        "Occ(Cyc(a1,a2),r)",
+        "Occ(a1,Occ(a2,r))",
+        "Occ(Cyc(a1,a2),r)"
+      ],
+      "availability_ceiling": 0.9731543624161074,
+      "learned_headroom": 0.02684563758389258,
+      "grouped_first_accuracy": 0.9731543624161074,
+      "force_seq_accuracy": 0.9664429530201343,
+      "random_legal_accuracy": 0.9731543624161074,
+      "supplied_bracketing_accuracy": 1.0,
+      "conditions": {
+        "two_or_more_legal_classes_jointly_defined": false,
+        "endpoints_differ_on_a_non_negligible_set": true,
+        "no_availability_rule_reproduces_the_target": false
+      }
+    },
+    {
+      "n_events": 2,
+      "signature": "E^2 R",
+      "constructors": "Cyc+Occ+Sand",
+      "n_programs": 6,
+      "n_cyc_free_programs": 4,
+      "n_inputs": 7056,
+      "defined_histogram": {
+        "0": 96,
+        "2": 192,
+        "4": 6480,
+        "6": 288
+      },
+      "per_program_defined": {
+        "Occ(a1,Occ(a2,r))": 6816,
+        "Sand(a1,Occ(a2,r))": 6816,
+        "Occ(a1,Sand(a2,r))": 6864,
+        "Sand(a1,Sand(a2,r))": 6864,
+        "Occ(Cyc(a1,a2),r)": 336,
+        "Sand(Cyc(a1,a2),r)": 336
+      },
+      "inputs_with_two_or_more_defined": 6960,
+      "inputs_with_endpoint_disagreement": 6960,
+      "endpoint_disagreement_rate_given_two": 1.0,
+      "n_availability_patterns": 6,
+      "largest_pattern_share": 0.9115646258503401,
+      "max_distinct_endpoints_in_a_pattern": 6,
+      "target_defined": 6840,
+      "target_program_pool": [
+        "Occ(a1,Occ(a2,r))",
+        "Sand(a1,Occ(a2,r))",
+        "Occ(a1,Sand(a2,r))",
+        "Sand(a1,Sand(a2,r))"
+      ],
+      "availability_ceiling": 0.2675438596491228,
+      "learned_headroom": 0.7324561403508771,
+      "grouped_first_accuracy": 0.25877192982456143,
+      "force_seq_accuracy": 0.26228070175438595,
+      "random_legal_accuracy": 0.26228070175438667,
+      "supplied_bracketing_accuracy": 1.0,
+      "conditions": {
+        "two_or_more_legal_classes_jointly_defined": true,
+        "endpoints_differ_on_a_non_negligible_set": true,
+        "no_availability_rule_reproduces_the_target": true
+      }
+    },
+    {
+      "n_events": 3,
+      "signature": "E^3 R",
+      "constructors": "Cyc+Occ",
+      "n_programs": 5,
+      "n_cyc_free_programs": 1,
+      "n_inputs": 592704,
+      "defined_histogram": {
+        "0": 22848,
+        "1": 520512,
+        "2": 47040,
+        "3": 1728,
+        "5": 576
+      },
+      "per_program_defined": {
+        "Occ(a1,Occ(a2,Occ(a3,r)))": 565440,
+        "Occ(a1,Occ(Cyc(a2,a3),r))": 27264,
+        "Occ(Cyc(a1,a2),Occ(a3,r))": 27264,
+        "Occ(Cyc(a1,Cyc(a2,a3)),r)": 1344,
+        "Occ(Cyc(Cyc(a1,a2),a3),r)": 1344
+      },
+      "inputs_with_two_or_more_defined": 49344,
+      "inputs_with_endpoint_disagreement": 39936,
+      "endpoint_disagreement_rate_given_two": 0.8093385214007782,
+      "n_availability_patterns": 14,
+      "largest_pattern_share": 0.8710722384191772,
+      "max_distinct_endpoints_in_a_pattern": 2,
+      "target_defined": 155328,
+      "target_program_pool": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Occ(Cyc(a2,a3),r))",
+        "Occ(Cyc(a1,a2),Occ(a3,r))",
+        "Occ(Cyc(a1,Cyc(a2,a3)),r)",
+        "Occ(Cyc(Cyc(a1,a2),a3),r)",
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Occ(Cyc(a2,a3),r))",
+        "Occ(Cyc(a1,a2),Occ(a3,r))"
+      ],
+      "availability_ceiling": 0.9358776266996292,
+      "learned_headroom": 0.06412237330037085,
+      "grouped_first_accuracy": 0.934487021013597,
+      "force_seq_accuracy": 0.9286928306551298,
+      "random_legal_accuracy": 0.9348681499794032,
+      "supplied_bracketing_accuracy": 1.0,
+      "conditions": {
+        "two_or_more_legal_classes_jointly_defined": false,
+        "endpoints_differ_on_a_non_negligible_set": true,
+        "no_availability_rule_reproduces_the_target": false
+      }
+    },
+    {
+      "n_events": 3,
+      "signature": "E^3 R",
+      "constructors": "Cyc+Occ+Sand",
+      "n_programs": 20,
+      "n_cyc_free_programs": 8,
+      "n_inputs": 592704,
+      "defined_histogram": {
+        "0": 8640,
+        "2": 768,
+        "4": 22752,
+        "6": 12768,
+        "8": 499488,
+        "10": 1632,
+        "12": 44352,
+        "14": 1152,
+        "16": 576,
+        "20": 576
+      },
+      "per_program_defined": {
+        "Occ(a1,Occ(a2,Occ(a3,r)))": 565440,
+        "Sand(a1,Occ(a2,Occ(a3,r)))": 565440,
+        "Occ(a1,Sand(a2,Occ(a3,r)))": 567744,
+        "Sand(a1,Sand(a2,Occ(a3,r)))": 567744,
+        "Occ(a1,Occ(a2,Sand(a3,r)))": 564096,
+        "Sand(a1,Occ(a2,Sand(a3,r)))": 564096,
+        "Occ(a1,Sand(a2,Sand(a3,r)))": 565824,
+        "Sand(a1,Sand(a2,Sand(a3,r)))": 565824,
+        "Occ(a1,Occ(Cyc(a2,a3),r))": 27264,
+        "Sand(a1,Occ(Cyc(a2,a3),r))": 27264,
+        "Occ(a1,Sand(Cyc(a2,a3),r))": 27456,
+        "Sand(a1,Sand(Cyc(a2,a3),r))": 27456,
+        "Occ(Cyc(a1,a2),Occ(a3,r))": 27264,
+        "Sand(Cyc(a1,a2),Occ(a3,r))": 27264,
+        "Occ(Cyc(a1,a2),Sand(a3,r))": 27456,
+        "Sand(Cyc(a1,a2),Sand(a3,r))": 27456,
+        "Occ(Cyc(a1,Cyc(a2,a3)),r)": 1344,
+        "Sand(Cyc(a1,Cyc(a2,a3)),r)": 1344,
+        "Occ(Cyc(Cyc(a1,a2),a3),r)": 1344,
+        "Sand(Cyc(Cyc(a1,a2),a3),r)": 1344
+      },
+      "inputs_with_two_or_more_defined": 584064,
+      "inputs_with_endpoint_disagreement": 584064,
+      "endpoint_disagreement_rate_given_two": 1.0,
+      "n_availability_patterns": 36,
+      "largest_pattern_share": 0.8347910592808552,
+      "max_distinct_endpoints_in_a_pattern": 12,
+      "target_defined": 565776,
+      "target_program_pool": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))",
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Occ(a2,Sand(a3,r)))",
+        "Occ(a1,Sand(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "availability_ceiling": 0.1445448375328752,
+      "learned_headroom": 0.8554551624671248,
+      "grouped_first_accuracy": 0.12794816323067787,
+      "force_seq_accuracy": 0.1333036396029524,
+      "random_legal_accuracy": 0.1376814890395771,
+      "supplied_bracketing_accuracy": 1.0,
+      "conditions": {
+        "two_or_more_legal_classes_jointly_defined": true,
+        "endpoints_differ_on_a_non_negligible_set": true,
+        "no_availability_rule_reproduces_the_target": true
+      }
+    }
+  ],
+  "fence": "configured exact arithmetic and program-space geometry; no training, no learned policy, no physical Event supply claim"
+}

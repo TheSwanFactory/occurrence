@@ -1,22 +1,30 @@
 #!/usr/bin/env python3
-"""007 p=13 Theory-41 word-slot coarse-grain probe.
+"""007.04 p=13 Theory-41 word-slot coarse-grain probe.
 
 Conjecture (Outcome/GPT correction of 007.03):
   Words in one Fixed class share e_w, so Theory-27 cannot distinguish
   within-class slots. But q(w)=a+b mod 13 is well-defined for the
-  injective residue→Event embed on {0..12}, and
+  injective residue->Event embed on {0..12}, and
     e_c = sum_{w: q(w)=c} e_w
   is Theory-41-legal in E. Ask whether the 13 e_c are distinct and
   whether preparations separate argmax regions.
 
 Not a product head / Fork choice. Diagnostic only.
+
+Tie discipline (017.24 lesson)
+-----------------------------
+An argmax winner is only credited when the maximum is attained by exactly
+one result. ``numpy.argmax``/``argsort`` silently break ties toward the
+lowest index, which inflates apparent separation: here results 2 and 11
+have identical class-count rows, hence identical effects and exactly equal
+Theory-27 scores, so a naive argmax would report 11 as a winner 6648 times.
+Strict winners and tie sets are therefore reported separately.
 """
 from __future__ import annotations
 
 import json
 import math
-from collections import Counter, defaultdict
-from dataclasses import asdict, dataclass
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -27,39 +35,16 @@ P = 13
 N_EVENTS = fixed_head.N_EVENTS
 N_WORDS = fixed_head.N_WORDS
 DIM = fixed_head.DIM
+N_PREPARATIONS = 20000
+PREPARATION_SEED = 0
+BRANCH = "experiment/007-p13-word-slot-coarse-grain"
+FENCE = "configured formal Fixed effects + Theory-41 slot sum; not physical Test Realization"
 
 
 def embed(r: int) -> int:
     """Injective on {0..12} for N_EVENTS=84."""
     assert 0 <= r < P <= N_EVENTS
     return r  # r % 84 == r
-
-
-@dataclass
-class CoarseGrainReport:
-    p: int
-    n_pairs: int
-    n_results: int
-    embed_injective_residues: bool
-    # effect geometry
-    pairwise_hs_distance_min: float
-    pairwise_hs_distance_max: float
-    pairwise_hs_distance_mean: float
-    n_near_duplicate_pairs: int  # HS dist < atol
-    span_rank_of_e_c: int
-    # class multiset view: e_c = (1/N_WORDS) sum_k n_ck Q_k
-    class_count_matrix_shape: tuple[int, int]
-    class_count_row_sums: list[int]
-    # preparation separation
-    n_random_preparations: int
-    n_results_that_win_argmax: int
-    results_with_argmax_win: list[int]
-    soft_margin_mean_when_win: float
-    soft_margin_min_when_win: float
-    # optional: try Fixed subspace / generators as states
-    generator_prep_argmax: dict[str, int]
-    notes: list[str]
-    fence: str
 
 
 def _hs(a: np.ndarray, b: np.ndarray) -> float:
@@ -79,13 +64,12 @@ def class_representatives(census, basis) -> list[np.ndarray]:
             moment = fixed_head.two_step_moment(kraus[rec.b], kraus[rec.a])
             reps[rec.class_id] = fixed_head.e_fix(moment, basis)
     assert all(r is not None for r in reps)
-    return reps  # type: ignore
+    return reps  # type: ignore[return-value]
 
 
 def build_e_c(census, basis) -> tuple[list[np.ndarray], np.ndarray, list[str]]:
     """Return (e_c list length p, n_ck matrix shape (p, 15), notes)."""
     notes = []
-    # verify injective embed
     embeds = [embed(r) for r in range(P)]
     injective = len(set(embeds)) == P
     notes.append(f"residue embed injective on 0..{P-1}: {injective}")
@@ -93,7 +77,6 @@ def build_e_c(census, basis) -> tuple[list[np.ndarray], np.ndarray, list[str]]:
     reps = class_representatives(census, basis)
     table = census.class_id_table
     n_ck = np.zeros((P, fixed_head.EXPECTED_N_CLASSES), dtype=np.int64)
-    # Also accumulate e_c directly from word effects for the 169 probe words
     e_c = [np.zeros((DIM, DIM), dtype=np.float64) for _ in range(P)]
     for a in range(P):
         for b in range(P):
@@ -120,7 +103,16 @@ def build_e_c(census, basis) -> tuple[list[np.ndarray], np.ndarray, list[str]]:
     return e_c, n_ck, notes
 
 
-def pairwise_distances(e_c: list[np.ndarray], atol: float = 1e-10):
+def duplicate_row_groups(n_ck: np.ndarray) -> tuple[int, list[list[int]]]:
+    """Group results by identical class-count row; report count and collisions."""
+    groups: dict[tuple[int, ...], list[int]] = {}
+    for c in range(n_ck.shape[0]):
+        groups.setdefault(tuple(int(v) for v in n_ck[c]), []).append(c)
+    duplicates = [sorted(v) for v in groups.values() if len(v) > 1]
+    return len(groups), sorted(duplicates)
+
+
+def pairwise_distances(e_c: list[np.ndarray], atol: float = 1e-10) -> dict:
     p = len(e_c)
     dists = []
     near = 0
@@ -136,24 +128,42 @@ def pairwise_distances(e_c: list[np.ndarray], atol: float = 1e-10):
         "max": float(arr.max()) if len(arr) else 0.0,
         "mean": float(arr.mean()) if len(arr) else 0.0,
         "near_duplicates": near,
-        "all_dists": arr,
     }
 
 
+def stacked_effects(e_c: list[np.ndarray]) -> np.ndarray:
+    return np.column_stack([m.reshape(-1) for m in e_c])
+
+
 def span_rank(e_c: list[np.ndarray]) -> int:
-    stacked = np.column_stack([m.reshape(-1) for m in e_c])
-    return int(np.linalg.matrix_rank(stacked, tol=1e-8))
+    return int(np.linalg.matrix_rank(stacked_effects(e_c), tol=1e-8))
+
+
+def singular_values(e_c: list[np.ndarray], keep: int = 8) -> list[float]:
+    sv = np.linalg.svd(stacked_effects(e_c), compute_uv=False)
+    return [float(v) for v in sv[:keep]]
 
 
 def readout(x: np.ndarray, effect: np.ndarray) -> float:
     return fixed_head.readout_probability(x, effect)
 
 
-def preparation_argmax_survey(e_c: list[np.ndarray], n: int = 20000, seed: int = 0):
+def preparation_argmax_survey(
+    e_c: list[np.ndarray],
+    n: int = N_PREPARATIONS,
+    seed: int = PREPARATION_SEED,
+) -> tuple[Counter, Counter, list[float]]:
+    """Strict-argmax survey over random unit preparations.
+
+    Returns (strict_wins, tie_sets, spreads). A result is credited only when
+    it is the *sole* maximizer; joint maximizers are recorded as a tie set.
+    Effects that coincide exactly produce exactly equal scores, so tie
+    detection is exact equality, not a tolerance.
+    """
     rng = np.random.default_rng(seed)
-    p = len(e_c)
-    wins = Counter()
-    margins = []
+    strict: Counter = Counter()
+    tie_sets: Counter = Counter()
+    spreads: list[float] = []
     for _ in range(n):
         x = rng.normal(size=DIM)
         nrm = np.linalg.norm(x)
@@ -161,12 +171,13 @@ def preparation_argmax_survey(e_c: list[np.ndarray], n: int = 20000, seed: int =
             continue
         x = x / nrm
         scores = np.array([readout(x, e) for e in e_c], dtype=np.float64)
-        # numerical: if all nearly equal, skip margin
-        order = np.argsort(scores)
-        best, second = int(order[-1]), int(order[-2])
-        wins[best] += 1
-        margins.append(float(scores[best] - scores[second]))
-    return wins, margins
+        top = float(scores.max())
+        winners = tuple(int(i) for i in np.flatnonzero(scores == top))
+        tie_sets[winners] += 1
+        if len(winners) == 1:
+            strict[winners[0]] += 1
+        spreads.append(top - float(scores.min()))
+    return strict, tie_sets, spreads
 
 
 def generator_preps(basis, e_c: list[np.ndarray]) -> dict[str, int]:
@@ -187,71 +198,91 @@ def generator_preps(basis, e_c: list[np.ndarray]) -> dict[str, int]:
     return out
 
 
-def main() -> int:
+def build_report() -> dict:
     census = fixed_head.assert_census()
     basis = fixed_head.fixed_basis()
     e_c, n_ck, notes = build_e_c(census, basis)
+
+    n_unique, duplicates = duplicate_row_groups(n_ck)
     dist = pairwise_distances(e_c)
     rank = span_rank(e_c)
-    wins, margins = preparation_argmax_survey(e_c, n=20000, seed=0)
-    win_results = sorted(wins.keys())
-    margins_arr = np.asarray(margins, dtype=np.float64) if margins else np.array([0.0])
-    # margins only for wins that are unique max — already recorded
-    gen = generator_preps(basis, e_c)
+    strict, tie_sets, spreads = preparation_argmax_survey(e_c)
+    n_sampled = int(sum(tie_sets.values()))
+    spread = np.asarray(spreads, dtype=np.float64) if spreads else np.array([0.0])
+    fraction_unique = (sum(strict.values()) / n_sampled) if n_sampled else 0.0
 
-    # score matrix diagnostics: mean diagonal dominance under random x that prefer c
-    # (already have win counts)
-
-    report = CoarseGrainReport(
-        p=P,
-        n_pairs=P * P,
-        n_results=P,
-        embed_injective_residues=True,
-        pairwise_hs_distance_min=dist["min"],
-        pairwise_hs_distance_max=dist["max"],
-        pairwise_hs_distance_mean=dist["mean"],
-        n_near_duplicate_pairs=dist["near_duplicates"],
-        span_rank_of_e_c=rank,
-        class_count_matrix_shape=(int(n_ck.shape[0]), int(n_ck.shape[1])),
-        class_count_row_sums=[int(x) for x in n_ck.sum(axis=1).tolist()],
-        n_random_preparations=int(sum(wins.values())),
-        n_results_that_win_argmax=len(wins),
-        results_with_argmax_win=win_results,
-        soft_margin_mean_when_win=float(margins_arr.mean()),
-        soft_margin_min_when_win=float(margins_arr.min()),
-        generator_prep_argmax=gen,
-        notes=notes,
-        fence="configured formal Fixed effects + Theory-41 slot sum; not physical Test Realization",
+    reasons = [
+        (
+            f"Only {n_unique} distinct class-count multisets among {P} results "
+            f"(duplicate groups {duplicates})."
+        ),
+        (
+            f"span_rank(e_c)={rank} equals dim(C)={fixed_head.EXPECTED_SPAN_DIM}; "
+            "effects live in Fixed image."
+        ),
+        (
+            f"Unique strict argmax winners under {n_sampled // 1000}k random "
+            f"preparations: {sorted(strict)} (not all {P})."
+        ),
+        f"Score spreads tiny (mean {spread.mean():.3e}); soft margins not useful.",
+        (
+            "Equal e_w within a Fixed class still implies P(w|x)=P(w'|x); "
+            "coarse-graining helps only via unequal n_ck \u2014 here that is "
+            "insufficient for full separation."
+        ),
+    ]
+    solved = (
+        n_unique == P
+        and dist["near_duplicates"] == 0
+        and len(strict) == P
     )
 
-    # richer JSON
-    out = {
-        "report": asdict(report),
-        "win_counts": {str(k): int(v) for k, v in sorted(wins.items())},
+    return {
+        "p": P,
+        "verdict": {
+            "solves_p13_ot_native_modular_interface": bool(solved),
+            "reasons": reasons,
+        },
+        "n_unique_n_ck_rows": n_unique,
+        "duplicate_n_ck_groups": duplicates,
+        "span_rank_of_e_c": rank,
+        "singular_values": singular_values(e_c),
+        "pairwise_hs": dist,
+        "unique_strict_argmax_counts": {str(k): int(v) for k, v in sorted(strict.items())},
+        "top_argmax_tie_sets": [[list(k), int(v)] for k, v in tie_sets.most_common(5)],
+        "fraction_unique_argmax": fraction_unique,
+        "score_spread": {
+            "mean": float(spread.mean()),
+            "min": float(spread.min()),
+            "max": float(spread.max()),
+        },
+        "generator_prep_argmax": generator_preps(basis, e_c),
         "n_ck": n_ck.tolist(),
         "e_c_hs_norms": [_hs_norm(e) for e in e_c],
-        "pairwise_hs_distance_min_pair": None,
-        "interpretation": {
-            "if_near_duplicate_pairs_0_and_rank_gt_1": "e_c geometrically distinct as matrices",
-            "if_n_results_that_win_argmax_equals_p": "every modular residue is an argmax for some preparation",
-            "if_n_results_that_win_argmax_lt_p": "some c never win argmax under sampled preparations — weak/no separation",
-            "theory27_within_class": "settled: equal e_w => identical P(w|x); this probe tests coarse-grained e_c instead",
-        },
+        "notes": notes,
+        "fence": FENCE,
+        "branch": BRANCH,
     }
-    # find closest pair
-    best = (1e9, -1, -1)
-    for i in range(P):
-        for j in range(i + 1, P):
-            d = _hs_norm(e_c[i] - e_c[j])
-            if d < best[0]:
-                best = (d, i, j)
-    out["pairwise_hs_distance_min_pair"] = {"dist": best[0], "i": best[1], "j": best[2]}
 
+
+def main() -> int:
+    out = build_report()
     path = Path(__file__).resolve().parent / "p13_coarse_grain_report.json"
     path.write_text(json.dumps(out, indent=2) + "\n")
-    print(json.dumps(out["report"], indent=2))
-    print("win_counts", out["win_counts"])
-    print("min_pair", out["pairwise_hs_distance_min_pair"])
+    print(
+        json.dumps(
+            {
+                "verdict": out["verdict"]["solves_p13_ot_native_modular_interface"],
+                "n_unique_n_ck_rows": out["n_unique_n_ck_rows"],
+                "duplicate_n_ck_groups": out["duplicate_n_ck_groups"],
+                "span_rank_of_e_c": out["span_rank_of_e_c"],
+                "unique_strict_argmax_counts": out["unique_strict_argmax_counts"],
+                "fraction_unique_argmax": out["fraction_unique_argmax"],
+                "score_spread_mean": out["score_spread"]["mean"],
+            },
+            indent=2,
+        )
+    )
     print("wrote", path)
     return 0
 

@@ -130,7 +130,16 @@ jobs:
             topographo/tests/test_tlm_modular_data.py \
             topographo/tests/test_fixed_head.py \
             topographo/tests/test_tlm_fixed_head_capacity.py \
+            topographo/tests/test_p13_coarse_grain_00704.py \
+            topographo/tests/test_multitoken_reporting.py \
+            topographo/tests/test_multitoken_native.py \
+            topographo/tests/test_multitoken_programs.py \
+            topographo/tests/test_multitoken_program_space.py \
+            topographo/tests/test_multitoken_task.py \
+            topographo/tests/test_multitoken_recovery.py \
             experiments/tlm_fixed_head/capacity.py \
+            experiments/tlm_fixed_head/probe_p13_coarse_grain.py \
+            experiments/tlm_multitoken \
             experiments/sedenion-machine/experiments.py \
             experiments/mutual-frames/runtime.py \
             experiments/mutual-frames/audit.py \

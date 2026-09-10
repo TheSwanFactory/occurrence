@@ -5,6 +5,113 @@ All notable changes to this project are documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Run Issue-008 Ladder D (`008.07` task, `008.08` result): does the `008.05`
+  learned-composition advantage survive train-only **recovered** Event
+  denotations? New torch-free `experiments/tlm_multitoken/recovery.py` (frozen
+  sign-balanced 16-token layer, streamed endpoint-inverse voting recovery,
+  mechanical leak audit, `008.07` section 6 diagnostics) plus
+  `run_ladder_d_00807.py` and `probe_degraded_recovery.py`; CI pins in
+  `topographo/tests/test_multitoken_recovery.py`.
+  **Positive on both discriminative splits** — recovered `motif` 0.6670 against a
+  0.1495 bar (+0.5175, 8/8 seeds), `motif_parity` 0.9943 against 0.1496 — but the
+  commissioned robustness measurement is **degenerate**: voting recovers all 16
+  tokens exactly with zero ties and a minimum vote margin of 9105, so the
+  recovered arm is bit-identical to the true arm and the recovery penalty is
+  `+0.0000` as an identity, not a measurement. The driver detects this and sets
+  `degenerate_as_a_robustness_test`. Two added diagnostics locate the real
+  boundary: exact recovery needs only 876 of 2921 available observations, and the
+  learned advantage survives at 14/16 recovered tokens but is gone by 7/16.
+  The recovery penalty is almost entirely a *ceiling* effect — policy success as a
+  fraction of what recovery leaves reachable holds at 0.63–0.67 across 7/16, 14/16
+  and 16/16 recovery — so recovery quality, not policy learning, is what degrades.
+  Ladder D also transferred the banked `017` `Rec_ray` method by **streaming** it:
+  the inverse map has 14112 entries at `E^2 R` but 11854080 at `E^3 R` with twenty
+  programs. At eight seeds the `motif` cell gives 0.6670 (sd 0.172) against the
+  banked three-seed 0.7595, whose sample was bimodal.
+- Run Issue-008 Ladder A (`008.04` task, `008.05` result): a learned strict
+  program-selection policy at `E^3 R` with `Occ+Cyc+Sand`, against every
+  deterministic baseline, under exact native endpoint scoring. New torch-free
+  `experiments/tlm_multitoken/task.py` (frozen task, `008.02` sign-bit target,
+  four digest-pinned splits, the `008.03` section 2.3 viability gate, eight
+  baselines) and `ambient.py` (the fenced Ladder-C ambient generalized-`Mul`
+  control); torch-only `policy.py` and `run_learning_00804.py`; CI pins in
+  `topographo/tests/test_multitoken_task.py`.
+  **Positive on the primary compositional split**: held-out exact-native success
+  0.7595 against 0.1377 for the best deployable deterministic baseline, material
+  on 3 of 3 seeds, above even the non-deployable within-split availability oracle
+  at 0.5203. A flat 20-logit head scores 0.0018 there because two program labels
+  never appear as a training target; the one allowed repair replaces the free
+  per-program output column with a fixed, target-agnostic term-calculus basis.
+  Two findings constrain the benchmark. The `008.02` target is a function of the
+  three Event sign bits alone, so an eight-entry deterministic lookup table
+  scores **1.000** on any split that does not withhold whole sign patterns —
+  making the i.i.d. and held-out-Event splits controls rather than claims, and
+  `008.04` section 6 necessary but not sufficient. And withholding the
+  homogeneous patterns `000`/`111` hands half the held-out set to ForceSeq by
+  construction (measured 0.50), since the `000` target *is* the right comb; the
+  split withholds `011`/`100` instead and the constraint is now pinned. Ladder C
+  is materially *worse* than native (0.4220), and Ladder D is warranted but not
+  run. The `008.02` exhaustive `E^3 R` sweep was re-run from scratch and
+  reproduces the published artifact exactly.
+- Add CI-safe regression pins for the Issue-007 `007.04` p=13 Theory-41 word-slot
+  coarse-grain probe in `topographo/tests/test_p13_coarse_grain_00704.py`: the
+  11/13 distinct class-count rows, the `{1,12}` / `{2,11}` effect collisions,
+  `span_rank(e_c)=4`, and the strict-argmax survey counts.
+- Add `experiments/tlm_multitoken/` for Issue-008 multi-token native composition:
+  the `008.01` plan and a machine-checked reporting contract in `reporting.py`.
+  Arms declare which interface layer they exercise (`supplied_tree` /
+  `selected_tree` / `recovered_dens`, the `007.05` layering), and validation
+  refuses a claim whose layer was never exercised, an arm that both supplies and
+  selects a bracketing, a tree-selection claim against an availability-rule
+  target (the `017.24` GroupedFirst trap), a learned policy reported without the
+  `008.01` section 8 baselines, and the `007.05` section 8 decoder invalidity
+  conditions. No learning code yet.
+- Add `experiments/tlm_multitoken/probe_program_space.py`, the `008.01` section 3
+  signature search, with its exhaustive artifact `program_space_report.json` and
+  the result write-up `008.02-signature-search-result.md`. Condition 3 is settled
+  by an **availability ceiling** — the best accuracy reachable by any function of
+  the availability pattern, which bounds GroupedFirst, ForceSeq, and the random
+  legal selector at once — rather than by beating one hand-written rule.
+  Exhaustive over all 7056 `E^2 R` and 592704 `E^3 R` inputs at `r = e4`.
+  Finding: with `Occ` and `Cyc` alone, 93% of `E^2 R` and 88% of `E^3 R` inputs
+  admit exactly one legal program, so the ceiling is 0.973 and 0.936 and nothing
+  through `E^3 R` qualifies; adding `Sand` lifts the joint domain to 98.6% and the
+  headroom to 0.733 at `E^2 R` and 0.856 at `E^3 R`. This narrows `017.24`
+  section 3: the GroupedFirst coincidence was real, but the deeper cause is
+  Occ/Cyc-only program-space sparsity, and no target construction can defeat an
+  availability rule there.
+- Promote `Sand` to the exact rational path in `experiments/tlm_multitoken/native.py`
+  alongside `Occ` and `Cyc`, completing the three certified `017.04` constructors
+  on one evaluator. It previously existed only as a float helper in
+  `probe_futurator_program_space.py` and so could not be scored. Ill-typed terms
+  (wrong role in a slot) raise, while undefinedness (annihilation, or `Cyc` off the
+  336 admissible pairs) is returned as `None` and reported.
+- Add `experiments/tlm_multitoken/programs.py`, the planar role-typed term
+  calculus from `017.04` as an enumerable program space. Shape counts match their
+  closed forms: `C(2n,n)` programs for `E^n R` with the full constructor set
+  (1, 2, 6, 20, 70, 252) and the Catalan numbers when `Sand` is withheld
+  (1, 1, 2, 5, 14, 42). The `E^2 R` Occ/Cyc subset is exactly the 017
+  two-program family `P_seq` / `P_grp`.
+- Add `topographo/tests/test_multitoken_native.py`: cross-checks `occ` / `cyc`
+  against the 017 exact evaluator, rebuilds `P_seq` / `P_grp` from the
+  constructors, and pins the full 84x84 `Sand` census (6720 defined, 336
+  undefined, 1008 degenerate, 5712 non-trivial, and zero coincidences with `Occ`).
+  Records that the Theory-065 edge identity forces `Sand(e,r) = [r]` on all 336
+  admissible ordered pairs, so `Sand` is dead on the `Cyc` domain.
+
+### Changed
+
+- Make `experiments/tlm_fixed_head/probe_p13_coarse_grain.py` reproduce its own
+  published `007.04` artifact. The script previously emitted a reduced schema and
+  selected winners with `argsort(...)[-1]`, which credits the highest index of a
+  tied maximum; results 2 and 11 carry identical effects, so that reported 6648
+  phantom wins for result 11. Winners are now credited only when the maximum is
+  attained by exactly one result, tie sets are reported separately, and the
+  script emits the published verdict / duplicate-group / singular-value /
+  `fraction_unique_argmax = 0.6676` fields.
+
 ## [0.8.2] - 2026-09-08
 
 ### Added

@@ -114,6 +114,16 @@ uv run --frozen python experiments/tlm_fixed_head/probe_p13_coarse_grain.py
 Artifact: `p13_coarse_grain_report.json`. Branch: `experiment/007-p13-word-slot-coarse-grain`.
 Does **not** choose a 007 fork. Quilt: `007.04`.
 
+Verdict is negative: 11/13 distinct class-count rows (`{1,12}` and `{2,11}` collide),
+`span_rank(e_c)=4=dim C`, and only `{3,6,7,10}` ever strictly maximize.
+
+**Tie discipline (017.24 lesson).** A result is credited only when it is the *sole*
+maximizer. Results 2 and 11 carry identical effects, so they always tie; the
+convention alone decides which one a naive readout reports — `argsort(...)[-1]`
+credits 11, plain `argmax` credits 2, each 6648 times out of 20000. Neither is a
+winner, and `fraction_unique_argmax = 0.6676` is the honest number. Pinned in
+`topographo/tests/test_p13_coarse_grain_00704.py`.
+
 ## Futurator / Outcome 017 (finite FIPS proxy)
 
 **Fence:** configured finite FIPS-proxy experiments on OT two-program family
