@@ -135,6 +135,7 @@ jobs:
             topographo/tests/test_multitoken_native.py \
             topographo/tests/test_multitoken_programs.py \
             topographo/tests/test_multitoken_program_space.py \
+            topographo/tests/test_multitoken_task.py \
             experiments/tlm_fixed_head/capacity.py \
             experiments/tlm_fixed_head/probe_p13_coarse_grain.py \
             experiments/tlm_multitoken \

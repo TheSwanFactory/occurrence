@@ -7,6 +7,31 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Run Issue-008 Ladder A (`008.04` task, `008.05` result): a learned strict
+  program-selection policy at `E^3 R` with `Occ+Cyc+Sand`, against every
+  deterministic baseline, under exact native endpoint scoring. New torch-free
+  `experiments/tlm_multitoken/task.py` (frozen task, `008.02` sign-bit target,
+  four digest-pinned splits, the `008.03` section 2.3 viability gate, eight
+  baselines) and `ambient.py` (the fenced Ladder-C ambient generalized-`Mul`
+  control); torch-only `policy.py` and `run_learning_00804.py`; CI pins in
+  `topographo/tests/test_multitoken_task.py`.
+  **Positive on the primary compositional split**: held-out exact-native success
+  0.7595 against 0.1377 for the best deployable deterministic baseline, material
+  on 3 of 3 seeds, above even the non-deployable within-split availability oracle
+  at 0.5203. A flat 20-logit head scores 0.0018 there because two program labels
+  never appear as a training target; the one allowed repair replaces the free
+  per-program output column with a fixed, target-agnostic term-calculus basis.
+  Two findings constrain the benchmark. The `008.02` target is a function of the
+  three Event sign bits alone, so an eight-entry deterministic lookup table
+  scores **1.000** on any split that does not withhold whole sign patterns —
+  making the i.i.d. and held-out-Event splits controls rather than claims, and
+  `008.04` section 6 necessary but not sufficient. And withholding the
+  homogeneous patterns `000`/`111` hands half the held-out set to ForceSeq by
+  construction (measured 0.50), since the `000` target *is* the right comb; the
+  split withholds `011`/`100` instead and the constraint is now pinned. Ladder C
+  is materially *worse* than native (0.4220), and Ladder D is warranted but not
+  run. The `008.02` exhaustive `E^3 R` sweep was re-run from scratch and
+  reproduces the published artifact exactly.
 - Add CI-safe regression pins for the Issue-007 `007.04` p=13 Theory-41 word-slot
   coarse-grain probe in `topographo/tests/test_p13_coarse_grain_00704.py`: the
   11/13 distinct class-count rows, the `{1,12}` / `{2,11}` effect collisions,

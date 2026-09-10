@@ -4,8 +4,9 @@ Plan for Quilt `008.01`: does a learned policy over strict OT-admissible program
 trees add held-out predictive value on short multi-token sequences **beyond**
 deterministic availability and fixed-bracketing baselines?
 
-Status: **signature search complete, no learning code yet.** See
-[`008.02-signature-search-result.md`](008.02-signature-search-result.md).
+Status: **signature search complete (`008.02`); Ladder A run (`008.05`).** See
+[`008.02-signature-search-result.md`](008.02-signature-search-result.md) and
+[`008.05-E3R-three-constructor-learning-result.md`](008.05-E3R-three-constructor-learning-result.md).
 
 Headline: the `017.24` obstruction is the **constructor set**, not the token count.
 With `Occ` and `Cyc` only, 93 % of `E^2 R` inputs and 88 % of `E^3 R` inputs admit
@@ -33,14 +34,24 @@ almost every input admits only one legal program. Full numbers in
 
 ## Files
 
-| File | Role |
-|---|---|
-| `reporting.py` | interface layering + decoder-validity contract (`007.05`) |
-| `native.py` | strict `Occ` / `Cyc` / `Sand` on the exact rational path |
-| `programs.py` | planar term calculus and program-tree enumeration |
-| `probe_program_space.py` | the `008.01` section 3 signature search |
-| `program_space_report.json` | exhaustive sweep artifact, all 84 Events |
-| `008.02-signature-search-result.md` | the result and its handoff |
+| File | Role | Torch |
+|---|---|:--:|
+| `reporting.py` | interface layering + decoder-validity contract (`007.05`) | no |
+| `native.py` | strict `Occ` / `Cyc` / `Sand` on the exact rational path | no |
+| `programs.py` | planar term calculus and program-tree enumeration | no |
+| `probe_program_space.py` | the `008.01` section 3 signature search | no |
+| `program_space_report.json` | exhaustive sweep artifact, all 84 Events | — |
+| `008.02-signature-search-result.md` | the signature-search result and its handoff | — |
+| `task.py` | the frozen `008.04` task: exact records, target, splits, viability gate, baselines | no |
+| `ambient.py` | Ladder C ambient generalized-`Mul` control, fenced non-native | no |
+| `policy.py` | the two learned program-selection heads, exact rescoring | **yes** |
+| `run_learning_00804.py` | the `008.04` driver | **yes** |
+| `00804_artifacts/` | report / tiny report / split metadata | — |
+| `008.05-E3R-three-constructor-learning-result.md` | the Ladder A result | — |
+
+Everything except `policy.py` and `run_learning_00804.py` is torch-free and
+pinned by `topographo/tests/test_multitoken_*.py` in CI. The learned-policy
+modules are a manual run, following the same split as Outcome 017.
 
 ## Prerequisite: find the signature
 
@@ -151,36 +162,73 @@ not. `DecoderAudit` records each condition per decoder.
 
 Run at `E^3 R` with all three constructors, per `008.02`.
 
-| Arm | Configuration | Layers |
-|---|---|---|
-| **A** | true / frozen denotations + learned tree policy — **primary first test** | `selected_tree` |
-| **B** | true / frozen denotations + deterministic baselines | `supplied_tree` |
-| **C** | ambient generalized-sedenion control, fenced non-OT-native | `supplied_tree` |
-| **D** | train-only recovered denotations, **only** after A shows value | `selected_tree`, `recovered_dens` |
+| Arm | Configuration | Layers | Status |
+|---|---|---|---|
+| **A** | true / frozen denotations + learned tree policy — **primary first test** | `selected_tree` | run (`008.05`) |
+| **B** | true / frozen denotations + deterministic baselines | `supplied_tree` | run (`008.05`) |
+| **C** | ambient generalized-sedenion control, fenced non-OT-native | `selected_tree` | run (`008.05`) |
+| **D** | train-only recovered denotations, **only** after A shows value | `selected_tree`, `recovered_dens` | not run |
 
 Joint denotation + policy training is not a starting point.
 
+Arm C's layer declaration is `selected_tree`, not the `supplied_tree` this table
+carried before the arm existed. The control as built lets a capacity-matched
+policy *select* among ambient trees, which is the like-for-like comparison; it
+claims no `H_` hypothesis, because an ambient result earns no OT claim.
+
 ## Baselines (008.01 section 8)
 
-`GroupedFirst`, `ForceSeq` / right-comb, a fixed supplied-bracketing executor, a
-random legal-tree selector, and the ambient generalized-`Mul` control. A learned
-policy counts as evidence only if it materially exceeds every relevant
-deterministic baseline on held-out exact-native success.
+`task.score_baselines` carries eight, on both halves of every split:
+
+| Baseline | Deployable | What it is |
+|---|:--:|---|
+| `AvailabilityOracleCeiling` | no | per-availability-pattern argmax fitted on the half being scored; upper bound on the whole availability family |
+| `AvailabilityRuleTrainFitted` | yes | the same argmax fitted on train only — the strongest availability rule you could ship |
+| `GroupedFirst` | yes | the `017.24` rule, generalized to twenty programs |
+| `ForceSeq` | yes | the pure right comb |
+| `RandomLegalTree` | yes | analytic expectation of a uniform draw from the legal set |
+| `MajorityProgramTrainFitted` | yes | frequency baseline: first legal program in train-hit order |
+| `SignPatternLookupTrainFitted` | yes | deterministic lookup on an allowed **input** feature |
+| `SuppliedBracketingExecutor` | no | the `H_weak` reference: the target tree is handed over |
+
+The bar a learned policy must clear is the best **deployable** one. The oracle is
+fitted on the held-out labels and the supplied-bracketing executor is handed the
+answer's tree, so neither is a rule a learner competes against; both are reported
+as bounds.
+
+`SignPatternLookupTrainFitted` is not in `008.01` section 8. It was added because
+`008.04` section 5.B requires adding any deterministic rule exposed during
+implementation that uses only allowed input or availability features — and this
+one turns out to matter enormously: since the target is a function of the Event
+sign pattern, a lookup over the eight patterns scores **1.000** on any split that
+does not withhold whole patterns. That is what makes the held-out-motif split the
+only one that can carry the claim.
 
 `learned A <= GroupedFirst` is reported as a negative result for learned
-composition even when absolute accuracy is high.
+composition even when absolute accuracy is high. So is a tie with any other
+deterministic rule.
 
 ## Held-out structure (008.01 section 6)
 
-Held-out **combinations and bracketings**, not repeated instances of one program.
-Split construction is reported explicitly. Where possible include a compositional
-generalization split whose component motifs appear in training but whose
-combination does not.
+Four splits, all built before training, all digest-pinned in
+`00804_artifacts/split_metadata.json`:
 
-Optional role-neutral arm, following `007.05` section 5: hold a bracketing motif
-out in one position and test it in another. `experiments/tlm_modular/data.py`
-already carries `alternate_role_test` and `relation_transfer_gap` for the modular
-case; reuse that shape rather than inventing a split.
+| Split | Kind | Withholds |
+|---|---|---|
+| `motif` | compositional (**primary**) | sign patterns `011` and `100`, hence two whole target bracketings |
+| `motif_parity` | compositional (diagnostic) | all four odd-parity patterns |
+| `random` | i.i.d. (control) | Event combinations only |
+| `unseen_events` | Event identity (control) | 21 of the 84 Events |
+
+Two constraints on the primary split, both checked mechanically:
+
+- every constituent `(retained depth, head constructor)` choice still occurs in
+  training, so only the *combination* is new;
+- neither held-out target is the right comb or a most-grouped term. Withholding
+  the homogeneous patterns `000` / `111` would have violated this — the `000`
+  target *is* ForceSeq's fixed answer, and it measured 0.50 on that held-out half
+  before the split was corrected. `test_multitoken_task.py` pins against a
+  regression.
 
 ## Scoring (008.01 section 7)
 
@@ -221,6 +269,35 @@ Language-model claims; physical Event supply; physical Test Realization; publish
 grokking SOTA; reopening Outcome 017 typing; promoting ambient binary trees to
 OT-native; a free decoder used to obtain success.
 
+## Model scope (008.04 section 7)
+
+One principled architecture pass plus the one repair the stop rule allows.
+
+| Head | Params | Output |
+|---|---:|---|
+| `FlatPolicy` | 2740 | `Linear(64,32) → ReLU → Linear(32,20)`, one free column per program |
+| `StructuralPolicy` | 2773 | `Linear(64,32) → ReLU → Linear(32,21)` scored against a **fixed** 20×21 program-structure basis |
+
+Input is 64 numbers: the exact rational coordinates of the three Event
+denotations and the retained context, cast to float. Nothing else. The output is
+masked to the legal set and the selected program is executed by the exact
+evaluator, so there is no learned result decoder anywhere.
+
+`StructuralPolicy` is the repair, and the motivation is a defect rather than a
+tuning intuition: on a held-out-motif split two of the twenty program labels
+never appear as a training target, so `FlatPolicy`'s output columns for them get
+no signal that could ever make them win, and its held-out score is bounded near
+zero by construction. Replacing the free per-program column with a fixed
+structural basis means a program is scored only through parts it shares with
+other programs. `task.program_structure_features` mentions no sign bit, no
+availability, no endpoint and no target, and is checked injective over the
+twenty programs.
+
+Training surrogate: cross-entropy over the legal set with the positive set
+defined by **exact endpoint equality** rather than tree identity, full batch,
+Adam at `lr = 0.05`, 800 steps, seeds `(0, 1, 2)`. Every reported number is
+rescored under the exact evaluator afterwards.
+
 ## How to run
 
 CI-safe pins (seconds, no torch):
@@ -229,7 +306,8 @@ CI-safe pins (seconds, no torch):
 uv run --frozen pytest topographo/tests/test_multitoken_reporting.py \
   topographo/tests/test_multitoken_native.py \
   topographo/tests/test_multitoken_programs.py \
-  topographo/tests/test_multitoken_program_space.py -q
+  topographo/tests/test_multitoken_program_space.py \
+  topographo/tests/test_multitoken_task.py -q
 ```
 
 Exhaustive signature sweep (about 25 CPU-minutes, manual, not CI):
@@ -238,3 +316,14 @@ Exhaustive signature sweep (about 25 CPU-minutes, manual, not CI):
 uv run --frozen python experiments/tlm_multitoken/probe_program_space.py \
   --signatures 2 3 --out experiments/tlm_multitoken/program_space_report.json
 ```
+
+The `008.04` Ladder A run (about 5 minutes, needs torch, manual, not CI):
+
+```bash
+PYTHONPATH=. python experiments/tlm_multitoken/run_learning_00804.py \
+  --pool-size 40000 --steps 800 --seeds 0 1 2 \
+  --out experiments/tlm_multitoken/00804_artifacts
+```
+
+The driver refuses to train if the `008.03` section 2.3 viability gate does not
+conform to the `008.02` pins; it writes `viability_gate_failure.json` and exits 2.

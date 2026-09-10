@@ -1,0 +1,273 @@
+{
+  "config": {
+    "n_events": 3,
+    "signature": "E^3 R",
+    "retained_label": "e4",
+    "constructors": "Cyc+Occ+Sand",
+    "pool_size": 40000,
+    "pool_seed": 8042026,
+    "heldout_patterns": [
+      "011",
+      "100"
+    ],
+    "parity_heldout_patterns": [
+      "001",
+      "010",
+      "100",
+      "111"
+    ],
+    "random_test_fraction": 0.25,
+    "random_split_seed": 804001,
+    "n_heldout_events": 21,
+    "event_split_seed": 804002
+  },
+  "splits": {
+    "motif": {
+      "kind": "compositional_heldout_motif",
+      "rationale": "withholds the sign-bit patterns 011 and 100 and with them two mixed target bracketings; every constituent (retained depth, head constructor) choice and both parities still occur in training, and neither held-out target is the right comb or a most-grouped term",
+      "n_train": 28663,
+      "n_test": 9474,
+      "digest_sha256": "462b7ecfa0e58ecaa15c74a14c85d2678974794dafba511f956d8ea419088090",
+      "legal_program_counts_train": {
+        "2": 10,
+        "4": 489,
+        "6": 450,
+        "8": 25277,
+        "10": 61,
+        "12": 2270,
+        "14": 52,
+        "16": 31,
+        "20": 23
+      },
+      "legal_program_counts_test": {
+        "2": 3,
+        "4": 199,
+        "6": 187,
+        "8": 8267,
+        "10": 9,
+        "12": 771,
+        "14": 18,
+        "16": 15,
+        "20": 5
+      },
+      "heldout_sign_patterns": [
+        "011",
+        "100"
+      ],
+      "train_sign_patterns": [
+        "000",
+        "001",
+        "010",
+        "101",
+        "110",
+        "111"
+      ],
+      "train_target_programs": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Sand(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "test_target_programs": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "test_target_programs_unseen_in_train": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "constituent_head_choices_in_train": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "constituent_head_choices_in_test": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "every_test_constituent_seen_in_train": true,
+      "heldout_target_is_right_comb": false,
+      "heldout_target_is_most_grouped": false,
+      "train_parities": [
+        0,
+        1
+      ]
+    },
+    "motif_parity": {
+      "kind": "compositional_heldout_motif",
+      "rationale": "withholds every odd-parity sign pattern; constituents survive but the training patterns form a linear subspace on which 'bit d' and 'bit d xor parity' agree, so the hypothesis is identifiable only under a compositional inductive bias",
+      "n_train": 19086,
+      "n_test": 19051,
+      "digest_sha256": "03d65bb4a9863916e9dd56d0b77c3bd976b0ae9d8b23b4482b63aceed84311b7",
+      "legal_program_counts_train": {
+        "2": 7,
+        "4": 352,
+        "6": 322,
+        "8": 16788,
+        "10": 35,
+        "12": 1517,
+        "14": 30,
+        "16": 20,
+        "20": 15
+      },
+      "legal_program_counts_test": {
+        "2": 6,
+        "4": 336,
+        "6": 315,
+        "8": 16756,
+        "10": 35,
+        "12": 1524,
+        "14": 40,
+        "16": 26,
+        "20": 13
+      },
+      "heldout_sign_patterns": [
+        "001",
+        "010",
+        "100",
+        "111"
+      ],
+      "train_sign_patterns": [
+        "000",
+        "011",
+        "101",
+        "110"
+      ],
+      "train_target_programs": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Sand(a3,r)))",
+        "Sand(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "test_target_programs": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "test_target_programs_unseen_in_train": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "constituent_head_choices_in_train": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "constituent_head_choices_in_test": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "every_test_constituent_seen_in_train": true,
+      "heldout_target_is_right_comb": false,
+      "heldout_target_is_most_grouped": false,
+      "train_parities": [
+        0
+      ]
+    },
+    "random": {
+      "kind": "iid_heldout_combination",
+      "rationale": "held-out Event combinations only, no held-out motif; the split a sign-pattern lookup table can solve",
+      "n_train": 28603,
+      "n_test": 9534,
+      "digest_sha256": "be929a7bf97583989b89330954e9dfacc5a00911aef128396c5c39727bb84e30",
+      "legal_program_counts_train": {
+        "2": 12,
+        "4": 528,
+        "6": 456,
+        "8": 25159,
+        "10": 52,
+        "12": 2287,
+        "14": 56,
+        "16": 34,
+        "20": 19
+      },
+      "legal_program_counts_test": {
+        "2": 1,
+        "4": 160,
+        "6": 181,
+        "8": 8385,
+        "10": 18,
+        "12": 754,
+        "14": 14,
+        "16": 12,
+        "20": 9
+      },
+      "test_fraction": 0.25
+    },
+    "unseen_events": {
+      "kind": "heldout_event_identity",
+      "rationale": "21 of the 84 Events never appear in training; every test triple contains at least one unseen Event",
+      "n_train": 16126,
+      "n_test": 22011,
+      "digest_sha256": "7cb60d1354d367e9253bf0d6a628d86378553b31f9c09abb94cea811672bb39e",
+      "legal_program_counts_train": {
+        "2": 6,
+        "4": 243,
+        "6": 282,
+        "8": 14362,
+        "10": 41,
+        "12": 1130,
+        "14": 37,
+        "16": 11,
+        "20": 14
+      },
+      "legal_program_counts_test": {
+        "2": 7,
+        "4": 445,
+        "6": 355,
+        "8": 19182,
+        "10": 29,
+        "12": 1911,
+        "14": 33,
+        "16": 35,
+        "20": 14
+      },
+      "heldout_event_indices": [
+        0,
+        1,
+        2,
+        9,
+        11,
+        15,
+        22,
+        24,
+        26,
+        29,
+        31,
+        36,
+        37,
+        53,
+        54,
+        60,
+        67,
+        75,
+        77,
+        80,
+        82
+      ],
+      "heldout_event_sign_bits": {
+        "0": 10,
+        "1": 11
+      }
+    }
+  }
+}

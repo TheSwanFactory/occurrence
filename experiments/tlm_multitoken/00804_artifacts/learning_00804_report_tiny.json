@@ -1,0 +1,168 @@
+{
+  "manifest_sha256": "63aceb802aeff5941fea0b170d6cce176b79d8828401e0b0aa9d493592b40c70",
+  "primary_split": "motif",
+  "availability_ceiling_pool": 0.14885806434695964,
+  "learned_headroom_pool": 0.8511419356530403,
+  "best_deterministic_test": {
+    "motif": [
+      "RandomLegalTree",
+      0.1377
+    ],
+    "motif_parity": [
+      "RandomLegalTree",
+      0.1379
+    ],
+    "random": [
+      "SignPatternLookupTrainFitted",
+      1.0
+    ],
+    "unseen_events": [
+      "SignPatternLookupTrainFitted",
+      1.0
+    ]
+  },
+  "learned_test": {
+    "flat|motif": 0.0018,
+    "flat|motif_parity": 0.0022,
+    "flat|random": 1.0,
+    "flat|unseen_events": 1.0,
+    "structural|motif": 0.7595,
+    "structural|motif_parity": 1.0,
+    "structural|random": 1.0,
+    "structural|unseen_events": 1.0
+  },
+  "margins": {
+    "flat|motif": {
+      "split": "motif",
+      "learned_test_mean": 0.0017943846316233903,
+      "learned_test_std": 0.0014952170403825047,
+      "learned_test_per_seed": [
+        0.0006333122229259025,
+        0.0008444162972345366,
+        0.0039054253747097317
+      ],
+      "best_deterministic": "RandomLegalTree",
+      "best_deterministic_test": 0.13765851654151204,
+      "margin": -0.13586413190988864,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    },
+    "flat|motif_parity": {
+      "split": "motif_parity",
+      "learned_test_mean": 0.0022396024705614755,
+      "learned_test_std": 0.0005818868352777945,
+      "learned_test_per_seed": [
+        0.0014172484384021836,
+        0.0026770248280930135,
+        0.002624534145189229
+      ],
+      "best_deterministic": "RandomLegalTree",
+      "best_deterministic_test": 0.1378536247316103,
+      "margin": -0.13561402226104882,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    },
+    "flat|random": {
+      "split": "random",
+      "learned_test_mean": 1.0,
+      "learned_test_std": 0.0,
+      "learned_test_per_seed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_deterministic": "SignPatternLookupTrainFitted",
+      "best_deterministic_test": 1.0,
+      "margin": 0.0,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    },
+    "flat|unseen_events": {
+      "split": "unseen_events",
+      "learned_test_mean": 1.0,
+      "learned_test_std": 0.0,
+      "learned_test_per_seed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_deterministic": "SignPatternLookupTrainFitted",
+      "best_deterministic_test": 1.0,
+      "margin": 0.0,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    },
+    "structural|motif": {
+      "split": "motif",
+      "learned_test_mean": 0.7594820913376962,
+      "learned_test_std": 0.30963089150615647,
+      "learned_test_per_seed": [
+        0.9660122440363099,
+        0.32182816128351277,
+        0.9906058686932658
+      ],
+      "best_deterministic": "RandomLegalTree",
+      "best_deterministic_test": 0.13765851654151204,
+      "margin": 0.6218235747961841,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 3,
+      "material_on_more_than_one_seed": true
+    },
+    "structural|motif_parity": {
+      "split": "motif_parity",
+      "learned_test_mean": 1.0,
+      "learned_test_std": 0.0,
+      "learned_test_per_seed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_deterministic": "RandomLegalTree",
+      "best_deterministic_test": 0.1378536247316103,
+      "margin": 0.8621463752683897,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 3,
+      "material_on_more_than_one_seed": true
+    },
+    "structural|random": {
+      "split": "random",
+      "learned_test_mean": 1.0,
+      "learned_test_std": 0.0,
+      "learned_test_per_seed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_deterministic": "SignPatternLookupTrainFitted",
+      "best_deterministic_test": 1.0,
+      "margin": 0.0,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    },
+    "structural|unseen_events": {
+      "split": "unseen_events",
+      "learned_test_mean": 1.0,
+      "learned_test_std": 0.0,
+      "learned_test_per_seed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "best_deterministic": "SignPatternLookupTrainFitted",
+      "best_deterministic_test": 1.0,
+      "margin": 0.0,
+      "material_margin_threshold": 0.1,
+      "seeds_beating_materially": 0,
+      "material_on_more_than_one_seed": false
+    }
+  },
+  "verdict": "POSITIVE on the primary motif split: structural|motif reaches 0.7595 held-out exact-native success against RandomLegalTree at 0.1377, a margin of +0.6218 on 3 of 3 seeds",
+  "positive": true,
+  "negative_classification": null,
+  "ladder_D_warranted": true
+}
