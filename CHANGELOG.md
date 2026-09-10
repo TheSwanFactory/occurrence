@@ -7,6 +7,29 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Run Issue-008 Ladder D (`008.07` task, `008.08` result): does the `008.05`
+  learned-composition advantage survive train-only **recovered** Event
+  denotations? New torch-free `experiments/tlm_multitoken/recovery.py` (frozen
+  sign-balanced 16-token layer, streamed endpoint-inverse voting recovery,
+  mechanical leak audit, `008.07` section 6 diagnostics) plus
+  `run_ladder_d_00807.py` and `probe_degraded_recovery.py`; CI pins in
+  `topographo/tests/test_multitoken_recovery.py`.
+  **Positive on both discriminative splits** — recovered `motif` 0.6670 against a
+  0.1495 bar (+0.5175, 8/8 seeds), `motif_parity` 0.9943 against 0.1496 — but the
+  commissioned robustness measurement is **degenerate**: voting recovers all 16
+  tokens exactly with zero ties and a minimum vote margin of 9105, so the
+  recovered arm is bit-identical to the true arm and the recovery penalty is
+  `+0.0000` as an identity, not a measurement. The driver detects this and sets
+  `degenerate_as_a_robustness_test`. Two added diagnostics locate the real
+  boundary: exact recovery needs only 876 of 2921 available observations, and the
+  learned advantage survives at 14/16 recovered tokens but is gone by 7/16.
+  The recovery penalty is almost entirely a *ceiling* effect — policy success as a
+  fraction of what recovery leaves reachable holds at 0.63–0.67 across 7/16, 14/16
+  and 16/16 recovery — so recovery quality, not policy learning, is what degrades.
+  Ladder D also transferred the banked `017` `Rec_ray` method by **streaming** it:
+  the inverse map has 14112 entries at `E^2 R` but 11854080 at `E^3 R` with twenty
+  programs. At eight seeds the `motif` cell gives 0.6670 (sd 0.172) against the
+  banked three-seed 0.7595, whose sample was bimodal.
 - Run Issue-008 Ladder A (`008.04` task, `008.05` result): a learned strict
   program-selection policy at `E^3 R` with `Occ+Cyc+Sand`, against every
   deterministic baseline, under exact native endpoint scoring. New torch-free

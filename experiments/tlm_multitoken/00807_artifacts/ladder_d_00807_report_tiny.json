@@ -1,0 +1,155 @@
+{
+  "manifest_sha256": "70cebcac766a259706fafc8a6b84da32ca32e5d6acb0200e8199a0b256492dd0",
+  "catalogue_recovery": {
+    "motif": 16,
+    "motif_parity": 16
+  },
+  "sign_bit_preserved": {
+    "motif": 16,
+    "motif_parity": 16
+  },
+  "true_test": {
+    "motif": 0.667,
+    "motif_parity": 0.9943,
+    "random": 1.0
+  },
+  "recovered_test": {
+    "motif": 0.667,
+    "motif_parity": 0.9943
+  },
+  "recovery_penalty": {
+    "motif": 0.0,
+    "motif_parity": 0.0
+  },
+  "recovered_bar": {
+    "motif": [
+      "RandomLegalTree",
+      0.1495
+    ],
+    "motif_parity": [
+      "RandomLegalTree",
+      0.1496
+    ]
+  },
+  "recovered_reachable_ceiling": {
+    "motif": 1.0,
+    "motif_parity": 1.0
+  },
+  "verdict": "POSITIVE on motif, motif_parity: recovered-denotation StructuralPolicy reaches 0.9943 against RandomLegalTree at 0.1496 (margin +0.8446), with a recovery penalty of +0.0000 against the paired true-denotation arm \u2014 but DEGENERATE as a robustness test: recovery is exact on every token with no ties, so the recovered arm is bit-identical to the true arm and the zero penalty is an identity, not a measurement of robustness to imperfect recovery",
+  "positive": true,
+  "degenerate_as_a_robustness_test": true,
+  "recovery_observation_sweep": {
+    "motif": {
+      "smallest_observation_count_with_exact_recovery": 876,
+      "largest_observation_count_without_exact_recovery": 292,
+      "curve": [
+        {
+          "n_train_observations": 6,
+          "n_distinct_endpoints": 6,
+          "catalogue_match_count": 4,
+          "n_tied_tokens": 7,
+          "min_vote_margin": 0
+        },
+        {
+          "n_train_observations": 15,
+          "n_distinct_endpoints": 15,
+          "catalogue_match_count": 3,
+          "n_tied_tokens": 4,
+          "min_vote_margin": 0
+        },
+        {
+          "n_train_observations": 29,
+          "n_distinct_endpoints": 29,
+          "catalogue_match_count": 3,
+          "n_tied_tokens": 1,
+          "min_vote_margin": 1
+        },
+        {
+          "n_train_observations": 88,
+          "n_distinct_endpoints": 85,
+          "catalogue_match_count": 7,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 45
+        },
+        {
+          "n_train_observations": 292,
+          "n_distinct_endpoints": 244,
+          "catalogue_match_count": 14,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 34
+        },
+        {
+          "n_train_observations": 876,
+          "n_distinct_endpoints": 636,
+          "catalogue_match_count": 16,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 661
+        },
+        {
+          "n_train_observations": 2921,
+          "n_distinct_endpoints": 1626,
+          "catalogue_match_count": 16,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 9105
+        }
+      ]
+    },
+    "motif_parity": {
+      "smallest_observation_count_with_exact_recovery": 583,
+      "largest_observation_count_without_exact_recovery": 194,
+      "curve": [
+        {
+          "n_train_observations": 4,
+          "n_distinct_endpoints": 4,
+          "catalogue_match_count": 1,
+          "n_tied_tokens": 2,
+          "min_vote_margin": 0
+        },
+        {
+          "n_train_observations": 10,
+          "n_distinct_endpoints": 10,
+          "catalogue_match_count": 4,
+          "n_tied_tokens": 4,
+          "min_vote_margin": 0
+        },
+        {
+          "n_train_observations": 19,
+          "n_distinct_endpoints": 19,
+          "catalogue_match_count": 8,
+          "n_tied_tokens": 2,
+          "min_vote_margin": 3
+        },
+        {
+          "n_train_observations": 58,
+          "n_distinct_endpoints": 58,
+          "catalogue_match_count": 4,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 8
+        },
+        {
+          "n_train_observations": 194,
+          "n_distinct_endpoints": 176,
+          "catalogue_match_count": 11,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 6
+        },
+        {
+          "n_train_observations": 583,
+          "n_distinct_endpoints": 445,
+          "catalogue_match_count": 16,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 378
+        },
+        {
+          "n_train_observations": 1944,
+          "n_distinct_endpoints": 1104,
+          "catalogue_match_count": 16,
+          "n_tied_tokens": 0,
+          "min_vote_margin": 8520
+        }
+      ]
+    }
+  },
+  "failure_classification": null,
+  "issue_008_closure_recommendation": "Issue 008 may close on the composition question: the learned advantage is unaffected by moving to a train-only recovered denotation map. But Ladder D did not test robustness to imperfect recovery, because at this cell the exact native endpoint over-determines the denotations. One narrower follow-on should degrade the recovery interface itself \u2014 fewer observations, partial or noisy endpoint reporting \u2014 rather than run another ladder."
+}

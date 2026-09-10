@@ -1,0 +1,158 @@
+{
+  "vocabulary": {
+    "n_tokens": 16,
+    "vocab_seed": 807001,
+    "recovery_seed": 807002,
+    "catalogue_size": 84,
+    "selection": "sign-balanced uniform sample without replacement: n_tokens/2 Events with sign bit 1 and n_tokens/2 with sign bit 0",
+    "why_not_017_densest_subgraph": "017 picked the densest FIPS subgraph to maximize Cyc admissibility. Here the 008.02 target lives entirely on the Cyc-free bracketings, so maximizing Cyc density would only inflate the legal-program count with distractors and change the availability structure relative to 008.05. A sign-balanced uniform sample is the neutral choice and keeps all eight sign patterns equinumerous.",
+    "true_idx": [
+      3,
+      20,
+      23,
+      36,
+      38,
+      43,
+      46,
+      48,
+      60,
+      61,
+      62,
+      67,
+      69,
+      71,
+      76,
+      77
+    ]
+  },
+  "splits": {
+    "motif": {
+      "kind": "compositional_heldout_motif",
+      "rationale": "withholds the sign-bit patterns 011 and 100 and with them two mixed target bracketings; every constituent (retained depth, head constructor) choice and both parities still occur in training, and neither held-out target is the right comb or a most-grouped term",
+      "role": "scientific",
+      "n_train": 2921,
+      "n_test": 992,
+      "digest_sha256": "da964c403e63156f9596a74bc68cf08d5dfe4c88b2b582f6bff80210c6315107",
+      "heldout_sign_patterns": [
+        "011",
+        "100"
+      ],
+      "train_sign_patterns": [
+        "000",
+        "001",
+        "010",
+        "101",
+        "110",
+        "111"
+      ],
+      "train_target_programs": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Sand(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "test_target_programs": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "test_target_programs_unseen_in_train": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "constituent_head_choices_in_train": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "constituent_head_choices_in_test": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "every_test_constituent_seen_in_train": true,
+      "heldout_target_is_right_comb": false,
+      "heldout_target_is_most_grouped": false,
+      "train_parities": [
+        0,
+        1
+      ]
+    },
+    "motif_parity": {
+      "kind": "compositional_heldout_motif",
+      "rationale": "withholds every odd-parity sign pattern; constituents survive but the training patterns form a linear subspace on which 'bit d' and 'bit d xor parity' agree, so the hypothesis is identifiable only under a compositional inductive bias",
+      "role": "scientific",
+      "n_train": 1944,
+      "n_test": 1969,
+      "digest_sha256": "c78861dac583d76198b986233c77bea76848a8da862c80422dc4e41071419570",
+      "heldout_sign_patterns": [
+        "001",
+        "010",
+        "100",
+        "111"
+      ],
+      "train_sign_patterns": [
+        "000",
+        "011",
+        "101",
+        "110"
+      ],
+      "train_target_programs": [
+        "Occ(a1,Occ(a2,Occ(a3,r)))",
+        "Occ(a1,Sand(a2,Sand(a3,r)))",
+        "Sand(a1,Occ(a2,Sand(a3,r)))",
+        "Sand(a1,Sand(a2,Occ(a3,r)))"
+      ],
+      "test_target_programs": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "test_target_programs_unseen_in_train": [
+        "Occ(a1,Occ(a2,Sand(a3,r)))",
+        "Occ(a1,Sand(a2,Occ(a3,r)))",
+        "Sand(a1,Occ(a2,Occ(a3,r)))",
+        "Sand(a1,Sand(a2,Sand(a3,r)))"
+      ],
+      "constituent_head_choices_in_train": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "constituent_head_choices_in_test": [
+        "depth0:Occ",
+        "depth0:Sand",
+        "depth1:Occ",
+        "depth1:Sand",
+        "depth2:Occ",
+        "depth2:Sand"
+      ],
+      "every_test_constituent_seen_in_train": true,
+      "heldout_target_is_right_comb": false,
+      "heldout_target_is_most_grouped": false,
+      "train_parities": [
+        0
+      ]
+    },
+    "random": {
+      "kind": "iid_heldout_combination",
+      "rationale": "held-out Event combinations only, no held-out motif; the split a sign-pattern lookup table can solve",
+      "role": "control",
+      "n_train": 2935,
+      "n_test": 978,
+      "digest_sha256": "1f75ea418a764304aaf79fbe87c1cb91907f467caed2deb176fa1dbcd8d71658",
+      "test_fraction": 0.25
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "probe": "degraded recovery penalty curve",
+  "commissioned_by_008_07": false,
+  "why": "008.07 sections 5/9/10 require the recovery penalty, but at this cell recovery is exact, so the commissioned penalty is identically zero as an identity rather than a measurement. This probe measures it against genuinely imperfect maps produced by the observation sweep.",
+  "split": "motif",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "true_denotation_test": {
+    "mean": 0.666960685483871,
+    "std": 0.17190968567033868,
+    "values": [
+      0.5604838709677419,
+      0.75,
+      0.7651209677419355,
+      0.38306451612903225,
+      0.8205645161290323,
+      0.875,
+      0.7479838709677419,
+      0.4334677419354839
+    ],
+    "n": 8
+  },
+  "best_deployable_deterministic_baseline": {
+    "name": "RandomLegalTree",
+    "test": 0.1495043682795699
+  },
+  "rungs": [
+    {
+      "n_train_observations": 6,
+      "n_distinct_endpoints": 6,
+      "catalogue_match_count": 4,
+      "n_tied_tokens": 7,
+      "sign_bit_preserved_count": 8,
+      "recovered_reachable_ceiling_test": 0.04334677419354839,
+      "legal_set_changed_share": 0.238525390625,
+      "target_became_undefined_share": 0.077392578125,
+      "target_endpoint_changed_share": 0.83837890625,
+      "recovered_test": {
+        "mean": 0.012096774193548387,
+        "std": 0.0033433717644711686,
+        "values": [
+          0.014112903225806451,
+          0.008064516129032258,
+          0.011088709677419355,
+          0.008064516129032258,
+          0.016129032258064516,
+          0.009072580645161291,
+          0.017137096774193547,
+          0.01310483870967742
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": -0.6548639112903225,
+        "std": 0.17146206774207245,
+        "values": [
+          -0.5463709677419354,
+          -0.7419354838709677,
+          -0.7540322580645161,
+          -0.375,
+          -0.8044354838709677,
+          -0.8659274193548387,
+          -0.7308467741935484,
+          -0.42036290322580644
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": false,
+      "seeds_beating_bar_materially": 0
+    },
+    {
+      "n_train_observations": 15,
+      "n_distinct_endpoints": 15,
+      "catalogue_match_count": 3,
+      "n_tied_tokens": 4,
+      "sign_bit_preserved_count": 9,
+      "recovered_reachable_ceiling_test": 0.03125,
+      "legal_set_changed_share": 0.208740234375,
+      "target_became_undefined_share": 0.03271484375,
+      "target_endpoint_changed_share": 0.883544921875,
+      "recovered_test": {
+        "mean": 0.006678427419354839,
+        "std": 0.0016669300094913,
+        "values": [
+          0.005040322580645161,
+          0.005040322580645161,
+          0.006048387096774193,
+          0.006048387096774193,
+          0.009072580645161291,
+          0.005040322580645161,
+          0.008064516129032258,
+          0.009072580645161291
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": -0.6602822580645161,
+        "std": 0.17210985751391447,
+        "values": [
+          -0.5554435483870968,
+          -0.7449596774193549,
+          -0.7590725806451613,
+          -0.37701612903225806,
+          -0.811491935483871,
+          -0.8699596774193549,
+          -0.7399193548387096,
+          -0.42439516129032256
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": false,
+      "seeds_beating_bar_materially": 0
+    },
+    {
+      "n_train_observations": 29,
+      "n_distinct_endpoints": 29,
+      "catalogue_match_count": 3,
+      "n_tied_tokens": 1,
+      "sign_bit_preserved_count": 10,
+      "recovered_reachable_ceiling_test": 0.029233870967741934,
+      "legal_set_changed_share": 0.2080078125,
+      "target_became_undefined_share": 0.0283203125,
+      "target_endpoint_changed_share": 0.87744140625,
+      "recovered_test": {
+        "mean": 0.008820564516129031,
+        "std": 0.002182523699053525,
+        "values": [
+          0.008064516129032258,
+          0.011088709677419355,
+          0.006048387096774193,
+          0.010080645161290322,
+          0.007056451612903226,
+          0.006048387096774193,
+          0.010080645161290322,
+          0.012096774193548387
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": -0.658140120967742,
+        "std": 0.1732789580228041,
+        "values": [
+          -0.5524193548387096,
+          -0.7389112903225806,
+          -0.7590725806451613,
+          -0.37298387096774194,
+          -0.813508064516129,
+          -0.8689516129032258,
+          -0.7379032258064515,
+          -0.4213709677419355
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": false,
+      "seeds_beating_bar_materially": 0
+    },
+    {
+      "n_train_observations": 88,
+      "n_distinct_endpoints": 85,
+      "catalogue_match_count": 7,
+      "n_tied_tokens": 0,
+      "sign_bit_preserved_count": 13,
+      "recovered_reachable_ceiling_test": 0.16834677419354838,
+      "legal_set_changed_share": 0.12158203125,
+      "target_became_undefined_share": 0.01416015625,
+      "target_endpoint_changed_share": 0.7802734375,
+      "recovered_test": {
+        "mean": 0.10521673387096775,
+        "std": 0.008234990956398439,
+        "values": [
+          0.10887096774193548,
+          0.11088709677419355,
+          0.09576612903225806,
+          0.10181451612903226,
+          0.11290322580645161,
+          0.11491935483870967,
+          0.10685483870967742,
+          0.08971774193548387
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": -0.5617439516129032,
+        "std": 0.1668923418398693,
+        "values": [
+          -0.4516129032258064,
+          -0.6391129032258065,
+          -0.6693548387096775,
+          -0.28125,
+          -0.7076612903225806,
+          -0.7600806451612904,
+          -0.6411290322580645,
+          -0.34375
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": false,
+      "seeds_beating_bar_materially": 0
+    },
+    {
+      "n_train_observations": 292,
+      "n_distinct_endpoints": 244,
+      "catalogue_match_count": 14,
+      "n_tied_tokens": 0,
+      "sign_bit_preserved_count": 16,
+      "recovered_reachable_ceiling_test": 0.7762096774193549,
+      "legal_set_changed_share": 0.039306640625,
+      "target_became_undefined_share": 0.001953125,
+      "target_endpoint_changed_share": 0.23828125,
+      "recovered_test": {
+        "mean": 0.5041582661290323,
+        "std": 0.091623634219447,
+        "values": [
+          0.5665322580645161,
+          0.3387096774193548,
+          0.5292338709677419,
+          0.3639112903225806,
+          0.5675403225806451,
+          0.5564516129032258,
+          0.5131048387096774,
+          0.5977822580645161
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": -0.16280241935483875,
+        "std": 0.1805652916481927,
+        "values": [
+          0.006048387096774244,
+          -0.4112903225806452,
+          -0.23588709677419362,
+          -0.019153225806451624,
+          -0.2530241935483871,
+          -0.31854838709677424,
+          -0.2348790322580645,
+          0.16431451612903225
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": true,
+      "seeds_beating_bar_materially": 8
+    },
+    {
+      "n_train_observations": 876,
+      "n_distinct_endpoints": 636,
+      "catalogue_match_count": 16,
+      "n_tied_tokens": 0,
+      "sign_bit_preserved_count": 16,
+      "recovered_reachable_ceiling_test": 1.0,
+      "legal_set_changed_share": 0.0,
+      "target_became_undefined_share": 0.0,
+      "target_endpoint_changed_share": 0.0,
+      "recovered_test": {
+        "mean": 0.666960685483871,
+        "std": 0.17190968567033868,
+        "values": [
+          0.5604838709677419,
+          0.75,
+          0.7651209677419355,
+          0.38306451612903225,
+          0.8205645161290323,
+          0.875,
+          0.7479838709677419,
+          0.4334677419354839
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": true,
+      "seeds_beating_bar_materially": 8
+    },
+    {
+      "n_train_observations": 2921,
+      "n_distinct_endpoints": 1626,
+      "catalogue_match_count": 16,
+      "n_tied_tokens": 0,
+      "sign_bit_preserved_count": 16,
+      "recovered_reachable_ceiling_test": 1.0,
+      "legal_set_changed_share": 0.0,
+      "target_became_undefined_share": 0.0,
+      "target_endpoint_changed_share": 0.0,
+      "recovered_test": {
+        "mean": 0.666960685483871,
+        "std": 0.17190968567033868,
+        "values": [
+          0.5604838709677419,
+          0.75,
+          0.7651209677419355,
+          0.38306451612903225,
+          0.8205645161290323,
+          0.875,
+          0.7479838709677419,
+          0.4334677419354839
+        ],
+        "n": 8
+      },
+      "delta_vs_true": {
+        "mean": 0.0,
+        "std": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "n": 8
+      },
+      "beats_deterministic_bar_materially": true,
+      "seeds_beating_bar_materially": 8
+    }
+  ],
+  "lowest_catalogue_accuracy_still_beating_the_bar": 14,
+  "highest_catalogue_accuracy_failing_the_bar": 7,
+  "fence": "added diagnostic, not a commissioned 008.07 arm; every recovered map is fitted on a subset of the same training observations, so the leak boundary is inherited; exact projective native endpoint scoring throughout",
+  "wall_sec": 136.6500689983368
+}

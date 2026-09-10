@@ -4,9 +4,18 @@ Plan for Quilt `008.01`: does a learned policy over strict OT-admissible program
 trees add held-out predictive value on short multi-token sequences **beyond**
 deterministic availability and fixed-bracketing baselines?
 
-Status: **signature search complete (`008.02`); Ladder A run (`008.05`).** See
-[`008.02-signature-search-result.md`](008.02-signature-search-result.md) and
-[`008.05-E3R-three-constructor-learning-result.md`](008.05-E3R-three-constructor-learning-result.md).
+Status: **signature search (`008.02`), Ladder A (`008.05`), Ladder D (`008.08`)
+all run.** See
+[`008.02-signature-search-result.md`](008.02-signature-search-result.md),
+[`008.05-E3R-three-constructor-learning-result.md`](008.05-E3R-three-constructor-learning-result.md)
+and
+[`008.08-Kiro-recovered-denotation-composition-result.md`](008.08-Kiro-recovered-denotation-composition-result.md).
+
+Ladder D is positive but its commissioned robustness measurement is **degenerate**:
+endpoint-inverse voting recovers all 16 tokens exactly, so the recovered arm is
+bit-identical to the true arm and the recovery penalty is `+0.0000` as an identity
+rather than a measurement. An added probe locates the real boundary — the learned
+advantage survives at 14/16 recovered tokens and is gone by 7/16.
 
 Headline: the `017.24` obstruction is the **constructor set**, not the token count.
 With `Occ` and `Cyc` only, 93 % of `E^2 R` inputs and 88 % of `E^3 R` inputs admit
@@ -48,6 +57,11 @@ almost every input admits only one legal program. Full numbers in
 | `run_learning_00804.py` | the `008.04` driver | **yes** |
 | `00804_artifacts/` | report / tiny report / split metadata | — |
 | `008.05-E3R-three-constructor-learning-result.md` | the Ladder A result | — |
+| `recovery.py` | the `008.07` token layer + train-only endpoint-inverse denotation recovery | no |
+| `run_ladder_d_00807.py` | the `008.07` Ladder D driver | **yes** |
+| `probe_degraded_recovery.py` | recovery penalty vs recovery quality (added, not commissioned) | **yes** |
+| `00807_artifacts/` | Ladder D report, recovery diagnostics, degraded-recovery probe | — |
+| `008.08-Kiro-recovered-denotation-composition-result.md` | the Ladder D result | — |
 
 Everything except `policy.py` and `run_learning_00804.py` is torch-free and
 pinned by `topographo/tests/test_multitoken_*.py` in CI. The learned-policy
@@ -167,7 +181,15 @@ Run at `E^3 R` with all three constructors, per `008.02`.
 | **A** | true / frozen denotations + learned tree policy — **primary first test** | `selected_tree` | run (`008.05`) |
 | **B** | true / frozen denotations + deterministic baselines | `supplied_tree` | run (`008.05`) |
 | **C** | ambient generalized-sedenion control, fenced non-OT-native | `selected_tree` | run (`008.05`) |
-| **D** | train-only recovered denotations, **only** after A shows value | `selected_tree`, `recovered_dens` | not run |
+| **D** | train-only recovered denotations, **only** after A shows value | `selected_tree`, `recovered_dens` | run (`008.08`) |
+
+Ladder D needs one interface change, because `008.05` handed the policy the exact
+Event rays and so had nothing to recover. `recovery.py` adds a frozen
+sign-balanced 16-token vocabulary over the 84 certified Events; everything
+`008.06` section 7 pins stays fixed. Recovery is the banked `017` `Rec_ray`
+endpoint-inverse voting, **streamed** rather than materialized: at `E^2 R` the
+inverse map has 14112 entries, at `E^3 R` with twenty programs it has 11854080,
+which does not fit in memory as a dict of exact ray keys.
 
 Joint denotation + policy training is not a starting point.
 

@@ -526,10 +526,22 @@ def split_digest(pool: Pool, split: Split) -> str:
     return hashlib.sha256(blob).hexdigest()
 
 
-def build_splits(pool: Pool) -> tuple[Split, ...]:
-    """Construct all three splits. Called before any training, by contract."""
+#: Split names in construction order. ``unseen_events`` is only well-typed when
+#: the exposed input is an Event ray; under the `008.07` token layer the exposed
+#: input is a token, so holding out Event identities would hold out vocabulary
+#: entries, which is a different experiment.
+SPLIT_NAMES: tuple[str, ...] = ("motif", "motif_parity", "random", "unseen_events")
+
+
+def build_splits(
+    pool: Pool, *, include: Sequence[str] = SPLIT_NAMES
+) -> tuple[Split, ...]:
+    """Construct the splits. Called before any training, by contract."""
     config = pool.config
     scored = pool.scored
+    unknown = set(include) - set(SPLIT_NAMES)
+    if unknown:
+        raise ValueError(f"unknown split(s): {sorted(unknown)}")
 
     # --- primary: held-out sign-bit patterns, hence held-out target motifs ---
     motif = _pattern_holdout_split(
@@ -571,38 +583,44 @@ def build_splits(pool: Pool) -> tuple[Split, ...]:
         metadata={"test_fraction": config.random_test_fraction},
     )
 
-    # --- robustness: held-out Event identities ------------------------------
-    n_all_events = len(fips_basic.EVENTS)
-    event_order = list(range(n_all_events))
-    random.Random(config.event_split_seed).shuffle(event_order)
-    heldout_events = frozenset(event_order[: config.n_heldout_events])
-    unseen_train = tuple(
-        i
-        for i in scored
-        if not (set(pool.records[i].event_indices) & heldout_events)
-    )
-    unseen_test = tuple(
-        i for i in scored if set(pool.records[i].event_indices) & heldout_events
-    )
-    heldout_signs = Counter(
-        sign_bit(fips_basic.EVENTS[k]) for k in sorted(heldout_events)
-    )
-    unseen = Split(
-        name="unseen_events",
-        kind="heldout_event_identity",
-        rationale=(
-            "21 of the 84 Events never appear in training; every test triple "
-            "contains at least one unseen Event"
-        ),
-        train=unseen_train,
-        test=unseen_test,
-        metadata={
-            "heldout_event_indices": sorted(heldout_events),
-            "heldout_event_sign_bits": {str(k): v for k, v in sorted(heldout_signs.items())},
-        },
-    )
+    built: dict[str, Split] = {"motif": motif, "motif_parity": parity, "random": rnd}
 
-    splits = (motif, parity, rnd, unseen)
+    # --- robustness: held-out Event identities ------------------------------
+    # Skipped under the 008.07 token layer, where the exposed input is a token
+    # rather than an Event ray, so withholding Event identities would withhold
+    # vocabulary entries instead — a different experiment.
+    if "unseen_events" in include:
+        event_order = list(range(len(fips_basic.EVENTS)))
+        random.Random(config.event_split_seed).shuffle(event_order)
+        heldout_events = frozenset(event_order[: config.n_heldout_events])
+        heldout_signs = Counter(
+            sign_bit(fips_basic.EVENTS[k]) for k in sorted(heldout_events)
+        )
+        built["unseen_events"] = Split(
+            name="unseen_events",
+            kind="heldout_event_identity",
+            rationale=(
+                f"{config.n_heldout_events} of the {len(fips_basic.EVENTS)} Events "
+                "never appear in training; every test triple contains at least one "
+                "unseen Event"
+            ),
+            train=tuple(
+                i
+                for i in scored
+                if not (set(pool.records[i].event_indices) & heldout_events)
+            ),
+            test=tuple(
+                i for i in scored if set(pool.records[i].event_indices) & heldout_events
+            ),
+            metadata={
+                "heldout_event_indices": sorted(heldout_events),
+                "heldout_event_sign_bits": {
+                    str(k): v for k, v in sorted(heldout_signs.items())
+                },
+            },
+        )
+
+    splits = tuple(built[name] for name in SPLIT_NAMES if name in include)
     for split in splits:
         split.check_disjoint()
     return splits
