@@ -3,6 +3,7 @@
   "bytes": 9656580,
   "fetch": {
     "aws_cli": "aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json",
+    "quilt3": "python -c \"import quilt3; quilt3.Package.browse('occurrence/gpt', registry='s3://protology', top_hash='5010f4e2a72c22604f9091c8c2f750c98b2debe9483e9489667fa860f851b5f7')['issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json'].fetch('experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json')\"",
     "verify": "shasum -a 256 experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json  # expect 27b330d87cce8eba7bf114886ae970d60402b270f675fafe95f5015863e5479e"
   },
   "logical_key": "issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json",
@@ -16,6 +17,12 @@
     "repair_rung1": "7802234864b850e07a96867297d10afab8d59210d1d7ad7cb2163c92feadb185",
     "repair_rung2": "f36d5e495f93919321c599fc258399bfa3982c131dc542473483f1e302f97a8d"
   },
+  "quilt_hash": {
+    "note": "The Quilt manifest hashes entries with its own chunked scheme, so this value is expected to differ from the plain-file 'sha256' above. It is not a mismatch. Use 'sha256' to verify a fetched file with shasum.",
+    "type": "sha2-256-chunked",
+    "value": "Kyc3GmE/08tDYZmx0pYtqoaXQBglRmrDXnPRT+EXv4E="
+  },
+  "revision": "5010f4e2a72c22604f9091c8c2f750c98b2debe9483e9489667fa860f851b5f7",
   "s3_uri": "s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json",
   "sha256": "27b330d87cce8eba7bf114886ae970d60402b270f675fafe95f5015863e5479e"
 }
