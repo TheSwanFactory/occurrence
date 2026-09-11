@@ -7,6 +7,61 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Add `experiments/sfp_representation/` for Issue-009 native-FIPS versus SFP
+  consequence representation (`009.01` task, `009.02` result): does the compact
+  `S | FFF | PP | pp` code carry the certified admit-and-force relation better
+  than the native FIPS realization, and is any advantage relational rather than a
+  matter of code capacity or coordinate choice? Eleven new modules — torch-free
+  `conformance.py` (Gate 0: 103 Outcome-`021.05` pins re-derived, 0
+  disagreements, 14 named relational laws, `TABLE_SHA256` `eb31fba3dbc3a4bb…`),
+  `sfp.py` (the codec plus an exactness proof over the complete finite domain),
+  `groups.py` (abstract `GL(3,2)` / `AGL(2,2)` / `GL(2,2)` / K4 machinery),
+  `task.py` (the frozen 7056-ordered-pair pool, `dataset_sha256 7872755f…`),
+  `folds.py` (22 manifests, `fold_manifest_sha256 27b01b5e…`, zero leakage on all
+  21 structural folds recomputed from the recorded index lists rather than
+  asserted), `arms.py` and `baselines.py`; torch-only `scorer.py`, `harness.py`,
+  `run_sweep.py` and `analysis.py`, which per repo convention are a manual run
+  and are not in CI.
+  **Two finite pins are newly certified: 112 oriented cyclic blocks and 168
+  Event-block incidences**, computed nowhere in the repo before this issue and
+  derived *structurally* — oriented blocks enumerated as genuine cyclic-sense
+  classes, incidences by walking actual membership — rather than as `2*56` and
+  `84*2`, since the arithmetic shortcuts would assume exactly the regularity the
+  pins are meant to witness.
+  **Disposition E, explicitly narrowed.** Forcing is unsolved by every
+  representation: the best forced-third accuracy over all 1400 runs is 0.0335
+  (0.0900 after the single permitted repair) while both nonlearned oracles score
+  1.0, so no arm demonstrates held-out generalization of the certified relation as
+  a whole. The **admission half is cleanly resolved**: the SFP code beats its own
+  marginal-matched, structure-destroying scramble by **+0.6369** on
+  same-habitat-disjoint accuracy (CI [0.5655, 0.7054], sign-consistent across all
+  14 primary folds, with bit widths, habitat sizes and field marginals held
+  identical) and beats the native realization by **+0.3772** on admission balanced
+  accuracy, where native realization sits at **chance** (0.5048). Relabeling under
+  `GL(3,2)` + affine `AGL(2,2)` + a global `S` flip matches the code arm on every
+  metric with every CI including zero, so the admission result is not a basis
+  artifact. Capacity spread across the four representation arms is **exactly 0**
+  (20323 parameters each), and swap symmetry is **0.0 bitwise** over primitives,
+  pair and all 85 output slots as well as empirically on all 1400 runs.
+  Three findings constrain the benchmark. The scramble's rejection proof had to
+  test membership in the 24-element induced permutation class, because
+  matching-partition preservation is necessary but **not** sufficient — 48 of 720
+  permutations preserve the partition while only 24 are induced, and two accepted
+  scrambles are partition-preserving with **zero** admission disagreements yet
+  lose **all 24** forced thirds, since a non-induced partition-preserving
+  permutation carries a K4 star onto a K4 triangle. The mechanical leakage search
+  (2838 fits) found all 50 cheaper-than-the-relation shortcuts on the random
+  control and none on either structural fold family, and every
+  relation-equivalent feature determines admission **only**: the best cheap subset
+  reaches 0.921 admission balanced accuracy while scoring 0.0 on forced third and
+  0.0 on same-habitat-disjoint accuracy, making admission balanced accuracy a weak
+  discriminator. And two arms reach high non-admission accuracy purely by
+  answering BOTTOM to ~87% and ~93% of admitted pairs, so non-admission accuracy
+  is only readable together with admission sensitivity. The one repair the stop
+  rule permits was motivated by a diagnosed held-out target suppression and is
+  reported as **tested and insufficient**. The opaque-token discovery stage is
+  **not warranted yet**: the code arm is handed the exact certified code and still
+  cannot name the held-out forced third, so hiding it could not discriminate.
 - Run Issue-008 Ladder D (`008.07` task, `008.08` result): does the `008.05`
   learned-composition advantage survive train-only **recovered** Event
   denotations? New torch-free `experiments/tlm_multitoken/recovery.py` (frozen
@@ -111,6 +166,11 @@ All notable changes to this project are documented in this file.
   attained by exactly one result, tie sets are reported separately, and the
   script emits the published verdict / duplicate-group / singular-value /
   `fraction_unique_argmax = 0.6676` fields.
+- Extend the `topographo` workflow path filters and the explicit `ruff check`
+  allowlist to cover `experiments/sfp_representation/`. Only the seven torch-free
+  Issue-009 modules are named in the lint and import gate; `scorer.py`,
+  `harness.py`, `run_sweep.py` and `analysis.py` require torch and stay a manual
+  run, following the Outcome-017 and Issue-008 convention.
 
 ## [0.8.2] - 2026-09-08
 

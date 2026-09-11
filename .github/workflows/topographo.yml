@@ -26,6 +26,7 @@ on:
       - "experiments/mutual-frames/**"
       - "experiments/tlm_modular/**"
       - "experiments/tlm_fixed_head/**"
+      - "experiments/sfp_representation/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -40,6 +41,7 @@ on:
       - "experiments/mutual-frames/**"
       - "experiments/tlm_modular/**"
       - "experiments/tlm_fixed_head/**"
+      - "experiments/sfp_representation/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -140,6 +142,7 @@ jobs:
             experiments/tlm_fixed_head/capacity.py \
             experiments/tlm_fixed_head/probe_p13_coarse_grain.py \
             experiments/tlm_multitoken \
+            experiments/sfp_representation \
             experiments/sedenion-machine/experiments.py \
             experiments/mutual-frames/runtime.py \
             experiments/mutual-frames/audit.py \

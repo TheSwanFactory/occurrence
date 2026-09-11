@@ -1,0 +1,1610 @@
+{
+  "agl_2_2": {
+    "action_is_faithful": true,
+    "chambers": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "covariance": {
+      "checks_per_element": 16,
+      "elements_checked": 24,
+      "failures": [],
+      "holds_for_every_element": true,
+      "law": "phi(q XOR d) XOR phi(q) == A d for all q, d"
+    },
+    "digest": "59fae8df6c68856c7e64494c3ae2de0ca3b51965188b8002cdce55e5ff6ad5fd",
+    "elements": [
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          0,
+          3,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          1,
+          3,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          0,
+          3,
+          2
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          3,
+          0,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          3,
+          1,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          1,
+          0,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          0,
+          0
+        ],
+        "chamber_permutation": [
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "chamber_permutation": [
+          1,
+          3,
+          2,
+          0
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          1,
+          0
+        ],
+        "chamber_permutation": [
+          2,
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "A": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "b": [
+          1,
+          1
+        ],
+        "chamber_permutation": [
+          3,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "group_axioms": {
+      "closed_under_composition": true,
+      "closed_under_inverses": true,
+      "composition_agrees_with_function_composition": true,
+      "contains_identity": true
+    },
+    "is_s4_on_chambers": true,
+    "pins": {
+      "distinct_chamber_permutations": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "action on the 4 chambers"
+      },
+      "order": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "|GL(2,2)| * |F_2^2| affine maps q -> A q XOR b"
+      },
+      "s4_permutations_realized": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "all permutations of the 4 chamber labels"
+      }
+    }
+  },
+  "consistent_with": "experiments/sfp_representation/conformance.py (fano_lines, gl_2_2, pp_local_law, _xor2, _apply)",
+  "critical_fence": "A local permutation of the three nonzero pp values alone is NOT a valid destructive scramble, because every such permutation lies in GL(2,2) ~= S3 and therefore preserves the local XOR-third law d3 = d1 XOR d2.",
+  "fano_plane": {
+    "digest": "e56f52e6faf8a5e44b44d23cd987b355ef5160670ae4668ae07be62c8bbc4fb3",
+    "each_line_pair_meets_in_exactly_one_point": true,
+    "each_point_pair_on_exactly_one_line": true,
+    "lines": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        3,
+        5,
+        6
+      ]
+    ],
+    "lines_per_point": [
+      3
+    ],
+    "lines_through": {
+      "1": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          6,
+          7
+        ]
+      ],
+      "2": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          5,
+          7
+        ]
+      ],
+      "3": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "4": [
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "5": [
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "6": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "7": [
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ]
+    },
+    "pins": {
+      "line_pairs": {
+        "agrees": true,
+        "expected": 21,
+        "observed": 21,
+        "source": "unordered pairs of distinct lines"
+      },
+      "lines": {
+        "agrees": true,
+        "expected": 7,
+        "observed": 7,
+        "source": "groups.fano_lines"
+      },
+      "point_pairs": {
+        "agrees": true,
+        "expected": 21,
+        "observed": 21,
+        "source": "unordered pairs of distinct nonzero points"
+      },
+      "points": {
+        "agrees": true,
+        "expected": 7,
+        "observed": 7,
+        "source": "nonzero points of F_2^3"
+      }
+    },
+    "points_per_line": [
+      3
+    ],
+    "third_point_is_xor_and_lands_on_the_line": true
+  },
+  "fences": [
+    "FFF=000 and pp=00 are formal algebraic completion values only, not Events.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "This module is abstract finite group machinery over F_2. It certifies symmetry of the finite presentation/incidence law only, and replaces no OT evaluator."
+  ],
+  "gl_2_2": {
+    "action_is_faithful": true,
+    "action_table": {
+      "0110": [
+        1,
+        0,
+        2
+      ],
+      "0111": [
+        2,
+        0,
+        1
+      ],
+      "1001": [
+        0,
+        1,
+        2
+      ],
+      "1011": [
+        0,
+        2,
+        1
+      ],
+      "1101": [
+        2,
+        1,
+        0
+      ],
+      "1110": [
+        1,
+        2,
+        0
+      ]
+    },
+    "digest": "d9095abef7a36bcb0fd4c0f74d102bd394ec7e73a86f5c7dd5270c6febd1b40d",
+    "group_axioms": {
+      "closed_under_composition": true,
+      "closed_under_inverses": true,
+      "contains_identity": true
+    },
+    "isomorphic_to_s3_on_nonzero_vectors": true,
+    "matrices": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    ],
+    "nonzero_vectors": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "pins": {
+      "distinct_actions_on_nonzero_vectors": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "faithful action on {01, 10, 11}"
+      },
+      "order": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "groups.gl_2_2 (det == 1 over F_2)"
+      },
+      "s3_permutations_realized": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "all permutations of the 3 nonzero vectors"
+      }
+    }
+  },
+  "gl_3_2": {
+    "canonical_order": "lexicographic on the 7-tuple of point images",
+    "composition_checks": 28224,
+    "digest": "5819b0f4b671a8c57c07f46c45180a2107811056f213ad37fa10cb02c69acfa6",
+    "elements": [
+      "1234567",
+      "1235476",
+      "1236745",
+      "1237654",
+      "1324576",
+      "1325467",
+      "1326754",
+      "1327645",
+      "1452367",
+      "1453276",
+      "1456723",
+      "1457632",
+      "1542376",
+      "1543267",
+      "1546732",
+      "1547623",
+      "1672345",
+      "1673254",
+      "1674523",
+      "1675432",
+      "1762354",
+      "1763245",
+      "1764532",
+      "1765423",
+      "2134657",
+      "2135746",
+      "2136475",
+      "2137564",
+      "2314675",
+      "2315764",
+      "2316457",
+      "2317546",
+      "2461357",
+      "2463175",
+      "2465713",
+      "2467531",
+      "2571346",
+      "2573164",
+      "2574613",
+      "2576431",
+      "2641375",
+      "2643157",
+      "2645731",
+      "2647513",
+      "2751364",
+      "2753146",
+      "2754631",
+      "2756413",
+      "3124756",
+      "3125647",
+      "3126574",
+      "3127465",
+      "3214765",
+      "3215674",
+      "3216547",
+      "3217456",
+      "3471256",
+      "3472165",
+      "3475612",
+      "3476521",
+      "3561247",
+      "3562174",
+      "3564712",
+      "3567421",
+      "3651274",
+      "3652147",
+      "3654721",
+      "3657412",
+      "3741265",
+      "3742156",
+      "3745621",
+      "3746512",
+      "4152637",
+      "4153726",
+      "4156273",
+      "4157362",
+      "4261537",
+      "4263715",
+      "4265173",
+      "4267351",
+      "4371526",
+      "4372615",
+      "4375162",
+      "4376251",
+      "4512673",
+      "4513762",
+      "4516237",
+      "4517326",
+      "4621573",
+      "4623751",
+      "4625137",
+      "4627315",
+      "4731562",
+      "4732651",
+      "4735126",
+      "4736215",
+      "5142736",
+      "5143627",
+      "5146372",
+      "5147263",
+      "5271436",
+      "5273614",
+      "5274163",
+      "5276341",
+      "5361427",
+      "5362714",
+      "5364172",
+      "5367241",
+      "5412763",
+      "5413672",
+      "5416327",
+      "5417236",
+      "5631472",
+      "5632741",
+      "5634127",
+      "5637214",
+      "5721463",
+      "5723641",
+      "5724136",
+      "5726314",
+      "6172435",
+      "6173524",
+      "6174253",
+      "6175342",
+      "6241735",
+      "6243517",
+      "6245371",
+      "6247153",
+      "6351724",
+      "6352417",
+      "6354271",
+      "6357142",
+      "6421753",
+      "6423571",
+      "6425317",
+      "6427135",
+      "6531742",
+      "6532471",
+      "6534217",
+      "6537124",
+      "6712453",
+      "6713542",
+      "6714235",
+      "6715324",
+      "7162534",
+      "7163425",
+      "7164352",
+      "7165243",
+      "7251634",
+      "7253416",
+      "7254361",
+      "7256143",
+      "7341625",
+      "7342516",
+      "7345261",
+      "7346152",
+      "7431652",
+      "7432561",
+      "7435216",
+      "7436125",
+      "7521643",
+      "7523461",
+      "7524316",
+      "7526134",
+      "7612543",
+      "7613452",
+      "7614325",
+      "7615234"
+    ],
+    "encoding": "element[p-1] = pi(p), digits concatenated for p = 1..7",
+    "fano_line_action": {
+      "distinct_induced_line_permutations": 168,
+      "every_element_permutes_the_7_lines": true,
+      "is_incidence_automorphism_group": true,
+      "line_action_is_faithful": true
+    },
+    "fixed_point_counts_observed": [
+      0,
+      1,
+      3,
+      7
+    ],
+    "group_axioms": {
+      "associative_on_sampled_triples": true,
+      "closed_under_composition": true,
+      "closed_under_inverses": true,
+      "contains_identity": true,
+      "every_element_is_xor_linear": true,
+      "inverses_are_two_sided": true
+    },
+    "induced_line_permutations_digest": "bb5c1e59f420f6036375d32a3f9641848a54b32bbe1fbb794423a64aac9f67b4",
+    "pins": {
+      "distinct_elements": {
+        "agrees": true,
+        "expected": 168,
+        "observed": 168,
+        "source": "set of canonical tuples"
+      },
+      "order": {
+        "agrees": true,
+        "expected": 168,
+        "observed": 168,
+        "source": "brute force over the 5040 label permutations, keeping XOR-linear ones"
+      },
+      "search_space": {
+        "agrees": true,
+        "expected": 5040,
+        "observed": 5040,
+        "source": "7! permutations of the nonzero labels"
+      }
+    }
+  },
+  "global_s_flip": {
+    "admission_invariant_under_consistent_flip": true,
+    "forcing_equivariant_under_consistent_flip": true,
+    "is_a_symmetry_when_applied_consistently": true,
+    "is_involution": true,
+    "partial_one_sided_flip_breaks_admission": true,
+    "pins": {
+      "pairs_checked": {
+        "agrees": true,
+        "expected": 4,
+        "observed": 4,
+        "source": "all ordered (S_a, S_b)"
+      },
+      "s_values": {
+        "agrees": true,
+        "expected": 2,
+        "observed": 2,
+        "source": "abstract S bit"
+      }
+    },
+    "rule": "admission requires equal S, and forcing copies S, so flipping every S at once leaves both invariant; flipping one side only does not"
+  },
+  "k4_edge_action": {
+    "agl_2_2_gives_the_same_24": {
+      "count": 24,
+      "identical_to_vertex_induced_class": true
+    },
+    "counting_fact": {
+      "not_structure_preserving_observed": 696,
+      "statement": "6! = 720 permutations of the 6 edges; only 24 are induced by K4 vertex automorphisms / affine AGL(2,2) relabelings; so 696 are NOT structure preserving",
+      "structure_preserving_observed": 24,
+      "total_observed": 720
+    },
+    "digest": "8b50e367940381e11cba543001216936f0a96562d766aef102dc3e76c6bc1b9b",
+    "encoding": "edge order 01,02,03,12,13,23; permutation in image form on edge indices",
+    "induced_class": [
+      "012345",
+      "021435",
+      "034125",
+      "043215",
+      "102354",
+      "120534",
+      "135024",
+      "153204",
+      "201453",
+      "210543",
+      "245013",
+      "254103",
+      "304152",
+      "315042",
+      "340512",
+      "351402",
+      "403251",
+      "425031",
+      "430521",
+      "452301",
+      "513240",
+      "524130",
+      "531420",
+      "542310"
+    ],
+    "matchings": {
+      "all_induced_preserve_the_matching_partition": true,
+      "classes": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "edge_labels": {
+        "0": "01",
+        "1": "02",
+        "2": "03",
+        "3": "12",
+        "4": "13",
+        "5": "23"
+      },
+      "matching_preserving_is_strictly_larger_than_induced": true,
+      "matching_preserving_permutations_observed": 48
+    },
+    "pins": {
+      "edges": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "unordered vertex pairs"
+      },
+      "induced_edge_permutations": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "induced by K4 vertex automorphisms"
+      },
+      "non_structure_preserving": {
+        "agrees": true,
+        "expected": 696,
+        "observed": 696,
+        "source": "720 - 24 observed by exhaustion"
+      },
+      "perfect_matchings": {
+        "agrees": true,
+        "expected": 3,
+        "observed": 3,
+        "source": "opposite-edge classes (disjoint edge pairs)"
+      },
+      "total_edge_permutations": {
+        "agrees": true,
+        "expected": 720,
+        "observed": 720,
+        "source": "6! permutations of the 6 edges"
+      },
+      "vertex_permutations": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "S4 on the 4 vertices"
+      },
+      "vertices": {
+        "agrees": true,
+        "expected": 4,
+        "observed": 4,
+        "source": "abstract K4 vertices 0,1,2,3"
+      }
+    },
+    "s4_to_s6": {
+      "distinct_induced_edge_permutations": 24,
+      "image_closed_under_composition": true,
+      "induced_map_is_faithful": true,
+      "kernel_size_observed": 1,
+      "vertex_permutations_checked": 24
+    },
+    "witnesses": {
+      "breaks_the_matching_partition": {
+        "edge_images": {
+          "01": "01",
+          "02": "02",
+          "03": "03",
+          "12": "12",
+          "13": "23",
+          "23": "13"
+        },
+        "edge_permutation": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4
+        ],
+        "encoded": "012354",
+        "preserves_matching_partition": false,
+        "structure_preserving": false
+      },
+      "note": "matching preservation is necessary but NOT sufficient: the matching-partition stabilizer is strictly larger than the 24-element induced class",
+      "preserves_matchings_but_is_still_not_induced": {
+        "edge_images": {
+          "01": "01",
+          "02": "02",
+          "03": "12",
+          "12": "03",
+          "13": "13",
+          "23": "23"
+        },
+        "edge_permutation": [
+          0,
+          1,
+          3,
+          2,
+          4,
+          5
+        ],
+        "encoded": "013245",
+        "preserves_matching_partition": true,
+        "structure_preserving": false
+      },
+      "selection": "lexicographically least non-induced permutation of each kind"
+    }
+  },
+  "module": "Issue 009 abstract F_2 group machinery: Fano / GL(3,2) / GL(2,2) / AGL(2,2) / K4 edge action",
+  "pp_permutation_fence": {
+    "all_6_lie_in_gl_2_2": true,
+    "all_6_preserve_the_local_xor_third_law": true,
+    "conclusion": "REJECTED AS A SCRAMBLE: permuting the three nonzero pp values is a symmetry of the local law d3 = d1 XOR d2, not a destruction of it. All 6 permutations lie in GL(2,2) ~= S3 and all 6 preserve the law on all 6 admissible pairs. An Arm C scramble built this way is a no-op with respect to the local law and measures nothing.",
+    "critical_fence": "A local permutation of the three nonzero pp values alone is NOT a valid destructive scramble, because every such permutation lies in GL(2,2) ~= S3 and therefore preserves the local XOR-third law d3 = d1 XOR d2.",
+    "digest": "8fcec296bb13fc2fb73dcb7b460fe3f9e843c2118304bed4a7b6d29703d2ab82",
+    "per_permutation": {
+      "01->01;10->10;11->11;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "01->01;10->11;11->10;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "01->10;10->01;11->11;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "01->10;10->11;11->01;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "01->11;10->01;11->10;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "01->11;10->10;11->01;": {
+        "admissible_pairs_checked": 6,
+        "images": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "lies_in_gl_2_2": true,
+        "preserves_xor_third": true,
+        "realized_by_gl_2_2_matrix": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    "pins": {
+      "admissible_pairs_per_permutation": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "ordered pairs of distinct nonzero displacements"
+      },
+      "permutations_in_gl_2_2": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "each pp permutation is realized by a unique GL(2,2) matrix"
+      },
+      "permutations_preserving_xor_third": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "exhaustive check of sigma(d1 XOR d2) == sigma(d1) XOR sigma(d2)"
+      },
+      "pp_permutations": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "3! permutations of {01, 10, 11}"
+      }
+    },
+    "use_instead": "To actually destroy structure, leave the induced class: pick one of the 696 non-structure-preserving permutations of the 6 K4 edges (see groups.is_structure_preserving and groups.non_induced_edge_permutation_witnesses).",
+    "zero_excluded_because": "d1 XOR d1 = 00 is a formal algebraic completion value only, not a pp displacement; algebraic zero != NONADMISSION"
+  },
+  "relational_laws": {
+    "agl_2_2_covariance": true,
+    "agl_2_2_group_axioms": true,
+    "agl_2_2_is_s4_on_chambers": true,
+    "fano_lines_meet_in_one_point": true,
+    "fano_lines_per_point_three": true,
+    "fano_pair_on_one_line": true,
+    "fano_points_per_line_three": true,
+    "fano_third_point_is_xor": true,
+    "gl_2_2_action_faithful": true,
+    "gl_2_2_group_axioms": true,
+    "gl_2_2_is_s3_on_nonzero_vectors": true,
+    "gl_3_2_group_axioms": true,
+    "gl_3_2_is_incidence_automorphism_group": true,
+    "gl_3_2_permutes_fano_lines": true,
+    "k4_affine_gives_same_24": true,
+    "k4_induced_class_closed": true,
+    "k4_induced_preserve_matchings": true,
+    "k4_matching_preservation_not_sufficient": true,
+    "k4_non_induced_witness_breaks_matchings": true,
+    "k4_s4_to_s6_faithful": true,
+    "pp_fence_all_6_in_gl_2_2": true,
+    "pp_fence_all_6_preserve_xor_third": true,
+    "s_flip_is_symmetry": true,
+    "s_partial_flip_breaks_admission": true
+  },
+  "scope": "abstract finite group machinery over F_2; no Events, no SFP codec, no OT evaluator",
+  "self_contained": "imports nothing beyond the standard library; does not import sfp.py, conformance.py or topographo",
+  "structure_preserving_transformations": {
+    "FFF": {
+      "api": "groups.gl_3_2(), groups.apply_fff(pi, point), groups.compose_perm, groups.invert_perm",
+      "group": "GL(3,2)",
+      "order": 168,
+      "preserves": "pi(a XOR b) == pi(a) XOR pi(b); the 7 Fano lines are permuted among themselves"
+    },
+    "K4_edges": {
+      "api": "groups.induced_edge_permutation(vertex_perm), groups.is_structure_preserving(edge_perm)",
+      "group": "image of S4 in S6",
+      "order": 24,
+      "preserves": "K4 incidence and the 3 opposite-edge matchings; the other 696 edge permutations do not"
+    },
+    "S": {
+      "api": "groups.flip_s(s)",
+      "group": "Z/2 global bit flip",
+      "optional": true,
+      "order": 2,
+      "preserves": "admission (equal S) and forcing (copies S), provided the flip is applied globally and consistently"
+    },
+    "not_a_transformation": {
+      "candidate": "permutation of the three nonzero pp values alone",
+      "see": "groups.pp_permutations_preserve_xor_third",
+      "verdict": "REJECTED as a scramble; it is a symmetry (GL(2,2) ~= S3)"
+    },
+    "pp": {
+      "api": "groups.agl_2_2(), groups.apply_affine(element, q), groups.pp_displacement_image(A, d)",
+      "group": "AGL(2,2) ~= S4 on chambers",
+      "order": 24,
+      "preserves": "phi(q) = A q XOR b with displacements transforming as d -> A d (covariance phi(q XOR d) XOR phi(q) == A d)"
+    }
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_relational_laws": [],
+    "count_disagreements": [],
+    "statement": "PASS - group orders and the Arm C rejection predicate certified"
+  }
+}

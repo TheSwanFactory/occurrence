@@ -1,0 +1,866 @@
+{
+  "architecture": {
+    "bottom_form": "Linear(64 -> 32) -> ReLU -> Linear(-> 1)",
+    "does_not_own": [
+      "the training loop",
+      "the metrics suite",
+      "the deterministic baselines",
+      "the sweep driver",
+      "the representation arms (arms.py)"
+    ],
+    "encoder_pipeline": [
+      "tokens (tokens_per_event x token_dim)",
+      "adapter Linear(token_dim -> 32)  [arm-specific ONLY in its input width]",
+      "shared trunk Linear(32 -> 64) -> ReLU -> Linear(64 -> 32)",
+      "mean pooling over the tokens_per_event tokens",
+      "u_e in R^32"
+    ],
+    "flop_convention": "2 FLOPs per multiply-accumulate in a matmul, 1 FLOP per bias add, 1 FLOP per elementwise op; ReLU counted as free. Analytic, not measured, because wall-clock is not replayable and must not enter the artifact.",
+    "owns": [
+      "the shared candidate-scorer architecture",
+      "the mechanical proof of its structural properties",
+      "the finite-penalty masking helper"
+    ],
+    "pair_form": "concat(u_a + u_b, u_a * u_b, |u_a - u_b|) -> Linear -> ReLU -> Linear -> R^64",
+    "param_counts_reference_arm": {
+      "adapter": 544,
+      "bottom": 2113,
+      "encoder_total": 4736,
+      "pair": 10368,
+      "rel": 3106,
+      "shared_trunk": 4192,
+      "total": 20323
+    },
+    "param_shapes_reference_arm": [
+      {
+        "name": "bottom.net.0.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "bottom.net.0.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "bottom.net.2.bias",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "bottom.net.2.weight",
+        "numel": 32,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "encoder.adapter.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "encoder.adapter.weight",
+        "numel": 512,
+        "shape": [
+          32,
+          16
+        ]
+      },
+      {
+        "name": "encoder.trunk.0.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "encoder.trunk.0.weight",
+        "numel": 2048,
+        "shape": [
+          64,
+          32
+        ]
+      },
+      {
+        "name": "encoder.trunk.2.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "encoder.trunk.2.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "pair.net.0.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "pair.net.0.weight",
+        "numel": 6144,
+        "shape": [
+          64,
+          96
+        ]
+      },
+      {
+        "name": "pair.net.2.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "pair.net.2.weight",
+        "numel": 4096,
+        "shape": [
+          64,
+          64
+        ]
+      },
+      {
+        "name": "rel.key.weight",
+        "numel": 1024,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "rel.log_scale",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.offset",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.query.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "rel.query.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      }
+    ],
+    "rel_form": "bilinear: <query(pair), key(u_c)> * exp(log_scale) + offset; the only candidate-facing parameters are the shared key map",
+    "schematic": [
+      "u_a = Enc(rep(a)); u_b = Enc(rep(b)); u_c = Enc(rep(c))",
+      "pair = SymmetricPair(u_a, u_b)",
+      "score(c | a,b) = Rel(pair, u_c)",
+      "score(bottom | a,b) = Bottom(pair)"
+    ],
+    "slot_layout": {
+      "bottom_is_distinct_slot": true,
+      "bottom_is_not_event_zero": true,
+      "bottom_slot": 84,
+      "candidate_alignment": "slot i is candidate Event i in the task.py catalogue order",
+      "candidate_slots": [
+        0,
+        83
+      ],
+      "n_slots": 85
+    }
+  },
+  "arm_interface": {
+    "arm_names": [
+      "A_native",
+      "B_sfp",
+      "C_scrambled",
+      "D_relabeled",
+      "E_opaque"
+    ],
+    "design_choice": "arms.py is authored in parallel and is NOT imported. This module codes against the coordinator's frozen contract via a structural protocol and self-tests against deterministic SyntheticArm stand-ins, so it is testable today and accepts the real arms unchanged.",
+    "fields": [
+      "name",
+      "tokens",
+      "token_dim",
+      "tokens_per_event",
+      "exposes",
+      "forbids",
+      "metadata",
+      "sha256()"
+    ],
+    "placeholder_shapes": [
+      {
+        "arm": "A_native",
+        "token_dim_placeholder": 16,
+        "tokens_per_event": 1
+      },
+      {
+        "arm": "B_sfp",
+        "token_dim_placeholder": 12,
+        "tokens_per_event": 2
+      },
+      {
+        "arm": "C_scrambled",
+        "token_dim_placeholder": 12,
+        "tokens_per_event": 2
+      },
+      {
+        "arm": "D_relabeled",
+        "token_dim_placeholder": 12,
+        "tokens_per_event": 2
+      },
+      {
+        "arm": "E_opaque",
+        "token_dim_placeholder": 16,
+        "tokens_per_event": 1
+      }
+    ],
+    "protocol": "ArmLike (structural / duck-typed)"
+  },
+  "bottom_option": {
+    "bottom_column_comes_from_bottom_head": true,
+    "bottom_head_parameters": [
+      "bottom.net.0.bias",
+      "bottom.net.0.weight",
+      "bottom.net.2.bias",
+      "bottom.net.2.weight"
+    ],
+    "bottom_is_not_algebraically_zero": true,
+    "bottom_slot": 84,
+    "bottom_slot_is_not_zero": true,
+    "bottom_slot_outside_candidate_range": true,
+    "layout": {
+      "bottom_is_distinct_slot": true,
+      "bottom_is_not_event_zero": true,
+      "bottom_slot": 84,
+      "candidate_alignment": "slot i is candidate Event i in the task.py catalogue order",
+      "candidate_slots": [
+        0,
+        83
+      ],
+      "n_slots": 85
+    },
+    "statement": "BOTTOM occupies slot n_candidates, is produced by its own head from the pair code, takes nonzero values, and competes in the same softmax as all candidates. Event index 0 keeps slot 0 as a genuine candidate."
+  },
+  "capacity_ledger": {
+    "accounting": "Every arm shares one identical stack after projection into the common latent width (32): trunk, SymmetricPair, Rel and Bottom have byte-identical parameter shapes and counts in all five arms. The ONLY difference is the adapter's first weight matrix, whose size is token_dim * common_width + common_width. So the whole 128-parameter spread is forced by input dimensionality and none of it is a capacity advantage in the shared relational machinery.",
+    "adapter_closed_form": [
+      {
+        "adapter_params": 544,
+        "arm": "A_native",
+        "closed_form": "16 * 32 + 32",
+        "matches_closed_form": true
+      },
+      {
+        "adapter_params": 416,
+        "arm": "B_sfp",
+        "closed_form": "12 * 32 + 32",
+        "matches_closed_form": true
+      },
+      {
+        "adapter_params": 416,
+        "arm": "C_scrambled",
+        "closed_form": "12 * 32 + 32",
+        "matches_closed_form": true
+      },
+      {
+        "adapter_params": 416,
+        "arm": "D_relabeled",
+        "closed_form": "12 * 32 + 32",
+        "matches_closed_form": true
+      },
+      {
+        "adapter_params": 544,
+        "arm": "E_opaque",
+        "closed_form": "16 * 32 + 32",
+        "matches_closed_form": true
+      }
+    ],
+    "adapter_params_spread": 128,
+    "no_padding_declaration": "No padding or dimensional equalisation is applied. Token widths are passed to the adapter as the arms declare them; the spread is reported rather than hidden. Equalising by padding would misstate how much information each arm's tokens carry, which is precisely the variable under test.",
+    "placeholder_note": "token_dim values are PLACEHOLDERS pending arms.py, which is authored in parallel and deliberately not imported. The closed form above is exact, so substituting the real widths changes only the adapter row and the reported spread, never the shared stack or any structural conclusion.",
+    "rows": [
+      {
+        "adapter_params": 544,
+        "arm": "A_native",
+        "bottom_params": 2113,
+        "forward_flops": {
+          "batch": 1,
+          "bottom": 4193,
+          "encode_catalogue": 784896,
+          "pair": 20704,
+          "rel": 181704,
+          "total": 991497
+        },
+        "pair_params": 10368,
+        "rel_params": 3106,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "token_dim_is_placeholder": true,
+        "tokens_per_event": 1,
+        "total_trainable_params": 20323
+      },
+      {
+        "adapter_params": 416,
+        "arm": "B_sfp",
+        "bottom_params": 2113,
+        "forward_flops": {
+          "batch": 1,
+          "bottom": 4193,
+          "encode_catalogue": 1532160,
+          "pair": 20704,
+          "rel": 181704,
+          "total": 1738761
+        },
+        "pair_params": 10368,
+        "rel_params": 3106,
+        "shared_trunk_params": 4192,
+        "token_dim": 12,
+        "token_dim_is_placeholder": true,
+        "tokens_per_event": 2,
+        "total_trainable_params": 20195
+      },
+      {
+        "adapter_params": 416,
+        "arm": "C_scrambled",
+        "bottom_params": 2113,
+        "forward_flops": {
+          "batch": 1,
+          "bottom": 4193,
+          "encode_catalogue": 1532160,
+          "pair": 20704,
+          "rel": 181704,
+          "total": 1738761
+        },
+        "pair_params": 10368,
+        "rel_params": 3106,
+        "shared_trunk_params": 4192,
+        "token_dim": 12,
+        "token_dim_is_placeholder": true,
+        "tokens_per_event": 2,
+        "total_trainable_params": 20195
+      },
+      {
+        "adapter_params": 416,
+        "arm": "D_relabeled",
+        "bottom_params": 2113,
+        "forward_flops": {
+          "batch": 1,
+          "bottom": 4193,
+          "encode_catalogue": 1532160,
+          "pair": 20704,
+          "rel": 181704,
+          "total": 1738761
+        },
+        "pair_params": 10368,
+        "rel_params": 3106,
+        "shared_trunk_params": 4192,
+        "token_dim": 12,
+        "token_dim_is_placeholder": true,
+        "tokens_per_event": 2,
+        "total_trainable_params": 20195
+      },
+      {
+        "adapter_params": 544,
+        "arm": "E_opaque",
+        "bottom_params": 2113,
+        "forward_flops": {
+          "batch": 1,
+          "bottom": 4193,
+          "encode_catalogue": 784896,
+          "pair": 20704,
+          "rel": 181704,
+          "total": 991497
+        },
+        "pair_params": 10368,
+        "rel_params": 3106,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "token_dim_is_placeholder": true,
+        "tokens_per_event": 1,
+        "total_trainable_params": 20323
+      }
+    ],
+    "shared_stack_identical_across_arms": true,
+    "spread_fully_explained_by_adapter": true,
+    "total_params": {
+      "mean": 20246.2,
+      "n": 5,
+      "std": 62.70693741524936,
+      "values": [
+        20323.0,
+        20195.0,
+        20195.0,
+        20195.0,
+        20323.0
+      ]
+    },
+    "total_params_spread": 128,
+    "wall_clock_excluded": "forward wall-clock was measured and printed but is NOT serialised: it is not replayable. Analytic FLOPs carry the cost claim instead."
+  },
+  "catalogue_size_cross_check": {
+    "agrees": true,
+    "certified": 84,
+    "checked": true,
+    "declared": 84,
+    "statement": "CATALOGUE_SIZE agrees with topographo.ssd.fips_adapter.N_EVENTS"
+  },
+  "catalogue_size_independence": {
+    "distinct_param_shape_digests": [
+      "877b07296b7ace6399a506338e31a3895d1bbcb4b242f2dea7863b6185a3cc56"
+    ],
+    "distinct_total_params": [
+      20323
+    ],
+    "output_slots_track_catalogue_size": true,
+    "param_count_independent_of_catalogue_size": true,
+    "param_shapes_independent_of_catalogue_size": true,
+    "probes": [
+      {
+        "bottom_slot": 40,
+        "n_candidates": 40,
+        "n_output_slots": 41,
+        "param_shape_digest": "877b07296b7ace6399a506338e31a3895d1bbcb4b242f2dea7863b6185a3cc56",
+        "total_params": 20323
+      },
+      {
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "param_shape_digest": "877b07296b7ace6399a506338e31a3895d1bbcb4b242f2dea7863b6185a3cc56",
+        "total_params": 20323
+      },
+      {
+        "bottom_slot": 120,
+        "n_candidates": 120,
+        "n_output_slots": 121,
+        "param_shape_digest": "877b07296b7ace6399a506338e31a3895d1bbcb4b242f2dea7863b6185a3cc56",
+        "total_params": 20323
+      }
+    ],
+    "statement": "the same architecture, at the same parameter count and the same parameter shapes, scores catalogues of [40, 84, 120] candidates; only the number of output slots changes, because slots are computed, not parameterised"
+  },
+  "config": {
+    "activation": "ReLU",
+    "bottom_hidden": 32,
+    "common_width": 32,
+    "latent": 32,
+    "mask_convention": "large finite penalty via masked_fill(~legal, -MASK_PENALTY), not -inf, so a fully masked row yields a finite softmax not a NaN",
+    "mask_penalty": 1000000000.0,
+    "pair_primitives": [
+      "sum",
+      "product",
+      "abs_difference"
+    ],
+    "pair_width": 64,
+    "pooling": "mean",
+    "rel_width": 32,
+    "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+    "trunk_hidden": 64
+  },
+  "determinism": {
+    "different_seed_differs": true,
+    "digest_rounding_decimals": 6,
+    "param_digest": "8ec86757a5b132ec1ccdc2cf7737602ca9692b75e671a4bb8fe24db1d8cea01a",
+    "same_seed_reproducible": true,
+    "seed": 0,
+    "stand_in_arm_reproducible": true,
+    "statement": "torch.manual_seed(seed) then np.random.seed(seed) at the top of build_scorer; two constructions at the same seed agree to the 6-decimal digest, a different seed does not. The digest is torch-version dependent by nature, so the torch version is recorded in provenance."
+  },
+  "differentiability": {
+    "every_parameter_receives_gradient": true,
+    "loss_is_finite": true,
+    "note": "a smoke check that the architecture trains at all; the training loop itself is owned by a later task and is deliberately absent here",
+    "parameters_with_all_zero_gradient": [],
+    "parameters_without_gradient": []
+  },
+  "digests": {
+    "architecture": "357bb6d7df820f7f17f8158aac71fc511cbc2d34b30d23f72063b7757b37564d",
+    "capacity_ledger": "69588e2175892816ff8430297a4d734aef24167b6b966c07ef8ff6c48ed1acf4",
+    "config": "10a2acdf1a482b9b8ebe85b6323956b9301a14959897f8f5ecb528a1e3807b6e",
+    "manifest": "f76a34fd42d0a0d8bcd8ac5c6fa782893029b74cca629f3b166bd8096af99f2c",
+    "structural_laws": "8caae10e0c641abd3ffd9ed0cce4569a94a6d1052677722fc9fb1e4d4c27a6ab"
+  },
+  "fences": [
+    "No per-Event free output column: candidate scoring is relational.",
+    "Bottom is an explicit competing option, not an algebraic zero and not Event index 0.",
+    "Swapping the two input Events is a symmetry of the scorer by construction.",
+    "The same candidate catalogue is scored in every arm.",
+    "Arm-specific adapters differ only as forced by input dimensionality."
+  ],
+  "masking": {
+    "bottom_only_row_picks_bottom": true,
+    "fully_masked_row_is_finite": true,
+    "fully_masked_softmax_has_no_nan": true,
+    "fully_masked_softmax_sums_to_one": 0.0,
+    "mask_penalty": 1000000000.0,
+    "rationale": "matches experiments/tlm_multitoken/policy.py: masked_fill with a large finite -MASK_PENALTY rather than -inf, specifically so a row with no legal slot yields a finite softmax instead of a NaN that would poison the whole backward pass",
+    "uses_minus_inf": false
+  },
+  "module": "experiments/sfp_representation/scorer.py",
+  "no_per_event_output_identity": {
+    "any_arm_token_dim_equals_catalogue_size": false,
+    "buffer_requires_grad": false,
+    "candidate_facing_parameters": [
+      "rel.key.weight",
+      "rel.log_scale",
+      "rel.offset",
+      "rel.query.bias",
+      "rel.query.weight"
+    ],
+    "candidate_tokens_are_a_buffer": true,
+    "catalogue_size": 84,
+    "how_checked": "every tensor in named_parameters() is inspected and rejected if any of its dimensions equals the catalogue size; ScorerConfig separately refuses any width equal to the catalogue size so the check cannot be satisfied vacuously by a coincidence",
+    "input_role_dims": [
+      {
+        "arm": "A_native",
+        "equals_catalogue_size": false,
+        "token_dim": 16
+      },
+      {
+        "arm": "B_sfp",
+        "equals_catalogue_size": false,
+        "token_dim": 12
+      },
+      {
+        "arm": "C_scrambled",
+        "equals_catalogue_size": false,
+        "token_dim": 12
+      },
+      {
+        "arm": "D_relabeled",
+        "equals_catalogue_size": false,
+        "token_dim": 12
+      },
+      {
+        "arm": "E_opaque",
+        "equals_catalogue_size": false,
+        "token_dim": 16
+      }
+    ],
+    "limits": "a shape check is necessary, not sufficient. It cannot see a per-Event identity smuggled in as an INPUT dimension: an arm whose token_dim equals the catalogue size (a one-hot arm) would give the adapter one learnable column per Event. That case is reported separately under input_role_dims and must be refused at the arm level, not here. Nor can it prove the learner has not memorised a lookup inside the shared weights; only the held-out folds can speak to that.",
+    "no_parameter_carries_catalogue_dimension": true,
+    "parameter_shapes": [
+      {
+        "name": "bottom.net.0.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "bottom.net.0.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "bottom.net.2.bias",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "bottom.net.2.weight",
+        "numel": 32,
+        "shape": [
+          1,
+          32
+        ]
+      },
+      {
+        "name": "encoder.adapter.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "encoder.adapter.weight",
+        "numel": 512,
+        "shape": [
+          32,
+          16
+        ]
+      },
+      {
+        "name": "encoder.trunk.0.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "encoder.trunk.0.weight",
+        "numel": 2048,
+        "shape": [
+          64,
+          32
+        ]
+      },
+      {
+        "name": "encoder.trunk.2.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "encoder.trunk.2.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      },
+      {
+        "name": "pair.net.0.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "pair.net.0.weight",
+        "numel": 6144,
+        "shape": [
+          64,
+          96
+        ]
+      },
+      {
+        "name": "pair.net.2.bias",
+        "numel": 64,
+        "shape": [
+          64
+        ]
+      },
+      {
+        "name": "pair.net.2.weight",
+        "numel": 4096,
+        "shape": [
+          64,
+          64
+        ]
+      },
+      {
+        "name": "rel.key.weight",
+        "numel": 1024,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "rel.log_scale",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.offset",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.query.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "rel.query.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      }
+    ],
+    "parameters_with_catalogue_dimension": []
+  },
+  "provenance": {
+    "arms_coupling": "arms.py is NOT imported. This module validates any object against the ArmLike protocol and self-tests against SyntheticArm stand-ins.",
+    "base_commit": "174925310ca1ff15948b17e336c787525640dc6c",
+    "base_commit_note": "pinned, not read from live HEAD, so the artifact stays replayable",
+    "numpy_version": "2.5.1",
+    "param_digest_caveat": "the recorded parameter digest depends on the torch RNG and therefore on the torch version above; every other serialised number is torch-version independent",
+    "topographo_version": "0.8.2",
+    "torch_scope_note": "torch is used only inside experiment scripts; pyproject.toml keeps numpy as the sole package dependency and torch>=2.0 is declared in experiments/tlm_fixed_head/requirements.txt",
+    "torch_version": "2.14.0",
+    "upstream_modules_not_modified": [
+      "experiments/sfp_representation/conformance.py",
+      "experiments/sfp_representation/folds.py",
+      "experiments/sfp_representation/groups.py",
+      "experiments/sfp_representation/sfp.py",
+      "experiments/sfp_representation/task.py"
+    ]
+  },
+  "same_candidate_catalogue": {
+    "all_same_output_width": true,
+    "all_score_the_same_catalogue": true,
+    "all_share_identical_stack_shapes": true,
+    "rows": [
+      {
+        "arm": "A_native",
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "shared_stack_shape_digest": "f02efa22ebb7918c5ec2b0b20cfdce826d6b9e8afebd23c1876f04ff32a6f509"
+      },
+      {
+        "arm": "B_sfp",
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "shared_stack_shape_digest": "f02efa22ebb7918c5ec2b0b20cfdce826d6b9e8afebd23c1876f04ff32a6f509"
+      },
+      {
+        "arm": "C_scrambled",
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "shared_stack_shape_digest": "f02efa22ebb7918c5ec2b0b20cfdce826d6b9e8afebd23c1876f04ff32a6f509"
+      },
+      {
+        "arm": "D_relabeled",
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "shared_stack_shape_digest": "f02efa22ebb7918c5ec2b0b20cfdce826d6b9e8afebd23c1876f04ff32a6f509"
+      },
+      {
+        "arm": "E_opaque",
+        "bottom_slot": 84,
+        "n_candidates": 84,
+        "n_output_slots": 85,
+        "shared_stack_shape_digest": "f02efa22ebb7918c5ec2b0b20cfdce826d6b9e8afebd23c1876f04ff32a6f509"
+      }
+    ],
+    "statement": "all five arms emit 84 candidate slots plus BOTTOM, through modules with identical parameter shapes downstream of the adapter"
+  },
+  "serialisation_policy": "weights are never serialised; only architecture, hyperparameters, parameter counts, analytic FLOPs, symmetry discrepancies rounded to 12 decimals, and digests. Wall-clock is printed but never stored, so replay is byte-identical.",
+  "structural_laws": {
+    "bottom_is_a_distinct_slot": true,
+    "bottom_is_not_algebraically_zero": true,
+    "candidate_tokens_are_a_buffer": true,
+    "capacity_spread_fully_explained_by_adapter": true,
+    "catalogue_size_agrees_with_certified_source": true,
+    "different_seed_differs": true,
+    "differentiable_end_to_end": true,
+    "mask_keeps_fully_masked_row_finite": true,
+    "no_arm_token_dim_equals_catalogue_size": true,
+    "no_parameter_carries_catalogue_dimension": true,
+    "param_count_independent_of_catalogue_size": true,
+    "param_shapes_independent_of_catalogue_size": true,
+    "same_catalogue_scored_in_every_arm": true,
+    "same_seed_reproducible": true,
+    "shared_stack_identical_across_arms": true,
+    "swap_symmetry_exact": true,
+    "swap_symmetry_zero_discrepancy": true,
+    "token_pooling_order_invariant": true
+  },
+  "swap_symmetry": {
+    "all_exactly_symmetric": true,
+    "max_abs_discrepancy_overall": 0.0,
+    "per_arm_end_to_end": {
+      "A_native": {
+        "bottom_score_max_abs_discrepancy": 0.0,
+        "candidate_scores_max_abs_discrepancy": 0.0,
+        "ordered_pairs_checked": 7056,
+        "pair_bitwise_identical": true,
+        "pair_max_abs_discrepancy": 0.0,
+        "scores_bitwise_identical": true
+      },
+      "B_sfp": {
+        "bottom_score_max_abs_discrepancy": 0.0,
+        "candidate_scores_max_abs_discrepancy": 0.0,
+        "ordered_pairs_checked": 7056,
+        "pair_bitwise_identical": true,
+        "pair_max_abs_discrepancy": 0.0,
+        "scores_bitwise_identical": true
+      },
+      "C_scrambled": {
+        "bottom_score_max_abs_discrepancy": 0.0,
+        "candidate_scores_max_abs_discrepancy": 0.0,
+        "ordered_pairs_checked": 7056,
+        "pair_bitwise_identical": true,
+        "pair_max_abs_discrepancy": 0.0,
+        "scores_bitwise_identical": true
+      },
+      "D_relabeled": {
+        "bottom_score_max_abs_discrepancy": 0.0,
+        "candidate_scores_max_abs_discrepancy": 0.0,
+        "ordered_pairs_checked": 7056,
+        "pair_bitwise_identical": true,
+        "pair_max_abs_discrepancy": 0.0,
+        "scores_bitwise_identical": true
+      },
+      "E_opaque": {
+        "bottom_score_max_abs_discrepancy": 0.0,
+        "candidate_scores_max_abs_discrepancy": 0.0,
+        "ordered_pairs_checked": 7056,
+        "pair_bitwise_identical": true,
+        "pair_max_abs_discrepancy": 0.0,
+        "scores_bitwise_identical": true
+      }
+    },
+    "primitives": {
+      "justification": "IEEE-754 addition and multiplication are commutative bitwise, and u_a - u_b is the exact negation of u_b - u_a so abs erases order; float associativity is never relied on. Exact bitwise equality is therefore expected and no tolerance is claimed.",
+      "names": [
+        "sum",
+        "product",
+        "abs_difference"
+      ],
+      "random_bitwise_identical": true,
+      "random_max_abs_discrepancy": 0.0,
+      "random_pairs_checked": 4096
+    },
+    "token_slot_pooling": {
+      "bitwise_identical": true,
+      "events_checked": 84,
+      "max_abs_discrepancy": 0.0,
+      "pooling": "mean",
+      "statement": "the two token slots share one set of trunk weights and are pooled by an order-invariant reduction, so an arm presenting an Event as two endpoint presentations is endpoint-symmetric by construction",
+      "tokens_per_event": 2
+    }
+  },
+  "task": "Issue 009 Task 7 \u2014 the shared candidate scorer",
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "shared candidate scorer with construction-level swap symmetry and no per-Event output identity"
+  }
+}

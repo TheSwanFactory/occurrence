@@ -1,0 +1,3879 @@
+{
+  "alignment": {
+    "arms_with_84_entries": {
+      "agrees": true,
+      "expected": [
+        "A_native",
+        "B_sfp",
+        "C_scrambled",
+        "D_relabeled",
+        "E_opaque"
+      ],
+      "observed": [
+        "A_native",
+        "B_sfp",
+        "C_scrambled",
+        "D_relabeled",
+        "E_opaque"
+      ],
+      "source": "index alignment to the task.py catalogue order"
+    },
+    "catalogue_sha256": {
+      "agrees": true,
+      "expected": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+      "observed": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+      "source": "task.Catalogue.sha256()"
+    },
+    "index_legend_sample": [
+      {
+        "S": 0,
+        "habitat": "P=3,delta=+1",
+        "index": 0,
+        "ray": "1:1,10:-1"
+      },
+      {
+        "S": 1,
+        "habitat": "P=3,delta=-1",
+        "index": 1,
+        "ray": "1:1,10:1"
+      },
+      {
+        "S": 0,
+        "habitat": "P=7,delta=+1",
+        "index": 41,
+        "ray": "4:1,11:1"
+      },
+      {
+        "S": 0,
+        "habitat": "P=1,delta=+1",
+        "index": 82,
+        "ray": "7:1,14:-1"
+      },
+      {
+        "S": 1,
+        "habitat": "P=1,delta=-1",
+        "index": 83,
+        "ray": "7:1,14:1"
+      }
+    ],
+    "order_source": "topographo.ssd.fips_adapter.EventIndex.build() == fips_basic.EVENTS (CI-pinned, N_EVENTS = 84); blocks ordered by the stable textual block key, never by set/dict iteration order or hash()",
+    "statement": "all arms share the frozen catalogue order, so token index i means the same Event in every arm and the scorer may index them interchangeably"
+  },
+  "arm_a_fence": {
+    "chart_invariance_proof": {
+      "arm_a_depends_on_the_chart": false,
+      "every_sfp_field_moves": true,
+      "sfp_field_changes_under_arm_d_recharting": {
+        "FFF": true,
+        "PP": true,
+        "S": true,
+        "pp": true
+      },
+      "statement": "Arm A is built from the ray alone, hence invariant under the Arm D re-charting; every SFP field moves under that re-charting; a chart-invariant quantity cannot equal a chart-dependent one, so no Arm A slot is an SFP field indicator"
+    },
+    "fence_character": "Arm A tokens are a pure function of the ray. The fence is a PROVENANCE fence, not an information-theoretic one: the ray determines the Event and therefore its habitat, so 'no SFP field exposed' means no code UNIT is allocated and no chart-dependent quantity is emitted \u2014 not that the habitat is unknowable.",
+    "injective_on_the_catalogue": true,
+    "not_a_binary_indicator_code": true,
+    "sfp_units_allocated_in_arm_a": {
+      "agrees": true,
+      "expected": 0,
+      "observed": 0,
+      "source": "Arm A layout"
+    },
+    "token_dim": {
+      "agrees": true,
+      "expected": 16,
+      "observed": 16,
+      "source": "the 16 native ray coordinates"
+    },
+    "tokens_are_a_pure_function_of_the_ray": true,
+    "value_range": [
+      -1.0,
+      0.0,
+      1.0
+    ]
+  },
+  "arm_c_rejection_proof": {
+    "counting_context": {
+      "induced": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "groups.induced_edge_permutations()"
+      },
+      "not_structure_preserving": {
+        "agrees": true,
+        "expected": 696,
+        "observed": 696,
+        "source": "720 - 24, the pool Arm C draws from"
+      },
+      "statement": "6! = 720 total, 24 induced, 696 not structure preserving",
+      "total_edge_permutations": {
+        "agrees": true,
+        "expected": 720,
+        "observed": 720,
+        "source": "6! permutations of the 6 K4 edges"
+      }
+    },
+    "destruction": {
+      "every_habitat_destroyed": true,
+      "habitats": 14,
+      "habitats_with_relation_destroyed": 14,
+      "note": "measured per habitat so that no habitat can hide behind a global count. Two habitats show ZERO admission disagreements while losing ALL 24 forced thirds: those scrambles are the matching-partition preserving, non-induced permutations, which carry each K4 star (a certified block) onto a K4 triangle. Adjacency survives, the block structure does not. That is trap 2 observed in the data, and it is why is_structure_preserving \u2014 not partition preservation \u2014 is the rejection test.",
+      "per_habitat": [
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 6,
+          "forced_third_destroyed": 18,
+          "habitat": "P=1,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 12,
+          "forced_third_destroyed": 12,
+          "habitat": "P=1,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=2,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=2,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 12,
+          "forced_third_destroyed": 12,
+          "habitat": "P=3,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=3,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 0,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=4,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 6,
+          "forced_third_destroyed": 18,
+          "habitat": "P=4,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 6,
+          "forced_third_destroyed": 18,
+          "habitat": "P=5,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 12,
+          "forced_third_destroyed": 12,
+          "habitat": "P=5,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 12,
+          "forced_third_destroyed": 12,
+          "habitat": "P=6,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 8,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=6,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 12,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=7,delta=-1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        },
+        {
+          "admission_disagreements": 0,
+          "forced_third_agreements": 0,
+          "forced_third_destroyed": 24,
+          "habitat": "P=7,delta=+1",
+          "native_admit_pairs": 24,
+          "relation_destroyed_in_this_habitat": true
+        }
+      ]
+    },
+    "distinct_permutations_chosen": 14,
+    "edge_convention": "groups.EDGES = 01,02,03,12,13,23; permutations are in image form on groups.EDGE_INDEX indices",
+    "every_habitat_is_non_automorphic": true,
+    "habitats": 14,
+    "matching_partition_preserving_habitats": 2,
+    "per_habitat": [
+      {
+        "edge_permutation": [
+          0,
+          5,
+          1,
+          3,
+          4,
+          2
+        ],
+        "encoded": "051342",
+        "habitat": "P=1,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 95,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "d2316c81ab4917a59a788f1473eb843720bf53714cf70ec1b22a91ae0dba8d07"
+      },
+      {
+        "edge_permutation": [
+          4,
+          1,
+          3,
+          2,
+          5,
+          0
+        ],
+        "encoded": "413250",
+        "habitat": "P=1,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 502,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "1823e977ee4bbc08799efd528a93dd59dc22e6d91be663faedcb35f4c0cc1456"
+      },
+      {
+        "edge_permutation": [
+          2,
+          0,
+          3,
+          1,
+          5,
+          4
+        ],
+        "encoded": "203154",
+        "habitat": "P=2,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 238,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "df1be6ea0cf49e8aab793bee44e7243878e00f00c812d3696c1b9ef1382e064e"
+      },
+      {
+        "edge_permutation": [
+          5,
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "encoded": "532104",
+        "habitat": "P=2,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 663,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "09e112e5f3e07117b864393f6669d070f64055a1932464670ff880b3a62e785f"
+      },
+      {
+        "edge_permutation": [
+          1,
+          5,
+          0,
+          2,
+          3,
+          4
+        ],
+        "encoded": "150234",
+        "habitat": "P=3,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 209,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "fef9ddad2fcf3413f76ba381cb86b5791bec2417460b7a79be9074c46cff4999"
+      },
+      {
+        "edge_permutation": [
+          2,
+          3,
+          0,
+          1,
+          5,
+          4
+        ],
+        "encoded": "230154",
+        "habitat": "P=3,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 279,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "31ff3d991fb20fc3786c3a5f528c11b56b53186ff3f208e520e69e3a2f248b97"
+      },
+      {
+        "edge_permutation": [
+          1,
+          2,
+          5,
+          0,
+          3,
+          4
+        ],
+        "encoded": "125034",
+        "habitat": "P=4,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 156,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": true,
+        "seed_sha256": "844d276fef19f4f3403619442894755307bb04139f3da3064b53d7ddc1f18084"
+      },
+      {
+        "edge_permutation": [
+          0,
+          5,
+          2,
+          1,
+          4,
+          3
+        ],
+        "encoded": "052143",
+        "habitat": "P=4,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 99,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "dc394a8d6828465aed0b00a6c27d6eb4de61f5049ce969ae6858cb64b089aa0b"
+      },
+      {
+        "edge_permutation": [
+          1,
+          2,
+          4,
+          5,
+          0,
+          3
+        ],
+        "encoded": "124503",
+        "habitat": "P=5,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 154,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "bf98680c164a20f5f26e63de68c3105c754b9bd0a3f87eaae47f9045c8ac76aa"
+      },
+      {
+        "edge_permutation": [
+          1,
+          0,
+          2,
+          5,
+          3,
+          4
+        ],
+        "encoded": "102534",
+        "habitat": "P=5,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 119,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "0d8639bb14993df5cfde1b458ccf45af7db140aa77db71d68d0ee46883ebe58f"
+      },
+      {
+        "edge_permutation": [
+          1,
+          5,
+          3,
+          0,
+          2,
+          4
+        ],
+        "encoded": "153024",
+        "habitat": "P=6,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 221,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "6f730fd7375676d9e4c01a2b3e092c318f139e83186aa96f1b013b1143a60e55"
+      },
+      {
+        "edge_permutation": [
+          2,
+          4,
+          0,
+          5,
+          3,
+          1
+        ],
+        "encoded": "240531",
+        "habitat": "P=6,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 307,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "f063f0ae0e4307e6ca3baf3c9bf321d834e1537eb52a7f0600bdab1cf68e50eb"
+      },
+      {
+        "edge_permutation": [
+          3,
+          4,
+          5,
+          1,
+          2,
+          0
+        ],
+        "encoded": "345120",
+        "habitat": "P=7,delta=-1",
+        "is_structure_preserving": false,
+        "pool_index": 438,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+        "seed_sha256": "0f3958ede3ae0342cb216a98748919d2b56b7244bd2e0927fe2d2397aa5e7fce"
+      },
+      {
+        "edge_permutation": [
+          1,
+          3,
+          0,
+          5,
+          2,
+          4
+        ],
+        "encoded": "130524",
+        "habitat": "P=7,delta=+1",
+        "is_structure_preserving": false,
+        "pool_index": 166,
+        "preserves_matching_partition_DIAGNOSTIC_ONLY": true,
+        "seed_sha256": "61ab9e2eadb600be352ba0bf2da359e3ca2491d050800f724def56c51894b7ee"
+      }
+    ],
+    "rejection_test": "groups.is_structure_preserving(perm) == False \u2014 membership in the 24-element class induced by K4 vertex automorphisms / affine AGL(2,2) relabelings. Matching-partition preservation is NOT the test (48 of 720 preserve the partition, only 24 are induced) and is reported only as a diagnostic.",
+    "structure_preserving_habitats": 0,
+    "why_matching_partition_is_not_the_test": "NOT USED AS THE TEST. 48 of the 720 edge permutations preserve the 3-matching partition while only 24 are induced, so preservation is necessary but not sufficient. A partition-preserving non-induced permutation is still a legitimate scramble (it carries a K4 star \u2014 a certified block \u2014 onto a K4 triangle, which is not a block). Only groups.is_structure_preserving is used to reject.",
+    "why_pp_permutation_is_not_a_scramble": "NOT USED. groups.pp_permutations_preserve_xor_third certifies that all 6 permutations of the nonzero pp values lie in GL(2,2) ~= S3 and preserve d3 = d1 XOR d2; its conclusion field reads 'REJECTED AS A SCRAMBLE ... measures nothing'. A pp-value permutation is a symmetry."
+  },
+  "arm_d_preservation_proof": {
+    "all_match_the_affine_prediction": true,
+    "character": "Arm D is an EQUIVALENCE / BASIS control. It destroys nothing: the certified admit/force relation is preserved exactly on all 7056 ordered pairs (see the relation report).",
+    "every_habitat_is_structure_preserving": true,
+    "is_bijection_on_the_84_events": true,
+    "mirror_of_arm_c": "Arm C requires is_structure_preserving == False on every habitat; Arm D requires True on every habitat. Same predicate, opposite verdict.",
+    "per_habitat": [
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=1,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=1,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=2,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=2,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=3,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=3,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=4,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=4,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=5,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=5,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=6,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=6,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=7,delta=-1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      },
+      {
+        "edge_permutation": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ],
+        "encoded": "403251",
+        "habitat": "P=7,delta=+1",
+        "is_structure_preserving": true,
+        "matches_the_affine_prediction": true
+      }
+    ],
+    "transformations": {
+      "FFF": {
+        "action": "FFF -> groups.apply_fff(pi, FFF); fixes 1,2,3 and swaps 4<->5, 6<->7",
+        "element_image_form": [
+          1,
+          2,
+          3,
+          5,
+          4,
+          7,
+          6
+        ],
+        "group": "GL(3,2)",
+        "selection": "the lexicographically least NON-IDENTITY element of groups.gl_3_2() in its canonical sorted order"
+      },
+      "PP_pp": {
+        "action": "PP: q -> groups.apply_affine((A, b), q) = A q XOR b;  pp: d -> groups.pp_displacement_image(A, d) = A d. The translation cancels in the displacement by the certified covariance law phi(q XOR d) XOR phi(q) == A d, so the two endpoint presentations are rebuilt COVARIANTLY rather than re-derived.",
+        "element": {
+          "A": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "b": [
+            0,
+            1
+          ]
+        },
+        "group": "AGL(2,2)",
+        "selection": "the first element of groups.agl_2_2() in canonical order with a NON-IDENTITY linear part (A != ((1,0),(0,1))) and a NONZERO translation (b != (0,0)), so that both PP and pp genuinely move"
+      },
+      "S": {
+        "action": "S -> groups.flip_s(S), applied globally and consistently to all 84",
+        "applied": true,
+        "group": "Z/2",
+        "why_consistent": "admission requires equal S and forcing copies S, so a global flip is a symmetry; groups.global_s_flip_report certifies that a one-sided partial flip is NOT"
+      },
+      "character": "EQUIVALENCE / BASIS CONTROL, not a destructive ablation: Arm D is a different chart for the same structure, and the certified admit/force relation is preserved exactly."
+    }
+  },
+  "arms": {
+    "A_native": {
+      "construction": "token = tuple(float(c) for c in topographo.ssd.projective.canonicalize(event)), native coordinate order 0..15, one token per Event",
+      "declared_projective_normalization": "topographo.ssd.projective.canonicalize(event): scale the exact rational 16-vector by 1/c where c is its FIRST NONZERO coefficient, so the first nonzero coefficient of the representative is exactly 1. Coordinates are then taken in native index order 0..15 and cast to float. No reordering, no rescaling, no extra channel.",
+      "exactness": "Ground truth and final result identity remain exact certified Event identity via topographo.ssd.projective.equivalent \u2014 never float proximity and never a soft ranking. This module only emits inputs; the float cast of Arm A is additionally verified LOSSLESS (every canonical coefficient lies in {-1, 0, 1}), so no arm introduces an inexact identity anywhere.",
+      "float_cast_is_lossless": true,
+      "leading_coefficient_is_one_for_all_84": true,
+      "no_sfp_field": {
+        "codec_in_scope": false,
+        "sfp_units_allocated": 0,
+        "signature_admits_only_the_catalogue": true,
+        "token_dim_equals_native_ray_length": {
+          "agrees": true,
+          "expected": 16,
+          "observed": 16,
+          "source": "len(canonicalize(event))"
+        }
+      },
+      "purity": {
+        "distinct_tokens": 84,
+        "injective_on_the_catalogue": true,
+        "not_an_indicator_code": true,
+        "statement": "Arm A tokens are a pure function of the ray. The fence is a PROVENANCE fence, not an information-theoretic one: the ray determines the Event and therefore its habitat, so 'no SFP field exposed' means no code UNIT is allocated and no chart-dependent quantity is emitted \u2014 not that the habitat is unknowable.",
+        "value_range": [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      },
+      "slot_semantics": "slot k is native ray coordinate k; 16 slots, 16 coordinates, zero units allocated to S, FFF, PP or pp"
+    },
+    "B_sfp": {
+      "both_presentations_decode_to_the_same_event": 84,
+      "codes": [
+        "S=0,FFF=011,PP=00,pp=01|S=0,FFF=011,PP=01,pp=01",
+        "S=1,FFF=011,PP=00,pp=01|S=1,FFF=011,PP=01,pp=01",
+        "S=1,FFF=010,PP=00,pp=01|S=1,FFF=010,PP=01,pp=01",
+        "S=0,FFF=010,PP=00,pp=01|S=0,FFF=010,PP=01,pp=01",
+        "S=0,FFF=101,PP=00,pp=01|S=0,FFF=101,PP=01,pp=01",
+        "S=1,FFF=101,PP=00,pp=01|S=1,FFF=101,PP=01,pp=01",
+        "S=1,FFF=100,PP=00,pp=01|S=1,FFF=100,PP=01,pp=01",
+        "S=0,FFF=100,PP=00,pp=01|S=0,FFF=100,PP=01,pp=01",
+        "S=1,FFF=111,PP=00,pp=01|S=1,FFF=111,PP=01,pp=01",
+        "S=0,FFF=111,PP=00,pp=01|S=0,FFF=111,PP=01,pp=01",
+        "S=0,FFF=110,PP=00,pp=01|S=0,FFF=110,PP=01,pp=01",
+        "S=1,FFF=110,PP=00,pp=01|S=1,FFF=110,PP=01,pp=01",
+        "S=1,FFF=011,PP=10,pp=01|S=1,FFF=011,PP=11,pp=01",
+        "S=0,FFF=011,PP=10,pp=01|S=0,FFF=011,PP=11,pp=01",
+        "S=0,FFF=001,PP=00,pp=01|S=0,FFF=001,PP=01,pp=01",
+        "S=1,FFF=001,PP=00,pp=01|S=1,FFF=001,PP=01,pp=01",
+        "S=0,FFF=110,PP=00,pp=10|S=0,FFF=110,PP=10,pp=10",
+        "S=1,FFF=110,PP=00,pp=10|S=1,FFF=110,PP=10,pp=10",
+        "S=0,FFF=111,PP=00,pp=10|S=0,FFF=111,PP=10,pp=10",
+        "S=1,FFF=111,PP=00,pp=10|S=1,FFF=111,PP=10,pp=10",
+        "S=1,FFF=100,PP=00,pp=10|S=1,FFF=100,PP=10,pp=10",
+        "S=0,FFF=100,PP=00,pp=10|S=0,FFF=100,PP=10,pp=10",
+        "S=1,FFF=101,PP=00,pp=10|S=1,FFF=101,PP=10,pp=10",
+        "S=0,FFF=101,PP=00,pp=10|S=0,FFF=101,PP=10,pp=10",
+        "S=0,FFF=010,PP=10,pp=01|S=0,FFF=010,PP=11,pp=01",
+        "S=1,FFF=010,PP=10,pp=01|S=1,FFF=010,PP=11,pp=01",
+        "S=1,FFF=001,PP=10,pp=01|S=1,FFF=001,PP=11,pp=01",
+        "S=0,FFF=001,PP=10,pp=01|S=0,FFF=001,PP=11,pp=01",
+        "S=0,FFF=111,PP=00,pp=11|S=0,FFF=111,PP=11,pp=11",
+        "S=1,FFF=111,PP=00,pp=11|S=1,FFF=111,PP=11,pp=11",
+        "S=1,FFF=110,PP=00,pp=11|S=1,FFF=110,PP=11,pp=11",
+        "S=0,FFF=110,PP=00,pp=11|S=0,FFF=110,PP=11,pp=11",
+        "S=0,FFF=101,PP=00,pp=11|S=0,FFF=101,PP=11,pp=11",
+        "S=1,FFF=101,PP=00,pp=11|S=1,FFF=101,PP=11,pp=11",
+        "S=1,FFF=100,PP=00,pp=11|S=1,FFF=100,PP=11,pp=11",
+        "S=0,FFF=100,PP=00,pp=11|S=0,FFF=100,PP=11,pp=11",
+        "S=1,FFF=101,PP=10,pp=01|S=1,FFF=101,PP=11,pp=01",
+        "S=0,FFF=101,PP=10,pp=01|S=0,FFF=101,PP=11,pp=01",
+        "S=1,FFF=110,PP=01,pp=10|S=1,FFF=110,PP=11,pp=10",
+        "S=0,FFF=110,PP=01,pp=10|S=0,FFF=110,PP=11,pp=10",
+        "S=1,FFF=111,PP=01,pp=11|S=1,FFF=111,PP=10,pp=11",
+        "S=0,FFF=111,PP=01,pp=11|S=0,FFF=111,PP=10,pp=11",
+        "S=0,FFF=001,PP=00,pp=10|S=0,FFF=001,PP=10,pp=10",
+        "S=1,FFF=001,PP=00,pp=10|S=1,FFF=001,PP=10,pp=10",
+        "S=0,FFF=010,PP=00,pp=10|S=0,FFF=010,PP=10,pp=10",
+        "S=1,FFF=010,PP=00,pp=10|S=1,FFF=010,PP=10,pp=10",
+        "S=0,FFF=011,PP=00,pp=10|S=0,FFF=011,PP=10,pp=10",
+        "S=1,FFF=011,PP=00,pp=10|S=1,FFF=011,PP=10,pp=10",
+        "S=0,FFF=100,PP=10,pp=01|S=0,FFF=100,PP=11,pp=01",
+        "S=1,FFF=100,PP=10,pp=01|S=1,FFF=100,PP=11,pp=01",
+        "S=1,FFF=111,PP=01,pp=10|S=1,FFF=111,PP=11,pp=10",
+        "S=0,FFF=111,PP=01,pp=10|S=0,FFF=111,PP=11,pp=10",
+        "S=0,FFF=110,PP=01,pp=11|S=0,FFF=110,PP=10,pp=11",
+        "S=1,FFF=110,PP=01,pp=11|S=1,FFF=110,PP=10,pp=11",
+        "S=1,FFF=001,PP=01,pp=10|S=1,FFF=001,PP=11,pp=10",
+        "S=0,FFF=001,PP=01,pp=10|S=0,FFF=001,PP=11,pp=10",
+        "S=1,FFF=011,PP=00,pp=11|S=1,FFF=011,PP=11,pp=11",
+        "S=0,FFF=011,PP=00,pp=11|S=0,FFF=011,PP=11,pp=11",
+        "S=0,FFF=010,PP=00,pp=11|S=0,FFF=010,PP=11,pp=11",
+        "S=1,FFF=010,PP=00,pp=11|S=1,FFF=010,PP=11,pp=11",
+        "S=0,FFF=111,PP=10,pp=01|S=0,FFF=111,PP=11,pp=01",
+        "S=1,FFF=111,PP=10,pp=01|S=1,FFF=111,PP=11,pp=01",
+        "S=0,FFF=100,PP=01,pp=10|S=0,FFF=100,PP=11,pp=10",
+        "S=1,FFF=100,PP=01,pp=10|S=1,FFF=100,PP=11,pp=10",
+        "S=1,FFF=101,PP=01,pp=11|S=1,FFF=101,PP=10,pp=11",
+        "S=0,FFF=101,PP=01,pp=11|S=0,FFF=101,PP=10,pp=11",
+        "S=1,FFF=010,PP=01,pp=10|S=1,FFF=010,PP=11,pp=10",
+        "S=0,FFF=010,PP=01,pp=10|S=0,FFF=010,PP=11,pp=10",
+        "S=0,FFF=011,PP=01,pp=11|S=0,FFF=011,PP=10,pp=11",
+        "S=1,FFF=011,PP=01,pp=11|S=1,FFF=011,PP=10,pp=11",
+        "S=1,FFF=001,PP=00,pp=11|S=1,FFF=001,PP=11,pp=11",
+        "S=0,FFF=001,PP=00,pp=11|S=0,FFF=001,PP=11,pp=11",
+        "S=1,FFF=110,PP=10,pp=01|S=1,FFF=110,PP=11,pp=01",
+        "S=0,FFF=110,PP=10,pp=01|S=0,FFF=110,PP=11,pp=01",
+        "S=0,FFF=101,PP=01,pp=10|S=0,FFF=101,PP=11,pp=10",
+        "S=1,FFF=101,PP=01,pp=10|S=1,FFF=101,PP=11,pp=10",
+        "S=0,FFF=100,PP=01,pp=11|S=0,FFF=100,PP=10,pp=11",
+        "S=1,FFF=100,PP=01,pp=11|S=1,FFF=100,PP=10,pp=11",
+        "S=1,FFF=011,PP=01,pp=10|S=1,FFF=011,PP=11,pp=10",
+        "S=0,FFF=011,PP=01,pp=10|S=0,FFF=011,PP=11,pp=10",
+        "S=1,FFF=010,PP=01,pp=11|S=1,FFF=010,PP=10,pp=11",
+        "S=0,FFF=010,PP=01,pp=11|S=0,FFF=010,PP=10,pp=11",
+        "S=0,FFF=001,PP=01,pp=11|S=0,FFF=001,PP=10,pp=11",
+        "S=1,FFF=001,PP=01,pp=11|S=1,FFF=001,PP=10,pp=11"
+      ],
+      "completion_values_unallocated": {
+        "FFF=000": "no unit",
+        "PP=00": "ALLOCATED a unit \u2014 PP=00 is the declared origin block, a real occurring chart value, NOT a formal completion value",
+        "pp=00": "no unit"
+      },
+      "construction": "per Event, one one-hot token per endpoint incidence presentation (S, FFF, PP, pp) with pp != 00, emitted in canonical sorted order",
+      "field_layout": [
+        {
+          "field": "S",
+          "justification": "one-hot over S in {0, 1}. TWO units, not one: both S values genuinely occur (7 habitats each), so a single bit would represent S=0 by the all-zero pattern and make a real value indistinguishable from an absent field under sum pooling. Two units keep every field one-hot and every token at exactly 4 active units.",
+          "offset": 0,
+          "width": 2
+        },
+        {
+          "field": "FFF",
+          "justification": "one-hot over the nonzero Fano points 1..7. NO unit is allocated to FFF=000: it is a formal algebraic completion value, never an Event coordinate, so allocating it a unit would invite the learner to read a completion value as data.",
+          "offset": 2,
+          "width": 7
+        },
+        {
+          "field": "PP",
+          "justification": "one-hot over q in F_2^2 = {00, 01, 10, 11}. FOUR units, not two: PP=00 is the declared ORIGIN BLOCK, a legitimate occurring chart value and NOT a formal completion value, so it must carry a unit. A 2-bit binary encoding would render the origin as all-zeros, colliding with 'field absent' under sum pooling and breaking the one-hot discipline that keeps the {0, 1} fence checkable.",
+          "offset": 9,
+          "width": 4
+        },
+        {
+          "field": "pp",
+          "justification": "one-hot over the nonzero displacements {01, 10, 11}. NO unit is allocated to pp=00: it is a formal algebraic completion value, never a displacement (sfp.IncidencePresentation rejects it outright).",
+          "offset": 13,
+          "width": 3
+        }
+      ],
+      "interpretation_fence": "Arm B success would establish representation SUFFICIENCY / USE, not representation DISCOVERY: sfp.ExactSfpCircuit already solves the relation from this code without learning anything.",
+      "no_native_ray_coordinate": {
+        "active_units_per_token": [
+          4
+        ],
+        "mechanism": "every field is one-hot, so every token value lies in {0.0, 1.0}; a rational ray coordinate cannot survive such an encoding. The fence is therefore mechanically checkable rather than a promise.",
+        "value_range": [
+          0.0,
+          1.0
+        ],
+        "value_range_is_binary": true
+      },
+      "source": "sfp.SfpCodec().encode(ray) \u2014 the exact 021.05 finite code and nothing else; the frozen chart digest is pinned in the audit",
+      "token_dim": 16,
+      "unordered_pair": "scorer.py applies ONE shared learned per-token encoder to each of the tokens_per_event tokens and then pools symmetrically (mean / sum). The emitted order of the two incidence presentations is canonical sorted for artifact determinism ONLY; symmetric pooling over a shared encoder is what makes endpoint symmetry hold by construction, so the order carries no information. The presentations must therefore NOT be pre-concatenated."
+    },
+    "C_scrambled": {
+      "assignment": [
+        {
+          "event_index": 15,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=00,pp=01|S=1,FFF=001,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=001,PP=00,pp=01|S=1,FFF=001,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 26,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=10,pp=01|S=1,FFF=001,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=001,PP=00,pp=11|S=1,FFF=001,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 43,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=00,pp=10|S=1,FFF=001,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=001,PP=10,pp=01|S=1,FFF=001,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 54,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=01,pp=10|S=1,FFF=001,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=001,PP=01,pp=10|S=1,FFF=001,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 70,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=00,pp=11|S=1,FFF=001,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=001,PP=00,pp=10|S=1,FFF=001,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 83,
+          "habitat": "P=1,delta=-1",
+          "native_code": "S=1,FFF=001,PP=01,pp=11|S=1,FFF=001,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=001,PP=01,pp=11|S=1,FFF=001,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 14,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=00,pp=01|S=0,FFF=001,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=001,PP=01,pp=10|S=0,FFF=001,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 27,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=10,pp=01|S=0,FFF=001,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=001,PP=00,pp=01|S=0,FFF=001,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 42,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=00,pp=10|S=0,FFF=001,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=001,PP=00,pp=10|S=0,FFF=001,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 55,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=01,pp=10|S=0,FFF=001,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=001,PP=10,pp=01|S=0,FFF=001,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 71,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=00,pp=11|S=0,FFF=001,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=001,PP=01,pp=11|S=0,FFF=001,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 82,
+          "habitat": "P=1,delta=+1",
+          "native_code": "S=0,FFF=001,PP=01,pp=11|S=0,FFF=001,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=001,PP=00,pp=11|S=0,FFF=001,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 2,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=00,pp=01|S=1,FFF=010,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=010,PP=00,pp=11|S=1,FFF=010,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 25,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=10,pp=01|S=1,FFF=010,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=010,PP=01,pp=10|S=1,FFF=010,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 45,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=00,pp=10|S=1,FFF=010,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=010,PP=00,pp=01|S=1,FFF=010,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 59,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=00,pp=11|S=1,FFF=010,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=010,PP=01,pp=11|S=1,FFF=010,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 66,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=01,pp=10|S=1,FFF=010,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=010,PP=10,pp=01|S=1,FFF=010,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 80,
+          "habitat": "P=2,delta=-1",
+          "native_code": "S=1,FFF=010,PP=01,pp=11|S=1,FFF=010,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=010,PP=00,pp=10|S=1,FFF=010,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 3,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=00,pp=01|S=0,FFF=010,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=010,PP=10,pp=01|S=0,FFF=010,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 24,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=10,pp=01|S=0,FFF=010,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=010,PP=01,pp=10|S=0,FFF=010,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 44,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=00,pp=10|S=0,FFF=010,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=010,PP=01,pp=11|S=0,FFF=010,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 58,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=00,pp=11|S=0,FFF=010,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=010,PP=00,pp=11|S=0,FFF=010,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 67,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=01,pp=10|S=0,FFF=010,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=010,PP=00,pp=01|S=0,FFF=010,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 81,
+          "habitat": "P=2,delta=+1",
+          "native_code": "S=0,FFF=010,PP=01,pp=11|S=0,FFF=010,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=010,PP=00,pp=10|S=0,FFF=010,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 1,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=00,pp=01|S=1,FFF=011,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=011,PP=00,pp=10|S=1,FFF=011,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 12,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=10,pp=01|S=1,FFF=011,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=011,PP=01,pp=10|S=1,FFF=011,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 47,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=00,pp=10|S=1,FFF=011,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=011,PP=10,pp=01|S=1,FFF=011,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 56,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=00,pp=11|S=1,FFF=011,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=011,PP=00,pp=01|S=1,FFF=011,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 69,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=01,pp=11|S=1,FFF=011,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=011,PP=00,pp=11|S=1,FFF=011,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 78,
+          "habitat": "P=3,delta=-1",
+          "native_code": "S=1,FFF=011,PP=01,pp=10|S=1,FFF=011,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=011,PP=01,pp=11|S=1,FFF=011,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 0,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=00,pp=01|S=0,FFF=011,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=011,PP=00,pp=11|S=0,FFF=011,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 13,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=10,pp=01|S=0,FFF=011,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=011,PP=01,pp=10|S=0,FFF=011,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 46,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=00,pp=10|S=0,FFF=011,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=011,PP=01,pp=11|S=0,FFF=011,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 57,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=00,pp=11|S=0,FFF=011,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=011,PP=00,pp=01|S=0,FFF=011,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 68,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=01,pp=11|S=0,FFF=011,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=011,PP=00,pp=10|S=0,FFF=011,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 79,
+          "habitat": "P=3,delta=+1",
+          "native_code": "S=0,FFF=011,PP=01,pp=10|S=0,FFF=011,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=011,PP=10,pp=01|S=0,FFF=011,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 6,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=00,pp=01|S=1,FFF=100,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=100,PP=00,pp=10|S=1,FFF=100,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 20,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=00,pp=10|S=1,FFF=100,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=100,PP=00,pp=11|S=1,FFF=100,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 34,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=00,pp=11|S=1,FFF=100,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=100,PP=10,pp=01|S=1,FFF=100,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 49,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=10,pp=01|S=1,FFF=100,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=100,PP=01,pp=10|S=1,FFF=100,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 63,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=01,pp=10|S=1,FFF=100,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=100,PP=01,pp=11|S=1,FFF=100,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 77,
+          "habitat": "P=4,delta=-1",
+          "native_code": "S=1,FFF=100,PP=01,pp=11|S=1,FFF=100,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=100,PP=00,pp=01|S=1,FFF=100,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 7,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=00,pp=01|S=0,FFF=100,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=100,PP=00,pp=01|S=0,FFF=100,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 21,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=00,pp=10|S=0,FFF=100,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=100,PP=10,pp=01|S=0,FFF=100,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 35,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=00,pp=11|S=0,FFF=100,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=100,PP=00,pp=11|S=0,FFF=100,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 48,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=10,pp=01|S=0,FFF=100,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=100,PP=01,pp=11|S=0,FFF=100,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 62,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=01,pp=10|S=0,FFF=100,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=100,PP=01,pp=10|S=0,FFF=100,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 76,
+          "habitat": "P=4,delta=+1",
+          "native_code": "S=0,FFF=100,PP=01,pp=11|S=0,FFF=100,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=100,PP=00,pp=10|S=0,FFF=100,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 5,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=00,pp=01|S=1,FFF=101,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=101,PP=00,pp=10|S=1,FFF=101,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 22,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=00,pp=10|S=1,FFF=101,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=101,PP=00,pp=11|S=1,FFF=101,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 33,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=00,pp=11|S=1,FFF=101,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=101,PP=01,pp=10|S=1,FFF=101,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 36,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=10,pp=01|S=1,FFF=101,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=101,PP=01,pp=11|S=1,FFF=101,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 64,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=01,pp=11|S=1,FFF=101,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=101,PP=10,pp=01|S=1,FFF=101,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 75,
+          "habitat": "P=5,delta=-1",
+          "native_code": "S=1,FFF=101,PP=01,pp=10|S=1,FFF=101,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=101,PP=00,pp=01|S=1,FFF=101,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 4,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=00,pp=01|S=0,FFF=101,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=101,PP=00,pp=10|S=0,FFF=101,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 23,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=00,pp=10|S=0,FFF=101,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=101,PP=00,pp=01|S=0,FFF=101,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 32,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=00,pp=11|S=0,FFF=101,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=101,PP=00,pp=11|S=0,FFF=101,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 37,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=10,pp=01|S=0,FFF=101,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=101,PP=01,pp=10|S=0,FFF=101,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 65,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=01,pp=11|S=0,FFF=101,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=101,PP=10,pp=01|S=0,FFF=101,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 74,
+          "habitat": "P=5,delta=+1",
+          "native_code": "S=0,FFF=101,PP=01,pp=10|S=0,FFF=101,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=101,PP=01,pp=11|S=0,FFF=101,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 11,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=00,pp=01|S=1,FFF=110,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=110,PP=00,pp=10|S=1,FFF=110,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 17,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=00,pp=10|S=1,FFF=110,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=110,PP=10,pp=01|S=1,FFF=110,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 30,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=00,pp=11|S=1,FFF=110,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=110,PP=01,pp=11|S=1,FFF=110,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 38,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=01,pp=10|S=1,FFF=110,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=110,PP=00,pp=11|S=1,FFF=110,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 53,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=01,pp=11|S=1,FFF=110,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=110,PP=00,pp=01|S=1,FFF=110,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 72,
+          "habitat": "P=6,delta=-1",
+          "native_code": "S=1,FFF=110,PP=10,pp=01|S=1,FFF=110,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=110,PP=01,pp=10|S=1,FFF=110,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 10,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=00,pp=01|S=0,FFF=110,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=110,PP=00,pp=11|S=0,FFF=110,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 16,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=00,pp=10|S=0,FFF=110,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=110,PP=01,pp=10|S=0,FFF=110,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 31,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=00,pp=11|S=0,FFF=110,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=110,PP=00,pp=01|S=0,FFF=110,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 39,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=01,pp=10|S=0,FFF=110,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=110,PP=01,pp=11|S=0,FFF=110,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 52,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=01,pp=11|S=0,FFF=110,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=110,PP=10,pp=01|S=0,FFF=110,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 73,
+          "habitat": "P=6,delta=+1",
+          "native_code": "S=0,FFF=110,PP=10,pp=01|S=0,FFF=110,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=110,PP=00,pp=10|S=0,FFF=110,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 8,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=00,pp=01|S=1,FFF=111,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=1,FFF=111,PP=01,pp=11|S=1,FFF=111,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 19,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=00,pp=10|S=1,FFF=111,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=1,FFF=111,PP=01,pp=10|S=1,FFF=111,PP=11,pp=10",
+          "scrambled_edge": "13"
+        },
+        {
+          "event_index": 29,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=00,pp=11|S=1,FFF=111,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=1,FFF=111,PP=10,pp=01|S=1,FFF=111,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 40,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=01,pp=11|S=1,FFF=111,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=1,FFF=111,PP=00,pp=10|S=1,FFF=111,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 50,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=01,pp=10|S=1,FFF=111,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=1,FFF=111,PP=00,pp=11|S=1,FFF=111,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 61,
+          "habitat": "P=7,delta=-1",
+          "native_code": "S=1,FFF=111,PP=10,pp=01|S=1,FFF=111,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=1,FFF=111,PP=00,pp=01|S=1,FFF=111,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 9,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=00,pp=01|S=0,FFF=111,PP=01,pp=01",
+          "native_edge": "01",
+          "scrambled_code": "S=0,FFF=111,PP=00,pp=10|S=0,FFF=111,PP=10,pp=10",
+          "scrambled_edge": "02"
+        },
+        {
+          "event_index": 18,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=00,pp=10|S=0,FFF=111,PP=10,pp=10",
+          "native_edge": "02",
+          "scrambled_code": "S=0,FFF=111,PP=01,pp=11|S=0,FFF=111,PP=10,pp=11",
+          "scrambled_edge": "12"
+        },
+        {
+          "event_index": 28,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=00,pp=11|S=0,FFF=111,PP=11,pp=11",
+          "native_edge": "03",
+          "scrambled_code": "S=0,FFF=111,PP=00,pp=01|S=0,FFF=111,PP=01,pp=01",
+          "scrambled_edge": "01"
+        },
+        {
+          "event_index": 41,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=01,pp=11|S=0,FFF=111,PP=10,pp=11",
+          "native_edge": "12",
+          "scrambled_code": "S=0,FFF=111,PP=10,pp=01|S=0,FFF=111,PP=11,pp=01",
+          "scrambled_edge": "23"
+        },
+        {
+          "event_index": 51,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=01,pp=10|S=0,FFF=111,PP=11,pp=10",
+          "native_edge": "13",
+          "scrambled_code": "S=0,FFF=111,PP=00,pp=11|S=0,FFF=111,PP=11,pp=11",
+          "scrambled_edge": "03"
+        },
+        {
+          "event_index": 60,
+          "habitat": "P=7,delta=+1",
+          "native_code": "S=0,FFF=111,PP=10,pp=01|S=0,FFF=111,PP=11,pp=01",
+          "native_edge": "23",
+          "scrambled_code": "S=0,FFF=111,PP=01,pp=10|S=0,FFF=111,PP=11,pp=10",
+          "scrambled_edge": "13"
+        }
+      ],
+      "codes": [
+        "S=0,FFF=011,PP=00,pp=11|S=0,FFF=011,PP=11,pp=11",
+        "S=1,FFF=011,PP=00,pp=10|S=1,FFF=011,PP=10,pp=10",
+        "S=1,FFF=010,PP=00,pp=11|S=1,FFF=010,PP=11,pp=11",
+        "S=0,FFF=010,PP=10,pp=01|S=0,FFF=010,PP=11,pp=01",
+        "S=0,FFF=101,PP=00,pp=10|S=0,FFF=101,PP=10,pp=10",
+        "S=1,FFF=101,PP=00,pp=10|S=1,FFF=101,PP=10,pp=10",
+        "S=1,FFF=100,PP=00,pp=10|S=1,FFF=100,PP=10,pp=10",
+        "S=0,FFF=100,PP=00,pp=01|S=0,FFF=100,PP=01,pp=01",
+        "S=1,FFF=111,PP=01,pp=11|S=1,FFF=111,PP=10,pp=11",
+        "S=0,FFF=111,PP=00,pp=10|S=0,FFF=111,PP=10,pp=10",
+        "S=0,FFF=110,PP=00,pp=11|S=0,FFF=110,PP=11,pp=11",
+        "S=1,FFF=110,PP=00,pp=10|S=1,FFF=110,PP=10,pp=10",
+        "S=1,FFF=011,PP=01,pp=10|S=1,FFF=011,PP=11,pp=10",
+        "S=0,FFF=011,PP=01,pp=10|S=0,FFF=011,PP=11,pp=10",
+        "S=0,FFF=001,PP=01,pp=10|S=0,FFF=001,PP=11,pp=10",
+        "S=1,FFF=001,PP=00,pp=01|S=1,FFF=001,PP=01,pp=01",
+        "S=0,FFF=110,PP=01,pp=10|S=0,FFF=110,PP=11,pp=10",
+        "S=1,FFF=110,PP=10,pp=01|S=1,FFF=110,PP=11,pp=01",
+        "S=0,FFF=111,PP=01,pp=11|S=0,FFF=111,PP=10,pp=11",
+        "S=1,FFF=111,PP=01,pp=10|S=1,FFF=111,PP=11,pp=10",
+        "S=1,FFF=100,PP=00,pp=11|S=1,FFF=100,PP=11,pp=11",
+        "S=0,FFF=100,PP=10,pp=01|S=0,FFF=100,PP=11,pp=01",
+        "S=1,FFF=101,PP=00,pp=11|S=1,FFF=101,PP=11,pp=11",
+        "S=0,FFF=101,PP=00,pp=01|S=0,FFF=101,PP=01,pp=01",
+        "S=0,FFF=010,PP=01,pp=10|S=0,FFF=010,PP=11,pp=10",
+        "S=1,FFF=010,PP=01,pp=10|S=1,FFF=010,PP=11,pp=10",
+        "S=1,FFF=001,PP=00,pp=11|S=1,FFF=001,PP=11,pp=11",
+        "S=0,FFF=001,PP=00,pp=01|S=0,FFF=001,PP=01,pp=01",
+        "S=0,FFF=111,PP=00,pp=01|S=0,FFF=111,PP=01,pp=01",
+        "S=1,FFF=111,PP=10,pp=01|S=1,FFF=111,PP=11,pp=01",
+        "S=1,FFF=110,PP=01,pp=11|S=1,FFF=110,PP=10,pp=11",
+        "S=0,FFF=110,PP=00,pp=01|S=0,FFF=110,PP=01,pp=01",
+        "S=0,FFF=101,PP=00,pp=11|S=0,FFF=101,PP=11,pp=11",
+        "S=1,FFF=101,PP=01,pp=10|S=1,FFF=101,PP=11,pp=10",
+        "S=1,FFF=100,PP=10,pp=01|S=1,FFF=100,PP=11,pp=01",
+        "S=0,FFF=100,PP=00,pp=11|S=0,FFF=100,PP=11,pp=11",
+        "S=1,FFF=101,PP=01,pp=11|S=1,FFF=101,PP=10,pp=11",
+        "S=0,FFF=101,PP=01,pp=10|S=0,FFF=101,PP=11,pp=10",
+        "S=1,FFF=110,PP=00,pp=11|S=1,FFF=110,PP=11,pp=11",
+        "S=0,FFF=110,PP=01,pp=11|S=0,FFF=110,PP=10,pp=11",
+        "S=1,FFF=111,PP=00,pp=10|S=1,FFF=111,PP=10,pp=10",
+        "S=0,FFF=111,PP=10,pp=01|S=0,FFF=111,PP=11,pp=01",
+        "S=0,FFF=001,PP=00,pp=10|S=0,FFF=001,PP=10,pp=10",
+        "S=1,FFF=001,PP=10,pp=01|S=1,FFF=001,PP=11,pp=01",
+        "S=0,FFF=010,PP=01,pp=11|S=0,FFF=010,PP=10,pp=11",
+        "S=1,FFF=010,PP=00,pp=01|S=1,FFF=010,PP=01,pp=01",
+        "S=0,FFF=011,PP=01,pp=11|S=0,FFF=011,PP=10,pp=11",
+        "S=1,FFF=011,PP=10,pp=01|S=1,FFF=011,PP=11,pp=01",
+        "S=0,FFF=100,PP=01,pp=11|S=0,FFF=100,PP=10,pp=11",
+        "S=1,FFF=100,PP=01,pp=10|S=1,FFF=100,PP=11,pp=10",
+        "S=1,FFF=111,PP=00,pp=11|S=1,FFF=111,PP=11,pp=11",
+        "S=0,FFF=111,PP=00,pp=11|S=0,FFF=111,PP=11,pp=11",
+        "S=0,FFF=110,PP=10,pp=01|S=0,FFF=110,PP=11,pp=01",
+        "S=1,FFF=110,PP=00,pp=01|S=1,FFF=110,PP=01,pp=01",
+        "S=1,FFF=001,PP=01,pp=10|S=1,FFF=001,PP=11,pp=10",
+        "S=0,FFF=001,PP=10,pp=01|S=0,FFF=001,PP=11,pp=01",
+        "S=1,FFF=011,PP=00,pp=01|S=1,FFF=011,PP=01,pp=01",
+        "S=0,FFF=011,PP=00,pp=01|S=0,FFF=011,PP=01,pp=01",
+        "S=0,FFF=010,PP=00,pp=11|S=0,FFF=010,PP=11,pp=11",
+        "S=1,FFF=010,PP=01,pp=11|S=1,FFF=010,PP=10,pp=11",
+        "S=0,FFF=111,PP=01,pp=10|S=0,FFF=111,PP=11,pp=10",
+        "S=1,FFF=111,PP=00,pp=01|S=1,FFF=111,PP=01,pp=01",
+        "S=0,FFF=100,PP=01,pp=10|S=0,FFF=100,PP=11,pp=10",
+        "S=1,FFF=100,PP=01,pp=11|S=1,FFF=100,PP=10,pp=11",
+        "S=1,FFF=101,PP=10,pp=01|S=1,FFF=101,PP=11,pp=01",
+        "S=0,FFF=101,PP=10,pp=01|S=0,FFF=101,PP=11,pp=01",
+        "S=1,FFF=010,PP=10,pp=01|S=1,FFF=010,PP=11,pp=01",
+        "S=0,FFF=010,PP=00,pp=01|S=0,FFF=010,PP=01,pp=01",
+        "S=0,FFF=011,PP=00,pp=10|S=0,FFF=011,PP=10,pp=10",
+        "S=1,FFF=011,PP=00,pp=11|S=1,FFF=011,PP=11,pp=11",
+        "S=1,FFF=001,PP=00,pp=10|S=1,FFF=001,PP=10,pp=10",
+        "S=0,FFF=001,PP=01,pp=11|S=0,FFF=001,PP=10,pp=11",
+        "S=1,FFF=110,PP=01,pp=10|S=1,FFF=110,PP=11,pp=10",
+        "S=0,FFF=110,PP=00,pp=10|S=0,FFF=110,PP=10,pp=10",
+        "S=0,FFF=101,PP=01,pp=11|S=0,FFF=101,PP=10,pp=11",
+        "S=1,FFF=101,PP=00,pp=01|S=1,FFF=101,PP=01,pp=01",
+        "S=0,FFF=100,PP=00,pp=10|S=0,FFF=100,PP=10,pp=10",
+        "S=1,FFF=100,PP=00,pp=01|S=1,FFF=100,PP=01,pp=01",
+        "S=1,FFF=011,PP=01,pp=11|S=1,FFF=011,PP=10,pp=11",
+        "S=0,FFF=011,PP=10,pp=01|S=0,FFF=011,PP=11,pp=01",
+        "S=1,FFF=010,PP=00,pp=10|S=1,FFF=010,PP=10,pp=10",
+        "S=0,FFF=010,PP=00,pp=10|S=0,FFF=010,PP=10,pp=10",
+        "S=0,FFF=001,PP=00,pp=11|S=0,FFF=001,PP=11,pp=11",
+        "S=1,FFF=001,PP=01,pp=11|S=1,FFF=001,PP=10,pp=11"
+      ],
+      "construction": [
+        "1. start from the valid six SFP edge codes in each habitat",
+        "2. apply a fixed permutation of those six codes onto the six certified native Events (inside a habitat an SFP code word IS a K4 edge, so this is exactly an edge permutation)",
+        "3. REJECT any permutation induced by a K4 vertex automorphism / affine AGL(2,2) relabeling (groups.is_structure_preserving == False)",
+        "4. freeze the accepted non-automorphic permutation before any training (no model exists in this module)",
+        "5. use independent digest-pinned scrambles across habitats"
+      ],
+      "counting_context": {
+        "induced": {
+          "agrees": true,
+          "expected": 24,
+          "observed": 24,
+          "source": "groups.induced_edge_permutations()"
+        },
+        "not_structure_preserving": {
+          "agrees": true,
+          "expected": 696,
+          "observed": 696,
+          "source": "720 - 24, the pool Arm C draws from"
+        },
+        "statement": "6! = 720 total, 24 induced, 696 not structure preserving",
+        "total_edge_permutations": {
+          "agrees": true,
+          "expected": 720,
+          "observed": 720,
+          "source": "6! permutations of the 6 K4 edges"
+        }
+      },
+      "distinct_permutations_chosen": 14,
+      "edge_convention": "groups.EDGES = 01,02,03,12,13,23; permutations are in image form on groups.EDGE_INDEX indices",
+      "every_permutation_rejected_as_automorphism": true,
+      "habitat_partition_preserved_deliberately": "the scramble acts inside habitats only, so Arm C keeps exactly the habitat sizes and the cross-habitat information Arm B has. That is required for matched marginals; the destruction is targeted at the within-habitat incidence alignment, which is where all the relational signal lives (336 ADMIT + 84 SAME_HABITAT_DISJOINT).",
+      "no_native_ray_coordinate": {
+        "value_range": [
+          0.0,
+          1.0
+        ],
+        "value_range_is_binary": true
+      },
+      "per_habitat_scrambles": [
+        {
+          "edge_images": {
+            "01": "01",
+            "02": "23",
+            "03": "02",
+            "12": "12",
+            "13": "13",
+            "23": "03"
+          },
+          "edge_permutation": [
+            0,
+            5,
+            1,
+            3,
+            4,
+            2
+          ],
+          "encoded": "051342",
+          "habitat": "P=1,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 95,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "d2316c81ab4917a59a788f1473eb843720bf53714cf70ec1b22a91ae0dba8d07"
+        },
+        {
+          "edge_images": {
+            "01": "13",
+            "02": "02",
+            "03": "12",
+            "12": "03",
+            "13": "23",
+            "23": "01"
+          },
+          "edge_permutation": [
+            4,
+            1,
+            3,
+            2,
+            5,
+            0
+          ],
+          "encoded": "413250",
+          "habitat": "P=1,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 502,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "1823e977ee4bbc08799efd528a93dd59dc22e6d91be663faedcb35f4c0cc1456"
+        },
+        {
+          "edge_images": {
+            "01": "03",
+            "02": "01",
+            "03": "12",
+            "12": "02",
+            "13": "23",
+            "23": "13"
+          },
+          "edge_permutation": [
+            2,
+            0,
+            3,
+            1,
+            5,
+            4
+          ],
+          "encoded": "203154",
+          "habitat": "P=2,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 238,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "df1be6ea0cf49e8aab793bee44e7243878e00f00c812d3696c1b9ef1382e064e"
+        },
+        {
+          "edge_images": {
+            "01": "23",
+            "02": "12",
+            "03": "03",
+            "12": "02",
+            "13": "01",
+            "23": "13"
+          },
+          "edge_permutation": [
+            5,
+            3,
+            2,
+            1,
+            0,
+            4
+          ],
+          "encoded": "532104",
+          "habitat": "P=2,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 663,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "09e112e5f3e07117b864393f6669d070f64055a1932464670ff880b3a62e785f"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "23",
+            "03": "01",
+            "12": "03",
+            "13": "12",
+            "23": "13"
+          },
+          "edge_permutation": [
+            1,
+            5,
+            0,
+            2,
+            3,
+            4
+          ],
+          "encoded": "150234",
+          "habitat": "P=3,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 209,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "fef9ddad2fcf3413f76ba381cb86b5791bec2417460b7a79be9074c46cff4999"
+        },
+        {
+          "edge_images": {
+            "01": "03",
+            "02": "12",
+            "03": "01",
+            "12": "02",
+            "13": "23",
+            "23": "13"
+          },
+          "edge_permutation": [
+            2,
+            3,
+            0,
+            1,
+            5,
+            4
+          ],
+          "encoded": "230154",
+          "habitat": "P=3,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 279,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "31ff3d991fb20fc3786c3a5f528c11b56b53186ff3f208e520e69e3a2f248b97"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "03",
+            "03": "23",
+            "12": "01",
+            "13": "12",
+            "23": "13"
+          },
+          "edge_permutation": [
+            1,
+            2,
+            5,
+            0,
+            3,
+            4
+          ],
+          "encoded": "125034",
+          "habitat": "P=4,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 156,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": true,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "844d276fef19f4f3403619442894755307bb04139f3da3064b53d7ddc1f18084"
+        },
+        {
+          "edge_images": {
+            "01": "01",
+            "02": "23",
+            "03": "03",
+            "12": "02",
+            "13": "13",
+            "23": "12"
+          },
+          "edge_permutation": [
+            0,
+            5,
+            2,
+            1,
+            4,
+            3
+          ],
+          "encoded": "052143",
+          "habitat": "P=4,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 99,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "dc394a8d6828465aed0b00a6c27d6eb4de61f5049ce969ae6858cb64b089aa0b"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "03",
+            "03": "13",
+            "12": "23",
+            "13": "01",
+            "23": "12"
+          },
+          "edge_permutation": [
+            1,
+            2,
+            4,
+            5,
+            0,
+            3
+          ],
+          "encoded": "124503",
+          "habitat": "P=5,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 154,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "bf98680c164a20f5f26e63de68c3105c754b9bd0a3f87eaae47f9045c8ac76aa"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "01",
+            "03": "03",
+            "12": "23",
+            "13": "12",
+            "23": "13"
+          },
+          "edge_permutation": [
+            1,
+            0,
+            2,
+            5,
+            3,
+            4
+          ],
+          "encoded": "102534",
+          "habitat": "P=5,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 119,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "0d8639bb14993df5cfde1b458ccf45af7db140aa77db71d68d0ee46883ebe58f"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "23",
+            "03": "12",
+            "12": "01",
+            "13": "03",
+            "23": "13"
+          },
+          "edge_permutation": [
+            1,
+            5,
+            3,
+            0,
+            2,
+            4
+          ],
+          "encoded": "153024",
+          "habitat": "P=6,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 221,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "6f730fd7375676d9e4c01a2b3e092c318f139e83186aa96f1b013b1143a60e55"
+        },
+        {
+          "edge_images": {
+            "01": "03",
+            "02": "13",
+            "03": "01",
+            "12": "23",
+            "13": "12",
+            "23": "02"
+          },
+          "edge_permutation": [
+            2,
+            4,
+            0,
+            5,
+            3,
+            1
+          ],
+          "encoded": "240531",
+          "habitat": "P=6,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 307,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "f063f0ae0e4307e6ca3baf3c9bf321d834e1537eb52a7f0600bdab1cf68e50eb"
+        },
+        {
+          "edge_images": {
+            "01": "12",
+            "02": "13",
+            "03": "23",
+            "12": "02",
+            "13": "03",
+            "23": "01"
+          },
+          "edge_permutation": [
+            3,
+            4,
+            5,
+            1,
+            2,
+            0
+          ],
+          "encoded": "345120",
+          "habitat": "P=7,delta=-1",
+          "is_structure_preserving": false,
+          "pool_index": 438,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": false,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "0f3958ede3ae0342cb216a98748919d2b56b7244bd2e0927fe2d2397aa5e7fce"
+        },
+        {
+          "edge_images": {
+            "01": "02",
+            "02": "12",
+            "03": "01",
+            "12": "23",
+            "13": "03",
+            "23": "13"
+          },
+          "edge_permutation": [
+            1,
+            3,
+            0,
+            5,
+            2,
+            4
+          ],
+          "encoded": "130524",
+          "habitat": "P=7,delta=+1",
+          "is_structure_preserving": false,
+          "pool_index": 166,
+          "preserves_matching_partition_DIAGNOSTIC_ONLY": true,
+          "rejected_as_automorphism": true,
+          "seed_sha256": "61ab9e2eadb600be352ba0bf2da359e3ca2491d050800f724def56c51894b7ee"
+        }
+      ],
+      "role": "THE LOAD-BEARING CONTROL. Same bit widths, same habitat sizes, six Event codes per habitat, two incidence presentations per Event and matched field marginals \u2014 with the alignment between the code relation and the certified native FIPS relation deliberately destroyed.",
+      "scramble_policy": {
+        "frozen_before_training": "the accepted permutations are derived here, written to the artifact, and digest-pinned; no model exists in this module and nothing downstream may reselect them",
+        "independence": "one independent digest-pinned scramble per habitat, keyed by the habitat label, so no single global relabeling can accidentally restore a common relation across habitats",
+        "rejection_test": "groups.is_structure_preserving(perm) == False \u2014 membership in the 24-element class induced by K4 vertex automorphisms / affine AGL(2,2) relabelings. Matching-partition preservation is NOT the test (48 of 720 preserve the partition, only 24 are induced) and is reported only as a diagnostic.",
+        "seed_derivation": "seed_int = int(sha256('<SCRAMBLE_SEED>|<habitat_label>').hexdigest(), 16); index = seed_int % 696 into the LEXICOGRAPHICALLY SORTED tuple of the 696 non-structure-preserving permutations of the 6 K4 edges. No hash(), no random module, no set or dict iteration order participates.",
+        "seed_string": "009/task6/arm-c-scramble/v1"
+      },
+      "trap_1_pp_permutation": "NOT USED. groups.pp_permutations_preserve_xor_third certifies that all 6 permutations of the nonzero pp values lie in GL(2,2) ~= S3 and preserve d3 = d1 XOR d2; its conclusion field reads 'REJECTED AS A SCRAMBLE ... measures nothing'. A pp-value permutation is a symmetry.",
+      "trap_2_matching_partition": "NOT USED AS THE TEST. 48 of the 720 edge permutations preserve the 3-matching partition while only 24 are induced, so preservation is necessary but not sufficient. A partition-preserving non-induced permutation is still a legitimate scramble (it carries a K4 star \u2014 a certified block \u2014 onto a K4 triangle, which is not a block). Only groups.is_structure_preserving is used to reject."
+    },
+    "D_relabeled": {
+      "bijectivity": {
+        "distinct_relabeled_codes": 84,
+        "is_bijection_on_the_84_events": true,
+        "stays_inside_the_84_code_word_alphabet": true
+      },
+      "codes": [
+        "S=1,FFF=011,PP=01,pp=10|S=1,FFF=011,PP=11,pp=10",
+        "S=0,FFF=011,PP=01,pp=10|S=0,FFF=011,PP=11,pp=10",
+        "S=0,FFF=010,PP=01,pp=10|S=0,FFF=010,PP=11,pp=10",
+        "S=1,FFF=010,PP=01,pp=10|S=1,FFF=010,PP=11,pp=10",
+        "S=1,FFF=100,PP=01,pp=10|S=1,FFF=100,PP=11,pp=10",
+        "S=0,FFF=100,PP=01,pp=10|S=0,FFF=100,PP=11,pp=10",
+        "S=0,FFF=101,PP=01,pp=10|S=0,FFF=101,PP=11,pp=10",
+        "S=1,FFF=101,PP=01,pp=10|S=1,FFF=101,PP=11,pp=10",
+        "S=0,FFF=110,PP=01,pp=10|S=0,FFF=110,PP=11,pp=10",
+        "S=1,FFF=110,PP=01,pp=10|S=1,FFF=110,PP=11,pp=10",
+        "S=1,FFF=111,PP=01,pp=10|S=1,FFF=111,PP=11,pp=10",
+        "S=0,FFF=111,PP=01,pp=10|S=0,FFF=111,PP=11,pp=10",
+        "S=0,FFF=011,PP=00,pp=10|S=0,FFF=011,PP=10,pp=10",
+        "S=1,FFF=011,PP=00,pp=10|S=1,FFF=011,PP=10,pp=10",
+        "S=1,FFF=001,PP=01,pp=10|S=1,FFF=001,PP=11,pp=10",
+        "S=0,FFF=001,PP=01,pp=10|S=0,FFF=001,PP=11,pp=10",
+        "S=1,FFF=111,PP=00,pp=01|S=1,FFF=111,PP=01,pp=01",
+        "S=0,FFF=111,PP=00,pp=01|S=0,FFF=111,PP=01,pp=01",
+        "S=1,FFF=110,PP=00,pp=01|S=1,FFF=110,PP=01,pp=01",
+        "S=0,FFF=110,PP=00,pp=01|S=0,FFF=110,PP=01,pp=01",
+        "S=0,FFF=101,PP=00,pp=01|S=0,FFF=101,PP=01,pp=01",
+        "S=1,FFF=101,PP=00,pp=01|S=1,FFF=101,PP=01,pp=01",
+        "S=0,FFF=100,PP=00,pp=01|S=0,FFF=100,PP=01,pp=01",
+        "S=1,FFF=100,PP=00,pp=01|S=1,FFF=100,PP=01,pp=01",
+        "S=1,FFF=010,PP=00,pp=10|S=1,FFF=010,PP=10,pp=10",
+        "S=0,FFF=010,PP=00,pp=10|S=0,FFF=010,PP=10,pp=10",
+        "S=0,FFF=001,PP=00,pp=10|S=0,FFF=001,PP=10,pp=10",
+        "S=1,FFF=001,PP=00,pp=10|S=1,FFF=001,PP=10,pp=10",
+        "S=1,FFF=110,PP=01,pp=11|S=1,FFF=110,PP=10,pp=11",
+        "S=0,FFF=110,PP=01,pp=11|S=0,FFF=110,PP=10,pp=11",
+        "S=0,FFF=111,PP=01,pp=11|S=0,FFF=111,PP=10,pp=11",
+        "S=1,FFF=111,PP=01,pp=11|S=1,FFF=111,PP=10,pp=11",
+        "S=1,FFF=100,PP=01,pp=11|S=1,FFF=100,PP=10,pp=11",
+        "S=0,FFF=100,PP=01,pp=11|S=0,FFF=100,PP=10,pp=11",
+        "S=0,FFF=101,PP=01,pp=11|S=0,FFF=101,PP=10,pp=11",
+        "S=1,FFF=101,PP=01,pp=11|S=1,FFF=101,PP=10,pp=11",
+        "S=0,FFF=100,PP=00,pp=10|S=0,FFF=100,PP=10,pp=10",
+        "S=1,FFF=100,PP=00,pp=10|S=1,FFF=100,PP=10,pp=10",
+        "S=0,FFF=111,PP=10,pp=01|S=0,FFF=111,PP=11,pp=01",
+        "S=1,FFF=111,PP=10,pp=01|S=1,FFF=111,PP=11,pp=01",
+        "S=0,FFF=110,PP=00,pp=11|S=0,FFF=110,PP=11,pp=11",
+        "S=1,FFF=110,PP=00,pp=11|S=1,FFF=110,PP=11,pp=11",
+        "S=1,FFF=001,PP=00,pp=01|S=1,FFF=001,PP=01,pp=01",
+        "S=0,FFF=001,PP=00,pp=01|S=0,FFF=001,PP=01,pp=01",
+        "S=1,FFF=010,PP=00,pp=01|S=1,FFF=010,PP=01,pp=01",
+        "S=0,FFF=010,PP=00,pp=01|S=0,FFF=010,PP=01,pp=01",
+        "S=1,FFF=011,PP=00,pp=01|S=1,FFF=011,PP=01,pp=01",
+        "S=0,FFF=011,PP=00,pp=01|S=0,FFF=011,PP=01,pp=01",
+        "S=1,FFF=101,PP=00,pp=10|S=1,FFF=101,PP=10,pp=10",
+        "S=0,FFF=101,PP=00,pp=10|S=0,FFF=101,PP=10,pp=10",
+        "S=0,FFF=110,PP=10,pp=01|S=0,FFF=110,PP=11,pp=01",
+        "S=1,FFF=110,PP=10,pp=01|S=1,FFF=110,PP=11,pp=01",
+        "S=1,FFF=111,PP=00,pp=11|S=1,FFF=111,PP=11,pp=11",
+        "S=0,FFF=111,PP=00,pp=11|S=0,FFF=111,PP=11,pp=11",
+        "S=0,FFF=001,PP=10,pp=01|S=0,FFF=001,PP=11,pp=01",
+        "S=1,FFF=001,PP=10,pp=01|S=1,FFF=001,PP=11,pp=01",
+        "S=0,FFF=011,PP=01,pp=11|S=0,FFF=011,PP=10,pp=11",
+        "S=1,FFF=011,PP=01,pp=11|S=1,FFF=011,PP=10,pp=11",
+        "S=1,FFF=010,PP=01,pp=11|S=1,FFF=010,PP=10,pp=11",
+        "S=0,FFF=010,PP=01,pp=11|S=0,FFF=010,PP=10,pp=11",
+        "S=1,FFF=110,PP=00,pp=10|S=1,FFF=110,PP=10,pp=10",
+        "S=0,FFF=110,PP=00,pp=10|S=0,FFF=110,PP=10,pp=10",
+        "S=1,FFF=101,PP=10,pp=01|S=1,FFF=101,PP=11,pp=01",
+        "S=0,FFF=101,PP=10,pp=01|S=0,FFF=101,PP=11,pp=01",
+        "S=0,FFF=100,PP=00,pp=11|S=0,FFF=100,PP=11,pp=11",
+        "S=1,FFF=100,PP=00,pp=11|S=1,FFF=100,PP=11,pp=11",
+        "S=0,FFF=010,PP=10,pp=01|S=0,FFF=010,PP=11,pp=01",
+        "S=1,FFF=010,PP=10,pp=01|S=1,FFF=010,PP=11,pp=01",
+        "S=1,FFF=011,PP=00,pp=11|S=1,FFF=011,PP=11,pp=11",
+        "S=0,FFF=011,PP=00,pp=11|S=0,FFF=011,PP=11,pp=11",
+        "S=0,FFF=001,PP=01,pp=11|S=0,FFF=001,PP=10,pp=11",
+        "S=1,FFF=001,PP=01,pp=11|S=1,FFF=001,PP=10,pp=11",
+        "S=0,FFF=111,PP=00,pp=10|S=0,FFF=111,PP=10,pp=10",
+        "S=1,FFF=111,PP=00,pp=10|S=1,FFF=111,PP=10,pp=10",
+        "S=1,FFF=100,PP=10,pp=01|S=1,FFF=100,PP=11,pp=01",
+        "S=0,FFF=100,PP=10,pp=01|S=0,FFF=100,PP=11,pp=01",
+        "S=1,FFF=101,PP=00,pp=11|S=1,FFF=101,PP=11,pp=11",
+        "S=0,FFF=101,PP=00,pp=11|S=0,FFF=101,PP=11,pp=11",
+        "S=0,FFF=011,PP=10,pp=01|S=0,FFF=011,PP=11,pp=01",
+        "S=1,FFF=011,PP=10,pp=01|S=1,FFF=011,PP=11,pp=01",
+        "S=0,FFF=010,PP=00,pp=11|S=0,FFF=010,PP=11,pp=11",
+        "S=1,FFF=010,PP=00,pp=11|S=1,FFF=010,PP=11,pp=11",
+        "S=1,FFF=001,PP=00,pp=11|S=1,FFF=001,PP=11,pp=11",
+        "S=0,FFF=001,PP=00,pp=11|S=0,FFF=001,PP=11,pp=11"
+      ],
+      "construction": "relabel every native address by FFF -> pi(FFF) in GL(3,2), q -> A q XOR b and d -> A d in AGL(2,2), plus a global consistent S flip; the two endpoint presentations are rebuilt COVARIANTLY through sfp.address_of and the covariance law is asserted per Event",
+      "induced_edge_permutations": {
+        "all_match_the_affine_prediction": true,
+        "all_structure_preserving": true,
+        "mirror_of_arm_c": "Arm C requires is_structure_preserving == False on every habitat; Arm D requires True on every habitat. Same predicate, opposite verdict.",
+        "per_habitat": [
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=1,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=1,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=2,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=2,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=3,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=3,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=4,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=4,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=5,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=5,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=6,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=6,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=7,delta=-1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          },
+          {
+            "edge_permutation": [
+              4,
+              0,
+              3,
+              2,
+              5,
+              1
+            ],
+            "encoded": "403251",
+            "habitat": "P=7,delta=+1",
+            "is_structure_preserving": true,
+            "matches_the_affine_prediction": true
+          }
+        ],
+        "predicted_from_the_affine_element": [
+          4,
+          0,
+          3,
+          2,
+          5,
+          1
+        ]
+      },
+      "no_native_ray_coordinate": {
+        "value_range": [
+          0.0,
+          1.0
+        ],
+        "value_range_is_binary": true
+      },
+      "not_an_ablation": "Arm D is an EQUIVALENCE / BASIS control. It destroys nothing: the certified admit/force relation is preserved exactly on all 7056 ordered pairs (see the relation report).",
+      "role": "EQUIVALENCE / BASIS CONTROL, not a destructive ablation: Arm D is a different chart for the same structure, and the certified admit/force relation is preserved exactly.",
+      "transformations": {
+        "FFF": {
+          "action": "FFF -> groups.apply_fff(pi, FFF); fixes 1,2,3 and swaps 4<->5, 6<->7",
+          "element_image_form": [
+            1,
+            2,
+            3,
+            5,
+            4,
+            7,
+            6
+          ],
+          "group": "GL(3,2)",
+          "selection": "the lexicographically least NON-IDENTITY element of groups.gl_3_2() in its canonical sorted order"
+        },
+        "PP_pp": {
+          "action": "PP: q -> groups.apply_affine((A, b), q) = A q XOR b;  pp: d -> groups.pp_displacement_image(A, d) = A d. The translation cancels in the displacement by the certified covariance law phi(q XOR d) XOR phi(q) == A d, so the two endpoint presentations are rebuilt COVARIANTLY rather than re-derived.",
+          "element": {
+            "A": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "b": [
+              0,
+              1
+            ]
+          },
+          "group": "AGL(2,2)",
+          "selection": "the first element of groups.agl_2_2() in canonical order with a NON-IDENTITY linear part (A != ((1,0),(0,1))) and a NONZERO translation (b != (0,0)), so that both PP and pp genuinely move"
+        },
+        "S": {
+          "action": "S -> groups.flip_s(S), applied globally and consistently to all 84",
+          "applied": true,
+          "group": "Z/2",
+          "why_consistent": "admission requires equal S and forcing copies S, so a global flip is a symmetry; groups.global_s_flip_report certifies that a one-sided partial flip is NOT"
+        },
+        "character": "EQUIVALENCE / BASIS CONTROL, not a destructive ablation: Arm D is a different chart for the same structure, and the certified admit/force relation is preserved exactly."
+      }
+    },
+    "E_opaque": {
+      "capacity": "84 units, exactly one per Event: maximal per-Event capacity with zero relational structure",
+      "construction": "token[i] = 1.0 for Event index i, all other units 0.0",
+      "does_not_replace_arm_c": "Arm E is capacity-matched noise about identity, not a marginal-matched structural control. Arm C remains the load-bearing control; Arm E only shows what pure memorization of Event identity can and cannot reach.",
+      "no_relational_structure": "the code carries no habitat, no Fano point, no block coordinate and no displacement; any relation must be memorized pair by pair",
+      "status": "OPTIONAL and DIAGNOSTIC ONLY"
+    }
+  },
+  "artifact_policy": "CHOICE: digests + per-arm samples + the FULL construction record + a compact but COMPLETE per-Event code table (arms.<name>.codes for B/C/D and the catalogue ray encodings for A). The full 84 x tokens tensors are not spelled out unit by unit \u2014 they are a declared deterministic function of those tables and of the field layout, and each is covered by its own token_tensor_sha256. Arm E is index one-hot and needs no table.",
+  "correctness_criterion": "Ground truth and final result identity remain exact certified Event identity via topographo.ssd.projective.equivalent \u2014 never float proximity and never a soft ranking. This module only emits inputs; the float cast of Arm A is additionally verified LOSSLESS (every canonical coefficient lies in {-1, 0, 1}), so no arm introduces an inexact identity anywhere.",
+  "digests": {
+    "arm_token_digests": {
+      "A_native": "554d226f0fdb2a8e696abcf26521d9aa45bd133aeaa1a7dd0f8269449dd426a0",
+      "B_sfp": "767a26b2c1677a59d7b99f98512b5cf17539b3e3be0204456a86cb5fc4c76954",
+      "C_scrambled": "b2c0b35d83c037943254411c3af13976b389534d478b9445a12804bce9d585cd",
+      "D_relabeled": "f1292a48703cb948183522c8ff6b3102b189366067319b0dd5daea31da90d936",
+      "E_opaque": "60398f8fdf3dfa04f7c08a4bf79a64e8fcc03a3790637c5e19c578ff8c9059c7"
+    },
+    "arm_token_digests_distinct": true,
+    "manifest": "2acecc71bba47ededbdc22c4ff056fab95b52f2008f0724571b54fea811f0031"
+  },
+  "exposure_table": [
+    {
+      "arm": "A_native",
+      "exposes": [
+        "the exact certified projective Event ray, 16 rational coordinates under the declared normalization (first nonzero coefficient = 1)"
+      ],
+      "forbids": [
+        "S",
+        "FFF",
+        "PP",
+        "pp",
+        "any SFP code unit",
+        "the frozen SFP chart (origin block, pp-to-line assignment, sign bit)",
+        "any chart-dependent quantity"
+      ]
+    },
+    {
+      "arm": "B_sfp",
+      "exposes": [
+        "S (habitat sign bit)",
+        "FFF (nonzero Fano point)",
+        "PP (affine cyclic-block coordinate q)",
+        "pp (nonzero displacement d)",
+        "the unordered pair of endpoint incidence presentations"
+      ],
+      "forbids": [
+        "every native 16-coordinate Event ray coordinate",
+        "any token value outside {0.0, 1.0}",
+        "a unit for FFF=000",
+        "a unit for pp=00",
+        "a privileged endpoint order"
+      ]
+    },
+    {
+      "arm": "C_scrambled",
+      "exposes": [
+        "S (habitat sign bit)",
+        "FFF (nonzero Fano point)",
+        "PP (affine cyclic-block coordinate q) \u2014 REASSIGNED",
+        "pp (nonzero displacement d) \u2014 REASSIGNED",
+        "the unordered pair of endpoint incidence presentations",
+        "identical field marginals, bit widths and habitat sizes to Arm B"
+      ],
+      "forbids": [
+        "every native 16-coordinate Event ray coordinate",
+        "any token value outside {0.0, 1.0}",
+        "a unit for FFF=000",
+        "a unit for pp=00",
+        "alignment between the code relation and the certified native FIPS relation (destroyed by a per-habitat non-automorphic edge permutation)"
+      ]
+    },
+    {
+      "arm": "D_relabeled",
+      "exposes": [
+        "S (habitat sign bit) \u2014 globally flipped",
+        "FFF (nonzero Fano point) \u2014 relabeled by GL(3,2)",
+        "PP (affine cyclic-block coordinate q) \u2014 relabeled by q -> A q XOR b",
+        "pp (nonzero displacement d) \u2014 relabeled covariantly by d -> A d",
+        "the unordered pair of endpoint incidence presentations",
+        "the same certified relation as Arm B, in a different basis"
+      ],
+      "forbids": [
+        "every native 16-coordinate Event ray coordinate",
+        "any token value outside {0.0, 1.0}",
+        "a unit for FFF=000",
+        "a unit for pp=00",
+        "the particular frozen chart of sfp.py (that is the point of the arm)"
+      ]
+    },
+    {
+      "arm": "E_opaque",
+      "exposes": [
+        "an arbitrary 84-way identity index and nothing else"
+      ],
+      "forbids": [
+        "every native 16-coordinate Event ray coordinate",
+        "S",
+        "FFF",
+        "PP",
+        "pp",
+        "any relational or algebraic structure whatsoever"
+      ]
+    }
+  ],
+  "fences": [
+    "FFF=000 and pp=00 are formal completion values only; no code unit is allocated to them.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "Labels always come from the certified native FIPS relation, never from any arm.",
+    "Arm B success would establish representation sufficiency/use, NOT representation discovery, because the exact SFP circuit already solves the relation without learning.",
+    "Arm D is an equivalence control, not a destructive ablation.",
+    "A pp-value permutation is a symmetry, not a scramble."
+  ],
+  "field_layout": [
+    {
+      "field": "S",
+      "justification": "one-hot over S in {0, 1}. TWO units, not one: both S values genuinely occur (7 habitats each), so a single bit would represent S=0 by the all-zero pattern and make a real value indistinguishable from an absent field under sum pooling. Two units keep every field one-hot and every token at exactly 4 active units.",
+      "offset": 0,
+      "width": 2
+    },
+    {
+      "field": "FFF",
+      "justification": "one-hot over the nonzero Fano points 1..7. NO unit is allocated to FFF=000: it is a formal algebraic completion value, never an Event coordinate, so allocating it a unit would invite the learner to read a completion value as data.",
+      "offset": 2,
+      "width": 7
+    },
+    {
+      "field": "PP",
+      "justification": "one-hot over q in F_2^2 = {00, 01, 10, 11}. FOUR units, not two: PP=00 is the declared ORIGIN BLOCK, a legitimate occurring chart value and NOT a formal completion value, so it must carry a unit. A 2-bit binary encoding would render the origin as all-zeros, colliding with 'field absent' under sum pooling and breaking the one-hot discipline that keeps the {0, 1} fence checkable.",
+      "offset": 9,
+      "width": 4
+    },
+    {
+      "field": "pp",
+      "justification": "one-hot over the nonzero displacements {01, 10, 11}. NO unit is allocated to pp=00: it is a formal algebraic completion value, never a displacement (sfp.IncidencePresentation rejects it outright).",
+      "offset": 13,
+      "width": 3
+    }
+  ],
+  "interface_contract": {
+    "builder": "arms.all_arms(dataset) -> tuple[Arm, ...]",
+    "dataclass": "Arm(name, tokens, token_dim, tokens_per_event, exposes, forbids, metadata) with sha256()",
+    "pooling": "scorer.py applies ONE shared learned per-token encoder to each of the tokens_per_event tokens and then pools symmetrically (mean / sum). The emitted order of the two incidence presentations is canonical sorted for artifact determinism ONLY; symmetric pooling over a shared encoder is what makes endpoint symmetry hold by construction, so the order carries no information. The presentations must therefore NOT be pre-concatenated.",
+    "tokens": "84 entries index-aligned to the task.py catalogue; entry i is a tuple of tokens_per_event token vectors of plain floats"
+  },
+  "label_source_fence": "No arm produces or influences a label. Labels come from task.py, which derives them from topographo.ssd.fips_basic (the certified native FIPS relation). sfp.ExactSfpCircuit appears in this module only as a nonlearned reference oracle for structural relation checks (Arm C destruction, Arm D preservation); it is never consulted for supervision.",
+  "marginal_comparison": {
+    "B_equals_C_field_counts": {
+      "agrees": true,
+      "expected": {
+        "FFF": {
+          "1": 24,
+          "2": 24,
+          "3": 24,
+          "4": 24,
+          "5": 24,
+          "6": 24,
+          "7": 24
+        },
+        "PP": {
+          "0": 42,
+          "1": 42,
+          "2": 42,
+          "3": 42
+        },
+        "S": {
+          "0": 84,
+          "1": 84
+        },
+        "pp": {
+          "1": 56,
+          "2": 56,
+          "3": 56
+        }
+      },
+      "observed": {
+        "FFF": {
+          "1": 24,
+          "2": 24,
+          "3": 24,
+          "4": 24,
+          "5": 24,
+          "6": 24,
+          "7": 24
+        },
+        "PP": {
+          "0": 42,
+          "1": 42,
+          "2": 42,
+          "3": 42
+        },
+        "S": {
+          "0": 84,
+          "1": 84
+        },
+        "pp": {
+          "1": 56,
+          "2": 56,
+          "3": 56
+        }
+      },
+      "source": "per-field value multisets"
+    },
+    "B_equals_C_unit_marginals": {
+      "agrees": true,
+      "expected": [
+        84,
+        84,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        42,
+        42,
+        42,
+        42,
+        56,
+        56,
+        56
+      ],
+      "observed": [
+        84,
+        84,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        42,
+        42,
+        42,
+        42,
+        56,
+        56,
+        56
+      ],
+      "source": "Arm C must be marginal-matched to Arm B"
+    },
+    "B_equals_D_unit_marginals": {
+      "agrees": true,
+      "expected": [
+        84,
+        84,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        42,
+        42,
+        42,
+        42,
+        56,
+        56,
+        56
+      ],
+      "observed": [
+        84,
+        84,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        42,
+        42,
+        42,
+        42,
+        56,
+        56,
+        56
+      ],
+      "source": "a relabeling permutes fields, not counts"
+    },
+    "B_field_counts": {
+      "FFF": {
+        "1": 24,
+        "2": 24,
+        "3": 24,
+        "4": 24,
+        "5": 24,
+        "6": 24,
+        "7": 24
+      },
+      "PP": {
+        "0": 42,
+        "1": 42,
+        "2": 42,
+        "3": 42
+      },
+      "S": {
+        "0": 84,
+        "1": 84
+      },
+      "pp": {
+        "1": 56,
+        "2": 56,
+        "3": 56
+      }
+    },
+    "B_unit_marginals": [
+      84,
+      84,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      42,
+      42,
+      42,
+      42,
+      56,
+      56,
+      56
+    ],
+    "C_field_counts": {
+      "FFF": {
+        "1": 24,
+        "2": 24,
+        "3": 24,
+        "4": 24,
+        "5": 24,
+        "6": 24,
+        "7": 24
+      },
+      "PP": {
+        "0": 42,
+        "1": 42,
+        "2": 42,
+        "3": 42
+      },
+      "S": {
+        "0": 84,
+        "1": 84
+      },
+      "pp": {
+        "1": 56,
+        "2": 56,
+        "3": 56
+      }
+    },
+    "C_unit_marginals": [
+      84,
+      84,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      42,
+      42,
+      42,
+      42,
+      56,
+      56,
+      56
+    ],
+    "D_field_counts": {
+      "FFF": {
+        "1": 24,
+        "2": 24,
+        "3": 24,
+        "4": 24,
+        "5": 24,
+        "6": 24,
+        "7": 24
+      },
+      "PP": {
+        "0": 42,
+        "1": 42,
+        "2": 42,
+        "3": 42
+      },
+      "S": {
+        "0": 84,
+        "1": 84
+      },
+      "pp": {
+        "1": 56,
+        "2": 56,
+        "3": 56
+      }
+    },
+    "D_unit_marginals": [
+      84,
+      84,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      24,
+      42,
+      42,
+      42,
+      42,
+      56,
+      56,
+      56
+    ],
+    "basis": "counts of ones per unit over all 84 * 2 = 168 tokens, plus per-field value counts over the same 168 incidence presentations",
+    "confound_policy": "if the marginals differ the arm is confounded and the CONSTRUCTION is fixed, never the report",
+    "shape_match": {
+      "agrees": true,
+      "expected": [
+        16,
+        2,
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "observed": [
+        16,
+        2,
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "source": "token_dim, tokens_per_event and value range must match Arm B"
+    },
+    "unit_labels": [
+      "S[0]@0",
+      "S[1]@1",
+      "FFF[0]@2",
+      "FFF[1]@3",
+      "FFF[2]@4",
+      "FFF[3]@5",
+      "FFF[4]@6",
+      "FFF[5]@7",
+      "FFF[6]@8",
+      "PP[0]@9",
+      "PP[1]@10",
+      "PP[2]@11",
+      "PP[3]@12",
+      "pp[0]@13",
+      "pp[1]@14",
+      "pp[2]@15"
+    ]
+  },
+  "module": "Issue 009 Task 6: the four representation arms A / B / C / D (+ optional diagnostic E)",
+  "pins": {
+    "arm_a_token_dim": {
+      "agrees": true,
+      "expected": 16,
+      "observed": 16,
+      "source": "native ray width"
+    },
+    "events": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "task catalogue"
+    },
+    "habitats": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "task catalogue"
+    },
+    "ordered_pairs": {
+      "agrees": true,
+      "expected": 7056,
+      "observed": 7056,
+      "source": "task dataset pool"
+    },
+    "sfp_token_dim": {
+      "agrees": true,
+      "expected": 16,
+      "observed": 16,
+      "source": "S(2) + FFF(7) + PP(4) + pp(3)"
+    }
+  },
+  "provenance": {
+    "base_commit": "174925310ca1ff15948b17e336c787525640dc6c",
+    "catalogue_sha256": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "chart_sha256": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+    "dataset_sha256": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "declared_chart": [
+      "origin block = lexicographic minimum of the habitat's blocks under the key tuple(sorted(_encode_ray(event) for event in block)); it receives PP=00",
+      "pp values 01, 10, 11 are assigned to the habitat's three Fano lines in ascending sorted integer-triple order",
+      "S = 0 for delta=+1, S = 1 for delta=-1",
+      "these are BASIS CHOICES, not intrinsic structure; Arm D tests relabelling invariance against exactly this frozen chart"
+    ],
+    "topographo_version": "0.8.2",
+    "upstream_pins": {
+      "catalogue": {
+        "agrees": true,
+        "expected": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "observed": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "source": "task.Catalogue.sha256()"
+      },
+      "chart": {
+        "agrees": true,
+        "expected": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "observed": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "source": "sfp.SfpCodec().chart()"
+      },
+      "dataset": {
+        "agrees": true,
+        "expected": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "observed": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "source": "task.Dataset.sha256()"
+      }
+    }
+  },
+  "relation_reports": [
+    {
+      "admission_agreements": 7056,
+      "admission_disagreement_examples": [],
+      "admission_disagreements": 0,
+      "admission_fully_agrees": true,
+      "arm": "B_sfp",
+      "forced_third_agreements": 336,
+      "forced_third_disagreement_examples": [],
+      "forced_third_disagreements": 0,
+      "forced_third_fully_agrees": true,
+      "native_admit_pairs": 336,
+      "oracle": "sfp.ExactSfpCircuit as a nonlearned reference oracle for a STRUCTURAL check; never a label source",
+      "ordered_pairs_checked": 7056,
+      "relation_preserved": true
+    },
+    {
+      "admission_agreements": 6936,
+      "admission_disagreement_examples": [
+        {
+          "a": 0,
+          "b": 13,
+          "code": true,
+          "native": false
+        },
+        {
+          "a": 0,
+          "b": 46,
+          "code": false,
+          "native": true
+        },
+        {
+          "a": 2,
+          "b": 25,
+          "code": true,
+          "native": false
+        },
+        {
+          "a": 2,
+          "b": 59,
+          "code": false,
+          "native": true
+        }
+      ],
+      "admission_disagreements": 120,
+      "admission_fully_agrees": false,
+      "arm": "C_scrambled",
+      "forced_third_agreements": 66,
+      "forced_third_disagreement_examples": [
+        {
+          "a": 0,
+          "b": 46,
+          "code_target": null,
+          "native_target": 57
+        },
+        {
+          "a": 0,
+          "b": 57,
+          "code_target": 68,
+          "native_target": 46
+        },
+        {
+          "a": 0,
+          "b": 68,
+          "code_target": 57,
+          "native_target": 79
+        },
+        {
+          "a": 0,
+          "b": 79,
+          "code_target": 13,
+          "native_target": 68
+        }
+      ],
+      "forced_third_disagreements": 270,
+      "forced_third_fully_agrees": false,
+      "native_admit_pairs": 336,
+      "oracle": "sfp.ExactSfpCircuit as a nonlearned reference oracle for a STRUCTURAL check; never a label source",
+      "ordered_pairs_checked": 7056,
+      "relation_preserved": false
+    },
+    {
+      "admission_agreements": 7056,
+      "admission_disagreement_examples": [],
+      "admission_disagreements": 0,
+      "admission_fully_agrees": true,
+      "arm": "D_relabeled",
+      "forced_third_agreements": 336,
+      "forced_third_disagreement_examples": [],
+      "forced_third_disagreements": 0,
+      "forced_third_fully_agrees": true,
+      "native_admit_pairs": 336,
+      "oracle": "sfp.ExactSfpCircuit as a nonlearned reference oracle for a STRUCTURAL check; never a label source",
+      "ordered_pairs_checked": 7056,
+      "relation_preserved": true
+    }
+  ],
+  "relational_laws": {
+    "all_arms_index_aligned": true,
+    "arm_a_injective": true,
+    "arm_a_is_chart_invariant_while_fields_move": true,
+    "arm_a_no_sfp_unit": true,
+    "arm_a_not_a_binary_indicator_code": true,
+    "arm_a_single_token": true,
+    "arm_a_token_dim_16": true,
+    "arm_b_binary_value_range": true,
+    "arm_b_both_presentations_decode": true,
+    "arm_b_four_active_units": true,
+    "arm_b_relation_preserved": true,
+    "arm_b_two_tokens": true,
+    "arm_c_binary_value_range": true,
+    "arm_c_destroyed_in_every_habitat": true,
+    "arm_c_every_habitat_rejected": true,
+    "arm_c_forced_third_destroyed": true,
+    "arm_c_marginals_match_arm_b": true,
+    "arm_c_no_habitat_structure_preserving": true,
+    "arm_c_relation_destroyed": true,
+    "arm_c_shape_matches_arm_b": true,
+    "arm_c_two_tokens": true,
+    "arm_d_bijective": true,
+    "arm_d_binary_value_range": true,
+    "arm_d_every_habitat_preserving": true,
+    "arm_d_relation_preserved": true,
+    "arm_d_two_tokens": true,
+    "arm_digests_distinct": true,
+    "catalogue_pinned": true
+  },
+  "scope": "arms only \u2014 no model, no training, no baseline, no scorer. This module does not create or import scorer.py.",
+  "shape_ledger": [
+    {
+      "active_units_per_token": [
+        0,
+        2
+      ],
+      "arm": "A_native",
+      "events": 84,
+      "is_binary_indicator_code": false,
+      "token_dim": 16,
+      "token_tensor_sha256": "554d226f0fdb2a8e696abcf26521d9aa45bd133aeaa1a7dd0f8269449dd426a0",
+      "tokens_per_event": 1,
+      "tokens_total": 84,
+      "total_input_units": 16,
+      "value_range": [
+        -1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "active_units_per_token": [
+        4
+      ],
+      "arm": "B_sfp",
+      "events": 84,
+      "is_binary_indicator_code": true,
+      "token_dim": 16,
+      "token_tensor_sha256": "767a26b2c1677a59d7b99f98512b5cf17539b3e3be0204456a86cb5fc4c76954",
+      "tokens_per_event": 2,
+      "tokens_total": 168,
+      "total_input_units": 32,
+      "value_range": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "active_units_per_token": [
+        4
+      ],
+      "arm": "C_scrambled",
+      "events": 84,
+      "is_binary_indicator_code": true,
+      "token_dim": 16,
+      "token_tensor_sha256": "b2c0b35d83c037943254411c3af13976b389534d478b9445a12804bce9d585cd",
+      "tokens_per_event": 2,
+      "tokens_total": 168,
+      "total_input_units": 32,
+      "value_range": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "active_units_per_token": [
+        4
+      ],
+      "arm": "D_relabeled",
+      "events": 84,
+      "is_binary_indicator_code": true,
+      "token_dim": 16,
+      "token_tensor_sha256": "f1292a48703cb948183522c8ff6b3102b189366067319b0dd5daea31da90d936",
+      "tokens_per_event": 2,
+      "tokens_total": 168,
+      "total_input_units": 32,
+      "value_range": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "active_units_per_token": [
+        1
+      ],
+      "arm": "E_opaque",
+      "events": 84,
+      "is_binary_indicator_code": true,
+      "token_dim": 84,
+      "token_tensor_sha256": "60398f8fdf3dfa04f7c08a4bf79a64e8fcc03a3790637c5e19c578ff8c9059c7",
+      "tokens_per_event": 1,
+      "tokens_total": 84,
+      "total_input_units": 84,
+      "value_range": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "token_samples": {
+    "A_native": [
+      {
+        "index": 0,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "B_sfp": [
+      {
+        "index": 0,
+        "tokens": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "C_scrambled": [
+      {
+        "index": 0,
+        "tokens": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "D_relabeled": [
+      {
+        "index": 0,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "tokens": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "tokens": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "E_opaque": [
+      {
+        "index": 0,
+        "tokens": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "tokens": [
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "tokens": [
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_relational_laws": [],
+    "count_disagreements": [],
+    "statement": "PASS - four arms frozen, Arm C certified non-automorphic with matched marginals, Arm D certified relation-preserving"
+  }
+}
