@@ -63,7 +63,7 @@ admission sensitivity.
 | `009_artifacts/scorer.json` | architecture record and shape proofs | — |
 | `009_artifacts/baselines.json` | baseline scores and the 2838-fit leakage search | — |
 | `009_artifacts/harness_smoke.json` | declared smoke subset for the training protocol | — |
-| `009_artifacts/sweep.json` | all 1400 runs, `8a717a9a…` | — |
+| `009_artifacts/sweep.json.pointer.json` | pointer to all 1400 runs, `8a717a9a…`, [hosted in the package](#bulk-run-data-lives-in-the-quilt-package) | — |
 | `009_artifacts/analysis.json` | paired effects and disposition, `a772f30c…` | — |
 | `009.02-…-ablation-result.md` | the result turn | — |
 
@@ -71,6 +71,35 @@ Everything except `scorer.py`, `harness.py`, `run_sweep.py` and `analysis.py` is
 torch-free. Following the repo convention established by Outcome 017 and Issue
 008, the torch modules are a **manual run and are not in CI**; only the torch-free
 modules are linted and import-gated.
+
+## Bulk run data lives in the Quilt package
+
+`sweep.json` is 9.7 MiB of raw per-run rows. It is bulk run data, not provenance,
+so it is hosted in the public `protology` Quilt package instead of in git. What
+git carries is `009_artifacts/sweep.json.pointer.json`, which records the package
+revision, the S3 URI, the byte count and the SHA-256 of the real file.
+
+```text
+package   occurrence/gpt   bucket protology
+revision  4087609bc5f329a01647e50b44f795bcf2a2fd9c15687b32ff0a1563d50a77cf
+key       issues/009-sfp-consequence-representation/009.02-Code-attachments/sweep.json
+sha256    613adaddb8f3554bf3f7a7535a98b214c0fbd9663443e7c4e6b3326b99611b04
+```
+
+Only `analysis.py` consumes it. Fetch it to the path the pointer names before
+running `analysis.py --check`:
+
+```bash
+aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.02-Code-attachments/sweep.json \
+  experiments/sfp_representation/009_artifacts/sweep.json
+shasum -a 256 experiments/sfp_representation/009_artifacts/sweep.json
+```
+
+Every other module's `--check` is self-contained and needs nothing fetched. The
+same package revision also carries copies of all eleven artifacts and the result
+turn, so the run is reproducible from the package alone; the ten small artifacts
+stay in git as well because they are what make the torch-free `--check` chain work
+in a fresh clone.
 
 ## How to reproduce
 
@@ -99,6 +128,10 @@ uv run --frozen python experiments/sfp_representation/harness.py --check
 uv run --frozen python experiments/sfp_representation/run_sweep.py --check
 uv run --frozen python experiments/sfp_representation/analysis.py --check
 ```
+
+`analysis.py` reads `009_artifacts/sweep.json`, which git does not carry — either
+run `run_sweep.py` first or fetch it from the package, see
+[Bulk run data lives in the Quilt package](#bulk-run-data-lives-in-the-quilt-package).
 
 Omit `--check` to regenerate the artifact instead of comparing it.
 `conformance.py` is a **hard gate**: nothing downstream is licensed if it fails.

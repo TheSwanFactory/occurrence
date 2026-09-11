@@ -231,3 +231,7 @@ Thumbs.db
 
 # local agent scratch
 .scratch/
+
+# bulk run data hosted in the public protology Quilt package, not in git
+# see experiments/sfp_representation/009_artifacts/sweep.json.pointer.json
+experiments/sfp_representation/009_artifacts/sweep.json
