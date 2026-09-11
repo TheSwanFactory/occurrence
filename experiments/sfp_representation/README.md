@@ -18,6 +18,13 @@ ordered pairs:
 Result: **`009.02`, disposition E (narrowed)**. See
 [`009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md`](009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md).
 
+> **Where the issue stands now.** Two later turns moved the forcing result twice, both
+> times by changing the *output object* and nothing else:
+> `009.02` `0.0335` -> `009.06` `0.7016` -> `009.08` `0.9688`, against a `1.000`
+> nonlearned ceiling. Jump to
+> [the `009.06` consequence-address ladder](#the-009-06-consequence-address-ladder) or
+> [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator).
+
 > **Superseded in part by `009.06`.** The `009.02` forcing negative turned out to
 > be substantially an artifact of the 84-way output interface. Changing only the
 > output object moved held-out forced-third identity from `0.0335` to `0.7016`.
@@ -304,4 +311,160 @@ UNRESOLVED != BOTTOM: failing to denote is not deciding not to admit
 Arm E is not built; a token_dim of 84 is a per-Event input column
 admission balanced accuracy still carries no claim, per 009.02
 opaque-token discovery is now warranted, but should target PP and pp only
+```
+
+> **Superseded in part by `009.08`.** The residual `PP` obstruction `009.06` left at
+> `0.7158` turned out to be substantially *another* output-constitution artifact.
+> See [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator)
+> below. Everything else in the ladder stands and is reused byte-identically.
+
+---
+
+## The `009.08` query-relative PP locator
+
+`009.06` reduced the whole structured-consequence failure to one field. `pp`, the local
+forcing law, was essentially solved at `0.9762`; `PP`, the affine chamber coordinate,
+sat at `0.7158`, and `0.9762 x 0.7158 = 0.6987` against an observed `0.7016` — so the
+address metric *was* the `PP` metric. `009.07` proposed that this was the wrong question
+being asked: for an admitted pair of Event edges the shared chamber is not an absolute
+label, it is the **unique chamber incident to both inputs**, a query-relative object, and
+`PP` is an affine torsor coordinate with no intrinsic labels.
+
+**`009.08` executes `009.07`.** See
+[`009.08-Kiro-query-relative-PP-localization-result.md`](009.08-Kiro-query-relative-PP-localization-result.md).
+
+The experiment changes **only the `PP` output constitution**:
+
+```text
+009.06   PP := argmax FieldHead(pair_dim=64, cardinality=4, hidden=32)
+         4 learned output columns + 4 biases indexed by ABSOLUTE PP identity
+
+009.08   PP := argmax_q  RelHead(pair, u_q)   over the chart's four chambers
+         0 learned parameters indexed by an absolute PP value
+```
+
+`u_q` is chamber `q`'s *star* — the three incidence presentations `(S, FFF, q, d)` for
+`d` in `{01, 10, 11}` — written with the imported `arms.sfp_token`, held as a buffer, and
+encoded by the same `scorer.TokenEncoder` the input Events go through. Every scoring
+parameter belongs to the imported `scorer.RelHead`. Splits, arms, seeds, optimizer, step
+count and the fixed resolver are the frozen objects, and `S` and `FFF` are still copied,
+so the `PP` interface is the only difference.
+
+### Result: disposition B, one condition short of A
+
+```text
+positive_forced_third_exact_accuracy, LOHO, 14 folds x 8 seeds
+```
+
+| Arm | `009.02` 84-way | `009.06` absolute PP | `009.08` pointer |
+|---|---|---|---|
+| **B_sfp** | 0.0335 | 0.7016 | **0.9688** |
+| D_relabeled | 0.0283 | 0.7522 | 0.9405 |
+| A_native | 0.0000 | 0.4412 | 0.4851 |
+| C_scrambled | 0.0052 | 0.1935 | 0.1920 |
+| exact oracles | 1.0000 | 1.0000 | 1.0000 |
+
+Rung-1 chamber localization alone reaches `0.9993` LOHO and `0.9591` LOFPO against
+chance `0.25`, meeting every `009.07` section 4.4 condition including `D - B` at exactly
+`0.0000`.
+
+### The control that carries the causal claim
+
+The pointer holds `+894` parameters on the `PP` pathway, so capacity is a live
+alternative explanation and the ledger alone cannot rule it out. Paired per
+`(fold, seed)` against `009.06`'s repair block:
+
+```text
+009.08 - 009.06, LOHO, forced third
+B_sfp        +0.2671   CI [ 0.2225, 0.3118]   14/14 folds
+D_relabeled  +0.1882   CI [ 0.1399, 0.2344]   14/14 folds
+A_native     +0.0439   CI [ 0.0030, 0.0848]   12/14 folds
+C_scrambled  -0.0015   CI [-0.0268, 0.0231]    7/14 folds   INCLUDES ZERO
+```
+
+Arm C got the identical architecture change at the identical parameter count and did not
+move. Extra capacity applied to a misaligned code buys nothing.
+
+### Read these three cautions
+
+**Class A is missed on exactly one condition.** `009.07` section 5.4 requires the Rung-2
+`D - B` interval to include zero; it is `-0.0283`, CI `[-0.0573, -0.0007]`. It clears zero
+by `0.000744`, which is exactly **two** of the `0.000372` quanta the paired statistic can
+express, while every component field includes zero, Rung-1 `D - B` is exactly `0.0000`,
+every LOFPO interval includes zero, and only 3 of 14 folds favour D. Section 6 reserves
+to the Owner whether such an exclusion is *material*; the result is filed as B rather
+than rounded up.
+
+**Two criteria, and they are not interchangeable.** `009.06`'s `0.7158` was scored under
+a **set** criterion — an argmax landing on either of the target Event's two presentations
+counted. `q*` is a **point** criterion on the single certified shared chamber. Both are
+reported at both rungs; only the set criterion is comparable to `0.7158`.
+
+**The ceilings still beat the learner, and the scramble still has none.** Re-aiming the
+code-space census at `q*` over the same 12 atoms and 298 subsets: a **two-atom** key
+(`same_habitat_code + shared_endpoint`) determines the certified shared chamber with zero
+ambiguity over all 7056 pairs under the exact and relabeled codes, while under the
+non-automorphic scramble no subset up to size three determines it at all. The learner at
+`0.9688` sits between the best strictly-cheaper rule (`0.500`) and a ceiling the
+representation itself attains (`1.000`).
+
+### Locator files
+
+| File | Role | Torch |
+|---|---|:--:|
+| `locator_task.py` | the certified `q*` label source, its transport into each arm's alphabet, and the support/covariance/scramble audits | via `harness` |
+| `locator_heads.py` | the query-relative chamber pointer over the **imported** `RelHead`, and the weight-transport covariance proof | **yes** |
+| `locator_baselines.py` | chance, ceilings and the `q*` determining census over the frozen 12 atoms | no tensors |
+| `locator_sweep.py` | the one declared block, 1344 runs, about 1650 s | **yes** |
+| `locator_analysis.py` | paired effects via the **imported** `009.02` bootstrap, the cross-turn paired comparison, the disposition | **yes** |
+
+`locator_sweep.py` calls `ladder_sweep.evaluate_rung2` and `ladder_sweep.rung2_batch`
+directly rather than reimplementing them, which is what makes
+`positive_forced_third_exact_accuracy` the *same quantity* `009.06` reported rather than
+a lookalike. `locator_task` and `locator_baselines` construct no tensor but inherit
+torch transitively through `ladder_task` -> `harness`, and their artifacts record that
+rather than claiming otherwise.
+
+### Reproducing the locator
+
+```bash
+uv run --frozen python experiments/sfp_representation/locator_task.py --check
+uv run --frozen python experiments/sfp_representation/locator_heads.py --check
+uv run --frozen python experiments/sfp_representation/locator_baselines.py --check
+uv run --frozen python experiments/sfp_representation/locator_sweep.py --check   # ~1650 s
+uv run --frozen python experiments/sfp_representation/locator_analysis.py --check
+```
+
+`locator_sweep.json` is 5.6 MiB of bulk run data and lives in the package, not git,
+matching the convention `009.02` established. Only `locator_analysis.py` needs it, and it
+also reads `ladder_sweep.json` to pair the cross-turn comparison:
+
+```bash
+aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.08-Code-attachments/locator_sweep.json \
+  experiments/sfp_representation/009_locator_artifacts/locator_sweep.json
+aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json \
+  experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json
+```
+
+Without `ladder_sweep.json` the cross-turn comparison degrades to an unpaired one
+against the pinned means and records which of the two it did.
+
+### Locator fence
+
+```text
+the consequence relation is NOT fully constituted: 0.9688 against a 1.000 ceiling
+the pointer is NOT capacity-matched to 009.06 (+894 params on the PP pathway);
+  the Arm C control, not the ledger, is what rules capacity out
+q*-exact accuracy is a POINT criterion, NOT comparable to 009.06's 0.7158
+PP=00 is the declared ORIGIN BLOCK, a real chart value, so it may not double as an
+  abstention sentinel; the code-space search abstains to -1, which is not a chamber
+the certified q* is well defined for Arm C -- an edge permutation renames no chamber --
+  and what C lacks is the INCIDENCE, measured as a 0.2143 support fraction
+covariance is exact at the label level, in candidate construction, and in the argmax;
+  the SCORES agree to declared float round-off, because permuting matmul columns
+  reorders a float sum and addition is not associative
+the cross-chart candidate tie-break is NOT covariant; those rows are non-admitted and
+  their PP output enters no reported metric
+opaque-token discovery is warranted but was NOT run; 009.07 section 9 forbids it here
+closed-set habitat re-identification is untouched: S and FFF are copied throughout
 ```

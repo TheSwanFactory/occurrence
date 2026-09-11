@@ -1,0 +1,31 @@
+{
+  "bucket": "protology",
+  "bytes": 5918303,
+  "fetch": {
+    "aws_cli": "aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.08-Code-attachments/locator_sweep.json experiments/sfp_representation/009_locator_artifacts/locator_sweep.json",
+    "quilt3": "python -c \"import quilt3; quilt3.Package.browse('occurrence/gpt', registry='s3://protology', top_hash='12e1ab251b5940a3fa7c9d884829903b817f23d0aee067f0954d9bc301beff8d')['issues/009-sfp-consequence-representation/009.08-Code-attachments/locator_sweep.json'].fetch('experiments/sfp_representation/009_locator_artifacts/locator_sweep.json')\"",
+    "verify": "shasum -a 256 experiments/sfp_representation/009_locator_artifacts/locator_sweep.json  # expect 5991a1f88225b6c2f48d478478c955e205298ce3796e55775eaab2e98fff44e1"
+  },
+  "logical_key": "issues/009-sfp-consequence-representation/009.08-Code-attachments/locator_sweep.json",
+  "note": "This pointer stands in for the 5.6 MiB locator_sweep.json, which is bulk run data and is hosted in the public Quilt package rather than in git, matching the convention 009.02 established for sweep.json and 009.06 for ladder_sweep.json. Only locator_analysis.py needs it: run the fetch command above to place the real file at experiments/sfp_representation/009_locator_artifacts/locator_sweep.json before running 'locator_analysis.py --check'. Every other locator module's --check path is self-contained and needs nothing fetched. Regenerating it locally instead of fetching costs about 1650 s of GPU-free CPU time via 'locator_sweep.py'.",
+  "package": "occurrence/gpt",
+  "purpose": "all 1344 locator runs: 1 declared block x 4 arms x 21 structural folds x 8 seeds, each cell carrying one Rung-1 chamber-localization run and one Rung-2 recomposition run",
+  "related_artifact": {
+    "logical_key": "issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json",
+    "note": "locator_analysis.py ALSO reads 009_ladder_artifacts/ladder_sweep.json, to pair the cross-turn 009.08-minus-009.06 comparison per (fold_name, seed). That file is likewise bulk run data behind its own pointer at 009_ladder_artifacts/ladder_sweep.json.pointer.json. When it is absent the comparison degrades to an unpaired one against the means pinned in locator_task.PRIOR_009_06, and the artifact records which of the two it did in cross_turn.paired.",
+    "why": "a paired interval over identical cells is a strictly stronger statement than a difference of two means, and both turns ran the same 21 structural folds with the same 8 seeds on splits built by the same functions"
+  },
+  "revision": "12e1ab251b5940a3fa7c9d884829903b817f23d0aee067f0954d9bc301beff8d",
+  "run_digests": {
+    "note": "Digests of the per-run rows with the non-replayable wall-clock keys stripped, exactly as locator_sweep.py records them. Recomputing them from a fetched file is a cheaper integrity check than a full byte comparison of the 5.6 MiB artifact.",
+    "primary_rung1": "b59688c5cf6a00ee6399aabce65699d9c04ad3f75ec6ea26ad9208ea2ef814dc",
+    "primary_rung2": "3a54d9b54369f0aefd325f19fb588ed55c36d9eafce972455f211fe3d04d29f4"
+  },
+  "quilt_hash": {
+    "note": "The Quilt manifest hashes entries with its own chunked scheme, so this value is expected to differ from the plain-file 'sha256' above. It is not a mismatch. Use 'sha256' to verify a fetched file with shasum.",
+    "type": "sha2-256-chunked",
+    "value": "4sqNxY4j/Xm0sWp+/d70V7yq+Bc4gG6UC5IloqJIVfU="
+  },
+  "s3_uri": "s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.08-Code-attachments/locator_sweep.json",
+  "sha256": "5991a1f88225b6c2f48d478478c955e205298ce3796e55775eaab2e98fff44e1"
+}
