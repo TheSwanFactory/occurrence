@@ -10,6 +10,11 @@
   "note": "This pointer stands in for the 9.7 MiB sweep.json, which is bulk run data and is hosted in the public Quilt package rather than in git. Only analysis.py needs it: run the fetch command above to place the real file at experiments/sfp_representation/009_artifacts/sweep.json before running 'analysis.py --check'. Every other module's --check path is self-contained and needs nothing fetched. Regenerating it locally instead of fetching costs about 1843 s of GPU-free CPU time via 'run_sweep.py'.",
   "package": "occurrence/gpt",
   "purpose": "all 1400 sweep runs: 22 folds x arms x seeds, primary and repair blocks",
+  "quilt_hash": {
+    "note": "The Quilt manifest hashes entries with its own chunked scheme, so this value is expected to differ from the plain-file 'sha256' above. It is not a mismatch. Use 'sha256' to verify a fetched file with shasum.",
+    "type": "sha2-256-chunked",
+    "value": "gEV0zP91PIAgpRsp4DBKnq8cnafLY4uzDCMt7IwQVOM="
+  },
   "revision": "4087609bc5f329a01647e50b44f795bcf2a2fd9c15687b32ff0a1563d50a77cf",
   "s3_uri": "s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.02-Code-attachments/sweep.json",
   "sha256": "613adaddb8f3554bf3f7a7535a98b214c0fbd9663443e7c4e6b3326b99611b04",
