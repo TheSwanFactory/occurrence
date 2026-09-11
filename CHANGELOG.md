@@ -7,6 +7,68 @@ All notable changes to this project are documented in this file.
 
 ### Added
 
+- Run Issue-009 corrected consequence-address ladder (`009.05` task, `009.06`
+  result): is the `009.02` forcing negative a property of the SFP representation,
+  or of prematurely expressing consequence as one of 84 opaque public Event
+  identities? Six new modules in `experiments/sfp_representation/` —
+  `ladder_task.py` (the Rung-1 local port and Rung-2 structured-address targets,
+  `splits digest bb8ea403…`), `ladder_heads.py` (typed field heads that **import**
+  `scorer.TokenEncoder` and `scorer.SymmetricPair` rather than reimplementing
+  them, so the input pathway is provably the computation that produced the
+  `009.02` numbers), `ladder_resolver.py`, `ladder_baselines.py`,
+  `ladder_sweep.py` and `ladder_analysis.py` (which imports `009.02`'s seeded
+  bootstrap so the two results are comparable as statistics, not just as numbers).
+  Executes `009.05`; `009.04` was superseded before execution and both facts are
+  machine-checkable fields in `ladder_task.json`.
+  **Disposition C, partial.** Changing **only the output object** — 85 catalogue
+  slots to 17 typed field slots, at capacity spread exactly 0 and with the frozen
+  splits, arms, seeds and protocol unchanged — moved held-out
+  `positive_forced_third_exact_accuracy` under the exact SFP code from **0.0335 to
+  0.7016** against a `1/84` chance floor, with both structural signatures `009.05`
+  section 5.6 requires: **B − C = +0.5082** (CI [0.4583, 0.5595], sign-consistent
+  across all 14 LOHO folds and all 7 LOFPO folds) and **D − B = +0.0506** (CI
+  [−0.0052, 0.1049], includes zero). Native coordinates are **not** sufficient:
+  `A_native` reaches 0.4412, B − A = +0.2604 (CI [0.2039, 0.3199]).
+  Four findings qualify it, and three are cautions against over-reading the
+  headline. **The catalogue interface was a cause, not the only one**: learning all
+  four address fields still fails at 0.0097, and it fails on the fields the
+  certified relation *copies* rather than the ones it computes — `pp` reaches
+  0.9948 while `FFF` collapses to **0.0320**, which is closed-set habitat
+  re-identification under a structural holdout, not consequence forcing. The single
+  repair the stop rule permits copies `S` and `FFF` (the construction `009.05`
+  section 4.2 already licenses at Rung 1), is arm-neutral because the relation
+  copies both on all 336 admitted pairs under B, C and D alike, and both blocks are
+  reported in full. **The obstruction moved rather than vanished**: within the
+  repair block `pp` is 0.9762 and `PP` 0.7158, and 0.9762 × 0.7158 = 0.6987 against
+  an observed 0.7016, so locating the shared block is now the binding constraint.
+  **Rung 1 cannot discriminate and is excluded from the disposition by
+  construction**: its label is a function of the unordered input port pair, which
+  takes exactly three values under the exact code, so a three-row lookup reaches
+  1.0 on held-out habitats — B and D hit 1.0 at a zero generalization gap, and the
+  observed B − C = +0.6682 is recorded and banked nowhere, because `GL(2,2) ≅ S3`
+  makes every relabeling of that quotient a symmetry.
+  **A nonlearned tabulation beats the learner, and that is the sharpest form
+  `H_struct` has taken.** The code-space shortcut search is new to this issue —
+  `009.02`'s nine atoms are all *native*, so no search over the features this
+  learner actually sees had ever been run. Over 12 atoms and 298 subsets it finds
+  that under the exact code the certified consequence is determined by a **two-atom**
+  key with zero ambiguity over all 7056 ordered pairs, reaching 1.0 on held-out
+  habitats, while under the non-automorphic scramble **no subset up to size three
+  determines it at all**. The learner therefore sits between the best
+  strictly-cheaper rule (0.500) and a ceiling the representation itself attains
+  (1.000). The cost classification was restated from Outcome `021.05`'s definition
+  of the Event-level law after the first run exposed that `endpoint_pair` — the
+  complete K4 incidence data — reaches 0.994 and is not a shortcut at all.
+  Rung 3 is exact by construction, not by luck: the SFP alphabet is **saturated**
+  (2 × 7 × 6 = 84 = |Events|), so resolution is total and injective, resolved
+  Event-identity accuracy is *identically* equal to exact structured-address
+  accuracy in all 672 runs, and 0 of 4032 single-field corruptions are ever
+  repaired. Swap invariance is 0.0 bitwise on every head across all 2688 runs, and
+  the two Rung-1 run digests are identical across blocks by construction, since the
+  repair touches only Rung 2. Opaque-token discovery is **now warranted** but
+  should target `PP` and `pp` only and be judged against the 1.000 determining
+  ceiling rather than chance.
+
 - Add `experiments/sfp_representation/` for Issue-009 native-FIPS versus SFP
   consequence representation (`009.01` task, `009.02` result): does the compact
   `S | FFF | PP | pp` code carry the certified admit-and-force relation better

@@ -1,0 +1,349 @@
+{
+  "exactness": {
+    "all_arms_exact": true,
+    "per_arm": {
+      "A_native": {
+        "events": 84,
+        "exact_on_every_event": true,
+        "resolved_from_both_presentations": 84,
+        "resolved_from_canonical_address": 84
+      },
+      "B_sfp": {
+        "events": 84,
+        "exact_on_every_event": true,
+        "resolved_from_both_presentations": 84,
+        "resolved_from_canonical_address": 84
+      },
+      "C_scrambled": {
+        "events": 84,
+        "exact_on_every_event": true,
+        "resolved_from_both_presentations": 84,
+        "resolved_from_canonical_address": 84
+      },
+      "D_relabeled": {
+        "events": 84,
+        "exact_on_every_event": true,
+        "resolved_from_both_presentations": 84,
+        "resolved_from_canonical_address": 84
+      }
+    },
+    "statement": "each arm's resolver inverts that arm's own code exactly, and both presentations of an Event resolve to the same Event, which is the documented canonicalization working end to end"
+  },
+  "executes": "009.05 section 6",
+  "fences": [
+    "The resolver is fixed, exact and nonlearned. It holds no parameters.",
+    "It may not infer, repair or alter an incorrect structured address.",
+    "UNRESOLVED != BOTTOM: a failure to denote is not a decision not to admit. Neither is an algebraic zero.",
+    "It is applied only AFTER a structured address exists, never as part of producing one.",
+    "It resolves within the arm's own certified alphabet, so no arm is resolved through another arm's chart."
+  ],
+  "module": "ladder_resolver",
+  "no_repair": {
+    "documented_exception": "a PP perturbation onto the target's other block-incidence presentation returns the same Event. That is the codec's own symmetry, declared in ladder_task.PP_SET_TARGET_CONVENTION and already credited as correct there, not a resolver repair.",
+    "no_arm_resolver_repairs_a_corrupted_address": true,
+    "per_arm": {
+      "A_native": {
+        "never_repairs": true,
+        "per_field": {
+          "FFF": {
+            "different_event": 2016
+          },
+          "PP": {
+            "different_event": 672,
+            "other_presentation": 336
+          },
+          "S": {
+            "different_event": 336
+          },
+          "pp": {
+            "different_event": 672
+          }
+        },
+        "perturbations": 4032,
+        "resolved_to_a_different_event": 3696,
+        "resolved_to_the_other_presentation_of_the_same_event": 336,
+        "silently_repaired": 0,
+        "unresolved": 0
+      },
+      "B_sfp": {
+        "never_repairs": true,
+        "per_field": {
+          "FFF": {
+            "different_event": 2016
+          },
+          "PP": {
+            "different_event": 672,
+            "other_presentation": 336
+          },
+          "S": {
+            "different_event": 336
+          },
+          "pp": {
+            "different_event": 672
+          }
+        },
+        "perturbations": 4032,
+        "resolved_to_a_different_event": 3696,
+        "resolved_to_the_other_presentation_of_the_same_event": 336,
+        "silently_repaired": 0,
+        "unresolved": 0
+      },
+      "C_scrambled": {
+        "never_repairs": true,
+        "per_field": {
+          "FFF": {
+            "different_event": 2016
+          },
+          "PP": {
+            "different_event": 672,
+            "other_presentation": 336
+          },
+          "S": {
+            "different_event": 336
+          },
+          "pp": {
+            "different_event": 672
+          }
+        },
+        "perturbations": 4032,
+        "resolved_to_a_different_event": 3696,
+        "resolved_to_the_other_presentation_of_the_same_event": 336,
+        "silently_repaired": 0,
+        "unresolved": 0
+      },
+      "D_relabeled": {
+        "never_repairs": true,
+        "per_field": {
+          "FFF": {
+            "different_event": 2016
+          },
+          "PP": {
+            "different_event": 672,
+            "other_presentation": 336
+          },
+          "S": {
+            "different_event": 336
+          },
+          "pp": {
+            "different_event": 672
+          }
+        },
+        "perturbations": 4032,
+        "resolved_to_a_different_event": 3696,
+        "resolved_to_the_other_presentation_of_the_same_event": 336,
+        "silently_repaired": 0,
+        "unresolved": 0
+      }
+    },
+    "statement": "every other single-field corruption resolves to a different certified Event. The resolver is maximally unforgiving: it neither refuses nor rescues."
+  },
+  "nonlearned": {
+    "all_tables_are_integer_only": true,
+    "constructs_no_tensor": true,
+    "holds_no_parameters": true,
+    "imports_torch_transitively": true,
+    "per_arm": {
+      "A_native": {
+        "all_values_are_ints": true,
+        "declaration": {
+          "alphabet": "B_sfp",
+          "arm": "A_native",
+          "kind": "fixed exact nonlearned dictionary lookup",
+          "learned": false,
+          "may_repair": false,
+          "n_addresses": 84,
+          "parameters": 0,
+          "table_sha256": "50a25ff36ac44367077c6277d8c1e39645eadb2cf6bcae739b47614f9732432b",
+          "unresolved_sentinel": -2
+        },
+        "no_float_in_keys": true
+      },
+      "B_sfp": {
+        "all_values_are_ints": true,
+        "declaration": {
+          "alphabet": "B_sfp",
+          "arm": "B_sfp",
+          "kind": "fixed exact nonlearned dictionary lookup",
+          "learned": false,
+          "may_repair": false,
+          "n_addresses": 84,
+          "parameters": 0,
+          "table_sha256": "50a25ff36ac44367077c6277d8c1e39645eadb2cf6bcae739b47614f9732432b",
+          "unresolved_sentinel": -2
+        },
+        "no_float_in_keys": true
+      },
+      "C_scrambled": {
+        "all_values_are_ints": true,
+        "declaration": {
+          "alphabet": "C_scrambled",
+          "arm": "C_scrambled",
+          "kind": "fixed exact nonlearned dictionary lookup",
+          "learned": false,
+          "may_repair": false,
+          "n_addresses": 84,
+          "parameters": 0,
+          "table_sha256": "c5b4af351419e80cfe036b12dc922511467b3af3ec6c84301c4b8fd6cc7dce80",
+          "unresolved_sentinel": -2
+        },
+        "no_float_in_keys": true
+      },
+      "D_relabeled": {
+        "all_values_are_ints": true,
+        "declaration": {
+          "alphabet": "D_relabeled",
+          "arm": "D_relabeled",
+          "kind": "fixed exact nonlearned dictionary lookup",
+          "learned": false,
+          "may_repair": false,
+          "n_addresses": 84,
+          "parameters": 0,
+          "table_sha256": "41fe3b622efc75c20184710b50fb3227842bb513428fd34688a3f16845cf374e",
+          "unresolved_sentinel": -2
+        },
+        "no_float_in_keys": true
+      }
+    },
+    "statement": "a frozen dataclass holding one dict of integers. There is no tensor, no gradient and no state to update, so 'nonlearned' is a property of the type rather than a promise about how it is used.",
+    "why_torch_is_still_in_the_graph": "ladder_task reuses harness.training_positions and harness.evaluation_positions so the Rung-2 splits are provably the same objects that produced the 009.02 numbers, and harness imports torch. A local reimplementation would be import-time torch-free but could drift from the frozen splits, which is the worse failure. Recorded rather than claimed away."
+  },
+  "pins": {
+    "distinct_addresses": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "measured on the exact code"
+    },
+    "saturation": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "2 x 7 x 6"
+    },
+    "syntactic_field_tuples": {
+      "agrees": true,
+      "expected": 168,
+      "observed": 168,
+      "source": "field widths"
+    }
+  },
+  "provenance": {
+    "base_commit": "4520c80807b8480081f396180446880a3ff6fba1",
+    "constructs_no_tensor": true,
+    "imports_torch_transitively_via_harness": true,
+    "reuses": [
+      "ladder_task.code_tables / output_table / rung2_target",
+      "sfp.address_of"
+    ]
+  },
+  "purpose": "the fixed exact nonlearned Rung-3 resolver from a structured SFP address to certified public Event identity",
+  "relational_laws": {
+    "address_correct_iff_event_correct": true,
+    "all_84_events_reachable": true,
+    "all_arms_exact": true,
+    "all_pins_agree": true,
+    "bottom_and_unresolved_stay_distinct": true,
+    "no_arm_resolver_repairs_a_corrupted_address": true,
+    "resolution_is_total_for_every_arm": true,
+    "resolver_is_nonlearned": true,
+    "two_presentations_per_event": true
+  },
+  "resolution_identity": {
+    "identical_for_every_arm": true,
+    "per_arm": {
+      "A_native": {
+        "address_correct_iff_event_correct": true,
+        "agreements": 3696,
+        "disagreements": 0,
+        "examples": [],
+        "trials": 3696
+      },
+      "B_sfp": {
+        "address_correct_iff_event_correct": true,
+        "agreements": 3696,
+        "disagreements": 0,
+        "examples": [],
+        "trials": 3696
+      },
+      "C_scrambled": {
+        "address_correct_iff_event_correct": true,
+        "agreements": 3696,
+        "disagreements": 0,
+        "examples": [],
+        "trials": 3696
+      },
+      "D_relabeled": {
+        "address_correct_iff_event_correct": true,
+        "agreements": 3696,
+        "disagreements": 0,
+        "examples": [],
+        "trials": 3696
+      }
+    },
+    "statement": "exact structured-address accuracy and resolved Event-identity accuracy are the same number by construction, and the equality is measured over correct and corrupted addresses alike"
+  },
+  "symbols": {
+    "bottom_index": -1,
+    "distinct": true,
+    "fence": "0 != bottom, and bottom != unresolved",
+    "neither_is_a_valid_event_index": true,
+    "no_resolver_ever_returns_bottom": true,
+    "statement": "BOTTOM is a decision the gate makes; UNRESOLVED is an address that denotes nothing. Keeping them apart is what stops a malformed address from being scored as a correct non-admission.",
+    "unresolved_sentinel": -2
+  },
+  "totality": {
+    "all_84_events_reachable": true,
+    "consequence_for_rung_3": "because resolution is total and injective on addresses, resolved Event-identity accuracy is IDENTICALLY equal to exact structured-address accuracy. Rung 3 therefore cannot show a codec, resolver or conformance drop, and any Rung-2 to Rung-3 difference would be an implementation bug rather than a scientific finding. verify_resolution_identity measures the equality rather than asserting it.",
+    "per_arm": {
+      "A_native": {
+        "distinct_events_reached": 84,
+        "resolved": 168,
+        "syntactic_tuples": 168,
+        "total": true,
+        "tuples_per_event": [
+          2
+        ],
+        "unresolved": 0
+      },
+      "B_sfp": {
+        "distinct_events_reached": 84,
+        "resolved": 168,
+        "syntactic_tuples": 168,
+        "total": true,
+        "tuples_per_event": [
+          2
+        ],
+        "unresolved": 0
+      },
+      "C_scrambled": {
+        "distinct_events_reached": 84,
+        "resolved": 168,
+        "syntactic_tuples": 168,
+        "total": true,
+        "tuples_per_event": [
+          2
+        ],
+        "unresolved": 0
+      },
+      "D_relabeled": {
+        "distinct_events_reached": 84,
+        "resolved": 168,
+        "syntactic_tuples": 168,
+        "total": true,
+        "tuples_per_event": [
+          2
+        ],
+        "unresolved": 0
+      }
+    },
+    "resolution_is_total_for_every_arm": true,
+    "saturation": "2 x 7 x 6 = 84 = |Events|. The alphabet is exactly saturated, so resolution is total and Rung 3 cannot exhibit a codec drop. The 168 syntactic (S, FFF, PP, pp) tuples collapse two-to-one onto the 84 addresses because an Event has two block-incidence presentations.",
+    "two_presentations_per_event": true,
+    "why_a_refusal_path_still_exists": "Resolver.resolve returns UNRESOLVED for an out-of-range field even though the heads cannot produce one. The branch is kept so that a future head with a wider field, or a hand-written address, is scored as a failure to denote instead of silently crashing or being repaired."
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "PASS - each arm's resolver inverts its own code exactly, resolution is total because the alphabet is saturated (2 x 7 x 6 = 84), no single-field corruption is ever repaired, and resolved Event-identity accuracy is measurably identical to exact structured-address accuracy"
+  }
+}

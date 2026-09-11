@@ -235,3 +235,7 @@ Thumbs.db
 # bulk run data hosted in the public protology Quilt package, not in git
 # see experiments/sfp_representation/009_artifacts/sweep.json.pointer.json
 experiments/sfp_representation/009_artifacts/sweep.json
+
+# bulk ladder run data, 9.2 MiB of per-run rows
+# see experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json.pointer.json
+experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json

@@ -18,6 +18,13 @@ ordered pairs:
 Result: **`009.02`, disposition E (narrowed)**. See
 [`009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md`](009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md).
 
+> **Superseded in part by `009.06`.** The `009.02` forcing negative turned out to
+> be substantially an artifact of the 84-way output interface. Changing only the
+> output object moved held-out forced-third identity from `0.0335` to `0.7016`.
+> See [the consequence-address ladder](#the-009-06-consequence-address-ladder)
+> below; the `009.02` *admission* findings and all its structural machinery stand
+> unchanged and are reused byte-identically.
+
 Forcing is unsolved by every representation — the best forced-third accuracy over
 all arms is 0.0335 while both nonlearned oracles score 1.0 — so no arm
 demonstrates held-out generalization of the certified relation as a whole. The
@@ -171,3 +178,130 @@ never substitutes for Arm C.
 leakage search found all 50 cheaper-than-the-relation shortcuts on that fold and
 none on LOHO or LOFPO; the control is won outright by "same habitat and not
 repeated ⇒ ADMIT".
+
+---
+
+## The `009.06` consequence-address ladder
+
+`009.02` left a split verdict: the SFP code carries the *admission* half of the
+certified relation and no representation solved *forcing* at all. `009.03` proposed
+that the learner might be losing a real advantage at the output interface — 84
+opaque public Event identities — rather than failing to hold the relation. `009.04`
+proposed the right three-rung test but imposed an invalid `B > C` condition at the
+local `pp` rung; `009.05` superseded it before execution, because
+`GL(2,2) ≅ S3` makes every relabeling of that quotient a symmetry.
+
+**`009.06` executes `009.05`.** See
+[`009.06-Kiro-corrected-structured-consequence-address-ladder-result.md`](009.06-Kiro-corrected-structured-consequence-address-ladder-result.md).
+
+The experiment changes **only the output object**. `ladder_heads.py` *imports*
+`scorer.TokenEncoder` and `scorer.SymmetricPair` rather than reimplementing them,
+and reuses the frozen splits, arms, seeds and training protocol, so a difference in
+result is attributable to the interface.
+
+```text
+009.02   RelHead over 84 candidate Events + BottomHead        85 slots
+Rung 1   one 3-way local port head                             3 slots
+Rung 2   BOTTOM gate + typed S / FFF / PP / pp heads           17 slots
+Rung 3   a fixed exact nonlearned resolver, no parameters
+```
+
+### Result: disposition C, partial
+
+`positive_forced_third_exact_accuracy` — the same metric `009.02` reported and
+failed — on the primary LOHO family, 14 folds × 8 seeds:
+
+| Arm | `009.02` 84-way | `009.06` structured |
+|---|---|---|
+| **B_sfp** | 0.0335 | **0.7016** |
+| D_relabeled | 0.0283 | 0.7522 |
+| A_native | 0.0000 | 0.4412 |
+| C_scrambled | 0.0052 | 0.1935 |
+| exact oracles | 1.0000 | 1.0000 |
+
+Both structural signatures `009.05` section 5.6 requires hold: `B - C = +0.5082`
+(CI `[0.4583, 0.5595]`, sign-consistent across all 14 folds) and `D - B = +0.0506`
+(CI `[-0.0052, 0.1049]`, includes zero).
+
+### Read these four cautions first
+
+**Rung 1 cannot discriminate.** Its label is a function of the unordered input port
+pair, which under the exact code takes exactly three values, so a three-row lookup
+table fitted on training habitats reaches 1.0 on held-out ones. The rung confirms
+the local law is acquired — B and D hit 1.0 at a zero generalization gap — and
+carries no structural weight in either direction. `B - C = +0.6682` is recorded and
+excluded from the disposition by construction.
+
+**The result required one declared repair, and both blocks are reported.**
+Learning all four address fields fails at `0.0097`, and it fails on the fields the
+relation *copies*, not the ones it computes: `pp` reaches `0.9948` while `FFF`
+collapses to `0.0320`. That is closed-set habitat re-identification, not
+consequence forcing. The single repair `009.05` section 9 permits copies `S` and
+`FFF` — the construction section 4.2 already licenses at Rung 1 — and is
+arm-neutral, since the certified relation copies both on all 336 admitted pairs
+under B, C and D alike. **The catalogue interface was a cause, not the only one.**
+
+**The obstruction moved rather than vanished.** Within the repair block `pp` is at
+`0.9762` and `PP` at `0.7158`, and the address metric is essentially the `PP`
+metric (`0.9762 × 0.7158 = 0.6987` against an observed `0.7016`). Locating the
+shared block, not forcing, is now the binding constraint.
+
+**A nonlearned tabulation beats the learner.** The code-space shortcut search —
+new to this issue, since `009.02`'s atoms are all native — finds that under the
+exact code the certified consequence is determined by a **two-atom** key with zero
+ambiguity over all 7056 pairs, reaching 1.0 on held-out habitats. Under the
+non-automorphic scramble **no subset up to size three determines it at all**. So
+`H_struct` holds without any learner, and the learner at `0.7016` sits between the
+best strictly-cheaper rule (`0.500`) and a ceiling the representation itself
+attains (`1.000`).
+
+### Ladder files
+
+| File | Role | Torch |
+|---|---|:--:|
+| `ladder_task.py` | Rung-1 port and Rung-2 address targets, splits, leakage, the pre-registered habitat-locality mechanism | via `harness` |
+| `ladder_heads.py` | typed field heads over the **imported** `009.02` encoder; the declared repair | **yes** |
+| `ladder_resolver.py` | the fixed exact nonlearned resolver and its saturation/no-repair proofs | no tensors |
+| `ladder_baselines.py` | deterministic baselines and the code-space shortcut search | no tensors |
+| `ladder_sweep.py` | both declared blocks, 2688 runs, about 2820 s | **yes** |
+| `ladder_analysis.py` | paired effects via the **imported** `009.02` bootstrap, two-ceiling reading, disposition | **yes** |
+
+`ladder_task` reuses `harness.training_positions` / `evaluation_positions` so the
+Rung-2 splits are provably the objects that produced the `009.02` numbers; a local
+copy could drift. `harness` imports torch, so the whole ladder chain needs it —
+`ladder_resolver` and `ladder_baselines` construct no tensor and hold no
+parameters, but they inherit that import transitively, and their artifacts record
+this rather than claiming otherwise.
+
+### Reproducing the ladder
+
+```bash
+uv run --frozen python experiments/sfp_representation/ladder_task.py --check
+uv run --frozen python experiments/sfp_representation/ladder_heads.py --check
+uv run --frozen python experiments/sfp_representation/ladder_resolver.py --check
+uv run --frozen python experiments/sfp_representation/ladder_baselines.py --check
+uv run --frozen python experiments/sfp_representation/ladder_sweep.py --check   # ~2820 s
+uv run --frozen python experiments/sfp_representation/ladder_analysis.py --check
+```
+
+`ladder_sweep.json` is 9.2 MiB of bulk run data and lives in the package, not git,
+matching the convention `009.02` established for `sweep.json`. Only
+`ladder_analysis.py` needs it:
+
+```bash
+aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json \
+  experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json
+```
+
+### Ladder fence
+
+```text
+Rung-1 B > C is NOT structural evidence; GL(2,2) = S3
+the consequence relation is NOT fully constituted: 0.7016 against a 1.000 ceiling
+the 84-way interface was A cause of the 009.02 negative, not the only one
+BOTTOM is a typed gate, never pp=00, never FFF=000, never Event 0, never UNRESOLVED
+UNRESOLVED != BOTTOM: failing to denote is not deciding not to admit
+Arm E is not built; a token_dim of 84 is a per-Event input column
+admission balanced accuracy still carries no claim, per 009.02
+opaque-token discovery is now warranted, but should target PP and pp only
+```

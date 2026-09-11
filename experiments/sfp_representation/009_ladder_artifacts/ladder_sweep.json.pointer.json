@@ -1,0 +1,21 @@
+{
+  "bucket": "protology",
+  "bytes": 9656580,
+  "fetch": {
+    "aws_cli": "aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json",
+    "verify": "shasum -a 256 experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json  # expect 27b330d87cce8eba7bf114886ae970d60402b270f675fafe95f5015863e5479e"
+  },
+  "logical_key": "issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json",
+  "note": "This pointer stands in for the 9.2 MiB ladder_sweep.json, which is bulk run data and is hosted in the public Quilt package rather than in git, matching the convention 009.02 established for sweep.json. Only ladder_analysis.py needs it: run the fetch command above to place the real file at experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json before running 'ladder_analysis.py --check'. Every other ladder module's --check path is self-contained and needs nothing fetched. Regenerating it locally instead of fetching costs about 2820 s of GPU-free CPU time via 'ladder_sweep.py'.",
+  "package": "occurrence/gpt",
+  "purpose": "all 2688 ladder runs: 2 blocks x 4 arms x 21 structural folds x 8 seeds, each carrying one Rung-1 and one Rung-2 run",
+  "run_digests": {
+    "note": "primary_rung1 and repair_rung1 are the SAME digest by construction: the declared Rung-2 repair touches only Rung 2, so the Rung-1 runs are bit-identical across blocks. That equality is a built-in consistency check on the block separation.",
+    "primary_rung1": "7802234864b850e07a96867297d10afab8d59210d1d7ad7cb2163c92feadb185",
+    "primary_rung2": "d7802fa8ab9c3893cd121144b8bd4634f66c05fd6c35c44c816461a6a13e8bb2",
+    "repair_rung1": "7802234864b850e07a96867297d10afab8d59210d1d7ad7cb2163c92feadb185",
+    "repair_rung2": "f36d5e495f93919321c599fc258399bfa3982c131dc542473483f1e302f97a8d"
+  },
+  "s3_uri": "s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.06-Code-attachments/ladder_sweep.json",
+  "sha256": "27b330d87cce8eba7bf114886ae970d60402b270f675fafe95f5015863e5479e"
+}
