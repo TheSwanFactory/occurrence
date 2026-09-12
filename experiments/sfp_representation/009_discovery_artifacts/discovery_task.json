@@ -1,0 +1,3026 @@
+{
+  "advisory_note": "009.09a-Claude-pre-execution-review.md",
+  "base_commit": "7a37f58444901c32a6e750e617d8d4d82b9f6202",
+  "direction_neutrality": {
+    "admitted_pairs_stored_unordered": true,
+    "certified_admission_is_symmetric": true,
+    "forced_third_is_direction_neutral": true,
+    "note": "every stored pair is a sorted 2-tuple and every lookup is by the sorted pair, so a swapped query is the SAME row, not a second row that happens to agree. The certified relation is nonetheless re-read in both directions here.",
+    "ordered_pairs_rechecked": 336
+  },
+  "episode_construction": {
+    "anchors_per_habitat": 4,
+    "namespaces": [
+      "primary",
+      "fresh_relabeling",
+      "dual_control"
+    ],
+    "relabeling_source": "digest-derived start offset and a stride coprime to 720, so the indices are distinct by construction; never hash(), never an RNG stream, never set iteration order",
+    "relabelings_per_anchor": 12,
+    "s_and_fff": "manifest bookkeeping only. 009.09a section 4 keeps them out of the network input; discovery_heads proves the input surface carries no habitat identity."
+  },
+  "episode_manifests": {
+    "dual_control": {
+      "admitted_pairs_per_episode": [
+        12
+      ],
+      "distinct_relabelings_per_habitat_anchor": [
+        12
+      ],
+      "distinct_relabelings_used": 437,
+      "episodes_per_habitat": [
+        48
+      ],
+      "n_episodes": 672,
+      "scored_queries_per_episode": [
+        9
+      ],
+      "sha256": "4e778cc99a029c2bda9beb38a8744f5a19b79ad8aa283ef654f53bc5ef3636b4",
+      "support_queries_per_episode": [
+        3
+      ]
+    },
+    "fresh_relabeling": {
+      "admitted_pairs_per_episode": [
+        12
+      ],
+      "distinct_relabelings_per_habitat_anchor": [
+        12
+      ],
+      "distinct_relabelings_used": 451,
+      "episodes_per_habitat": [
+        48
+      ],
+      "n_episodes": 672,
+      "scored_queries_per_episode": [
+        9
+      ],
+      "sha256": "658a175d853834f26189495ca19ec7b425aa3e174c2db4ad2fafb5f36bcc0463",
+      "support_queries_per_episode": [
+        3
+      ]
+    },
+    "primary": {
+      "admitted_pairs_per_episode": [
+        12
+      ],
+      "distinct_relabelings_per_habitat_anchor": [
+        12
+      ],
+      "distinct_relabelings_used": 458,
+      "episodes_per_habitat": [
+        48
+      ],
+      "n_episodes": 672,
+      "scored_queries_per_episode": [
+        9
+      ],
+      "sha256": "3aa3ae224569c11f22ee762c01e34989ee5b4909ff43315d2341bae18706e8b0",
+      "support_queries_per_episode": [
+        3
+      ]
+    }
+  },
+  "equivalence_audit_machinery": {
+    "certified_family_is_always_equivalent": true,
+    "group_searched": "AGL(2,2) ~= S4, all 24 elements, exactly",
+    "note": "the arbitrary choice of affine origin and basis is not an error: any of the 24 chamber relabelings is certified-equivalent, and the search is over the finite group rather than a fitted continuous alignment.",
+    "per_habitat": [
+      {
+        "equivalent": true,
+        "habitat": "P=1,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=1,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=2,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=2,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=3,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=3,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=4,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=4,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=5,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=5,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=6,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=6,delta=+1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=7,delta=-1",
+        "witnesses": 1
+      },
+      {
+        "equivalent": true,
+        "habitat": "P=7,delta=+1",
+        "witnesses": 1
+      }
+    ],
+    "witness_count_is_always_one": true
+  },
+  "executes": "009.09-Kiro-opaque-local-chart-discovery-task.md",
+  "expected_ceilings": {
+    "admission_only_forced_third": 0.5,
+    "one_anchor_forced_third": 1.0
+  },
+  "fences": [
+    "Admission and the certified forced third come from the certified native relation via task.Dataset; sfp.ExactSfpCircuit is not imported here.",
+    "S and FFF are SUPPLIED habitat identity. They are neither discovered nor predicted, and per 009.09a section 4 they are not fed to the network at all.",
+    "Opaque token names carry NO structure. A fresh permutation is applied per episode and no trainable parameter is indexed by any Event, habitat or slot.",
+    "The dual (K4-triangle) family is a COMBINATORIAL object of the admission graph, not certified FIPS structure. Its triples and thirds are labelled combinatorial and are only ever a control.",
+    "The hidden certified PP/pp chart is used ONLY by the section 6.3 equivalence audit. It is never an input, never a target, and never a label source.",
+    "LOHO and LOFPO here hold out a fresh relabelling of the same octahedron, not a new structure; per 009.09a section 5 this is fresh-relabelling generalization of a local relational rule.",
+    "The exact one-anchor completion is a NONLEARNED CEILING, never a competing learned baseline.",
+    "FFF=000 and pp=00 remain formal algebraic completion values outside the finite Event catalogue and play no part in the opaque-node protocol.",
+    "BOTTOM stays distinct from every algebraic zero and from any malformed or unresolved prediction. No episode row here is a BOTTOM row: every scored query is an admitted pair."
+  ],
+  "folds": {
+    "families": [
+      "LOFPO",
+      "LOHO"
+    ],
+    "holdout_character": "009.09a section 5: LOHO and LOFPO here hold out a fresh relabelling of the same octahedron with a fresh anchor, not a new structure. The result is fresh-relabelling generalization of a local relational rule, NOT held-out-structure generalization in the 009.06/009.08 sense where the held-out habitat's code words never appeared in training.",
+    "n_folds": 21,
+    "per_fold": [
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "held_out_fano_points": [
+          1
+        ],
+        "held_out_habitats": [
+          "P=1,delta=-1"
+        ],
+        "name": "P=1,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "2de3df23a95183649c4c2ea34146e9f65276aaf45a855761f7dde11d70f7d0ec",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "25b16bedda0e78d72b89a11b4986eca88017561ccdc960e072c4bbaf99d457b8",
+        "upstream_fold_sha256": "bb4c626afbbf70144ccf6bf4516e3db65f298b799acb8b0de8f5f712fb60b019"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "held_out_fano_points": [
+          1
+        ],
+        "held_out_habitats": [
+          "P=1,delta=+1"
+        ],
+        "name": "P=1,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "abe5dbd59d25d03078a6a44566859c6b2ecfb9147f0b4ece3f8b6c25b5d3c1e3",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "66b67a83333bb24970b3a697699fd54163b6d79c25f94fb60937a750ad55bbfe",
+        "upstream_fold_sha256": "885cdfc5e218b617ec61184f7a7cf839ca5c6f14db257eee4e4b7a2f2d9ccc20"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "held_out_fano_points": [
+          2
+        ],
+        "held_out_habitats": [
+          "P=2,delta=-1"
+        ],
+        "name": "P=2,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "0b8799c17c413cacf546195aff0d2e3f55253c69572c084ff45de2b3811ec1f4",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "f29978be75c6e39780e3544b64a33b7faf89e8b96d54e839b1cea157c9090021",
+        "upstream_fold_sha256": "2f68f982de61b9dbe07e4625754eac40d53448f0906ad0a32c5ad8a9774bcbe8"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "held_out_fano_points": [
+          2
+        ],
+        "held_out_habitats": [
+          "P=2,delta=+1"
+        ],
+        "name": "P=2,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "6b147b16f7c125231c9ef7d71d358e9a7bfbd9b256b826156b4da9e93c87f1b0",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "bc96ae2229e521b5b05383b927940ad421db260dac3c0f7e900be9eb13081dce",
+        "upstream_fold_sha256": "6288b0be79bd22566b3fcf4ea8d9c949617fa82950c8c6e51ab9a4a28fb8ed6c"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "held_out_fano_points": [
+          3
+        ],
+        "held_out_habitats": [
+          "P=3,delta=-1"
+        ],
+        "name": "P=3,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "6194bf7696f3eb9d6fa54e088166b0b4d2a7dfd2384af9bc1cbffcfb1d8a4c46",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "89865462fe4afbc971c33c4be87919cd290409e74c10df6cf61464d5e8d594da",
+        "upstream_fold_sha256": "d1566a77ab2ad689b92d52d40529109ecece4eac9b1c8132e1c9cf95c60d0481"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "held_out_fano_points": [
+          3
+        ],
+        "held_out_habitats": [
+          "P=3,delta=+1"
+        ],
+        "name": "P=3,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "3bf8b9ec281c7faab9c3883b7635274bd5d9954140fe002c734e4b3e53a71a95",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "6522bdf957c808450c5dfd5dd29642a62d80d09dae69acb7319de21242883399",
+        "upstream_fold_sha256": "e3982759f1518ddd9be351e34ed110802b28b9c84bfb0bd17ac4d9d17ad521fd"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "held_out_fano_points": [
+          4
+        ],
+        "held_out_habitats": [
+          "P=4,delta=-1"
+        ],
+        "name": "P=4,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "bcd599b6073cbc83c245e50a4e7e14d92e8bc369e3ace15db16cad80c735389c",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "6165fe27eed1fd82ba289509b167bc4edd8d962ec4b8945b02c1adf5c0568930",
+        "upstream_fold_sha256": "91f77a52774a5702c1264e07554b0249583e1c9546d95d76b59f228e6e0361ac"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "held_out_fano_points": [
+          4
+        ],
+        "held_out_habitats": [
+          "P=4,delta=+1"
+        ],
+        "name": "P=4,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "d1eb66bb7b261606a26125050979cdf26dc4579f44fd7f67dac9321f728b1f8c",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "6f020fa29e84adaa4829dd6b164ee015f57d03b71d48e45ba5c780971ff8b781",
+        "upstream_fold_sha256": "00761da3238c439ca0de85985c9b4fb336b2bfb03a53cd274de2beb9499051ab"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "held_out_fano_points": [
+          5
+        ],
+        "held_out_habitats": [
+          "P=5,delta=-1"
+        ],
+        "name": "P=5,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "9b0914790477e199c64b2dda2fee602503db045fcdb4cd154bd297339e0095fd",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "a5838fbc1d05a35c6b62b9bd4e6abcd3f6c95317c31e57d7666d830bf8bd0357",
+        "upstream_fold_sha256": "2c425b6f238f951b0338d2d6954c583d17f35e67e5263c4e607593c7aa09f408"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "held_out_fano_points": [
+          5
+        ],
+        "held_out_habitats": [
+          "P=5,delta=+1"
+        ],
+        "name": "P=5,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "bbed4c5de75748e5dfe60839c80d82a307346d64eb0db62ed9b96ba34824894d",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "3554b508b009eed9c57617802a5dc77d79a387b65bc96c9e7c73ef9d5a73d9ed",
+        "upstream_fold_sha256": "4ec103a259870006bb9ad612d61d2c9c8832a185110ff3bc6345b8ef3a8a32ff"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "held_out_fano_points": [
+          6
+        ],
+        "held_out_habitats": [
+          "P=6,delta=-1"
+        ],
+        "name": "P=6,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "55a176fd76e2b5f6dcbb39018c10df47cedd6792fc3ec0676a0afb32d604c0a8",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "8512ff05e8bef5ef438a1f1160c953c72b364fdaa77a4781439661147a991833",
+        "upstream_fold_sha256": "7c2789ebc2dfb29cde2b366253b771d38b6060c2d71f958e3cc2dc9972ea81c3"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "held_out_fano_points": [
+          6
+        ],
+        "held_out_habitats": [
+          "P=6,delta=+1"
+        ],
+        "name": "P=6,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "f3393be6891fc418123081fd483535858d126ed864b1ab371937549d3bdb779d",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "74f5066761e143da26e82cdcd80ca6e0d7e57638c6a8f95a52694dc6969fc1b1",
+        "upstream_fold_sha256": "c9888d7dc9cc425031330b0899ae7dc74cd7749e9645a4d348af61173840c689"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "held_out_fano_points": [
+          7
+        ],
+        "held_out_habitats": [
+          "P=7,delta=-1"
+        ],
+        "name": "P=7,delta=-1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "bbaa4fc92df84fd5f1948f61a8c8fc9a1ce31dcad826b5e60e5652d50f0cbcab",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "4967ecf2949b67433d6bcd8eb28f7d30f055e8d7072586a12c716a6eb61b7a34",
+        "upstream_fold_sha256": "b1f887adf3f6c060f41242288f0744a18d571222c9113bda4a1048d6a8977572"
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "held_out_fano_points": [
+          7
+        ],
+        "held_out_habitats": [
+          "P=7,delta=+1"
+        ],
+        "name": "P=7,delta=+1",
+        "role": "primary",
+        "test_episodes": 48,
+        "test_scored_queries": 432,
+        "test_sha256": "a6bca9403d72ea8a15ded9a63246aea5c1b6aa08c055799e933112f8adca58b5",
+        "train_episodes": 624,
+        "train_scored_queries": 5616,
+        "train_sha256": "31cfbd0877397d7dfde98d96db35e885fb21861071518127f6d8bb455c95985e",
+        "upstream_fold_sha256": "6615b494af33568fdb238dbfac99786ddc13de904e23176fb155736428df094b"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          14,
+          15,
+          26,
+          27,
+          42,
+          43,
+          54,
+          55,
+          70,
+          71,
+          82,
+          83
+        ],
+        "held_out_fano_points": [
+          1
+        ],
+        "held_out_habitats": [
+          "P=1,delta=+1",
+          "P=1,delta=-1"
+        ],
+        "name": "P=1",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "5c3f5bbebfbab569e9ff9411b5f8db00a9e4b08a381029e0c476e7beef44d03e",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "4bcd94eec7eeebe0f946d1dd75a085f998de1c70cc2ea24bc8bd6ba77a2ea94f",
+        "upstream_fold_sha256": "23e45937168777d6b0267c61aaa404d868ae19cfa46c8708ff0a696914efc01a"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          2,
+          3,
+          24,
+          25,
+          44,
+          45,
+          58,
+          59,
+          66,
+          67,
+          80,
+          81
+        ],
+        "held_out_fano_points": [
+          2
+        ],
+        "held_out_habitats": [
+          "P=2,delta=+1",
+          "P=2,delta=-1"
+        ],
+        "name": "P=2",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "803d5873c124a3cd497a7144cb63646cf577ce3d2dcba6243672919ab7434a8d",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "19b19ce8d94c1156a04b0f0b0b670d1f018038a3f0a64a5757698833b0d44e3b",
+        "upstream_fold_sha256": "cacdfc43fbf7efc90ce4730b9524c782ed09d0cc6b1ed439568cd99cbd573186"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          0,
+          1,
+          12,
+          13,
+          46,
+          47,
+          56,
+          57,
+          68,
+          69,
+          78,
+          79
+        ],
+        "held_out_fano_points": [
+          3
+        ],
+        "held_out_habitats": [
+          "P=3,delta=+1",
+          "P=3,delta=-1"
+        ],
+        "name": "P=3",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "842be774781c8b83f77a3d3ab4d29d3e9d546f81dde51e916fb77e789248180c",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "e80a2952db5598a4081d7cae6490266d062e72011331d669cbf16b45e66c1d50",
+        "upstream_fold_sha256": "87f4400281c03f152c8272e0d4a3629e4c6265199f03606b79a359ba9917bd50"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          6,
+          7,
+          20,
+          21,
+          34,
+          35,
+          48,
+          49,
+          62,
+          63,
+          76,
+          77
+        ],
+        "held_out_fano_points": [
+          4
+        ],
+        "held_out_habitats": [
+          "P=4,delta=+1",
+          "P=4,delta=-1"
+        ],
+        "name": "P=4",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "767905741d1977ef653fe59d6b2a74691294b9e98cd64974c3e90d05864a52f6",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "b141fe1824c0546bf4b60012f7fe78a7b8a4f14ebcd8bc1c5ad49c59e96b7f2e",
+        "upstream_fold_sha256": "3798b6460ee4dfbe9ab663d8389623fb50b74baaac88640c8001c1c9952826da"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          4,
+          5,
+          22,
+          23,
+          32,
+          33,
+          36,
+          37,
+          64,
+          65,
+          74,
+          75
+        ],
+        "held_out_fano_points": [
+          5
+        ],
+        "held_out_habitats": [
+          "P=5,delta=+1",
+          "P=5,delta=-1"
+        ],
+        "name": "P=5",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "42ceee1f09a0eaef1c385ee2393f0138e7c84620f8201df93baf15697162a424",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "edba1495e0e6e913a5b7c08b8b13071452220152dc9259a1b95fb1fe1de54880",
+        "upstream_fold_sha256": "86fba878f75ec963886d124d303d40c25e9b292242d924aa5d9ae4d393f1ee6b"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          10,
+          11,
+          16,
+          17,
+          30,
+          31,
+          38,
+          39,
+          52,
+          53,
+          72,
+          73
+        ],
+        "held_out_fano_points": [
+          6
+        ],
+        "held_out_habitats": [
+          "P=6,delta=+1",
+          "P=6,delta=-1"
+        ],
+        "name": "P=6",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "121d16b966b38090aa2cf3a3ca848dc465c118d0d0572192004cd30ae11eff67",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "6bb5cb84c8161236288c02442d3699ae773249e9e695066c3690c29817d6ff3e",
+        "upstream_fold_sha256": "c9d5b85393b4020a05eb058440a55ea66754b0ea388fc5446f24af319b2c48c3"
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          8,
+          9,
+          18,
+          19,
+          28,
+          29,
+          40,
+          41,
+          50,
+          51,
+          60,
+          61
+        ],
+        "held_out_fano_points": [
+          7
+        ],
+        "held_out_habitats": [
+          "P=7,delta=+1",
+          "P=7,delta=-1"
+        ],
+        "name": "P=7",
+        "role": "harder_secondary",
+        "test_episodes": 96,
+        "test_scored_queries": 864,
+        "test_sha256": "95ed9defc659e413a452baf675ea91d3989e8d708b7ed6879d2bfbd941e4192f",
+        "train_episodes": 576,
+        "train_scored_queries": 5184,
+        "train_sha256": "7deef2ffaa1c735c34c0a74c7050383c5d14ca7d607910c520aaf1d2164ce325",
+        "upstream_fold_sha256": "bb0f3422373c051b19207328fe5ffe194a9b4d80751538afc89e835d1776eb61"
+      }
+    ],
+    "sha256": "3705c2889db49294420c987557b49b47cbf336c9c518ac0a46424fab71709d48",
+    "within_episode_support_is_not_leakage": "009.09 section 4.5: at test time the held-out habitat is allowed its declared within-episode relational support -- its admission graph plus one anchor triple. That support is the object of study. No forced-third query label from a held-out habitat enters optimization."
+  },
+  "fresh_relabeling_namespace": {
+    "cells_compared": 56,
+    "independent_draw": true,
+    "note": "the fresh copies are drawn from a separate digest namespace, so their relabeling sequence is independent of the primary one rather than a shifted copy of it.",
+    "relabeling_index_collisions": 0
+  },
+  "gate_0": {
+    "digest": "2db79d5c40ebf2a1b866a18c88838fc1dbd815afe817e5a5b29030db19ed836d",
+    "gate_open": true,
+    "gate_statement": "Gate 0 PASSES: admission alone leaves exactly two compatible block systems and a 1/2 ceiling; one certified anchor selects the certified family uniquely and lifts the ceiling to 1.000.",
+    "laws": {
+      "admission_alone_leaves_exactly_one_dual_family": true,
+      "admission_graph_is_4_regular_on_6_tokens": true,
+      "admission_only_ceiling_is_one_half": true,
+      "advisory_unit_form_agrees_on_the_scored_domain": true,
+      "certified_family_is_admission_compatible": true,
+      "certified_relabelings_are_admission_automorphisms": true,
+      "certified_subgroup_has_index_two": true,
+      "cross_family_faces_never_share_exactly_one_event": true,
+      "dual_anchor_rule_reproduces_the_dual_third": true,
+      "every_admitted_pair_has_a_candidate_swapping_automorphism": true,
+      "nine_scored_queries_per_episode": true,
+      "nonadmission_is_a_perfect_matching": true,
+      "one_anchor_all_pairs_ceiling_is_one": true,
+      "one_anchor_ceiling_is_one": true,
+      "one_anchor_rule_reproduces_the_certified_third": true,
+      "one_certified_anchor_determines_the_certified_family": true,
+      "same_family_faces_share_exactly_one_event": true,
+      "the_two_families_disagree_on_every_admitted_pair": true
+    },
+    "one_anchor_sufficiency": {
+      "note": "009.09 section 3.3 permits the primary experiment only if admission plus one genuine block anchor gives every withheld admitted pair a unique forced third, i.e. a 1.000 ceiling.",
+      "sufficient": true
+    },
+    "per_habitat": [
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012354",
+          "0-3": "012354",
+          "0-4": "013245",
+          "0-5": "013245",
+          "1-2": "012354",
+          "1-3": "012354",
+          "1-4": "013245",
+          "1-5": "013245",
+          "2-4": "102345",
+          "2-5": "102345",
+          "3-4": "102345",
+          "3-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-3-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=1,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "f7bdbff6885bed288fb3e341eb59cb5cfb2bd61437d67e3b1c1c1e9971a6042e",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=001",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012354",
+          "0-3": "012354",
+          "0-4": "013245",
+          "0-5": "013245",
+          "1-2": "012354",
+          "1-3": "012354",
+          "1-4": "013245",
+          "1-5": "013245",
+          "2-4": "102345",
+          "2-5": "102345",
+          "3-4": "102345",
+          "3-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-3-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=1,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "43a186d951285b5c202f7bfb189e5933b36c365773d5f9adbd84f0665df41aac",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=001",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012543",
+          "0-3": "014325",
+          "0-4": "012543",
+          "0-5": "014325",
+          "1-2": "012543",
+          "1-3": "014325",
+          "1-4": "012543",
+          "1-5": "014325",
+          "2-3": "102345",
+          "2-5": "102345",
+          "3-4": "102345",
+          "4-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=2,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-3",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "8989f67cd2799ff3de30bd93a735a0ff6189ddbb4bef02cb5431c8ed43a0178a",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=010",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012543",
+          "0-3": "014325",
+          "0-4": "012543",
+          "0-5": "014325",
+          "1-2": "012543",
+          "1-3": "014325",
+          "1-4": "012543",
+          "1-5": "014325",
+          "2-3": "102345",
+          "2-5": "102345",
+          "3-4": "102345",
+          "4-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=2,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-3",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "cf64396b21325503986f472f1cd4ac1e47a62f3a0c16d2055e14338d147f4b47",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=010",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012435",
+          "0-3": "015342",
+          "0-4": "015342",
+          "0-5": "012435",
+          "1-2": "012435",
+          "1-3": "015342",
+          "1-4": "015342",
+          "1-5": "012435",
+          "2-3": "102345",
+          "2-4": "102345",
+          "3-5": "102345",
+          "4-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=3,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-3",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "7aa84ef4b126bd0c99e84fa0a23cc904ecbac4cf3f568794722c931d5c4cafcb",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=011",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-2": "012435",
+          "0-3": "015342",
+          "0-4": "015342",
+          "0-5": "012435",
+          "1-2": "012435",
+          "1-3": "015342",
+          "1-4": "015342",
+          "1-5": "012435",
+          "2-3": "102345",
+          "2-4": "102345",
+          "3-5": "102345",
+          "4-5": "102345"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-3-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=3,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-2-3",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-2-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "db67c4ca3cd13b12cc10e0047849c88783c31f89c754f698887c41b7b1bf63b0",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=011",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "015342",
+          "0-2": "042315",
+          "0-4": "015342",
+          "0-5": "042315",
+          "1-2": "312045",
+          "1-3": "015342",
+          "1-5": "312045",
+          "2-3": "042315",
+          "2-4": "312045",
+          "3-4": "015342",
+          "3-5": "042315",
+          "4-5": "312045"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=4,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "a2182dcfe2613ac5baa704d8cf440a9bc89226cd940bc05a4c9b65aa38225c9f",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=100",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "015342",
+          "0-2": "042315",
+          "0-4": "015342",
+          "0-5": "042315",
+          "1-2": "312045",
+          "1-3": "015342",
+          "1-5": "312045",
+          "2-3": "042315",
+          "2-4": "312045",
+          "3-4": "015342",
+          "3-5": "042315",
+          "4-5": "312045"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=4,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "2a4ef3f756bb66fd251709f65eb559e79a7774a25c3ae600996fe7303a4afa2b",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=100",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "014325",
+          "0-2": "052341",
+          "0-4": "052341",
+          "0-5": "014325",
+          "1-2": "312045",
+          "1-3": "014325",
+          "1-4": "312045",
+          "2-3": "052341",
+          "2-5": "312045",
+          "3-4": "052341",
+          "3-5": "014325",
+          "4-5": "312045"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=5,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "3f8dbaf6eca601f2bffbd3247a7be76ed7781db5917b8090abcedfb4757c3fea",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=101",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "014325",
+          "0-2": "052341",
+          "0-4": "052341",
+          "0-5": "014325",
+          "1-2": "312045",
+          "1-3": "014325",
+          "1-4": "312045",
+          "2-3": "052341",
+          "2-5": "312045",
+          "3-4": "052341",
+          "3-5": "014325",
+          "4-5": "312045"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=5,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "df229f455951a3382c783748404095f0ee867693ff20bdc74587c64e2d165d26",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=101",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "014325",
+          "0-2": "032145",
+          "0-3": "014325",
+          "0-4": "032145",
+          "1-2": "512340",
+          "1-4": "512340",
+          "1-5": "014325",
+          "2-3": "512340",
+          "2-5": "032145",
+          "3-4": "512340",
+          "3-5": "014325",
+          "4-5": "032145"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=6,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "2547c5f09799d10bd4bf10efaf423c7979ab10d6c684cdc7d71daf2345f14392",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=110",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "014325",
+          "0-2": "032145",
+          "0-3": "014325",
+          "0-4": "032145",
+          "1-2": "512340",
+          "1-4": "512340",
+          "1-5": "014325",
+          "2-3": "512340",
+          "2-5": "032145",
+          "3-4": "512340",
+          "3-5": "014325",
+          "4-5": "032145"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=6,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "2c98e4b431be234f6b0c380e6461810ab0dda56c8999075f61583dca3168da0a",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=110",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "013245",
+          "0-2": "042315",
+          "0-3": "042315",
+          "0-4": "013245",
+          "1-2": "512340",
+          "1-3": "512340",
+          "1-5": "013245",
+          "2-4": "512340",
+          "2-5": "042315",
+          "3-4": "512340",
+          "3-5": "042315",
+          "4-5": "013245"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=7,delta=-1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "86903e951b5c8dc46688d1ebe75d2f15fef23b305cc019f9893f02a968f52f20",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=1,FFF=111",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      },
+      {
+        "admission_degree_spectrum": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "admission_is_regular": true,
+        "admission_only_bayes_forced_third": 0.5,
+        "admission_only_equivariance_witness_for_every_pair": true,
+        "admission_only_equivariance_witnesses": {
+          "0-1": "013245",
+          "0-2": "042315",
+          "0-3": "042315",
+          "0-4": "013245",
+          "1-2": "512340",
+          "1-3": "512340",
+          "1-5": "013245",
+          "2-4": "512340",
+          "2-5": "042315",
+          "3-4": "512340",
+          "3-5": "042315",
+          "4-5": "013245"
+        },
+        "admission_only_systems_disagree_everywhere": true,
+        "admitted_pairs": 12,
+        "aut_order": 48,
+        "block_systems_compatible_with_admission": 2,
+        "certified_family_is_compatible": true,
+        "certified_relabeling_subgroup_order": 24,
+        "certified_relabelings_are_automorphisms": true,
+        "common_neighbour_counts": [
+          2
+        ],
+        "complement_is_perfect_matching": true,
+        "cross_family_faces_ever_share_exactly_one_event": false,
+        "dual_anchor_control": [
+          {
+            "anchor": "0-1-3",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "0-2-4",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "1-2-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          },
+          {
+            "anchor": "3-4-5",
+            "compatible_block_systems": 1,
+            "family": "combinatorial_dual",
+            "rule_matches_dual_third_on_every_scored_pair": true,
+            "scored_query_pairs": 9
+          }
+        ],
+        "dual_families": 1,
+        "habitat": "P=7,delta=+1",
+        "nonadmitted_pairs": 3,
+        "one_anchor": {
+          "all_admitted_pairs_ceiling": 1.0,
+          "domain_note": "forced_third_ceiling is over the SCORED queries, which is the quantity 009.09 section 3.3 requires to be 1.000. all_admitted_pairs_ceiling additionally covers the three support pairs, which section 6 reconstructs but does not score.",
+          "eligible_anchors": 4,
+          "forced_third_ceiling": 1.0,
+          "per_anchor": [
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-1-2",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "0-3-4",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "1-3-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            },
+            {
+              "admitted_pairs_with_a_unique_forced_third": 12,
+              "anchor": "2-4-5",
+              "compatible_block_systems": 1,
+              "recovers_certified_family": true,
+              "rule_matches_certified_third_on_all_admitted_pairs": true,
+              "scored_pairs_with_a_unique_forced_third": 9,
+              "scored_query_pairs": 9,
+              "support_query_pairs": 3
+            }
+          ],
+          "rule_matches_certified_third_on_every_scored_pair": true,
+          "scored_pairs_checked": 36,
+          "unit_form_agrees_on_every_scored_pair": true
+        },
+        "problem_sha256": "9fa17da20d762f417b8950a116594cbe3b547228f146408aeddb10d345c7b30c",
+        "same_family_faces_share_exactly_one_event": true,
+        "sfp_habitat": "S=0,FFF=111",
+        "subgroup_index": 2,
+        "tokens": 6,
+        "triangular_faces": 8,
+        "unordered_pairs": 15
+      }
+    ],
+    "pins": {
+      "admission_automorphism_order": {
+        "agrees": true,
+        "expected": 48,
+        "observed": 48,
+        "source": "brute force over all 720 relabelings"
+      },
+      "admission_only_forced_third_ceiling": {
+        "agrees": true,
+        "expected": 0.5,
+        "observed": 0.5,
+        "source": "uniform prior over the compatible block systems"
+      },
+      "admitted_pairs": {
+        "agrees": true,
+        "expected": 12,
+        "observed": 12,
+        "source": "certified admission restricted to the habitat"
+      },
+      "block_systems_compatible_with_admission": {
+        "agrees": true,
+        "expected": 2,
+        "observed": 2,
+        "source": "exhaustive over C(faces,4)"
+      },
+      "certified_relabeling_subgroup_order": {
+        "agrees": true,
+        "expected": 24,
+        "observed": 24,
+        "source": "the 24 certified cyclic-block relabelings, induced on Events"
+      },
+      "common_neighbours_of_an_admitted_pair": {
+        "agrees": true,
+        "expected": [
+          2
+        ],
+        "observed": [
+          2
+        ],
+        "source": "admission graph, per admitted pair"
+      },
+      "habitats": {
+        "agrees": true,
+        "expected": 14,
+        "observed": 14,
+        "source": "task.Catalogue habitats"
+      },
+      "nonadmitted_pairs": {
+        "agrees": true,
+        "expected": 3,
+        "observed": 3,
+        "source": "certified non-admission restricted to the habitat"
+      },
+      "one_anchor_forced_third_ceiling": {
+        "agrees": true,
+        "expected": 1.0,
+        "observed": 1.0,
+        "source": "exact completion under admission plus one certified anchor"
+      },
+      "token_relabelings": {
+        "agrees": true,
+        "expected": 720,
+        "observed": 720,
+        "source": "6! enumerated"
+      },
+      "tokens": {
+        "agrees": true,
+        "expected": 6,
+        "observed": 6,
+        "source": "enumerated per habitat"
+      },
+      "triangular_faces": {
+        "agrees": true,
+        "expected": 8,
+        "observed": 8,
+        "source": "3-token cliques of the admission graph"
+      },
+      "unordered_pairs": {
+        "agrees": true,
+        "expected": 15,
+        "observed": 15,
+        "source": "C(6,2)"
+      }
+    },
+    "premise_check": {
+      "admission_alone_would_already_determine_the_family": false,
+      "note": "009.09 section 3.2 requires the task to STOP if admission alone already determines the certified family uniquely. It does not: two systems are compatible in every habitat."
+    }
+  },
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "label_source_fence": {
+    "banned_identifiers_in_module_code": [],
+    "banned_parameter_tokens": [
+      "circuit",
+      "oracle",
+      "sfp_circuit",
+      "exactsfpcircuit"
+    ],
+    "circuit_fence_note": "the check is over the module's parsed IDENTIFIERS -- every Name, Attribute, import alias, function and class -- not over its prose. The docstring and the fence strings name ExactSfpCircuit precisely in order to state that it is absent, and a text scan would be tripped by the denial itself.",
+    "dual_family_provenance": "the dual thirds are computed by discovery_task.system_third from the second admission-compatible block system. They are COMBINATORIAL, not certified FIPS labels, and are used only by the 009.09a section 2 control arm.",
+    "label_functions": [
+      {
+        "function": "build_local_problems",
+        "parameters": [
+          {
+            "annotation": "Dataset",
+            "name": "dataset",
+            "suspect": false
+          },
+          {
+            "annotation": "SfpCodec",
+            "name": "codec",
+            "suspect": false
+          }
+        ],
+        "signature": "(dataset: 'Dataset', codec: 'SfpCodec') -> 'tuple[LocalProblem, ...]'"
+      },
+      {
+        "function": "build_episode",
+        "parameters": [
+          {
+            "annotation": "LocalProblem",
+            "name": "problem",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[tuple[tuple[int, int, int], ...], ...]",
+            "name": "systems",
+            "suspect": false
+          },
+          {
+            "annotation": "str",
+            "name": "family",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "anchor_index",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "relabeling_index",
+            "suspect": false
+          },
+          {
+            "annotation": "str",
+            "name": "namespace",
+            "suspect": false
+          }
+        ],
+        "signature": "(problem: 'LocalProblem', systems: 'tuple[tuple[tuple[int, int, int], ...], ...]', *, family: 'str', anchor_index: 'int', relabeling_index: 'int', namespace: 'str') -> 'Episode'"
+      },
+      {
+        "function": "build_episodes",
+        "parameters": [
+          {
+            "annotation": "tuple[LocalProblem, ...]",
+            "name": "problems",
+            "suspect": false
+          },
+          {
+            "annotation": "str",
+            "name": "namespace",
+            "suspect": false
+          },
+          {
+            "annotation": "str",
+            "name": "family",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "permutations",
+            "suspect": false
+          }
+        ],
+        "signature": "(problems: 'tuple[LocalProblem, ...]', *, namespace: 'str' = 'primary', family: 'str' = 'certified', permutations: 'int' = 12) -> 'tuple[Episode, ...]'"
+      },
+      {
+        "function": "anchor_third",
+        "parameters": [
+          {
+            "annotation": "tuple[tuple[int, int], ...]",
+            "name": "admit",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[int, int, int]",
+            "name": "anchor",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[int, int]",
+            "name": "pair",
+            "suspect": false
+          }
+        ],
+        "signature": "(admit: 'tuple[tuple[int, int], ...]', anchor: 'tuple[int, int, int]', pair: 'tuple[int, int]') -> 'int | None'"
+      },
+      {
+        "function": "scored_query_pairs",
+        "parameters": [
+          {
+            "annotation": "tuple[tuple[int, int], ...]",
+            "name": "admit",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[int, int, int]",
+            "name": "anchor",
+            "suspect": false
+          }
+        ],
+        "signature": "(admit: 'tuple[tuple[int, int], ...]', anchor: 'tuple[int, int, int]') -> 'tuple[tuple[int, int], ...]'"
+      },
+      {
+        "function": "compatible_block_systems",
+        "parameters": [
+          {
+            "annotation": "tuple[tuple[int, int], ...]",
+            "name": "admit",
+            "suspect": false
+          }
+        ],
+        "signature": "(admit: 'tuple[tuple[int, int], ...]') -> 'tuple[tuple[tuple[int, int, int], ...], ...]'"
+      },
+      {
+        "function": "episode_split",
+        "parameters": [
+          {
+            "annotation": "tuple[Episode, ...]",
+            "name": "episodes",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[str, ...]",
+            "name": "held_out",
+            "suspect": false
+          }
+        ],
+        "signature": "(episodes: 'tuple[Episode, ...]', held_out: 'tuple[str, ...]') -> 'tuple[tuple[int, ...], tuple[int, ...]]'"
+      }
+    ],
+    "label_provenance_chain": [
+      "topographo.ssd.fips_basic.admissible / third -- the certified relation",
+      "task.build_catalogue -> Catalogue.block_ids / Catalogue.blocks",
+      "task.label_pair -> PairRecord.label, PairRecord.target_index",
+      "discovery_task.build_local_problems restricts those to one habitat and re-expresses them in local slots",
+      "discovery_task.build_episode permutes slots onto opaque nodes; the learner sees nodes, an admission matrix and one anchor triple"
+    ],
+    "module_code_never_names_the_exact_circuit": true,
+    "module_namespace_has_no_circuit_binding": true,
+    "no_label_function_accepts_a_circuit": true,
+    "offenders": []
+  },
+  "laws": {
+    "anchor_pairs_are_never_scored": true,
+    "equivalence_audit_machinery_is_sound": true,
+    "every_habitat_has_48_episodes": true,
+    "fold_count_is_21": true,
+    "forced_third_is_direction_neutral": true,
+    "fresh_relabelings_are_an_independent_draw": true,
+    "gate_0_open": true,
+    "module_code_never_names_the_exact_circuit": true,
+    "module_namespace_has_no_circuit_binding": true,
+    "nine_scored_queries_per_episode": true,
+    "no_held_out_habitat_appears_in_a_training_episode": true,
+    "no_label_function_accepts_a_circuit": true,
+    "no_opaque_node_is_stably_bound_to_an_event": true,
+    "relabelings_distinct_within_every_habitat_anchor": true,
+    "scored_and_support_partition_the_admitted_pairs": true,
+    "twelve_admitted_pairs_per_episode": true,
+    "upstream_pins_agree": true
+  },
+  "module": "discovery_task",
+  "opacity": {
+    "anchor_is_never_a_scored_query": true,
+    "distinct_relabelings_per_habitat": [
+      46,
+      47,
+      48
+    ],
+    "every_scored_query_is_admitted": true,
+    "identity_relabeling_episodes": 1,
+    "no_node_is_stably_bound_to_one_event": true,
+    "nodes_stably_bound_to_one_event": [],
+    "scored_plus_support_covers_every_admitted_pair": true
+  },
+  "pins": {
+    "admission_automorphism_order": 48,
+    "admission_graph_degree": 4,
+    "admitted_pairs": 12,
+    "block_systems_compatible_with_admission": 2,
+    "blocks_per_event": 2,
+    "certified_blocks_per_habitat": 4,
+    "certified_relabeling_subgroup_order": 24,
+    "common_neighbours_of_an_admitted_pair": 2,
+    "covering_face_families": 2,
+    "episodes_per_habitat": 48,
+    "events_per_block": 3,
+    "habitats": 14,
+    "lofpo_folds": 7,
+    "loho_folds": 14,
+    "nonadmitted_pairs": 3,
+    "scored_queries_per_episode": 9,
+    "structural_folds": 21,
+    "token_relabelings": 720,
+    "tokens": 6,
+    "triangular_faces": 8,
+    "uniform_all_node_chance": 0.16666666666666666,
+    "uniform_eligible_node_chance": 0.25,
+    "unordered_pairs": 15
+  },
+  "prior_result": "009.08-Kiro-query-relative-PP-localization-result.md",
+  "started_at": "2026-09-11T17:50:36-0700",
+  "supplied_to_the_learner": [
+    "six anonymous nodes with identical features before marking",
+    "the complete symmetric pairwise ADMIT matrix among those nodes",
+    "exactly one unordered anchor triple, marked on its three nodes",
+    "one unordered query pair, marked on its two nodes"
+  ],
+  "torch": "no tensor is constructed here; torch is inherited transitively through locator_task -> ladder_task -> harness",
+  "upstream": {
+    "admit": {
+      "agrees": true,
+      "expected": 336,
+      "observed": 336,
+      "source": "task.Dataset"
+    },
+    "catalogue_sha256": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "chart_sha256": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+    "dataset_sha256": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "events": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "task.Catalogue"
+    },
+    "habitats": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "sfp.SfpCodec.habitats"
+    },
+    "lofpo_folds": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "folds.build_lofpo_folds"
+    },
+    "loho_folds": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "folds.build_loho_folds"
+    },
+    "ordered_pairs_total": {
+      "agrees": true,
+      "expected": 7056,
+      "observed": 7056,
+      "source": "task.Dataset"
+    },
+    "structural_folds": {
+      "agrees": true,
+      "expected": 21,
+      "observed": 21,
+      "source": "folds.structural_folds"
+    }
+  },
+  "verdict": {
+    "agrees": true,
+    "statement": "Gate 0 passes with the expected 48/24 group orders, two admission-compatible block systems, a 1/2 admission-only ceiling and a 1.000 one-anchor ceiling; the episode, relabeling and fold manifests are frozen and digest-pinned; no label function can be handed a circuit"
+  },
+  "withheld_from_the_learner": [
+    "PP",
+    "pp",
+    "SFP bit words",
+    "native projective coordinates",
+    "Event catalogue indices as semantic features",
+    "an XOR operation",
+    "an endpoint-intersection routine",
+    "a K4/Fano completion routine",
+    "S and FFF (009.09a section 4: bookkeeping only, never a network input)"
+  ]
+}

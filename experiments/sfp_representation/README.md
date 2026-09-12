@@ -21,9 +21,13 @@ Result: **`009.02`, disposition E (narrowed)**. See
 > **Where the issue stands now.** Two later turns moved the forcing result twice, both
 > times by changing the *output object* and nothing else:
 > `009.02` `0.0335` -> `009.06` `0.7016` -> `009.08` `0.9688`, against a `1.000`
-> nonlearned ceiling. Jump to
-> [the `009.06` consequence-address ladder](#the-009-06-consequence-address-ladder) or
-> [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator).
+> nonlearned ceiling. A fourth turn then **withdrew the representation** and asked
+> whether a learner can recover it from opaque tokens, pairwise admission and one
+> triadic anchor: `009.10` reaches `0.9970` against its own exact `1.000` ceiling while
+> the capacity-matched no-anchor control sits at `0.4937`. Jump to
+> [the `009.06` consequence-address ladder](#the-009-06-consequence-address-ladder),
+> [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator) or
+> [the `009.10` opaque local-chart discovery turn](#the-009-10-opaque-local-chart-discovery-turn).
 
 > **Superseded in part by `009.06`.** The `009.02` forcing negative turned out to
 > be substantially an artifact of the 84-way output interface. Changing only the
@@ -472,4 +476,165 @@ the cross-chart candidate tie-break is NOT covariant; those rows are non-admitte
   their PP output enters no reported metric
 opaque-token discovery is warranted but was NOT run; 009.07 section 9 forbids it here
 closed-set habitat re-identification is untouched: S and FFF are copied throughout
+```
+
+## The `009.10` opaque local-chart discovery turn
+
+The three turns above all **supplied** the representation and asked whether the learner
+could use it. `009.09` withdraws it and asks whether the learner can *recover* it —
+hypothesis `H_discovery` — locally, inside one supplied `(S, FFF)` habitat.
+
+**`009.10` executes `009.09`**, with the four `009.09a` advisory suggestions folded in
+on the Executive's direction. See
+[`009.10-Kiro-opaque-local-chart-discovery-result.md`](009.10-Kiro-opaque-local-chart-discovery-result.md).
+
+What the learner sees, and there is nothing else:
+
+```text
+marks       (B, 6, 2)   [anchor_mark, query_mark] per node, values in {0.0, 1.0}
+adjacency   (B, 6, 6)   the symmetric pairwise ADMIT matrix, zero diagonal
+```
+
+Six anonymous Event tokens whose features are identical before marking, the complete
+pairwise admission relation among them, and exactly one certified cyclic-block triple.
+No `PP`, no `pp`, no SFP token, no Event index, no habitat index, no `S`, no `FFF`, no
+embedding table and no buffer. Per `009.09a` section 4 the habitat identity is not fed
+in at all, which is proved rather than asserted: 13 differing `(S, FFF)` pairs give
+bitwise identical scores.
+
+### Gate 0 first — the exact identifiability census
+
+`009.09` section 3 forbids training until the finite problem is enumerated exactly. All
+thirteen pins agree and all eighteen laws hold, identically in each of the 14 habitats:
+
+| Quantity | Value | Status |
+|---|---|---|
+| `\|Aut(admission graph)\|` | 48 | pin, verified |
+| subgroup induced by certified block relabelings | 24 | pin, verified |
+| triangular faces | 8 | enumerated |
+| block systems compatible with admission alone | 2 | pin, verified |
+| common neighbours of an admitted pair | 2 | enumerated |
+| admission-only forced-third ceiling | `0.5000` | two derivations |
+| one-anchor forced-third ceiling | `1.0000` | exact completion |
+
+The admission-only ceiling is derived twice, so `1/2` cannot be a prior artifact: the
+Bayes mass over the two compatible block systems, *and* the fact that every scored
+query admits an automorphism fixing both query nodes and swapping the two candidates,
+which forces any permutation-equivariant scorer to tie.
+
+### Result: disposition B, on a threshold that is provably unreachable
+
+```text
+forced-third identity, opaque tokens + admission + one anchor, LOHO
+uniform over all six nodes                              0.1667
+uniform over the four eligible nodes                    0.2500
+best cheap admission-only rule                          0.5000
+zero-anchor learner, identical parameters   (CONTROL)   0.4937
+one-anchor learner, primary message                     0.7569
+one-anchor learner, repaired message                    0.9970
+exact one-anchor completion                 (CEILING)   1.0000
+```
+
+| Metric | LOHO | LOFPO |
+|---|---|---|
+| forced third | **0.9970** CI `[0.9911, 1.0000]` | **0.9940** CI `[0.9821, 1.0000]` |
+| block-family recovery, supplied-anchor | 0.9911 | 0.9821 |
+| `sfp_equivalent`, exact `AGL(2,2)` | 0.9911 | 0.9821 |
+| block-family recovery, predeclared | 0.0089 | 0.0000 |
+| fresh-relabelling transport | 1.0000 | 0.9977 |
+| dual-anchor control, dual-family rate | 0.9911 | 0.9821 |
+| dual-anchor control, certified-family rate | 0.0000 | 0.0000 |
+
+**Filed B, alternative reading A.** Every performance threshold passes. The three chart
+thresholds fail under the reconstruction `009.09` section 8 refers to, and pass at
+`0.9911` under the supplied-anchor reconstruction. Which reading governs is an Owner
+decision, because section 9 class E forbids repairing the scientific question after
+results are visible.
+
+### Read these four cautions
+
+**The failed threshold is provably unreachable, and that is computed not argued.**
+Section 6.1's reconstruction needs the model's answers on the three pairs *inside* the
+anchor. Section 4.4 makes those support rather than scored queries, so section 5.3 never
+supervises them. Two rules over the supplied atoms — odd parity, and a clamped variant —
+agree on all `6048` supervisable rows and disagree on all `2016` support rows. No learner
+obeying the task's own training rule can meet those three thresholds, independent of
+architecture. The learner's observed support-pair behaviour is exactly the clamped
+extension, at `0.9911`.
+
+**The control is bit-identical to a tie-break, not merely near its ceiling.** The
+zero-anchor arm is the same architecture with the same `11617` parameters and the anchor
+channel held at zero. Its `0.493716931217` matches the `lowest_common_neighbour` cheap
+selector to twelve decimals, and it is **seed-independent** — all 8 seeds give the
+identical value on all 14 LOHO folds — because the two candidates' scores are
+mathematically equal by the Gate-0 automorphism and `argmax` resolves the tie by index.
+The network contributes nothing to that decision.
+
+**The primary architecture pass failed on 81 of 112 LOHO cells, and is reported.** It
+sits at exactly `6/9` with `anchor_overlap_1 = 1.0000` and `anchor_overlap_0 = 0.0000`,
+on train as well as test. The exact rule's anchor preference flips sign between those
+two cases, and the linearly available half already scores `6/9`. The one repair
+`009.09` section 5.3 permits changes only the message form,
+`Message(h_j) -> Message([h_i, h_j])`, and moves forced third by `+0.2401` CI
+`[0.2113, 0.2669]` paired — while moving the zero-anchor arm by exactly `0.0000`.
+
+**This is fresh-relabelling generalization, not held-out structure.** Every habitat
+presents the same abstract octahedron once tokens are permuted, so LOHO and LOFPO hold
+out a fresh relabelling with a fresh anchor rather than a new structure — the
+`009.09a` section 5 wording, adopted throughout. Nothing here bears on the global
+question of recovering the Fano plane on `FFF` from anonymous habitats.
+
+### Discovery files
+
+| File | Role | Torch |
+|---|---|:--:|
+| `discovery_task.py` | Gate-0 exact identifiability census, the certified label chain, and the frozen episode / relabelling / fold manifests | via `harness` |
+| `discovery_heads.py` | the opaque-node pointer for both message forms, the diagnosed pathology, and the structural proofs (bitwise swap invariance, tie-aware covariance, habitat blindness, anti-identity ledger, AST answer-rule fence) | **yes** |
+| `discovery_baselines.py` | the exact one-anchor ceiling, the admission-only ceiling derived twice, the cheap selectors, and the determining-atom census | no tensors |
+| `discovery_sweep.py` | two declared blocks x two arms x 21 folds x 8 seeds = 672 runs, about 12200 s, plus the section 6 chart audit under both reconstructions, the exact `AGL(2,2)` search, the transport test and the dual-anchor control | **yes** |
+| `discovery_analysis.py` | the predeclared thresholds scored as written, paired effects via the **imported** `009.02` bootstrap, the supervision-identifiability proof, and the disposition | **yes** |
+
+### Reproducing the discovery turn
+
+```bash
+uv run --frozen python experiments/sfp_representation/discovery_task.py --check
+uv run --frozen python experiments/sfp_representation/discovery_heads.py --check
+uv run --frozen python experiments/sfp_representation/discovery_baselines.py --check
+uv run --frozen python experiments/sfp_representation/discovery_sweep.py --check   # ~12200 s
+uv run --frozen python experiments/sfp_representation/discovery_analysis.py --check
+```
+
+`discovery_sweep.json` is 3.1 MiB of bulk run data and lives in the package, not git.
+Only `discovery_analysis.py` needs it:
+
+```bash
+aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.10-Code-attachments/discovery_sweep.json \
+  experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json
+```
+
+### Discovery fence
+
+```text
+S and FFF are SUPPLIED and are not even fed to the network; nothing here discovers them
+global Fano/SFP structure and native Event denotation are untouched
+the holdout is FRESH-RELABELLING generalization of a local relational rule, NOT
+  held-out-structure generalization in the 009.06/009.08 sense
+the predeclared all-pairs chart thresholds are MISSED and are provably unreachable
+  under 009.09 section 5.3's supervision; they are reported as missed, not reinterpreted
+the supplied-anchor reading is an ALTERNATIVE offered to the Owner, not the filed one
+sfp_equivalent is ENTAILED by block-family recovery (009.09a section 3), not
+  independent evidence
+the dual-family thirds are COMBINATORIAL, not certified FIPS labels; the dual-anchor
+  arm is a control and is never a result
+009.08's 0.9688 is a contextual reference on a different observation set, not a
+  capacity-matched arm
+the primary architecture pass FAILED on 81 of 112 LOHO cells and is reported, not
+  deleted; one cell of 112 and one of 56 remain in the saddle after the repair
+covariance is exact in the argmax on every DECISIVE row; tied rows each carry an
+  automorphism witness proving the tie is forced, and the scores agree to declared
+  float round-off because a permuted sum reorders float addition
+the exact one-anchor completion is a NONLEARNED CEILING, never a competing baseline
+opaque names alone contain no structure -- which is why the zero-anchor arm cannot beat
+  a tie-break, and why the two index tie-breaks straddle 1/2
+closed-set habitat re-identification is untouched
 ```

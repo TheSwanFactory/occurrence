@@ -1,0 +1,4398 @@
+{
+  "base_commit": "7a37f58444901c32a6e750e617d8d4d82b9f6202",
+  "block_roles": {
+    "primary": "009.09 section 5's one primary architecture pass: m_ij = Message(h_j). Reported in full including its failure.",
+    "repair": "009.09 section 5.3's one clearly diagnosed repair: m_ij = Message([h_i, h_j]). Only the message form differs from primary."
+  },
+  "blocks": {
+    "primary": {
+      "paired_one_anchor_minus_zero_anchor": {
+        "LOFPO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.30220734127,
+              "low": 0.225115740741,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.513888888889,
+            "mean_difference": 0.261284722223,
+            "median_difference": 0.175925925926,
+            "min": 0.122685185185,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.291666666667,
+              "P=2": 0.252604166667,
+              "P=3": 0.222222222223,
+              "P=4": 0.293981481482,
+              "P=5": 0.300925925926,
+              "P=6": 0.25462962963,
+              "P=7": 0.212962962964
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.147870848762
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.267857142857,
+            "median_difference": 0.0,
+            "min": 0.0,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.375,
+              "P=2": 0.25,
+              "P=3": 0.125,
+              "P=4": 0.375,
+              "P=5": 0.375,
+              "P=6": 0.25,
+              "P=7": 0.125
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.442842741701
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.535652281746,
+              "low": 0.518709697421,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.590277777778,
+            "mean_difference": 0.52726624504,
+            "median_difference": 0.527777777778,
+            "min": 0.443576388889,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.590277777778,
+              "P=2": 0.517252604167,
+              "P=3": 0.513888888889,
+              "P=4": 0.479166666667,
+              "P=5": 0.534722222222,
+              "P=6": 0.517361111111,
+              "P=7": 0.538194444444
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.032975820431
+          }
+        },
+        "LOHO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.291708002646,
+              "low": 0.2365244709,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.527777777778,
+            "mean_difference": 0.263227513228,
+            "median_difference": 0.178240740741,
+            "min": 0.157407407408,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.291666666667,
+              "P=1,delta=-1": 0.25,
+              "P=2,delta=+1": 0.319444444445,
+              "P=2,delta=-1": 0.25462962963,
+              "P=3,delta=+1": 0.375,
+              "P=3,delta=-1": 0.361111111111,
+              "P=4,delta=+1": 0.199074074075,
+              "P=4,delta=-1": 0.222222222223,
+              "P=5,delta=+1": 0.219907407408,
+              "P=5,delta=-1": 0.256944444444,
+              "P=6,delta=+1": 0.164351851852,
+              "P=6,delta=-1": 0.219907407408,
+              "P=7,delta=+1": 0.259259259259,
+              "P=7,delta=-1": 0.291666666667
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.148384165739
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 13,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.267857142857,
+            "median_difference": 0.0,
+            "min": 0.0,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.375,
+              "P=1,delta=-1": 0.25,
+              "P=2,delta=+1": 0.375,
+              "P=2,delta=-1": 0.25,
+              "P=3,delta=+1": 0.625,
+              "P=3,delta=-1": 0.5,
+              "P=4,delta=+1": 0.125,
+              "P=4,delta=-1": 0.125,
+              "P=5,delta=+1": 0.125,
+              "P=5,delta=-1": 0.25,
+              "P=6,delta=+1": 0.0,
+              "P=6,delta=-1": 0.125,
+              "P=7,delta=+1": 0.25,
+              "P=7,delta=-1": 0.375
+            },
+            "sign_consistent_across_folds": false,
+            "std_population": 0.442842741701
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.536489335317,
+              "low": 0.515780009921,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.638888888889,
+            "mean_difference": 0.526119171627,
+            "median_difference": 0.527777777778,
+            "min": 0.256944444444,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.541666666667,
+              "P=1,delta=-1": 0.638888888889,
+              "P=2,delta=+1": 0.421006944444,
+              "P=2,delta=-1": 0.611111111111,
+              "P=3,delta=+1": 0.486328125,
+              "P=3,delta=-1": 0.527777777778,
+              "P=4,delta=+1": 0.472222222222,
+              "P=4,delta=-1": 0.486111111111,
+              "P=5,delta=+1": 0.527777777778,
+              "P=5,delta=-1": 0.541666666667,
+              "P=6,delta=+1": 0.506944444444,
+              "P=6,delta=-1": 0.527777777778,
+              "P=7,delta=+1": 0.541666666667,
+              "P=7,delta=-1": 0.534722222222
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.055682029701
+          }
+        }
+      },
+      "seed_census": {
+        "anchor_overlap_0_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": true,
+          "distinct_per_seed_means": [
+            0.0,
+            0.071428571429,
+            0.095238095238,
+            0.142857142857,
+            0.285714285714,
+            0.428571428571,
+            0.714285714286
+          ],
+          "family": "LOHO",
+          "metric": "anchor_overlap_0_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 0.142857142857,
+            "1": 0.714285714286,
+            "2": 0.071428571429,
+            "3": 0.0,
+            "4": 0.428571428571,
+            "5": 0.428571428571,
+            "6": 0.095238095238,
+            "7": 0.285714285714
+          }
+        },
+        "forced_third_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": true,
+          "distinct_per_seed_means": [
+            0.666666666667,
+            0.690476190476,
+            0.698412698413,
+            0.714285714286,
+            0.761904761905,
+            0.809523809524,
+            0.904761904762
+          ],
+          "family": "LOHO",
+          "metric": "forced_third_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 0.714285714286,
+            "1": 0.904761904762,
+            "2": 0.690476190476,
+            "3": 0.666666666667,
+            "4": 0.809523809524,
+            "5": 0.809523809524,
+            "6": 0.698412698413,
+            "7": 0.761904761905
+          }
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "arm": "one_anchor",
+          "bimodal": true,
+          "distinct_per_seed_means": [
+            0.0,
+            0.071428571429,
+            0.142857142857,
+            0.285714285714,
+            0.428571428571,
+            0.714285714286
+          ],
+          "family": "LOHO",
+          "metric": "supplied_anchor_exact_block_family_recovery",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 0.142857142857,
+            "1": 0.714285714286,
+            "2": 0.071428571429,
+            "3": 0.0,
+            "4": 0.428571428571,
+            "5": 0.428571428571,
+            "6": 0.071428571429,
+            "7": 0.285714285714
+          }
+        },
+        "train_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": true,
+          "distinct_per_seed_means": [
+            0.666666666667,
+            0.690476190476,
+            0.698349104599,
+            0.714285714286,
+            0.761904761905,
+            0.809523809524,
+            0.904761904762
+          ],
+          "family": "LOHO",
+          "metric": "train_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 0.714285714286,
+            "1": 0.904761904762,
+            "2": 0.690476190476,
+            "3": 0.666666666667,
+            "4": 0.809523809524,
+            "5": 0.809523809524,
+            "6": 0.698349104599,
+            "7": 0.761904761905
+          }
+        }
+      },
+      "summary": {
+        "one_anchor|LOFPO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.597501240079,
+              "low": 0.538752480159,
+              "n": 56
+            },
+            "max": 0.75,
+            "mean": 0.566251240079,
+            "min": 0.460069444444,
+            "n": 56
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.99572172619,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.99857390873,
+            "min": 0.920138888889,
+            "n": 56
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.796564980159,
+              "low": 0.718129960318,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.754898313492,
+            "min": 0.607638888889,
+            "n": 56
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.796668320106,
+              "low": 0.718336640212,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.755001653439,
+            "min": 0.613425925926,
+            "n": 56
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.0,
+              "low": -0.000320353836,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": -0.000106784612,
+            "min": -0.005979938272,
+            "n": 56
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "n_folds": 7,
+          "n_runs": 56,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 6.839285714286,
+              "low": 6.607142857143,
+              "n": 56
+            },
+            "max": 7.0,
+            "mean": 6.732142857143,
+            "min": 6.0,
+            "n": 56
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 0.839285714286,
+              "low": 0.607142857143,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.732142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.796561535494,
+              "low": 0.718123070988,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.754894868827,
+            "min": 0.607445987654,
+            "n": 56
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.392857142857,
+              "low": 0.160714285714,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.995241195436,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.998413731812,
+            "min": 0.911168981481,
+            "n": 56
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.99548921131,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.99849640377,
+            "min": 0.915798611111,
+            "n": 56
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.966517857143,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.988839285714,
+            "min": 0.375,
+            "n": 56
+          }
+        },
+        "one_anchor|LOHO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.58894469246,
+              "low": 0.547820560516,
+              "n": 112
+            },
+            "max": 0.75,
+            "mean": 0.56790984623,
+            "min": 0.5,
+            "n": 112
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.354166666667,
+              "low": 0.190476190476,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.270833333333,
+            "min": 0.0,
+            "n": 112
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.784639550265,
+              "low": 0.73011739418,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.756903108466,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.784722222222,
+              "low": 0.730158730159,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.756944444445,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.0,
+              "low": -2.384768e-05,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": -7.949227e-06,
+            "min": -0.000890313391,
+            "n": 112
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "n_folds": 14,
+          "n_runs": 112,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 6.811755952381,
+              "low": 6.650297619048,
+              "n": 112
+            },
+            "max": 7.0,
+            "mean": 6.731398809524,
+            "min": 6.0,
+            "n": 112
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 0.8125,
+              "low": 0.651785714286,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.732142857143,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.348214285714,
+              "low": 0.1875,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.267857142857,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.97160218254,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.990265376984,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.002418154762,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.090277777778,
+            "mean": 0.000806051587,
+            "min": 0.0,
+            "n": 112
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.784706323769,
+              "low": 0.730150780932,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.756936495218,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.354118971306,
+              "low": 0.190452342796,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.270809485653,
+            "min": 0.0,
+            "n": 112
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.993024553571,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.997349330357,
+            "min": 0.8125,
+            "n": 112
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.968005952381,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.98790922619,
+            "min": 0.125,
+            "n": 112
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          }
+        },
+        "zero_anchor|LOFPO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.5,
+              "low": 0.5,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.5,
+            "min": 0.5,
+            "n": 56
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.522445436508,
+              "low": 0.515376984127,
+              "n": 56
+            },
+            "max": 0.541666666667,
+            "mean": 0.518849206349,
+            "min": 0.5,
+            "n": 56
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.484623015873,
+              "low": 0.477678571428,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.481150793651,
+            "min": 0.458333333333,
+            "n": 56
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.494874338624,
+              "low": 0.492559523809,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.493716931217,
+            "min": 0.486111111111,
+            "n": 56
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.001398533951,
+              "low": -0.001350308642,
+              "n": 56
+            },
+            "max": 0.00887345679,
+            "mean": 0.0,
+            "min": -0.007330246914,
+            "n": 56
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "n_folds": 7,
+          "n_runs": 56,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 7.0,
+              "low": 7.0,
+              "n": 56
+            },
+            "max": 7.0,
+            "mean": 7.0,
+            "min": 7.0,
+            "n": 56
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 0.484623015873,
+              "low": 0.477678571428,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.481150793651,
+            "min": 0.458333333333,
+            "n": 56
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.522445436508,
+              "low": 0.515376984127,
+              "n": 56
+            },
+            "max": 0.541666666667,
+            "mean": 0.518849206349,
+            "min": 0.5,
+            "n": 56
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.493916721781,
+              "low": 0.493524029983,
+              "n": 56
+            },
+            "max": 0.494984567901,
+            "mean": 0.493716931217,
+            "min": 0.492669753086,
+            "n": 56
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.519427910053,
+              "low": 0.518270502645,
+              "n": 56
+            },
+            "max": 0.521990740741,
+            "mean": 0.518849206349,
+            "min": 0.515046296296,
+            "n": 56
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.481750165344,
+              "low": 0.480572089947,
+              "n": 56
+            },
+            "max": 0.484953703704,
+            "mean": 0.481150793651,
+            "min": 0.478009259259,
+            "n": 56
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.479290674603,
+              "low": 0.463231646825,
+              "n": 56
+            },
+            "max": 0.520833333333,
+            "mean": 0.47123015873,
+            "min": 0.409722222222,
+            "n": 56
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 0.102864583333,
+              "low": 0.087053571429,
+              "n": 56
+            },
+            "max": 0.135416666667,
+            "mean": 0.095238095238,
+            "min": 0.041666666667,
+            "n": 56
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 0.102864583333,
+              "low": 0.087053571429,
+              "n": 56
+            },
+            "max": 0.135416666667,
+            "mean": 0.095238095238,
+            "min": 0.041666666667,
+            "n": 56
+          }
+        },
+        "zero_anchor|LOHO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.5,
+              "low": 0.5,
+              "n": 112
+            },
+            "max": 0.5,
+            "mean": 0.5,
+            "min": 0.5,
+            "n": 112
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.523871527778,
+              "low": 0.513950892857,
+              "n": 112
+            },
+            "max": 0.583333333333,
+            "mean": 0.518849206349,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.486111111111,
+              "low": 0.476128472222,
+              "n": 112
+            },
+            "max": 0.527777777778,
+            "mean": 0.481150793651,
+            "min": 0.416666666667,
+            "n": 112
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.49537037037,
+              "low": 0.492042824074,
+              "n": 112
+            },
+            "max": 0.509259259259,
+            "mean": 0.493716931217,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.001802884616,
+              "low": -0.001758368946,
+              "n": 112
+            },
+            "max": 0.023148148148,
+            "mean": 0.0,
+            "min": -0.016737891738,
+            "n": 112
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "n_folds": 14,
+          "n_runs": 112,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 7.0,
+              "low": 7.0,
+              "n": 112
+            },
+            "max": 7.0,
+            "mean": 7.0,
+            "min": 7.0,
+            "n": 112
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 0.486111111111,
+              "low": 0.476128472222,
+              "n": 112
+            },
+            "max": 0.527777777778,
+            "mean": 0.481150793651,
+            "min": 0.416666666667,
+            "n": 112
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.523871527778,
+              "low": 0.513950892857,
+              "n": 112
+            },
+            "max": 0.583333333333,
+            "mean": 0.518849206349,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.49384570869,
+              "low": 0.493591333435,
+              "n": 112
+            },
+            "max": 0.49537037037,
+            "mean": 0.493716931217,
+            "min": 0.492521367521,
+            "n": 112
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.519230769231,
+              "low": 0.518462873932,
+              "n": 112
+            },
+            "max": 0.522435897436,
+            "mean": 0.518849206349,
+            "min": 0.513888888889,
+            "n": 112
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.481537126068,
+              "low": 0.480774000305,
+              "n": 112
+            },
+            "max": 0.486111111111,
+            "mean": 0.481150793651,
+            "min": 0.477564102564,
+            "n": 112
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.479972718254,
+              "low": 0.462301587302,
+              "n": 112
+            },
+            "max": 0.555555555556,
+            "mean": 0.47123015873,
+            "min": 0.361111111111,
+            "n": 112
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 0.105282738095,
+              "low": 0.085379464286,
+              "n": 112
+            },
+            "max": 0.1875,
+            "mean": 0.095238095238,
+            "min": 0.0,
+            "n": 112
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 0.105282738095,
+              "low": 0.085379464286,
+              "n": 112
+            },
+            "max": 0.1875,
+            "mean": 0.095238095238,
+            "min": 0.0,
+            "n": 112
+          }
+        }
+      },
+      "threshold_tables": {
+        "predeclared_all_pairs": {
+          "failed": [
+            "LOHO forced_third_accuracy",
+            "LOHO forced_third 95% lower bound",
+            "LOHO exact_block_family_recovery",
+            "LOHO sfp_equivalent_rate",
+            "LOHO chart_valid_rate",
+            "LOFPO forced_third_accuracy",
+            "LOFPO exact_block_family_recovery"
+          ],
+          "form": "predeclared_all_pairs",
+          "form_role": "PREDECLARED. Sections 6.1 to 6.3 reconstruct from all twelve admitted pairs; every one of the four chambers comes from a prediction. Section 8's thresholds refer to this reading, so the disposition is filed under it.",
+          "material_improvement": {
+            "admission_only_ceiling": 0.5,
+            "clears_the_ceiling": true,
+            "one_anchor_lower_bound": 0.730158730159
+          },
+          "primary_all_pass": false,
+          "rows": [
+            {
+              "criterion": "LOHO forced_third_accuracy",
+              "note": "",
+              "observed": 0.756944444445,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO forced_third 95% lower bound",
+              "note": "",
+              "observed": 0.730158730159,
+              "passes": false,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOHO exact_block_family_recovery",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.0,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO sfp_equivalent_rate",
+              "note": "reconstruction form: predeclared_all_pairs; entailed by block-family recovery",
+              "observed": 0.0,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO chart_valid_rate",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.0,
+              "passes": false,
+              "threshold": 0.95
+            },
+            {
+              "criterion": "LOHO fresh-relabelling transport (exact decisions)",
+              "note": "",
+              "observed": 0.997349330357,
+              "passes": true,
+              "threshold": 0.99
+            },
+            {
+              "criterion": "LOFPO forced_third_accuracy",
+              "note": "",
+              "observed": 0.755001653439,
+              "passes": false,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOFPO exact_block_family_recovery",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.0,
+              "passes": false,
+              "threshold": 0.8
+            },
+            {
+              "criterion": "LOHO forced_third materially > admission-only ceiling",
+              "note": "the whole 95% interval must sit above the exact 1/2 ceiling, and the paired difference against the capacity-matched zero-anchor arm must exclude zero",
+              "observed": 0.730158730159,
+              "passes": true,
+              "threshold": 0.5
+            }
+          ],
+          "secondary_all_pass": false,
+          "zero_anchor_observed": 0.493716931217
+        },
+        "supplied_anchor": {
+          "failed": [
+            "LOHO forced_third_accuracy",
+            "LOHO forced_third 95% lower bound",
+            "LOHO exact_block_family_recovery",
+            "LOHO sfp_equivalent_rate",
+            "LOHO chart_valid_rate",
+            "LOFPO forced_third_accuracy",
+            "LOFPO exact_block_family_recovery"
+          ],
+          "form": "supplied_anchor",
+          "form_role": "ALTERNATIVE READING, reported not adopted. The nine scored answers imply three chambers and the fourth is the anchor triple the task supplies as support. Offered to the Owner; not substituted for the predeclared form.",
+          "material_improvement": {
+            "admission_only_ceiling": 0.5,
+            "clears_the_ceiling": true,
+            "one_anchor_lower_bound": 0.730158730159
+          },
+          "primary_all_pass": false,
+          "rows": [
+            {
+              "criterion": "LOHO forced_third_accuracy",
+              "note": "",
+              "observed": 0.756944444445,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO forced_third 95% lower bound",
+              "note": "",
+              "observed": 0.730158730159,
+              "passes": false,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOHO exact_block_family_recovery",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.267857142857,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO sfp_equivalent_rate",
+              "note": "reconstruction form: supplied_anchor; entailed by block-family recovery",
+              "observed": 0.267857142857,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO chart_valid_rate",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.267857142857,
+              "passes": false,
+              "threshold": 0.95
+            },
+            {
+              "criterion": "LOHO fresh-relabelling transport (exact decisions)",
+              "note": "",
+              "observed": 0.997349330357,
+              "passes": true,
+              "threshold": 0.99
+            },
+            {
+              "criterion": "LOFPO forced_third_accuracy",
+              "note": "",
+              "observed": 0.755001653439,
+              "passes": false,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOFPO exact_block_family_recovery",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.267857142857,
+              "passes": false,
+              "threshold": 0.8
+            },
+            {
+              "criterion": "LOHO forced_third materially > admission-only ceiling",
+              "note": "the whole 95% interval must sit above the exact 1/2 ceiling, and the paired difference against the capacity-matched zero-anchor arm must exclude zero",
+              "observed": 0.730158730159,
+              "passes": true,
+              "threshold": 0.5
+            }
+          ],
+          "secondary_all_pass": false,
+          "zero_anchor_observed": 0.493716931217
+        }
+      },
+      "zero_anchor_check": {
+        "no_family_materially_exceeds_the_ceiling": true,
+        "per_family": [
+          {
+            "anchor_overlap_0_accuracy": 0.518849206349,
+            "anchor_overlap_1_accuracy": 0.481150793651,
+            "ci_95": {
+              "high": 0.49537037037,
+              "low": 0.492042824074,
+              "n": 112
+            },
+            "exact_ceiling": 0.5,
+            "family": "LOHO",
+            "interval_includes_the_ceiling": false,
+            "materially_exceeds_the_ceiling": false,
+            "mean": 0.493716931217
+          },
+          {
+            "anchor_overlap_0_accuracy": 0.518849206349,
+            "anchor_overlap_1_accuracy": 0.481150793651,
+            "ci_95": {
+              "high": 0.494874338624,
+              "low": 0.492559523809,
+              "n": 56
+            },
+            "exact_ceiling": 0.5,
+            "family": "LOFPO",
+            "interval_includes_the_ceiling": false,
+            "materially_exceeds_the_ceiling": false,
+            "mean": 0.493716931217
+          }
+        ],
+        "reading": "the control sitting at the exact 1/2 ceiling is the anti-cheating result: with the anchor channel zeroed and the parameters unchanged, the learner cannot do better than break a forced tie. Its fresh-relabelling transport rate is correspondingly near chance, which is what a tie-break on an opaque name looks like. A control ABOVE the ceiling would have indicated leakage or stable-token semantics and would have stopped the interpretation of the one-anchor arm.",
+        "zero_anchor_transport_mean": 0.47123015873
+      }
+    },
+    "repair": {
+      "paired_one_anchor_minus_zero_anchor": {
+        "LOFPO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.507233796296,
+              "low": 0.487723214286,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.513888888889,
+            "mean_difference": 0.500330687831,
+            "median_difference": 0.50462962963,
+            "min": 0.168981481482,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.5,
+              "P=2": 0.509259259259,
+              "P=3": 0.513888888889,
+              "P=4": 0.460648148148,
+              "P=5": 0.509259259259,
+              "P=6": 0.50462962963,
+              "P=7": 0.50462962963
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.044893232835
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.982142857143,
+            "median_difference": 1.0,
+            "min": 0.0,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 1.0,
+              "P=2": 1.0,
+              "P=3": 1.0,
+              "P=4": 0.875,
+              "P=5": 1.0,
+              "P=6": 1.0,
+              "P=7": 1.0
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.132432115841
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.535590277778,
+              "low": 0.517190600198,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.590277777778,
+            "mean_difference": 0.526491195437,
+            "median_difference": 0.527777777778,
+            "min": 0.400173611111,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.590277777778,
+              "P=2": 0.511827256945,
+              "P=3": 0.513888888889,
+              "P=4": 0.479166666667,
+              "P=5": 0.534722222222,
+              "P=6": 0.517361111111,
+              "P=7": 0.538194444444
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.035357756101
+          }
+        },
+        "LOHO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.507543816138,
+              "low": 0.49646577381,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.527777777778,
+            "mean_difference": 0.503306878307,
+            "median_difference": 0.50462962963,
+            "min": 0.175925925926,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.5,
+              "P=1,delta=-1": 0.5,
+              "P=2,delta=+1": 0.513888888889,
+              "P=2,delta=-1": 0.50462962963,
+              "P=3,delta=+1": 0.5,
+              "P=3,delta=-1": 0.527777777778,
+              "P=4,delta=+1": 0.490740740741,
+              "P=4,delta=-1": 0.513888888889,
+              "P=5,delta=+1": 0.511574074074,
+              "P=5,delta=-1": 0.506944444444,
+              "P=6,delta=+1": 0.497685185185,
+              "P=6,delta=-1": 0.511574074074,
+              "P=7,delta=+1": 0.467592592592,
+              "P=7,delta=-1": 0.5
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.032333086142
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.991071428571,
+            "median_difference": 1.0,
+            "min": 0.0,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 1.0,
+              "P=1,delta=-1": 1.0,
+              "P=2,delta=+1": 1.0,
+              "P=2,delta=-1": 1.0,
+              "P=3,delta=+1": 1.0,
+              "P=3,delta=-1": 1.0,
+              "P=4,delta=+1": 1.0,
+              "P=4,delta=-1": 1.0,
+              "P=5,delta=+1": 1.0,
+              "P=5,delta=-1": 1.0,
+              "P=6,delta=+1": 1.0,
+              "P=6,delta=-1": 1.0,
+              "P=7,delta=+1": 0.875,
+              "P=7,delta=-1": 1.0
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.094068337079
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.537946428571,
+              "low": 0.520089285714,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.638888888889,
+            "mean_difference": 0.52876984127,
+            "median_difference": 0.527777777778,
+            "min": 0.444444444444,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.541666666667,
+              "P=1,delta=-1": 0.638888888889,
+              "P=2,delta=+1": 0.444444444444,
+              "P=2,delta=-1": 0.611111111111,
+              "P=3,delta=+1": 0.5,
+              "P=3,delta=-1": 0.527777777778,
+              "P=4,delta=+1": 0.472222222222,
+              "P=4,delta=-1": 0.486111111111,
+              "P=5,delta=+1": 0.527777777778,
+              "P=5,delta=-1": 0.541666666667,
+              "P=6,delta=+1": 0.506944444444,
+              "P=6,delta=-1": 0.527777777778,
+              "P=7,delta=+1": 0.541666666667,
+              "P=7,delta=-1": 0.534722222222
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.048459026753
+          }
+        }
+      },
+      "seed_census": {
+        "anchor_overlap_0_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": false,
+          "distinct_per_seed_means": [
+            0.928571428571,
+            1.0
+          ],
+          "family": "LOHO",
+          "metric": "anchor_overlap_0_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 1.0,
+            "1": 1.0,
+            "2": 0.928571428571,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0
+          }
+        },
+        "forced_third_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": false,
+          "distinct_per_seed_means": [
+            0.976190476191,
+            1.0
+          ],
+          "family": "LOHO",
+          "metric": "forced_third_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 1.0,
+            "1": 1.0,
+            "2": 0.976190476191,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0
+          }
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "arm": "one_anchor",
+          "bimodal": false,
+          "distinct_per_seed_means": [
+            0.928571428571,
+            1.0
+          ],
+          "family": "LOHO",
+          "metric": "supplied_anchor_exact_block_family_recovery",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 1.0,
+            "1": 1.0,
+            "2": 0.928571428571,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0
+          }
+        },
+        "train_accuracy": {
+          "arm": "one_anchor",
+          "bimodal": false,
+          "distinct_per_seed_means": [
+            0.976190476191,
+            1.0
+          ],
+          "family": "LOHO",
+          "metric": "train_accuracy",
+          "n_folds_per_seed": [
+            14
+          ],
+          "per_seed_mean": {
+            "0": 1.0,
+            "1": 1.0,
+            "2": 0.976190476191,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0,
+            "6": 1.0,
+            "7": 1.0
+          }
+        }
+      },
+      "summary": {
+        "one_anchor|LOFPO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.75,
+              "low": 0.736607142857,
+              "n": 56
+            },
+            "max": 0.75,
+            "mean": 0.745535714286,
+            "min": 0.5,
+            "n": 56
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.982142857143,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.994047619048,
+            "min": 0.666666666667,
+            "n": 56
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.982142857143,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.994047619048,
+            "min": 0.666666666667,
+            "n": 56
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "n_folds": 7,
+          "n_runs": 56,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 6.053571428571,
+              "low": 6.0,
+              "n": 56
+            },
+            "max": 7.0,
+            "mean": 6.017857142857,
+            "min": 6.0,
+            "n": 56
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 0.053571428571,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.017857142857,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.982142857143,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.994047619048,
+            "min": 0.666666666667,
+            "n": 56
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.982142857143,
+            "min": 0.0,
+            "n": 56
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.9931640625,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.997721354167,
+            "min": 0.872395833333,
+            "n": 56
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.953125,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 0.984375,
+            "min": 0.125,
+            "n": 56
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          }
+        },
+        "one_anchor|LOHO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.756696428571,
+              "low": 0.743303571429,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.75,
+            "min": 0.5,
+            "n": 112
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.026785714286,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.008928571429,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.991071428571,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.997023809524,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.026785714286,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.008928571429,
+            "min": 0.0,
+            "n": 112
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.991071428571,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.997023809524,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "n_folds": 14,
+          "n_runs": 112,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.026785714286,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.008928571429,
+            "min": 0.0,
+            "n": 112
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 6.026785714286,
+              "low": 5.946428571429,
+              "n": 112
+            },
+            "max": 7.0,
+            "mean": 5.991071428571,
+            "min": 4.0,
+            "n": 112
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 0.026785714286,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.008928571429,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.026785714286,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.008928571429,
+            "min": 0.0,
+            "n": 112
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.991071428571,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.997023809524,
+            "min": 0.666666666667,
+            "n": 112
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 0.991071428571,
+            "min": 0.0,
+            "n": 112
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          }
+        },
+        "zero_anchor|LOFPO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.5,
+              "low": 0.5,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.5,
+            "min": 0.5,
+            "n": 56
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.522445436508,
+              "low": 0.515376984127,
+              "n": 56
+            },
+            "max": 0.541666666667,
+            "mean": 0.518849206349,
+            "min": 0.5,
+            "n": 56
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.484623015873,
+              "low": 0.477678571428,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.481150793651,
+            "min": 0.458333333333,
+            "n": 56
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.494874338624,
+              "low": 0.492559523809,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.493716931217,
+            "min": 0.486111111111,
+            "n": 56
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.001398533951,
+              "low": -0.001350308642,
+              "n": 56
+            },
+            "max": 0.00887345679,
+            "mean": 0.0,
+            "min": -0.007330246914,
+            "n": 56
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "n_folds": 7,
+          "n_runs": 56,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 7.0,
+              "low": 7.0,
+              "n": 56
+            },
+            "max": 7.0,
+            "mean": 7.0,
+            "min": 7.0,
+            "n": 56
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 56
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 56
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 56
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 56
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 0.484623015873,
+              "low": 0.477678571428,
+              "n": 56
+            },
+            "max": 0.5,
+            "mean": 0.481150793651,
+            "min": 0.458333333333,
+            "n": 56
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.522445436508,
+              "low": 0.515376984127,
+              "n": 56
+            },
+            "max": 0.541666666667,
+            "mean": 0.518849206349,
+            "min": 0.5,
+            "n": 56
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.493916721781,
+              "low": 0.493524029983,
+              "n": 56
+            },
+            "max": 0.494984567901,
+            "mean": 0.493716931217,
+            "min": 0.492669753086,
+            "n": 56
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.519427910053,
+              "low": 0.518270502645,
+              "n": 56
+            },
+            "max": 0.521990740741,
+            "mean": 0.518849206349,
+            "min": 0.515046296296,
+            "n": 56
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.481750165344,
+              "low": 0.480572089947,
+              "n": 56
+            },
+            "max": 0.484953703704,
+            "mean": 0.481150793651,
+            "min": 0.478009259259,
+            "n": 56
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.479290674603,
+              "low": 0.463231646825,
+              "n": 56
+            },
+            "max": 0.520833333333,
+            "mean": 0.47123015873,
+            "min": 0.409722222222,
+            "n": 56
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 0.102864583333,
+              "low": 0.087053571429,
+              "n": 56
+            },
+            "max": 0.135416666667,
+            "mean": 0.095238095238,
+            "min": 0.041666666667,
+            "n": 56
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 0.102864583333,
+              "low": 0.087053571429,
+              "n": 56
+            },
+            "max": 0.135416666667,
+            "mean": 0.095238095238,
+            "min": 0.041666666667,
+            "n": 56
+          }
+        },
+        "zero_anchor|LOHO": {
+          "all_pairs_third_accuracy": {
+            "ci_95": {
+              "high": 0.5,
+              "low": 0.5,
+              "n": 112
+            },
+            "max": 0.5,
+            "mean": 0.5,
+            "min": 0.5,
+            "n": 112
+          },
+          "anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.523871527778,
+              "low": 0.513950892857,
+              "n": 112
+            },
+            "max": 0.583333333333,
+            "mean": 0.518849206349,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.486111111111,
+              "low": 0.476128472222,
+              "n": 112
+            },
+            "max": 0.527777777778,
+            "mean": 0.481150793651,
+            "min": 0.416666666667,
+            "n": 112
+          },
+          "chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "dual_anchor_certified_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_anchor_forced_third_accuracy": {
+            "ci_95": {
+              "high": null,
+              "low": null,
+              "n": 0
+            },
+            "max": null,
+            "mean": null,
+            "min": null,
+            "n": 0
+          },
+          "dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.49537037037,
+              "low": 0.492042824074,
+              "n": 112
+            },
+            "max": 0.509259259259,
+            "mean": 0.493716931217,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "generalization_gap": {
+            "ci_95": {
+              "high": 0.001802884616,
+              "low": -0.001758368946,
+              "n": 112
+            },
+            "max": 0.023148148148,
+            "mean": 0.0,
+            "min": -0.016737891738,
+            "n": 112
+          },
+          "invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "n_folds": 14,
+          "n_runs": 112,
+          "n_seeds": 8,
+          "prediction_on_query_node_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "strict_unique_triples_mean": {
+            "ci_95": {
+              "high": 7.0,
+              "low": 7.0,
+              "n": 112
+            },
+            "max": 7.0,
+            "mean": 7.0,
+            "min": 7.0,
+            "n": 112
+          },
+          "supplied_anchor_chart_valid_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_dual_family_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "supplied_anchor_invalid_family_rate": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 1.0,
+              "n": 112
+            },
+            "max": 1.0,
+            "mean": 1.0,
+            "min": 1.0,
+            "n": 112
+          },
+          "supplied_anchor_sfp_equivalent_rate": {
+            "ci_95": {
+              "high": 0.0,
+              "low": 0.0,
+              "n": 112
+            },
+            "max": 0.0,
+            "mean": 0.0,
+            "min": 0.0,
+            "n": 112
+          },
+          "support_pair_other_family_answer_rate": {
+            "ci_95": {
+              "high": 0.486111111111,
+              "low": 0.476128472222,
+              "n": 112
+            },
+            "max": 0.527777777778,
+            "mean": 0.481150793651,
+            "min": 0.416666666667,
+            "n": 112
+          },
+          "support_pair_third_accuracy": {
+            "ci_95": {
+              "high": 0.523871527778,
+              "low": 0.513950892857,
+              "n": 112
+            },
+            "max": 0.583333333333,
+            "mean": 0.518849206349,
+            "min": 0.472222222222,
+            "n": 112
+          },
+          "train_accuracy": {
+            "ci_95": {
+              "high": 0.49384570869,
+              "low": 0.493591333435,
+              "n": 112
+            },
+            "max": 0.49537037037,
+            "mean": 0.493716931217,
+            "min": 0.492521367521,
+            "n": 112
+          },
+          "train_anchor_overlap_0_accuracy": {
+            "ci_95": {
+              "high": 0.519230769231,
+              "low": 0.518462873932,
+              "n": 112
+            },
+            "max": 0.522435897436,
+            "mean": 0.518849206349,
+            "min": 0.513888888889,
+            "n": 112
+          },
+          "train_anchor_overlap_1_accuracy": {
+            "ci_95": {
+              "high": 0.481537126068,
+              "low": 0.480774000305,
+              "n": 112
+            },
+            "max": 0.486111111111,
+            "mean": 0.481150793651,
+            "min": 0.477564102564,
+            "n": 112
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.479972718254,
+              "low": 0.462301587302,
+              "n": 112
+            },
+            "max": 0.555555555556,
+            "mean": 0.47123015873,
+            "min": 0.361111111111,
+            "n": 112
+          },
+          "transport_family_rate": {
+            "ci_95": {
+              "high": 0.105282738095,
+              "low": 0.085379464286,
+              "n": 112
+            },
+            "max": 0.1875,
+            "mean": 0.095238095238,
+            "min": 0.0,
+            "n": 112
+          },
+          "transport_supplied_anchor_family_rate": {
+            "ci_95": {
+              "high": 0.105282738095,
+              "low": 0.085379464286,
+              "n": 112
+            },
+            "max": 0.1875,
+            "mean": 0.095238095238,
+            "min": 0.0,
+            "n": 112
+          }
+        }
+      },
+      "threshold_tables": {
+        "predeclared_all_pairs": {
+          "failed": [
+            "LOHO exact_block_family_recovery",
+            "LOHO sfp_equivalent_rate",
+            "LOHO chart_valid_rate",
+            "LOFPO exact_block_family_recovery"
+          ],
+          "form": "predeclared_all_pairs",
+          "form_role": "PREDECLARED. Sections 6.1 to 6.3 reconstruct from all twelve admitted pairs; every one of the four chambers comes from a prediction. Section 8's thresholds refer to this reading, so the disposition is filed under it.",
+          "material_improvement": {
+            "admission_only_ceiling": 0.5,
+            "clears_the_ceiling": true,
+            "one_anchor_lower_bound": 0.991071428571
+          },
+          "primary_all_pass": false,
+          "rows": [
+            {
+              "criterion": "LOHO forced_third_accuracy",
+              "note": "",
+              "observed": 0.997023809524,
+              "passes": true,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO forced_third 95% lower bound",
+              "note": "",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOHO exact_block_family_recovery",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.008928571429,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO sfp_equivalent_rate",
+              "note": "reconstruction form: predeclared_all_pairs; entailed by block-family recovery",
+              "observed": 0.008928571429,
+              "passes": false,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO chart_valid_rate",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.008928571429,
+              "passes": false,
+              "threshold": 0.95
+            },
+            {
+              "criterion": "LOHO fresh-relabelling transport (exact decisions)",
+              "note": "",
+              "observed": 1.0,
+              "passes": true,
+              "threshold": 0.99
+            },
+            {
+              "criterion": "LOFPO forced_third_accuracy",
+              "note": "",
+              "observed": 0.994047619048,
+              "passes": true,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOFPO exact_block_family_recovery",
+              "note": "reconstruction form: predeclared_all_pairs",
+              "observed": 0.0,
+              "passes": false,
+              "threshold": 0.8
+            },
+            {
+              "criterion": "LOHO forced_third materially > admission-only ceiling",
+              "note": "the whole 95% interval must sit above the exact 1/2 ceiling, and the paired difference against the capacity-matched zero-anchor arm must exclude zero",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.5
+            }
+          ],
+          "secondary_all_pass": false,
+          "zero_anchor_observed": 0.493716931217
+        },
+        "supplied_anchor": {
+          "failed": [],
+          "form": "supplied_anchor",
+          "form_role": "ALTERNATIVE READING, reported not adopted. The nine scored answers imply three chambers and the fourth is the anchor triple the task supplies as support. Offered to the Owner; not substituted for the predeclared form.",
+          "material_improvement": {
+            "admission_only_ceiling": 0.5,
+            "clears_the_ceiling": true,
+            "one_anchor_lower_bound": 0.991071428571
+          },
+          "primary_all_pass": true,
+          "rows": [
+            {
+              "criterion": "LOHO forced_third_accuracy",
+              "note": "",
+              "observed": 0.997023809524,
+              "passes": true,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO forced_third 95% lower bound",
+              "note": "",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOHO exact_block_family_recovery",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO sfp_equivalent_rate",
+              "note": "reconstruction form: supplied_anchor; entailed by block-family recovery",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.9
+            },
+            {
+              "criterion": "LOHO chart_valid_rate",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.95
+            },
+            {
+              "criterion": "LOHO fresh-relabelling transport (exact decisions)",
+              "note": "",
+              "observed": 1.0,
+              "passes": true,
+              "threshold": 0.99
+            },
+            {
+              "criterion": "LOFPO forced_third_accuracy",
+              "note": "",
+              "observed": 0.994047619048,
+              "passes": true,
+              "threshold": 0.85
+            },
+            {
+              "criterion": "LOFPO exact_block_family_recovery",
+              "note": "reconstruction form: supplied_anchor",
+              "observed": 0.982142857143,
+              "passes": true,
+              "threshold": 0.8
+            },
+            {
+              "criterion": "LOHO forced_third materially > admission-only ceiling",
+              "note": "the whole 95% interval must sit above the exact 1/2 ceiling, and the paired difference against the capacity-matched zero-anchor arm must exclude zero",
+              "observed": 0.991071428571,
+              "passes": true,
+              "threshold": 0.5
+            }
+          ],
+          "secondary_all_pass": true,
+          "zero_anchor_observed": 0.493716931217
+        }
+      },
+      "zero_anchor_check": {
+        "no_family_materially_exceeds_the_ceiling": true,
+        "per_family": [
+          {
+            "anchor_overlap_0_accuracy": 0.518849206349,
+            "anchor_overlap_1_accuracy": 0.481150793651,
+            "ci_95": {
+              "high": 0.49537037037,
+              "low": 0.492042824074,
+              "n": 112
+            },
+            "exact_ceiling": 0.5,
+            "family": "LOHO",
+            "interval_includes_the_ceiling": false,
+            "materially_exceeds_the_ceiling": false,
+            "mean": 0.493716931217
+          },
+          {
+            "anchor_overlap_0_accuracy": 0.518849206349,
+            "anchor_overlap_1_accuracy": 0.481150793651,
+            "ci_95": {
+              "high": 0.494874338624,
+              "low": 0.492559523809,
+              "n": 56
+            },
+            "exact_ceiling": 0.5,
+            "family": "LOFPO",
+            "interval_includes_the_ceiling": false,
+            "materially_exceeds_the_ceiling": false,
+            "mean": 0.493716931217
+          }
+        ],
+        "reading": "the control sitting at the exact 1/2 ceiling is the anti-cheating result: with the anchor channel zeroed and the parameters unchanged, the learner cannot do better than break a forced tie. Its fresh-relabelling transport rate is correspondingly near chance, which is what a tie-break on an opaque name looks like. A control ABOVE the ceiling would have indicated leakage or stable-token semantics and would have stopped the interpretation of the one-anchor arm.",
+        "zero_anchor_transport_mean": 0.47123015873
+      }
+    }
+  },
+  "bootstrap": {
+    "ci_level": 0.95,
+    "resamples": 10000,
+    "seed": 900509,
+    "source": "analysis.bootstrap_ci, imported from the 009.02 turn"
+  },
+  "cross_block_repair_minus_primary": {
+    "one_anchor": {
+      "LOFPO": {
+        "anchor_overlap_0_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 40,
+          "ci_95": {
+            "high": 0.821428571429,
+            "low": 0.589285714286,
+            "n": 56
+          },
+          "ci_excludes_zero": true,
+          "max": 1.0,
+          "mean_difference": 0.714285714286,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        },
+        "forced_third_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 40,
+          "ci_95": {
+            "high": 0.275710978836,
+            "low": 0.197379298942,
+            "n": 56
+          },
+          "ci_excludes_zero": true,
+          "max": 0.386574074074,
+          "mean_difference": 0.239045965608,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 40,
+          "ci_95": {
+            "high": 0.821428571429,
+            "low": 0.589285714286,
+            "n": 56
+          },
+          "ci_excludes_zero": true,
+          "max": 1.0,
+          "mean_difference": 0.714285714286,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        }
+      },
+      "LOHO": {
+        "anchor_overlap_0_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 81,
+          "ci_95": {
+            "high": 0.800595238095,
+            "low": 0.633928571429,
+            "n": 112
+          },
+          "ci_excludes_zero": true,
+          "max": 1.0,
+          "mean_difference": 0.720238095238,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        },
+        "forced_third_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 81,
+          "ci_95": {
+            "high": 0.266865079365,
+            "low": 0.211309523809,
+            "n": 112
+          },
+          "ci_excludes_zero": true,
+          "max": 0.333333333333,
+          "mean_difference": 0.240079365079,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 81,
+          "ci_95": {
+            "high": 0.803571428571,
+            "low": 0.633928571429,
+            "n": 112
+          },
+          "ci_excludes_zero": true,
+          "max": 1.0,
+          "mean_difference": 0.723214285714,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        }
+      }
+    },
+    "zero_anchor": {
+      "LOFPO": {
+        "anchor_overlap_0_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 56
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        },
+        "forced_third_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 56
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 56
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 56,
+          "paired": true
+        }
+      },
+      "LOHO": {
+        "anchor_overlap_0_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 112
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        },
+        "forced_third_accuracy": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 112
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        },
+        "supplied_anchor_exact_block_family_recovery": {
+          "cells_favouring_primary": 0,
+          "cells_favouring_repair": 0,
+          "ci_95": {
+            "high": 0.0,
+            "low": 0.0,
+            "n": 112
+          },
+          "ci_excludes_zero": false,
+          "max": 0.0,
+          "mean_difference": 0.0,
+          "min": 0.0,
+          "n_cells": 112,
+          "paired": true
+        }
+      }
+    }
+  },
+  "diagnosed_pathology": {
+    "cause": "with m_ij = Message(h_j) the candidate must learn the conjunction 'neighbour is query-marked AND anchor-marked' inside the message function and only then combine that count with its own anchor mark. The parity is assembled from two separately learned pieces and the linearly available piece -- avoid anchor-marked candidates -- already scores 6/9",
+    "discipline": "009.09 section 5.3 permits one primary pass and at most one clearly diagnosed repair. Both blocks are run and both are reported; the primary block is not deleted and its failure is not rounded away",
+    "name": "the 6/9 anchor-preference saddle",
+    "not_expressivity": "depth does not fix it: 3 layers reaches 1.0000 by step 200 and falls back to 0.6667 by step 800, and 4 layers oscillates. The parity is representable at 2 layers -- one affected seed of three reaches 1.0000 at step 40 and holds it to step 4000",
+    "persistence": "unchanged from step 40 through step 4000 on the affected seeds, so it is a flat attractor rather than slow convergence",
+    "repair": "condition the message on the ordered edge: m_ij = Message([h_i, h_j]). One change, same family, same widths, same optimizer, same step count, same seeds, same observations, no new hyperparameter",
+    "symptom": "forced-third accuracy pinned at exactly 0.666666666667 on TRAIN as well as test, with per-case accuracy 1.0000 on the six queries holding one anchor-marked node and 0.0000 on the three holding none",
+    "why_it_is_a_fit_failure_not_a_generalization_failure": "train and test agree to twelve decimals; the model has not overfitted, it has not fitted"
+  },
+  "disposition": {
+    "alternative_reading_class": "A",
+    "any_invalidating_condition": false,
+    "comparison_support": {
+      "one_anchor_minus_zero_anchor": {
+        "LOFPO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.507233796296,
+              "low": 0.487723214286,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.513888888889,
+            "mean_difference": 0.500330687831,
+            "median_difference": 0.50462962963,
+            "min": 0.168981481482,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.5,
+              "P=2": 0.509259259259,
+              "P=3": 0.513888888889,
+              "P=4": 0.460648148148,
+              "P=5": 0.509259259259,
+              "P=6": 0.50462962963,
+              "P=7": 0.50462962963
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.044893232835
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.946428571429,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.982142857143,
+            "median_difference": 1.0,
+            "min": 0.0,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 1.0,
+              "P=2": 1.0,
+              "P=3": 1.0,
+              "P=4": 0.875,
+              "P=5": 1.0,
+              "P=6": 1.0,
+              "P=7": 1.0
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.132432115841
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.535590277778,
+              "low": 0.517190600198,
+              "n": 56
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 7,
+            "folds_favouring_right": 0,
+            "max": 0.590277777778,
+            "mean_difference": 0.526491195437,
+            "median_difference": 0.527777777778,
+            "min": 0.400173611111,
+            "n_cells": 56,
+            "n_folds": 7,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1": 0.590277777778,
+              "P=2": 0.511827256945,
+              "P=3": 0.513888888889,
+              "P=4": 0.479166666667,
+              "P=5": 0.534722222222,
+              "P=6": 0.517361111111,
+              "P=7": 0.538194444444
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.035357756101
+          }
+        },
+        "LOHO": {
+          "forced_third_accuracy": {
+            "ci_95": {
+              "high": 0.507543816138,
+              "low": 0.49646577381,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.527777777778,
+            "mean_difference": 0.503306878307,
+            "median_difference": 0.50462962963,
+            "min": 0.175925925926,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.5,
+              "P=1,delta=-1": 0.5,
+              "P=2,delta=+1": 0.513888888889,
+              "P=2,delta=-1": 0.50462962963,
+              "P=3,delta=+1": 0.5,
+              "P=3,delta=-1": 0.527777777778,
+              "P=4,delta=+1": 0.490740740741,
+              "P=4,delta=-1": 0.513888888889,
+              "P=5,delta=+1": 0.511574074074,
+              "P=5,delta=-1": 0.506944444444,
+              "P=6,delta=+1": 0.497685185185,
+              "P=6,delta=-1": 0.511574074074,
+              "P=7,delta=+1": 0.467592592592,
+              "P=7,delta=-1": 0.5
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.032333086142
+          },
+          "supplied_anchor_exact_block_family_recovery": {
+            "ci_95": {
+              "high": 1.0,
+              "low": 0.973214285714,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 1.0,
+            "mean_difference": 0.991071428571,
+            "median_difference": 1.0,
+            "min": 0.0,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 1.0,
+              "P=1,delta=-1": 1.0,
+              "P=2,delta=+1": 1.0,
+              "P=2,delta=-1": 1.0,
+              "P=3,delta=+1": 1.0,
+              "P=3,delta=-1": 1.0,
+              "P=4,delta=+1": 1.0,
+              "P=4,delta=-1": 1.0,
+              "P=5,delta=+1": 1.0,
+              "P=5,delta=-1": 1.0,
+              "P=6,delta=+1": 1.0,
+              "P=6,delta=-1": 1.0,
+              "P=7,delta=+1": 0.875,
+              "P=7,delta=-1": 1.0
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.094068337079
+          },
+          "transport_decision_rate": {
+            "ci_95": {
+              "high": 0.537946428571,
+              "low": 0.520089285714,
+              "n": 112
+            },
+            "ci_excludes_zero": true,
+            "folds_favouring_left": 14,
+            "folds_favouring_right": 0,
+            "max": 0.638888888889,
+            "mean_difference": 0.52876984127,
+            "median_difference": 0.527777777778,
+            "min": 0.444444444444,
+            "n_cells": 112,
+            "n_folds": 14,
+            "paired": true,
+            "per_fold_mean_difference": {
+              "P=1,delta=+1": 0.541666666667,
+              "P=1,delta=-1": 0.638888888889,
+              "P=2,delta=+1": 0.444444444444,
+              "P=2,delta=-1": 0.611111111111,
+              "P=3,delta=+1": 0.5,
+              "P=3,delta=-1": 0.527777777778,
+              "P=4,delta=+1": 0.472222222222,
+              "P=4,delta=-1": 0.486111111111,
+              "P=5,delta=+1": 0.527777777778,
+              "P=5,delta=-1": 0.541666666667,
+              "P=6,delta=+1": 0.506944444444,
+              "P=6,delta=-1": 0.527777777778,
+              "P=7,delta=+1": 0.541666666667,
+              "P=7,delta=-1": 0.534722222222
+            },
+            "sign_consistent_across_folds": true,
+            "std_population": 0.048459026753
+          }
+        }
+      },
+      "repair_minus_primary": {
+        "one_anchor": {
+          "LOFPO": {
+            "anchor_overlap_0_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 40,
+              "ci_95": {
+                "high": 0.821428571429,
+                "low": 0.589285714286,
+                "n": 56
+              },
+              "ci_excludes_zero": true,
+              "max": 1.0,
+              "mean_difference": 0.714285714286,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            },
+            "forced_third_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 40,
+              "ci_95": {
+                "high": 0.275710978836,
+                "low": 0.197379298942,
+                "n": 56
+              },
+              "ci_excludes_zero": true,
+              "max": 0.386574074074,
+              "mean_difference": 0.239045965608,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            },
+            "supplied_anchor_exact_block_family_recovery": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 40,
+              "ci_95": {
+                "high": 0.821428571429,
+                "low": 0.589285714286,
+                "n": 56
+              },
+              "ci_excludes_zero": true,
+              "max": 1.0,
+              "mean_difference": 0.714285714286,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            }
+          },
+          "LOHO": {
+            "anchor_overlap_0_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 81,
+              "ci_95": {
+                "high": 0.800595238095,
+                "low": 0.633928571429,
+                "n": 112
+              },
+              "ci_excludes_zero": true,
+              "max": 1.0,
+              "mean_difference": 0.720238095238,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            },
+            "forced_third_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 81,
+              "ci_95": {
+                "high": 0.266865079365,
+                "low": 0.211309523809,
+                "n": 112
+              },
+              "ci_excludes_zero": true,
+              "max": 0.333333333333,
+              "mean_difference": 0.240079365079,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            },
+            "supplied_anchor_exact_block_family_recovery": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 81,
+              "ci_95": {
+                "high": 0.803571428571,
+                "low": 0.633928571429,
+                "n": 112
+              },
+              "ci_excludes_zero": true,
+              "max": 1.0,
+              "mean_difference": 0.723214285714,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            }
+          }
+        },
+        "zero_anchor": {
+          "LOFPO": {
+            "anchor_overlap_0_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 56
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            },
+            "forced_third_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 56
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            },
+            "supplied_anchor_exact_block_family_recovery": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 56
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 56,
+              "paired": true
+            }
+          },
+          "LOHO": {
+            "anchor_overlap_0_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 112
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            },
+            "forced_third_accuracy": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 112
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            },
+            "supplied_anchor_exact_block_family_recovery": {
+              "cells_favouring_primary": 0,
+              "cells_favouring_repair": 0,
+              "ci_95": {
+                "high": 0.0,
+                "low": 0.0,
+                "n": 112
+              },
+              "ci_excludes_zero": false,
+              "max": 0.0,
+              "mean_difference": 0.0,
+              "min": 0.0,
+              "n_cells": 112,
+              "paired": true
+            }
+          }
+        }
+      }
+    },
+    "filed_class": "B",
+    "filed_statement": "B -- filed under the predeclared all-pairs reconstruction, which the three support-pair answers fail. The alternative supplied-anchor reading supports class A. The failure is localized to a regime the task's own supervision rule leaves underdetermined: two rules that are indistinguishable on all 6048 supervisable rows disagree on all 2016 support rows, so no learner obeying section 5.3 can meet those three thresholds. Owner disposition is required to choose between the two readings.",
+    "filed_under": "predeclared_all_pairs",
+    "invalidating_conditions": {
+      "gate_0_did_not_open": false,
+      "held_out_labels_leaked": false,
+      "one_anchor_ceiling_is_not_one": false,
+      "opaque_name_permutation_changes_semantics": false,
+      "sfp_or_native_coordinates_entered_the_learned_path": false,
+      "zero_anchor_exceeds_its_exact_ceiling": false
+    },
+    "per_reading": {
+      "predeclared_all_pairs": {
+        "chart_audit_positive": false,
+        "class": "B",
+        "failed_criteria": [
+          "LOHO exact_block_family_recovery",
+          "LOHO sfp_equivalent_rate",
+          "LOHO chart_valid_rate",
+          "LOFPO exact_block_family_recovery"
+        ],
+        "performance_positive": true,
+        "primary_all_pass": false,
+        "secondary_all_pass": false
+      },
+      "supplied_anchor": {
+        "chart_audit_positive": true,
+        "class": "A",
+        "failed_criteria": [],
+        "performance_positive": true,
+        "primary_all_pass": true,
+        "secondary_all_pass": true
+      }
+    },
+    "runs_digest": "f3799fc8d451c4234881f7363f241901da3f849efaeb46c542ce33a4c2d33b4c",
+    "why_class_B_reading_does_not_hold": "section 9 class B interprets a chart-audit failure as 'the learner found a useful query rule, not the claimed representation'. That interpretation is contradicted here. Under the supplied-anchor reconstruction the learner's own answers imply three of the four chambers, the fourth is the supplied anchor, the resulting four-chamber system IS the certified cyclic-block family, and the exact AGL(2,2) search confirms it is equivalent to the hidden SFP chart. What fails the predeclared form is the three support-pair answers, and the supervision-identifiability proof shows those are not determined by anything the task permits supervising.",
+    "why_not_the_alternative": "009.09 section 9 class E names 'stop rather than repair the scientific question after results are visible'. The supplied-anchor reconstruction was not the predeclared one, and adopting it because the predeclared one failed would be exactly that repair. It is reported in full and offered to the Owner instead."
+  },
+  "exact_ceilings": {
+    "one_anchor": 1.0,
+    "source": "discovery_task Gate 0, re-measured in discovery_baselines",
+    "uniform_eligible_node_chance": 0.25,
+    "zero_anchor": 0.5
+  },
+  "fences": [
+    "No threshold was moved after training. A missed threshold is reported as missed, never rounded up and never reinterpreted.",
+    "The disposition is filed under the PREDECLARED all-pairs reconstruction. The supplied-anchor reading is reported alongside and named as an alternative for Owner disposition, because choosing it after seeing the result would be repairing the scientific question with results visible (section 9 class E).",
+    "sfp_equivalent is a consistency confirmation ENTAILED by block-family recovery (009.09a section 3), not independent evidence. Its agreement with the recovery rate is asserted as a law; a divergence would be a bug.",
+    "The dual-anchor arm's labels are COMBINATORIAL. It is a control and never contributes to a threshold or a disposition.",
+    "009.08's 0.9688 is a contextual reference on a different observation set, not a capacity-matched arm. The discovery result is judged against its own exact 1.000 one-anchor ceiling.",
+    "The holdout is fresh-relabelling generalization of a local relational rule, not held-out-structure generalization in the 009.06/009.08 sense.",
+    "No post hoc equivalence margin. Intervals, sign consistency across folds, and the exact ceilings do the work."
+  ],
+  "headline_block": "repair",
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "laws": {
+    "baseline_laws_hold": true,
+    "disposition_filed_under_the_predeclared_reading": true,
+    "gate_0_open": true,
+    "no_threshold_moved_after_training": true,
+    "one_anchor_ceiling_is_one": true,
+    "sfp_equivalent_entailed_by_family_recovery": true,
+    "structural_laws_hold": true,
+    "support_pair_regime_is_unsupervised_and_underdetermined": true,
+    "sweep_laws_hold": true,
+    "zero_anchor_within_its_exact_ceiling": true
+  },
+  "module": "discovery_analysis",
+  "pins": {
+    "episodes_per_habitat": {
+      "agrees": true,
+      "expected": 48,
+      "observed": 48,
+      "source": "discovery_task episode manifest"
+    },
+    "runs_per_block": {
+      "agrees": true,
+      "expected": 336,
+      "observed": 336,
+      "source": "discovery_sweep"
+    },
+    "scored_queries_per_episode": {
+      "agrees": true,
+      "expected": 9,
+      "observed": 9,
+      "source": "discovery_task Gate 0"
+    }
+  },
+  "predeclared_thresholds": {
+    "LOFPO": {
+      "exact_block_family_recovery": 0.8,
+      "forced_third_accuracy": 0.85
+    },
+    "LOHO": {
+      "chart_valid_rate": 0.95,
+      "exact_block_family_recovery": 0.9,
+      "forced_third_accuracy": 0.9,
+      "forced_third_lower_bound": 0.85,
+      "sfp_equivalent_rate": 0.9,
+      "transport_decision_rate": 0.99
+    },
+    "declared": "009.09 section 8, before any run"
+  },
+  "recommendation": {
+    "issue_009_can_close": false,
+    "needs_one_final_local_turn": true,
+    "observed_headline": {
+      "one_anchor_LOHO_forced_third": 0.997023809524,
+      "one_anchor_LOHO_predeclared_block_family_recovery": 0.008928571429,
+      "one_anchor_LOHO_supplied_anchor_block_family_recovery": 0.991071428571
+    },
+    "successor_named_by_009_09a_section_6": "the global discovery question -- from fourteen anonymous habitats and certified cross-habitat relational evidence, recover the Fano plane on FFF -- remains unopened. 009.09a section 6 asks the Owner to name it before 009.10 lands so a positive local result is not read as the end of H_discovery. This result does not open it and does not speak to it.",
+    "supervision_gap": "the all-twelve-pairs reconstruction of section 6.1 requires the three support-pair answers, and those answers are not a function of anything the task permits supervising. Two rules that are indistinguishable on every supervisable row disagree on all three. The predeclared chart_valid, exact_block_family_recovery and sfp_equivalent thresholds are therefore not reachable by ANY learner obeying section 5.3's training rule, independent of architecture, and the observed failure of those three thresholds is a property of the task specification rather than a measurement of the learner.",
+    "the_turn_is_small_and_named": "one of two amendments, both one line: either (a) section 6.1's reconstruction becomes the supplied-anchor form -- the nine scored answers plus the anchor triple the task already supplies as support -- or (b) section 5.3's supervision extends to the three support pairs so the |{a,b} & anchor| == 2 regime is no longer unsupervised. Under (a) the present run already reports the answer and no retraining is needed. Under (b) a retrain is needed but the protocol is otherwise unchanged.",
+    "why_not_a_larger_turn": "nothing about the learner, the architecture, the observation set, the ceilings or the controls is in question. Gate 0 opened, the exact one-anchor ceiling is 1.000, the capacity-matched zero-anchor control sits at its exact 1/2 ceiling, the dual-anchor control behaves as 009.09a section 2 predicted, and fresh-relabelling transport is exact."
+  },
+  "reconstruction_forms": {
+    "predeclared_all_pairs": {
+      "prefix": "",
+      "role": "PREDECLARED. Sections 6.1 to 6.3 reconstruct from all twelve admitted pairs; every one of the four chambers comes from a prediction. Section 8's thresholds refer to this reading, so the disposition is filed under it."
+    },
+    "supplied_anchor": {
+      "prefix": "supplied_anchor_",
+      "role": "ALTERNATIVE READING, reported not adopted. The nine scored answers imply three chambers and the fourth is the anchor triple the task supplies as support. Offered to the Owner; not substituted for the predeclared form."
+    }
+  },
+  "started_at": "2026-09-11T21:56:15-0700",
+  "supervision_identifiability": {
+    "admission_only_atom_pool": [
+      "candidate_is_a_query_node",
+      "candidate_adjacent_to_both_query_nodes",
+      "candidate_adjacent_to_exactly_one_query_node",
+      "candidate_admitted_degree"
+    ],
+    "atom_pool": [
+      "candidate_is_a_query_node",
+      "candidate_adjacent_to_both_query_nodes",
+      "candidate_adjacent_to_exactly_one_query_node",
+      "candidate_is_an_anchor_node",
+      "anchor_nodes_among_the_query_pair",
+      "anchor_nodes_adjacent_to_the_candidate",
+      "candidate_admitted_degree"
+    ],
+    "clamped_answer_is_always_the_dual_third": true,
+    "clamped_correct_on_supervisable_rows": 1.0,
+    "clamped_correct_on_support_rows": 0.0,
+    "consequence": "the all-twelve-pairs reconstruction of section 6.1 requires the three support-pair answers, and those answers are not a function of anything the task permits supervising. Two rules that are indistinguishable on every supervisable row disagree on all three. The predeclared chart_valid, exact_block_family_recovery and sfp_equivalent thresholds are therefore not reachable by ANY learner obeying section 5.3's training rule, independent of architecture, and the observed failure of those three thresholds is a property of the task specification rather than a measurement of the learner.",
+    "digest": "c523bd67cb0dadf724e47021da9eba1ea4eec5e058d8252e3c4e554aff589ebf",
+    "parity_correct_on_supervisable_rows": 1.0,
+    "parity_correct_on_support_rows": 1.0,
+    "rules": {
+      "clamped": "pick the common neighbour with anchor_c == 1 - min(|{a,b} & anchor|, 1)",
+      "parity": "pick the common neighbour with |{a,b,c} & anchor| odd"
+    },
+    "rules_agree_on_any_support_row": false,
+    "rules_agree_on_every_supervisable_row": true,
+    "supervisable_rows": 6048,
+    "support_pair_answer_is_underdetermined_by_the_declared_supervision": true,
+    "support_rows": 2016
+  },
+  "supplied_sfp_reference": {
+    "arm": "B_sfp",
+    "family": "LOHO",
+    "metric": "positive_forced_third_exact_accuracy",
+    "status": "CONTEXTUAL REFERENCE ONLY. 009.08 was handed the exact finite SFP representation; 009.09 withdraws it and supplies relational evidence instead. The two arms observe different things and are not capacity matched. The discovery result is judged against its own exact 1.000 one-anchor ceiling, per 009.09 section 7.4.",
+    "turn": "009.08",
+    "value": 0.9688
+  },
+  "upstream_digests": {
+    "chart_sha256": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+    "dataset_sha256": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "fold_manifest": "3705c2889db49294420c987557b49b47cbf336c9c518ac0a46424fab71709d48",
+    "gate_0_digest": "2db79d5c40ebf2a1b866a18c88838fc1dbd815afe817e5a5b29030db19ed836d",
+    "primary_episode_manifest": "3aa3ae224569c11f22ee762c01e34989ee5b4909ff43315d2341bae18706e8b0",
+    "primary_runs_digest": "4d0d9560a99755f2b31f6ae19d193f2a9fb548a29cedb4554c88d103385f7962",
+    "repair_runs_digest": "f3799fc8d451c4234881f7363f241901da3f849efaeb46c542ce33a4c2d33b4c"
+  },
+  "verdict": {
+    "agrees": true,
+    "statement": "disposition B filed under the predeclared all-pairs reconstruction; every upstream law holds, no threshold moved, the capacity-matched zero-anchor control sits within its exact 1/2 ceiling, and the support-pair regime is proved underdetermined by the task's declared supervision"
+  }
+}
