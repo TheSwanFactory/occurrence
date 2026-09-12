@@ -1069,7 +1069,21 @@ def main() -> None:
     if args.check:
         if not OUTPUT.exists():
             raise SystemExit(f"FAIL: missing {OUTPUT}; run without --check first")
-        if json.loads(OUTPUT.read_text()) != json.loads(text):
+        committed = json.loads(OUTPUT.read_text())
+        # Name the cause before the symptom: the cross-turn block is paired only when
+        # the prior turn's bulk artifact has been fetched, so a missing file changes
+        # this artifact's content and would otherwise surface as an opaque mismatch.
+        if committed["cross_turn"]["paired"] and not PRIOR_SWEEP.exists():
+            raise SystemExit(
+                f"FAIL: {OUTPUT.name} records a PAIRED cross-turn comparison, which "
+                f"needs {PRIOR_SWEEP.name}. It is bulk run data hosted in the Quilt "
+                "package, not git. Fetch it first:\n"
+                "  aws s3 cp s3://protology/occurrence/gpt/issues/"
+                "009-sfp-consequence-representation/009.06-Code-attachments/"
+                f"ladder_sweep.json {PRIOR_SWEEP}\n"
+                "See 009_ladder_artifacts/ladder_sweep.json.pointer.json."
+            )
+        if committed != json.loads(text):
             raise SystemExit(
                 f"FAIL: re-derived analysis is not identical to {OUTPUT.name}"
             )

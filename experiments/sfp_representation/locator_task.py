@@ -85,6 +85,17 @@ PRIOR_009_06 = {
     ),
 }
 
+#: Stripped before any ``--check`` comparison, and the only such key here.
+#:
+#: ``prior_reference`` re-derives the quoted ``009.06`` numbers from
+#: ``009_ladder_artifacts/ladder_sweep.json``, which is bulk run data hosted in the
+#: Quilt package and gitignored. Its content therefore depends on whether that file
+#: has been fetched, so a byte comparison including it would fail in a fresh clone
+#: for a reason that has nothing to do with this module. The block is kept in the
+#: artifact -- it is real provenance when the file is present -- and excluded from
+#: the replay comparison, exactly as ``ladder_sweep.py`` excludes wall-clock keys.
+NON_REPLAYABLE_KEYS = ("prior_reference",)
+
 FENCES = (
     "q* comes from the certified FIPS relation via record.shared_block, never from "
     "sfp.ExactSfpCircuit.",
@@ -185,6 +196,20 @@ def pin(expected: object, observed: object, source: str) -> dict:
         "agrees": expected == observed,
         "source": source,
     }
+
+
+def strip_non_replayable(node: object) -> object:
+    """Recursively drop every key in :data:`NON_REPLAYABLE_KEYS`."""
+
+    if isinstance(node, dict):
+        return {
+            key: strip_non_replayable(value)
+            for key, value in node.items()
+            if key not in NON_REPLAYABLE_KEYS
+        }
+    if isinstance(node, list):
+        return [strip_non_replayable(item) for item in node]
+    return node
 
 
 def fraction(hits: int, total: int) -> float | None:
@@ -906,6 +931,16 @@ def audit() -> dict:
         "splits": splits,
         "leakage": leakage,
         "prior_reference": prior,
+        "non_replayable_keys": list(NON_REPLAYABLE_KEYS),
+        "replay_note": (
+            "prior_reference is excluded from the --check byte comparison because it "
+            "reads 009_ladder_artifacts/ladder_sweep.json, which is gitignored bulk "
+            "run data hosted in the Quilt package. Its content depends on whether that "
+            "file has been fetched, so including it would make --check fail in a fresh "
+            "clone for a reason unrelated to this module. Everything else in this "
+            "artifact is derived from the frozen in-repo chain and replays byte for "
+            "byte with nothing fetched."
+        ),
         "arm_output_convention": dict(ARM_OUTPUT_CONVENTION),
         "code_arms": list(CODE_ARMS),
         "science_arms": list(SCIENCE_ARMS),
@@ -985,13 +1020,20 @@ def main() -> None:
     if args.check:
         if not OUTPUT.exists():
             raise SystemExit(f"FAIL: missing {OUTPUT}; run without --check first")
-        if json.loads(OUTPUT.read_text()) != json.loads(text):
+        expected = strip_non_replayable(json.loads(OUTPUT.read_text()))
+        observed = strip_non_replayable(json.loads(text))
+        if expected != observed:
             raise SystemExit(
-                f"FAIL: re-derived audit is not identical to {OUTPUT.name}"
+                f"FAIL: re-derived audit is not identical to {OUTPUT.name} "
+                f"(excluding {', '.join(NON_REPLAYABLE_KEYS)})"
             )
         if not result["verdict"]["agrees"]:
             raise SystemExit("FAIL: " + result["verdict"]["statement"])
-        print(f"PASS: exact replay matches {OUTPUT.name}", flush=True)
+        print(
+            f"PASS: exact replay matches {OUTPUT.name} "
+            f"(excluding {', '.join(NON_REPLAYABLE_KEYS)})",
+            flush=True,
+        )
         print(result["verdict"]["statement"], flush=True)
     else:
         ARTIFACTS.mkdir(parents=True, exist_ok=True)

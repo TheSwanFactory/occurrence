@@ -383,7 +383,12 @@ C_scrambled  -0.0015   CI [-0.0268, 0.0231]    7/14 folds   INCLUDES ZERO
 ```
 
 Arm C got the identical architecture change at the identical parameter count and did not
-move. Extra capacity applied to a misaligned code buys nothing.
+move: extra capacity applied to a misaligned code bought nothing. That rules out a
+*representation-independent* capacity effect. It does **not** decompose B's `+0.2671`
+into constitution and capacity parts — capacity can only be exploited where there is
+signal to fit, and C has none — so the claim the result carries is that no part of the
+gain is attributable to capacity acting alone. B's forced-third train-test gap of
+`0.0207` points the same way without closing that gap.
 
 ### Read these three cautions
 

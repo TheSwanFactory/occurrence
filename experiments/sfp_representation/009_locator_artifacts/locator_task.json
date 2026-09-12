@@ -848,6 +848,9 @@
     "why_addresses_too": "an Event held out by index could still leak through its code word if two arms disagreed about the assignment; the address check closes that door for C and D as well as B"
   },
   "module": "locator_task",
+  "non_replayable_keys": [
+    "prior_reference"
+  ],
   "pins": {
     "admit": {
       "agrees": true,
@@ -1112,6 +1115,7 @@
     "scramble_note": "under Arm C the certified q* need not lie in C's coded target address, so the query-relative presentation can fail to denote it. That is the same misalignment the support fraction records, and it is why C is the load-bearing control rather than a broken arm.",
     "torsor_statement": "both (q*, d3) and (q* XOR d3, d3) canonicalize to one SfpAddress, so naming the consequence relative to the query does not privilege an origin of the affine PP torsor. The Rung-2 metric is unchanged from 009.06 precisely because the target Event is unchanged."
   },
+  "replay_note": "prior_reference is excluded from the --check byte comparison because it reads 009_ladder_artifacts/ladder_sweep.json, which is gitignored bulk run data hosted in the Quilt package. Its content depends on whether that file has been fetched, so including it would make --check fail in a fresh clone for a reason unrelated to this module. Everything else in this artifact is derived from the frozen in-repo chain and replays byte for byte with nothing fetched.",
   "science_arms": [
     "A_native",
     "B_sfp",
