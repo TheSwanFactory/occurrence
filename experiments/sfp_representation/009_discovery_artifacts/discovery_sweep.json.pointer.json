@@ -3,7 +3,7 @@
   "bytes": 3246985,
   "fetch": {
     "aws_cli": "aws s3 cp s3://protology/occurrence/gpt/issues/009-sfp-consequence-representation/009.10-Code-attachments/discovery_sweep.json experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json",
-    "quilt3": "python -c \"import quilt3; quilt3.Package.browse('occurrence/gpt', registry='s3://protology', top_hash='PENDING')['issues/009-sfp-consequence-representation/009.10-Code-attachments/discovery_sweep.json'].fetch('experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json')\"",
+    "quilt3": "python -c \"import quilt3; quilt3.Package.browse('occurrence/gpt', registry='s3://protology', top_hash='6cdb5e512b993a52d8b61359cdaae111711b5fcce333238b172b7abe243a1a5a')['issues/009-sfp-consequence-representation/009.10-Code-attachments/discovery_sweep.json'].fetch('experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json')\"",
     "verify": "shasum -a 256 experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json  # expect 3398e613f8b204b70c72b3321cb7f5ae3ae56baa7fe4c8e6d53cb7549d12a8de"
   },
   "logical_key": "issues/009-sfp-consequence-representation/009.10-Code-attachments/discovery_sweep.json",
@@ -13,9 +13,9 @@
   "quilt_hash": {
     "note": "The Quilt manifest hashes entries with its own chunked scheme, so this value is expected to differ from the plain-file 'sha256' above. It is not a mismatch. Use 'sha256' to verify a fetched file with shasum.",
     "type": "sha2-256-chunked",
-    "value": "PENDING"
+    "value": "5wcIezLpqF2ZCOF9rKG4G6GP1wHn2jcPkUzp4zne24M="
   },
-  "revision": "PENDING",
+  "revision": "6cdb5e512b993a52d8b61359cdaae111711b5fcce333238b172b7abe243a1a5a",
   "run_digests": {
     "note": "Digests of the per-run rows with the non-replayable wall-clock keys stripped, exactly as discovery_sweep.py records them. Recomputing them from a fetched file is a cheaper integrity check than a full byte comparison of the whole artifact.",
     "primary": "4d0d9560a99755f2b31f6ae19d193f2a9fb548a29cedb4554c88d103385f7962",
