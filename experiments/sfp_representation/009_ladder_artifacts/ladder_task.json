@@ -1,0 +1,2049 @@
+{
+  "address_equivalence": {
+    "accepted_predictions_per_target": {
+      "2": 336
+    },
+    "admitted_targets_checked": 336,
+    "candidate_addresses_per_target": 168,
+    "canonical_test_equals_fieldwise_test": true,
+    "comparisons": 56448,
+    "disagreements": [],
+    "exactly_two_accepted_per_target": true,
+    "statement": "exactly two of the 168 syntactic predictions are accepted for each target, and they are the Event's two block-incidence presentations; the convention grants no slack beyond the codec's own symmetry"
+  },
+  "arm_output_convention": {
+    "A_native": "B_sfp",
+    "B_sfp": "B_sfp",
+    "C_scrambled": "C_scrambled",
+    "D_relabeled": "D_relabeled"
+  },
+  "digests": {
+    "catalogue": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "code_tables": {
+      "B_sfp": "8b43e6f534084073d1ae29b1becf3ac8bdfca7378131808e44f07abae6d075da",
+      "C_scrambled": "0e99599f2de9cf15cc0967dd14f311f22c2cd776e5dd36fd737f6f652cb3f25c",
+      "D_relabeled": "f14e3d858d214b96f11a6f47940c20a3ff2a6df523455935436a083278beca15"
+    },
+    "dataset": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "splits": "bb8ea4038abe850be3254afa4f276d6e03484444a249141a399b858a78c77416"
+  },
+  "executes": "009.05-Kiro-corrected-structured-consequence-address-ladder-task.md",
+  "fences": [
+    "FFF=000 and pp=00 are formal algebraic completion values only.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "BOTTOM is its own explicit output value, never pp=00, never FFF=000, never Event index 0.",
+    "Targets come from the certified native FIPS relation via record.target_index, never from sfp.ExactSfpCircuit.",
+    "SFP is a representation layer, not a replacement OT evaluator.",
+    "The executable rule pp3 = pp1 XOR pp2 is never supplied to the learner; it is only used here to REPORT how much of the local law each arm's code still carries.",
+    "B ~= C at Rung 1 is NOT evidence against H_struct and B > C at Rung 1 is NOT a success condition: the local quotient has full S3 symmetry."
+  ],
+  "habitat_locality": {
+    "key_definition": "unordered input port pair, plus both input endpoint sets; a purely local, habitat-free description of the code-space configuration",
+    "not_a_rung_1_argument": "this locality gap lives in the full six-edge / four-chamber structure. It is invisible at the Rung-1 quotient, which is exactly why 009.05 moves the structural test to Rung 2.",
+    "per_arm": {
+      "B_sfp": {
+        "habitat_dependent_keys": 0,
+        "habitat_independent": true,
+        "keys_spanning_multiple_habitats": 24,
+        "local_structure_keys": 24,
+        "max_distinct_answers_for_one_key": 1
+      },
+      "C_scrambled": {
+        "habitat_dependent_keys": 30,
+        "habitat_independent": false,
+        "keys_spanning_multiple_habitats": 30,
+        "local_structure_keys": 30,
+        "max_distinct_answers_for_one_key": 4
+      },
+      "D_relabeled": {
+        "habitat_dependent_keys": 0,
+        "habitat_independent": true,
+        "keys_spanning_multiple_habitats": 24,
+        "local_structure_keys": 24,
+        "max_distinct_answers_for_one_key": 1
+      }
+    },
+    "structural_prediction": "B and D resolve every local key identically in every habitat, so a held-out habitat is reachable by transfer. C resolves keys habitat-dependently, so leave-one-habitat-out removes the only evidence for that habitat's permutation. This is the pre-registered mechanism for the Rung-2 B > C prediction, and it is a fact about the frozen codes rather than about any learner."
+  },
+  "label_source_fence": {
+    "banned_parameter_tokens": [
+      "circuit",
+      "oracle",
+      "sfp_circuit",
+      "ExactSfpCircuit"
+    ],
+    "circuit_role_in_this_module": "sfp.ExactSfpCircuit is imported for the post-hoc structural reports local_law_carriage and habitat_locality only, exactly as arms.py imports it for relation_report. It generates nothing.",
+    "label_provenance": "every target is a function of record.target_index, which task.py derived from topographo.ssd.fips_basic.third and verified with topographo.ssd.projective.equivalent, composed with the arm's own code table",
+    "no_target_function_accepts_a_circuit": true,
+    "offenders": [],
+    "target_functions": [
+      {
+        "function": "rung1_target",
+        "parameters": [
+          {
+            "annotation": "PairRecord",
+            "name": "record",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[SfpAddress, ...]",
+            "name": "table",
+            "suspect": false
+          }
+        ],
+        "signature": "(record: 'PairRecord', table: 'tuple[SfpAddress, ...]') -> 'int'"
+      },
+      {
+        "function": "rung2_target",
+        "parameters": [
+          {
+            "annotation": "PairRecord",
+            "name": "record",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[SfpAddress, ...]",
+            "name": "table",
+            "suspect": false
+          }
+        ],
+        "signature": "(record: 'PairRecord', table: 'tuple[SfpAddress, ...]') -> 'StructuredTarget'"
+      },
+      {
+        "function": "address_matches",
+        "parameters": [
+          {
+            "annotation": "StructuredTarget",
+            "name": "target",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "s",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "fff",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "q",
+            "suspect": false
+          },
+          {
+            "annotation": "int",
+            "name": "d",
+            "suspect": false
+          }
+        ],
+        "signature": "(target: 'StructuredTarget', s: 'int', fff: 'int', q: 'int', d: 'int') -> 'bool'"
+      }
+    ]
+  },
+  "leakage": {
+    "all_rung1_test_targets_are_held_out_events": true,
+    "checked": "held-out Events as training targets, as training inputs, and as training output CODE WORDS in every arm's alphabet, plus bucket disjointness, at both rungs",
+    "no_leakage_anywhere": true,
+    "per_fold": [
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "name": "P=1,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "name": "P=1,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "name": "P=2,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "name": "P=2,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "name": "P=3,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "name": "P=3,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "name": "P=4,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "name": "P=4,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "name": "P=5,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "name": "P=5,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "name": "P=6,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "name": "P=6,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "name": "P=7,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "name": "P=7,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          14,
+          15,
+          26,
+          27,
+          42,
+          43,
+          54,
+          55,
+          70,
+          71,
+          82,
+          83
+        ],
+        "name": "P=1",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          2,
+          3,
+          24,
+          25,
+          44,
+          45,
+          58,
+          59,
+          66,
+          67,
+          80,
+          81
+        ],
+        "name": "P=2",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          0,
+          1,
+          12,
+          13,
+          46,
+          47,
+          56,
+          57,
+          68,
+          69,
+          78,
+          79
+        ],
+        "name": "P=3",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          6,
+          7,
+          20,
+          21,
+          34,
+          35,
+          48,
+          49,
+          62,
+          63,
+          76,
+          77
+        ],
+        "name": "P=4",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          4,
+          5,
+          22,
+          23,
+          32,
+          33,
+          36,
+          37,
+          64,
+          65,
+          74,
+          75
+        ],
+        "name": "P=5",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          10,
+          11,
+          16,
+          17,
+          30,
+          31,
+          38,
+          39,
+          52,
+          53,
+          72,
+          73
+        ],
+        "name": "P=6",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          8,
+          9,
+          18,
+          19,
+          28,
+          29,
+          40,
+          41,
+          50,
+          51,
+          60,
+          61
+        ],
+        "name": "P=7",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      }
+    ],
+    "why_addresses_too": "an Event held out by index could still leak through its code word if two arms disagreed about the assignment; the address check closes that door for C and D as well as B"
+  },
+  "local_law_carriage": {
+    "oracle": "sfp.ExactSfpCircuit as a nonlearned reference oracle for a structural READ-OUT; never a label source and never shown to a learner",
+    "per_arm": {
+      "B_sfp": {
+        "admitted_pairs": 336,
+        "carries_the_local_law_exactly": true,
+        "input_ports_distinct": 336,
+        "pp3_equals_xor_of_input_ports": 336,
+        "shared_endpoint_lies_in_target_address": 336,
+        "unique_shared_endpoint_in_code_space": 336
+      },
+      "C_scrambled": {
+        "admitted_pairs": 336,
+        "carries_the_local_law_exactly": false,
+        "input_ports_distinct": 276,
+        "pp3_equals_xor_of_input_ports": 156,
+        "shared_endpoint_lies_in_target_address": 66,
+        "unique_shared_endpoint_in_code_space": 276
+      },
+      "D_relabeled": {
+        "admitted_pairs": 336,
+        "carries_the_local_law_exactly": true,
+        "input_ports_distinct": 336,
+        "pp3_equals_xor_of_input_ports": 336,
+        "shared_endpoint_lies_in_target_address": 336,
+        "unique_shared_endpoint_in_code_space": 336
+      }
+    },
+    "statement": "the exact and relabeled codes satisfy the certified local law on all 336 admitted pairs; the scramble satisfies it on strictly fewer, and its input ports are not even always distinct, because a non-automorphic edge permutation can carry two Events that share a block onto two Events that do not"
+  },
+  "module": "ladder_task",
+  "pins": {
+    "local_quotient_size": {
+      "agrees": true,
+      "expected": 3,
+      "observed": 3,
+      "source": "measured on the exact code"
+    },
+    "lofpo_folds": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "folds.py"
+    },
+    "lofpo_rung1_test_admit": {
+      "agrees": true,
+      "expected": [
+        48
+      ],
+      "observed": [
+        48
+      ],
+      "source": "folds.LOFPO_PINS"
+    },
+    "lofpo_rung1_train_admit": {
+      "agrees": true,
+      "expected": [
+        288
+      ],
+      "observed": [
+        288
+      ],
+      "source": "folds.LOFPO_PINS"
+    },
+    "loho_folds": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "folds.py"
+    },
+    "loho_rung1_test_admit": {
+      "agrees": true,
+      "expected": [
+        24
+      ],
+      "observed": [
+        24
+      ],
+      "source": "folds.LOHO_PINS"
+    },
+    "loho_rung1_train_admit": {
+      "agrees": true,
+      "expected": [
+        312
+      ],
+      "observed": [
+        312
+      ],
+      "source": "folds.LOHO_PINS"
+    },
+    "pp_classes": {
+      "agrees": true,
+      "expected": 3,
+      "observed": 3,
+      "source": "sfp.V2_NONZERO"
+    },
+    "structural_folds": {
+      "agrees": true,
+      "expected": 21,
+      "observed": 21,
+      "source": "folds.structural_folds"
+    },
+    "structured_slots": {
+      "agrees": true,
+      "expected": 17,
+      "observed": 17,
+      "source": "this module"
+    }
+  },
+  "provenance": {
+    "base_commit": "4520c80807b8480081f396180446880a3ff6fba1",
+    "reuses": [
+      "task.py build_dataset",
+      "folds.py all_folds / structural_folds",
+      "arms.py all_arms / codes_of_arm",
+      "harness.py training_positions / evaluation_positions",
+      "sfp.py SfpCodec / address_of"
+    ]
+  },
+  "purpose": "the Rung-1 local forcing port and the Rung-2 structured consequence address, built on the frozen 009.02 pool, splits, chart and arms",
+  "relational_laws": {
+    "all_pins_agree": true,
+    "all_rung1_test_targets_are_held_out_events": true,
+    "canonical_test_equals_fieldwise_test": true,
+    "code_arms_share_output_field_marginals": true,
+    "exact_code_carries_the_local_law": true,
+    "exact_code_consequence_map_is_habitat_independent": true,
+    "exact_code_table_is_the_native_codec": true,
+    "exactly_two_presentations_accepted_per_target": true,
+    "no_leakage_anywhere": true,
+    "no_target_function_accepts_a_circuit": true,
+    "relabeled_code_carries_the_local_law": true,
+    "relabeled_consequence_map_is_habitat_independent": true,
+    "rung1_labels_live_on_three_nonzero_ports": true,
+    "rung1_local_quotient_is_three_rows": true,
+    "rung2_address_targets_agree_with_pool": true,
+    "rung2_bottom_stays_explicit": true,
+    "rung2_output_is_not_the_catalogue_interface": true,
+    "scramble_consequence_map_is_habitat_dependent": true,
+    "scramble_does_not_carry_the_local_law": true,
+    "upstream_pins_agree": true
+  },
+  "rung1_targets": {
+    "all_labels_are_nonzero_ports": true,
+    "exact_code_pp_pair_determines_pp3": true,
+    "exact_code_quotient_is_three": true,
+    "holdout_disclosure": "Rung 1 holds out a COMPLETE STRUCTURAL UNIT -- a habitat under LOHO, a Fano point under LOFPO -- exactly as 009.02 did, and the held-out Events never appear as positive forced thirds in training. It does NOT hold out the three abstract pp values: the output alphabet has only three members and they necessarily recur in every habitat. 009.05 section 3 requires this to be said explicitly. Rung 1 therefore tests TRANSFER OF THE LOCAL LAW to an unseen structural unit, not prediction of an unseen class.",
+    "per_arm": {
+      "B_sfp": {
+        "distinct_unordered_pp_pairs": 3,
+        "label_marginal": {
+          "01": 112,
+          "10": 112,
+          "11": 112
+        },
+        "labelled_pairs": 336,
+        "pp_pair_determines_pp3": true,
+        "quotient_size_note": "the number of distinct learner-visible pp pairs IS the size of the local quotient; a lookup table with this many rows is a complete representation of the local law",
+        "unordered_pp_pairs": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "C_scrambled": {
+        "distinct_unordered_pp_pairs": 6,
+        "label_marginal": {
+          "01": 112,
+          "10": 112,
+          "11": 112
+        },
+        "labelled_pairs": 336,
+        "pp_pair_determines_pp3": false,
+        "quotient_size_note": "the number of distinct learner-visible pp pairs IS the size of the local quotient; a lookup table with this many rows is a complete representation of the local law",
+        "unordered_pp_pairs": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      "D_relabeled": {
+        "distinct_unordered_pp_pairs": 3,
+        "label_marginal": {
+          "01": 112,
+          "10": 112,
+          "11": 112
+        },
+        "labelled_pairs": 336,
+        "pp_pair_determines_pp3": true,
+        "quotient_size_note": "the number of distinct learner-visible pp pairs IS the size of the local quotient; a lookup table with this many rows is a complete representation of the local law",
+        "unordered_pp_pairs": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      }
+    },
+    "quotient_warning": "The Rung-1 label is a function of the unordered pair {pp1, pp2} alone, and under the exact code that pair takes only three values. A three-row lookup table fitted on training data is therefore a COMPLETE representation of the local law, and ladder_baselines.py measures exactly that ceiling. At a quotient this small there is no observable difference between inferring the law and tabulating it, so Rung 1 can confirm acquisition but cannot carry structural evidence in either direction. That is the same smallness that makes 009.04's B > C condition invalid, stated as a positive limit."
+  },
+  "rung2_targets": {
+    "address_targets_agree_with_pool": true,
+    "arm_a_asymmetry": "A_native reads native projective coordinates and writes the exact SFP chart, because it has no code of its own. No SFP field enters its INPUT: arms.py build_arm_a takes only the catalogue, and arm_a_no_sfp_field certifies the token tensor carries no SFP unit. The shared output alphabet is a property of the output object, which is identical for every arm by construction, so this is a type-fair structured-output comparison and not an injection of SFP information into the native arm. It is still reported as the one asymmetry, and the decisive B/C/D structural contrast never involves it.",
+    "bottom_targets_agree_with_pool": true,
+    "code_arms_share_field_marginals": true,
+    "field_cardinalities": {
+      "FFF": 7,
+      "PP": 4,
+      "S": 2,
+      "pp": 3
+    },
+    "marginal_digests": {
+      "A_native": "9eb69ac5ae237085734f2022a3d0ba7c2ef7a1f9abc02281ab1191ab595bc5d5",
+      "B_sfp": "9eb69ac5ae237085734f2022a3d0ba7c2ef7a1f9abc02281ab1191ab595bc5d5",
+      "C_scrambled": "9eb69ac5ae237085734f2022a3d0ba7c2ef7a1f9abc02281ab1191ab595bc5d5",
+      "D_relabeled": "9eb69ac5ae237085734f2022a3d0ba7c2ef7a1f9abc02281ab1191ab595bc5d5"
+    },
+    "marginal_matching_statement": "B, C and D draw their targets from the same 84 code words, so the Rung-2 output field marginals are IDENTICAL across the three; any B-vs-C gap therefore cannot be a marginal or cardinality artifact",
+    "never_eighty_four": true,
+    "per_arm": {
+      "A_native": {
+        "address_targets": 336,
+        "bottom_targets": 6720,
+        "field_marginals": {
+          "FFF": {
+            "1": 48,
+            "2": 48,
+            "3": 48,
+            "4": 48,
+            "5": 48,
+            "6": 48,
+            "7": 48
+          },
+          "PP": {
+            "0": 168,
+            "1": 168,
+            "2": 168,
+            "3": 168
+          },
+          "S": {
+            "0": 168,
+            "1": 168
+          },
+          "pp": {
+            "1": 112,
+            "2": 112,
+            "3": 112
+          }
+        },
+        "output_alphabet_from": "B_sfp",
+        "pp_set_size_always_two": true
+      },
+      "B_sfp": {
+        "address_targets": 336,
+        "bottom_targets": 6720,
+        "field_marginals": {
+          "FFF": {
+            "1": 48,
+            "2": 48,
+            "3": 48,
+            "4": 48,
+            "5": 48,
+            "6": 48,
+            "7": 48
+          },
+          "PP": {
+            "0": 168,
+            "1": 168,
+            "2": 168,
+            "3": 168
+          },
+          "S": {
+            "0": 168,
+            "1": 168
+          },
+          "pp": {
+            "1": 112,
+            "2": 112,
+            "3": 112
+          }
+        },
+        "output_alphabet_from": "B_sfp",
+        "pp_set_size_always_two": true
+      },
+      "C_scrambled": {
+        "address_targets": 336,
+        "bottom_targets": 6720,
+        "field_marginals": {
+          "FFF": {
+            "1": 48,
+            "2": 48,
+            "3": 48,
+            "4": 48,
+            "5": 48,
+            "6": 48,
+            "7": 48
+          },
+          "PP": {
+            "0": 168,
+            "1": 168,
+            "2": 168,
+            "3": 168
+          },
+          "S": {
+            "0": 168,
+            "1": 168
+          },
+          "pp": {
+            "1": 112,
+            "2": 112,
+            "3": 112
+          }
+        },
+        "output_alphabet_from": "C_scrambled",
+        "pp_set_size_always_two": true
+      },
+      "D_relabeled": {
+        "address_targets": 336,
+        "bottom_targets": 6720,
+        "field_marginals": {
+          "FFF": {
+            "1": 48,
+            "2": 48,
+            "3": 48,
+            "4": 48,
+            "5": 48,
+            "6": 48,
+            "7": 48
+          },
+          "PP": {
+            "0": 168,
+            "1": 168,
+            "2": 168,
+            "3": 168
+          },
+          "S": {
+            "0": 168,
+            "1": 168
+          },
+          "pp": {
+            "1": 112,
+            "2": 112,
+            "3": 112
+          }
+        },
+        "output_alphabet_from": "D_relabeled",
+        "pp_set_size_always_two": true
+      }
+    },
+    "pp_set_convention": "The PP head carries a SET target. A standalone Event has exactly two block-incidence presentations, (q, d) and (q XOR d, d), and sfp.address_of canonicalizes them into one unordered pair, so BOTH PP values name the same Event and neither is privileged. Training therefore maximizes the total probability of the two valid PP values, -log(p[q1] + p[q2]), and PP accuracy counts an argmax landing on either. This is the single documented canonicalization convention required by 009.05 section 5.3; it is a property of the codec, is identical for every arm, and is auditable independently of learning by verify_address_equivalence.",
+    "structured_slots_with_bottom": 17
+  },
+  "splits": {
+    "digest": "bb8ea4038abe850be3254afa4f276d6e03484444a249141a399b858a78c77416",
+    "folds": [
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "name": "P=1,delta=-1",
+        "rung1": {
+          "test_sha256": "0de844e176a8d9b5255edfcc529ddd7739aa8098af6caabead19845460468c70",
+          "test_size": 24,
+          "train_sha256": "6ddfad561b54bb59fc50b9615a17ec35cd58834e0f44af31fda9f5aa1cf0d24e",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "e31cecc6bffa92ac0ca90abd8a6a9a4a3a4b54853c97baee343b19b322aacec2",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "31003534d608133837a19dd447aa8c1df50be4f20135941be1481a0dbd482a4a",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "name": "P=1,delta=+1",
+        "rung1": {
+          "test_sha256": "095688df66b9f7105bf8b413b949ca33c8a8070fc6b112cd78728f310c60f9f9",
+          "test_size": 24,
+          "train_sha256": "9a968fb13da35cdc9ed9b3c996998f33651cb77168b09d90ddb048c729a9e0bb",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "eae6b0426ec26d66bfc7499c34d2b55e4a185db52901434c402eced113459843",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "37103230a607a8978a598a43d4b73ec91a4c6d4dd7bf3cc516d83a57b27e3ada",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "name": "P=2,delta=-1",
+        "rung1": {
+          "test_sha256": "dace665223b3eab3ab92ca2a8ea07a11ee17da3918d70d996594146caaee3f04",
+          "test_size": 24,
+          "train_sha256": "5c695eec7927b42fd4647416775a5ed6dbf848a3a89c77b7dd3da94e77949f79",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "5806b91f3c10477de928b385b486482a57f3a5900bdfb51f99520daab6d827f7",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "251ea7f536e7f0b5796f5ae16e9e07cbdefbc22370dda8016cb4b539842421f8",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "name": "P=2,delta=+1",
+        "rung1": {
+          "test_sha256": "d64e0d91845eea838f1948bac79cb129d52732475fb152183040aa2aab4f2a3d",
+          "test_size": 24,
+          "train_sha256": "81679b93e5fb485d43fa8991b93c6517600af76b42381d77bd50806efaadc996",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "b6d189b8dd25ee6092c796cd1bd1a8c7691260ccb963701c3ad5189c4a6c3a94",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "f288c3740e2f3514fb1b6f81b51d1283897ef66b6ebff82ab63d7c502cfbf1e3",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "name": "P=3,delta=-1",
+        "rung1": {
+          "test_sha256": "5d56cc06badd71682645c7e52cd4961d861b884aed3408e2cebb90ef7f9479ac",
+          "test_size": 24,
+          "train_sha256": "6943e7568cff842d5fb088a0460f22589e3993d9aa392f547d67317383593297",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "983d94a8e2413a7f9154a0f804534bc63e499de39f18d2380be1e6a644a4d680",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "6363a0657c9b428cebf03b7f8df03d4fc98b6f062f38a926a37ee334d6717fbf",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "name": "P=3,delta=+1",
+        "rung1": {
+          "test_sha256": "40485eeafd70c7403349d203903bb23034ddfe83f4d03a9dcc7ca6643cd7e515",
+          "test_size": 24,
+          "train_sha256": "14738b930253a2321eedc4f29e652ff1aa6ffc6821dbdbeecdc1e631e913a85a",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "1ffa044d442205bbba3294bd2d8246d114caab84ba190f32b1d40aa18c3dcd46",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "9b9106faec06ef50fad964240b411ceeefbbd642028b41966a392304ae60fda5",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "name": "P=4,delta=-1",
+        "rung1": {
+          "test_sha256": "009d0ce38a3317bc2646b1574dc23902dd3e7bbdabc679292cad90333d095259",
+          "test_size": 24,
+          "train_sha256": "157dd28734a26115cc7273dc7ac4b9afb2e1caa5c7211e044a6dea7c69118158",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "93522a3fefb5c549553bcd4151da51dbbbad8b4d8648fd2a38981810f6f1c7e9",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "f6d45d0e39952dc1f2bfc5778c3e84f2051a8d38f71c683c4741866e06e70f95",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "name": "P=4,delta=+1",
+        "rung1": {
+          "test_sha256": "d21d75bdb46005fb7ff3efa295d53626e3d0645ef34ddecab38074dbcf32fadc",
+          "test_size": 24,
+          "train_sha256": "0f99492671707c8d78da0c5b79f3b9597f1fb9508188d655fc6012fc4c692621",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "8824ca63f2374c06fdfae9e7b5e8fb7c23605311925c6534b9d14d0113731e8b",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "c36756a596059965047cfde3e50621cdee6c120617c52799349fd15fa3c73c5c",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "name": "P=5,delta=-1",
+        "rung1": {
+          "test_sha256": "e5c9bc6ff9677665fc10d83156ee0c6224c3b9cfe57c9dcb3badd79e58a2a6c5",
+          "test_size": 24,
+          "train_sha256": "acdc1f50ba871066603e29d73c4ec87367e621e9d48849c72833a476ce5761cd",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "dd5876b670385aa061d494ea1631ab433915a0dd5f5e444ef1478e269906bceb",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "f48c1879c65d12162611a2bf02a51bdf890aa39c3bbe531281a01f72d657581e",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "name": "P=5,delta=+1",
+        "rung1": {
+          "test_sha256": "6024e105155f91b30144cda6c01858ef07daae1a4693f9aa25f426eeff87a951",
+          "test_size": 24,
+          "train_sha256": "f2c8f4bc5cfb7eb3df346b6c276961cd455df4a7a0bac0ae04e5c32f7af897fe",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "d9c9d18d0f9564182727273e30393af419e643bdbc3d1852533b87240eb3c602",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "631df1befb821c2554de10369fa1ed259a78a1a32a9eacf673f9998d0a944da8",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "name": "P=6,delta=-1",
+        "rung1": {
+          "test_sha256": "b1455bea0e24a7db7aabd4d8ae347ce31401c4cdff76be864de8a4ca2bd8d018",
+          "test_size": 24,
+          "train_sha256": "7fc253a6d268fad0717fb9d4dddf8e51e4de7475ba893872737347ad36289af8",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "8b2ddedebf44ad9b428cd2380298e9dda1d4130d402b606f2d669c3b44acf057",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "cbc82ab91062c342117e589076d67c76c64736aff5c5651f0656e9fa0abe4e60",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "name": "P=6,delta=+1",
+        "rung1": {
+          "test_sha256": "7a2e9bc148f7967a215dccea57f0f70ee220bdb0b7ea69076b98bebd247461fc",
+          "test_size": 24,
+          "train_sha256": "7b4c6c1f284f54ea2d0fe08949d1a2ecbbe3b8ba6583a24485d4c37b9c064ea3",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "a1a16bb9711b427a85f01eeb17c2281278bfab17b967641e011fcd5f7b6daf0c",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "714c7593b743b71b8fc5af048d1cfd21628590295d1668f37f18fb04244873f6",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "name": "P=7,delta=-1",
+        "rung1": {
+          "test_sha256": "8518ba7c10f1a854aa14a66c8b7af7c8c5eee40f37d0df87e77fd0f08dbfc346",
+          "test_size": 24,
+          "train_sha256": "fee2b400cfb019aae3c8c7d3a33e14270845962491d34aad30550e6bfe6b6797",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "ea173df88df11f6a6267bba061e74c5cc28f6654646c49cc9a27f3869c0245e5",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "b0d5e10dcfeab40321ee51097afb9163e6a2bcac2ef119ec85bc08e1acd1a61c",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "name": "P=7,delta=+1",
+        "rung1": {
+          "test_sha256": "7e515a47e9bc09826fd2608891bce64fb8851242fa1f3ab39b208d7e26c236e6",
+          "test_size": 24,
+          "train_sha256": "5d7f9a2b26a10a1a6c68b23fe4466a6d005c5e7c78154bd833f921e1d950742b",
+          "train_size": 312
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 24,
+            "CROSS_HABITAT": 26,
+            "REPEATED": 6,
+            "SAME_HABITAT_DISJOINT": 6,
+            "same_habitat": 36,
+            "total": 62
+          },
+          "test_sha256": "776fd8a48b29f9c0b5cc5ad5048c7f7f9f3da75a039d9f7c174fd619a1e9bb0f",
+          "test_size": 62,
+          "train_classes": {
+            "ADMIT": 312,
+            "CROSS_HABITAT": 312,
+            "REPEATED": 78,
+            "SAME_HABITAT_DISJOINT": 78,
+            "same_habitat": 468,
+            "total": 780
+          },
+          "train_sha256": "77305a2635b8a7a0ea1dc61cbb30bb5a0ecbafb56293d972fa36a635b5a2306c",
+          "train_size": 780
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          14,
+          15,
+          26,
+          27,
+          42,
+          43,
+          54,
+          55,
+          70,
+          71,
+          82,
+          83
+        ],
+        "name": "P=1",
+        "rung1": {
+          "test_sha256": "d45f3dbd8b8350b6ef872be4a45e382d8b938e6e8d90af33f4fd9d9546367b16",
+          "test_size": 48,
+          "train_sha256": "7129f3f62c095bf9e66818b18278594baa4071fb31e6b4f6a9f1770eff806639",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "d3bd6c66da8a64b523ff55f3e157ccd211d5735d4ecdd3ebe289dc4b0ad45268",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "8a4b4f9a045035b0fa39ac053e637ef75bac19bbe3c995144648c85453cd6b39",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          2,
+          3,
+          24,
+          25,
+          44,
+          45,
+          58,
+          59,
+          66,
+          67,
+          80,
+          81
+        ],
+        "name": "P=2",
+        "rung1": {
+          "test_sha256": "4d147b21d9c1421dbade1e694854cd15e9cc1484bdf6415d5c43bd7b65af4fb8",
+          "test_size": 48,
+          "train_sha256": "2c9579ef66b46371dfece113a6ac93e5dbc08463467d990a7db0e7124982ea4f",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "6dfea1812539c7e67babb6868a40db665ccb4abb2c9712f3ea2048df1d98550a",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "c12d68c2fa34249ebb309d944298e253285cc81768f2404f3cec1077148a74e3",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          0,
+          1,
+          12,
+          13,
+          46,
+          47,
+          56,
+          57,
+          68,
+          69,
+          78,
+          79
+        ],
+        "name": "P=3",
+        "rung1": {
+          "test_sha256": "fd8d3f76b875be0b9d386865be5f9a4f19214ea6fdf73173a3fe4dcf76caaa5b",
+          "test_size": 48,
+          "train_sha256": "50e64b956a8365b97fa8130f0322d2be566ff879ba149339d44ad731c0f1f305",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "ad94dc63aab278b2379050de802d51740d90e57b3b6229483e4d24d950abb16d",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "e55c50c02adcfd619c2abfad3fda7e1b8cbde58b76b19d5d82796e7807dfb15b",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          6,
+          7,
+          20,
+          21,
+          34,
+          35,
+          48,
+          49,
+          62,
+          63,
+          76,
+          77
+        ],
+        "name": "P=4",
+        "rung1": {
+          "test_sha256": "830d7f6aa3c4fd169ecf3ad3d82ebc27c24478e9b2749fd1821230bcacc75257",
+          "test_size": 48,
+          "train_sha256": "bd9bd393e812e5c4fcb388e6e658adf735a4138f9b739f03337ff6bc50f288a9",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "aa6d2e506f0a44367b195f14554fcff3091cf6fe60db50baa36740bdd3b990c2",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "73ce14781d285f10f51b07eeca96febf1e25b8b1d4a5bc5a94e5147bd5033a9d",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          4,
+          5,
+          22,
+          23,
+          32,
+          33,
+          36,
+          37,
+          64,
+          65,
+          74,
+          75
+        ],
+        "name": "P=5",
+        "rung1": {
+          "test_sha256": "71dba56e6634c1c270789dbf56a02e3109e3257337037337473469e90a978b68",
+          "test_size": 48,
+          "train_sha256": "591f80b9d544f26bf8dbded0b216a866a0b79d54867d88061459b0f6cd8e639b",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "54669a4102047fb07f14260e48b49b47c81846f79581503c2ac1be4116e3f6e7",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "50de24d585d66d4850311b9d0f1504efbd2411c1a16dd649c5bc03821e495e45",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          10,
+          11,
+          16,
+          17,
+          30,
+          31,
+          38,
+          39,
+          52,
+          53,
+          72,
+          73
+        ],
+        "name": "P=6",
+        "rung1": {
+          "test_sha256": "a5bd51d68ad1dc145611f5cd182493795eaf52286899c6bdbe3b35e4baf8a7db",
+          "test_size": 48,
+          "train_sha256": "ce720905779e77f51178a43c895b64c06213a6513256ee02333df8c52a2a107d",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "c022ff5e0f4820e3cbf402da7e2034b50b37619adcd3c3f132942d7b9d09e714",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "b2c8c6ddff394e0704cca7e1b0136cc588e0a9339b7a0a12bcc34432699a7b67",
+          "train_size": 720
+        }
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": [
+          8,
+          9,
+          18,
+          19,
+          28,
+          29,
+          40,
+          41,
+          50,
+          51,
+          60,
+          61
+        ],
+        "name": "P=7",
+        "rung1": {
+          "test_sha256": "47a02da60ea5c48921f034e70f3e00100d2bf2da974378da319316f6c6d933eb",
+          "test_size": 48,
+          "train_sha256": "d482926b586917a6e0a1f082a8f7cb87253db5168bac55947b39a1b1e9e9683e",
+          "train_size": 288
+        },
+        "rung2": {
+          "test_classes": {
+            "ADMIT": 48,
+            "CROSS_HABITAT": 120,
+            "REPEATED": 12,
+            "SAME_HABITAT_DISJOINT": 12,
+            "same_habitat": 72,
+            "total": 192
+          },
+          "test_sha256": "eeab813ace5b422ca4d1969d7eda8f012208c51fa935585b0eea80fd897e1366",
+          "test_size": 192,
+          "train_classes": {
+            "ADMIT": 288,
+            "CROSS_HABITAT": 288,
+            "REPEATED": 72,
+            "SAME_HABITAT_DISJOINT": 72,
+            "same_habitat": 432,
+            "total": 720
+          },
+          "train_sha256": "916601b60195fc7698d88e5f8f66c2ade3f0d86c87f373d8720f1ee70c045f42",
+          "train_size": 720
+        }
+      }
+    ],
+    "lofpo_folds": 7,
+    "lofpo_rung1_test_sizes": [
+      48
+    ],
+    "lofpo_rung1_train_sizes": [
+      288
+    ],
+    "loho_folds": 14,
+    "loho_rung1_test_sizes": [
+      24
+    ],
+    "loho_rung1_train_sizes": [
+      312
+    ],
+    "n_folds": 21,
+    "rung2_protocol": "harness.training_positions / harness.evaluation_positions, unchanged from 009.02"
+  },
+  "supersedes_before_execution": "009.04-Kiro-structured-consequence-address-ladder-task.md",
+  "upstream_pins": {
+    "all_upstream_pins_agree": true,
+    "checks": {
+      "catalogue": {
+        "agrees": true,
+        "expected": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "observed": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "source": "task.py"
+      },
+      "dataset": {
+        "agrees": true,
+        "expected": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "observed": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "source": "task.py"
+      },
+      "fold_manifest": {
+        "agrees": true,
+        "expected": "27b01b5e7440c2449e28d8e5b3f82addba1028a1640707752ab01215a938a6ee",
+        "observed": "27b01b5e7440c2449e28d8e5b3f82addba1028a1640707752ab01215a938a6ee",
+        "source": "folds.py"
+      },
+      "sfp_chart": {
+        "agrees": true,
+        "expected": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "observed": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "source": "sfp.py"
+      }
+    },
+    "statement": "the pool, the splits and the chart are the frozen 009.02 objects, byte-identical; this ladder changes only the output object"
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "PASS - Rung-1 and Rung-2 targets derive from the certified native relation alone, BOTTOM stays explicit, the structured output is 17 slots rather than 84, B/C/D share output field marginals exactly, and the pre-registered Rung-2 mechanism is recorded: the exact and relabeled consequence maps are habitat-independent while the scramble's is not"
+  }
+}

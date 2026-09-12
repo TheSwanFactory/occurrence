@@ -1,0 +1,747 @@
+{
+  "capacity_ledger": {
+    "arm_e_excluded": "Arm E is absent from this ladder by construction. Its token_dim equals the catalogue size, so its adapter would hold one learnable column per Event -- a memorization ceiling that a shape audit cannot catch on the input side. 009.02 carried it as a labelled diagnostic; 009.05 needs no ceiling arm, so it is simply not built.",
+    "capacity_matched_across_all_science_arms": true,
+    "distinct_rung1_totals": [
+      17283
+    ],
+    "distinct_rung2_repair_totals": [
+      21608
+    ],
+    "distinct_rung2_totals": [
+      26065
+    ],
+    "field_head_widths": {
+      "FFF": 7,
+      "PP": 4,
+      "S": 2,
+      "pp": 3
+    },
+    "repair_capacity_matched": true,
+    "repair_note": "the repaired configuration drops the S and FFF heads, so it is SMALLER than the primary. Capacity parity is what matters for a B-vs-C comparison and it holds exactly within each configuration; the two configurations are never compared to each other as if they were arms.",
+    "rows": [
+      {
+        "adapter_params": 544,
+        "arm": "A_native",
+        "field_FFF": 2311,
+        "field_PP": 2212,
+        "field_S": 2146,
+        "field_pp": 2179,
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "rung1_pp_head_params": 2179,
+        "rung1_total_params": 17283,
+        "rung2_repair_slots": 8,
+        "rung2_repair_total_params": 21608,
+        "rung2_total_params": 26065,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 1
+      },
+      {
+        "adapter_params": 544,
+        "arm": "B_sfp",
+        "field_FFF": 2311,
+        "field_PP": 2212,
+        "field_S": 2146,
+        "field_pp": 2179,
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "rung1_pp_head_params": 2179,
+        "rung1_total_params": 17283,
+        "rung2_repair_slots": 8,
+        "rung2_repair_total_params": 21608,
+        "rung2_total_params": 26065,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      },
+      {
+        "adapter_params": 544,
+        "arm": "C_scrambled",
+        "field_FFF": 2311,
+        "field_PP": 2212,
+        "field_S": 2146,
+        "field_pp": 2179,
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "rung1_pp_head_params": 2179,
+        "rung1_total_params": 17283,
+        "rung2_repair_slots": 8,
+        "rung2_repair_total_params": 21608,
+        "rung2_total_params": 26065,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      },
+      {
+        "adapter_params": 544,
+        "arm": "D_relabeled",
+        "field_FFF": 2311,
+        "field_PP": 2212,
+        "field_S": 2146,
+        "field_pp": 2179,
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "rung1_pp_head_params": 2179,
+        "rung1_total_params": 17283,
+        "rung2_repair_slots": 8,
+        "rung2_repair_total_params": 21608,
+        "rung2_total_params": 26065,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      }
+    ],
+    "rung1_capacity_spread": 0,
+    "rung2_capacity_spread": 0,
+    "rung2_repair_capacity_spread": 0,
+    "statement": "every science arm carries an identical parameter count at both rungs: 17283 at Rung 1 and 26065 at Rung 2. The spread is exactly 0, so no B-vs-C comparison can be a capacity artifact."
+  },
+  "catalogue_independence": {
+    "contrast_with_009_02": {
+      "120": 121,
+      "40": 41,
+      "84": 85
+    },
+    "distinct_rung1_params": [
+      17283
+    ],
+    "distinct_rung1_slot_counts": [
+      3
+    ],
+    "distinct_rung2_params": [
+      26065
+    ],
+    "distinct_rung2_slot_counts": [
+      17
+    ],
+    "output_width_independent_of_catalogue_size": true,
+    "param_count_independent_of_catalogue_size": true,
+    "param_shapes_independent_of_catalogue_size": true,
+    "probes": [
+      {
+        "n_candidates": 40,
+        "rung1_params": 17283,
+        "rung1_slots": 3,
+        "rung2_param_shape_digest": "c0f0e5a38411c609a50807467ca7bff0be95414b58e24542188bb907789c2f25",
+        "rung2_params": 26065,
+        "rung2_slots": 17
+      },
+      {
+        "n_candidates": 84,
+        "rung1_params": 17283,
+        "rung1_slots": 3,
+        "rung2_param_shape_digest": "c0f0e5a38411c609a50807467ca7bff0be95414b58e24542188bb907789c2f25",
+        "rung2_params": 26065,
+        "rung2_slots": 17
+      },
+      {
+        "n_candidates": 120,
+        "rung1_params": 17283,
+        "rung1_slots": 3,
+        "rung2_param_shape_digest": "c0f0e5a38411c609a50807467ca7bff0be95414b58e24542188bb907789c2f25",
+        "rung2_params": 26065,
+        "rung2_slots": 17
+      }
+    ],
+    "statement": "the structured heads emit 17 slots at catalogue sizes [40, 84, 120] with identical parameter shapes; the 009.02 interface emitted 41, 85 and 121"
+  },
+  "config": {
+    "ladder": {
+      "copied_fields": [],
+      "copy_identity_fields": false,
+      "field_hidden": 32,
+      "predicted_fields": [
+        "S",
+        "FFF",
+        "PP",
+        "pp"
+      ],
+      "repair_status": "declared default protocol; no repair active"
+    },
+    "scorer": {
+      "activation": "ReLU",
+      "bottom_hidden": 32,
+      "common_width": 32,
+      "latent": 32,
+      "mask_convention": "large finite penalty via masked_fill(~legal, -MASK_PENALTY), not -inf, so a fully masked row yields a finite softmax not a NaN",
+      "mask_penalty": 1000000000.0,
+      "pair_primitives": [
+        "sum",
+        "product",
+        "abs_difference"
+      ],
+      "pair_width": 64,
+      "pooling": "mean",
+      "rel_width": 32,
+      "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+      "trunk_hidden": 64
+    }
+  },
+  "declared_repair": {
+    "budget": "009.05 section 9 permits one repair per rung; Rung 1 used none",
+    "computed_fields": [
+      "PP",
+      "pp"
+    ],
+    "default": false,
+    "identity_fields": [
+      "S",
+      "FFF"
+    ],
+    "motivation": "S and FFF are the two fields the certified relation COPIES rather than computes. Under a structural holdout a closed-set softmax over them can fit training exactly and still emit a training habitat's identity for an unseen habitat, which is a training pathology about habitat re-identification rather than about consequence forcing.",
+    "name": "copy_identity_fields",
+    "rung": 2,
+    "what_it_changes": "the S and FFF heads are not built and those fields are taken from the input pair, exactly the construction 009.05 section 4.2 licenses at Rung 1. PP and pp remain fully learned, the gate remains fully learned, and the resolver still resolves a complete four-field address to a public Event.",
+    "what_it_does_not_change": "no hyperparameter, no step count, no learning rate, no arm, no fold and no seed. It is arm-neutral because the copy is exact on all 336 admitted pairs under B, C and D alike."
+  },
+  "determinism": {
+    "different_seed_differs": true,
+    "same_seed_is_bit_identical": true,
+    "seed_7_first": "b65a673fb158ed56db16bd0764f98cf611a261a475bd1ebd3a54779f9c3bdc80",
+    "seed_7_second": "b65a673fb158ed56db16bd0764f98cf611a261a475bd1ebd3a54779f9c3bdc80",
+    "seed_8": "fb2ea7a0076ec6cea169b0c6e4ec442be3b3287f2277386e40f5b645fef04b3b",
+    "seed_convention": "scorer.set_seed: torch.manual_seed then np.random.seed"
+  },
+  "executes": "009.05",
+  "fences": [
+    "No output tensor carries the catalogue dimension; 84 appears in no head.",
+    "No learned per-Event output table exists.",
+    "The heads read only the symmetric pair code, so no decoder can index a catalogue entry.",
+    "No XOR and no field arithmetic appears anywhere: the pp head is an MLP over the pair code.",
+    "Swapping the two input Events is a symmetry by construction, inherited bitwise from scorer.SymmetricPair.",
+    "BOTTOM is its own typed gate, not an algebraic zero and not Event index 0.",
+    "The candidate token table remains a BUFFER, never a parameter: input codes are stipulated by the arm and never trained."
+  ],
+  "forward_shapes": {
+    "batch": 4,
+    "repair_slot_layout": {
+      "bottom_is_a_typed_gate": true,
+      "bottom_is_not_an_algebraic_zero": true,
+      "bottom_is_not_event_zero": true,
+      "catalogue_size": 84,
+      "copied_fields": [
+        "S",
+        "FFF"
+      ],
+      "field_slots": {
+        "PP": 4,
+        "pp": 3
+      },
+      "gate_slots": 1,
+      "output_slots_track_catalogue_size": false,
+      "total_slots": 8,
+      "total_slots_when_all_fields_learned": 17
+    },
+    "rung1_shape": [
+      4,
+      3
+    ],
+    "rung1_shape_agrees": true,
+    "rung2_repair_predicts_only_computed_fields": true,
+    "rung2_repair_shapes": {
+      "PP": [
+        4,
+        4
+      ],
+      "gate": [
+        4
+      ],
+      "pp": [
+        4,
+        3
+      ]
+    },
+    "rung2_repair_slots": 8,
+    "rung2_shapes": {
+      "FFF": [
+        4,
+        7
+      ],
+      "PP": [
+        4,
+        4
+      ],
+      "S": [
+        4,
+        2
+      ],
+      "gate": [
+        4
+      ],
+      "pp": [
+        4,
+        3
+      ]
+    },
+    "rung2_shapes_agree": true,
+    "slot_layout": {
+      "bottom_is_a_typed_gate": true,
+      "bottom_is_not_an_algebraic_zero": true,
+      "bottom_is_not_event_zero": true,
+      "catalogue_size": 84,
+      "copied_fields": [],
+      "field_slots": {
+        "FFF": 7,
+        "PP": 4,
+        "S": 2,
+        "pp": 3
+      },
+      "gate_slots": 1,
+      "output_slots_track_catalogue_size": false,
+      "total_slots": 17,
+      "total_slots_when_all_fields_learned": 17
+    }
+  },
+  "input_pathway_identity": "scorer.TokenEncoder and scorer.SymmetricPair are IMPORTED, not reimplemented, and are constructed with the same ScorerConfig. The encoder still encodes the whole 84-token buffer in one pass before indexing the pair, exactly as scorer.CandidateScorer.forward does, so the input pathway is the same computation that produced the 009.02 numbers. Only the output object differs.",
+  "loss_declaration": {
+    "rung1": "cross-entropy over the three local ports",
+    "rung2_PP": "set-target -log(p[q1] + p[q2]) over admitted examples only",
+    "rung2_S_FFF_pp": "cross-entropy, averaged over admitted examples only",
+    "rung2_gate": "binary cross-entropy with logits on the admission gate",
+    "weighting": "equal unit weight on all five terms, fixed before any run and never tuned",
+    "why_fields_are_admitted_only": "a non-admitted pair has no certified address; inventing one would conflate BOTTOM with an algebraic zero, which the fence forbids"
+  },
+  "module": "ladder_heads",
+  "no_catalogue_dimension": {
+    "how_checked": "every tensor in named_parameters() is rejected if any dimension equals 84, the output width is inspected directly, and both LadderConfig and ScorerConfig refuse any width equal to 84 so the check cannot pass vacuously",
+    "limits": "a shape check is necessary, not sufficient. It cannot see a per-Event identity smuggled in as an INPUT dimension -- an arm whose token_dim equals 84 would give the adapter one learnable column per Event. That is why Arm E is excluded from this ladder entirely rather than merely flagged: see arm_e_excluded.",
+    "no_output_width_equals_catalogue_size": true,
+    "no_parameter_carries_catalogue_dimension": true,
+    "offenders": [],
+    "output_widths": {
+      "rung1": 3,
+      "rung2": 17
+    },
+    "per_rung": {
+      "rung1": {
+        "candidate_tokens_are_a_buffer": true,
+        "n_output_slots": 3,
+        "output_width_equals_catalogue_size": false,
+        "parameter_shapes": [
+          {
+            "name": "encoder.adapter.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "encoder.adapter.weight",
+            "numel": 512,
+            "shape": [
+              32,
+              16
+            ]
+          },
+          {
+            "name": "encoder.trunk.0.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "encoder.trunk.0.weight",
+            "numel": 2048,
+            "shape": [
+              64,
+              32
+            ]
+          },
+          {
+            "name": "encoder.trunk.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "encoder.trunk.2.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "pair.net.0.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "pair.net.0.weight",
+            "numel": 6144,
+            "shape": [
+              64,
+              96
+            ]
+          },
+          {
+            "name": "pair.net.2.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "pair.net.2.weight",
+            "numel": 4096,
+            "shape": [
+              64,
+              64
+            ]
+          },
+          {
+            "name": "pp.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "pp.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "pp.net.2.bias",
+            "numel": 3,
+            "shape": [
+              3
+            ]
+          },
+          {
+            "name": "pp.net.2.weight",
+            "numel": 96,
+            "shape": [
+              3,
+              32
+            ]
+          }
+        ],
+        "parameters_with_catalogue_dimension": []
+      },
+      "rung2": {
+        "candidate_tokens_are_a_buffer": true,
+        "n_output_slots": 17,
+        "output_width_equals_catalogue_size": false,
+        "parameter_shapes": [
+          {
+            "name": "encoder.adapter.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "encoder.adapter.weight",
+            "numel": 512,
+            "shape": [
+              32,
+              16
+            ]
+          },
+          {
+            "name": "encoder.trunk.0.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "encoder.trunk.0.weight",
+            "numel": 2048,
+            "shape": [
+              64,
+              32
+            ]
+          },
+          {
+            "name": "encoder.trunk.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "encoder.trunk.2.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "fields.FFF.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "fields.FFF.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "fields.FFF.net.2.bias",
+            "numel": 7,
+            "shape": [
+              7
+            ]
+          },
+          {
+            "name": "fields.FFF.net.2.weight",
+            "numel": 224,
+            "shape": [
+              7,
+              32
+            ]
+          },
+          {
+            "name": "fields.PP.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "fields.PP.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "fields.PP.net.2.bias",
+            "numel": 4,
+            "shape": [
+              4
+            ]
+          },
+          {
+            "name": "fields.PP.net.2.weight",
+            "numel": 128,
+            "shape": [
+              4,
+              32
+            ]
+          },
+          {
+            "name": "fields.S.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "fields.S.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "fields.S.net.2.bias",
+            "numel": 2,
+            "shape": [
+              2
+            ]
+          },
+          {
+            "name": "fields.S.net.2.weight",
+            "numel": 64,
+            "shape": [
+              2,
+              32
+            ]
+          },
+          {
+            "name": "fields.pp.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "fields.pp.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "fields.pp.net.2.bias",
+            "numel": 3,
+            "shape": [
+              3
+            ]
+          },
+          {
+            "name": "fields.pp.net.2.weight",
+            "numel": 96,
+            "shape": [
+              3,
+              32
+            ]
+          },
+          {
+            "name": "gate.net.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "gate.net.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "gate.net.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "gate.net.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "pair.net.0.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "pair.net.0.weight",
+            "numel": 6144,
+            "shape": [
+              64,
+              96
+            ]
+          },
+          {
+            "name": "pair.net.2.bias",
+            "numel": 64,
+            "shape": [
+              64
+            ]
+          },
+          {
+            "name": "pair.net.2.weight",
+            "numel": 4096,
+            "shape": [
+              64,
+              64
+            ]
+          }
+        ],
+        "parameters_with_catalogue_dimension": []
+      }
+    },
+    "stronger_than_009_02": "009.02's output layer had 85 slots for 84 Events, so only parameter shapes could be audited. These heads are 3 and 17 slots wide regardless of catalogue size, so the absence of a catalogue decoder is visible in the output width itself."
+  },
+  "pp_set_loss": {
+    "convention": "-log(p[q1] + p[q2]); putting all mass on either presentation, or splitting it between them, is equally optimal, and only mass outside the pair is penalised",
+    "either_valid_value_scores_the_same": true,
+    "losses": [
+      9.0829228e-05,
+      9.0829228e-05,
+      0.006715357304,
+      9.3069896698
+    ],
+    "mass_on_an_invalid_value_is_penalised": true,
+    "mass_on_both_valid_values_is_not_penalised": true
+  },
+  "provenance": {
+    "base_commit": "4520c80807b8480081f396180446880a3ff6fba1",
+    "replaces": "scorer.RelHead + scorer.BottomHead (the 85-slot interface)",
+    "reuses": [
+      "scorer.TokenEncoder",
+      "scorer.SymmetricPair",
+      "scorer.ScorerConfig",
+      "scorer.set_seed",
+      "scorer.tokens_tensor",
+      "scorer.validate_arm",
+      "scorer.param_shapes"
+    ]
+  },
+  "purpose": "typed structured output heads for Rungs 1 and 2, sharing the frozen 009.02 encoder and symmetric pair code so that only the output object differs",
+  "relational_laws": {
+    "all_heads_bitwise_swap_invariant": true,
+    "capacity_matched_across_all_science_arms": true,
+    "different_seed_differs": true,
+    "no_output_width_equals_catalogue_size": true,
+    "no_parameter_carries_catalogue_dimension": true,
+    "output_width_independent_of_catalogue_size": true,
+    "param_count_independent_of_catalogue_size": true,
+    "param_shapes_independent_of_catalogue_size": true,
+    "pp_set_loss_is_presentation_symmetric": true,
+    "pp_set_loss_penalises_only_outside_the_pair": true,
+    "repair_capacity_matched": true,
+    "rung1_output_shape_agrees": true,
+    "rung2_output_shapes_agree": true,
+    "rung2_repair_predicts_only_computed_fields": true,
+    "same_seed_is_bit_identical": true
+  },
+  "swap_symmetry": {
+    "all_heads_bitwise_swap_invariant": true,
+    "mechanism": "inherited, not re-derived: every head reads scorer.SymmetricPair's output, and its primitives (sum, product, absolute difference) are commutative bitwise in IEEE-754",
+    "probe_pairs": 4096,
+    "rung1": {
+      "argmax_disagreement_rate": 0.0,
+      "bitwise_identical": true,
+      "max_abs_difference": 0.0
+    },
+    "rung2": {
+      "FFF": {
+        "bitwise_identical": true,
+        "max_abs_difference": 0.0
+      },
+      "PP": {
+        "bitwise_identical": true,
+        "max_abs_difference": 0.0
+      },
+      "S": {
+        "bitwise_identical": true,
+        "max_abs_difference": 0.0
+      },
+      "gate": {
+        "bitwise_identical": true,
+        "max_abs_difference": 0.0
+      },
+      "pp": {
+        "bitwise_identical": true,
+        "max_abs_difference": 0.0
+      }
+    }
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "PASS - the structured heads emit 17 slots independently of the catalogue size, carry no catalogue dimension in any parameter, are bitwise swap-invariant on every head, and hold identical capacity across all four science arms"
+  }
+}

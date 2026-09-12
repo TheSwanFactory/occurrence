@@ -1,0 +1,2135 @@
+{
+  "admission_only_ceiling": {
+    "bayes_forced_third_ceiling": 0.5,
+    "ceiling": 0.5,
+    "common_neighbour_counts_observed": [
+      2
+    ],
+    "consequence": "a zero-anchor learner materially above this number is evidence of leakage or stable-token semantics, not of learning",
+    "derivation_1": "uniform prior over the two admission-compatible block systems: they disagree on every admitted pair, so any fixed answer captures exactly half the posterior mass",
+    "derivation_2": "for every scored query there is an automorphism of the admission graph fixing both query nodes and exchanging the two candidate thirds. A permutation-equivariant scorer must therefore assign them equal scores, so its decision is a tie-break and cannot beat 1/2 under fresh relabelling",
+    "episodes": 672,
+    "equivariance_witness_rate": 1.0,
+    "every_query_has_a_candidate_swapping_automorphism": true,
+    "role": "EXACT INFORMATION CEILING for the zero-anchor arm",
+    "scored_queries": 6048,
+    "two_derivations_agree": true
+  },
+  "base_commit": "7a37f58444901c32a6e750e617d8d4d82b9f6202",
+  "cheap_selectors": {
+    "best_cheap_admission_only_rule": 0.5,
+    "declared_chance": {
+      "uniform_all_nodes": 0.166666666667,
+      "uniform_common_neighbours": 0.5,
+      "uniform_eligible_nodes": 0.25
+    },
+    "measured": {
+      "highest_common_neighbour": 0.506283068783,
+      "lowest_common_neighbour": 0.493716931217,
+      "lowest_eligible_node": 0.240906084656,
+      "support_pair_lookup": 0.0,
+      "train_majority_node": 0.170138888889
+    },
+    "opaque_name_tie_break_note": "lowest_common_neighbour and highest_common_neighbour break the tie by OPAQUE NODE NAME. Under the frozen fresh relabelling they sit at chance among the two candidates, which is the measurement that shows an opaque name carries no structure -- it is not a rule the learner could use.",
+    "scored_queries": 6048,
+    "support_pair_coverage_is_zero_by_construction": true,
+    "support_pair_lookup_coverage": 0.0,
+    "symmetry_respecting_bound": "009.09 section 7.3 expects a symmetry-respecting admission-only selector to be bounded at 1/2 because the query pair has two admission-compatible continuations. Verified, not assumed: the observed common-neighbour count is 2 for every scored query.",
+    "train_majority_node": 2
+  },
+  "determination_census": {
+    "admission_only_atom_pool": {
+      "atom_pool": [
+        "candidate_is_a_query_node",
+        "candidate_adjacent_to_both_query_nodes",
+        "candidate_adjacent_to_exactly_one_query_node",
+        "candidate_admitted_degree"
+      ],
+      "best_accuracy": 0.0,
+      "best_subset": [],
+      "determining_subsets": 0,
+      "digest": "e18c1c2f68f420da6e56cab4647e82297e7fcc686e4144475e22ee8b41dbe994",
+      "per_subset": [
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [],
+          "determines": false,
+          "size": 0
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        }
+      ],
+      "queries_scored": 6048,
+      "smallest_determining_size": null,
+      "smallest_determining_subsets": [],
+      "subsets_examined": 16
+    },
+    "full_atom_pool": {
+      "atom_pool": [
+        "candidate_is_a_query_node",
+        "candidate_adjacent_to_both_query_nodes",
+        "candidate_adjacent_to_exactly_one_query_node",
+        "candidate_is_an_anchor_node",
+        "anchor_nodes_among_the_query_pair",
+        "anchor_nodes_adjacent_to_the_candidate",
+        "candidate_admitted_degree"
+      ],
+      "best_accuracy": 1.0,
+      "best_subset": [
+        "anchor_nodes_among_the_query_pair",
+        "candidate_adjacent_to_both_query_nodes",
+        "candidate_is_an_anchor_node"
+      ],
+      "determining_subsets": 24,
+      "digest": "de77df067222133523b1f02e8ac9c13391724ab5a0280112e40e9c53fee4c444",
+      "per_subset": [
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [],
+          "determines": false,
+          "size": 0
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 1
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 2
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 3
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 4
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 5
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node"
+          ],
+          "determines": false,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 6
+        },
+        {
+          "abstention_rate": 1.0,
+          "abstentions": 6048,
+          "accuracy": 0.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": false,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 6
+        },
+        {
+          "abstention_rate": 0.0,
+          "abstentions": 0,
+          "accuracy": 1.0,
+          "atoms": [
+            "anchor_nodes_adjacent_to_the_candidate",
+            "anchor_nodes_among_the_query_pair",
+            "candidate_adjacent_to_both_query_nodes",
+            "candidate_adjacent_to_exactly_one_query_node",
+            "candidate_admitted_degree",
+            "candidate_is_a_query_node",
+            "candidate_is_an_anchor_node"
+          ],
+          "determines": true,
+          "size": 7
+        }
+      ],
+      "queries_scored": 6048,
+      "smallest_determining_size": 3,
+      "smallest_determining_subsets": [
+        [
+          "anchor_nodes_among_the_query_pair",
+          "candidate_adjacent_to_both_query_nodes",
+          "candidate_is_an_anchor_node"
+        ],
+        [
+          "anchor_nodes_among_the_query_pair",
+          "candidate_adjacent_to_exactly_one_query_node",
+          "candidate_is_an_anchor_node"
+        ]
+      ],
+      "subsets_examined": 128
+    },
+    "reading": "a determining subset over the SUPPLIED atoms is expected and is not a leak: it is the statement that the information the task hands the learner is sufficient. The load-bearing line is the second census: with the anchor atoms removed, NO subset determines the certified third, and none exceeds 1/2."
+  },
+  "dual_anchor_control_ceiling": {
+    "all_admitted_pairs": 8064,
+    "all_admitted_pairs_accuracy": 1.0,
+    "episodes": 672,
+    "family": "combinatorial_dual",
+    "forced_third_accuracy": 1.0,
+    "role": "NONLEARNED CEILING",
+    "rule": "among the common admitted neighbours of the query pair, the one whose triple meets the anchor in an ODD number of tokens",
+    "scored_queries": 6048,
+    "status": "a ceiling, never a competing learned baseline; it appears on no learned path and is quoted only as the bound the learner is measured against",
+    "unresolved": 0
+  },
+  "fences": [
+    "The exact one-anchor completion is a NONLEARNED CEILING, not a competing learned baseline. No part of it appears on any learned path.",
+    "The admission-only ceiling of 1/2 is derived twice -- Bayes mass and the candidate-swapping automorphism -- and the zero-anchor learner may not materially exceed it.",
+    "The dual-family thirds are COMBINATORIAL, not certified FIPS labels. The dual-anchor arm is a control and is never quoted as a result.",
+    "009.08's 0.9688 is a contextual reference on a different observation set, not a capacity-matched arm.",
+    "Abstention is -1, which is not a node, so an abstaining selector scores zero rather than borrowing a chance hit.",
+    "The lowest-indexed-common-neighbour selector deliberately uses the OPAQUE name. It is a leakage probe: under fresh relabelling it must sit at chance among the two candidates."
+  ],
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "laws": {
+    "admission_only_ceiling_is_one_half": true,
+    "admission_only_census_cannot_beat_one_half": true,
+    "admission_only_two_derivations_agree": true,
+    "dual_anchor_control_ceiling_is_one": true,
+    "every_query_has_a_candidate_swapping_automorphism": true,
+    "every_query_has_exactly_two_common_neighbours": true,
+    "no_admission_only_atom_subset_determines_the_third": true,
+    "one_anchor_all_pairs_ceiling_is_one": true,
+    "one_anchor_ceiling_is_one": true,
+    "one_anchor_ceiling_is_one_on_every_fold": true,
+    "one_anchor_never_unresolved": true,
+    "scored_queries_match_the_manifest": true,
+    "some_supplied_atom_subset_determines_the_third": true,
+    "support_pair_lookup_covers_no_scored_query": true
+  },
+  "module": "discovery_baselines",
+  "one_anchor_ceiling": {
+    "all_admitted_pairs": 8064,
+    "all_admitted_pairs_accuracy": 1.0,
+    "episodes": 672,
+    "family": "certified",
+    "forced_third_accuracy": 1.0,
+    "role": "NONLEARNED CEILING",
+    "rule": "among the common admitted neighbours of the query pair, the one whose triple meets the anchor in an ODD number of tokens",
+    "scored_queries": 6048,
+    "status": "a ceiling, never a competing learned baseline; it appears on no learned path and is quoted only as the bound the learner is measured against",
+    "unresolved": 0
+  },
+  "per_fold": {
+    "all_pairs_ceiling_is_one_on_every_fold": true,
+    "one_anchor_ceiling_is_one_on_every_fold": true,
+    "per_fold": [
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=1,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=1,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=2,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=2,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=3,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=3,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=4,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=4,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=5,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=5,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=6,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=6,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=7,delta=-1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOHO",
+        "name": "P=7,delta=+1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 432,
+        "test_episodes": 48
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=1",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=2",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=3",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=4",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=5",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=6",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      },
+      {
+        "all_pairs_ceiling": 1.0,
+        "family": "LOFPO",
+        "name": "P=7",
+        "one_anchor_ceiling": 1.0,
+        "scored_queries": 864,
+        "test_episodes": 96
+      }
+    ]
+  },
+  "pins": {
+    "admission_only_ceiling": {
+      "agrees": true,
+      "expected": 0.5,
+      "observed": 0.5,
+      "source": "two independent derivations"
+    },
+    "one_anchor_ceiling": {
+      "agrees": true,
+      "expected": 1.0,
+      "observed": 1.0,
+      "source": "exact nonlearned completion"
+    },
+    "uniform_all_nodes": {
+      "agrees": true,
+      "expected": 0.166666666667,
+      "observed": 0.166666666667,
+      "source": "1/6"
+    },
+    "uniform_eligible_nodes": {
+      "agrees": true,
+      "expected": 0.25,
+      "observed": 0.25,
+      "source": "1/4, the four non-query nodes"
+    }
+  },
+  "started_at": "2026-09-11T17:59:02-0700",
+  "supplied_sfp_reference": {
+    "arm": "B_sfp",
+    "family": "LOHO",
+    "metric": "positive_forced_third_exact_accuracy",
+    "status": "CONTEXTUAL REFERENCE ONLY. 009.08 was handed the exact finite SFP representation; 009.09 withdraws it and supplies relational evidence instead. The two arms observe different things and are not capacity matched. The discovery result is judged against its own exact 1.000 one-anchor ceiling, per 009.09 section 7.4.",
+    "turn": "009.08",
+    "value": 0.9688
+  },
+  "torch": "no tensor is constructed here; torch is inherited transitively through discovery_task -> locator_task -> ladder_task -> harness",
+  "verdict": {
+    "agrees": true,
+    "statement": "the exact one-anchor completion scores 1.000 on every fold, the admission-only ceiling is 1/2 under two independent derivations, every scored query has exactly two admission-compatible continuations and a candidate-swapping automorphism, the support-pair lookup covers no scored query, and no admission-only atom subset determines the certified third"
+  }
+}

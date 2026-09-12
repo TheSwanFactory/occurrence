@@ -231,3 +231,17 @@ Thumbs.db
 
 # local agent scratch
 .scratch/
+
+# bulk run data hosted in the public protology Quilt package, not in git
+# see experiments/sfp_representation/009_artifacts/sweep.json.pointer.json
+experiments/sfp_representation/009_artifacts/sweep.json
+
+# bulk ladder run data, 9.2 MiB of per-run rows
+# see experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json.pointer.json
+experiments/sfp_representation/009_ladder_artifacts/ladder_sweep.json
+# bulk locator run data, 5.6 MiB of per-run rows
+# see experiments/sfp_representation/009_locator_artifacts/locator_sweep.json.pointer.json
+experiments/sfp_representation/009_locator_artifacts/locator_sweep.json
+# bulk opaque-chart discovery run data, per-run rows for both declared blocks
+# see experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json.pointer.json
+experiments/sfp_representation/009_discovery_artifacts/discovery_sweep.json

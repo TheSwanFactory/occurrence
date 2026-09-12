@@ -1,0 +1,749 @@
+{
+  "base_commit": "4520c80807b8480081f396180446880a3ff6fba1",
+  "candidate_construction": "Chamber q of chart (S, FFF) is presented to the learner as its STAR: the three incidence presentations (S, FFF, q, d) for d in {01, 10, 11}. That is the arm's own alphabet describing the chamber, it is a property of the chart and not of the query pair, and it transforms covariantly under the certified affine relabeling because an affine map carries chamber q's star onto chamber phi(q)'s star while permuting displacements by A. It is encoded by the SAME TokenEncoder the input Events are encoded by, with the same mean pooling over presentations, so no candidate-specific machinery exists.",
+  "candidate_order_invariance": {
+    "order_invariance_exact": true,
+    "per_permutation": [
+      {
+        "order": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          0,
+          1,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "scores_permute_identically": true
+      },
+      {
+        "order": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores_permute_identically": true
+      }
+    ],
+    "permutations_checked": 24,
+    "probe_rows": 64,
+    "statement": "for all 24 orderings of the four candidates the scores are the same numbers in the same permuted positions, bitwise. A learned per-chamber row could not survive this."
+  },
+  "capacity_ledger": {
+    "arm_e_excluded": "Arm E is absent by construction, as in 009.06: its token_dim equals the catalogue size, which is a per-Event input column a shape audit cannot catch.",
+    "capacity_matched_across_all_science_arms": true,
+    "cross_turn_capacity_matched": false,
+    "cross_turn_caution": "the pointer holds 3106 parameters against 2212 in 009.06's absolute PP head, a delta of +894. Both are built entirely from frozen widths -- ScorerConfig.rel_width = 32 and latent = 32 are the 009.02 constants and field_hidden = 32 is the 009.06 constant, so nothing was chosen for this turn -- but the two configurations are NOT capacity-matched to each other. Any PP improvement must therefore be read with this delta in view, and it is quoted in the result rather than left in an artifact. What the pointer removes is the thing under test: 009.06's 4 output columns and 4 biases indexed by absolute PP identity become 0.",
+    "distinct_rung1_totals": [
+      18210
+    ],
+    "distinct_rung2_totals": [
+      22502
+    ],
+    "pointer_params": 3106,
+    "pp_pathway_param_delta_vs_009_06": 894,
+    "pp_pathway_param_ratio_vs_009_06": 1.404159132007,
+    "prior_pp_head": {
+      "module": "ladder_heads.FieldHead(pair_dim=64, cardinality=4, hidden=32)",
+      "output_columns_indexed_by_absolute_PP": 4,
+      "params": 2212
+    },
+    "rows": [
+      {
+        "adapter_params": 544,
+        "arm": "A_native",
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "pointer_params": 3106,
+        "pp_head_params": 2179,
+        "rung1_slots": 4,
+        "rung1_total_params": 18210,
+        "rung2_slots": 8,
+        "rung2_total_params": 22502,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 1
+      },
+      {
+        "adapter_params": 544,
+        "arm": "B_sfp",
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "pointer_params": 3106,
+        "pp_head_params": 2179,
+        "rung1_slots": 4,
+        "rung1_total_params": 18210,
+        "rung2_slots": 8,
+        "rung2_total_params": 22502,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      },
+      {
+        "adapter_params": 544,
+        "arm": "C_scrambled",
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "pointer_params": 3106,
+        "pp_head_params": 2179,
+        "rung1_slots": 4,
+        "rung1_total_params": 18210,
+        "rung2_slots": 8,
+        "rung2_total_params": 22502,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      },
+      {
+        "adapter_params": 544,
+        "arm": "D_relabeled",
+        "gate_params": 2113,
+        "pair_params": 10368,
+        "pointer_params": 3106,
+        "pp_head_params": 2179,
+        "rung1_slots": 4,
+        "rung1_total_params": 18210,
+        "rung2_slots": 8,
+        "rung2_total_params": 22502,
+        "shared_trunk_params": 4192,
+        "token_dim": 16,
+        "tokens_per_event": 2
+      }
+    ],
+    "rung1_capacity_spread": 0,
+    "rung2_capacity_spread": 0,
+    "within_turn_statement": "every science arm carries an identical parameter count at both rungs, 18210 at Rung 1 and 22502 at Rung 2, spread exactly 0, so no B-vs-C comparison in this turn can be a capacity artifact"
+  },
+  "config": {
+    "locator": {
+      "copied_fields": [
+        "S",
+        "FFF"
+      ],
+      "copy_identity_fields": true,
+      "field_hidden": 32,
+      "learned_fields": [
+        "PP",
+        "pp"
+      ],
+      "pp_output_constitution": "query-relative candidate selection (pointer)",
+      "prior_pp_output_constitution": "absolute four-class softmax head",
+      "repair_status": "no repair active. The copied identity fields are the frozen 009.06 repair-block configuration, reused so that PP is the only change."
+    },
+    "scorer": {
+      "activation": "ReLU",
+      "bottom_hidden": 32,
+      "common_width": 32,
+      "latent": 32,
+      "mask_convention": "large finite penalty via masked_fill(~legal, -MASK_PENALTY), not -inf, so a fully masked row yields a finite softmax not a NaN",
+      "mask_penalty": 1000000000.0,
+      "pair_primitives": [
+        "sum",
+        "product",
+        "abs_difference"
+      ],
+      "pair_width": 64,
+      "pooling": "mean",
+      "rel_width": 32,
+      "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+      "trunk_hidden": 64
+    }
+  },
+  "covariance": {
+    "architectural_covariance_exact": true,
+    "argmax_maps_back_under_the_inverse_exactly": true,
+    "candidate_construction_covariant": true,
+    "candidate_star_rows": [
+      {
+        "chamber": 0,
+        "chart": [
+          0,
+          1
+        ],
+        "image_chamber": 1,
+        "image_chart": [
+          1,
+          1
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 1,
+        "chart": [
+          0,
+          1
+        ],
+        "image_chamber": 3,
+        "image_chart": [
+          1,
+          1
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 2,
+        "chart": [
+          0,
+          1
+        ],
+        "image_chamber": 0,
+        "image_chart": [
+          1,
+          1
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 3,
+        "chart": [
+          0,
+          1
+        ],
+        "image_chamber": 2,
+        "image_chart": [
+          1,
+          1
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 0,
+        "chart": [
+          0,
+          2
+        ],
+        "image_chamber": 1,
+        "image_chart": [
+          1,
+          2
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 1,
+        "chart": [
+          0,
+          2
+        ],
+        "image_chamber": 3,
+        "image_chart": [
+          1,
+          2
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 2,
+        "chart": [
+          0,
+          2
+        ],
+        "image_chamber": 0,
+        "image_chart": [
+          1,
+          2
+        ],
+        "star_maps_onto_the_image_star": true
+      },
+      {
+        "chamber": 3,
+        "chart": [
+          0,
+          2
+        ],
+        "image_chamber": 2,
+        "image_chart": [
+          1,
+          2
+        ],
+        "star_maps_onto_the_image_star": true
+      }
+    ],
+    "candidate_stars_checked": 56,
+    "chamber_action": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "gate_unchanged_under_transport_within_tolerance": true,
+    "inverse_chamber_action": [
+      2,
+      0,
+      3,
+      1
+    ],
+    "learned_probe_population": 504,
+    "learned_probe_restriction": "same-chart pairs only, which is every admitted pair. The cross-chart tie-break in _ChamberTrunk.chart_slot depends on the sorted order of the charts and is NOT covariant; those rows are non-admitted and their PP output enters no reported metric.",
+    "learned_probe_rows": 4096,
+    "max_gate_discrepancy": 2.9802e-08,
+    "max_score_discrepancy": 2.6077e-08,
+    "method": "weight transport: permute the adapter's input columns by the same coordinate permutation the relabeling induces on tokens, so W' t' = W t exactly. Any absolute-chamber preference in the parameters would survive the transport and break the identity.",
+    "scores_permute_by_the_chamber_action_bitwise": false,
+    "scores_permute_by_the_chamber_action_within_tolerance": true,
+    "token_permutation": [
+      1,
+      0,
+      2,
+      3,
+      4,
+      6,
+      5,
+      8,
+      7,
+      10,
+      12,
+      9,
+      11,
+      14,
+      13,
+      15
+    ],
+    "tolerance": 1e-06,
+    "what_is_not_claimed": "no identity between a B-trained model and a D-trained model is claimed or checked here. Those are different parameter draws acting on different one-hot coordinates, so exact equality cannot hold; the learned half of section 6 is the measured paired D-B interval in locator_analysis.py.",
+    "why_not_bitwise": "permuting the adapter's input columns reorders the accumulation inside the matmul and float addition is not associative, so the 2.608e-08 residual is single-precision round-off on a 16-term sum, not structure. scorer.SymmetricPair documents the same fact where it explains why it relies on commutativity and never on associativity. The DECISION is exactly covariant on all 4096 probe rows, with no tolerance."
+  },
+  "determinism": {
+    "different_seed_differs": true,
+    "same_seed_identical": true,
+    "seeded_by": "scorer.set_seed, called before construction"
+  },
+  "fences": [
+    "No parameter is indexed by an absolute PP value; the pointer has no per-chamber row.",
+    "Parameter count is identical for 2, 4 and 9 candidate chambers.",
+    "Candidate chamber tokens are a BUFFER, never a parameter.",
+    "No output tensor carries the catalogue dimension; 84 appears in no head.",
+    "No equality test, set intersection, XOR or ExactSfpCircuit appears in any learned path. The candidate star is built from the arm's code alphabet alone and never references the input pair.",
+    "The chart a row's candidates are drawn from is a function of the UNORDERED input pair's own code words -- input data, the same source 009.06 already used for the copied S and FFF fields. No certified label participates.",
+    "Swapping the two input Events is a symmetry by construction, inherited bitwise from scorer.SymmetricPair.",
+    "BOTTOM is its own typed gate, not an algebraic zero and not Event index 0.",
+    "Neither endpoint presentation of an Event is privileged anywhere."
+  ],
+  "forward_shapes": {
+    "candidate_tokens_are_binary": true,
+    "chamber_table_sha256": "abd97e35447ed1110c30e50134616a87e0b77aced178b665d50ffa7193beda57",
+    "rung1_layout": {
+      "candidate_slots": 4,
+      "candidates_are_a_buffer": true,
+      "learned_output_columns_indexed_by_absolute_PP": 0,
+      "output_slots_track_catalogue_size": false,
+      "prior_learned_output_columns": 4
+    },
+    "rung1_shape": [
+      4,
+      4
+    ],
+    "rung1_width_is_the_chamber_count": true,
+    "rung2_layout": {
+      "bottom_is_a_typed_gate": true,
+      "bottom_is_not_an_algebraic_zero": true,
+      "bottom_is_not_event_zero": true,
+      "catalogue_size": 84,
+      "chamber_candidate_slots": 4,
+      "copied_fields": [
+        "S",
+        "FFF"
+      ],
+      "gate_slots": 1,
+      "learned_output_columns_indexed_by_absolute_PP": 0,
+      "output_slots_track_catalogue_size": false,
+      "pp_slots": 3,
+      "total_slots": 8
+    },
+    "rung2_shapes": {
+      "PP": [
+        4,
+        4
+      ],
+      "gate": [
+        4
+      ],
+      "pp": [
+        4,
+        3
+      ]
+    }
+  },
+  "input_pathway_identity": "scorer.TokenEncoder and scorer.SymmetricPair are IMPORTED and constructed with the same frozen ScorerConfig, through ladder_heads._PairTrunk, which is the same object 009.06 used. scorer.RelHead supplies every scoring parameter. The input pathway is therefore the computation that produced the 009.02 and 009.06 numbers; only the PP output constitution differs.",
+  "module": "locator_heads",
+  "no_absolute_pp_column": {
+    "candidate_count_probes": [
+      2,
+      4,
+      9
+    ],
+    "chamber_tokens_are_a_buffer": true,
+    "chart_of_event_is_a_buffer": true,
+    "distinct_parameter_counts": [
+      3106
+    ],
+    "learned_output_columns_indexed_by_absolute_PP": 0,
+    "no_parameter_shape_is_the_chamber_count": true,
+    "parameter_count_by_candidate_count": {
+      "2": 3106,
+      "4": 3106,
+      "9": 3106
+    },
+    "parameter_count_independent_of_candidate_count": true,
+    "parameter_shapes_independent_of_candidate_count": true,
+    "pointer_parameter_shapes": [
+      {
+        "name": "rel.key.weight",
+        "numel": 1024,
+        "shape": [
+          32,
+          32
+        ]
+      },
+      {
+        "name": "rel.log_scale",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.offset",
+        "numel": 1,
+        "shape": [
+          1
+        ]
+      },
+      {
+        "name": "rel.query.bias",
+        "numel": 32,
+        "shape": [
+          32
+        ]
+      },
+      {
+        "name": "rel.query.weight",
+        "numel": 2048,
+        "shape": [
+          32,
+          64
+        ]
+      }
+    ],
+    "pointer_params": 3106,
+    "prior_pp_head": {
+      "module": "ladder_heads.FieldHead(pair_dim=64, cardinality=4, hidden=32)",
+      "output_columns_indexed_by_absolute_PP": 4,
+      "params": 2212
+    },
+    "statement": "the pointer holds the same parameters whether it is offered 2, 4 or 9 candidate chambers, so no parameter can be indexed by an absolute PP value. 009.06's head held 4 output columns and 4 biases that were."
+  },
+  "no_catalogue_dimension": {
+    "catalogue_size_probes": [
+      40,
+      84,
+      120
+    ],
+    "no_parameter_carries_catalogue_dimension": true,
+    "offenders": [],
+    "per_probe": {
+      "catalogue|rung1": {
+        "catalogue_size": 84,
+        "n_output_slots": 4,
+        "param_count": 18210,
+        "parameters_with_catalogue_dimension": []
+      },
+      "catalogue|rung2": {
+        "catalogue_size": 84,
+        "n_output_slots": 8,
+        "param_count": 22502,
+        "parameters_with_catalogue_dimension": []
+      },
+      "large|rung1": {
+        "catalogue_size": 120,
+        "n_output_slots": 4,
+        "param_count": 18210,
+        "parameters_with_catalogue_dimension": []
+      },
+      "large|rung2": {
+        "catalogue_size": 120,
+        "n_output_slots": 8,
+        "param_count": 22502,
+        "parameters_with_catalogue_dimension": []
+      },
+      "small|rung1": {
+        "catalogue_size": 40,
+        "n_output_slots": 4,
+        "param_count": 18210,
+        "parameters_with_catalogue_dimension": []
+      },
+      "small|rung2": {
+        "catalogue_size": 40,
+        "n_output_slots": 8,
+        "param_count": 22502,
+        "parameters_with_catalogue_dimension": []
+      }
+    },
+    "rung1_output_width_constant": true,
+    "rung1_output_widths": [
+      4
+    ],
+    "rung1_param_count_constant": true,
+    "rung1_param_counts": [
+      18210
+    ],
+    "statement": "output width and parameter count are both flat in the catalogue size, at 40, 84 and 120 candidates alike"
+  },
+  "relhead_reuse": {
+    "agrees_with_relhead_forward_bitwise": false,
+    "agrees_with_relhead_forward_within_tolerance": true,
+    "argmax_agrees_exactly": true,
+    "max_absolute_difference": 9.53674e-07,
+    "max_relative_difference": 2.21616e-07,
+    "no_scoring_parameter_outside_relhead": true,
+    "parameters_are_relheads": [
+      "key.weight",
+      "log_scale",
+      "offset",
+      "query.bias",
+      "query.weight"
+    ],
+    "parameters_outside_relhead": [],
+    "relative_tolerance": 1e-05,
+    "score_scale": 4.303279876709,
+    "shared_parameter_groups": [
+      "query",
+      "key",
+      "log_scale",
+      "offset"
+    ],
+    "statement": "every scoring parameter belongs to the imported scorer.RelHead and the pointer adds none of its own; the per-row form is the same product, sum, scale and offset, agrees with RelHead.forward to float round-off on a global candidate set, and selects the same candidate exactly",
+    "why_not_bitwise": "RelHead.forward reduces with matmul and the per-row form multiplies then reduces with sum. Same real number, different accumulation order, and single-precision addition is not associative, so the 9.537e-07 residual is round-off. The candidate CHOICE agrees exactly."
+  },
+  "swap_symmetry": {
+    "includes_cross_chart_rows": true,
+    "mechanism": "scorer.SymmetricPair combines the two codes with sum, product and absolute difference only, so the pair code is bitwise identical under the swap; the candidate chart is selected with torch.minimum over the two inputs' chart slots, which is also a function of the unordered pair, so every head is swap-exact on every row including cross-chart ones",
+    "per_rung": {
+      "rung1": {
+        "bitwise_identical": true,
+        "bitwise_identical_on_cross_chart_rows": true,
+        "cross_chart_pairs": 3803,
+        "max_absolute_difference": 0.0,
+        "probe_pairs": 4096,
+        "same_chart_pairs": 293
+      },
+      "rung2": {
+        "per_output": {
+          "PP": {
+            "bitwise_identical": true,
+            "max_absolute_difference": 0.0
+          },
+          "gate": {
+            "bitwise_identical": true,
+            "max_absolute_difference": 0.0
+          },
+          "pp": {
+            "bitwise_identical": true,
+            "max_absolute_difference": 0.0
+          }
+        }
+      }
+    },
+    "swap_symmetry_exact_everywhere": true
+  },
+  "verdict": {
+    "agrees": true,
+    "statement": "the query-relative chamber pointer holds zero parameters indexed by an absolute PP value, is invariant to candidate count and order, adds no scoring parameter outside the imported scorer.RelHead, is swap-symmetric to the bit, and is covariant under the certified affine relabeling -- exactly in its candidate construction and its argmax, to declared float round-off in its scores -- while remaining capacity-matched across all four science arms"
+  }
+}

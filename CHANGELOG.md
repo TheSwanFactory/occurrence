@@ -3,10 +3,175 @@
 
 All notable changes to this project are documented in this file.
 
-## [Unreleased]
+## [0.8.3] - 2026-09-12
 
 ### Added
 
+- Promote the Issue-009 abstract `F_2` group machinery into the package as
+  `topographo.core.f2_groups`: the Fano plane `PG(2,2)`, `GL(3,2)`,
+  `GL(2,2)`/`AGL(2,2)`, the `K4` edge action, and `is_structure_preserving` — the
+  predicate separating the 24 induced edge permutations from the 48 that merely
+  preserve the opposite-edge matchings. It lands in `core` rather than `ssd`
+  because it is label machinery: stdlib-only, no Events, no sedenions, no numpy,
+  which `topographo/tests/test_f2_groups.py` checks against the module's own
+  import graph rather than its docstring. `certificate()` re-derives every order,
+  incidence count and relational law; `assert_f2_group_laws()` also checks the
+  frozen digest. `experiments/sfp_representation/groups.py` keeps only the
+  artifact driver, and `009_artifacts/groups.json` re-derives with every order,
+  digest, pin and law bit-identical — one prose line changed. This discharges the
+  "a later task will generalize them" note in that experiment's Gate 0.
+- Run Issue-009 opaque local-chart discovery (`009.09` task, `009.10` result):
+  the three earlier turns all *supplied* the SFP code; this one withdraws it and
+  asks whether the learner can **recover** it inside one supplied `(S, FFF)`
+  habitat. Five new modules in `experiments/sfp_representation/`
+  (`discovery_task.py`, `discovery_heads.py`, `discovery_baselines.py`,
+  `discovery_sweep.py`, `discovery_analysis.py`). The whole input surface is six
+  anonymous Event tokens, identical before marking, plus the pairwise ADMIT
+  matrix and one certified cyclic-block triple — no `PP`, `pp`, SFP token, Event
+  or habitat index, embedding table or buffer.
+  **Disposition B, with A named as the alternative reading.** Held-out forced
+  third **0.9970** (LOHO, CI [0.9911, 1.0000]) and 0.9940 (LOFPO) against an
+  admission-only ceiling of `1/2` derived twice — Bayes mass over the two
+  compatible block systems, and an automorphism of the admission graph that
+  forces any permutation-equivariant scorer to tie. Gate 0 pins `|Aut| = 48`, a
+  24-element induced subgroup, 2 admission-compatible block systems and a
+  `1.0000` one-anchor ceiling; all 13 pins and 18 laws hold in all 14 habitats.
+  Filed B rather than A only because the three chart thresholds fail under the
+  reconstruction `009.09` section 8 refers to and pass at 0.9911 under the
+  supplied-anchor one; which reading governs is an Owner decision, and section 9
+  forbids repairing the question after results are visible.
+  **The missed threshold is provably unreachable, and that is computed rather
+  than argued**: the reconstruction needs answers on the three pairs inside the
+  anchor, which section 4.4 makes support rather than scored queries, so
+  section 5.3 never supervises them. Two rules over the supplied atoms agree on
+  all 6048 supervisable rows and on no support row, so no learner obeying the
+  task's own training rule can meet those thresholds, whatever its architecture.
+  The causal claim rests on a control at identical capacity: the zero-anchor arm
+  is the same architecture at the same 11617 parameters with the anchor channel
+  held at zero, and scores 0.493716931217 — bit-identical to the
+  `lowest_common_neighbour` cheap selector and identical across all 8 seeds on
+  all 14 folds, because the two candidate scores are equal by the Gate-0
+  automorphism and `argmax` breaks the tie by index. Paired, +0.5033
+  (CI [0.4965, 0.5075], 14/14 folds).
+- Run Issue-009 query-relative `PP` localization (`009.07` task, `009.08`
+  result): `009.06` left locating the shared block as the binding constraint, so
+  this turn replaces the absolute chamber label with a query-relative pointer.
+  Five new modules (`locator_task.py`, `locator_heads.py`,
+  `locator_baselines.py`, `locator_sweep.py`, `locator_analysis.py`).
+  **Disposition B — material improvement, one condition short of A.** Held-out
+  forced third rises to **0.9688** (LOHO) with `PP` going 0.7158 -> 0.9777 and
+  `pp` 0.9762 -> 0.9896; Rung 1 meets `009.07` section 4.4 outright at 0.9993.
+  The pointer adds +894 parameters on the `PP` pathway, so a control carries the
+  causal claim: paired against `009.06`'s repair block, `B_sfp` gains +0.2671
+  (CI [0.2225, 0.3118], 14/14 folds) while `C_scrambled` — identical
+  architecture change, identical parameter count — does not move at all
+  (-0.0015, CI includes zero). That rules out a representation-independent
+  capacity effect without decomposing B's gain into constitution and capacity
+  parts, which would need a capacity-matched pointer the one-family stop rule
+  does not license. Class A is missed on exactly one condition and is not
+  rounded up: Rung-2 `D - B` is -0.0283 (CI [-0.0573, -0.0007]), clearing zero
+  by 0.000744 — two of the 0.000372 quanta the paired statistic can express —
+  while every component field, every LOFPO interval and Rung-1 `D - B` (exactly
+  0.0000) include zero. The artifact records `conditionally_ready` and names the
+  blocking item rather than assigning itself a letter. One reporting correction
+  came out of implementation: a subset counts as a ceiling if **either** the
+  measured determining test or the declared cost rule flags it, because
+  `endpoint_pair` reaches 1.000 on the admitted-only Rung-1 test while not
+  determining `q*` over the whole pool, and bucketing on the measured test alone
+  would have invented a bar the learner appeared to clear.
+- Run Issue-009 corrected consequence-address ladder (`009.05` task, `009.06`
+  result): is the `009.02` forcing negative a property of the SFP representation,
+  or of prematurely expressing consequence as one of 84 opaque public Event
+  identities? Six new modules — `ladder_task.py`, `ladder_heads.py` (typed field
+  heads that **import** `scorer.TokenEncoder` and `scorer.SymmetricPair` rather
+  than reimplementing them, so the input pathway is provably the computation that
+  produced the `009.02` numbers), `ladder_resolver.py`, `ladder_baselines.py`,
+  `ladder_sweep.py` and `ladder_analysis.py` (which reuses `009.02`'s seeded
+  bootstrap, so the two results compare as statistics rather than as numbers).
+  Executes `009.05`; `009.04` was superseded unexecuted and both facts are
+  machine-checkable fields in `ladder_task.json`.
+  **Disposition C, partial.** Changing **only the output object** — 85 catalogue
+  slots to 17 typed field slots, at capacity spread exactly 0 and with the frozen
+  splits, arms, seeds and protocol unchanged — moved held-out
+  `positive_forced_third_exact_accuracy` under the exact SFP code from **0.0335
+  to 0.7016** against a `1/84` chance floor, with both structural signatures
+  `009.05` section 5.6 requires: `B - C` = +0.5082 (CI [0.4583, 0.5595],
+  sign-consistent across all 14 LOHO and all 7 LOFPO folds) and `D - B` =
+  +0.0506 (CI [-0.0052, 0.1049], includes zero). Native coordinates are not
+  sufficient: `A_native` reaches 0.4412, `B - A` = +0.2604.
+  Three results caution against over-reading the headline. **The catalogue
+  interface was a cause, not the only one**: learning all four address fields
+  still fails at 0.0097, and it fails on the fields the certified relation
+  *copies* rather than the ones it computes — `pp` reaches 0.9948 while `FFF`
+  collapses to **0.0320**, which is closed-set habitat re-identification under a
+  structural holdout, not consequence forcing. **The obstruction moved rather
+  than vanished**: within the permitted repair block `pp` is 0.9762 and `PP`
+  0.7158, and 0.9762 x 0.7158 = 0.6987 against an observed 0.7016, so locating
+  the shared block is the binding constraint. **A nonlearned tabulation beats the
+  learner**: the code-space shortcut search is new to this issue, since
+  `009.02`'s nine atoms are all *native* and no search over the features this
+  learner actually sees had ever been run. Over 12 atoms and 298 subsets, the
+  certified consequence is determined under the exact code by a **two-atom** key
+  with zero ambiguity over all 7056 ordered pairs, reaching 1.0 on held-out
+  habitats, while under the non-automorphic scramble no subset up to size three
+  determines it at all. The learner therefore sits between the best
+  strictly-cheaper rule (0.500) and a ceiling the representation itself attains
+  (1.000). Rung 3 is exact by construction: the SFP alphabet is **saturated**
+  (2 x 7 x 6 = 84 = |Events|), so resolution is total and injective, resolved
+  Event-identity accuracy is *identically* equal to exact structured-address
+  accuracy in all 672 runs, and 0 of 4032 single-field corruptions are ever
+  repaired. Rung 1 is excluded from the disposition by construction: its label is
+  a function of the unordered input port pair, which takes three values under the
+  exact code, so a three-row lookup reaches 1.0 and `GL(2,2) ~= S3` makes every
+  relabeling of that quotient a symmetry.
+- Add `experiments/sfp_representation/` for Issue-009 native-FIPS versus SFP
+  consequence representation (`009.01` task, `009.02` result): does the compact
+  `S | FFF | PP | pp` code carry the certified admit-and-force relation better
+  than the native FIPS realization, and is any advantage relational rather than a
+  matter of code capacity or coordinate choice? Eleven new modules — torch-free
+  `conformance.py` (Gate 0: 103 Outcome-`021.05` pins re-derived, 0
+  disagreements, 14 named relational laws, `TABLE_SHA256` `eb31fba3dbc3a4bb…`),
+  `sfp.py` (the codec plus an exactness proof over the complete finite domain),
+  `groups.py`, `task.py` (the frozen 7056-ordered-pair pool, `dataset_sha256
+  7872755f…`), `folds.py` (22 manifests, `fold_manifest_sha256 27b01b5e…`, zero
+  leakage on all 21 structural folds recomputed from the recorded index lists
+  rather than asserted), `arms.py` and `baselines.py`; torch-only `scorer.py`,
+  `harness.py`, `run_sweep.py` and `analysis.py`, which per repo convention are a
+  manual run and are not in CI.
+  **Two finite pins are newly certified: 112 oriented cyclic blocks and 168
+  Event-block incidences**, computed nowhere in the repo before this issue and
+  derived *structurally* — oriented blocks as genuine cyclic-sense classes,
+  incidences by walking actual membership — rather than as `2*56` and `84*2`,
+  since the arithmetic shortcuts would assume exactly the regularity the pins are
+  meant to witness.
+  **Disposition E, explicitly narrowed.** Forcing is unsolved by every
+  representation: the best forced-third accuracy over all 1400 runs is 0.0335
+  (0.0900 after the single permitted repair) while both nonlearned oracles score
+  1.0. The **admission half is cleanly resolved**: the SFP code beats its own
+  marginal-matched, structure-destroying scramble by **+0.6369** on
+  same-habitat-disjoint accuracy (CI [0.5655, 0.7054], sign-consistent across all
+  14 primary folds, with bit widths, habitat sizes and field marginals held
+  identical) and beats the native realization by **+0.3772** on admission
+  balanced accuracy, where native realization sits at **chance** (0.5048).
+  Relabeling under `GL(3,2)` + affine `AGL(2,2)` + a global `S` flip matches the
+  code arm on every metric with every CI including zero, so the admission result
+  is not a basis artifact. Capacity spread across the four representation arms is
+  **exactly 0** (20323 parameters each) and swap symmetry is 0.0 bitwise.
+  Three findings constrain the benchmark. The scramble's rejection proof had to
+  test membership in the 24-element induced permutation class, because
+  matching-partition preservation is necessary but **not** sufficient — 48 of 720
+  permutations preserve the partition while only 24 are induced, and two accepted
+  scrambles are partition-preserving with **zero** admission disagreements yet
+  lose **all 24** forced thirds, since a non-induced partition-preserving
+  permutation carries a K4 star onto a K4 triangle. The mechanical leakage search
+  (2838 fits) found all 50 cheaper-than-the-relation shortcuts on the random
+  control and none on either structural fold family, and every
+  relation-equivalent feature determines admission **only**: the best cheap subset
+  reaches 0.921 admission balanced accuracy while scoring 0.0 on forced third and
+  0.0 on same-habitat-disjoint accuracy, making admission balanced accuracy a weak
+  discriminator. And two arms reach high non-admission accuracy purely by
+  answering BOTTOM to ~87% and ~93% of admitted pairs, so non-admission accuracy
+  is only readable together with admission sensitivity.
 - Run Issue-008 Ladder D (`008.07` task, `008.08` result): does the `008.05`
   learned-composition advantage survive train-only **recovered** Event
   denotations? New torch-free `experiments/tlm_multitoken/recovery.py` (frozen
@@ -111,6 +276,27 @@ All notable changes to this project are documented in this file.
   attained by exactly one result, tie sets are reported separately, and the
   script emits the published verdict / duplicate-group / singular-value /
   `fraction_unique_argmax = 0.6676` fields.
+- Extend the `topographo` workflow path filters and the explicit `ruff check`
+  allowlist to cover `experiments/sfp_representation/` as a directory glob, and
+  add `topographo/tests/test_f2_groups.py` to the named test allowlist. The
+  torch-only Issue-009 modules (`scorer.py`, `harness.py`, `run_sweep.py`,
+  `analysis.py` and the three `*_sweep.py` / `*_heads.py` families) are linted but
+  stay a manual run and are not import-gated, following the Outcome-017 and
+  Issue-008 convention.
+- Export `f2_groups` from `topographo.core` and widen that subpackage's stated
+  scope from Cayley-Dickson primitives to include abstract finite structures on
+  the same terms: labels only, no Occurrence-Theory vocabulary.
+- Re-certify the seven Issue-009 artifacts that record `topographo_version`
+  (`conformance_audit`, `sfp_codec`, `task_dataset`, `folds`, `arms`,
+  `baselines`, `scorer`) under `0.8.3`, since each `--check` byte-compares the
+  whole rendered artifact and would otherwise fail on any release. They are
+  deterministic re-derivations rather than measurements, so re-running them is a
+  genuine re-certification: the only differences are the version string itself
+  and, in `scorer.json`, the payload digest that covers it. Every structural
+  number, count, digest and law is unchanged, and all 23 replay gates across the
+  four turns pass byte-identically under `0.8.3`. The gitignored bulk sweeps keep
+  the version their runs were executed under; they are hosted in the `protology`
+  Quilt package and re-running them is a multi-hour job, not a fetch.
 
 ## [0.8.2] - 2026-09-08
 

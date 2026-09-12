@@ -1,0 +1,2552 @@
+{
+  "block_witness": {
+    "block_id": 0,
+    "habitat": "P=3,delta=+1",
+    "key": "1:1,10:-1|4:1,15:-1|5:1,14:1",
+    "members": [
+      0,
+      46,
+      57
+    ],
+    "ordered_completions": [
+      {
+        "a_index": 0,
+        "b_index": 46,
+        "label": "ADMIT",
+        "target_index": 57
+      },
+      {
+        "a_index": 0,
+        "b_index": 57,
+        "label": "ADMIT",
+        "target_index": 46
+      },
+      {
+        "a_index": 46,
+        "b_index": 0,
+        "label": "ADMIT",
+        "target_index": 57
+      },
+      {
+        "a_index": 46,
+        "b_index": 57,
+        "label": "ADMIT",
+        "target_index": 0
+      },
+      {
+        "a_index": 57,
+        "b_index": 0,
+        "label": "ADMIT",
+        "target_index": 46
+      },
+      {
+        "a_index": 57,
+        "b_index": 46,
+        "label": "ADMIT",
+        "target_index": 0
+      }
+    ],
+    "statement": "all 6 ordered completions are present and equally weighted"
+  },
+  "bottom_fence": {
+    "admitted_records_carrying_bottom": 0,
+    "bottom_index": -1,
+    "bottom_is_outside_the_event_index_range": true,
+    "bottom_symbol": "BOTTOM",
+    "distinct_admitted_targets": 84,
+    "event_index_0_is_a_genuine_event": true,
+    "event_index_0_occurs_as_a_real_target": true,
+    "event_index_0_ray": "1:1,10:-1",
+    "every_event_occurs_as_a_target": true,
+    "fence": [
+      "NONADMISSION carries the explicit sentinel (target_index=-1, target_symbol='BOTTOM'). Bottom is NOT encoded as FFF=000, NOT as pp=00, NOT as Event index 0, and NOT as any algebraic zero. Event index 0 is a genuine certified Event and is never overloaded as bottom."
+    ],
+    "no_admitted_record_carries_bottom": true,
+    "no_nonadmitted_record_carries_a_real_event": true,
+    "nonadmission_classes_all_populated": true,
+    "nonadmission_is_an_explicit_label": true,
+    "nonadmitted_records_carrying_a_real_event": 0,
+    "statement": "bottom is the explicit sentinel (-1, 'BOTTOM'); it is not FFF=000, not pp=00, not Event index 0, and not any algebraic zero"
+  },
+  "catalogue": {
+    "blocks": [
+      {
+        "block_id": 0,
+        "key": "1:1,10:-1|4:1,15:-1|5:1,14:1",
+        "members": [
+          0,
+          46,
+          57
+        ]
+      },
+      {
+        "block_id": 1,
+        "key": "1:1,10:-1|6:1,13:-1|7:1,12:1",
+        "members": [
+          0,
+          68,
+          79
+        ]
+      },
+      {
+        "block_id": 2,
+        "key": "1:1,10:1|4:1,15:1|5:1,14:-1",
+        "members": [
+          1,
+          47,
+          56
+        ]
+      },
+      {
+        "block_id": 3,
+        "key": "1:1,10:1|6:1,13:1|7:1,12:-1",
+        "members": [
+          1,
+          69,
+          78
+        ]
+      },
+      {
+        "block_id": 4,
+        "key": "1:1,11:-1|4:1,14:1|5:1,15:1",
+        "members": [
+          2,
+          45,
+          59
+        ]
+      },
+      {
+        "block_id": 5,
+        "key": "1:1,11:-1|6:1,12:-1|7:1,13:-1",
+        "members": [
+          2,
+          66,
+          80
+        ]
+      },
+      {
+        "block_id": 6,
+        "key": "1:1,11:1|4:1,14:-1|5:1,15:-1",
+        "members": [
+          3,
+          44,
+          58
+        ]
+      },
+      {
+        "block_id": 7,
+        "key": "1:1,11:1|6:1,12:1|7:1,13:1",
+        "members": [
+          3,
+          67,
+          81
+        ]
+      },
+      {
+        "block_id": 8,
+        "key": "1:1,12:-1|2:1,15:1|3:1,14:-1",
+        "members": [
+          4,
+          23,
+          32
+        ]
+      },
+      {
+        "block_id": 9,
+        "key": "1:1,12:-1|6:1,11:1|7:1,10:-1",
+        "members": [
+          4,
+          65,
+          74
+        ]
+      },
+      {
+        "block_id": 10,
+        "key": "1:1,12:1|2:1,15:-1|3:1,14:1",
+        "members": [
+          5,
+          22,
+          33
+        ]
+      },
+      {
+        "block_id": 11,
+        "key": "1:1,12:1|6:1,11:-1|7:1,10:1",
+        "members": [
+          5,
+          64,
+          75
+        ]
+      },
+      {
+        "block_id": 12,
+        "key": "1:1,13:-1|2:1,14:-1|3:1,15:-1",
+        "members": [
+          6,
+          20,
+          34
+        ]
+      },
+      {
+        "block_id": 13,
+        "key": "1:1,13:-1|6:1,10:1|7:1,11:1",
+        "members": [
+          6,
+          63,
+          77
+        ]
+      },
+      {
+        "block_id": 14,
+        "key": "1:1,13:1|2:1,14:1|3:1,15:1",
+        "members": [
+          7,
+          21,
+          35
+        ]
+      },
+      {
+        "block_id": 15,
+        "key": "1:1,13:1|6:1,10:-1|7:1,11:-1",
+        "members": [
+          7,
+          62,
+          76
+        ]
+      },
+      {
+        "block_id": 16,
+        "key": "1:1,14:-1|2:1,13:1|3:1,12:1",
+        "members": [
+          8,
+          19,
+          29
+        ]
+      },
+      {
+        "block_id": 17,
+        "key": "1:1,14:-1|4:1,11:-1|5:1,10:-1",
+        "members": [
+          8,
+          40,
+          50
+        ]
+      },
+      {
+        "block_id": 18,
+        "key": "1:1,14:1|2:1,13:-1|3:1,12:-1",
+        "members": [
+          9,
+          18,
+          28
+        ]
+      },
+      {
+        "block_id": 19,
+        "key": "1:1,14:1|4:1,11:1|5:1,10:1",
+        "members": [
+          9,
+          41,
+          51
+        ]
+      },
+      {
+        "block_id": 20,
+        "key": "1:1,15:-1|2:1,12:-1|3:1,13:1",
+        "members": [
+          10,
+          16,
+          31
+        ]
+      },
+      {
+        "block_id": 21,
+        "key": "1:1,15:-1|4:1,10:1|5:1,11:-1",
+        "members": [
+          10,
+          39,
+          52
+        ]
+      },
+      {
+        "block_id": 22,
+        "key": "1:1,15:1|2:1,12:1|3:1,13:-1",
+        "members": [
+          11,
+          17,
+          30
+        ]
+      },
+      {
+        "block_id": 23,
+        "key": "1:1,15:1|4:1,10:-1|5:1,11:1",
+        "members": [
+          11,
+          38,
+          53
+        ]
+      },
+      {
+        "block_id": 24,
+        "key": "2:1,11:-1|4:1,13:-1|6:1,15:1",
+        "members": [
+          14,
+          42,
+          71
+        ]
+      },
+      {
+        "block_id": 25,
+        "key": "2:1,11:-1|5:1,12:1|7:1,14:-1",
+        "members": [
+          14,
+          55,
+          82
+        ]
+      },
+      {
+        "block_id": 26,
+        "key": "2:1,11:1|4:1,13:1|6:1,15:-1",
+        "members": [
+          15,
+          43,
+          70
+        ]
+      },
+      {
+        "block_id": 27,
+        "key": "2:1,11:1|5:1,12:-1|7:1,14:1",
+        "members": [
+          15,
+          54,
+          83
+        ]
+      },
+      {
+        "block_id": 28,
+        "key": "2:1,12:-1|5:1,11:-1|7:1,9:1",
+        "members": [
+          16,
+          52,
+          73
+        ]
+      },
+      {
+        "block_id": 29,
+        "key": "2:1,12:1|5:1,11:1|7:1,9:-1",
+        "members": [
+          17,
+          53,
+          72
+        ]
+      },
+      {
+        "block_id": 30,
+        "key": "2:1,13:-1|4:1,11:1|6:1,9:-1",
+        "members": [
+          18,
+          41,
+          60
+        ]
+      },
+      {
+        "block_id": 31,
+        "key": "2:1,13:1|4:1,11:-1|6:1,9:1",
+        "members": [
+          19,
+          40,
+          61
+        ]
+      },
+      {
+        "block_id": 32,
+        "key": "2:1,14:-1|5:1,9:1|7:1,11:1",
+        "members": [
+          20,
+          49,
+          77
+        ]
+      },
+      {
+        "block_id": 33,
+        "key": "2:1,14:1|5:1,9:-1|7:1,11:-1",
+        "members": [
+          21,
+          48,
+          76
+        ]
+      },
+      {
+        "block_id": 34,
+        "key": "2:1,15:-1|4:1,9:-1|6:1,11:-1",
+        "members": [
+          22,
+          36,
+          64
+        ]
+      },
+      {
+        "block_id": 35,
+        "key": "2:1,15:1|4:1,9:1|6:1,11:1",
+        "members": [
+          23,
+          37,
+          65
+        ]
+      },
+      {
+        "block_id": 36,
+        "key": "2:1,9:-1|4:1,15:1|6:1,13:1",
+        "members": [
+          12,
+          47,
+          69
+        ]
+      },
+      {
+        "block_id": 37,
+        "key": "2:1,9:-1|5:1,14:-1|7:1,12:-1",
+        "members": [
+          12,
+          56,
+          78
+        ]
+      },
+      {
+        "block_id": 38,
+        "key": "2:1,9:1|4:1,15:-1|6:1,13:-1",
+        "members": [
+          13,
+          46,
+          68
+        ]
+      },
+      {
+        "block_id": 39,
+        "key": "2:1,9:1|5:1,14:1|7:1,12:1",
+        "members": [
+          13,
+          57,
+          79
+        ]
+      },
+      {
+        "block_id": 40,
+        "key": "3:1,10:-1|4:1,13:1|7:1,14:1",
+        "members": [
+          26,
+          43,
+          83
+        ]
+      },
+      {
+        "block_id": 41,
+        "key": "3:1,10:-1|5:1,12:-1|6:1,15:-1",
+        "members": [
+          26,
+          54,
+          70
+        ]
+      },
+      {
+        "block_id": 42,
+        "key": "3:1,10:1|4:1,13:-1|7:1,14:-1",
+        "members": [
+          27,
+          42,
+          82
+        ]
+      },
+      {
+        "block_id": 43,
+        "key": "3:1,10:1|5:1,12:1|6:1,15:1",
+        "members": [
+          27,
+          55,
+          71
+        ]
+      },
+      {
+        "block_id": 44,
+        "key": "3:1,12:-1|5:1,10:1|6:1,9:-1",
+        "members": [
+          28,
+          51,
+          60
+        ]
+      },
+      {
+        "block_id": 45,
+        "key": "3:1,12:1|5:1,10:-1|6:1,9:1",
+        "members": [
+          29,
+          50,
+          61
+        ]
+      },
+      {
+        "block_id": 46,
+        "key": "3:1,13:-1|4:1,10:-1|7:1,9:-1",
+        "members": [
+          30,
+          38,
+          72
+        ]
+      },
+      {
+        "block_id": 47,
+        "key": "3:1,13:1|4:1,10:1|7:1,9:1",
+        "members": [
+          31,
+          39,
+          73
+        ]
+      },
+      {
+        "block_id": 48,
+        "key": "3:1,14:-1|4:1,9:1|7:1,10:-1",
+        "members": [
+          32,
+          37,
+          74
+        ]
+      },
+      {
+        "block_id": 49,
+        "key": "3:1,14:1|4:1,9:-1|7:1,10:1",
+        "members": [
+          33,
+          36,
+          75
+        ]
+      },
+      {
+        "block_id": 50,
+        "key": "3:1,15:-1|5:1,9:1|6:1,10:1",
+        "members": [
+          34,
+          49,
+          63
+        ]
+      },
+      {
+        "block_id": 51,
+        "key": "3:1,15:1|5:1,9:-1|6:1,10:-1",
+        "members": [
+          35,
+          48,
+          62
+        ]
+      },
+      {
+        "block_id": 52,
+        "key": "3:1,9:-1|4:1,14:-1|7:1,13:1",
+        "members": [
+          24,
+          44,
+          81
+        ]
+      },
+      {
+        "block_id": 53,
+        "key": "3:1,9:-1|5:1,15:-1|6:1,12:1",
+        "members": [
+          24,
+          58,
+          67
+        ]
+      },
+      {
+        "block_id": 54,
+        "key": "3:1,9:1|4:1,14:1|7:1,13:-1",
+        "members": [
+          25,
+          45,
+          80
+        ]
+      },
+      {
+        "block_id": 55,
+        "key": "3:1,9:1|5:1,15:1|6:1,12:-1",
+        "members": [
+          25,
+          59,
+          66
+        ]
+      }
+    ],
+    "events": [
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          0,
+          1
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 0,
+        "ray": "1:1,10:-1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          2,
+          3
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 1,
+        "ray": "1:1,10:1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          4,
+          5
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 2,
+        "ray": "1:1,11:-1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          6,
+          7
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 3,
+        "ray": "1:1,11:1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          8,
+          9
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 4,
+        "ray": "1:1,12:-1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          10,
+          11
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 5,
+        "ray": "1:1,12:1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          12,
+          13
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 6,
+        "ray": "1:1,13:-1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          14,
+          15
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 7,
+        "ray": "1:1,13:1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          16,
+          17
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 8,
+        "ray": "1:1,14:-1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          18,
+          19
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 9,
+        "ray": "1:1,14:1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          20,
+          21
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 10,
+        "ray": "1:1,15:-1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          22,
+          23
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 11,
+        "ray": "1:1,15:1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          36,
+          37
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 12,
+        "ray": "2:1,9:-1"
+      },
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          38,
+          39
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 13,
+        "ray": "2:1,9:1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          24,
+          25
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 14,
+        "ray": "2:1,11:-1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          26,
+          27
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 15,
+        "ray": "2:1,11:1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          20,
+          28
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 16,
+        "ray": "2:1,12:-1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          22,
+          29
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 17,
+        "ray": "2:1,12:1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          18,
+          30
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 18,
+        "ray": "2:1,13:-1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          16,
+          31
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 19,
+        "ray": "2:1,13:1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          12,
+          32
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 20,
+        "ray": "2:1,14:-1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          14,
+          33
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 21,
+        "ray": "2:1,14:1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          10,
+          34
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 22,
+        "ray": "2:1,15:-1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          8,
+          35
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 23,
+        "ray": "2:1,15:1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          52,
+          53
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 24,
+        "ray": "3:1,9:-1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          54,
+          55
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 25,
+        "ray": "3:1,9:1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          40,
+          41
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 26,
+        "ray": "3:1,10:-1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          42,
+          43
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 27,
+        "ray": "3:1,10:1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          18,
+          44
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 28,
+        "ray": "3:1,12:-1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          16,
+          45
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 29,
+        "ray": "3:1,12:1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          22,
+          46
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 30,
+        "ray": "3:1,13:-1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          20,
+          47
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 31,
+        "ray": "3:1,13:1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          8,
+          48
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 32,
+        "ray": "3:1,14:-1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          10,
+          49
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 33,
+        "ray": "3:1,14:1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          12,
+          50
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 34,
+        "ray": "3:1,15:-1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          14,
+          51
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 35,
+        "ray": "3:1,15:1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          34,
+          49
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 36,
+        "ray": "4:1,9:-1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          35,
+          48
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 37,
+        "ray": "4:1,9:1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          23,
+          46
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 38,
+        "ray": "4:1,10:-1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          21,
+          47
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 39,
+        "ray": "4:1,10:1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          17,
+          31
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 40,
+        "ray": "4:1,11:-1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          19,
+          30
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 41,
+        "ray": "4:1,11:1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          24,
+          42
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 42,
+        "ray": "4:1,13:-1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          26,
+          40
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 43,
+        "ray": "4:1,13:1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          6,
+          52
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 44,
+        "ray": "4:1,14:-1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          4,
+          54
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 45,
+        "ray": "4:1,14:1"
+      },
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          0,
+          38
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 46,
+        "ray": "4:1,15:-1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          2,
+          36
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 47,
+        "ray": "4:1,15:1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          33,
+          51
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 48,
+        "ray": "5:1,9:-1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          32,
+          50
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 49,
+        "ray": "5:1,9:1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          17,
+          45
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 50,
+        "ray": "5:1,10:-1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          19,
+          44
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 51,
+        "ray": "5:1,10:1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          21,
+          28
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 52,
+        "ray": "5:1,11:-1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          23,
+          29
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 53,
+        "ray": "5:1,11:1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          27,
+          41
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 54,
+        "ray": "5:1,12:-1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          25,
+          43
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 55,
+        "ray": "5:1,12:1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          2,
+          37
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 56,
+        "ray": "5:1,14:-1"
+      },
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          0,
+          39
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 57,
+        "ray": "5:1,14:1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          6,
+          53
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 58,
+        "ray": "5:1,15:-1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          4,
+          55
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 59,
+        "ray": "5:1,15:1"
+      },
+      {
+        "P": 7,
+        "S": 0,
+        "block_ids": [
+          30,
+          44
+        ],
+        "delta": 1,
+        "habitat": "P=7,delta=+1",
+        "index": 60,
+        "ray": "6:1,9:-1"
+      },
+      {
+        "P": 7,
+        "S": 1,
+        "block_ids": [
+          31,
+          45
+        ],
+        "delta": -1,
+        "habitat": "P=7,delta=-1",
+        "index": 61,
+        "ray": "6:1,9:1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          15,
+          51
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 62,
+        "ray": "6:1,10:-1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          13,
+          50
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 63,
+        "ray": "6:1,10:1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          11,
+          34
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 64,
+        "ray": "6:1,11:-1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          9,
+          35
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 65,
+        "ray": "6:1,11:1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          5,
+          55
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 66,
+        "ray": "6:1,12:-1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          7,
+          53
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 67,
+        "ray": "6:1,12:1"
+      },
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          1,
+          38
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 68,
+        "ray": "6:1,13:-1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          3,
+          36
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 69,
+        "ray": "6:1,13:1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          26,
+          41
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 70,
+        "ray": "6:1,15:-1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          24,
+          43
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 71,
+        "ray": "6:1,15:1"
+      },
+      {
+        "P": 6,
+        "S": 1,
+        "block_ids": [
+          29,
+          46
+        ],
+        "delta": -1,
+        "habitat": "P=6,delta=-1",
+        "index": 72,
+        "ray": "7:1,9:-1"
+      },
+      {
+        "P": 6,
+        "S": 0,
+        "block_ids": [
+          28,
+          47
+        ],
+        "delta": 1,
+        "habitat": "P=6,delta=+1",
+        "index": 73,
+        "ray": "7:1,9:1"
+      },
+      {
+        "P": 5,
+        "S": 0,
+        "block_ids": [
+          9,
+          48
+        ],
+        "delta": 1,
+        "habitat": "P=5,delta=+1",
+        "index": 74,
+        "ray": "7:1,10:-1"
+      },
+      {
+        "P": 5,
+        "S": 1,
+        "block_ids": [
+          11,
+          49
+        ],
+        "delta": -1,
+        "habitat": "P=5,delta=-1",
+        "index": 75,
+        "ray": "7:1,10:1"
+      },
+      {
+        "P": 4,
+        "S": 0,
+        "block_ids": [
+          15,
+          33
+        ],
+        "delta": 1,
+        "habitat": "P=4,delta=+1",
+        "index": 76,
+        "ray": "7:1,11:-1"
+      },
+      {
+        "P": 4,
+        "S": 1,
+        "block_ids": [
+          13,
+          32
+        ],
+        "delta": -1,
+        "habitat": "P=4,delta=-1",
+        "index": 77,
+        "ray": "7:1,11:1"
+      },
+      {
+        "P": 3,
+        "S": 1,
+        "block_ids": [
+          3,
+          37
+        ],
+        "delta": -1,
+        "habitat": "P=3,delta=-1",
+        "index": 78,
+        "ray": "7:1,12:-1"
+      },
+      {
+        "P": 3,
+        "S": 0,
+        "block_ids": [
+          1,
+          39
+        ],
+        "delta": 1,
+        "habitat": "P=3,delta=+1",
+        "index": 79,
+        "ray": "7:1,12:1"
+      },
+      {
+        "P": 2,
+        "S": 1,
+        "block_ids": [
+          5,
+          54
+        ],
+        "delta": -1,
+        "habitat": "P=2,delta=-1",
+        "index": 80,
+        "ray": "7:1,13:-1"
+      },
+      {
+        "P": 2,
+        "S": 0,
+        "block_ids": [
+          7,
+          52
+        ],
+        "delta": 1,
+        "habitat": "P=2,delta=+1",
+        "index": 81,
+        "ray": "7:1,13:1"
+      },
+      {
+        "P": 1,
+        "S": 0,
+        "block_ids": [
+          25,
+          42
+        ],
+        "delta": 1,
+        "habitat": "P=1,delta=+1",
+        "index": 82,
+        "ray": "7:1,14:-1"
+      },
+      {
+        "P": 1,
+        "S": 1,
+        "block_ids": [
+          27,
+          40
+        ],
+        "delta": -1,
+        "habitat": "P=1,delta=-1",
+        "index": 83,
+        "ray": "7:1,14:1"
+      }
+    ],
+    "fano_point_members": [
+      {
+        "P": 1,
+        "event_indices": [
+          14,
+          15,
+          26,
+          27,
+          42,
+          43,
+          54,
+          55,
+          70,
+          71,
+          82,
+          83
+        ]
+      },
+      {
+        "P": 2,
+        "event_indices": [
+          2,
+          3,
+          24,
+          25,
+          44,
+          45,
+          58,
+          59,
+          66,
+          67,
+          80,
+          81
+        ]
+      },
+      {
+        "P": 3,
+        "event_indices": [
+          0,
+          1,
+          12,
+          13,
+          46,
+          47,
+          56,
+          57,
+          68,
+          69,
+          78,
+          79
+        ]
+      },
+      {
+        "P": 4,
+        "event_indices": [
+          6,
+          7,
+          20,
+          21,
+          34,
+          35,
+          48,
+          49,
+          62,
+          63,
+          76,
+          77
+        ]
+      },
+      {
+        "P": 5,
+        "event_indices": [
+          4,
+          5,
+          22,
+          23,
+          32,
+          33,
+          36,
+          37,
+          64,
+          65,
+          74,
+          75
+        ]
+      },
+      {
+        "P": 6,
+        "event_indices": [
+          10,
+          11,
+          16,
+          17,
+          30,
+          31,
+          38,
+          39,
+          52,
+          53,
+          72,
+          73
+        ]
+      },
+      {
+        "P": 7,
+        "event_indices": [
+          8,
+          9,
+          18,
+          19,
+          28,
+          29,
+          40,
+          41,
+          50,
+          51,
+          60,
+          61
+        ]
+      }
+    ],
+    "habitat_members": [
+      {
+        "event_indices": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "habitat": "P=1,delta=-1"
+      },
+      {
+        "event_indices": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "habitat": "P=1,delta=+1"
+      },
+      {
+        "event_indices": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "habitat": "P=2,delta=-1"
+      },
+      {
+        "event_indices": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "habitat": "P=2,delta=+1"
+      },
+      {
+        "event_indices": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "habitat": "P=3,delta=-1"
+      },
+      {
+        "event_indices": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "habitat": "P=3,delta=+1"
+      },
+      {
+        "event_indices": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "habitat": "P=4,delta=-1"
+      },
+      {
+        "event_indices": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "habitat": "P=4,delta=+1"
+      },
+      {
+        "event_indices": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "habitat": "P=5,delta=-1"
+      },
+      {
+        "event_indices": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "habitat": "P=5,delta=+1"
+      },
+      {
+        "event_indices": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "habitat": "P=6,delta=-1"
+      },
+      {
+        "event_indices": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "habitat": "P=6,delta=+1"
+      },
+      {
+        "event_indices": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "habitat": "P=7,delta=-1"
+      },
+      {
+        "event_indices": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "habitat": "P=7,delta=+1"
+      }
+    ],
+    "n_events": 84,
+    "order_source": "topographo.ssd.fips_adapter.EventIndex.build() == fips_basic.EVENTS (CI-pinned, N_EVENTS = 84); blocks ordered by the stable textual block key, never by set/dict iteration order or hash()"
+  },
+  "census": {
+    "all_predicted_counts_agree": true,
+    "counts": {
+      "admit": {
+        "agrees": true,
+        "expected": 336,
+        "observed": 336
+      },
+      "admit_per_habitat_uniform_24": {
+        "agrees": true,
+        "expected": 24,
+        "observed": [
+          24
+        ]
+      },
+      "cross_habitat": {
+        "agrees": true,
+        "expected": 6552,
+        "observed": 6552
+      },
+      "native_edge_table": {
+        "agrees": true,
+        "expected": 336,
+        "observed": 336,
+        "statement": "ADMIT count equals |fips_basic.ORDERED_EDGES|"
+      },
+      "ordered_pairs_total": {
+        "agrees": true,
+        "expected": 7056,
+        "observed": 7056
+      },
+      "repeated": {
+        "agrees": true,
+        "expected": 84,
+        "observed": 84
+      },
+      "same_habitat_decomposition": {
+        "agrees": true,
+        "expected": 504,
+        "observed": 504,
+        "statement": "same-habitat = REPEATED + ADMIT + SAME_HABITAT_DISJOINT"
+      },
+      "same_habitat_disjoint": {
+        "agrees": true,
+        "expected": 84,
+        "observed": 84
+      },
+      "same_habitat_disjoint_per_habitat_uniform_6": {
+        "agrees": true,
+        "expected": 6,
+        "observed": [
+          6
+        ]
+      },
+      "same_habitat_ordered_pairs": {
+        "agrees": true,
+        "expected": 504,
+        "observed": 504
+      }
+    },
+    "prediction_policy": "counts were predicted from the certified structure before the dataset was built; a mismatch is reported, never absorbed into the prediction"
+  },
+  "determinism": {
+    "interpreter_state_excluded": "no interpreter flag (including PYTHONHASHSEED / sys.flags.hash_randomization) is recorded, so the artifact is byte-identical across hash seeds",
+    "rebuild_catalogue_sha256_stable": true,
+    "rebuild_dataset_sha256_stable": true,
+    "rebuild_rows_identical": true,
+    "statement": "every ordering in this module comes from integer indices, sorted textual ray/block keys, or explicit tuples; no set/dict iteration order and no hash() value reaches the artifact"
+  },
+  "digests": {
+    "blocks": "477b57a373a2da9d202929c9770b5491b87f0d4e9709342077f30b7b5229bffc",
+    "catalogue": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "dataset": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "method": "hashlib.sha256(json.dumps(obj, sort_keys=True, separators=(',', ':')).encode()).hexdigest()"
+  },
+  "downstream_contract": {
+    "consumers": [
+      "fold construction: leave-one-habitat-out over 14 habitats",
+      "fold construction: leave-one-Fano-point-out over 7 points, both signs",
+      "four representation arms",
+      "shared candidate scorer",
+      "deterministic baselines"
+    ],
+    "provided": [
+      "stable 84-Event catalogue with digest",
+      "habitat and Fano-point membership lists for fold construction",
+      "per-class position lists over the 7056-record pool",
+      "(a, b) -> record lookup"
+    ],
+    "withheld_by_scope": [
+      "folds",
+      "representation arms",
+      "models",
+      "training code",
+      "baselines"
+    ]
+  },
+  "fences": [
+    "Labels come from the certified native FIPS relation (fips_basic), never from the SFP circuit under test.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "FFF=000 and pp=00 are formal completion values only, not Events and not bottom.",
+    "SFP is a representation layer, not a replacement OT evaluator.",
+    "No per-Event free output identity: downstream scoring must be relational."
+  ],
+  "label_rule": {
+    "correctness_criterion": "exact certified Event identity via topographo.ssd.projective.equivalent; never float proximity, never a soft ranking",
+    "source": "topographo.ssd.fips_basic.admissible / topographo.ssd.fips_basic.third \u2014 the certified native FIPS relation. sfp.ExactSfpCircuit is NEVER consulted for a label: label generation (label_pair / build_dataset) accepts no circuit argument, and sfp is imported only inside sfp_cross_check, which runs after the dataset is frozen and may only read it.",
+    "statement": "ADMIT with target = unique third Event iff a != b and a, b share exactly one certified cyclic block; otherwise NONADMISSION (bottom)",
+    "structural_enforcement": [
+      "label_pair(catalogue, a_index, b_index) takes no circuit argument",
+      "build_dataset(catalogue) takes no circuit argument",
+      "sfp is imported only inside sfp_cross_check, after freezing",
+      "sfp_cross_check returns a diagnostic and never a label"
+    ]
+  },
+  "module": "experiments/sfp_representation/task.py",
+  "native_consistency": {
+    "admissibility_agreements": 7056,
+    "admissibility_exact": true,
+    "correctness_criterion": "exact certified Event identity via topographo.ssd.projective.equivalent; never float proximity, never a soft ranking",
+    "disagreement_count": 0,
+    "disagreements": [],
+    "forced_third_checked": 336,
+    "forced_third_exact": true,
+    "forced_third_exact_projective_agreements": 336,
+    "label_source": "topographo.ssd.fips_basic.admissible / topographo.ssd.fips_basic.third \u2014 the certified native FIPS relation. sfp.ExactSfpCircuit is NEVER consulted for a label: label generation (label_pair / build_dataset) accepts no circuit argument, and sfp is imported only inside sfp_cross_check, which runs after the dataset is frozen and may only read it.",
+    "native_relation_admits_no_repeated_pair": true,
+    "ordered_pairs_checked": 7056,
+    "statement": "native admissible(a, b) coincides with 'distinct and sharing exactly one certified cyclic block' on all 7056 ordered pairs"
+  },
+  "per_class_counts": {
+    "admit": 336,
+    "cross_habitat": 6552,
+    "ordered_pairs_total": 7056,
+    "repeated": 84,
+    "same_habitat_disjoint": 84,
+    "same_habitat_ordered_pairs": 504
+  },
+  "pins": {
+    "admit": 336,
+    "block_degree_per_event": 2,
+    "blocks": 56,
+    "cross_habitat": 6552,
+    "events": 84,
+    "fano_points": 7,
+    "habitats": 14,
+    "ordered_pairs_per_block": 6,
+    "ordered_pairs_total": 7056,
+    "repeated": 84,
+    "same_habitat_disjoint": 84,
+    "same_habitat_ordered_pairs": 504
+  },
+  "provenance": {
+    "base_commit": "174925310ca1ff15948b17e336c787525640dc6c",
+    "coordinate_sources": [
+      "topographo.ssd.fips_adapter.EventIndex (CI-pinned 84-Event order)",
+      "topographo.ssd.fips_basic.BLOCKS (56 certified cyclic blocks)",
+      "topographo.ssd.seal.public_label (habitat key (P, delta))",
+      "topographo.ssd.projective.equivalent (exact Event identity)"
+    ],
+    "gate_0": "experiments/sfp_representation/conformance.py (PASSED)",
+    "label_sources": [
+      "topographo.ssd.fips_basic.admissible (native admission)",
+      "topographo.ssd.fips_basic.third (native forced third)"
+    ],
+    "not_a_label_source": [
+      "experiments/sfp_representation/sfp.py::ExactSfpCircuit (reference-oracle diagnostic only)"
+    ],
+    "table_sha256": {
+      "agrees": true,
+      "expected": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
+      "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea"
+    },
+    "topographo_version": "0.8.3"
+  },
+  "purpose": "the frozen admit-and-force dataset: all 7056 ordered Event pairs labelled ADMIT / NONADMISSION from the certified native FIPS relation",
+  "record_layout": "row-major: the record for (a, b) sits at position a * 84 + b; Dataset.record(a, b) and Dataset.target(a, b) look it up",
+  "record_schema": [
+    "a_index",
+    "b_index",
+    "label",
+    "target_index",
+    "target_symbol",
+    "nonadmission_class",
+    "habitat_a",
+    "habitat_b",
+    "fano_point_a",
+    "fano_point_b",
+    "sign_a",
+    "sign_b",
+    "shared_block"
+  ],
+  "reference_oracle_diagnostic": {
+    "admission_agreement_complete": true,
+    "admission_agreements": 7056,
+    "agrees": true,
+    "circuit_admitted_matches_native": true,
+    "circuit_admitted_ordered_pairs": 336,
+    "circuit_never_a_label_source": true,
+    "circuit_role": "nonlearned reference oracle",
+    "comparison": "exact certified Event identity via topographo.ssd.projective.equivalent; never float proximity, never a soft ranking",
+    "disagreement_count": 0,
+    "disagreements": [],
+    "forced_third_agreement_complete": true,
+    "forced_third_agreements": 336,
+    "forced_third_checked": 336,
+    "import_is_function_local": true,
+    "label_source_reminder": "topographo.ssd.fips_basic.admissible / topographo.ssd.fips_basic.third \u2014 the certified native FIPS relation. sfp.ExactSfpCircuit is NEVER consulted for a label: label generation (label_pair / build_dataset) accepts no circuit argument, and sfp is imported only inside sfp_cross_check, which runs after the dataset is frozen and may only read it.",
+    "ordered_pairs_checked": 7056,
+    "role": "reference-oracle diagnostic; NOT the label source"
+  },
+  "relational_laws": {
+    "all_predicted_counts_agree": true,
+    "bottom_never_on_an_admitted_record": true,
+    "bottom_outside_event_index_range": true,
+    "catalogue_stable_on_rebuild": true,
+    "determinism_stable_on_rebuild": true,
+    "event_index_0_is_a_genuine_event": true,
+    "event_index_0_is_never_bottom": true,
+    "native_admissibility_exact_7056": true,
+    "native_admits_no_repeated_pair": true,
+    "native_forced_third_exact_336": true,
+    "no_event_index_on_a_nonadmitted_record": true,
+    "provenance_table_digest": true,
+    "reference_oracle_agrees_7056": true,
+    "role_neutrality_336_matches_admit": true,
+    "role_neutrality_all_blocks_6_completions": true,
+    "role_neutrality_all_missing_members_occur": true,
+    "role_neutrality_block_pairs_are_the_admitted_pairs": true,
+    "target_symmetric_over_all_336": true
+  },
+  "role_neutrality": {
+    "all_blocks_support_all_6_completions": true,
+    "all_three_missing_member_choices_occur": true,
+    "block_ordered_pairs_total": 336,
+    "block_ordered_pairs_total_matches_admit": true,
+    "block_pairs_are_exactly_the_admitted_pairs": true,
+    "blocks": 56,
+    "both_input_orders_present": 336,
+    "distinct_block_ordered_pairs": 336,
+    "ordered_pairs_per_block": [
+      6
+    ],
+    "statement": "no privileged direction and no separate structure for one completion: all 56 * 6 = 336 ordered completions are ordinary records in one pool",
+    "symmetry_checked": 336,
+    "target_ab_equals_target_ba_on_all_admitted": true,
+    "target_symmetric_agreements": 336
+  },
+  "sample_records": {
+    "ADMIT": [
+      {
+        "a_index": 0,
+        "b_index": 46,
+        "fano_point_a": 3,
+        "fano_point_b": 3,
+        "habitat_a": [
+          3,
+          1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 0,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 57,
+        "target_symbol": "5:1,14:1"
+      },
+      {
+        "a_index": 10,
+        "b_index": 39,
+        "fano_point_a": 6,
+        "fano_point_b": 6,
+        "habitat_a": [
+          6,
+          1
+        ],
+        "habitat_b": [
+          6,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 21,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 52,
+        "target_symbol": "5:1,11:-1"
+      },
+      {
+        "a_index": 21,
+        "b_index": 7,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          1
+        ],
+        "habitat_b": [
+          4,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 14,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 35,
+        "target_symbol": "3:1,15:1"
+      },
+      {
+        "a_index": 31,
+        "b_index": 39,
+        "fano_point_a": 6,
+        "fano_point_b": 6,
+        "habitat_a": [
+          6,
+          1
+        ],
+        "habitat_b": [
+          6,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 47,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 73,
+        "target_symbol": "7:1,9:1"
+      },
+      {
+        "a_index": 42,
+        "b_index": 14,
+        "fano_point_a": 1,
+        "fano_point_b": 1,
+        "habitat_a": [
+          1,
+          1
+        ],
+        "habitat_b": [
+          1,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 24,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 71,
+        "target_symbol": "6:1,15:1"
+      },
+      {
+        "a_index": 52,
+        "b_index": 39,
+        "fano_point_a": 6,
+        "fano_point_b": 6,
+        "habitat_a": [
+          6,
+          1
+        ],
+        "habitat_b": [
+          6,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 21,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 10,
+        "target_symbol": "1:1,15:-1"
+      },
+      {
+        "a_index": 63,
+        "b_index": 6,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          -1
+        ],
+        "habitat_b": [
+          4,
+          -1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 13,
+        "sign_a": -1,
+        "sign_b": -1,
+        "target_index": 77,
+        "target_symbol": "7:1,11:1"
+      },
+      {
+        "a_index": 73,
+        "b_index": 39,
+        "fano_point_a": 6,
+        "fano_point_b": 6,
+        "habitat_a": [
+          6,
+          1
+        ],
+        "habitat_b": [
+          6,
+          1
+        ],
+        "label": "ADMIT",
+        "nonadmission_class": null,
+        "shared_block": 47,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": 31,
+        "target_symbol": "3:1,13:1"
+      }
+    ],
+    "CROSS_HABITAT": [
+      {
+        "a_index": 0,
+        "b_index": 1,
+        "fano_point_a": 3,
+        "fano_point_b": 3,
+        "habitat_a": [
+          3,
+          1
+        ],
+        "habitat_b": [
+          3,
+          -1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "CROSS_HABITAT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": -1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 21,
+        "b_index": 0,
+        "fano_point_a": 4,
+        "fano_point_b": 3,
+        "habitat_a": [
+          4,
+          1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "CROSS_HABITAT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 42,
+        "b_index": 0,
+        "fano_point_a": 1,
+        "fano_point_b": 3,
+        "habitat_a": [
+          1,
+          1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "CROSS_HABITAT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 63,
+        "b_index": 0,
+        "fano_point_a": 4,
+        "fano_point_b": 3,
+        "habitat_a": [
+          4,
+          -1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "CROSS_HABITAT",
+        "shared_block": null,
+        "sign_a": -1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      }
+    ],
+    "REPEATED": [
+      {
+        "a_index": 0,
+        "b_index": 0,
+        "fano_point_a": 3,
+        "fano_point_b": 3,
+        "habitat_a": [
+          3,
+          1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "REPEATED",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 21,
+        "b_index": 21,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          1
+        ],
+        "habitat_b": [
+          4,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "REPEATED",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 42,
+        "b_index": 42,
+        "fano_point_a": 1,
+        "fano_point_b": 1,
+        "habitat_a": [
+          1,
+          1
+        ],
+        "habitat_b": [
+          1,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "REPEATED",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 63,
+        "b_index": 63,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          -1
+        ],
+        "habitat_b": [
+          4,
+          -1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "REPEATED",
+        "shared_block": null,
+        "sign_a": -1,
+        "sign_b": -1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      }
+    ],
+    "SAME_HABITAT_DISJOINT": [
+      {
+        "a_index": 0,
+        "b_index": 13,
+        "fano_point_a": 3,
+        "fano_point_b": 3,
+        "habitat_a": [
+          3,
+          1
+        ],
+        "habitat_b": [
+          3,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "SAME_HABITAT_DISJOINT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 21,
+        "b_index": 62,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          1
+        ],
+        "habitat_b": [
+          4,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "SAME_HABITAT_DISJOINT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 42,
+        "b_index": 55,
+        "fano_point_a": 1,
+        "fano_point_b": 1,
+        "habitat_a": [
+          1,
+          1
+        ],
+        "habitat_b": [
+          1,
+          1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "SAME_HABITAT_DISJOINT",
+        "shared_block": null,
+        "sign_a": 1,
+        "sign_b": 1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      },
+      {
+        "a_index": 63,
+        "b_index": 20,
+        "fano_point_a": 4,
+        "fano_point_b": 4,
+        "habitat_a": [
+          4,
+          -1
+        ],
+        "habitat_b": [
+          4,
+          -1
+        ],
+        "label": "NONADMISSION",
+        "nonadmission_class": "SAME_HABITAT_DISJOINT",
+        "shared_block": null,
+        "sign_a": -1,
+        "sign_b": -1,
+        "target_index": -1,
+        "target_symbol": "BOTTOM"
+      }
+    ],
+    "policy": "deterministic stride over each per-class position list, row-major; the full 7056-record pool is pinned by dataset.sha256"
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "PASS - dataset labels derive from the certified native relation and all predicted counts agree"
+  }
+}

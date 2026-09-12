@@ -1,0 +1,2336 @@
+{
+  "addresses": {
+    "1:1,10:-1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,10:1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,11:-1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,11:1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,12:-1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,12:1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,13:-1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,13:1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,14:-1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,14:1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,15:-1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "1:1,15:1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "2:1,11:-1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "2:1,11:1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "01"
+        },
+        {
+          "PP": "01",
+          "pp": "01"
+        }
+      ]
+    },
+    "2:1,12:-1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,12:1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,13:-1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,13:1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,14:-1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,14:1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,15:-1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,15:1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "2:1,9:-1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "2:1,9:1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "3:1,10:-1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "3:1,10:1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "3:1,12:-1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,12:1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,13:-1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,13:1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,14:-1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,14:1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,15:-1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,15:1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "3:1,9:-1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "3:1,9:1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "4:1,10:-1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,10:1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,11:-1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "4:1,11:1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "4:1,13:-1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,13:1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,14:-1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,14:1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,15:-1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,15:1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "10"
+        },
+        {
+          "PP": "10",
+          "pp": "10"
+        }
+      ]
+    },
+    "4:1,9:-1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "4:1,9:1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "5:1,10:-1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "5:1,10:1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "5:1,11:-1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,11:1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,12:-1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "5:1,12:1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "5:1,14:-1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,14:1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,15:-1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,15:1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "5:1,9:-1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "5:1,9:1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "6:1,10:-1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "6:1,10:1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "6:1,11:-1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,11:1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,12:-1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "6:1,12:1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "6:1,13:-1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,13:1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,15:-1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,15:1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "00",
+          "pp": "11"
+        },
+        {
+          "PP": "11",
+          "pp": "11"
+        }
+      ]
+    },
+    "6:1,9:-1": {
+      "FFF": "111",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "6:1,9:1": {
+      "FFF": "111",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "7:1,10:-1": {
+      "FFF": "101",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "7:1,10:1": {
+      "FFF": "101",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "7:1,11:-1": {
+      "FFF": "100",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,11:1": {
+      "FFF": "100",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,12:-1": {
+      "FFF": "011",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "7:1,12:1": {
+      "FFF": "011",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "10"
+        },
+        {
+          "PP": "11",
+          "pp": "10"
+        }
+      ]
+    },
+    "7:1,13:-1": {
+      "FFF": "010",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,13:1": {
+      "FFF": "010",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,14:-1": {
+      "FFF": "001",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,14:1": {
+      "FFF": "001",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "01",
+          "pp": "11"
+        },
+        {
+          "PP": "10",
+          "pp": "11"
+        }
+      ]
+    },
+    "7:1,9:-1": {
+      "FFF": "110",
+      "S": 1,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    },
+    "7:1,9:1": {
+      "FFF": "110",
+      "S": 0,
+      "presentations": [
+        {
+          "PP": "10",
+          "pp": "01"
+        },
+        {
+          "PP": "11",
+          "pp": "01"
+        }
+      ]
+    }
+  },
+  "chart": {
+    "declared_normalization": [
+      "origin block = lexicographic minimum of the habitat's blocks under the key tuple(sorted(_encode_ray(event) for event in block)); it receives PP=00",
+      "pp values 01, 10, 11 are assigned to the habitat's three Fano lines in ascending sorted integer-triple order",
+      "S = 0 for delta=+1, S = 1 for delta=-1",
+      "these are BASIS CHOICES, not intrinsic structure; Arm D tests relabelling invariance against exactly this frozen chart"
+    ],
+    "determinism": "derived from the stable textual ray encoding (_encode_ray) and sorted Fano-line integer triples; never from set/dict iteration order or hash()",
+    "per_habitat": {
+      "S=0,FFF=001": {
+        "FFF": "001",
+        "P": 1,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "2:1,11:-1",
+            "4:1,13:-1",
+            "6:1,15:1"
+          ],
+          "01": [
+            "2:1,11:-1",
+            "5:1,12:1",
+            "7:1,14:-1"
+          ],
+          "10": [
+            "3:1,10:1",
+            "4:1,13:-1",
+            "7:1,14:-1"
+          ],
+          "11": [
+            "3:1,10:1",
+            "5:1,12:1",
+            "6:1,15:1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "2:1,11:-1",
+          "4:1,13:-1",
+          "6:1,15:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            1,
+            4,
+            5
+          ],
+          "11": [
+            1,
+            6,
+            7
+          ]
+        }
+      },
+      "S=0,FFF=010": {
+        "FFF": "010",
+        "P": 2,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,11:1",
+            "4:1,14:-1",
+            "5:1,15:-1"
+          ],
+          "01": [
+            "1:1,11:1",
+            "6:1,12:1",
+            "7:1,13:1"
+          ],
+          "10": [
+            "3:1,9:-1",
+            "4:1,14:-1",
+            "7:1,13:1"
+          ],
+          "11": [
+            "3:1,9:-1",
+            "5:1,15:-1",
+            "6:1,12:1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,11:1",
+          "4:1,14:-1",
+          "5:1,15:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            2,
+            5,
+            7
+          ]
+        }
+      },
+      "S=0,FFF=011": {
+        "FFF": "011",
+        "P": 3,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,10:-1",
+            "4:1,15:-1",
+            "5:1,14:1"
+          ],
+          "01": [
+            "1:1,10:-1",
+            "6:1,13:-1",
+            "7:1,12:1"
+          ],
+          "10": [
+            "2:1,9:1",
+            "4:1,15:-1",
+            "6:1,13:-1"
+          ],
+          "11": [
+            "2:1,9:1",
+            "5:1,14:1",
+            "7:1,12:1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,10:-1",
+          "4:1,15:-1",
+          "5:1,14:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            3,
+            4,
+            7
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=0,FFF=100": {
+        "FFF": "100",
+        "P": 4,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,13:1",
+            "2:1,14:1",
+            "3:1,15:1"
+          ],
+          "01": [
+            "1:1,13:1",
+            "6:1,10:-1",
+            "7:1,11:-1"
+          ],
+          "10": [
+            "2:1,14:1",
+            "5:1,9:-1",
+            "7:1,11:-1"
+          ],
+          "11": [
+            "3:1,15:1",
+            "5:1,9:-1",
+            "6:1,10:-1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,13:1",
+          "2:1,14:1",
+          "3:1,15:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            4,
+            5
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            3,
+            4,
+            7
+          ]
+        }
+      },
+      "S=0,FFF=101": {
+        "FFF": "101",
+        "P": 5,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,12:-1",
+            "2:1,15:1",
+            "3:1,14:-1"
+          ],
+          "01": [
+            "1:1,12:-1",
+            "6:1,11:1",
+            "7:1,10:-1"
+          ],
+          "10": [
+            "2:1,15:1",
+            "4:1,9:1",
+            "6:1,11:1"
+          ],
+          "11": [
+            "3:1,14:-1",
+            "4:1,9:1",
+            "7:1,10:-1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,12:-1",
+          "2:1,15:1",
+          "3:1,14:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            4,
+            5
+          ],
+          "10": [
+            2,
+            5,
+            7
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=0,FFF=110": {
+        "FFF": "110",
+        "P": 6,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,15:-1",
+            "2:1,12:-1",
+            "3:1,13:1"
+          ],
+          "01": [
+            "1:1,15:-1",
+            "4:1,10:1",
+            "5:1,11:-1"
+          ],
+          "10": [
+            "2:1,12:-1",
+            "5:1,11:-1",
+            "7:1,9:1"
+          ],
+          "11": [
+            "3:1,13:1",
+            "4:1,10:1",
+            "7:1,9:1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,15:-1",
+          "2:1,12:-1",
+          "3:1,13:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            6,
+            7
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=0,FFF=111": {
+        "FFF": "111",
+        "P": 7,
+        "S": 0,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,14:1",
+            "2:1,13:-1",
+            "3:1,12:-1"
+          ],
+          "01": [
+            "1:1,14:1",
+            "4:1,11:1",
+            "5:1,10:1"
+          ],
+          "10": [
+            "2:1,13:-1",
+            "4:1,11:1",
+            "6:1,9:-1"
+          ],
+          "11": [
+            "3:1,12:-1",
+            "5:1,10:1",
+            "6:1,9:-1"
+          ]
+        },
+        "delta": 1,
+        "origin_block": [
+          "1:1,14:1",
+          "2:1,13:-1",
+          "3:1,12:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            6,
+            7
+          ],
+          "10": [
+            2,
+            5,
+            7
+          ],
+          "11": [
+            3,
+            4,
+            7
+          ]
+        }
+      },
+      "S=1,FFF=001": {
+        "FFF": "001",
+        "P": 1,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "2:1,11:1",
+            "4:1,13:1",
+            "6:1,15:-1"
+          ],
+          "01": [
+            "2:1,11:1",
+            "5:1,12:-1",
+            "7:1,14:1"
+          ],
+          "10": [
+            "3:1,10:-1",
+            "4:1,13:1",
+            "7:1,14:1"
+          ],
+          "11": [
+            "3:1,10:-1",
+            "5:1,12:-1",
+            "6:1,15:-1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "2:1,11:1",
+          "4:1,13:1",
+          "6:1,15:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            1,
+            4,
+            5
+          ],
+          "11": [
+            1,
+            6,
+            7
+          ]
+        }
+      },
+      "S=1,FFF=010": {
+        "FFF": "010",
+        "P": 2,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,11:-1",
+            "4:1,14:1",
+            "5:1,15:1"
+          ],
+          "01": [
+            "1:1,11:-1",
+            "6:1,12:-1",
+            "7:1,13:-1"
+          ],
+          "10": [
+            "3:1,9:1",
+            "4:1,14:1",
+            "7:1,13:-1"
+          ],
+          "11": [
+            "3:1,9:1",
+            "5:1,15:1",
+            "6:1,12:-1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,11:-1",
+          "4:1,14:1",
+          "5:1,15:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            2,
+            5,
+            7
+          ]
+        }
+      },
+      "S=1,FFF=011": {
+        "FFF": "011",
+        "P": 3,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,10:1",
+            "4:1,15:1",
+            "5:1,14:-1"
+          ],
+          "01": [
+            "1:1,10:1",
+            "6:1,13:1",
+            "7:1,12:-1"
+          ],
+          "10": [
+            "2:1,9:-1",
+            "4:1,15:1",
+            "6:1,13:1"
+          ],
+          "11": [
+            "2:1,9:-1",
+            "5:1,14:-1",
+            "7:1,12:-1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,10:1",
+          "4:1,15:1",
+          "5:1,14:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            2,
+            3
+          ],
+          "10": [
+            3,
+            4,
+            7
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=1,FFF=100": {
+        "FFF": "100",
+        "P": 4,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,13:-1",
+            "2:1,14:-1",
+            "3:1,15:-1"
+          ],
+          "01": [
+            "1:1,13:-1",
+            "6:1,10:1",
+            "7:1,11:1"
+          ],
+          "10": [
+            "2:1,14:-1",
+            "5:1,9:1",
+            "7:1,11:1"
+          ],
+          "11": [
+            "3:1,15:-1",
+            "5:1,9:1",
+            "6:1,10:1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,13:-1",
+          "2:1,14:-1",
+          "3:1,15:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            4,
+            5
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            3,
+            4,
+            7
+          ]
+        }
+      },
+      "S=1,FFF=101": {
+        "FFF": "101",
+        "P": 5,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,12:1",
+            "2:1,15:-1",
+            "3:1,14:1"
+          ],
+          "01": [
+            "1:1,12:1",
+            "6:1,11:-1",
+            "7:1,10:1"
+          ],
+          "10": [
+            "2:1,15:-1",
+            "4:1,9:-1",
+            "6:1,11:-1"
+          ],
+          "11": [
+            "3:1,14:1",
+            "4:1,9:-1",
+            "7:1,10:1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,12:1",
+          "2:1,15:-1",
+          "3:1,14:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            4,
+            5
+          ],
+          "10": [
+            2,
+            5,
+            7
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=1,FFF=110": {
+        "FFF": "110",
+        "P": 6,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,15:1",
+            "2:1,12:1",
+            "3:1,13:-1"
+          ],
+          "01": [
+            "1:1,15:1",
+            "4:1,10:-1",
+            "5:1,11:1"
+          ],
+          "10": [
+            "2:1,12:1",
+            "5:1,11:1",
+            "7:1,9:-1"
+          ],
+          "11": [
+            "3:1,13:-1",
+            "4:1,10:-1",
+            "7:1,9:-1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,15:1",
+          "2:1,12:1",
+          "3:1,13:-1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            6,
+            7
+          ],
+          "10": [
+            2,
+            4,
+            6
+          ],
+          "11": [
+            3,
+            5,
+            6
+          ]
+        }
+      },
+      "S=1,FFF=111": {
+        "FFF": "111",
+        "P": 7,
+        "S": 1,
+        "blocks_by_PP": {
+          "00": [
+            "1:1,14:-1",
+            "2:1,13:1",
+            "3:1,12:1"
+          ],
+          "01": [
+            "1:1,14:-1",
+            "4:1,11:-1",
+            "5:1,10:-1"
+          ],
+          "10": [
+            "2:1,13:1",
+            "4:1,11:-1",
+            "6:1,9:1"
+          ],
+          "11": [
+            "3:1,12:1",
+            "5:1,10:-1",
+            "6:1,9:1"
+          ]
+        },
+        "delta": -1,
+        "origin_block": [
+          "1:1,14:-1",
+          "2:1,13:1",
+          "3:1,12:1"
+        ],
+        "origin_block_PP": "00",
+        "pp_to_fano_line": {
+          "01": [
+            1,
+            6,
+            7
+          ],
+          "10": [
+            2,
+            5,
+            7
+          ],
+          "11": [
+            3,
+            4,
+            7
+          ]
+        }
+      }
+    },
+    "sha256": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e"
+  },
+  "codec": {
+    "address_to_ray_to_address": 84,
+    "all_pp_nonzero": true,
+    "distinct_addresses": 84,
+    "distinct_incidence_presentations": 168,
+    "distinct_rays": 84,
+    "events": 84,
+    "events_with_both_presentations_decoding": 84,
+    "incidence_presentations": 168,
+    "incidences_match_pin": true,
+    "injective": true,
+    "ray_to_address_to_ray": 84,
+    "round_trip_both_directions_exact": true,
+    "surjective_onto_events": true
+  },
+  "digests": {
+    "addresses": "fe393cb901bd99786a5617b47121426f1ea2648a466b8777004d0a1d66a8d9ed",
+    "chart": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+    "incidence_view": "04e28d58aa41cf984e63fd657baf9e8417986019789516ae64b5ed8fda93368a"
+  },
+  "event_relation": {
+    "admission_agreement_exact": true,
+    "admission_agreements": 7056,
+    "admission_disagreement_count": 0,
+    "admission_disagreements": [],
+    "admitted_count_matches_pin": true,
+    "circuit_admitted_ordered_pairs": 336,
+    "comparison": "topographo.ssd.projective.equivalent (exact projective Event identity, not float proximity)",
+    "forced_third_agreement_exact": true,
+    "forced_third_agreements": 336,
+    "forced_third_checked": 336,
+    "forced_third_disagreement_count": 0,
+    "forced_third_disagreements": [],
+    "native_admissible_ordered_pairs": 336,
+    "no_pair_lookup_table": "admission and third are computed from equality, XOR, nonzero tests and endpoint intersection only",
+    "ordered_pairs_checked": 7056,
+    "zero_disagreements": true
+  },
+  "fences": [
+    "FFF=000 and pp=00 are formal algebraic completion values only.",
+    "They are NOT Events, Outcomes, retained states, annihilation, or non-admission.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "SFP is a representation/reference layer. It is NOT promoted to a replacement OT evaluator: it does not replace Occ, Cyc, Sand, or native Event denotation.",
+    "This codec must never be used to generate ground-truth labels."
+  ],
+  "habitat_certification": {
+    "all_habitats_free_transitive_C2xC2": true,
+    "habitats_certified": 14,
+    "per_habitat": {
+      "S=0,FFF=001": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=010": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=011": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=100": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=101": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=110": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=0,FFF=111": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=001": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=010": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=011": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=100": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=101": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=110": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      },
+      "S=1,FFF=111": {
+        "action_free": true,
+        "action_transitive": true,
+        "all_classes_are_perfect_matchings": true,
+        "all_matchings_fixed_point_free_involutions": true,
+        "block_degree_values": [
+          2
+        ],
+        "blocks": 4,
+        "chart_equivariant": true,
+        "events": 6,
+        "group_closed": true,
+        "group_isomorphic_C2xC2": true,
+        "group_order": 4,
+        "incidences": 12,
+        "labelling_is_xor_homomorphism": true,
+        "line_classes": 3,
+        "lines_are_nonzero_cosets_of_P": true
+      }
+    },
+    "uniform_across_all_habitats": {
+      "action_free": [
+        true
+      ],
+      "action_transitive": [
+        true
+      ],
+      "all_classes_are_perfect_matchings": [
+        true
+      ],
+      "all_matchings_fixed_point_free_involutions": [
+        true
+      ],
+      "block_degree_values": [
+        [
+          2
+        ]
+      ],
+      "blocks": [
+        4
+      ],
+      "chart_equivariant": [
+        true
+      ],
+      "events": [
+        6
+      ],
+      "group_closed": [
+        true
+      ],
+      "group_isomorphic_C2xC2": [
+        true
+      ],
+      "group_order": [
+        4
+      ],
+      "incidences": [
+        12
+      ],
+      "labelling_is_xor_homomorphism": [
+        true
+      ],
+      "line_classes": [
+        3
+      ],
+      "lines_are_nonzero_cosets_of_P": [
+        true
+      ]
+    }
+  },
+  "incidence_law": {
+    "admitted_by_incidence_law": 336,
+    "disagreement_count": 0,
+    "disagreements": [],
+    "exact": true,
+    "forced_third_agreements": 336,
+    "incidence_presentations": 168,
+    "ordered_presentation_pairs": 28224
+  },
+  "module": "experiments/sfp_representation/sfp.py",
+  "pins": {
+    "blocks_per_habitat": 4,
+    "events": 84,
+    "events_per_habitat": 6,
+    "habitats": 14,
+    "incidences": 168,
+    "incidences_per_habitat": 12,
+    "ordered_pairs": 336,
+    "ordered_pairs_per_habitat": 24,
+    "total_ordered_pairs": 7056
+  },
+  "provenance": {
+    "base_commit": "174925310ca1ff15948b17e336c787525640dc6c",
+    "gate_0": "experiments/sfp_representation/conformance.py (PASSED)",
+    "native_sources": [
+      "topographo.ssd.fips_basic.EVENTS / BLOCKS / admissible / third",
+      "topographo.ssd.seal.public_label (habitat key (P, delta))",
+      "topographo.ssd.projective.equivalent (exact Event identity)"
+    ],
+    "table_sha256": {
+      "agrees": true,
+      "expected": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
+      "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea"
+    },
+    "topographo_version": "0.8.3"
+  },
+  "purpose": "SFP core: habitat enumeration and the S|FFF|PP|pp codec, plus ExactSfpCircuit as a nonlearned reference oracle",
+  "reference_oracle_only": "ExactSfpCircuit is a nonlearned REFERENCE ORACLE. It must never be used to generate ground-truth labels; labels come from topographo.ssd.fips_basic (admissible / third), the certified native relation.",
+  "relational_laws": {
+    "codec_all_pp_nonzero": true,
+    "codec_incidences_168": true,
+    "codec_injective": true,
+    "codec_round_trip_both_directions": true,
+    "codec_surjective": true,
+    "event_admission_exact_7056": true,
+    "event_admitted_336": true,
+    "event_forced_third_exact_336": true,
+    "event_zero_disagreements": true,
+    "habitat_torsors_certified": true,
+    "habitats_all_14": true,
+    "incidence_law_exact": true,
+    "provenance_table_digest": true
+  },
+  "sfp_typing": {
+    "FFF": "nonzero Fano point P (1..7)",
+    "PP": "affine cyclic-block coordinate q in F_2^2",
+    "S": "habitat sign delta",
+    "pp": "nonzero affine displacement d / Fano-line class through P"
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "PASS - codec is bijective on the 84 certified Events and ExactSfpCircuit reproduces the certified native FIPS relation exactly over all 7056 ordered pairs"
+  }
+}

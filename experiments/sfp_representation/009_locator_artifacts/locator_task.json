@@ -1,0 +1,1680 @@
+{
+  "arm_output_convention": {
+    "A_native": "B_sfp",
+    "B_sfp": "B_sfp",
+    "C_scrambled": "C_scrambled",
+    "D_relabeled": "D_relabeled"
+  },
+  "base_commit": "4520c80807b8480081f396180446880a3ff6fba1",
+  "builds_on": "009.06-Kiro-corrected-structured-consequence-address-ladder-result.md",
+  "chamber_map": {
+    "block_habitat_always_agrees": true,
+    "blocks_mapped": 56,
+    "blocks_whose_habitat_agrees_with_their_events": 56,
+    "every_habitat_bijective_onto_its_chart": true,
+    "how_built": "sfp.block_key of the certified block's rays, looked up in the frozen sfp.Habitat.q_of_block_key; a pure lookup with no relation in scope",
+    "per_habitat": {
+      "S=0,FFF=001": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=010": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=011": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=100": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=101": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=110": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=0,FFF=111": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=001": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=010": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=011": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=100": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=101": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=110": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "S=1,FFF=111": {
+        "bijective_onto_the_chart": true,
+        "chambers": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  },
+  "chamber_values": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "code_arms": [
+    "B_sfp",
+    "C_scrambled",
+    "D_relabeled"
+  ],
+  "digests": {
+    "catalogue": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "chamber_map": "fc3ca151e48693de822cf5f7de980c0ac7194f49f6ca84769618f13cb6c08df5",
+    "chart": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+    "dataset": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "qstar_labels": "3d53db9acaa9078eb760bf5741838ee1077c08dc322d8870539d1e023647f6c1"
+  },
+  "executes": "009.07-Kiro-query-relative-PP-localization-task.md",
+  "fences": [
+    "q* comes from the certified FIPS relation via record.shared_block, never from sfp.ExactSfpCircuit.",
+    "algebraic zero != NONADMISSION;   0 != bottom",
+    "PP=00 is the declared origin block, a real chart value, not a completion value.",
+    "pp=00 and FFF=000 remain formal algebraic completion values only.",
+    "q* is QUERY-RELATIVE. It is not a globally preferred endpoint of the forced Event and adds no preferred origin to the affine PP torsor: both presentations (q*, d3) and (q* XOR d3, d3) name the same certified Event and the fixed resolver accepts either.",
+    "The chamber symbols 00..11 are NOT renamed by Arm C. The scramble is a permutation of the six K4 EDGES inside a habitat, so the certified q* transports to Arm C unchanged and is allowed to be misaligned with C's coded incidence. That misalignment is the phenomenon under test, not a labelling bug.",
+    "No unsupported Arm C example is dropped. The representational-support fraction is reported instead.",
+    "SFP is a representation layer, not a replacement OT evaluator.",
+    "The exact endpoint-intersection circuit is a nonlearned CEILING, not a competing learned baseline."
+  ],
+  "label_source_fence": {
+    "banned_parameter_tokens": [
+      "circuit",
+      "oracle",
+      "sfp_circuit",
+      "exactsfpcircuit"
+    ],
+    "circuit_role_in_this_module": "sfp.ExactSfpCircuit is imported for the post-hoc structural read-outs verify_qstar_alignment and the ceiling census only, exactly as arms.py imports it for relation_report. It generates no label.",
+    "label_functions": [
+      {
+        "function": "qstar_exact",
+        "parameters": [
+          {
+            "annotation": "<class 'task.PairRecord'>",
+            "name": "record",
+            "suspect": false
+          },
+          {
+            "annotation": "dict[int, tuple[tuple[int, int], int]]",
+            "name": "chamber_of_block",
+            "suspect": false
+          }
+        ],
+        "signature": "(record: task.PairRecord, chamber_of_block: dict[int, tuple[tuple[int, int], int]]) -> int"
+      },
+      {
+        "function": "qstar_target",
+        "parameters": [
+          {
+            "annotation": "<class 'task.PairRecord'>",
+            "name": "record",
+            "suspect": false
+          },
+          {
+            "annotation": "dict[int, tuple[tuple[int, int], int]]",
+            "name": "chamber_of_block",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[int, ...]",
+            "name": "action",
+            "suspect": false
+          }
+        ],
+        "signature": "(record: task.PairRecord, chamber_of_block: dict[int, tuple[tuple[int, int], int]], action: tuple[int, ...]) -> int"
+      },
+      {
+        "function": "query_relative_address",
+        "parameters": [
+          {
+            "annotation": "<class 'task.PairRecord'>",
+            "name": "record",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[sfp.SfpAddress, ...]",
+            "name": "table",
+            "suspect": false
+          },
+          {
+            "annotation": "dict[int, tuple[tuple[int, int], int]]",
+            "name": "chamber_of_block",
+            "suspect": false
+          },
+          {
+            "annotation": "tuple[int, ...]",
+            "name": "action",
+            "suspect": false
+          }
+        ],
+        "signature": "(record: task.PairRecord, table: tuple[sfp.SfpAddress, ...], chamber_of_block: dict[int, tuple[tuple[int, int], int]], action: tuple[int, ...]) -> sfp.SfpAddress"
+      },
+      {
+        "function": "qstar_positions",
+        "parameters": [
+          {
+            "annotation": "<class 'task.Dataset'>",
+            "name": "dataset",
+            "suspect": false
+          },
+          {
+            "annotation": "",
+            "name": "fold",
+            "suspect": false
+          }
+        ],
+        "signature": "(dataset: task.Dataset, fold) -> tuple[tuple[int, ...], tuple[int, ...]]"
+      }
+    ],
+    "no_label_function_accepts_a_circuit": true,
+    "offenders": [],
+    "qstar_provenance_chain": [
+      "topographo.ssd.fips_basic.BLOCKS -- the certified cyclic blocks",
+      "task.build_catalogue -> Catalogue.block_ids / Catalogue.blocks",
+      "task.Catalogue.shared_blocks(a, b) -- set intersection of block_ids",
+      "task.label_pair asserts exactly one shared block for an admitted pair and stores it as PairRecord.shared_block",
+      "locator_task.certified_chamber_of_block maps that block id to a chamber through sfp.Habitat.q_of_block_key, the frozen chart",
+      "locator_task.qstar_target transports the chamber by the arm's DECLARED code map from arms.py"
+    ]
+  },
+  "leakage": {
+    "all_rung1_test_targets_are_held_out_events": true,
+    "checked": "held-out Events as training targets, as training inputs, and as training output CODE WORDS in every arm's alphabet, plus bucket disjointness, at both rungs",
+    "no_leakage_anywhere": true,
+    "per_fold": [
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "name": "P=1,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "name": "P=1,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "name": "P=2,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "name": "P=2,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "name": "P=3,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "name": "P=3,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "name": "P=4,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "name": "P=4,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "name": "P=5,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "name": "P=5,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "name": "P=6,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "name": "P=6,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "name": "P=7,delta=-1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOHO",
+        "held_out_events": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "name": "P=7,delta=+1",
+        "rung1_test_target_count": 6,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          14,
+          15,
+          26,
+          27,
+          42,
+          43,
+          54,
+          55,
+          70,
+          71,
+          82,
+          83
+        ],
+        "name": "P=1",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          2,
+          3,
+          24,
+          25,
+          44,
+          45,
+          58,
+          59,
+          66,
+          67,
+          80,
+          81
+        ],
+        "name": "P=2",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          0,
+          1,
+          12,
+          13,
+          46,
+          47,
+          56,
+          57,
+          68,
+          69,
+          78,
+          79
+        ],
+        "name": "P=3",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          6,
+          7,
+          20,
+          21,
+          34,
+          35,
+          48,
+          49,
+          62,
+          63,
+          76,
+          77
+        ],
+        "name": "P=4",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          4,
+          5,
+          22,
+          23,
+          32,
+          33,
+          36,
+          37,
+          64,
+          65,
+          74,
+          75
+        ],
+        "name": "P=5",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          10,
+          11,
+          16,
+          17,
+          30,
+          31,
+          38,
+          39,
+          52,
+          53,
+          72,
+          73
+        ],
+        "name": "P=6",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      },
+      {
+        "buckets_disjoint": true,
+        "family": "LOFPO",
+        "held_out_events": [
+          8,
+          9,
+          18,
+          19,
+          28,
+          29,
+          40,
+          41,
+          50,
+          51,
+          60,
+          61
+        ],
+        "name": "P=7",
+        "rung1_test_target_count": 12,
+        "rung1_test_targets_are_held_out": true,
+        "rung1_train_input_leak": [],
+        "rung1_train_target_leak": [],
+        "rung2_train_address_leak_by_arm": {
+          "A_native": 0,
+          "B_sfp": 0,
+          "C_scrambled": 0,
+          "D_relabeled": 0
+        },
+        "rung2_train_input_leak": [],
+        "rung2_train_target_leak": []
+      }
+    ],
+    "why_addresses_too": "an Event held out by index could still leak through its code word if two arms disagreed about the assignment; the address check closes that door for C and D as well as B"
+  },
+  "module": "locator_task",
+  "non_replayable_keys": [
+    "prior_reference"
+  ],
+  "pins": {
+    "admit": {
+      "agrees": true,
+      "expected": 336,
+      "observed": 336,
+      "source": "task.Dataset.admit_positions"
+    },
+    "certified_blocks": {
+      "agrees": true,
+      "expected": 56,
+      "observed": 56,
+      "source": "task.Catalogue"
+    },
+    "chambers_per_chart": {
+      "agrees": true,
+      "expected": 4,
+      "observed": 4,
+      "source": "sfp.py chart"
+    },
+    "lofpo_folds": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "folds.py"
+    },
+    "loho_folds": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "folds.py"
+    },
+    "structural_folds": {
+      "agrees": true,
+      "expected": 21,
+      "observed": 21,
+      "source": "folds.structural_folds"
+    }
+  },
+  "pp_classes": [
+    1,
+    2,
+    3
+  ],
+  "prior_reference": {
+    "all_quoted_numbers_reproduce": true,
+    "artifact_present": true,
+    "checks": {
+      "field_PP_accuracy|LOFPO": {
+        "agrees_to_four_decimals": true,
+        "observed": 0.705357142857,
+        "quoted": 0.7054
+      },
+      "field_PP_accuracy|LOHO": {
+        "agrees_to_four_decimals": true,
+        "observed": 0.715773809524,
+        "quoted": 0.7158
+      },
+      "field_pp_accuracy|LOHO": {
+        "agrees_to_four_decimals": true,
+        "observed": 0.97619047619,
+        "quoted": 0.9762
+      },
+      "positive_forced_third_exact_accuracy|LOHO": {
+        "agrees_to_four_decimals": true,
+        "observed": 0.701636904762,
+        "quoted": 0.7016
+      }
+    },
+    "observed": {
+      "field_PP_accuracy": {
+        "LOFPO": 0.705357142857,
+        "LOHO": 0.715773809524
+      },
+      "field_pp_accuracy": {
+        "LOHO": 0.97619047619
+      },
+      "positive_forced_third_exact_accuracy": {
+        "LOHO": 0.701636904762
+      }
+    },
+    "quoted": {
+      "block": "repair",
+      "criterion": "009.06's field_PP_accuracy is a SET criterion: an argmax landing on either of the target Event's two block-incidence presentations was scored correct. It is therefore NOT the same quantity as q*-exact accuracy, which is a point criterion on the single certified shared chamber. Both are reported in this turn, and only the set-relaxed one is compared to 0.7158.",
+      "field_PP_accuracy": {
+        "LOFPO": 0.7054,
+        "LOHO": 0.7158
+      },
+      "field_pp_accuracy": {
+        "LOHO": 0.9762
+      },
+      "positive_forced_third_exact_accuracy": {
+        "LOHO": 0.7016
+      }
+    },
+    "status": "re-derived from 009_ladder_artifacts/ladder_sweep.json"
+  },
+  "qstar_alignment": {
+    "arm_a_asymmetry": "A_native reads native projective coordinates and writes the exact SFP chart, because it has no code of its own. No SFP field enters its INPUT: arms.py build_arm_a takes only the catalogue, and arm_a_no_sfp_field certifies the token tensor carries no SFP unit. The shared output alphabet is a property of the output object, which is identical for every arm by construction, so this is a type-fair structured-output comparison and not an injection of SFP information into the native arm. It is still reported as the one asymmetry, and the decisive B/C/D structural contrast never involves it.",
+    "exact_and_relabeled_fully_support_qstar": true,
+    "oracle_role": "sfp.ExactSfpCircuit as a nonlearned reference oracle for a structural READ-OUT; never a label source and never shown to a learner",
+    "per_arm": {
+      "A_native": {
+        "admitted_pairs": 336,
+        "code_shared_endpoint_defined": 336,
+        "code_shared_endpoint_is_qstar": 336,
+        "fully_supported": true,
+        "qstar_in_coded_target": 336,
+        "query_relative_address_denotes_the_target": 336,
+        "representational_support_fraction": 1.0,
+        "target_support_fraction": 1.0
+      },
+      "B_sfp": {
+        "admitted_pairs": 336,
+        "code_shared_endpoint_defined": 336,
+        "code_shared_endpoint_is_qstar": 336,
+        "fully_supported": true,
+        "qstar_in_coded_target": 336,
+        "query_relative_address_denotes_the_target": 336,
+        "representational_support_fraction": 1.0,
+        "target_support_fraction": 1.0
+      },
+      "C_scrambled": {
+        "admitted_pairs": 336,
+        "code_shared_endpoint_defined": 276,
+        "code_shared_endpoint_is_qstar": 72,
+        "fully_supported": false,
+        "qstar_in_coded_target": 166,
+        "query_relative_address_denotes_the_target": 166,
+        "representational_support_fraction": 0.214285714286,
+        "target_support_fraction": 0.494047619048
+      },
+      "D_relabeled": {
+        "admitted_pairs": 336,
+        "code_shared_endpoint_defined": 336,
+        "code_shared_endpoint_is_qstar": 336,
+        "fully_supported": true,
+        "qstar_in_coded_target": 336,
+        "query_relative_address_denotes_the_target": 336,
+        "representational_support_fraction": 1.0,
+        "target_support_fraction": 1.0
+      }
+    },
+    "scramble_statement": "the certified q* is a chamber symbol and Arm C renames no chamber, so the label is well defined for C; what C lacks is the INCIDENCE that makes it findable. A non-automorphic edge permutation can carry two Events that share a block onto two that do not, so C's coded inputs often meet in no chamber or in the wrong one. Those examples are kept and C is allowed to fail on them, per 009.07 section 7.",
+    "scramble_support_fraction": 0.214285714286
+  },
+  "qstar_census": {
+    "all_arms_uniform": true,
+    "chance": 0.25,
+    "chance_statement": "the q* marginal is exactly uniform at 84 of 336 per chamber under every arm's declared action, because a chamber permutation cannot change a uniform marginal, so chance is 1/4 analytically and not merely by sampling",
+    "held_out_object": "a complete structural unit -- a habitat under LOHO, a Fano point under LOFPO -- exactly as 009.02 and 009.06 held out. The four abstract chamber values necessarily RECUR in training: a chart has only four of them. 009.07 section 4.1 requires this to be said explicitly. The task is transfer of the localization relation to an unseen structural unit, not prediction of an unseen output class.",
+    "per_arm": {
+      "A_native": {
+        "chamber_action": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "chamber_action_source": "identity (writes the B_sfp alphabet)",
+        "distinct_labels": 4,
+        "label_marginal": {
+          "00": 84,
+          "01": 84,
+          "10": 84,
+          "11": 84
+        },
+        "labelled_pairs": 336,
+        "uniform": true
+      },
+      "B_sfp": {
+        "chamber_action": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "chamber_action_source": "identity (the frozen sfp.py chart)",
+        "distinct_labels": 4,
+        "label_marginal": {
+          "00": 84,
+          "01": 84,
+          "10": 84,
+          "11": 84
+        },
+        "labelled_pairs": 336,
+        "uniform": true
+      },
+      "C_scrambled": {
+        "chamber_action": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "chamber_action_source": "identity (an EDGE permutation renames no chamber)",
+        "distinct_labels": 4,
+        "label_marginal": {
+          "00": 84,
+          "01": 84,
+          "10": 84,
+          "11": 84
+        },
+        "labelled_pairs": 336,
+        "uniform": true
+      },
+      "D_relabeled": {
+        "chamber_action": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "chamber_action_source": "groups.chamber_permutation(arms.ARM_D_AFFINE)",
+        "distinct_labels": 4,
+        "label_marginal": {
+          "00": 84,
+          "01": 84,
+          "10": 84,
+          "11": 84
+        },
+        "labelled_pairs": 336,
+        "uniform": true
+      }
+    }
+  },
+  "recomposition_targets": {
+    "exact_and_relabeled_identical_to_009_06": true,
+    "per_arm": {
+      "A_native": {
+        "admitted_pairs": 336,
+        "both_presentations_agree": true,
+        "identical_to_009_06_targets": true,
+        "other_presentation_equals_009_06_target": 336,
+        "qstar_lies_in_the_009_06_pp_set": 336,
+        "query_relative_equals_009_06_target": 336
+      },
+      "B_sfp": {
+        "admitted_pairs": 336,
+        "both_presentations_agree": true,
+        "identical_to_009_06_targets": true,
+        "other_presentation_equals_009_06_target": 336,
+        "qstar_lies_in_the_009_06_pp_set": 336,
+        "query_relative_equals_009_06_target": 336
+      },
+      "C_scrambled": {
+        "admitted_pairs": 336,
+        "both_presentations_agree": true,
+        "identical_to_009_06_targets": false,
+        "other_presentation_equals_009_06_target": 166,
+        "qstar_lies_in_the_009_06_pp_set": 166,
+        "query_relative_equals_009_06_target": 166
+      },
+      "D_relabeled": {
+        "admitted_pairs": 336,
+        "both_presentations_agree": true,
+        "identical_to_009_06_targets": true,
+        "other_presentation_equals_009_06_target": 336,
+        "qstar_lies_in_the_009_06_pp_set": 336,
+        "query_relative_equals_009_06_target": 336
+      }
+    },
+    "scramble_note": "under Arm C the certified q* need not lie in C's coded target address, so the query-relative presentation can fail to denote it. That is the same misalignment the support fraction records, and it is why C is the load-bearing control rather than a broken arm.",
+    "torsor_statement": "both (q*, d3) and (q* XOR d3, d3) canonicalize to one SfpAddress, so naming the consequence relative to the query does not privilege an origin of the affine PP torsor. The Rung-2 metric is unchanged from 009.06 precisely because the target Event is unchanged."
+  },
+  "replay_note": "prior_reference is excluded from the --check byte comparison because it reads 009_ladder_artifacts/ladder_sweep.json, which is gitignored bulk run data hosted in the Quilt package. Its content depends on whether that file has been fetched, so including it would make --check fail in a fresh clone for a reason unrelated to this module. Everything else in this artifact is derived from the frozen in-repo chain and replays byte for byte with nothing fetched.",
+  "science_arms": [
+    "A_native",
+    "B_sfp",
+    "C_scrambled",
+    "D_relabeled"
+  ],
+  "scramble_recertification": {
+    "all_outside_the_induced_class": true,
+    "code_alphabet_identical": true,
+    "field_marginals_B": {
+      "FFF": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12,
+        "7": 12
+      },
+      "PP": {
+        "0": 42,
+        "1": 42,
+        "2": 42,
+        "3": 42
+      },
+      "S": {
+        "0": 42,
+        "1": 42
+      },
+      "pp": {
+        "1": 28,
+        "2": 28,
+        "3": 28
+      }
+    },
+    "field_marginals_C": {
+      "FFF": {
+        "1": 12,
+        "2": 12,
+        "3": 12,
+        "4": 12,
+        "5": 12,
+        "6": 12,
+        "7": 12
+      },
+      "PP": {
+        "0": 42,
+        "1": 42,
+        "2": 42,
+        "3": 42
+      },
+      "S": {
+        "0": 42,
+        "1": 42
+      },
+      "pp": {
+        "1": 28,
+        "2": 28,
+        "3": 28
+      }
+    },
+    "field_marginals_match": true,
+    "frozen_before_training": "arms.scramble_plan derives the permutations from sha256('009/task6/arm-c-scramble/v1|<habitat>') and no module downstream may reselect them; this turn imports arms.all_arms and invents nothing",
+    "habitats_checked": 14,
+    "induced_class_size": {
+      "agrees": true,
+      "expected": 24,
+      "observed": 24,
+      "source": "groups.induced_edge_permutations"
+    },
+    "none_structure_preserving": true,
+    "per_habitat": [
+      {
+        "edge_permutation": [
+          0,
+          5,
+          1,
+          3,
+          4,
+          2
+        ],
+        "habitat": "P=1,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "d2316c81ab4917a59a788f1473eb843720bf53714cf70ec1b22a91ae0dba8d07"
+      },
+      {
+        "edge_permutation": [
+          4,
+          1,
+          3,
+          2,
+          5,
+          0
+        ],
+        "habitat": "P=1,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "1823e977ee4bbc08799efd528a93dd59dc22e6d91be663faedcb35f4c0cc1456"
+      },
+      {
+        "edge_permutation": [
+          2,
+          0,
+          3,
+          1,
+          5,
+          4
+        ],
+        "habitat": "P=2,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "df1be6ea0cf49e8aab793bee44e7243878e00f00c812d3696c1b9ef1382e064e"
+      },
+      {
+        "edge_permutation": [
+          5,
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        "habitat": "P=2,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "09e112e5f3e07117b864393f6669d070f64055a1932464670ff880b3a62e785f"
+      },
+      {
+        "edge_permutation": [
+          1,
+          5,
+          0,
+          2,
+          3,
+          4
+        ],
+        "habitat": "P=3,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "fef9ddad2fcf3413f76ba381cb86b5791bec2417460b7a79be9074c46cff4999"
+      },
+      {
+        "edge_permutation": [
+          2,
+          3,
+          0,
+          1,
+          5,
+          4
+        ],
+        "habitat": "P=3,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "31ff3d991fb20fc3786c3a5f528c11b56b53186ff3f208e520e69e3a2f248b97"
+      },
+      {
+        "edge_permutation": [
+          1,
+          2,
+          5,
+          0,
+          3,
+          4
+        ],
+        "habitat": "P=4,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "844d276fef19f4f3403619442894755307bb04139f3da3064b53d7ddc1f18084"
+      },
+      {
+        "edge_permutation": [
+          0,
+          5,
+          2,
+          1,
+          4,
+          3
+        ],
+        "habitat": "P=4,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "dc394a8d6828465aed0b00a6c27d6eb4de61f5049ce969ae6858cb64b089aa0b"
+      },
+      {
+        "edge_permutation": [
+          1,
+          2,
+          4,
+          5,
+          0,
+          3
+        ],
+        "habitat": "P=5,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "bf98680c164a20f5f26e63de68c3105c754b9bd0a3f87eaae47f9045c8ac76aa"
+      },
+      {
+        "edge_permutation": [
+          1,
+          0,
+          2,
+          5,
+          3,
+          4
+        ],
+        "habitat": "P=5,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "0d8639bb14993df5cfde1b458ccf45af7db140aa77db71d68d0ee46883ebe58f"
+      },
+      {
+        "edge_permutation": [
+          1,
+          5,
+          3,
+          0,
+          2,
+          4
+        ],
+        "habitat": "P=6,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "6f730fd7375676d9e4c01a2b3e092c318f139e83186aa96f1b013b1143a60e55"
+      },
+      {
+        "edge_permutation": [
+          2,
+          4,
+          0,
+          5,
+          3,
+          1
+        ],
+        "habitat": "P=6,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "f063f0ae0e4307e6ca3baf3c9bf321d834e1537eb52a7f0600bdab1cf68e50eb"
+      },
+      {
+        "edge_permutation": [
+          3,
+          4,
+          5,
+          1,
+          2,
+          0
+        ],
+        "habitat": "P=7,delta=-1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "0f3958ede3ae0342cb216a98748919d2b56b7244bd2e0927fe2d2397aa5e7fce"
+      },
+      {
+        "edge_permutation": [
+          1,
+          3,
+          0,
+          5,
+          2,
+          4
+        ],
+        "habitat": "P=7,delta=+1",
+        "in_the_24_induced_class": false,
+        "is_a_permutation": true,
+        "is_structure_preserving": false,
+        "seed_sha256": "61ab9e2eadb600be352ba0bf2da359e3ca2491d050800f724def56c51894b7ee"
+      }
+    ],
+    "reused_not_reinvented": "the Arm C construction is the frozen 009.02/009.06 object, reused by import. 009.07 section 7 forbids inventing a new scramble after seeing results and none was invented."
+  },
+  "splits": {
+    "lofpo_folds": 7,
+    "loho_folds": 14,
+    "n_folds": 21,
+    "per_fold": [
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=1,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=1,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=2,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=2,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=3,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=3,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=4,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=4,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=5,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=5,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=6,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=6,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=7,delta=-1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOHO",
+        "held_out_events": 6,
+        "name": "P=7,delta=+1",
+        "rung1_test": 24,
+        "rung1_train": 312,
+        "rung2_test": 62,
+        "rung2_train": 780
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=1",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=2",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=3",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=4",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=5",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=6",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      },
+      {
+        "family": "LOFPO",
+        "held_out_events": 12,
+        "name": "P=7",
+        "rung1_test": 48,
+        "rung1_train": 288,
+        "rung2_test": 192,
+        "rung2_train": 720
+      }
+    ],
+    "reused_from": "ladder_task.rung1_positions and ladder_task.rung2_positions, which in turn delegate to harness.training_positions / evaluation_positions; the splits are byte-identical to the ones that produced 0.7158 and 0.7016"
+  },
+  "target_covariance": {
+    "action_composed_with_inverse": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "admitted_pairs": 336,
+    "affine_element": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "chamber_action": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "codes_checked": 84,
+    "declared_action_is_the_arm_d_map": true,
+    "declared_action_matches_relabel_address": 84,
+    "inverse_chamber_action": [
+      2,
+      0,
+      3,
+      1
+    ],
+    "inverse_is_an_inverse": true,
+    "label_covariance_exact": true,
+    "qstar_round_trips_through_the_inverse": 336,
+    "statement": "at the LABEL level covariance is exact and carries no learning: q*_D = phi(q*_B) on all 336 admitted pairs and phi is the same chamber action that arms.relabel_address used to build Arm D's code table. The learned half of the covariance requirement is a separate, measured audit in locator_heads.py (architectural, exact) and locator_analysis.py (paired D-B, measured)."
+  },
+  "torch_status": "no tensor is constructed in this module. torch is inherited transitively through ladder_task -> harness, which is recorded rather than claimed otherwise.",
+  "upstream_pins": {
+    "all_upstream_pins_agree": true,
+    "checks": {
+      "catalogue": {
+        "agrees": true,
+        "expected": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "observed": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+        "source": "task.py"
+      },
+      "dataset": {
+        "agrees": true,
+        "expected": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "observed": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+        "source": "task.py"
+      },
+      "fold_manifest": {
+        "agrees": true,
+        "expected": "27b01b5e7440c2449e28d8e5b3f82addba1028a1640707752ab01215a938a6ee",
+        "observed": "27b01b5e7440c2449e28d8e5b3f82addba1028a1640707752ab01215a938a6ee",
+        "source": "folds.py"
+      },
+      "sfp_chart": {
+        "agrees": true,
+        "expected": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "observed": "38dbbfec0111c654778bbf873f0dbcfd2d2141ff9b8405b71d273bbfd8830e5e",
+        "source": "sfp.py"
+      }
+    },
+    "statement": "the pool, the splits and the chart are the frozen 009.02 objects, byte-identical; this ladder changes only the output object"
+  },
+  "verdict": {
+    "agrees": true,
+    "statement": "the certified query-relative shared chamber q* is defined, circuit-free, uniform at chance 1/4, exactly supported by the exact and relabeled codes, covariant at the label level, identical to the 009.06 target Events, and leakage-free on all 21 structural folds"
+  }
+}

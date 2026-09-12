@@ -1,0 +1,1297 @@
+{
+  "answer_rule": {
+    "annotations_stripped_before_the_operator_scan": "type unions such as `DiscoveryConfig | None` parse as BinOp(BitOr). Annotations are removed from the tree first so the scan reports only bitwise operators in executable code, and a real ^, & or | still trips.",
+    "banned_identifiers": [
+      "anchor_third",
+      "anchor_third_unit_form",
+      "system_third",
+      "compatible_block_systems",
+      "cliques3",
+      "automorphisms",
+      "certified_relabelings",
+      "ExactSfpCircuit",
+      "forced_third_event",
+      "shared_block",
+      "admit_event",
+      "SfpCodec",
+      "build_local_problems",
+      "certified_third",
+      "certified_blocks",
+      "sfp_token",
+      "address_of"
+    ],
+    "banned_operators": [
+      "XOR",
+      "bitwise AND / set intersection",
+      "bitwise OR / set union"
+    ],
+    "encoder_disclosure": "episode_inputs builds a frozenset of the SUPPLIED admitted pairs in order to write the adjacency matrix. That is a graph encoding of an input, not an answer rule: it never intersects the two query nodes' neighbourhoods, never completes a triple, and never consults a block system, a chart or the certified third.",
+    "exact_completion_status": "the exact one-anchor completion lives in discovery_task.anchor_third and is used only by discovery_baselines as a NONLEARNED CEILING. It is not imported by this module and appears on no learned path.",
+    "learned_path": [
+      "episode_inputs",
+      "OpaqueChartPointer",
+      "pointer_loss",
+      "build_pointer"
+    ],
+    "no_banned_identifier_on_the_learned_path": true,
+    "no_banned_operator_on_the_learned_path": true,
+    "per_object": [
+      {
+        "banned_identifiers_present": [],
+        "banned_operators_present": [],
+        "object": "episode_inputs"
+      },
+      {
+        "banned_identifiers_present": [],
+        "banned_operators_present": [],
+        "object": "OpaqueChartPointer"
+      },
+      {
+        "banned_identifiers_present": [],
+        "banned_operators_present": [],
+        "object": "pointer_loss"
+      },
+      {
+        "banned_identifiers_present": [],
+        "banned_operators_present": [],
+        "object": "build_pointer"
+      }
+    ]
+  },
+  "base_commit": "7a37f58444901c32a6e750e617d8d4d82b9f6202",
+  "diagnosed_pathology": {
+    "cause": "with m_ij = Message(h_j) the candidate must learn the conjunction 'neighbour is query-marked AND anchor-marked' inside the message function and only then combine that count with its own anchor mark. The parity is assembled from two separately learned pieces and the linearly available piece -- avoid anchor-marked candidates -- already scores 6/9",
+    "discipline": "009.09 section 5.3 permits one primary pass and at most one clearly diagnosed repair. Both blocks are run and both are reported; the primary block is not deleted and its failure is not rounded away",
+    "name": "the 6/9 anchor-preference saddle",
+    "not_expressivity": "depth does not fix it: 3 layers reaches 1.0000 by step 200 and falls back to 0.6667 by step 800, and 4 layers oscillates. The parity is representable at 2 layers -- one affected seed of three reaches 1.0000 at step 40 and holds it to step 4000",
+    "persistence": "unchanged from step 40 through step 4000 on the affected seeds, so it is a flat attractor rather than slow convergence",
+    "repair": "condition the message on the ordered edge: m_ij = Message([h_i, h_j]). One change, same family, same widths, same optimizer, same step count, same seeds, same observations, no new hyperparameter",
+    "symptom": "forced-third accuracy pinned at exactly 0.666666666667 on TRAIN as well as test, with per-case accuracy 1.0000 on the six queries holding one anchor-marked node and 0.0000 on the three holding none",
+    "why_it_is_a_fit_failure_not_a_generalization_failure": "train and test agree to twelve decimals; the model has not overfitted, it has not fitted"
+  },
+  "fences": [
+    "The entire input surface is two mark channels per node plus the admission matrix. No Event, habitat, chart or slot index is an input.",
+    "No trainable parameter is indexed by an Event, a habitat, a local slot or a node position. There is no embedding table in the model.",
+    "Parameter count is identical at 4, 6, 9 and 12 nodes and mentions 84 nowhere.",
+    "Query swap invariance is BITWISE and structural: the query is a set mark, so f(a,b) and f(b,a) are the same tensor.",
+    "Opaque-token permutation covariance is exact in the argmax and holds to declared float round-off in the scores.",
+    "S and FFF are not inputs (009.09a section 4). Two episodes from different habitats with the same marks and adjacency give bitwise identical outputs.",
+    "No XOR, bitwise operator, set intersection, endpoint-intersection routine, K4 star completion, admission-to-family solver or catalogue lookup appears on the learned path.",
+    "The zero-anchor control is the SAME parameters with the anchor channel zeroed, so the two arms are capacity-matched to the parameter.",
+    "Scoring is never masked. The two query nodes stay scoreable so that 'the predicted third is distinct from the queried pair' remains a measured fact rather than an enforced one."
+  ],
+  "host": "macOS-26.6.2-arm64-arm-64bit",
+  "input_surface": {
+    "adjacency_diagonal_is_zero": true,
+    "adjacency_edges": 12,
+    "adjacency_example": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "adjacency_is_symmetric": true,
+    "anchor_marked_nodes": 3,
+    "compatible_block_systems_seen_by_the_encoder": 0,
+    "encoder_signature": "(admit_nodes: 'tuple[tuple[int, int], ...]', anchor_nodes: 'tuple[int, int, int]', query_pair: 'tuple[int, int]', *, use_anchor: 'bool' = True, n_nodes: 'int' = 6) -> 'tuple[tuple[tuple[float, ...], ...], tuple[tuple[float, ...], ...]]'",
+    "input_dim": 2,
+    "input_surface": [
+      "marks (B, 6, 2): channel 0 is anchor membership, channel 1 is query role. Both are {0.0, 1.0}. Every node's feature vector is identical before these two marks are written.",
+      "adjacency (B, 6, 6): the symmetric pairwise ADMIT matrix with a zero diagonal, as {0.0, 1.0}."
+    ],
+    "mark_channels": [
+      "anchor_mark",
+      "query_mark"
+    ],
+    "marks_example": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "no_event_index_is_an_input": true,
+    "no_habitat_index_is_an_input": true,
+    "no_sfp_field_is_an_input": true,
+    "no_slot_index_is_an_input": true,
+    "note": "the encoder was handed 2 admission-compatible block systems by Gate 0 and uses none of them; it writes marks and an adjacency matrix and nothing else.",
+    "query_marked_nodes": 2,
+    "values_are_binary": true,
+    "zero_anchor_has_no_anchor_mark": true,
+    "zero_anchor_marks_example": [
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "zero_anchor_shape_is_unchanged": true
+  },
+  "laws": {
+    "both_message_modes_share_the_input_surface": true,
+    "edge:argmax_exactly_covariant_on_every_decisive_row": true,
+    "edge:control_arm_is_capacity_matched": true,
+    "edge:deterministic_under_seed": true,
+    "edge:every_tie_has_a_symmetry_witness": true,
+    "edge:habitat_identity_is_invisible_to_the_model": true,
+    "edge:no_embedding_table": true,
+    "edge:no_parameter_dimension_is_an_identity_count": true,
+    "edge:one_score_per_current_node": true,
+    "edge:param_count_independent_of_node_count": true,
+    "edge:query_swap_invariance_is_bitwise": true,
+    "edge:refuses_a_wider_input_surface": true,
+    "edge:scores_covariant_within_declared_tolerance": true,
+    "input_surface_is_two_marks_and_an_adjacency": true,
+    "no_banned_identifier_on_the_learned_path": true,
+    "no_banned_operator_on_the_learned_path": true,
+    "node:argmax_exactly_covariant_on_every_decisive_row": true,
+    "node:control_arm_is_capacity_matched": true,
+    "node:deterministic_under_seed": true,
+    "node:every_tie_has_a_symmetry_witness": true,
+    "node:habitat_identity_is_invisible_to_the_model": true,
+    "node:no_embedding_table": true,
+    "node:no_parameter_dimension_is_an_identity_count": true,
+    "node:one_score_per_current_node": true,
+    "node:param_count_independent_of_node_count": true,
+    "node:query_swap_invariance_is_bitwise": true,
+    "node:refuses_a_wider_input_surface": true,
+    "node:scores_covariant_within_declared_tolerance": true
+  },
+  "message_mode_roles": {
+    "edge": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the candidate's own mark with its neighbour's marks is available to a single hidden layer. The one repair 009.09 section 5.3 permits, for the mechanically diagnosed 6/9 saddle.",
+    "node": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. 009.09 section 5's one primary architecture pass."
+  },
+  "message_modes": [
+    "node",
+    "edge"
+  ],
+  "module": "discovery_heads",
+  "per_message_mode": {
+    "edge": {
+      "capacity_ledger": {
+        "arm_parameter_counts": {
+          "dual_anchor_control": 11617,
+          "one_anchor": 11617,
+          "zero_anchor": 11617
+        },
+        "arms_share_one_parameter_count": true,
+        "config": {
+          "activation": "ReLU",
+          "aggregation": "sum",
+          "embedding_tables": 0,
+          "input_channels": [
+            "anchor_mark",
+            "query_mark"
+          ],
+          "input_dim": 2,
+          "layers": 2,
+          "masking": "none, ever",
+          "message_form": "m_ij = Message([h_i, h_j])",
+          "message_hidden": 32,
+          "message_mode": "edge",
+          "message_mode_role": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the candidate's own mark with its neighbour's marks is available to a single hidden layer. The one repair 009.09 section 5.3 permits, for the mechanically diagnosed 6/9 saddle.",
+          "node_width": 32,
+          "output": "one scalar score per node; the answer is the argmax",
+          "readout_hidden": 32,
+          "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+          "tuning": "none. One primary family, widths frozen from the 009.02/009.06 constants, no search, no per-arm adjustment."
+        },
+        "dual_anchor_note": "the dual-anchor arm (009.09a section 2) is a TEST-TIME evaluation of the trained one-anchor model. It trains nothing and adds no parameter.",
+        "not_comparable_to": {
+          "candidates": "the four chambers of the row's chart, as SFP star tokens",
+          "input": "SFP tokens (S, FFF, PP, pp), 16 one-hot units per presentation",
+          "module": "locator_heads.ChamberPointer over scorer.RelHead",
+          "note": "009.08 was handed the exact finite representation and asked to use it. 009.09 withdraws it. The two parameter counts are therefore NOT a like-for-like capacity comparison and are never quoted as one."
+        },
+        "params_by_module": {
+          "embed": 96,
+          "message.0.0": 2080,
+          "message.0.2": 1056,
+          "message.1.0": 2080,
+          "message.1.2": 1056,
+          "readout.0": 1056,
+          "readout.2": 33,
+          "update.0": 2080,
+          "update.1": 2080
+        },
+        "params_indexed_by_a_habitat": 0,
+        "params_indexed_by_a_node": 0,
+        "params_indexed_by_an_event": 0,
+        "total_params": 11617
+      },
+      "config": {
+        "activation": "ReLU",
+        "aggregation": "sum",
+        "embedding_tables": 0,
+        "input_channels": [
+          "anchor_mark",
+          "query_mark"
+        ],
+        "input_dim": 2,
+        "layers": 2,
+        "masking": "none, ever",
+        "message_form": "m_ij = Message([h_i, h_j])",
+        "message_hidden": 32,
+        "message_mode": "edge",
+        "message_mode_role": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the candidate's own mark with its neighbour's marks is available to a single hidden layer. The one repair 009.09 section 5.3 permits, for the mechanically diagnosed 6/9 saddle.",
+        "node_width": 32,
+        "output": "one scalar score per node; the answer is the argmax",
+        "readout_hidden": 32,
+        "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+        "tuning": "none. One primary family, widths frozen from the 009.02/009.06 constants, no search, no per-arm adjustment."
+      },
+      "determinism": {
+        "different_seed_different_param_digest": true,
+        "param_digest": "5fb391eb9453e2a648bbb88b800fbd9a5c66efd569c82399ab7e9ed8c367655c",
+        "same_seed_bitwise_identical_forward": true,
+        "same_seed_same_param_digest": true,
+        "seed": 0
+      },
+      "forward_shapes": {
+        "adjacency_shape": [
+          1,
+          6,
+          6
+        ],
+        "marks_shape": [
+          1,
+          6,
+          2
+        ],
+        "one_score_per_node": true,
+        "refusals": {
+          "extra_mark_channel": "refused: marks must carry exactly 2 channels, got 3",
+          "nonsquare_adjacency": "refused: adjacency must be square, got (6, 7)"
+        },
+        "refuses_a_wider_input_surface": true,
+        "scores_shape": [
+          1,
+          6
+        ]
+      },
+      "habitat_blindness": {
+        "habitats_compared": 13,
+        "note": "009.09a section 4 asks that if S or FFF were fed in, swapping them should leave every prediction bitwise unchanged. They are not fed in at all, so the stronger statement holds: the model cannot tell two habitats apart even in principle, and 13 differing (S, FFF) pairs produce the identical tensor.",
+        "outputs_bitwise_identical_everywhere": true,
+        "per_habitat": [
+          {
+            "fff": 1,
+            "habitat": "P=1,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012345",
+            "s": 0
+          },
+          {
+            "fff": 2,
+            "habitat": "P=2,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012435",
+            "s": 1
+          },
+          {
+            "fff": 2,
+            "habitat": "P=2,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012435",
+            "s": 0
+          },
+          {
+            "fff": 3,
+            "habitat": "P=3,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012453",
+            "s": 1
+          },
+          {
+            "fff": 3,
+            "habitat": "P=3,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012453",
+            "s": 0
+          },
+          {
+            "fff": 4,
+            "habitat": "P=4,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024135",
+            "s": 1
+          },
+          {
+            "fff": 4,
+            "habitat": "P=4,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024135",
+            "s": 0
+          },
+          {
+            "fff": 5,
+            "habitat": "P=5,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024153",
+            "s": 1
+          },
+          {
+            "fff": 5,
+            "habitat": "P=5,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024153",
+            "s": 0
+          },
+          {
+            "fff": 6,
+            "habitat": "P=6,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024351",
+            "s": 1
+          },
+          {
+            "fff": 6,
+            "habitat": "P=6,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024351",
+            "s": 0
+          },
+          {
+            "fff": 7,
+            "habitat": "P=7,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024531",
+            "s": 1
+          },
+          {
+            "fff": 7,
+            "habitat": "P=7,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024531",
+            "s": 0
+          }
+        ],
+        "reference_fff": 1,
+        "reference_habitat": "P=1,delta=-1",
+        "reference_s": 1,
+        "s_and_fff_are_not_inputs": true
+      },
+      "laws": {
+        "argmax_exactly_covariant_on_every_decisive_row": true,
+        "control_arm_is_capacity_matched": true,
+        "deterministic_under_seed": true,
+        "every_tie_has_a_symmetry_witness": true,
+        "habitat_identity_is_invisible_to_the_model": true,
+        "no_embedding_table": true,
+        "no_parameter_dimension_is_an_identity_count": true,
+        "one_score_per_current_node": true,
+        "param_count_independent_of_node_count": true,
+        "query_swap_invariance_is_bitwise": true,
+        "refuses_a_wider_input_surface": true,
+        "scores_covariant_within_declared_tolerance": true
+      },
+      "message_mode": "edge",
+      "no_identity_parameter": {
+        "buffers": [],
+        "embedding_modules": [],
+        "has_no_buffer": true,
+        "has_no_embedding_table": true,
+        "module_types": [
+          "Linear",
+          "ModuleList",
+          "OpaqueChartPointer",
+          "ReLU",
+          "Sequential"
+        ],
+        "named_parameters": [
+          "embed.weight",
+          "embed.bias",
+          "message.0.0.weight",
+          "message.0.0.bias",
+          "message.0.2.weight",
+          "message.0.2.bias",
+          "message.1.0.weight",
+          "message.1.0.bias",
+          "message.1.2.weight",
+          "message.1.2.bias",
+          "update.0.weight",
+          "update.0.bias",
+          "update.1.weight",
+          "update.1.bias",
+          "readout.0.weight",
+          "readout.0.bias",
+          "readout.2.weight",
+          "readout.2.bias"
+        ],
+        "no_candidate_token_table": true,
+        "no_trainable_embedding_indexed_by_a_global_event_id": true,
+        "no_trainable_embedding_indexed_by_a_stable_local_slot": true,
+        "note": "009.08 supplied candidate chamber tokens as a frozen buffer. This model has no buffer at all: the candidates ARE the six current nodes, and everything the learner can say about them comes from the relation graph and the two marks.",
+        "param_count": 11617,
+        "param_digest": "5fb391eb9453e2a648bbb88b800fbd9a5c66efd569c82399ab7e9ed8c367655c",
+        "prior_pointer": {
+          "candidates": "the four chambers of the row's chart, as SFP star tokens",
+          "input": "SFP tokens (S, FFF, PP, pp), 16 one-hot units per presentation",
+          "module": "locator_heads.ChamberPointer over scorer.RelHead",
+          "note": "009.08 was handed the exact finite representation and asked to use it. 009.09 withdraws it. The two parameter counts are therefore NOT a like-for-like capacity comparison and are never quoted as one."
+        },
+        "slot_layout": {
+          "candidate_tokens_supplied": false,
+          "embedding_tables": 0,
+          "input_channels": [
+            "anchor_mark",
+            "query_mark"
+          ],
+          "learned_output_columns_indexed_by_a_habitat": 0,
+          "learned_output_columns_indexed_by_a_node_position": 0,
+          "learned_output_columns_indexed_by_an_event": 0,
+          "output_slots": "one per current node; there is no fixed output width",
+          "output_slots_track_catalogue_size": false
+        }
+      },
+      "parameter_independence": {
+        "forbidden_widths": [
+          6,
+          14,
+          84
+        ],
+        "no_parameter_dimension_equals_node_habitat_or_catalogue_count": true,
+        "node_count_probes": [
+          4,
+          6,
+          9,
+          12
+        ],
+        "note": "the model is built once per probe and evaluated at a different node count each time; the count cannot change because no weight is indexed by a node.",
+        "param_count": 11617,
+        "param_count_identical_across_probes": true,
+        "parameter_shapes": [
+          {
+            "name": "embed.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "embed.weight",
+            "numel": 64,
+            "shape": [
+              32,
+              2
+            ]
+          },
+          {
+            "name": "message.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.0.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.1.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "update.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.1.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          }
+        ],
+        "parameters_with_a_forbidden_dimension": [],
+        "per_probe": [
+          {
+            "n_nodes": 4,
+            "output_shape": [
+              1,
+              4
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 11617
+          },
+          {
+            "n_nodes": 6,
+            "output_shape": [
+              1,
+              6
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 11617
+          },
+          {
+            "n_nodes": 9,
+            "output_shape": [
+              1,
+              9
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 11617
+          },
+          {
+            "n_nodes": 12,
+            "output_shape": [
+              1,
+              12
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 11617
+          }
+        ]
+      },
+      "permutation_covariance": {
+        "argmax_exactly_covariant": true,
+        "argmax_transports_count": 209,
+        "decisive_rows": 160,
+        "decisive_rows_argmax_exactly_covariant_count": 160,
+        "declared_score_tolerance": 1e-06,
+        "every_tie_has_a_symmetry_witness": true,
+        "max_score_discrepancy": 2.9802e-08,
+        "relabelings_probed": 240,
+        "scores_within_declared_tolerance": true,
+        "tie_disclosure": "the argmax is held to EXACT covariance on every decisive row -- one whose top score is separated from the runner-up by more than the declared tolerance -- with no tolerance at all. A row whose top two scores are within the tolerance is a TIE: on an untrained model two nodes that no automorphism of the marked graph can distinguish carry mathematically equal scores, and round-off decides the winner. Every such row is required to exhibit an automorphism of the admission graph fixing the query pair and the anchor setwise and carrying one tied node onto the other, which proves the tie is forced rather than assumed.",
+        "tied_rows": 80,
+        "tied_rows_with_a_symmetry_witness": 80,
+        "tolerance_rationale": "permuting the node order permutes the summation index of the neighbour aggregation, and the reduction then accumulates the same real numbers in a different order. Float addition is not associative, so the scores agree to round-off. The tolerance was declared before the check.",
+        "unwitnessed_disagreements": []
+      },
+      "role": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the candidate's own mark with its neighbour's marks is available to a single hidden layer. The one repair 009.09 section 5.3 permits, for the mechanically diagnosed 6/9 saddle.",
+      "swap_symmetry": {
+        "input_tensors_bitwise_identical": 672,
+        "max_score_discrepancy": 0.0,
+        "mechanism": "the query is a SET mark on two nodes, so swapping the query produces the identical input tensor. Invariance is not learned, not enforced by a symmetric pooling primitive, and not held to a tolerance.",
+        "outputs_bitwise_identical": 672,
+        "queries_probed": 672,
+        "swap_invariance_is_structural": true
+      },
+      "zero_anchor_capacity": {
+        "adjacency_unchanged_in_the_control": true,
+        "anchor_channel_is_zero_in_the_control": true,
+        "capacity_matched_to_the_parameter": true,
+        "input_shapes_identical": true,
+        "note": "009.09 section 7.2 asks for the IDENTICAL learner with the anchor marker removed. Identical is implemented literally: one architecture, one parameter shape list, one parameter count, and the anchor channel held at zero. A difference between the arms therefore cannot be a capacity difference.",
+        "outputs_differ": true,
+        "param_count_one_anchor": 11617,
+        "param_count_zero_anchor": 11617
+      }
+    },
+    "node": {
+      "capacity_ledger": {
+        "arm_parameter_counts": {
+          "dual_anchor_control": 9569,
+          "one_anchor": 9569,
+          "zero_anchor": 9569
+        },
+        "arms_share_one_parameter_count": true,
+        "config": {
+          "activation": "ReLU",
+          "aggregation": "sum",
+          "embedding_tables": 0,
+          "input_channels": [
+            "anchor_mark",
+            "query_mark"
+          ],
+          "input_dim": 2,
+          "layers": 2,
+          "masking": "none, ever",
+          "message_form": "m_ij = Message(h_j)",
+          "message_hidden": 32,
+          "message_mode": "node",
+          "message_mode_role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. 009.09 section 5's one primary architecture pass.",
+          "node_width": 32,
+          "output": "one scalar score per node; the answer is the argmax",
+          "readout_hidden": 32,
+          "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+          "tuning": "none. One primary family, widths frozen from the 009.02/009.06 constants, no search, no per-arm adjustment."
+        },
+        "dual_anchor_note": "the dual-anchor arm (009.09a section 2) is a TEST-TIME evaluation of the trained one-anchor model. It trains nothing and adds no parameter.",
+        "not_comparable_to": {
+          "candidates": "the four chambers of the row's chart, as SFP star tokens",
+          "input": "SFP tokens (S, FFF, PP, pp), 16 one-hot units per presentation",
+          "module": "locator_heads.ChamberPointer over scorer.RelHead",
+          "note": "009.08 was handed the exact finite representation and asked to use it. 009.09 withdraws it. The two parameter counts are therefore NOT a like-for-like capacity comparison and are never quoted as one."
+        },
+        "params_by_module": {
+          "embed": 96,
+          "message.0.0": 1056,
+          "message.0.2": 1056,
+          "message.1.0": 1056,
+          "message.1.2": 1056,
+          "readout.0": 1056,
+          "readout.2": 33,
+          "update.0": 2080,
+          "update.1": 2080
+        },
+        "params_indexed_by_a_habitat": 0,
+        "params_indexed_by_a_node": 0,
+        "params_indexed_by_an_event": 0,
+        "total_params": 9569
+      },
+      "config": {
+        "activation": "ReLU",
+        "aggregation": "sum",
+        "embedding_tables": 0,
+        "input_channels": [
+          "anchor_mark",
+          "query_mark"
+        ],
+        "input_dim": 2,
+        "layers": 2,
+        "masking": "none, ever",
+        "message_form": "m_ij = Message(h_j)",
+        "message_hidden": 32,
+        "message_mode": "node",
+        "message_mode_role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. 009.09 section 5's one primary architecture pass.",
+        "node_width": 32,
+        "output": "one scalar score per node; the answer is the argmax",
+        "readout_hidden": 32,
+        "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+        "tuning": "none. One primary family, widths frozen from the 009.02/009.06 constants, no search, no per-arm adjustment."
+      },
+      "determinism": {
+        "different_seed_different_param_digest": true,
+        "param_digest": "b37dce030767745bf115f9c8664551cba67670bcb058366cf8e0c84c4a029590",
+        "same_seed_bitwise_identical_forward": true,
+        "same_seed_same_param_digest": true,
+        "seed": 0
+      },
+      "forward_shapes": {
+        "adjacency_shape": [
+          1,
+          6,
+          6
+        ],
+        "marks_shape": [
+          1,
+          6,
+          2
+        ],
+        "one_score_per_node": true,
+        "refusals": {
+          "extra_mark_channel": "refused: marks must carry exactly 2 channels, got 3",
+          "nonsquare_adjacency": "refused: adjacency must be square, got (6, 7)"
+        },
+        "refuses_a_wider_input_surface": true,
+        "scores_shape": [
+          1,
+          6
+        ]
+      },
+      "habitat_blindness": {
+        "habitats_compared": 13,
+        "note": "009.09a section 4 asks that if S or FFF were fed in, swapping them should leave every prediction bitwise unchanged. They are not fed in at all, so the stronger statement holds: the model cannot tell two habitats apart even in principle, and 13 differing (S, FFF) pairs produce the identical tensor.",
+        "outputs_bitwise_identical_everywhere": true,
+        "per_habitat": [
+          {
+            "fff": 1,
+            "habitat": "P=1,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012345",
+            "s": 0
+          },
+          {
+            "fff": 2,
+            "habitat": "P=2,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012435",
+            "s": 1
+          },
+          {
+            "fff": 2,
+            "habitat": "P=2,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012435",
+            "s": 0
+          },
+          {
+            "fff": 3,
+            "habitat": "P=3,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012453",
+            "s": 1
+          },
+          {
+            "fff": 3,
+            "habitat": "P=3,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "012453",
+            "s": 0
+          },
+          {
+            "fff": 4,
+            "habitat": "P=4,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024135",
+            "s": 1
+          },
+          {
+            "fff": 4,
+            "habitat": "P=4,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024135",
+            "s": 0
+          },
+          {
+            "fff": 5,
+            "habitat": "P=5,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024153",
+            "s": 1
+          },
+          {
+            "fff": 5,
+            "habitat": "P=5,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024153",
+            "s": 0
+          },
+          {
+            "fff": 6,
+            "habitat": "P=6,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024351",
+            "s": 1
+          },
+          {
+            "fff": 6,
+            "habitat": "P=6,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024351",
+            "s": 0
+          },
+          {
+            "fff": 7,
+            "habitat": "P=7,delta=-1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024531",
+            "s": 1
+          },
+          {
+            "fff": 7,
+            "habitat": "P=7,delta=+1",
+            "isomorphic_presentation": true,
+            "outputs_bitwise_identical": true,
+            "relabeling": "024531",
+            "s": 0
+          }
+        ],
+        "reference_fff": 1,
+        "reference_habitat": "P=1,delta=-1",
+        "reference_s": 1,
+        "s_and_fff_are_not_inputs": true
+      },
+      "laws": {
+        "argmax_exactly_covariant_on_every_decisive_row": true,
+        "control_arm_is_capacity_matched": true,
+        "deterministic_under_seed": true,
+        "every_tie_has_a_symmetry_witness": true,
+        "habitat_identity_is_invisible_to_the_model": true,
+        "no_embedding_table": true,
+        "no_parameter_dimension_is_an_identity_count": true,
+        "one_score_per_current_node": true,
+        "param_count_independent_of_node_count": true,
+        "query_swap_invariance_is_bitwise": true,
+        "refuses_a_wider_input_surface": true,
+        "scores_covariant_within_declared_tolerance": true
+      },
+      "message_mode": "node",
+      "no_identity_parameter": {
+        "buffers": [],
+        "embedding_modules": [],
+        "has_no_buffer": true,
+        "has_no_embedding_table": true,
+        "module_types": [
+          "Linear",
+          "ModuleList",
+          "OpaqueChartPointer",
+          "ReLU",
+          "Sequential"
+        ],
+        "named_parameters": [
+          "embed.weight",
+          "embed.bias",
+          "message.0.0.weight",
+          "message.0.0.bias",
+          "message.0.2.weight",
+          "message.0.2.bias",
+          "message.1.0.weight",
+          "message.1.0.bias",
+          "message.1.2.weight",
+          "message.1.2.bias",
+          "update.0.weight",
+          "update.0.bias",
+          "update.1.weight",
+          "update.1.bias",
+          "readout.0.weight",
+          "readout.0.bias",
+          "readout.2.weight",
+          "readout.2.bias"
+        ],
+        "no_candidate_token_table": true,
+        "no_trainable_embedding_indexed_by_a_global_event_id": true,
+        "no_trainable_embedding_indexed_by_a_stable_local_slot": true,
+        "note": "009.08 supplied candidate chamber tokens as a frozen buffer. This model has no buffer at all: the candidates ARE the six current nodes, and everything the learner can say about them comes from the relation graph and the two marks.",
+        "param_count": 9569,
+        "param_digest": "b37dce030767745bf115f9c8664551cba67670bcb058366cf8e0c84c4a029590",
+        "prior_pointer": {
+          "candidates": "the four chambers of the row's chart, as SFP star tokens",
+          "input": "SFP tokens (S, FFF, PP, pp), 16 one-hot units per presentation",
+          "module": "locator_heads.ChamberPointer over scorer.RelHead",
+          "note": "009.08 was handed the exact finite representation and asked to use it. 009.09 withdraws it. The two parameter counts are therefore NOT a like-for-like capacity comparison and are never quoted as one."
+        },
+        "slot_layout": {
+          "candidate_tokens_supplied": false,
+          "embedding_tables": 0,
+          "input_channels": [
+            "anchor_mark",
+            "query_mark"
+          ],
+          "learned_output_columns_indexed_by_a_habitat": 0,
+          "learned_output_columns_indexed_by_a_node_position": 0,
+          "learned_output_columns_indexed_by_an_event": 0,
+          "output_slots": "one per current node; there is no fixed output width",
+          "output_slots_track_catalogue_size": false
+        }
+      },
+      "parameter_independence": {
+        "forbidden_widths": [
+          6,
+          14,
+          84
+        ],
+        "no_parameter_dimension_equals_node_habitat_or_catalogue_count": true,
+        "node_count_probes": [
+          4,
+          6,
+          9,
+          12
+        ],
+        "note": "the model is built once per probe and evaluated at a different node count each time; the count cannot change because no weight is indexed by a node.",
+        "param_count": 9569,
+        "param_count_identical_across_probes": true,
+        "parameter_shapes": [
+          {
+            "name": "embed.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "embed.weight",
+            "numel": 64,
+            "shape": [
+              32,
+              2
+            ]
+          },
+          {
+            "name": "message.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "update.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.1.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          }
+        ],
+        "parameters_with_a_forbidden_dimension": [],
+        "per_probe": [
+          {
+            "n_nodes": 4,
+            "output_shape": [
+              1,
+              4
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 9569
+          },
+          {
+            "n_nodes": 6,
+            "output_shape": [
+              1,
+              6
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 9569
+          },
+          {
+            "n_nodes": 9,
+            "output_shape": [
+              1,
+              9
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 9569
+          },
+          {
+            "n_nodes": 12,
+            "output_shape": [
+              1,
+              12
+            ],
+            "output_width_equals_node_count": true,
+            "param_count": 9569
+          }
+        ]
+      },
+      "permutation_covariance": {
+        "argmax_exactly_covariant": true,
+        "argmax_transports_count": 240,
+        "decisive_rows": 240,
+        "decisive_rows_argmax_exactly_covariant_count": 240,
+        "declared_score_tolerance": 1e-06,
+        "every_tie_has_a_symmetry_witness": true,
+        "max_score_discrepancy": 2.2352e-08,
+        "relabelings_probed": 240,
+        "scores_within_declared_tolerance": true,
+        "tie_disclosure": "the argmax is held to EXACT covariance on every decisive row -- one whose top score is separated from the runner-up by more than the declared tolerance -- with no tolerance at all. A row whose top two scores are within the tolerance is a TIE: on an untrained model two nodes that no automorphism of the marked graph can distinguish carry mathematically equal scores, and round-off decides the winner. Every such row is required to exhibit an automorphism of the admission graph fixing the query pair and the anchor setwise and carrying one tied node onto the other, which proves the tie is forced rather than assumed.",
+        "tied_rows": 0,
+        "tied_rows_with_a_symmetry_witness": 0,
+        "tolerance_rationale": "permuting the node order permutes the summation index of the neighbour aggregation, and the reduction then accumulates the same real numbers in a different order. Float addition is not associative, so the scores agree to round-off. The tolerance was declared before the check.",
+        "unwitnessed_disagreements": []
+      },
+      "role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. 009.09 section 5's one primary architecture pass.",
+      "swap_symmetry": {
+        "input_tensors_bitwise_identical": 672,
+        "max_score_discrepancy": 0.0,
+        "mechanism": "the query is a SET mark on two nodes, so swapping the query produces the identical input tensor. Invariance is not learned, not enforced by a symmetric pooling primitive, and not held to a tolerance.",
+        "outputs_bitwise_identical": 672,
+        "queries_probed": 672,
+        "swap_invariance_is_structural": true
+      },
+      "zero_anchor_capacity": {
+        "adjacency_unchanged_in_the_control": true,
+        "anchor_channel_is_zero_in_the_control": true,
+        "capacity_matched_to_the_parameter": true,
+        "input_shapes_identical": true,
+        "note": "009.09 section 7.2 asks for the IDENTICAL learner with the anchor marker removed. Identical is implemented literally: one architecture, one parameter shape list, one parameter count, and the anchor channel held at zero. A difference between the arms therefore cannot be a capacity difference.",
+        "outputs_differ": true,
+        "param_count_one_anchor": 9569,
+        "param_count_zero_anchor": 9569
+      }
+    }
+  },
+  "started_at": "2026-09-11T18:18:08-0700",
+  "torch_version": "2.14.0",
+  "verdict": {
+    "agrees": true,
+    "statement": "for both the primary and the repair message, the input surface is two mark channels and an admission matrix, query swap invariance is bitwise, the argmax is exactly covariant under opaque relabelling, habitat identity is invisible, no parameter is indexed by an Event, habitat, slot or node, and no XOR, intersection, completion or catalogue lookup appears on the learned path"
+  }
+}

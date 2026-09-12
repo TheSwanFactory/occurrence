@@ -26,6 +26,7 @@ on:
       - "experiments/mutual-frames/**"
       - "experiments/tlm_modular/**"
       - "experiments/tlm_fixed_head/**"
+      - "experiments/sfp_representation/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -40,6 +41,7 @@ on:
       - "experiments/mutual-frames/**"
       - "experiments/tlm_modular/**"
       - "experiments/tlm_fixed_head/**"
+      - "experiments/sfp_representation/**"
       - "pyproject.toml"
       - "uv.lock"
       - "CHANGELOG.md"
@@ -124,6 +126,7 @@ jobs:
             topographo/tests/test_exact_machine.py \
             topographo/tests/test_machine_layers.py \
             topographo/tests/test_public_api.py \
+            topographo/tests/test_f2_groups.py \
             topographo/tests/test_frames.py \
             topographo/tests/test_fips_adapter.py \
             topographo/tests/test_structural_control.py \
@@ -140,6 +143,7 @@ jobs:
             experiments/tlm_fixed_head/capacity.py \
             experiments/tlm_fixed_head/probe_p13_coarse_grain.py \
             experiments/tlm_multitoken \
+            experiments/sfp_representation \
             experiments/sedenion-machine/experiments.py \
             experiments/mutual-frames/runtime.py \
             experiments/mutual-frames/audit.py \
@@ -156,7 +160,12 @@ jobs:
       - name: Verify importable package API
         run: |
           uv run --frozen python - <<'PY'
-          from topographo.core import CayleyDicksonAlgebra, ExactCayleyDicksonAlgebra, verify_gates
+          from topographo.core import (
+              CayleyDicksonAlgebra,
+              ExactCayleyDicksonAlgebra,
+              f2_groups,
+              verify_gates,
+          )
           from topographo.ssd import (
               SedenionAlgebra,
               average_metric_operator,
@@ -180,6 +189,9 @@ jobs:
           assert all(result.passed for result in verify_gates())
           assert CayleyDicksonAlgebra(8).dim == 8
           assert ExactCayleyDicksonAlgebra(8).dim == 8
+          assert f2_groups.assert_f2_group_laws()
+          assert len(f2_groups.gl_3_2()) == 168
+          assert len(f2_groups.INDUCED_EDGE_PERMUTATIONS) == 24
           sedenions = SedenionAlgebra()
           assert average_metric_operator(sedenions, sedenions.sample_crack(4)).shape == (16, 16)
           result = machine.run(exact.basis(4), program.Program([exact.basis(2)]))
@@ -206,7 +218,7 @@ jobs:
           PYTHONPATH=/tmp/topographo-install "${pythonLocation}/bin/python" - <<'PY'
           import topographo
           import topographo.exceptional
-          from topographo.core import ExactCayleyDicksonAlgebra
+          from topographo.core import ExactCayleyDicksonAlgebra, f2_groups
           from topographo.ssd import codec, exact, exact_machine, fips_adapter, fips_basic, fixed_head, frames, machine, observers, outcome_runtime, program, projective, seal, structural_control
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
@@ -215,6 +227,7 @@ jobs:
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
           assert ExactCayleyDicksonAlgebra(16).dim == 16
           assert exact_machine.run is machine.run
+          assert f2_groups.assert_f2_group_laws()
           assert all((codec, exact, fips_adapter, fips_basic, fixed_head, frames, observers, outcome_runtime, program, projective, seal, structural_control))
           PY
 
