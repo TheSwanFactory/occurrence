@@ -2908,7 +2908,7 @@
       "S = 0 for delta=+1, S = 1 for delta=-1",
       "these are BASIS CHOICES, not intrinsic structure; Arm D tests relabelling invariance against exactly this frozen chart"
     ],
-    "topographo_version": "0.8.2",
+    "topographo_version": "0.8.3",
     "upstream_pins": {
       "catalogue": {
         "agrees": true,

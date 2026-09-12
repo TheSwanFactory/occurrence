@@ -34,7 +34,6 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import arms as arms_module
-import groups
 from arms import ARM_D_AFFINE, native_codes, relabel_address
 from folds import all_folds, structural_folds
 from ladder_task import (
@@ -53,6 +52,8 @@ from ladder_task import (
 )
 from sfp import ExactSfpCircuit, SfpAddress, SfpCodec, address_of, bits2, block_key
 from task import Dataset, PairRecord, build_dataset, digest
+
+from topographo.core import f2_groups as groups
 
 ROOT = Path(__file__).resolve().parent
 ARTIFACTS = ROOT / "009_locator_artifacts"

@@ -108,7 +108,6 @@ from dataclasses import dataclass
 from fractions import Fraction
 from pathlib import Path
 
-import groups
 from sfp import (
     DECLARED_CHART,
     ExactSfpCircuit,
@@ -120,6 +119,7 @@ from sfp import (
 )
 from task import Catalogue, Dataset, build_dataset, digest, habitat_label, sign_bit
 
+from topographo.core import f2_groups as groups
 from topographo.ssd import projective
 
 ROOT = Path(__file__).resolve().parent

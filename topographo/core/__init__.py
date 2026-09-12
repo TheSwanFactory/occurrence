@@ -11,12 +11,17 @@ algebraic substrate needed to reproduce the computational claims:
   signed-basis table.
 - `verify_gates()` runs the four mandatory validation checks used by the
   paper before accepting numerical certificates.
+- `f2_groups` provides abstract finite group machinery over `F_2` (the Fano
+  plane `PG(2,2)`, `GL(3,2)`, `GL(2,2)`/`AGL(2,2)`, and the `K4` edge action)
+  with its own certificate. It belongs here rather than in `ssd` because it is
+  label machinery: it knows nothing about Events or sedenions.
 
 The gates are meant to catch sign-convention or tensor-indexing errors early.
 They are not broad theorem tests; they certify that the implementation is
 using the intended Cayley-Dickson convention.
 """
 
+from topographo.core import f2_groups
 from topographo.core.algebra import CayleyDicksonAlgebra
 from topographo.core.cayley_dickson import (
     cayley_dickson_table,
@@ -30,6 +35,7 @@ __all__ = [
     "ExactCayleyDicksonAlgebra",
     "GateResult",
     "cayley_dickson_table",
+    "f2_groups",
     "signed_basis_table",
     "verify_gates",
 ]

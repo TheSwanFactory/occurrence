@@ -2303,7 +2303,7 @@
       "expected": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
       "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea"
     },
-    "topographo_version": "0.8.2"
+    "topographo_version": "0.8.3"
   },
   "purpose": "SFP core: habitat enumeration and the S|FFF|PP|pp codec, plus ExactSfpCircuit as a nonlearned reference oracle",
   "reference_oracle_only": "ExactSfpCircuit is a nonlearned REFERENCE ORACLE. It must never be used to generate ground-truth labels; labels come from topographo.ssd.fips_basic (admissible / third), the certified native relation.",

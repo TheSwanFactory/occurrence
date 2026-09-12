@@ -46,7 +46,8 @@ layer, which lives outside this package.
 - `topographo.core` — one exact signed-basis specification for Cayley-Dickson
   multiplication, the derived NumPy structure tensor, multiplication operators,
   and mandatory validation gates. It does not know about Occurrence Theory,
-  event/state language, or report formatting.
+  event/state language, or report formatting. `f2_groups` adds abstract finite
+  group machinery over `F_2` on the same terms: labels only, no Events.
 - `topographo.ssd` — the sedenion-specific wrapper (`SedenionAlgebra`), small
   channel diagnostics, and layered exact-rational execution. Exact algebra,
   typed programs, raw execution, projective state, observers, and JSON codecs
@@ -230,3 +231,18 @@ MIT.
 `topographo.ssd.fixed_head` exposes the Issue-006 configured two-step Fixed
 projection/twirl existence adapter and Theory-27 readout. See
 `experiments/tlm_fixed_head/README.md` for the capacity probe and physical fence.
+
+## Abstract F_2 groups (0.8.3)
+
+`topographo.core.f2_groups` holds the label machinery the Issue-009
+representation ablation is built on: the Fano plane `PG(2,2)`, `GL(3,2)`,
+`GL(2,2)`/`AGL(2,2)`, the `K4` edge action, and `is_structure_preserving` — the
+predicate that separates the 24 induced edge permutations from the 48 that
+merely preserve the opposite-edge matchings. `certificate()` re-derives every
+order, incidence count and relational law; `assert_f2_group_laws()` also checks
+the frozen digest.
+
+It sits in `core` rather than `ssd` because it imports nothing beyond the
+standard library and knows nothing about Events, sedenions, or the SFP codec.
+`experiments/sfp_representation/groups.py` is the artifact driver for
+`009_artifacts/groups.json` and holds no math of its own.

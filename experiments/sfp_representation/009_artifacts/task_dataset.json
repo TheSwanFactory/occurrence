@@ -2038,7 +2038,7 @@
       "expected": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
       "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea"
     },
-    "topographo_version": "0.8.2"
+    "topographo_version": "0.8.3"
   },
   "purpose": "the frozen admit-and-force dataset: all 7056 ordered Event pairs labelled ADMIT / NONADMISSION from the certified native FIPS relation",
   "record_layout": "row-major: the record for (a, b) sits at position a * 84 + b; Dataset.record(a, b) and Dataset.target(a, b) look it up",

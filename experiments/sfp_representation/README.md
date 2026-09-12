@@ -63,7 +63,7 @@ admission sensitivity.
 |---|---|:--:|
 | `conformance.py` | Gate 0: 103 Outcome-`021.05` pins re-derived, 14 named laws, `TABLE_SHA256` | no |
 | `sfp.py` | habitat enumeration, the `S \| FFF \| PP \| pp` codec, exactness proof over the finite domain | no |
-| `groups.py` | abstract `GL(3,2)` / `AGL(2,2)` / `GL(2,2)` / K4 machinery and `is_structure_preserving` | no |
+| `groups.py` | artifact driver only; the abstract `GL(3,2)` / `AGL(2,2)` / `GL(2,2)` / K4 machinery and `is_structure_preserving` were promoted to `topographo.core.f2_groups` in 0.8.3 | no |
 | `task.py` | the frozen 7056-pair admit-and-force dataset, labels from the certified relation | no |
 | `folds.py` | 22 frozen fold manifests (14 LOHO + 7 LOFPO + 1 random control) and the leakage check | no |
 | `arms.py` | the five representation arms and the Arm-C rejection proof | no |

@@ -17,6 +17,7 @@ def test_subpackage_exports_are_explicit():
         "ExactCayleyDicksonAlgebra",
         "GateResult",
         "cayley_dickson_table",
+        "f2_groups",
         "signed_basis_table",
         "verify_gates",
     }

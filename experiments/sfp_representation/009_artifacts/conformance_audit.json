@@ -2021,7 +2021,7 @@
       "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
       "source": "topographo.ssd.fips_basic.TABLE_SHA256 vs EXPECTED_TABLE_SHA256"
     },
-    "topographo_version": "0.8.2",
+    "topographo_version": "0.8.3",
     "upstream_pins": {
       "gpt_task": "quilt+s3://protology#package=occurrence/gpt@78b5436c25a9512f5d5792d65630061cdea136cae06f456951f7673000e8259f&path=issues/009-sfp-consequence-representation/009.01-Kiro-native-FIPS-vs-SFP-representation-ablation-task.md",
       "outcome_result": "quilt+s3://protology#package=occurrence/outcome@f18b24ef35a3867309730f9917b1678b1d818bb1b5d87cc91291bf1e6105d446&path=issues/021-fips-warren-kit/021.05-Research-SFP-zero-completion-and-TLM-consequence-interface-result.md"

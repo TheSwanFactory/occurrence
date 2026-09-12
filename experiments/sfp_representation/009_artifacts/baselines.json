@@ -38165,7 +38165,7 @@
       "experiments/sfp_representation/baselines.py",
       "experiments/sfp_representation/009_artifacts/baselines.json"
     ],
-    "topographo_version": "0.8.2",
+    "topographo_version": "0.8.3",
     "upstream_modules": [
       "experiments/sfp_representation/task.py (Task 4)",
       "experiments/sfp_representation/folds.py (Task 5)",

@@ -46,7 +46,6 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-import groups
 import torch
 from arms import (
     ARM_D_AFFINE,
@@ -68,6 +67,8 @@ from scorer import (
     synthetic_arm,
 )
 from torch import nn
+
+from topographo.core import f2_groups as groups
 
 ROOT = Path(__file__).resolve().parent
 ARTIFACTS = ROOT / "009_locator_artifacts"

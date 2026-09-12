@@ -1568,7 +1568,7 @@
     "s_partial_flip_breaks_admission": true
   },
   "scope": "abstract finite group machinery over F_2; no Events, no SFP codec, no OT evaluator",
-  "self_contained": "imports nothing beyond the standard library; does not import sfp.py, conformance.py or topographo",
+  "self_contained": "topographo.core.f2_groups imports nothing beyond the standard library; it does not import sfp.py, conformance.py, topographo.ssd, or numpy",
   "structure_preserving_transformations": {
     "FFF": {
       "api": "groups.gl_3_2(), groups.apply_fff(pi, point), groups.compose_perm, groups.invert_perm",

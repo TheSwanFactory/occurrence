@@ -503,7 +503,7 @@
     "architecture": "357bb6d7df820f7f17f8158aac71fc511cbc2d34b30d23f72063b7757b37564d",
     "capacity_ledger": "69588e2175892816ff8430297a4d734aef24167b6b966c07ef8ff6c48ed1acf4",
     "config": "10a2acdf1a482b9b8ebe85b6323956b9301a14959897f8f5ecb528a1e3807b6e",
-    "manifest": "f76a34fd42d0a0d8bcd8ac5c6fa782893029b74cca629f3b166bd8096af99f2c",
+    "manifest": "8b0b577766ae1faaf02ac0464ffff0b5e750776ff44768d386cb32fd69528808",
     "structural_laws": "8caae10e0c641abd3ffd9ed0cce4569a94a6d1052677722fc9fb1e4d4c27a6ab"
   },
   "fences": [
@@ -717,7 +717,7 @@
     "base_commit_note": "pinned, not read from live HEAD, so the artifact stays replayable",
     "numpy_version": "2.5.1",
     "param_digest_caveat": "the recorded parameter digest depends on the torch RNG and therefore on the torch version above; every other serialised number is torch-version independent",
-    "topographo_version": "0.8.2",
+    "topographo_version": "0.8.3",
     "torch_scope_note": "torch is used only inside experiment scripts; pyproject.toml keeps numpy as the sole package dependency and torch>=2.0 is declared in experiments/tlm_fixed_head/requirements.txt",
     "torch_version": "2.14.0",
     "upstream_modules_not_modified": [

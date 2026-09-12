@@ -19229,7 +19229,7 @@
       "task.Label / task.NonadmissionClass",
       "task.digest / task.habitat_label / task.sign_bit"
     ],
-    "topographo_version": "0.8.2",
+    "topographo_version": "0.8.3",
     "upstream_module": "experiments/sfp_representation/task.py (Task 4)",
     "withheld_by_scope": [
       "representation arms",

@@ -92,11 +92,12 @@ from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-import groups
 from folds import all_folds, structural_folds
 from locator_task import certified_chamber_of_block
 from sfp import SfpCodec, habitat_key
 from task import Dataset, build_dataset, digest, habitat_label
+
+from topographo.core import f2_groups as groups
 
 ROOT = Path(__file__).resolve().parent
 ARTIFACTS = ROOT / "009_discovery_artifacts"
