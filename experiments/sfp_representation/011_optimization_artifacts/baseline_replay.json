@@ -1,0 +1,47 @@
+{
+  "baseline_commit": "2e15aa967a35a26832b671ccbb23d55d0e441b61",
+  "converged_seeds": [
+    0,
+    1,
+    2,
+    4,
+    6
+  ],
+  "final_loss_per_seed": [
+    0.346574544907,
+    0.346574306488,
+    0.346574544907,
+    2.526967525482,
+    0.346575737,
+    2.602004051208,
+    0.346575021744,
+    2.524920701981
+  ],
+  "frozen_surface_matches_baseline_commit": true,
+  "headline": {
+    "certified_plane_equivalent_rate": 0.734375,
+    "fano_completion_exact_set_accuracy": 0.720610119048,
+    "fano_plane_valid_rate": 0.734375,
+    "left_right_swap_identical_rate": 1.0,
+    "mate_exact_accuracy": 0.875,
+    "mate_pairing_valid_rate": 0.875,
+    "transport_rate": 0.845503826531
+  },
+  "phase": "011.03 Phase 0 exact 011.02 primary/main replay",
+  "replay_command": "uv run --frozen python -c <isolated primary/main eight-cell replay and digest comparison recorded in the 011.04 result>",
+  "replayable_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
+  "reproduced_committed_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
+  "reproduces_byte_normalized_rows": true,
+  "stalled_seeds": [
+    3,
+    5,
+    7
+  ],
+  "static_checks": {
+    "fano_analysis": true,
+    "fano_baselines": true,
+    "fano_heads": true,
+    "fano_sweep_smoke": true,
+    "fano_task": true
+  }
+}

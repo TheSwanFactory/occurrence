@@ -1,0 +1,37 @@
+{
+  "candidate_manifest_sha256": "290ba4939bee824b7f92dd53360c4247c648ecc238ad3bdb45a712cca98c796c",
+  "capsule_content_sha256": "7435d81ac48a5ebcd2cf25498e1b40492f86a3a2304fae96ee7fbef39964864d",
+  "capsule_file": "011_optimization_artifacts/train_capsule.pt",
+  "capsule_file_sha256": "4443438a60fd8bf1d52bb6ec69c553bb78aed0b0bb283f2d00efe164bd544f62",
+  "frozen_source_sha256": {
+    "fano_analysis.py": "dbde797966e5a8dc08cb1d583feaf04ce56e94f82a59aa1c4eb0533a21383220",
+    "fano_baselines.py": "22f646bdb864b5e035772fbfd583bca87e95a034000f749e7623259565cd95ad",
+    "fano_heads.py": "25aef2177e069fca0a3f339dc75269c6b3685f4c34c04e5adcb7b83f8d351963",
+    "fano_sweep.py": "5afad0da005ae3b3f4fdadc2e7594163898748df9f534e55cb1135f2df741b64",
+    "fano_task.py": "fb616d5d0739005cffe10f372a00bdebcada7903151b2ddeede7881c64fd1260"
+  },
+  "frozen_task_artifact_sha256": "5506aebf1a1a992ecae4df944c725ecd5db29927bcf51382c18ee0aa559e6b40",
+  "main_observation_sha256": "d0cfb1451f5d9d1b5e43948d92d5063946b5a51f88d0c3bf137c57c8dc35495f",
+  "manifest_sha256": "231e0d0dd8ab24a3f40b879f460471b11642116de05ed65223a19a6acaa49a42",
+  "schema": "occurrence.011.03.train-capsule-manifest.v1",
+  "selection_surface": {
+    "arm": "main",
+    "batch_count": 8,
+    "completion_queries": 672,
+    "contains_any_other_split": false,
+    "contains_control": false,
+    "mate_queries": 112,
+    "namespace_labels": [
+      "main/train/00",
+      "main/train/01",
+      "main/train/02",
+      "main/train/03",
+      "main/train/04",
+      "main/train/05",
+      "main/train/06",
+      "main/train/07"
+    ],
+    "split": "train"
+  },
+  "torch_serialization_note": "the plain file hash identifies the committed container; the content hash independently covers every metadata field and exact tensor byte"
+}
