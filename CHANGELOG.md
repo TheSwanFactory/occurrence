@@ -3,6 +3,81 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.8.4] - 2026-09-12
+
+### Added
+
+- Issue 011, the first cross-habitat discovery experiment, as five modules in
+  `experiments/sfp_representation/`: `fano_task.py` (Gate 0), `fano_heads.py`
+  (the learner), `fano_baselines.py` (exact ceilings and cheap selectors),
+  `fano_sweep.py` (the declared runs and the recovery audits) and
+  `fano_analysis.py` (the predeclared thresholds and the disposition), with six
+  artifacts under `011_fano_artifacts/`. `009` banked *local* representation
+  discovery and said explicitly that the global question was untested: every
+  habitat is the same six-node octahedron once tokens are permuted, so fourteen
+  disconnected local charts contain no global Fano identity. `011.01` asks whether
+  the seven-point Fano / `FFF` quotient can be recovered from fourteen
+  **anonymous** habitats and certified cross-habitat support incidence, with no
+  `FFF` and no XOR law supplied.
+- Gate 0 establishes that it can. The learner's whole input is a typed anonymous
+  graph — 14 habitat nodes, 84 Event nodes, 7 first-half support-axis nodes, 7
+  second-half, and the `H--E` / `E--L` / `E--R` incidence — and the section 3.1
+  candidate reconstruction is verified step by step rather than assumed: each
+  habitat omits exactly one L and one R node, equal support patterns give seven
+  two-habitat classes, the omitted pairs induce an L→R bijection, each class
+  exposes three reciprocal support pairs, and adjoining the class deduplicates to
+  exactly seven three-point lines with every one of the 21 point pairs on exactly
+  one line. `|Aut(recovered plane)| = 168` and it is equivalent to the certified
+  `topographo.core.f2_groups.LINES3` under 168 isomorphisms.
+  `|Aut(observed anonymous graph)| = 43008 = 168 x 128 x 2`, derived by
+  enumerating all 5040 L-images — exactly 168 extend, each in exactly 128 ways —
+  plus a verified L/R namespace swap. Both answers are forced by the observation:
+  zero equivariance failures over all 43008 automorphisms.
+- The exact ceilings, including the two that are rational numbers rather than
+  measured chance. The nonlearned reconstruction recovers the mate, the completion
+  and the whole seven-line plane at exactly `1.0000` in every frozen namespace.
+  For the cross-habitat-destroying control, `011.01` section 3.3 forbids
+  substituting empirical chance, so `localized_ceiling_census` *constructs* an
+  automorphism of the control graph fixing the query and carrying one candidate
+  answer to another — 168 witnesses for the mate query, 924 for completion — which
+  puts every scored candidate in one orbit and pins the ceilings at `1/13` and
+  `1/66`.
+- Disposition **C**, filed as such. The primary block reaches
+  `mate_exact_accuracy 0.8750` CI `[0.6250, 1.0000]` and
+  `fano_completion_exact_set_accuracy 0.7206` CI `[0.3750, 0.9706]` against
+  thresholds of `0.95`, with `fano_plane_valid_rate 0.7344` against `0.90` and
+  fresh-name decision transport `0.8455` against `0.99`. The seed distribution is
+  bimodal and the mean describes neither mode: five of eight seeds reach final loss
+  `0.346574`, the exact information-theoretic minimum of this loss, and score
+  `1.0000` on every metric including the whole-plane reconstruction and transport;
+  three finish at the uniform-choice loss. Those three are **fit** failures, not
+  generalization failures — train and test agree to within `0.0149` on every one of
+  them. The one repair `011.01` section 4 permits was diagnosed, run, and made
+  things worse, moving converged seeds from 5 to 3 and completion to `0.4235`; both
+  blocks are reported and the primary is not deleted. Section 8's "do not round a
+  near miss into A" is enforced structurally: the class is derived from the
+  threshold table by explicit conditions rather than typed by hand.
+- The controls hold. The capacity-matched localized control — identical parameters,
+  identical protocol, L/R identity localized inside each habitat so every
+  within-habitat pattern and degree is preserved and no axis is shared across
+  habitats — sits at `0.0804` and `0.0208` against exact ceilings of `0.0769` and
+  `0.0152`, within the declared `0.01` tolerance, and recovers the plane at
+  `0.0000`. In the main arm both structure-aware cheap selectors score exactly
+  `0.0000` on the completion query, while a two-line shared-axis count scores
+  `1.0000` on the mate query — so the result turn says plainly that Query A is the
+  easy half and Query B carries the evidence.
+- Mechanical fences rather than prose ones: an AST audit over the learned path's
+  code, with annotations, docstrings and the ban list's own strings excised, that
+  finds no hidden certified label, no Gate-0 reconstruction, no certified Fano
+  plane, no SFP codec and no XOR; bitwise swap invariance for the completion query
+  from writing it as a set mark; tie-aware fresh-name covariance, checked on a
+  deterministically perturbed model because at initialization every habitat score
+  is tied to about `1e-7`; a parameter count identical at 11, 40, 112, 266 and 300
+  nodes; and a check that the sparse edge-message path agrees with the dense one to
+  `4.8e-07`, so the fast path is an optimization and not a second model.
+  `fano_heads.PRE_SWEEP_VALIDATION` records all eleven configurations tried while
+  freezing the architecture, read on training fit only.
+
 ## [0.8.3] - 2026-09-12
 
 ### Added
