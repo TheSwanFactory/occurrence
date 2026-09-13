@@ -13,7 +13,6 @@ import json
 from pathlib import Path
 
 import torch
-
 from fano_optimization_core import capsule_digest, file_sha256, load_capsule
 from fano_optimization_manifest import OUTPUT as CANDIDATE_MANIFEST
 from fano_optimization_manifest import object_sha256, validate_loaded

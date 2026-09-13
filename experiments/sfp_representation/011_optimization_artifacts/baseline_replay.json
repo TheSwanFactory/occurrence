@@ -28,7 +28,7 @@
     "transport_rate": 0.845503826531
   },
   "phase": "011.03 Phase 0 exact 011.02 primary/main replay",
-  "replay_command": "uv run --frozen python -c <isolated primary/main eight-cell replay and digest comparison recorded in the 011.04 result>",
+  "replay_command": "uv run --frozen python experiments/sfp_representation/fano_baseline_replay.py",
   "replayable_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
   "reproduced_committed_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
   "reproduces_byte_normalized_rows": true,

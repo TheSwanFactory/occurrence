@@ -78,6 +78,42 @@ All notable changes to this project are documented in this file.
   `fano_heads.PRE_SWEEP_VALIDATION` records all eleven configurations tried while
   freezing the architecture, read on training fit only.
 
+- Close Issue 011's optimization-only follow-up (`011.03`/`011.04`) without
+  changing its scientific surface. A finite manifest froze 24 initialization and
+  Adam/AdamW conditioning prescriptions before any comparative run, including the
+  exact `011.02` primary baseline. A content-addressed capsule mechanically limits
+  selection to eight main-arm TRAIN namespaces (112 mate and 672 completion rows),
+  and an AST boundary audit proves that the selector imports no task/evaluation
+  constructor and can access no validation, test, transport, whole-plane,
+  equivalence or control result. A dedicated eight-cell validator now reruns the
+  mandatory Phase-0 baseline: 5/8 converge, and all headline metrics and the
+  normalized-row digest reproduce exactly.
+- The predeclared lexicographic selector chooses
+  `xavier-1414-positive001-responsive`: Xavier-uniform gain `sqrt(2)`, linear bias
+  `0.01`, Adam learning rate `0.003`, betas `(0.8, 0.99)`, epsilon `1e-10`, constant
+  schedule, 1600-step cap and exact-minimum early stopping. It reaches 8/8
+  development convergence with median 192 updates. The complete search and selected
+  hash were committed at `a6be4809036120f6b6d0f2c53b7a3e946ad70f04` before the
+  Owner-fixed fresh seeds `1000..1015` were touched; the evaluator requires the
+  committed selected hash and cannot select dynamically.
+- Record disposition **A — optimization closure; bank global finite discovery**.
+  All 16/16 untouched fresh main seeds meet the frozen exact-minimum convergence
+  criterion (loss excess at most `1e-4` plus exact TRAIN mate/completion fit) and
+  score `1.0000` on mate, completion, mutual pairing, whole-plane validity,
+  certified equivalence, fresh-name transport and global L/R-swap invariance. The
+  unchanged localized control remains at `0.080357` and `0.020833`, within the
+  declared `0.01` tolerance of the exact ceilings `1/13` and `1/66`, and never
+  recovers a plane. All 20 determinism, anti-cheating, covariance and conformance
+  checks pass; post-commit legacy retraining is bit-exact to all eight selected
+  development cells.
+- Keep the positive claim finite: the result recommends that the Owner bank
+  `H_discovery_global_finite` only for learning the seven-point Fano / `FFF`
+  incidence quotient from this anonymous finite FIPS habitat support-incidence
+  observation up to symmetry. It does not discover `S`, native Event denotation,
+  continuous `G2`, Outcome constitution or language structure, establish generic
+  optimizer/model superiority, or join Issue 009's local chart and Issue 011's
+  global quotient into an end-to-end learner.
+
 ## [0.8.3] - 2026-09-12
 
 ### Added

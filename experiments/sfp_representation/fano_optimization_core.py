@@ -16,8 +16,6 @@ from pathlib import Path
 from typing import Any
 
 import torch
-from torch import nn
-
 from fano_heads import (
     FanoConfig,
     TypedGraphPointer,
@@ -26,6 +24,7 @@ from fano_heads import (
     top_k_decision,
 )
 from scorer import set_seed
+from torch import nn
 
 EXACT_LOSS_MINIMUM = math.log(2.0) / 2.0
 LOSS_TOLERANCE = 1e-4
