@@ -25,14 +25,14 @@ Result: **`009.02`, disposition E (narrowed)**. See
 > whether a learner can recover it from opaque tokens, pairwise admission and one
 > triadic anchor: `009.10` reaches `0.9970` against its own exact `1.000` ceiling while
 > the capacity-matched no-anchor control sits at `0.4937`. Jump to
-> [the `009.06` consequence-address ladder](#the-009-06-consequence-address-ladder),
-> [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator) or
-> [the `009.10` opaque local-chart discovery turn](#the-009-10-opaque-local-chart-discovery-turn).
+> [the `009.06` consequence-address ladder](#the-00906-consequence-address-ladder),
+> [the `009.08` query-relative PP locator](#the-00908-query-relative-pp-locator) or
+> [the `009.10` opaque local-chart discovery turn](#the-00910-opaque-local-chart-discovery-turn).
 
 > **Superseded in part by `009.06`.** The `009.02` forcing negative turned out to
 > be substantially an artifact of the 84-way output interface. Changing only the
 > output object moved held-out forced-third identity from `0.0335` to `0.7016`.
-> See [the consequence-address ladder](#the-009-06-consequence-address-ladder)
+> See [the consequence-address ladder](#the-00906-consequence-address-ladder)
 > below; the `009.02` *admission* findings and all its structural machinery stand
 > unchanged and are reused byte-identically.
 
@@ -319,7 +319,7 @@ opaque-token discovery is now warranted, but should target PP and pp only
 
 > **Superseded in part by `009.08`.** The residual `PP` obstruction `009.06` left at
 > `0.7158` turned out to be substantially *another* output-constitution artifact.
-> See [the `009.08` query-relative PP locator](#the-009-08-query-relative-pp-locator)
+> See [the `009.08` query-relative PP locator](#the-00908-query-relative-pp-locator)
 > below. Everything else in the ladder stands and is reused byte-identically.
 
 ---
@@ -652,6 +652,16 @@ and certified cross-habitat support incidence, with no `FFF` and no XOR law.
 **`011.02` executes `011.01`.** See
 [`011.02-Kiro-global-Fano-FFF-discovery-result.md`](011.02-Kiro-global-Fano-FFF-discovery-result.md).
 
+> **Closed by `011.04`; read this section as the first half.** `011.02`'s disposition C
+> was an *optimization* failure, not an identifiability or a generalization failure: five
+> of eight frozen seeds reached the exact loss minimum and scored `1.0000` on every
+> metric, and three never fitted at all. `011.03` therefore froze the entire scientific
+> surface and permitted only initialization and training-conditioning search. `011.04`
+> selected one prescription on TRAIN only, committed it before the Owner-fixed fresh
+> seeds were touched, and obtained `16/16` convergence with every unchanged metric at
+> `1.0000`. `011.05` banks `H_discovery_global_finite`. See
+> [the `011.04` optimization-reliability closure](#the-01104-optimization-reliability-closure).
+
 What the learner sees, and there is nothing else:
 
 ```text
@@ -819,4 +829,141 @@ covariance is exact in the top-k on every DECISIVE row; at initialization every 
 011 does not combine with 009 beyond what each established: 009 supplies local chart
   discovery, 011 does not yet supply the global quotient
 no language-model advantage and no generic computational superiority is claimed
+```
+
+## The `011.04` optimization-reliability closure
+
+`011.02` left one defect: the learner reached an already-identifiable target on only
+five of eight seeds. `011.03` permitted exactly one kind of follow-up — change
+initialization and training conditioning, change nothing else — and `011.04` executed
+it. See
+[`011.04-Kiro-optimization-reliability-closure-result.md`](011.04-Kiro-optimization-reliability-closure-result.md).
+
+```text
+unchanged fresh-main metric                     011.02     011.04    threshold
+exact-minimum convergence                          5/8      16/16       16/16
+mate_exact_accuracy                             0.8750     1.0000      >= .95
+fano_completion_exact_set_accuracy              0.7206     1.0000      >= .95
+mate_pairing_valid_rate                         0.8750     1.0000         --
+fano_plane_valid_rate                           0.7344     1.0000      >= .90
+certified_plane_equivalent_rate                 0.7344     1.0000      >= .90
+fresh opaque-name decision transport            0.8455     1.0000      >= .99
+global L/R-swap identical decisions             1.0000     1.0000         --
+```
+
+The localized control is unmoved: `0.080357` against its exact `1/13` mate ceiling and
+`0.020833` against its exact `1/66` completion ceiling, within the unchanged `0.01`
+tolerance, and it never recovers a plane.
+
+### Why this is a closure and not a redesign
+
+The four causal layers stay separate, and only one of them moved:
+
+```text
+identifiability   exact at Gate 0 in 011.02, nonlearned, untouched here
+representation    already reachable by the frozen architecture in 011.02
+optimization      the only variable 011.03 permitted and 011.04 changed
+generalization    scored only after the prescription was frozen and committed
+```
+
+The five `011.02` source files are pinned by SHA-256 and verified unchanged after
+evaluation. Selection read TRAIN fit only, through a content-addressed capsule holding
+exactly the eight `main/train` batches, with an AST audit proving the selector imports
+no task or evaluation module. The chosen prescription was committed at `a6be480`, and
+the evaluator refuses to run without that exact hash on its command line, before the
+fresh seeds `1000..1015` were touched.
+
+### Read these three cautions
+
+**Query A is cheaply exact and is not the evidence.** A two-line `shared_axis_count`
+rule already scores `1.0000` on the mate query in the main arm. The load-bearing
+evidence is Query B, where both structure-aware cheap selectors score exactly `0.0000`.
+A reader who takes the block of `1.0000`s above as seven independent achievements will
+over-read it.
+
+**Two of those rows are one finding.** `fano_plane_valid_rate` entails
+`certified_plane_equivalent_rate`, because the unique `2-(7,3,1)` design *is* the Fano
+plane. They agree by construction and `fano_sweep.summarize` asserts that they agree.
+
+**Selection used the already-public development seeds.** `011.04` says so plainly and
+does not claim seeds `0..7` became blind again; the separation it claims is procedural,
+and the scientific claim rests on the sixteen fresh seeds. One of those, seed `1012`,
+took `627` steps against a median near `190` — it converged, but the plateau basin
+evidently still exists, which is why `011.05` does not bank universal optimizer
+reliability.
+
+### Closure files
+
+| File | Role | Torch |
+|---|---|:--:|
+| `fano_baseline_replay.py` | rebuilds the eight frozen `011.02` primary/main cells and compares the normalized-row digest, as an executable gate rather than a copied assertion | **yes** |
+| `fano_optimization_manifest.py` | the frozen 24-candidate search manifest and the predeclared selector key | no |
+| `fano_train_capsule.py` | the content-addressed TRAIN-only capsule, and the AST boundary audit over the selector | **yes** |
+| `fano_optimization_core.py` | initialization, optimizer, schedule, clipping and exact-minimum early stopping — the whole of the permitted allowlist | **yes** |
+| `fano_optimization_search.py` | the `24 x 8` development search, read on TRAIN fit only | **yes** |
+| `fano_optimization_evaluate.py` | the commitment verifier and the locked fresh evaluation; refuses to run without the selected hash | **yes** |
+| `fano_optimization_analysis.py` | the 20-check anti-cheating ledger and the derived disposition | **yes** |
+
+### Reproducing the closure
+
+Six of the eight fast checks run from anywhere:
+
+```bash
+uv run --frozen python experiments/sfp_representation/fano_baseline_replay.py --committed-only
+uv run --frozen python experiments/sfp_representation/fano_optimization_manifest.py --check
+uv run --frozen python experiments/sfp_representation/fano_train_capsule.py --check
+uv run --frozen python experiments/sfp_representation/fano_optimization_search.py --check
+```
+
+### Verifying the commitment chain — not from `main`
+
+`fano_optimization_evaluate.py` and `fano_optimization_analysis.py` assert that the
+recorded pre-evaluation commit is an **ancestor of `HEAD`**. `main` is squash-merged, so
+on `main` both fail with
+
+```text
+ValueError: recorded pre-evaluation commit is not an ancestor of HEAD
+```
+
+No number is wrong and no artifact differs. What a squashed history cannot do is exhibit
+the commit boundary that proves selection preceded evaluation. Run them from the
+preserved ref:
+
+```bash
+git checkout provenance/011-branch-tip
+uv run --frozen python experiments/sfp_representation/fano_optimization_evaluate.py --check
+uv run --frozen python experiments/sfp_representation/fano_optimization_analysis.py --check
+```
+
+The commits `011.04` section 11 cites are preserved as annotated tags, and the branch
+`experiment/011-global-fano-fff-discovery` is retained on origin:
+
+| Tag | Commit | Role |
+|---|---|---|
+| `provenance/011-frozen-implementation` | `2e15aa9` | the frozen `011.02` scientific surface |
+| `provenance/011-prior-result-011.02` | `72494be` | the class-C result turn |
+| `provenance/011-preregistration` | `e5e6eb7` | search and capsule frozen |
+| `provenance/011-pre-evaluation-commitment` | `a6be480` | **the ancestry the evaluator checks** |
+| `provenance/011-evaluation-evidence` | `4a0e23a` | the byte-exact fresh evaluation |
+| `provenance/011-first-result-bearing` | `c4ad00b` | the result turn |
+| `provenance/011-branch-tip` | `3ee051e` | the branch as merged by PR #49 |
+
+`009` is covered the same way by `provenance/009-base-commit-009.06` and
+`provenance/009-branch-tip`; `009.06` cites a base commit that no ref on origin reached
+until those tags were pushed.
+
+### Closure fence
+
+```text
+the supported claim is exactly that the seven-point Fano / FFF incidence quotient can be
+  learned from the anonymous finite FIPS habitat-support-incidence observation, up to
+  its natural symmetry
+S discovery, native Event denotation, continuous G2 discovery, Outcome constitution,
+  open-ended or language representation discovery -- none, and none claimed
+generic superiority over transformers -- not claimed
+universal optimizer reliability -- NOT established; the fresh seeds support this
+  predeclared finite block, not all seeds or all optimizers
+the exact Gate-0 reconstruction remains nonlearned and outside the learned path
+009 and 011 are NOT joined into one end-to-end learner; 009 supplies local chart
+  discovery and 011 the global quotient, and joining them needs a separate experiment
 ```
