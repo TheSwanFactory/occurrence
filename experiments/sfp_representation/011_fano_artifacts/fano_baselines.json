@@ -1,0 +1,304 @@
+{
+  "cheap_selectors": {
+    "localized_control": {
+      "event_two_hop": {
+        "completion": 0.0,
+        "description": "score each candidate by the number of length-four H--E--axis--E--H walks reaching it from the query habitats; a pure connectivity count with no notion of the recovered L/R bijection",
+        "mate": 0.076530612245
+      },
+      "lowest_index": {
+        "completion": 0.010204081633,
+        "description": "the opaque-index tie-break: take the lowest-numbered scored candidates. A learner that has learned nothing and ties everywhere decides this way, so it is the floor a null model actually reaches on frozen namespaces",
+        "mate": 0.076530612245
+      },
+      "queries_scored": {
+        "completion": 2352,
+        "mate": 392
+      },
+      "shared_axis_count": {
+        "completion": 0.0,
+        "completion_selects_the_two_queries_own_mates": 0.0,
+        "description": "score each candidate by how many axis nodes it shares with the query habitats. The natural cheap rule on this observation, and the one worth reporting: it is exact for the mate and it is wrong for completion, because it selects the two queries' own mates",
+        "mate": 0.076530612245,
+        "mechanism": "a mate shares 6 axis nodes with the query and every other habitat shares 5, so the count is exact for the mate; for completion the same count ranks the two queries' own mates at 11 and everything else at 10, which is a coherent answer to a different question"
+      },
+      "uniform": {
+        "completion": 0.015151515152,
+        "derivation": "one of 13 scored habitats for the mate; one of the 66 two-element subsets of the 12 habitats outside the query for completion",
+        "description": "the analytic rate of choosing the answer set uniformly at random from the scored candidates; reported as an exact rational, not sampled",
+        "mate": 0.076923076923
+      }
+    },
+    "main": {
+      "event_two_hop": {
+        "completion": 0.0,
+        "description": "score each candidate by the number of length-four H--E--axis--E--H walks reaching it from the query habitats; a pure connectivity count with no notion of the recovered L/R bijection",
+        "mate": 1.0
+      },
+      "lowest_index": {
+        "completion": 0.030612244898,
+        "description": "the opaque-index tie-break: take the lowest-numbered scored candidates. A learner that has learned nothing and ties everywhere decides this way, so it is the floor a null model actually reaches on frozen namespaces",
+        "mate": 0.086734693878
+      },
+      "queries_scored": {
+        "completion": 2352,
+        "mate": 392
+      },
+      "shared_axis_count": {
+        "completion": 0.0,
+        "completion_selects_the_two_queries_own_mates": 0.160289115646,
+        "description": "score each candidate by how many axis nodes it shares with the query habitats. The natural cheap rule on this observation, and the one worth reporting: it is exact for the mate and it is wrong for completion, because it selects the two queries' own mates",
+        "mate": 1.0,
+        "mechanism": "a mate shares 6 axis nodes with the query and every other habitat shares 5, so the count is exact for the mate; for completion the same count ranks the two queries' own mates at 11 and everything else at 10, which is a coherent answer to a different question"
+      },
+      "uniform": {
+        "completion": 0.015151515152,
+        "derivation": "one of 13 scored habitats for the mate; one of the 66 two-element subsets of the 12 habitats outside the query for completion",
+        "description": "the analytic rate of choosing the answer set uniformly at random from the scored candidates; reported as an exact rational, not sampled",
+        "mate": 0.076923076923
+      }
+    }
+  },
+  "ladder": {
+    "completion": {
+      "event_two_hop_main": 0.0,
+      "localized_control_exact_ceiling": 0.015151515152,
+      "lowest_index": 0.030612244898,
+      "nonlearned_exact_ceiling_main": 1.0,
+      "shared_axis_count_main": 0.0,
+      "uniform": 0.015151515152
+    },
+    "mate": {
+      "localized_control_exact_ceiling": 0.076923076923,
+      "lowest_index": 0.086734693878,
+      "nonlearned_exact_ceiling_main": 1.0,
+      "shared_axis_count_main": 1.0,
+      "uniform": 0.076923076923
+    }
+  },
+  "localized_control_information_ceiling": {
+    "completion": {
+      "distinct_target_sets": 66,
+      "eligible_candidates": 12,
+      "exact_ceiling": 0.015151515152,
+      "orbit_witnesses": 924,
+      "scored_candidates": 14,
+      "single_orbit": true,
+      "statement": "the 12 habitats outside the query lie in one orbit and the automorphisms fixing the query induce the full symmetric group on them, so all 66 two-element subsets are indistinguishable and the exact ceiling for exact-set recovery is 1/66"
+    },
+    "component_sizes": [
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19,
+      19
+    ],
+    "components": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "breadth-first search over the control graph"
+    },
+    "components_are_isomorphic": true,
+    "mate": {
+      "exact_ceiling": 0.076923076923,
+      "orbit_witnesses": 168,
+      "scored_candidates": 13,
+      "single_orbit": true,
+      "statement": "all 13 scored habitats lie in one orbit of the automorphisms fixing the query, so every equivariant scorer ties and the exact ceiling is 1/13"
+    },
+    "no_empirical_substitution": "both ceilings are exact rational numbers from constructed orbit witnesses, not measured chance"
+  },
+  "module": "fano_baselines",
+  "nonlearned_ceiling": {
+    "localized_control": {
+      "completion": {
+        "agrees": false,
+        "expected": 2352,
+        "observed": 0,
+        "source": "reconstruct().completion over every frozen namespace"
+      },
+      "completion_exact_set_accuracy": 0.0,
+      "mate": {
+        "agrees": false,
+        "expected": 392,
+        "observed": 0,
+        "source": "reconstruct().mate over every frozen namespace"
+      },
+      "mate_accuracy": 0.0,
+      "namespaces": 28,
+      "reconstruction_valid": false,
+      "role": "011.01 section 7.1 NONLEARNED CEILING. It is not a competing learned baseline and it is not imported by the learned path",
+      "whole_plane": {
+        "accuracy": 0.0,
+        "automorphism_order": 0,
+        "equivalent_to_certified_plane": false,
+        "lines_recovered": 0
+      }
+    },
+    "main": {
+      "completion": {
+        "agrees": true,
+        "expected": 2352,
+        "observed": 2352,
+        "source": "reconstruct().completion over every frozen namespace"
+      },
+      "completion_exact_set_accuracy": 1.0,
+      "mate": {
+        "agrees": true,
+        "expected": 392,
+        "observed": 392,
+        "source": "reconstruct().mate over every frozen namespace"
+      },
+      "mate_accuracy": 1.0,
+      "namespaces": 28,
+      "reconstruction_valid": true,
+      "role": "011.01 section 7.1 NONLEARNED CEILING. It is not a competing learned baseline and it is not imported by the learned path",
+      "whole_plane": {
+        "accuracy": 1.0,
+        "automorphism_order": 168,
+        "equivalent_to_certified_plane": true,
+        "lines_recovered": 7
+      }
+    }
+  },
+  "provenance": {
+    "base_commit": "d4efc739ffb9ba58a4e79b1b98b3bd0e5aa8cbb2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.11",
+    "torch": "not imported; this module scores no tensors"
+  },
+  "purpose": "011.01 sections 3.2, 3.3 and 7: the nonlearned exact main-arm ceiling, the exact localized-control information ceilings, and the deterministic cheap selectors",
+  "relational_laws": {
+    "control_ceilings_are_single_orbit_proofs": true,
+    "control_completion_ceiling_is_one_sixty_sixth": true,
+    "control_mate_ceiling_is_one_thirteenth": true,
+    "mate_is_cheap_in_the_main_arm": true,
+    "no_cheap_selector_is_material_on_completion": true,
+    "no_control_selector_materially_exceeds_its_ceiling": true,
+    "nonlearned_completion_is_exact": true,
+    "nonlearned_completion_rate_is_one": true,
+    "nonlearned_mate_is_exact": true,
+    "nonlearned_mate_rate_is_one": true,
+    "nonlearned_plane_is_exact": true,
+    "reconstruction_fails_on_the_control": true,
+    "structure_aware_cheap_rules_score_zero_on_completion": true
+  },
+  "selectors": {
+    "event_two_hop": "score each candidate by the number of length-four H--E--axis--E--H walks reaching it from the query habitats; a pure connectivity count with no notion of the recovered L/R bijection",
+    "lowest_index": "the opaque-index tie-break: take the lowest-numbered scored candidates. A learner that has learned nothing and ties everywhere decides this way, so it is the floor a null model actually reaches on frozen namespaces",
+    "shared_axis_count": "score each candidate by how many axis nodes it shares with the query habitats. The natural cheap rule on this observation, and the one worth reporting: it is exact for the mate and it is wrong for completion, because it selects the two queries' own mates",
+    "uniform": "the analytic rate of choosing the answer set uniformly at random from the scored candidates; reported as an exact rational, not sampled"
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "the nonlearned reconstruction recovers the mate, the completion and the whole seven-line plane at exactly 1.0000 in every frozen namespace; the localized control's exact ceilings are 1/13 and 1/66 from constructed orbit witnesses; and in the main arm the mate is cheaply exact while both structure-aware cheap rules score exactly 0.0000 on completion and the index tie-break stays near uniform"
+  },
+  "which_query_carries_the_evidence": {
+    "cheap_rule_bound": 0.1,
+    "control_selectors_vs_exact_ceilings": {
+      "event_two_hop/completion": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 1.0,
+        "binomial_tail_at_query_count": 1.0,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.015151515152,
+        "excess": -0.015151515152,
+        "hits": 0,
+        "materially_exceeds": false,
+        "observed": 0.0,
+        "queries": 2352,
+        "tolerance": 0.01
+      },
+      "event_two_hop/mate": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.645562413987,
+        "binomial_tail_at_query_count": 0.538789923869,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.076923076923,
+        "excess": -0.000392464678,
+        "hits": 30,
+        "materially_exceeds": false,
+        "observed": 0.076530612245,
+        "queries": 392,
+        "tolerance": 0.01
+      },
+      "lowest_index/completion": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 1.0,
+        "binomial_tail_at_query_count": 0.984380533489,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.015151515152,
+        "excess": -0.004947433519,
+        "hits": 24,
+        "materially_exceeds": false,
+        "observed": 0.010204081633,
+        "queries": 2352,
+        "tolerance": 0.01
+      },
+      "lowest_index/mate": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.645562413987,
+        "binomial_tail_at_query_count": 0.538789923869,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.076923076923,
+        "excess": -0.000392464678,
+        "hits": 30,
+        "materially_exceeds": false,
+        "observed": 0.076530612245,
+        "queries": 392,
+        "tolerance": 0.01
+      },
+      "shared_axis_count/completion": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 1.0,
+        "binomial_tail_at_query_count": 1.0,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.015151515152,
+        "excess": -0.015151515152,
+        "hits": 0,
+        "materially_exceeds": false,
+        "observed": 0.0,
+        "queries": 2352,
+        "tolerance": 0.01
+      },
+      "shared_axis_count/mate": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.645562413987,
+        "binomial_tail_at_query_count": 0.538789923869,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 28,
+        "ceiling": 0.076923076923,
+        "excess": -0.000392464678,
+        "hits": 30,
+        "materially_exceeds": false,
+        "observed": 0.076530612245,
+        "queries": 392,
+        "tolerance": 0.01
+      }
+    },
+    "index_tie_break_note": "the lowest_index rate on completion is a property of the frozen namespace draw, not a rule: a namespace contributes 12 hits if its two lowest-numbered habitat nodes happen to be mates and 0 otherwise, so the rate moves in steps of 12/4032 and its effective sample size is the 48 namespaces",
+    "load_bearing_query": "completion",
+    "mate_is_cheap_in_the_main_arm": true,
+    "no_cheap_selector_is_material_on_completion": true,
+    "no_control_selector_materially_exceeds_its_ceiling": true,
+    "statement": "Query A is exactly solvable in the main arm by a two-line shared-axis count, so it is the easier half and it is NOT the load-bearing evidence for global discovery. On Query B both structure-aware cheap rules score exactly 0.0000 in the main arm, and the index tie-break sits near uniform, so a learner that recovers completion is not reproducing a cheap rule. In the control every selector sits at its exact information ceiling within the declared tolerance, which is what a graph where all candidates tie should produce",
+    "structure_aware_cheap_rules_score_zero_on_completion": true,
+    "worst_cheap_completion_rate_main": 0.030612244898
+  }
+}

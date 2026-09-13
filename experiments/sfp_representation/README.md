@@ -638,3 +638,185 @@ opaque names alone contain no structure -- which is why the zero-anchor arm cann
   a tie-break, and why the two index tie-breaks straddle 1/2
 closed-set habitat re-identification is untouched
 ```
+
+---
+
+## The `011.02` global Fano / `FFF` discovery turn
+
+`009` closed with local discovery banked and the global question explicitly untested:
+every habitat is the same six-node octahedron once tokens are permuted, so fourteen
+disconnected local charts carry no global Fano identity. `011.01` asks whether the
+seven-point Fano organization can be recovered from fourteen **anonymous** habitats
+and certified cross-habitat support incidence, with no `FFF` and no XOR law.
+
+**`011.02` executes `011.01`.** See
+[`011.02-Kiro-global-Fano-FFF-discovery-result.md`](011.02-Kiro-global-Fano-FFF-discovery-result.md).
+
+What the learner sees, and there is nothing else:
+
+```text
+marks       (B, 112, 5)     [is_habitat, is_event, is_left, is_right, query_mark]
+adjacency   (B, 112, 112)   symmetric H--E / E--L / E--R incidence, zero diagonal
+```
+
+Fourteen anonymous habitat nodes, 84 anonymous Event nodes, seven anonymous
+first-half support-axis nodes, seven second-half. No `P`, `FFF`, `S`, `delta`, `PP`,
+`pp`, numeric Fano label, numeric axis label, coefficient sign, native ray
+coordinate, block ID, Event index or habitat index. No embedding table and no
+buffer. `fano_task.axes_of` is the one place the native two-axis support is read; it
+returns the two axis *indices* and discards both coefficients, and every axis node
+is renamed per episode.
+
+### Gate 0 first — the observation determines the plane
+
+`011.01` section 3 forbids training until the census is complete. All 23 pins agree
+and all 26 laws hold. The section 3.1 candidate reconstruction was verified step by
+step rather than assumed:
+
+| Quantity | Value | Status |
+|---|---|---|
+| habitats omitting exactly one L and one R node | 14 of 14 | enumerated |
+| support-pattern classes | 7, each of size 2 | pin, verified |
+| recovered L→R bijection | total and injective | enumerated |
+| reciprocal support pairs per class | 3 | enumerated |
+| recovered lines | 7, every one of the 21 pairs on exactly one | pin, verified |
+| `\|Aut(recovered plane)\|` | 168 | pin, verified |
+| equivalent to certified `f2_groups.LINES3` | 168 isomorphisms | verified |
+| `\|Aut(observed anonymous graph)\|` | 43008 = 168 × 128 × 2 | pin, verified |
+| mate / completion answer forced by the observation | 0 failures over all 43008 | verified |
+
+The `43008` is derived, not guessed: all `5040` L-images are enumerated and exactly
+`168` extend, each extends in exactly `128` ways, and the L/R namespace swap is
+verified to be an automorphism fixing every habitat node.
+
+### The exact ceilings, and the one that is a rational number
+
+```text
+nonlearned reconstruction, mate                 1.0000
+nonlearned reconstruction, completion           1.0000
+nonlearned reconstruction, whole plane          1.0000
+localized control, mate            (EXACT)      1/13 = 0.0769
+localized control, completion      (EXACT)      1/66 = 0.0152
+```
+
+The control ceilings are not measured chance. `011.01` section 3.3 forbids that, so
+`localized_ceiling_census` *constructs* an automorphism of the control graph fixing
+the query and carrying one candidate answer to another, for every query and every
+ordered pair of candidates — 168 witnesses for the mate query and 924 for
+completion. Every scored candidate lies in one orbit, so any equivariant scorer
+ties.
+
+### Result: disposition C
+
+```text
+exact-set recovery of the Fano completion, test namespaces
+uniform over the 66 two-element subsets                 0.0152
+localized control, exact information ceiling            0.0152
+localized control learner, same parameters  (CONTROL)   0.0208
+both structure-aware cheap rules in the main arm        0.0000
+main learner, primary block                             0.7206
+main learner, repaired block                            0.4978
+nonlearned reconstruction                   (CEILING)   1.0000
+```
+
+| Metric | Threshold | Primary | Repair |
+|---|---|---|---|
+| `mate_exact_accuracy` | ≥ 0.95 | **0.8750** CI `[0.6250, 1.0000]` | 0.7600 |
+| `fano_completion_exact_set_accuracy` | ≥ 0.95 | **0.7206** CI `[0.3750, 0.9706]` | 0.4978 |
+| `fano_plane_valid_rate` | ≥ 0.90 | **0.7344** CI `[0.3750, 0.9844]` | 0.3750 |
+| `certified_plane_equivalent_rate` | ≥ 0.90 | **0.7344** | 0.3750 |
+| fresh-name decision transport | ≥ 0.99 | **0.8455** | 0.7557 |
+| seeds at the exact loss minimum | — | 5 of 8 | 3 of 8 |
+
+**Filed C.** Every threshold misses, and section 8's "do not round a near miss into
+A" is honoured: the disposition is derived from the threshold table by explicit
+conditions in `fano_analysis.disposition`, not typed by hand.
+
+### Read these four cautions
+
+**The seed distribution is bimodal and the mean describes neither mode.** Five seeds
+reach final loss `0.346574`, which is the exact information-theoretic minimum of this
+loss — `0` on a one-element mate target and `ln 2` on a two-element completion target,
+averaged over two heads — and score `1.0000` on mate, completion, `chart_valid`,
+certified equivalence and transport. Three seeds finish at `2.52`–`2.60`, the
+uniform-choice loss. The converged-seed figures are a **conditional statement about
+the seeds that fitted**, not a result.
+
+**The failure is fit, not generalization.** Train and test agree on every stalled cell
+to within `0.0149`: seed 3 is `0.000/0.000` on both splits, seed 5 is `1.000` mate and
+`0.000` completion on both, seed 7 is `1.000` mate with completion `0.750` train
+against `0.765` test. A run that does no better on the data it optimized than on data
+it never saw has not overfitted — it has not fitted.
+
+**The one permitted repair made it worse, and is reported.** `011.01` section 4 allows
+one mechanically diagnosed repair. The diagnosis is in
+`fano_sweep.DIAGNOSED_PATHOLOGY`; the repair conditions the message on the ordered
+edge, `Message(h_j) -> Message([h_i, h_j])`, changing nothing else. It moves converged
+seeds from 5 to **3** and completion from `0.7206` to `0.4978`. That locates the
+failure outside the message mechanism, and the primary block is not deleted.
+
+**Query A is the easy half and is not the load-bearing evidence.** A two-line
+shared-axis count scores `1.0000` on the mate query in the main arm, because a mate
+shares six axis nodes with the query and every other habitat shares five. Query B is
+where the evidence lives: both structure-aware cheap rules score exactly `0.0000` on
+completion in the main arm, and the same count ranks the two queries' *own mates*
+first — a coherent answer to a different question.
+
+### Global files
+
+| File | Role | Torch |
+|---|---|:--:|
+| `fano_task.py` | Gate-0 census, the anonymous observation and its localized control, the exact automorphism group, the control's orbit-witness ceilings, and the frozen namespace / query manifests | no |
+| `fano_heads.py` | the typed-graph learner, the set-valued loss, the recorded pre-sweep validation, and the structural proofs (bitwise swap invariance, tie-aware covariance, anti-identity ledger, AST hidden-field fence, sparse/dense edge-path equality) | **yes** |
+| `fano_baselines.py` | the nonlearned exact ceiling, the exact control ceilings, the cheap selectors, and the exact-binomial ceiling comparison | no tensors |
+| `fano_sweep.py` | 2 blocks × 2 arms × 8 seeds = 32 runs, about 5300 s, plus the section 5 recovery audit, the fresh-name transport audit and the global L/R swap audit | **yes** |
+| `fano_analysis.py` | the section 8 thresholds scored as written, bootstrap intervals over seeds via the **imported** `009.02` bootstrap, and the derived disposition | **yes** |
+
+### Reproducing the global turn
+
+```bash
+uv run --frozen python experiments/sfp_representation/fano_task.py --check
+uv run --frozen python experiments/sfp_representation/fano_heads.py --check
+uv run --frozen python experiments/sfp_representation/fano_baselines.py --check
+uv run --frozen python experiments/sfp_representation/fano_sweep.py --smoke --check
+uv run --frozen python experiments/sfp_representation/fano_sweep.py --check   # ~5300 s
+uv run --frozen python experiments/sfp_representation/fano_analysis.py --check
+```
+
+Every artifact is in git; `fano_sweep.json` is 460 KiB, which is not bulk, so unlike
+`009.10` there is no pointer file and nothing to fetch. The smoke check replays in
+about 7 s and is the cheap way to confirm the run is deterministic before spending
+the 5300 s.
+
+### Global fence
+
+```text
+S is supplied nowhere and discovered nowhere; delta never enters the observation at all,
+  which is why the two habitats of a point class are exchangeable and why the
+  completion readout must be set-valued
+native Event denotation, continuous G2 geometry and Outcome semantics are untouched
+H_discovery_global_finite is NOT banked: the class is C, every threshold missed, and
+  the miss is reported rather than reinterpreted
+the converged-seed 1.0000 figures are CONDITIONAL on the seeds that fitted and are
+  never presented as the result
+the three stalled seeds are FIT failures, not generalization failures; train and test
+  agree to within 0.0149 on every one of them
+the one permitted repair HURT -- 5 converged seeds to 3 -- and is reported, not deleted
+Query A is cheaply exact in the main arm and is not the load-bearing evidence
+fano_plane_valid ENTAILS certified_plane_equivalent, because the unique 2-(7,3,1)
+  design is the Fano plane; the two rates are one finding reported twice
+XOR appears only in target generation and post-hoc audit, which fano_heads checks by
+  AST over the learned path's code rather than asserting in prose
+the control ceilings are EXACT rationals from constructed orbit witnesses, not measured
+  chance, and the control sits within 0.0057 of both
+the sparse edge path is an OPTIMIZATION of the dense one, checked to agree to 4.8e-07,
+  not a second model; it was also found NOT REPLAYABLE under CPU multithreading, which
+  moved a published repair number, so torch.use_deterministic_algorithms is on and the
+  defect is reported rather than quietly overwritten
+covariance is exact in the top-k on every DECISIVE row; at initialization every row is
+  tied to about 1e-7, so decision covariance is checked on a deterministically
+  perturbed model that is never trained and from which no accuracy is read
+011 does not combine with 009 beyond what each established: 009 supplies local chart
+  discovery, 011 does not yet supply the global quotient
+no language-model advantage and no generic computational superiority is claimed
+```

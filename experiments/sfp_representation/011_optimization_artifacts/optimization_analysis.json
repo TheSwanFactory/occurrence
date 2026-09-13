@@ -1,0 +1,565 @@
+{
+  "analysis_sha256": "ecb994c18a599eec7d221fd883b0dba8b732be2bfd46838d903374f6a3306303",
+  "baseline_replay": {
+    "baseline_commit": "2e15aa967a35a26832b671ccbb23d55d0e441b61",
+    "converged_seeds": [
+      0,
+      1,
+      2,
+      4,
+      6
+    ],
+    "final_loss_per_seed": [
+      0.346574544907,
+      0.346574306488,
+      0.346574544907,
+      2.526967525482,
+      0.346575737,
+      2.602004051208,
+      0.346575021744,
+      2.524920701981
+    ],
+    "frozen_surface_matches_baseline_commit": true,
+    "headline": {
+      "certified_plane_equivalent_rate": 0.734375,
+      "fano_completion_exact_set_accuracy": 0.720610119048,
+      "fano_plane_valid_rate": 0.734375,
+      "left_right_swap_identical_rate": 1.0,
+      "mate_exact_accuracy": 0.875,
+      "mate_pairing_valid_rate": 0.875,
+      "transport_rate": 0.845503826531
+    },
+    "phase": "011.03 Phase 0 exact 011.02 primary/main replay",
+    "replay_command": "uv run --frozen python experiments/sfp_representation/fano_baseline_replay.py",
+    "replayable_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
+    "reproduced_committed_rows_digest": "6f172373d64a51b659ef9466139e34baf5d01a374a480966722179c2e0b38dd1",
+    "reproduces_byte_normalized_rows": true,
+    "stalled_seeds": [
+      3,
+      5,
+      7
+    ],
+    "static_checks": {
+      "fano_analysis": true,
+      "fano_baselines": true,
+      "fano_heads": true,
+      "fano_sweep_smoke": true,
+      "fano_task": true
+    }
+  },
+  "candidate_manifest_sha256": "290ba4939bee824b7f92dd53360c4247c648ecc238ad3bdb45a712cca98c796c",
+  "conformance": {
+    "checks": {
+      "control_seed_block_is_exact": true,
+      "deterministic_algorithms_all_fresh_control": true,
+      "deterministic_algorithms_all_fresh_main": true,
+      "every_gate_0_pin_agrees": true,
+      "fresh_output_absent_at_commitment": true,
+      "fresh_seed_block_is_exact": true,
+      "frozen_011_02_sources_unchanged": true,
+      "gate_0_passes": true,
+      "global_left_right_swap_moves_no_answer": true,
+      "legacy_retraining_is_bit_exact": true,
+      "localized_completion_within_exact_ceiling": true,
+      "localized_control_never_recovers_plane": true,
+      "localized_mate_within_exact_ceiling": true,
+      "no_fresh_seed_in_development_search": true,
+      "optimization_learned_path_audit_clean": true,
+      "original_answer_rule_audit_clean": true,
+      "selected_artifact_was_committed": true,
+      "selected_candidate_reached_8_of_8": true,
+      "selection_boundary_is_train_only": true,
+      "validity_entails_equivalence": true
+    },
+    "clean": true,
+    "failures": [],
+    "frozen_source_sha256": {
+      "expected": {
+        "fano_analysis.py": "dbde797966e5a8dc08cb1d583feaf04ce56e94f82a59aa1c4eb0533a21383220",
+        "fano_baselines.py": "22f646bdb864b5e035772fbfd583bca87e95a034000f749e7623259565cd95ad",
+        "fano_heads.py": "25aef2177e069fca0a3f339dc75269c6b3685f4c34c04e5adcb7b83f8d351963",
+        "fano_sweep.py": "5afad0da005ae3b3f4fdadc2e7594163898748df9f534e55cb1135f2df741b64",
+        "fano_task.py": "fb616d5d0739005cffe10f372a00bdebcada7903151b2ddeede7881c64fd1260"
+      },
+      "observed": {
+        "fano_analysis.py": "dbde797966e5a8dc08cb1d583feaf04ce56e94f82a59aa1c4eb0533a21383220",
+        "fano_baselines.py": "22f646bdb864b5e035772fbfd583bca87e95a034000f749e7623259565cd95ad",
+        "fano_heads.py": "25aef2177e069fca0a3f339dc75269c6b3685f4c34c04e5adcb7b83f8d351963",
+        "fano_sweep.py": "5afad0da005ae3b3f4fdadc2e7594163898748df9f534e55cb1135f2df741b64",
+        "fano_task.py": "fb616d5d0739005cffe10f372a00bdebcada7903151b2ddeede7881c64fd1260"
+      },
+      "unchanged": true
+    }
+  },
+  "control_tolerance": 0.01,
+  "development_search_sha256": "7bb2b7127d79a2695b2facbe806c4d2cf2ad2b207d4efffa170517797836fa99",
+  "disposition": {
+    "all_scientific_thresholds_pass": true,
+    "because": "16/16 fresh seeds converge and every unchanged scientific threshold, control ceiling, and audit passes",
+    "class": "A",
+    "control_passes": true,
+    "development_improvement": {
+      "baseline_converged": 5,
+      "selected_converged": 8
+    },
+    "fresh_reliability_passes": true,
+    "missed_thresholds": [],
+    "name": "optimization closure; bank global finite discovery",
+    "recommendation": "recommend that the Owner bank H_discovery_global_finite as SUPPORTED on the frozen finite observation",
+    "scientific_thresholds": {
+      "certified_plane_equivalent_rate": true,
+      "fano_completion_exact_set_accuracy": true,
+      "fano_plane_valid_rate": true,
+      "mate_exact_accuracy": true,
+      "transport_rate": true
+    }
+  },
+  "evaluation_sha256": "78ea16207810dea4c3d7628aad7d8d97299e93022844c488a6357fb386a90614",
+  "finite_claim_only": "the seven-point Fano / FFF incidence quotient can be learned from the anonymous finite FIPS habitat support-incidence observation, up to its natural symmetry",
+  "fresh_evaluation_ran": true,
+  "fresh_metrics": {
+    "certified_plane_equivalent_rate": {
+      "observed": 1.0,
+      "passes": true,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "threshold": 0.9
+    },
+    "fano_completion_exact_set_accuracy": {
+      "observed": 1.0,
+      "passes": true,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "threshold": 0.95
+    },
+    "fano_plane_valid_rate": {
+      "observed": 1.0,
+      "passes": true,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "threshold": 0.9
+    },
+    "left_right_swap_identical_rate": {
+      "observed": 1.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "mate_exact_accuracy": {
+      "observed": 1.0,
+      "passes": true,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "threshold": 0.95
+    },
+    "mate_pairing_valid_rate": {
+      "observed": 1.0,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "transport_rate": {
+      "observed": 1.0,
+      "passes": true,
+      "per_seed": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "threshold": 0.99
+    }
+  },
+  "fresh_reliability": {
+    "fresh_converged_count": 16,
+    "per_seed": {
+      "1000": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667348861694336,
+        "mate_train_exact": true,
+        "steps_to_convergence": 218
+      },
+      "1001": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466717600822449,
+        "mate_train_exact": true,
+        "steps_to_convergence": 206
+      },
+      "1002": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466666638851166,
+        "mate_train_exact": true,
+        "steps_to_convergence": 144
+      },
+      "1003": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466721475124359,
+        "mate_train_exact": true,
+        "steps_to_convergence": 178
+      },
+      "1004": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667301177978516,
+        "mate_train_exact": true,
+        "steps_to_convergence": 172
+      },
+      "1005": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667232632637024,
+        "mate_train_exact": true,
+        "steps_to_convergence": 128
+      },
+      "1006": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667256474494934,
+        "mate_train_exact": true,
+        "steps_to_convergence": 246
+      },
+      "1007": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466578722000122,
+        "mate_train_exact": true,
+        "steps_to_convergence": 163
+      },
+      "1008": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34666305780410767,
+        "mate_train_exact": true,
+        "steps_to_convergence": 146
+      },
+      "1009": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466728627681732,
+        "mate_train_exact": true,
+        "steps_to_convergence": 221
+      },
+      "1010": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667259454727173,
+        "mate_train_exact": true,
+        "steps_to_convergence": 218
+      },
+      "1011": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667348861694336,
+        "mate_train_exact": true,
+        "steps_to_convergence": 158
+      },
+      "1012": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466670513153076,
+        "mate_train_exact": true,
+        "steps_to_convergence": 627
+      },
+      "1013": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466635048389435,
+        "mate_train_exact": true,
+        "steps_to_convergence": 196
+      },
+      "1014": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.34667325019836426,
+        "mate_train_exact": true,
+        "steps_to_convergence": 138
+      },
+      "1015": {
+        "completion_train_exact": true,
+        "converged": true,
+        "final_train_loss": 0.3466728627681732,
+        "mate_train_exact": true,
+        "steps_to_convergence": 280
+      }
+    },
+    "required": 16
+  },
+  "interpretation": {
+    "generalization": "scored only after the optimization prescription was committed",
+    "identifiability": "already exact at Gate 0",
+    "optimization": "the only variable changed in 011.03",
+    "representation": "already achievable by the frozen architecture"
+  },
+  "legacy_determinism": {
+    "all_8_retrainings_are_exact": true,
+    "fields": [
+      "steps_to_convergence",
+      "updates_completed",
+      "final_train_loss_hex",
+      "initial_state_sha256",
+      "final_state_sha256",
+      "parameters_finite",
+      "deterministic_algorithms",
+      "train_fit"
+    ],
+    "per_seed": {
+      "0": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "1": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "2": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "3": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "4": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "5": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "6": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      },
+      "7": {
+        "comparisons": {
+          "deterministic_algorithms": true,
+          "final_state_sha256": true,
+          "final_train_loss_hex": true,
+          "initial_state_sha256": true,
+          "parameters_finite": true,
+          "steps_to_convergence": true,
+          "train_fit": true,
+          "updates_completed": true
+        },
+        "exact": true
+      }
+    }
+  },
+  "localized_control": {
+    "completion": {
+      "at_or_below_ceiling": true,
+      "binomial_tail_at_block_count": 0.30679339472,
+      "binomial_tail_at_query_count": 2.793285e-06,
+      "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+      "blocks": 128,
+      "ceiling": 0.015151515152,
+      "excess": 0.005681818181,
+      "hits": 224,
+      "materially_exceeds": false,
+      "observed": 0.020833333333,
+      "queries": 10752,
+      "tolerance": 0.01
+    },
+    "mate": {
+      "at_or_below_ceiling": true,
+      "binomial_tail_at_block_count": 0.526994927711,
+      "binomial_tail_at_query_count": 0.304834747434,
+      "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+      "blocks": 128,
+      "ceiling": 0.076923076923,
+      "excess": 0.003434065934,
+      "hits": 144,
+      "materially_exceeds": false,
+      "observed": 0.080357142857,
+      "queries": 1792,
+      "tolerance": 0.01
+    },
+    "never_recovers_a_plane": true,
+    "plane_valid_rate": 0.0
+  },
+  "pre_evaluation_commit": "a6be4809036120f6b6d0f2c53b7a3e946ad70f04",
+  "schema": "occurrence.011.03.optimization-analysis.v1",
+  "selected_optimization_sha256": "3b4edfd204294ed368c0eff89c80664f62822e23dbcc71b42b7db29666924250",
+  "thresholds": {
+    "certified_plane_equivalent_rate": 0.9,
+    "fano_completion_exact_set_accuracy": 0.95,
+    "fano_plane_valid_rate": 0.9,
+    "mate_exact_accuracy": 0.95,
+    "transport_rate": 0.99
+  },
+  "train_capsule_manifest_sha256": "231e0d0dd8ab24a3f40b879f460471b11642116de05ed65223a19a6acaa49a42"
+}

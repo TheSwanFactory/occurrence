@@ -1,0 +1,1142 @@
+{
+  "ceilings": {
+    "localized_completion": {
+      "agrees": true,
+      "expected": 0.015151515152,
+      "observed": 0.015151515152,
+      "source": "localized_ceiling_census orbit witnesses"
+    },
+    "localized_mate": {
+      "agrees": true,
+      "expected": 0.076923076923,
+      "observed": 0.076923076923,
+      "source": "localized_ceiling_census orbit witnesses"
+    },
+    "main_completion": {
+      "agrees": true,
+      "expected": 1.0,
+      "observed": 1.0,
+      "source": "answer_uniqueness over all of Aut"
+    },
+    "main_mate": {
+      "agrees": true,
+      "expected": 1.0,
+      "observed": 1.0,
+      "source": "answer_uniqueness over all of Aut"
+    },
+    "main_plane": {
+      "agrees": true,
+      "expected": 1.0,
+      "observed": 1.0,
+      "source": "reconstruct + plane_audit"
+    }
+  },
+  "digests": {
+    "catalogue_sha256": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+    "control_observation_sha256": "ec3fa08cea96c663209d8df083daf1b1c56fc73e8d08b077a96747c3e3c3f086",
+    "control_query_manifest_sha256": "1f0cec0325126e296eb32b696d8ce3ad302566984e64b93a03ba4fda63eaa9f6",
+    "dataset_sha256": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+    "main_observation_sha256": "d0cfb1451f5d9d1b5e43948d92d5063946b5a51f88d0c3bf137c57c8dc35495f",
+    "main_query_manifest_sha256": "617ab7d37eb7288a99c9010c04e74ec9e0ad21eca2e1e89f12c481430c9e58e9",
+    "reconstruction_sha256": "a1fd1aefeaaa6fb28fda99fa53c3ed7de9cad673c6fadbffe1c3627320f08fea"
+  },
+  "episodes": {
+    "localized_control": {
+      "arm": "localized",
+      "namespaces": {
+        "digests": [
+          {
+            "label": "localized/train/00",
+            "sha256": "3e69de21cb9092d8feaa28953752868f237a10d0018d31a277b225e3bc3812f5"
+          },
+          {
+            "label": "localized/train/01",
+            "sha256": "1e83caa8b6bf6f6169a6cc2054614adaf0fd210c1a011cfa0d390a6ad21ee76b"
+          },
+          {
+            "label": "localized/train/02",
+            "sha256": "b1d45c73f826cc03dfa3339f72b19412cf05202a74b2d37650feb4768c8af810"
+          },
+          {
+            "label": "localized/train/03",
+            "sha256": "7328681b03efb8b4106a9e7d523bb28d7e81db31366eaa6d9117cbbe07fffb9e"
+          },
+          {
+            "label": "localized/train/04",
+            "sha256": "52cebd5ad79d328e154bf407b314c3acee1aaf29ca06e473f2219b1e2fa2071c"
+          },
+          {
+            "label": "localized/train/05",
+            "sha256": "b6d84d203bafae4daf72d45f7271c22f88f7ad3317a600538996efd227b36715"
+          },
+          {
+            "label": "localized/train/06",
+            "sha256": "71077bf4f2bc9f42ca70c3234d14335e539e769d5d513e1ec728e29e575000bc"
+          },
+          {
+            "label": "localized/train/07",
+            "sha256": "dbb9bc7222777ac565dce19cb0d8840d8933508a8883fb9be7f418cc13fc0215"
+          },
+          {
+            "label": "localized/validation/00",
+            "sha256": "26023253b1395a2e9de1c7091d7741370034e667b8b2c336b9bc68f6b21a897c"
+          },
+          {
+            "label": "localized/validation/01",
+            "sha256": "334954ccabfdbdd2bc1b7692e6e158c2ff1c4544551170f00799a85e993a7b1d"
+          },
+          {
+            "label": "localized/validation/02",
+            "sha256": "fd18ad52e463c2724391b5ca0f52ea56dd86dd1d86cda20702b547a0626ed65f"
+          },
+          {
+            "label": "localized/validation/03",
+            "sha256": "0d013f7ce030b9850c402f0966bfa0b5feb04dc48dbf09caded23730c403fcb9"
+          },
+          {
+            "label": "localized/test/00",
+            "sha256": "ac769d047db523b5aafb6dd092e4e3a4c132c7b1c3d556064efd5d66ca512b81"
+          },
+          {
+            "label": "localized/test/01",
+            "sha256": "1a59576589dd4e5e79e272eb33ee9f0e9e5aa1210924d5a3462e03a36025020d"
+          },
+          {
+            "label": "localized/test/02",
+            "sha256": "ff5332a6060e19ec53cb04e867d0fbdb33e0ddf565e11cc3a54818aa9139d952"
+          },
+          {
+            "label": "localized/test/03",
+            "sha256": "1e805bb9d743a61c34022ec4b9503b9b6481a468dc6443628d0248446c98e23b"
+          },
+          {
+            "label": "localized/test/04",
+            "sha256": "11ffae6fe8b815bca4b2d3547d883251aa1be2aac37441aa00c846f46f087e6f"
+          },
+          {
+            "label": "localized/test/05",
+            "sha256": "3a49f03fc359f01dbaf6d0ed835813feff2eea6942a608205ac1a19988d98d41"
+          },
+          {
+            "label": "localized/test/06",
+            "sha256": "5956c3e9d98c092373450c380c07b69542b55c24bb24515b67528dd5586820c6"
+          },
+          {
+            "label": "localized/test/07",
+            "sha256": "effa7eb853061091ac2a9a2795b5c6afabd0fa7fd017db0d28b043cdeee6107f"
+          },
+          {
+            "label": "localized/transport/00",
+            "sha256": "14681c98e327e56c14d7d850883832f3dac68dea51187f6a5396d963f831b8b6"
+          },
+          {
+            "label": "localized/transport/01",
+            "sha256": "68e3a3a23f3987e4900bf0f0a0d91fc7545787abb685cf2b05e3fc161bf9e561"
+          },
+          {
+            "label": "localized/transport/02",
+            "sha256": "665516f3ef6d0b4c32281a6fcea91812e3ec379700a8f50f28710b6222b2736f"
+          },
+          {
+            "label": "localized/transport/03",
+            "sha256": "f4c28a0e55d509424b73fa1acf5c617c0704592fcb72d320474f357bc44be401"
+          },
+          {
+            "label": "localized/transport/04",
+            "sha256": "aeb1bd03bc3fddbed05dcf267faa7a82a57c48daea1c81cd8d91484e290e4cce"
+          },
+          {
+            "label": "localized/transport/05",
+            "sha256": "7f0e6c98194f0579b22df0e766a63727677e8d58043181b7db8063698158a437"
+          },
+          {
+            "label": "localized/transport/06",
+            "sha256": "4620b5c6d475faa7b2cc520cdf1152a29e5f23227e9e89dc54c1478993af2153"
+          },
+          {
+            "label": "localized/transport/07",
+            "sha256": "d9b28c7d9ebf7b861d10d43867be1923f1cb2d4428d6797ced35a2ff39b8878d"
+          }
+        ],
+        "per_split": {
+          "test": 8,
+          "train": 8,
+          "transport": 8,
+          "validation": 4
+        },
+        "permutation_source": "lehmer_permutation(n, key) with key a sha256 digest of the namespace label; no RNG implementation is involved",
+        "total": 28
+      },
+      "no_stable_opaque_name": "each namespace draws four independent permutations, so no opaque index correlates with a hidden point or an answer across episodes",
+      "queries": {
+        "completion_scored_candidates": 14,
+        "completion_target_size": 2,
+        "manifest_sha256": "1f0cec0325126e296eb32b696d8ce3ad302566984e64b93a03ba4fda63eaa9f6",
+        "mate_scored_candidates": 13,
+        "per_split_and_kind": {
+          "test/completion": 672,
+          "test/mate": 112,
+          "train/completion": 672,
+          "train/mate": 112,
+          "transport/completion": 672,
+          "transport/mate": 112,
+          "validation/completion": 336,
+          "validation/mate": 56
+        },
+        "total": 2744
+      }
+    },
+    "main": {
+      "arm": "main",
+      "namespaces": {
+        "digests": [
+          {
+            "label": "main/train/00",
+            "sha256": "b6cd37c17d55fd09eea088009eb12c088c812554b6fa8057e2de0fb4a481a262"
+          },
+          {
+            "label": "main/train/01",
+            "sha256": "0babb2dd4ea7c2d9ffcf6cbe33c5ad4e1c93505300a903cb4759fdaf48f2fa39"
+          },
+          {
+            "label": "main/train/02",
+            "sha256": "514f15034c4b349785c3e1785464faa6a71536582a0925db04251353ebe58fcd"
+          },
+          {
+            "label": "main/train/03",
+            "sha256": "d0e0d82977c15aedb807510cdbf42abc76da505a30a5777b18e212a312cc61b1"
+          },
+          {
+            "label": "main/train/04",
+            "sha256": "e9dde68edc54c45ba9efbdde41c5e172a611c6a5538e602446c4e0fe016ec604"
+          },
+          {
+            "label": "main/train/05",
+            "sha256": "cce7d69a4c6f39665db7088e7562631fa668c0fed767e6a23f6a568c712b5e55"
+          },
+          {
+            "label": "main/train/06",
+            "sha256": "6e00c4644aed297e1acedcd7a2f18a99572e45f94630fb4292147ce114624f74"
+          },
+          {
+            "label": "main/train/07",
+            "sha256": "569c83da29fe5d797c975dca1adc8d3a9c50bb6358d38809a103a65379fe904d"
+          },
+          {
+            "label": "main/validation/00",
+            "sha256": "e2755e2a4c4082538d2fa9d39ebd47139a6ca9609a3ad3653b8a55e81eecccfe"
+          },
+          {
+            "label": "main/validation/01",
+            "sha256": "d3e4013814c48ef340b1bcb622ee7ba3524b535a935e34800400099cbfc79720"
+          },
+          {
+            "label": "main/validation/02",
+            "sha256": "3cf8c96dc81956bafc7fec049efbe46e4d1a87e086d27f330a7b64aaed017f80"
+          },
+          {
+            "label": "main/validation/03",
+            "sha256": "b901d481f0a9901b6ef5d1eb659700ba6eaa993239762046c6a981829f4a6048"
+          },
+          {
+            "label": "main/test/00",
+            "sha256": "69dc754620f593e7343ba69118c4f37b091ea38c05156b4a8027ab6437c41635"
+          },
+          {
+            "label": "main/test/01",
+            "sha256": "6bb04ece13d05307124e43e853f5a34c3fef410c37d0ad441c330694fa671be8"
+          },
+          {
+            "label": "main/test/02",
+            "sha256": "d4b21329032b13619d9324f0b30fb7cd0785388243c0db703b3f0b166bc440d2"
+          },
+          {
+            "label": "main/test/03",
+            "sha256": "3c74d0ab4a8327e14864c3899caaa6a6b7bed0f1038550299e43045c96770355"
+          },
+          {
+            "label": "main/test/04",
+            "sha256": "e06ae3594872a810418298964222b5ca93b41b1d508d114814b8c411b251221d"
+          },
+          {
+            "label": "main/test/05",
+            "sha256": "2ba0b3a6a9c372431ca98059c228c132d4c3fbee631860a03f23c30d3007a3c4"
+          },
+          {
+            "label": "main/test/06",
+            "sha256": "a4cd26f1dc97f71d05b9282bcc0416b335f0dc91584ee354bfb36676e1746628"
+          },
+          {
+            "label": "main/test/07",
+            "sha256": "a06a4fb93c5b2813a8e36ffe82a5d11c7178543201e433327ab860df0d0491ad"
+          },
+          {
+            "label": "main/transport/00",
+            "sha256": "32b0b61549a5f7bf7435baa6a634c79711ad00e0bb0d897bd7b01937496d646c"
+          },
+          {
+            "label": "main/transport/01",
+            "sha256": "64ce201a7d3e1c1c173921795feea2e26f4ea951ffa6547bc5263b0188d4a082"
+          },
+          {
+            "label": "main/transport/02",
+            "sha256": "cbdf3bd20f9d56665b2c3d932b52bb37b6f11a2ac19605065fc64066ff0a16de"
+          },
+          {
+            "label": "main/transport/03",
+            "sha256": "4f7011468bfed1e0252626e709dc46fad366ad30290788d28ddf98762fb42e7e"
+          },
+          {
+            "label": "main/transport/04",
+            "sha256": "57ab98ad0d63e2be7c62948a9ade5458992485b0518fd62c7624c351581b1dfa"
+          },
+          {
+            "label": "main/transport/05",
+            "sha256": "117172832d2fe9d650895f6e192bc28d4cf13a34bf07350a936064d1685d7dae"
+          },
+          {
+            "label": "main/transport/06",
+            "sha256": "1ba5e65c1c5c5d75bbb4ad65dfc5397b939affe76fe1f5675b14a8fb7abdb735"
+          },
+          {
+            "label": "main/transport/07",
+            "sha256": "ed0ac8d99d712f4f69b6a341b27016d4ba6c63755b4d30605eecd58e17258808"
+          }
+        ],
+        "per_split": {
+          "test": 8,
+          "train": 8,
+          "transport": 8,
+          "validation": 4
+        },
+        "permutation_source": "lehmer_permutation(n, key) with key a sha256 digest of the namespace label; no RNG implementation is involved",
+        "total": 28
+      },
+      "no_stable_opaque_name": "each namespace draws four independent permutations, so no opaque index correlates with a hidden point or an answer across episodes",
+      "queries": {
+        "completion_scored_candidates": 14,
+        "completion_target_size": 2,
+        "manifest_sha256": "617ab7d37eb7288a99c9010c04e74ec9e0ad21eca2e1e89f12c481430c9e58e9",
+        "mate_scored_candidates": 13,
+        "per_split_and_kind": {
+          "test/completion": 672,
+          "test/mate": 112,
+          "train/completion": 672,
+          "train/mate": 112,
+          "transport/completion": 672,
+          "transport/mate": 112,
+          "validation/completion": 336,
+          "validation/mate": 56
+        },
+        "total": 2744
+      }
+    },
+    "namespace_soundness": {
+      "all_namespaces_distinct": true,
+      "distinct_node_permutations": 28,
+      "max_share_of_one_hidden_point_at_any_habitat_node": 0.321428571429,
+      "namespaces": 28,
+      "statement": "each habitat node carries every hidden point class at close to the uniform 1/7 rate across the frozen namespaces, so an opaque index is not a usable proxy for the answer",
+      "uniform_share": 0.142857142857
+    }
+  },
+  "executed_task": "011.01-GPT-global-Fano-FFF-discovery-task.md",
+  "fences": [
+    "The observation is built from equality/incidence classes only. axes_of reads the two native support axis INDICES and discards both coefficient signs; the indices then survive only as equality classes, because every L and R node is renamed per episode.",
+    "P, delta, S, FFF, PP, pp, numeric Fano labels, numeric axis labels, native ray coordinate vectors, coefficient signs, block IDs, stable Event indices and stable habitat indices are NEVER learner inputs. They construct frozen targets, folds and post-hoc equivalence checks, which 011.01 section 2.1 permits, and nothing else.",
+    "XOR appears in target generation and audit only. No XOR, Fano completion table or incidence solver is on the learned path, which fano_heads audits mechanically over the module source rather than asserting in prose.",
+    "topographo.core.f2_groups supplies the CERTIFIED reference plane for the section 3.1 step-6 equivalence check. It is not an input and not a target.",
+    "The localized control destroys cross-habitat L/R sharing and nothing else. Within-habitat incidence and within-habitat degrees are identical to the main arm; the global L/R degree falls from 12 to 1 because that sharing is exactly what the control removes.",
+    "The transparent reconstruction is a NONLEARNED CEILING, never a competing learned baseline. fano_baselines imports it; the learned path does not.",
+    "The generalization claim is FRESH OPAQUE-NAME TRANSPORT of one finite global object, not held-out structure. There is one Fano plane and 011 does not pretend otherwise.",
+    "S is supplied nowhere and discovered nowhere. delta never enters the observation at all, which is why the two habitats of a point class are exchangeable and why the section 4.2 readout must be set-valued.",
+    "FFF=000 and pp=00 remain formal algebraic completion values outside the finite Event catalogue and play no part here. BOTTOM stays distinct from every algebraic zero; no query in this turn is a BOTTOM row."
+  ],
+  "gate_0": {
+    "answer_uniqueness": {
+      "automorphisms_checked": 43008,
+      "completion_answer_is_forced_by_the_observation": true,
+      "completion_equivariance_failures": 0,
+      "mate_answer_is_forced_by_the_observation": true,
+      "mate_equivariance_failures": 0,
+      "statement": "every automorphism of the anonymous graph carries each query to a query and its certified answer to the certified answer, so both answers are functions of the observation alone and the exact main-arm ceiling is 1.0000"
+    },
+    "automorphism_census": {
+      "automorphisms_per_left_image": {
+        "agrees": true,
+        "expected": [
+          128
+        ],
+        "observed": [
+          128
+        ],
+        "source": "stage 2: exhaustive over the 2**7 per-class sign choices"
+      },
+      "closure_argument": "the degree spectrum separates H (6) and E (3) from L and R (12), so any automorphism preserves {H}, {E} and {L, R}; an automorphism fixing L and R setwise is determined by its L-image, which forces the class map and hence the R-image, plus one sign bit per class, which forces the habitat map and hence the Event map because (habitat, left) is a key on Events",
+      "decomposition": "21504 type-respecting x 2 (L/R swap coset) = 43008",
+      "left_images_enumerated": 5040,
+      "left_images_that_extend": {
+        "agrees": true,
+        "expected": 168,
+        "observed": 168,
+        "source": "stage 1: exhaustive over all 5040 L-images of the anonymous graph"
+      },
+      "left_right_swap_is_an_automorphism": true,
+      "order": {
+        "agrees": true,
+        "expected": 43008,
+        "observed": 43008,
+        "source": "type-respecting subgroup times the L/R swap coset"
+      },
+      "type_respecting_order": 21504
+    },
+    "hidden_label_agreement": {
+      "certified_lines": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "completion": {
+        "agrees": true,
+        "expected": 84,
+        "observed": 84,
+        "source": "reconstruction.completion vs the certified P1 XOR P2 habitat pair"
+      },
+      "completion_queries": 84,
+      "each_recovered_class_is_one_certified_fano_point": true,
+      "every_recovered_line_is_an_xor_line": true,
+      "mate": {
+        "agrees": true,
+        "expected": 14,
+        "observed": 14,
+        "source": "reconstruction.mate vs the certified same-P habitat"
+      },
+      "recovered_class_to_certified_point": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "recovered_line_set_equals_certified": true,
+      "recovered_lines_in_certified_labels": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ]
+    },
+    "localized_control": {
+      "ceilings": {
+        "completion": {
+          "distinct_target_sets": 66,
+          "eligible_candidates": 12,
+          "exact_ceiling": 0.015151515152,
+          "orbit_witnesses": 924,
+          "scored_candidates": 14,
+          "single_orbit": true,
+          "statement": "the 12 habitats outside the query lie in one orbit and the automorphisms fixing the query induce the full symmetric group on them, so all 66 two-element subsets are indistinguishable and the exact ceiling for exact-set recovery is 1/66"
+        },
+        "component_sizes": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ],
+        "components": {
+          "agrees": true,
+          "expected": 14,
+          "observed": 14,
+          "source": "breadth-first search over the control graph"
+        },
+        "components_are_isomorphic": true,
+        "mate": {
+          "exact_ceiling": 0.076923076923,
+          "orbit_witnesses": 168,
+          "scored_candidates": 13,
+          "single_orbit": true,
+          "statement": "all 13 scored habitats lie in one orbit of the automorphisms fixing the query, so every equivariant scorer ties and the exact ceiling is 1/13"
+        },
+        "no_empirical_substitution": "both ceilings are exact rational numbers from constructed orbit witnesses, not measured chance"
+      },
+      "locality": {
+        "degree_spectrum": {
+          "control": {
+            "event": [
+              3
+            ],
+            "habitat": [
+              6
+            ],
+            "left": [
+              1
+            ],
+            "right": [
+              1
+            ]
+          },
+          "main": {
+            "event": [
+              3
+            ],
+            "habitat": [
+              6
+            ],
+            "left": [
+              12
+            ],
+            "right": [
+              12
+            ]
+          }
+        },
+        "habitat_membership_identical": true,
+        "left_nodes_shared_across_habitats": {
+          "control": 0,
+          "main": 7
+        },
+        "statement": "the control keeps every habitat's H--E--L/R incidence pattern and within-habitat degrees bit-identical and removes only cross-habitat L/R identity; the global L/R degree falls from 12 to 1 because that sharing is exactly what is under test",
+        "within_habitat_left_and_right_patterns_identical": true
+      },
+      "non_discriminating_check": {
+        "control_identifies_the_certified_plane": false,
+        "statement": "011.01 section 3.3 requires stopping before training if the localized control still identifies the certified global plane. It does not: the control graph is 14 isomorphic components and its reconstruction fails at step 1"
+      },
+      "reconstruction_steps": [
+        {
+          "holds": false,
+          "omitted_left_counts": [
+            [
+              78,
+              14
+            ]
+          ],
+          "omitted_right_counts": [
+            [
+              78,
+              14
+            ]
+          ],
+          "statement": "each habitat omits exactly one L node and one R node",
+          "step": 1
+        },
+        {
+          "class_count": 14,
+          "class_size_histogram": [
+            [
+              1,
+              14
+            ]
+          ],
+          "holds": false,
+          "statement": "habitats with the same unsigned L/R support pattern form seven two-habitat equivalence classes",
+          "step": 2
+        },
+        {
+          "bijection": null,
+          "holds": false,
+          "statement": "the seven omitted-L / omitted-R pairs induce a bijection between the L and R namespaces, without using their numeric labels",
+          "step": 3
+        },
+        {
+          "holds": false,
+          "reciprocal_everywhere": false,
+          "statement": "after transporting R through the recovered bijection, each recovered point class exposes three reciprocal unordered support pairs among the other six classes",
+          "step": 4,
+          "support_pair_counts": [
+            [
+              0,
+              14
+            ]
+          ]
+        },
+        {
+          "covered_point_pairs": 0,
+          "holds": false,
+          "line_count": 0,
+          "lines_through_a_point": [],
+          "pair_multiplicities": [],
+          "statement": "adjoining the class to its three pairs deduplicates globally to exactly seven three-point lines, with every one of the 21 point pairs on exactly one line",
+          "step": 5
+        }
+      ],
+      "reconstruction_valid": false
+    },
+    "passes": true,
+    "plane": {
+      "automorphism_order": {
+        "agrees": true,
+        "expected": 168,
+        "observed": 168,
+        "source": "exhaustive over all 5040 bijections of the recovered point classes"
+      },
+      "certified_reference": {
+        "collineation_order": {
+          "agrees": true,
+          "expected": 168,
+          "observed": 168,
+          "source": "topographo.core.f2_groups.gl_3_2"
+        },
+        "lines": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            2,
+            4,
+            6
+          ],
+          [
+            2,
+            5,
+            7
+          ],
+          [
+            3,
+            4,
+            7
+          ],
+          [
+            3,
+            5,
+            6
+          ]
+        ],
+        "source": "topographo.core.f2_groups.LINES3 / gl_3_2"
+      },
+      "equivalence_is_up_to_GL_3_2": "the recovered plane is judged up to its natural automorphism group; no canonical numeric FFF label is required or produced",
+      "equivalent_to_certified_plane": true,
+      "isomorphisms_to_certified_plane": 168,
+      "recovered_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "witness_isomorphism": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "reconstruction": {
+      "left_to_right_bijection": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "recovered_classes": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "sha256": "a1fd1aefeaaa6fb28fda99fa53c3ed7de9cad673c6fadbffe1c3627320f08fea",
+      "steps": [
+        {
+          "holds": true,
+          "omitted_left_counts": [
+            [
+              1,
+              14
+            ]
+          ],
+          "omitted_right_counts": [
+            [
+              1,
+              14
+            ]
+          ],
+          "statement": "each habitat omits exactly one L node and one R node",
+          "step": 1
+        },
+        {
+          "class_count": 7,
+          "class_size_histogram": [
+            [
+              2,
+              7
+            ]
+          ],
+          "holds": true,
+          "statement": "habitats with the same unsigned L/R support pattern form seven two-habitat equivalence classes",
+          "step": 2
+        },
+        {
+          "bijection": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "holds": true,
+          "statement": "the seven omitted-L / omitted-R pairs induce a bijection between the L and R namespaces, without using their numeric labels",
+          "step": 3
+        },
+        {
+          "holds": true,
+          "reciprocal_everywhere": true,
+          "statement": "after transporting R through the recovered bijection, each recovered point class exposes three reciprocal unordered support pairs among the other six classes",
+          "step": 4,
+          "support_pair_counts": [
+            [
+              3,
+              7
+            ]
+          ]
+        },
+        {
+          "covered_point_pairs": 21,
+          "holds": true,
+          "line_count": 7,
+          "lines_through_a_point": [
+            3
+          ],
+          "pair_multiplicities": [
+            1
+          ],
+          "statement": "adjoining the class to its three pairs deduplicates globally to exactly seven three-point lines, with every one of the 21 point pairs on exactly one line",
+          "step": 5
+        }
+      ],
+      "valid": true
+    }
+  },
+  "module": "fano_task",
+  "observation": {
+    "localized_control": {
+      "degree_spectrum": {
+        "event": [
+          3
+        ],
+        "habitat": [
+          6
+        ],
+        "left": [
+          1
+        ],
+        "right": [
+          1
+        ]
+      },
+      "edges": 252,
+      "nodes": 266,
+      "sha256": "ec3fa08cea96c663209d8df083daf1b1c56fc73e8d08b077a96747c3e3c3f086",
+      "typed_counts": {
+        "event": 84,
+        "habitat": 14,
+        "left": 84,
+        "right": 84
+      }
+    },
+    "main": {
+      "degree_spectrum": {
+        "event": [
+          3
+        ],
+        "habitat": [
+          6
+        ],
+        "left": [
+          12
+        ],
+        "right": [
+          12
+        ]
+      },
+      "edges": 252,
+      "nodes": 112,
+      "sha256": "d0cfb1451f5d9d1b5e43948d92d5063946b5a51f88d0c3bf137c57c8dc35495f",
+      "typed_counts": {
+        "event": 84,
+        "habitat": 14,
+        "left": 7,
+        "right": 7
+      }
+    },
+    "node_layout": "habitat slots first, then Event, then left-axis, then right-axis; the input tensor carries a four-way type one-hot and one query mark, and no index is ever a parameter address"
+  },
+  "pins": {
+    "catalogue_sha256": {
+      "agrees": true,
+      "expected": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+      "observed": "98f60ad174f452a08a3d79799b2d3f3ff2d61c098eb77dd10f16d016b1472097",
+      "source": "task.Catalogue.sha256"
+    },
+    "completion_agreement": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "reconstruction.completion vs the certified P1 XOR P2 habitat pair"
+    },
+    "dataset_sha256": {
+      "agrees": true,
+      "expected": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+      "observed": "7872755fb1c364b18c5ffff7dbd74d225166366d3d126b2e79c16e76624ef721",
+      "source": "task.Dataset.sha256"
+    },
+    "event_degree": {
+      "agrees": true,
+      "expected": [
+        3
+      ],
+      "observed": [
+        3
+      ],
+      "source": "degree spectrum"
+    },
+    "event_nodes": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "observation"
+    },
+    "habitat_degree": {
+      "agrees": true,
+      "expected": [
+        6
+      ],
+      "observed": [
+        6
+      ],
+      "source": "degree spectrum"
+    },
+    "habitat_nodes": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "observation"
+    },
+    "left_collineations": {
+      "agrees": true,
+      "expected": 168,
+      "observed": 168,
+      "source": "stage 1: exhaustive over all 5040 L-images of the anonymous graph"
+    },
+    "left_degree": {
+      "agrees": true,
+      "expected": [
+        12
+      ],
+      "observed": [
+        12
+      ],
+      "source": "degree spectrum"
+    },
+    "left_nodes": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "observation"
+    },
+    "localized_components": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "breadth-first search over the control graph"
+    },
+    "localized_left_nodes": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "build_localized_observation"
+    },
+    "localized_right_nodes": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "build_localized_observation"
+    },
+    "mate_agreement": {
+      "agrees": true,
+      "expected": 14,
+      "observed": 14,
+      "source": "reconstruction.mate vs the certified same-P habitat"
+    },
+    "namespaces": {
+      "agrees": true,
+      "expected": 28,
+      "observed": 28,
+      "source": "build_namespaces"
+    },
+    "observed_graph_automorphism_order": {
+      "agrees": true,
+      "expected": 43008,
+      "observed": 43008,
+      "source": "type-respecting subgroup times the L/R swap coset"
+    },
+    "observed_nodes_main": {
+      "agrees": true,
+      "expected": 112,
+      "observed": 112,
+      "source": "observation"
+    },
+    "queries_per_namespace": {
+      "agrees": true,
+      "expected": 98,
+      "observed": 98,
+      "source": "build_queries"
+    },
+    "recovered_lines": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "step 5"
+    },
+    "recovered_plane_automorphism_order": {
+      "agrees": true,
+      "expected": 168,
+      "observed": 168,
+      "source": "exhaustive over all 5040 bijections of the recovered point classes"
+    },
+    "recovered_point_classes": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "step 2"
+    },
+    "right_degree": {
+      "agrees": true,
+      "expected": [
+        12
+      ],
+      "observed": [
+        12
+      ],
+      "source": "degree spectrum"
+    },
+    "right_nodes": {
+      "agrees": true,
+      "expected": 7,
+      "observed": 7,
+      "source": "observation"
+    }
+  },
+  "provenance": {
+    "base_commit": "d4efc73e0e8d5b5f4e3a8a8b5e9f5f1e8b9c0d4e",
+    "certified_reference_only": [
+      "topographo.core.f2_groups.LINES3 / gl_3_2 (section 3.1 step 6)"
+    ],
+    "executed_task": "011.01-GPT-global-Fano-FFF-discovery-task.md",
+    "observation_sources": [
+      "task.build_dataset (frozen 84-Event catalogue and habitat partition)",
+      "task.Catalogue.events_of_habitat (the hidden (P, delta) partition)",
+      "fano_task.axes_of (two support axis indices; both signs discarded)"
+    ],
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "prior_result": "009.10-Kiro-opaque-local-chart-discovery-result.md",
+    "python": "3.12.11",
+    "table_sha256": {
+      "agrees": true,
+      "expected": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea",
+      "observed": "eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea"
+    },
+    "topographo_version": "0.8.4"
+  },
+  "purpose": "011.01 Gate 0: the anonymous global Fano/FFF problem enumerated exactly, plus the frozen relabelling and query manifests",
+  "relational_laws": {
+    "all_namespaces_distinct": true,
+    "completion_answer_is_forced": true,
+    "completion_recovered_on_all_84": true,
+    "control_completion_is_a_single_orbit": true,
+    "control_does_not_identify_the_plane": true,
+    "control_has_14_components": true,
+    "control_mate_is_a_single_orbit": true,
+    "control_preserves_local_patterns": true,
+    "control_shares_no_axis_across_habitats": true,
+    "each_class_is_one_certified_fano_point": true,
+    "every_ceiling_agrees": true,
+    "every_pin_agrees": true,
+    "every_recovered_line_is_an_xor_line": true,
+    "left_right_swap_is_an_automorphism": true,
+    "mate_answer_is_forced": true,
+    "mate_recovered_on_all_14": true,
+    "observed_automorphism_order_is_43008": true,
+    "reconstruction_step_1_omission": true,
+    "reconstruction_step_2_classes": true,
+    "reconstruction_step_3_bijection": true,
+    "reconstruction_step_4_support_pairs": true,
+    "reconstruction_step_5_lines": true,
+    "reconstruction_valid": true,
+    "recovered_line_set_equals_certified": true,
+    "recovered_plane_has_order_168": true,
+    "recovered_plane_is_the_certified_plane": true
+  },
+  "supplied": [
+    "14 habitat nodes, 84 Event nodes, 7 left-axis nodes, 7 right-axis nodes, each carrying its type one-hot and nothing else",
+    "the H--E, E--L and E--R incidence edges",
+    "a query mark on one habitat node (mate) or two habitat nodes (completion)"
+  ],
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "Gate 0 PASSES: the anonymous typed observation identifies the certified seven-point Fano quotient up to GL(3,2), the exact main-arm ceiling is 1.0000 for both queries, and the localized control's exact ceilings are 1/13 and 1/66 from constructed orbit witnesses"
+  },
+  "withheld": [
+    "P / FFF",
+    "S / delta",
+    "PP and pp",
+    "numeric Fano labels 1..7",
+    "numeric native basis-axis labels",
+    "coefficient signs from the native ray",
+    "native ray coordinate vectors or strings",
+    "stable Event indices",
+    "stable habitat indices",
+    "block IDs",
+    "XOR or a Fano completion table",
+    "any trainable embedding keyed by Event, habitat or axis identity"
+  ]
+}

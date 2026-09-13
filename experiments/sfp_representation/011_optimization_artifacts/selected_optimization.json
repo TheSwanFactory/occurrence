@@ -1,0 +1,102 @@
+{
+  "candidate_manifest_sha256": "290ba4939bee824b7f92dd53360c4247c648ecc238ad3bdb45a712cca98c796c",
+  "development_runs_digest": "e4ab84eac4c0b59d9764394169284f9ed3dd7f2316033f1fa97ce3e545d28ce7",
+  "development_search_sha256": "7bb2b7127d79a2695b2facbe806c4d2cf2ad2b207d4efffa170517797836fa99",
+  "development_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "development_summary": {
+    "candidate_id": "xavier-1414-positive001-responsive",
+    "candidate_sha256": "7099c901a3e1d1ebb13d847b2bd9fbc59d1ca3617dc5bb51b068215d039e7525",
+    "changed_knob_count": 8,
+    "changed_knobs": [
+      "initialization.scheme",
+      "initialization.gain",
+      "initialization.linear_bias",
+      "optimizer.beta1",
+      "optimizer.beta2",
+      "optimizer.epsilon",
+      "max_steps",
+      "early_stopping"
+    ],
+    "converged_count": 8,
+    "converged_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "eligible_8_of_8": true,
+    "median_steps_to_convergence": 192.0,
+    "rank": 1,
+    "selection_key": [
+      -8,
+      192.0,
+      9.980893000355318e-05,
+      8,
+      "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.4142135623730951,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.8,\"beta2\":0.99,\"epsilon\":1e-10,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}"
+    ],
+    "worst_final_excess_loss": 9.980893000355318e-05
+  },
+  "evaluation_lock": "the evaluator must read this committed artifact and receive its exact selected_optimization_sha256 as a command-line lock",
+  "exact_loss_minimum": 0.34657359027997264,
+  "fresh_evaluation_seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015
+  ],
+  "fresh_seed_status": "not executed by this TRAIN-only program",
+  "loss_tolerance": 0.0001,
+  "schema": "occurrence.011.03.selected-optimization.v1",
+  "selected_candidate_id": "xavier-1414-positive001-responsive",
+  "selected_candidate_sha256": "7099c901a3e1d1ebb13d847b2bd9fbc59d1ca3617dc5bb51b068215d039e7525",
+  "selected_canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.4142135623730951,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.8,\"beta2\":0.99,\"epsilon\":1e-10,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+  "selected_optimization_sha256": "3b4edfd204294ed368c0eff89c80664f62822e23dbcc71b42b7db29666924250",
+  "selected_prescription": {
+    "early_stopping": true,
+    "gradient_clip_norm": null,
+    "initialization": {
+      "gain": 1.4142135623730951,
+      "linear_bias": 0.01,
+      "scheme": "xavier_uniform"
+    },
+    "max_steps": 1600,
+    "optimizer": {
+      "beta1": 0.8,
+      "beta2": 0.99,
+      "epsilon": 1e-10,
+      "learning_rate": 0.003,
+      "name": "Adam",
+      "weight_decay": 0.0
+    },
+    "schedule": {
+      "minimum_lr_factor": 1.0,
+      "name": "constant",
+      "warmup_steps": 0
+    }
+  }
+}

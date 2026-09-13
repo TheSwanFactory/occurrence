@@ -1,0 +1,964 @@
+{
+  "baseline": {
+    "early_stopping": false,
+    "gradient_clip_norm": null,
+    "initialization": {
+      "gain": 1.0,
+      "linear_bias": "torch_default",
+      "scheme": "torch_default"
+    },
+    "max_steps": 800,
+    "optimizer": {
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08,
+      "learning_rate": 0.003,
+      "name": "Adam",
+      "weight_decay": 0.0
+    },
+    "schedule": {
+      "minimum_lr_factor": 1.0,
+      "name": "constant",
+      "warmup_steps": 0
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "baseline",
+      "canonical_json": "{\"early_stopping\":false,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":800,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 0,
+      "changed_knobs": [],
+      "prescription": {
+        "early_stopping": false,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 800,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "69876ac7f63671cf3b79b74f4916649892133faf8650a9f7397005ae5741e710"
+    },
+    {
+      "candidate_id": "default-extended",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 2,
+      "changed_knobs": [
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "07e7a254f878831e7186adb94060cd31a91c7ba6076375bf5763a579249aaefc"
+    },
+    {
+      "candidate_id": "default-lr006",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.006,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 3,
+      "changed_knobs": [
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.006,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "f50e84e35640a5d56166a4762be5578d888d8e829d900712f2a846e2d32efc71"
+    },
+    {
+      "candidate_id": "default-responsive",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.5,\"beta2\":0.99,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "optimizer.beta1",
+        "optimizer.beta2",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.5,
+          "beta2": 0.99,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "e01896b025e2a722d3f52873e84b2184340904f18d3c1fdd3706f044c6bbb313"
+    },
+    {
+      "candidate_id": "default-tiny-epsilon",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.8,\"beta2\":0.99,\"epsilon\":1e-10,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "optimizer.beta1",
+        "optimizer.beta2",
+        "optimizer.epsilon",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.8,
+          "beta2": 0.99,
+          "epsilon": 1e-10,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "6e298a0dbd0d3a43b60b030f69fd65a556b2d1483d342d7aa04a4b3321fde0a5"
+    },
+    {
+      "candidate_id": "default-warmup-cosine",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.01,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":0.03,\"name\":\"warmup_cosine\",\"warmup_steps\":100}}",
+      "changed_knob_count": 6,
+      "changed_knobs": [
+        "optimizer.learning_rate",
+        "schedule.name",
+        "schedule.warmup_steps",
+        "schedule.minimum_lr_factor",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.01,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 0.03,
+          "name": "warmup_cosine",
+          "warmup_steps": 100
+        }
+      },
+      "sha256": "5f0c86e6c0e643d5d121673c5125ab57ec84e2951c5e115edf25d18fdb132739"
+    },
+    {
+      "candidate_id": "default-adamw",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"AdamW\",\"weight_decay\":0.0001},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "optimizer.name",
+        "optimizer.weight_decay",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "AdamW",
+          "weight_decay": 0.0001
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "8dde962637e89123118f573ab414a056d96021d8ad8f73c9d0ea39922fac3975"
+    },
+    {
+      "candidate_id": "default-lr006-clip5",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":5.0,\"initialization\":{\"gain\":1.0,\"linear_bias\":\"torch_default\",\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.006,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "optimizer.learning_rate",
+        "gradient_clip_norm",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": 5.0,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": "torch_default",
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.006,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "4e8b430c1ba57d2cd4ee6a51ff1ca04b0c74304ccbf762d21862d71aec1e7173"
+    },
+    {
+      "candidate_id": "default-bias-zero",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.0,\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 3,
+      "changed_knobs": [
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.0,
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "3bf27d62574d72a73af5c49537130765e8e8d354cd10a377259c517777067796"
+    },
+    {
+      "candidate_id": "default-bias-positive001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.01,\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 3,
+      "changed_knobs": [
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.01,
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "b3ccb83184c4aabe0ab8fe7c2b4b688baae817dda0d52cb6465fb367870da312"
+    },
+    {
+      "candidate_id": "default-bias-positive01",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.1,\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 3,
+      "changed_knobs": [
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.1,
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "e5df3d1b283ab49b5ded02162743d9822a103078ef37a3b79df3643a378f83a7"
+    },
+    {
+      "candidate_id": "default-bias-positive001-responsive",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.01,\"scheme\":\"torch_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.5,\"beta2\":0.99,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.linear_bias",
+        "optimizer.beta1",
+        "optimizer.beta2",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.01,
+          "scheme": "torch_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.5,
+          "beta2": 0.99,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "68c2cd2fd2e1859e100911b41cef82b37403984ed9fcd39c0d841cf79638997b"
+    },
+    {
+      "candidate_id": "scaled-default-050",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":0.5,\"linear_bias\":0.0,\"scheme\":\"scaled_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 0.5,
+          "linear_bias": 0.0,
+          "scheme": "scaled_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "149ff89ab14dda05af3b93719b2e6007c047c410258f52782319d26a216b44a1"
+    },
+    {
+      "candidate_id": "scaled-default-150",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.5,\"linear_bias\":0.01,\"scheme\":\"scaled_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.5,
+          "linear_bias": 0.01,
+          "scheme": "scaled_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "640aa3a005f3bca1ea14b4ee8c8e27a949f18ecb629a10546c387a487ed39bc3"
+    },
+    {
+      "candidate_id": "scaled-default-200",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":2.0,\"linear_bias\":0.01,\"scheme\":\"scaled_default\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 2.0,
+          "linear_bias": 0.01,
+          "scheme": "scaled_default"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "2928ea351c7aa3d9ed7ba943225074cc6cabcf70880709b187ba6aa2a333811e"
+    },
+    {
+      "candidate_id": "xavier-100-zero",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.0,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.0,
+          "scheme": "xavier_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "570c2698bf6c806d0c9278460528b521793c9fcc64235decf1d57c282f691ff7"
+    },
+    {
+      "candidate_id": "xavier-100-positive001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.01,
+          "scheme": "xavier_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "c5574aa17e140cc2a867fdc609e36e6dbdab91fc663ed8324252c9dcd61ab266"
+    },
+    {
+      "candidate_id": "xavier-100-positive001-lr006",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.006,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.01,
+          "scheme": "xavier_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.006,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "081c6485bdde7d571be3f1025a53b9d1ca5d7cad7330648153888eb12aee0a76"
+    },
+    {
+      "candidate_id": "xavier-1414-positive001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.4142135623730951,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.001,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 6,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.4142135623730951,
+          "linear_bias": 0.01,
+          "scheme": "xavier_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.001,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "4c0015788ab8860e68cac67b25e62d7910931428f0042819804247f92c6d239e"
+    },
+    {
+      "candidate_id": "xavier-1414-positive001-responsive",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.4142135623730951,\"linear_bias\":0.01,\"scheme\":\"xavier_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.8,\"beta2\":0.99,\"epsilon\":1e-10,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 8,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "optimizer.beta1",
+        "optimizer.beta2",
+        "optimizer.epsilon",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.4142135623730951,
+          "linear_bias": 0.01,
+          "scheme": "xavier_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.8,
+          "beta2": 0.99,
+          "epsilon": 1e-10,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "7099c901a3e1d1ebb13d847b2bd9fbc59d1ca3617dc5bb51b068215d039e7525"
+    },
+    {
+      "candidate_id": "orthogonal-100-zero",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.0,\"scheme\":\"orthogonal\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.003,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 4,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.0,
+          "scheme": "orthogonal"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.003,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "5b8a7679840537cccd8e5aea0abc6fbadb3c40bf6ea6a98c86d0120cfe8434ec"
+    },
+    {
+      "candidate_id": "orthogonal-1414-positive001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.4142135623730951,\"linear_bias\":0.01,\"scheme\":\"orthogonal\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.001,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 6,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.gain",
+        "initialization.linear_bias",
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.4142135623730951,
+          "linear_bias": 0.01,
+          "scheme": "orthogonal"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.001,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "1d304818f2621ecc1180e430409c131032a025f9cc420e36ad2a44a091782bfd"
+    },
+    {
+      "candidate_id": "kaiming-zero-lr001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.0,\"scheme\":\"kaiming_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.001,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.0,
+          "scheme": "kaiming_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.001,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "5dcd57b96cefa449d44abfae9c2ca0f1ff7f2b87c4ff8e7175d87f8c90cac365"
+    },
+    {
+      "candidate_id": "kaiming-positive001-lr001",
+      "canonical_json": "{\"early_stopping\":true,\"gradient_clip_norm\":null,\"initialization\":{\"gain\":1.0,\"linear_bias\":0.01,\"scheme\":\"kaiming_uniform\"},\"max_steps\":1600,\"optimizer\":{\"beta1\":0.9,\"beta2\":0.999,\"epsilon\":1e-08,\"learning_rate\":0.001,\"name\":\"Adam\",\"weight_decay\":0.0},\"schedule\":{\"minimum_lr_factor\":1.0,\"name\":\"constant\",\"warmup_steps\":0}}",
+      "changed_knob_count": 5,
+      "changed_knobs": [
+        "initialization.scheme",
+        "initialization.linear_bias",
+        "optimizer.learning_rate",
+        "max_steps",
+        "early_stopping"
+      ],
+      "prescription": {
+        "early_stopping": true,
+        "gradient_clip_norm": null,
+        "initialization": {
+          "gain": 1.0,
+          "linear_bias": 0.01,
+          "scheme": "kaiming_uniform"
+        },
+        "max_steps": 1600,
+        "optimizer": {
+          "beta1": 0.9,
+          "beta2": 0.999,
+          "epsilon": 1e-08,
+          "learning_rate": 0.001,
+          "name": "Adam",
+          "weight_decay": 0.0
+        },
+        "schedule": {
+          "minimum_lr_factor": 1.0,
+          "name": "constant",
+          "warmup_steps": 0
+        }
+      },
+      "sha256": "c36cfcb3f28e72e07f160ae9362ebceb25727e25d29746d523a7a99482af6886"
+    }
+  ],
+  "changed_knob_definition": [
+    "initialization.scheme",
+    "initialization.gain",
+    "initialization.linear_bias",
+    "optimizer.name",
+    "optimizer.learning_rate",
+    "optimizer.beta1",
+    "optimizer.beta2",
+    "optimizer.epsilon",
+    "optimizer.weight_decay",
+    "schedule.name",
+    "schedule.warmup_steps",
+    "schedule.minimum_lr_factor",
+    "gradient_clip_norm",
+    "max_steps",
+    "early_stopping"
+  ],
+  "convergence": {
+    "absolute_loss_tolerance": 0.0001,
+    "completion_exact_fit": "672/672 TRAIN exact-set decisions",
+    "derivation": "(0 + ln(2)) / 2",
+    "exact_loss_minimum": 0.34657359027997264,
+    "finite_parameters_and_logits": true,
+    "loss_threshold": 0.34667359027997263,
+    "mate_exact_fit": "112/112 TRAIN decisions",
+    "steps_to_convergence": "number of completed optimizer updates at the first state meeting the loss and both exact-fit checks"
+  },
+  "development": {
+    "arm": "main",
+    "candidate_cap": 24,
+    "candidate_count": 24,
+    "fresh_or_held_out_metrics_permitted": false,
+    "maximum_steps": 1600,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "split": "train"
+  },
+  "fixed_optimizer_runtime": {
+    "amsgrad": false,
+    "capturable": false,
+    "differentiable": false,
+    "foreach": false,
+    "fused": false,
+    "maximize": false
+  },
+  "fresh_seed_commitment": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015
+  ],
+  "frozen_architecture": {
+    "aggregation": "sum",
+    "heads": 2,
+    "layer_norm": true,
+    "message_mode": "node",
+    "residual": true,
+    "rounds": 4,
+    "width": 32
+  },
+  "manifest_sha256": "290ba4939bee824b7f92dd53360c4247c648ecc238ad3bdb45a712cca98c796c",
+  "schema": "occurrence.011.03.optimization-candidates.v1",
+  "selection_rule": [
+    "number of converged development seeds, higher",
+    "median steps-to-convergence among converged seeds, lower",
+    "worst final excess loss over the exact minimum, lower",
+    "number of optimization knobs changed from baseline, lower",
+    "canonical candidate JSON lexical order, lower"
+  ],
+  "task": "011.03-GPT-optimization-reliability-closure-task.md"
+}

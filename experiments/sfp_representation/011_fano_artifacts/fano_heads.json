@@ -1,0 +1,1247 @@
+{
+  "answer_rule": {
+    "banned_identifiers": [
+      "hidden_point",
+      "hidden_sign",
+      "hidden_habitat_key",
+      "hidden_left_axis",
+      "hidden_right_axis",
+      "certified_mate",
+      "certified_completion",
+      "reconstruct",
+      "Reconstruction",
+      "plane_audit",
+      "line_preserving_bijections",
+      "class_support_map",
+      "automorphism_census",
+      "type_respecting_automorphisms",
+      "LINES3",
+      "POINTS3",
+      "gl_3_2",
+      "fano_lines",
+      "third_point",
+      "fano_incidence",
+      "lines_through",
+      "SfpCodec",
+      "ExactSfpCircuit",
+      "fips_basic"
+    ],
+    "clean": true,
+    "excluded_assignments": [
+      "BANNED_IDENTIFIERS",
+      "AUDIT_VOCABULARY",
+      "LEARNED_PATH_MODULES"
+    ],
+    "method": "AST walk with annotations, docstrings and the audit's own vocabulary assignments stripped, so prose naming a banned symbol cannot trip or satisfy the check and the ban list cannot match itself; identifiers, attributes, import aliases and surviving string constants are all searched, so getattr by name is covered",
+    "modules": [
+      "fano_heads"
+    ],
+    "per_module": {
+      "fano_heads": {
+        "banned_identifiers_in_code": [],
+        "clean": true,
+        "xor_operators_in_code": 0
+      }
+    },
+    "statement": "the learned path contains no hidden certified label, no Gate-0 reconstruction, no certified Fano plane, no SFP codec and no XOR"
+  },
+  "anti_identity": {
+    "forbidden_widths": [
+      7,
+      14,
+      84,
+      112,
+      266
+    ],
+    "no_buffer": true,
+    "no_embedding_module": true,
+    "no_forbidden_dimension": true,
+    "per_mode": {
+      "edge": {
+        "buffers": 0,
+        "embedding_modules": 0,
+        "forbidden_dimensions_present": [],
+        "parameters": 23490,
+        "shapes": [
+          {
+            "name": "embed.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "embed.weight",
+            "numel": 160,
+            "shape": [
+              32,
+              5
+            ]
+          },
+          {
+            "name": "message.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.0.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.1.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.2.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.2.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.2.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.2.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.3.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.3.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "message.3.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.3.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "norm.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.0.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.1.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.2.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.3.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.3.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.0.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.0.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "readout.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.1.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.1.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.1.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "update.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.1.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.2.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.3.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.3.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          }
+        ],
+        "tensors": 42
+      },
+      "node": {
+        "buffers": 0,
+        "embedding_modules": 0,
+        "forbidden_dimensions_present": [],
+        "parameters": 19394,
+        "shapes": [
+          {
+            "name": "embed.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "embed.weight",
+            "numel": 160,
+            "shape": [
+              32,
+              5
+            ]
+          },
+          {
+            "name": "message.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.0.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.1.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.2.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.2.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.2.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.2.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.3.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.3.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "message.3.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "message.3.2.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "norm.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.0.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.1.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.2.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.3.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "norm.3.weight",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.0.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.0.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.0.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "readout.1.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "readout.1.0.weight",
+            "numel": 1024,
+            "shape": [
+              32,
+              32
+            ]
+          },
+          {
+            "name": "readout.1.2.bias",
+            "numel": 1,
+            "shape": [
+              1
+            ]
+          },
+          {
+            "name": "readout.1.2.weight",
+            "numel": 32,
+            "shape": [
+              1,
+              32
+            ]
+          },
+          {
+            "name": "update.0.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.0.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.1.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.1.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.2.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.2.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          },
+          {
+            "name": "update.3.bias",
+            "numel": 32,
+            "shape": [
+              32
+            ]
+          },
+          {
+            "name": "update.3.weight",
+            "numel": 2048,
+            "shape": [
+              32,
+              64
+            ]
+          }
+        ],
+        "tensors": 42
+      }
+    },
+    "slot_layout": {
+      "buffers": 0,
+      "candidate_tokens_supplied": false,
+      "embedding_tables": 0,
+      "head_is_a_node_feature": false,
+      "input_channels": [
+        "is_habitat",
+        "is_event",
+        "is_left",
+        "is_right",
+        "query_mark"
+      ],
+      "learned_output_columns_indexed_by_a_habitat": 0,
+      "learned_output_columns_indexed_by_a_node_position": 0,
+      "learned_output_columns_indexed_by_an_axis": 0,
+      "learned_output_columns_indexed_by_an_event": 0,
+      "output_slots": "one per current node; there is no fixed output width",
+      "output_slots_track_node_count": false,
+      "readout_heads": 2
+    },
+    "statement": "every tensor is a shared per-node or per-message weight; there is no table indexed by a habitat, an Event, an axis or a node position"
+  },
+  "architecture": {
+    "activation": "ReLU",
+    "aggregation": "sum",
+    "buffers": 0,
+    "embedding_tables": 0,
+    "head_routing": "one readout head per query kind over one shared encoder, in the order mate/completion; the head index is an episode-level choice, not a node feature, so the map stays permutation equivariant",
+    "heads": 2,
+    "input_channels": [
+      "is_habitat",
+      "is_event",
+      "is_left",
+      "is_right",
+      "query_mark"
+    ],
+    "input_dim": 5,
+    "layer_norm": true,
+    "message_form": "m_ij = Message(h_j)",
+    "message_hidden": 32,
+    "message_mode": "node",
+    "message_mode_role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. The Gate-0 relational path conjoins signals arriving from neighbours of DIFFERENT types, whose type one-hots are already in their hidden states, so a neighbour-only message can route them into separate channels and the receiving node's update can threshold their sum.",
+    "node_width": 32,
+    "output": "one scalar score per node; habitat scores are read off",
+    "readout_domain": "011.01 section 4.1 scores the other thirteen habitat nodes and section 4.2 scores all fourteen; the per-node readout is shared and the scored set is the task's, not a learned mask",
+    "readout_hidden": 32,
+    "residual": true,
+    "rounds": 4,
+    "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+    "tuning": "none. One frozen family, widths carried from the 009.02 constants, depth equal to the Gate-0 path length, no search, no per-arm and no per-query adjustment.",
+    "update_form": "h <- LayerNorm(h + ReLU(Update([h, pooled])))"
+  },
+  "capacity_ledger": {
+    "arms": [
+      "main",
+      "localized"
+    ],
+    "per_mode": {
+      "edge": {
+        "config": {
+          "activation": "ReLU",
+          "aggregation": "sum",
+          "buffers": 0,
+          "embedding_tables": 0,
+          "head_routing": "one readout head per query kind over one shared encoder, in the order mate/completion; the head index is an episode-level choice, not a node feature, so the map stays permutation equivariant",
+          "heads": 2,
+          "input_channels": [
+            "is_habitat",
+            "is_event",
+            "is_left",
+            "is_right",
+            "query_mark"
+          ],
+          "input_dim": 5,
+          "layer_norm": true,
+          "message_form": "m_ij = Message([h_i, h_j])",
+          "message_hidden": 32,
+          "message_mode": "edge",
+          "message_mode_role": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the receiver's own state with each neighbour's is available to a single hidden layer. Carried in case the primary's reasoning is wrong, under the one-repair discipline 011.01 section 4 inherits from 009.09 section 5.3.",
+          "node_width": 32,
+          "output": "one scalar score per node; habitat scores are read off",
+          "readout_domain": "011.01 section 4.1 scores the other thirteen habitat nodes and section 4.2 scores all fourteen; the per-node readout is shared and the scored set is the task's, not a learned mask",
+          "readout_hidden": 32,
+          "residual": true,
+          "rounds": 4,
+          "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+          "tuning": "none. One frozen family, widths carried from the 009.02 constants, depth equal to the Gate-0 path length, no search, no per-arm and no per-query adjustment.",
+          "update_form": "h <- LayerNorm(h + ReLU(Update([h, pooled])))"
+        },
+        "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+        "parameters": 23490
+      },
+      "node": {
+        "config": {
+          "activation": "ReLU",
+          "aggregation": "sum",
+          "buffers": 0,
+          "embedding_tables": 0,
+          "head_routing": "one readout head per query kind over one shared encoder, in the order mate/completion; the head index is an episode-level choice, not a node feature, so the map stays permutation equivariant",
+          "heads": 2,
+          "input_channels": [
+            "is_habitat",
+            "is_event",
+            "is_left",
+            "is_right",
+            "query_mark"
+          ],
+          "input_dim": 5,
+          "layer_norm": true,
+          "message_form": "m_ij = Message(h_j)",
+          "message_hidden": 32,
+          "message_mode": "node",
+          "message_mode_role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. The Gate-0 relational path conjoins signals arriving from neighbours of DIFFERENT types, whose type one-hots are already in their hidden states, so a neighbour-only message can route them into separate channels and the receiving node's update can threshold their sum.",
+          "node_width": 32,
+          "output": "one scalar score per node; habitat scores are read off",
+          "readout_domain": "011.01 section 4.1 scores the other thirteen habitat nodes and section 4.2 scores all fourteen; the per-node readout is shared and the scored set is the task's, not a learned mask",
+          "readout_hidden": 32,
+          "residual": true,
+          "rounds": 4,
+          "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+          "tuning": "none. One frozen family, widths carried from the 009.02 constants, depth equal to the Gate-0 path length, no search, no per-arm and no per-query adjustment.",
+          "update_form": "h <- LayerNorm(h + ReLU(Update([h, pooled])))"
+        },
+        "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+        "parameters": 19394
+      }
+    },
+    "query_kinds": [
+      "mate",
+      "completion"
+    ],
+    "same_parameters_in_both_arms": "the arms differ only in the observation graph; the model, its widths, its depth, its parameter count and its optimizer are identical, which is what makes the localized control capacity-matched",
+    "same_parameters_in_both_query_kinds": "one shared readout serves mate and completion; the only difference is the number of marked habitat nodes and the task's scored domain"
+  },
+  "determinism": {
+    "different_seed_param_digest_differs": true,
+    "different_seed_scores_differ": true,
+    "same_seed_param_digest_matches": true,
+    "same_seed_scores_bitwise_identical": true
+  },
+  "edge_paths": {
+    "dense_cells": 12544,
+    "edge_paths_agree": true,
+    "edges_directed": 504,
+    "edges_undirected": 252,
+    "shared_graph_detection": {
+      "mixed_graph_batch_falls_back_to_dense": true,
+      "single_graph_batch_uses_sparse": true
+    },
+    "sparse_fraction": 0.040178571429,
+    "tolerance": 1e-05,
+    "worst_discrepancy": 4.76837e-07
+  },
+  "forward_shapes": {
+    "adjacency_shape": [
+      1,
+      112,
+      112
+    ],
+    "all_refusals_raise": true,
+    "marks_shape": [
+      1,
+      112,
+      5
+    ],
+    "refusals": {
+      "head_out_of_range": true,
+      "node_count_mismatch": true,
+      "non_square_adjacency": true,
+      "wrong_channel_count": true
+    },
+    "score_is_one_per_node": true,
+    "score_shape": [
+      1,
+      112
+    ]
+  },
+  "input_surface": {
+    "channels": [
+      "is_habitat",
+      "is_event",
+      "is_left",
+      "is_right",
+      "query_mark"
+    ],
+    "input_dim": 5,
+    "input_surface": [
+      "marks (B, N, 5): the four-way node type one-hot plus one query mark",
+      "adjacency (B, N, N): symmetric H--E / E--L / E--R incidence, zero diagonal"
+    ],
+    "per_arm": {
+      "localized": {
+        "adjacency_diagonal": [
+          0.0
+        ],
+        "adjacency_shape": [
+          266,
+          266
+        ],
+        "adjacency_symmetric": true,
+        "completion_marks_set": 2,
+        "distinct_input_values": [
+          0.0,
+          1.0
+        ],
+        "edges": 252.0,
+        "marks_shape": [
+          266,
+          5
+        ],
+        "mate_marks_set": 1,
+        "nodes": 266,
+        "type_one_hot_is_a_partition": true
+      },
+      "main": {
+        "adjacency_diagonal": [
+          0.0
+        ],
+        "adjacency_shape": [
+          112,
+          112
+        ],
+        "adjacency_symmetric": true,
+        "completion_marks_set": 2,
+        "distinct_input_values": [
+          0.0,
+          1.0
+        ],
+        "edges": 252.0,
+        "marks_shape": [
+          112,
+          5
+        ],
+        "mate_marks_set": 1,
+        "nodes": 112,
+        "type_one_hot_is_a_partition": true
+      }
+    },
+    "statement": "the learner's entire input is a four-way type one-hot, one query mark, and the symmetric incidence matrix; every value is 0.0 or 1.0"
+  },
+  "loss": {
+    "excluding_a_candidate_changes_the_normalizer": true,
+    "masked_loss_is_finite": true,
+    "member_losses": [
+      2.277978420258,
+      2.277978420258
+    ],
+    "set_loss": 2.277978420258,
+    "set_loss_is_the_mean_of_its_members": true,
+    "statement": "the loss is cross-entropy against a uniform distribution over the target set, so it is exactly the mean of its members' losses and no ordering between the two sign members is expressible"
+  },
+  "message_modes": {
+    "edge": "REPAIR. m_ij = Message([h_i, h_j]): the message is conditioned on the ordered edge, so the conjunction of the receiver's own state with each neighbour's is available to a single hidden layer. Carried in case the primary's reasoning is wrong, under the one-repair discipline 011.01 section 4 inherits from 009.09 section 5.3.",
+    "node": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. The Gate-0 relational path conjoins signals arriving from neighbours of DIFFERENT types, whose type one-hots are already in their hidden states, so a neighbour-only message can route them into separate channels and the receiving node's update can threshold their sum."
+  },
+  "module": "fano_heads",
+  "parameter_independence": {
+    "edge_mode_parameter_count": [
+      23490
+    ],
+    "node_mode_parameter_count": [
+      19394
+    ],
+    "parameter_count_is_node_count_invariant": true,
+    "parameter_digest_is_node_count_invariant": true,
+    "per_mode": {
+      "edge": {
+        "11": {
+          "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+          "parameters": 23490,
+          "score_shape": [
+            1,
+            11
+          ]
+        },
+        "112": {
+          "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+          "parameters": 23490,
+          "score_shape": [
+            1,
+            112
+          ]
+        },
+        "266": {
+          "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+          "parameters": 23490,
+          "score_shape": [
+            1,
+            266
+          ]
+        },
+        "300": {
+          "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+          "parameters": 23490,
+          "score_shape": [
+            1,
+            300
+          ]
+        },
+        "40": {
+          "param_digest": "f19461bbde33cb53de4bc7c4fe116f3628476e060becdc942f16d03c8d95c5f4",
+          "parameters": 23490,
+          "score_shape": [
+            1,
+            40
+          ]
+        }
+      },
+      "node": {
+        "11": {
+          "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+          "parameters": 19394,
+          "score_shape": [
+            1,
+            11
+          ]
+        },
+        "112": {
+          "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+          "parameters": 19394,
+          "score_shape": [
+            1,
+            112
+          ]
+        },
+        "266": {
+          "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+          "parameters": 19394,
+          "score_shape": [
+            1,
+            266
+          ]
+        },
+        "300": {
+          "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+          "parameters": 19394,
+          "score_shape": [
+            1,
+            300
+          ]
+        },
+        "40": {
+          "param_digest": "d22370adb149370bd9324a32729425688b4bb8618d0684479de82d139c1e482f",
+          "parameters": 19394,
+          "score_shape": [
+            1,
+            40
+          ]
+        }
+      }
+    },
+    "probes": [
+      11,
+      40,
+      112,
+      266,
+      300
+    ],
+    "statement": "the same weights run at 11, 40, 112, 266 and 300 nodes with an identical parameter digest, so no parameter is keyed to 14, 84, 7 or any node count"
+  },
+  "permutation_covariance": {
+    "decision_covariance_is_exact_on_decisive_rows": true,
+    "initialized": {
+      "all_rows_transport_rate": 0.16156462585,
+      "decision_covariance_is_exact_on_decisive_rows": true,
+      "decisive_decisions_identical": 0,
+      "decisive_rows": 0,
+      "decisive_transport_rate": null,
+      "has_decisive_rows": false,
+      "max_margin": 6.4075e-07,
+      "mechanism": "the model has no node-indexed parameter, so a fresh namespace only reorders the rows of every tensor and transported scores agree to float round-off. This audit runs on an UNTRAINED model, whose scored candidates are near-tied, so the all-rows rate is low by construction: a tied row is settled by opaque index and opaque index is what the namespace changes. The claim is about decisive rows, and the trained model's transport is measured separately in fano_sweep",
+      "median_margin": 0.0,
+      "model": "initialized",
+      "namespaces_probed": 12,
+      "queries_probed": 1176,
+      "score_tolerance": 1e-05,
+      "scores_within_tolerance": true,
+      "tied_rows": 1176,
+      "worst_transported_score_discrepancy": 2.5332e-07
+    },
+    "perturbed": {
+      "all_rows_transport_rate": 0.199829931973,
+      "decision_covariance_is_exact_on_decisive_rows": true,
+      "decisive_decisions_identical": 168,
+      "decisive_rows": 168,
+      "decisive_transport_rate": 1.0,
+      "has_decisive_rows": true,
+      "max_margin": 0.005883097649,
+      "mechanism": "the model has no node-indexed parameter, so a fresh namespace only reorders the rows of every tensor and transported scores agree to float round-off. This audit runs on an UNTRAINED model, whose scored candidates are near-tied, so the all-rows rate is low by construction: a tied row is settled by opaque index and opaque index is what the namespace changes. The claim is about decisive rows, and the trained model's transport is measured separately in fano_sweep",
+      "median_margin": 0.0,
+      "model": "perturbed",
+      "namespaces_probed": 12,
+      "queries_probed": 1176,
+      "score_tolerance": 1e-05,
+      "scores_within_tolerance": true,
+      "tied_rows": 1008,
+      "worst_transported_score_discrepancy": 3.814697e-06
+    },
+    "perturbed_pass_has_decisive_rows": true,
+    "scores_within_tolerance": true,
+    "why_two_passes": "at initialization LayerNorm plus a mark on one node in 112 leaves every habitat score equal to about 1e-7, so an all-rows decision rate is a statement about the index tie-break and not about the model. The perturbed pass is not trained and no accuracy is read from it; it exists so decision covariance can be checked where a decision exists"
+  },
+  "pre_sweep_validation": {
+    "configurations": [
+      {
+        "completion": 0.0387,
+        "config": "sum, plain update, 1 head, lr .01",
+        "mate": 0.0893
+      },
+      {
+        "completion": 0.6443,
+        "config": "sum, residual, 1 head, lr .01",
+        "mate": 0.0
+      },
+      {
+        "completion": 0.0208,
+        "config": "sum, residual, norm, 1 head, lr .01",
+        "mate": 0.0
+      },
+      {
+        "completion": 0.0164,
+        "config": "mean, residual, norm, 1 head, lr .01",
+        "mate": 0.0893
+      },
+      {
+        "completion": 0.0372,
+        "config": "sum, residual, norm, 1 head, rounds 6",
+        "mate": 0.0
+      },
+      {
+        "completion": 0.1622,
+        "config": "sum, residual, norm, 1 head, width 64",
+        "mate": 0.0
+      },
+      {
+        "completion": 0.0417,
+        "config": "sum, residual, 2 heads, lr .01",
+        "mate": 1.0
+      },
+      {
+        "completion": 0.0744,
+        "config": "sum, residual, 2 heads, lr .003",
+        "mate": 1.0
+      },
+      {
+        "completion": 0.0461,
+        "config": "sum, residual, 2 heads, width 64, lr .003",
+        "mate": 1.0
+      },
+      {
+        "completion": 1.0,
+        "config": "FROZEN: sum, residual, norm, 2 heads, rounds 4, lr .003",
+        "mate": 1.0
+      },
+      {
+        "completion": 1.0,
+        "config": "sum, residual, norm, 2 heads, rounds 6, lr .003",
+        "mate": 1.0
+      }
+    ],
+    "frozen_choice": "sum, residual, norm, 2 heads, rounds 4, lr .003",
+    "layer_norm_mechanism": "the informative difference is a one-unit perturbation on a sum over twelve neighbours; without per-node renormalization the type-driven baseline dominates the margin",
+    "loss_minimum_is_exact": "0.346574 is the information-theoretic minimum of this loss: 0 on a one-element mate target and ln 2 on a two-element completion target, averaged over the two heads. The fit is complete, not merely good",
+    "one_head_signature": "a single shared head reaches 1.0000 on mate and exactly 0.0000 on completion -- systematically wrong rather than at chance, the signature of one readout pulled between two functions of the same encoding",
+    "question": "can this family fit its own training set at all",
+    "read": "train accuracy only; no test namespace, no held-out number",
+    "residual_mechanism": "an exact propagation probe separates the mate by 12 against 10 in unnormalized neighbour counts; plain relu(Linear([h, pooled])) discards that counting channel over four rounds and a residual path preserves it",
+    "training_loss_reached": 0.346574,
+    "why_four_rounds_not_six": "both reach the exact loss minimum; four is the Gate-0 path length and was declared before the probes"
+  },
+  "provenance": {
+    "base_commit": "d4efc739ffb9ba58a4e79b1b98b3bd0e5aa8cbb2",
+    "deterministic_algorithms": true,
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.11",
+    "torch_version": "2.14.0",
+    "why_deterministic_algorithms": "the repair block's sparse edge path gathers node states at the edge list and the gradient of a gather is a scatter-add, which accumulates in a nondeterministic order under CPU multithreading. Two runs of the same seed diverged at step 59 and moved the repair block's reported rates, while the primary block's matmul reduction was bit-identical across the same pair of runs. The flag makes both paths order-stable so the sweep artifact can be replayed"
+  },
+  "purpose": "011.01 section 4: the permutation-equivariant typed-graph learner, its set-valued readout, and the structural audits that fence it",
+  "relational_laws": {
+    "adjacency_is_symmetric_with_zero_diagonal": true,
+    "completion_marks_two_habitats": true,
+    "covariance_scores_within_tolerance": true,
+    "decision_covariance_is_exact_on_decisive_rows": true,
+    "depth_covers_the_gate_0_path": true,
+    "different_seed_differs": true,
+    "edge_paths_agree": true,
+    "input_values_are_binary": true,
+    "loss_is_the_mean_of_its_members": true,
+    "malformed_input_is_refused": true,
+    "masked_loss_is_finite": true,
+    "mate_marks_one_habitat": true,
+    "mixed_graph_batch_falls_back_to_dense": true,
+    "no_answer_rule_on_the_learned_path": true,
+    "no_buffer": true,
+    "no_embedding_module": true,
+    "no_forbidden_dimension": true,
+    "parameter_count_is_node_count_invariant": true,
+    "parameter_digest_is_node_count_invariant": true,
+    "same_seed_is_deterministic": true,
+    "score_is_one_per_node": true,
+    "swap_inputs_bitwise_identical": true,
+    "swap_scores_bitwise_identical": true,
+    "type_one_hot_is_a_partition": true
+  },
+  "relational_path": {
+    "depth_covers_the_path": true,
+    "distances": {
+      "axis_to_axis": {
+        "max": 4,
+        "min": 2
+      },
+      "habitat_to_axis": {
+        "max": 4,
+        "min": 2
+      },
+      "habitat_to_habitat": {
+        "max": 4,
+        "min": 4
+      }
+    },
+    "gate_0_path_length": 4,
+    "path": "habitat query mark -> Event -> axis node (which can form 'exactly one query-marked habitat') -> Event (which conjoins its left-side and right-side signals) -> habitat; and for mate, h -> E -> L -> E -> h', comparing six shared axis nodes against five",
+    "rounds": 4
+  },
+  "swap_symmetry": {
+    "input_tensors_bitwise_identical": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "query_marks on both orders"
+    },
+    "mechanism": "the query is a SET mark, so (h1, h2) and (h2, h1) produce the same tensor; swap invariance is a property of the encoding, not something the optimizer has to find",
+    "queries": 84,
+    "scores_bitwise_identical": {
+      "agrees": true,
+      "expected": 84,
+      "observed": 84,
+      "source": "torch.equal on the two forward passes"
+    }
+  },
+  "verdict": {
+    "agrees": true,
+    "broken_laws": [],
+    "statement": "the learner sees a four-way type one-hot, one set-valued query mark and the incidence matrix; swap invariance and fresh-name decision covariance are exact, the parameter count is node-count invariant, and no hidden label, Gate-0 solver, certified plane or XOR is on the learned path"
+  }
+}

@@ -1,0 +1,638 @@
+{
+  "blocks": [
+    "primary",
+    "repair"
+  ],
+  "bootstrap": {
+    "ci_level": 0.95,
+    "imported_from": "analysis.bootstrap_ci (the 009.02 implementation)",
+    "resamples": 10000,
+    "seed": 900509
+  },
+  "conformance": {
+    "checks": {
+      "completion_query_is_swap_invariant": true,
+      "control_differs_only_in_cross_habitat_sharing": true,
+      "control_does_not_identify_the_plane": true,
+      "control_shares_no_axis_across_habitats": true,
+      "decision_covariance_is_exact_on_decisive_rows": true,
+      "edge_paths_agree": true,
+      "every_gate_0_pin_agrees": true,
+      "gate_0_passes": true,
+      "global_left_right_swap_moves_no_answer": true,
+      "no_hidden_field_on_the_learned_path": true,
+      "no_identity_parameter": true,
+      "nonlearned_ceiling_is_exact": true,
+      "parameter_count_is_node_count_invariant": true
+    },
+    "clean": true,
+    "failures": []
+  },
+  "control_tolerance": 0.01,
+  "control_vs_exact_ceiling": {
+    "primary": {
+      "completion": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.623605775851,
+        "binomial_tail_at_query_count": 0.000699880041,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 64,
+        "bootstrap": {
+          "high": 0.020833333333,
+          "low": 0.020833333333,
+          "n": 8
+        },
+        "ceiling": 0.015151515152,
+        "excess": 0.005681818181,
+        "hits": 112,
+        "materially_exceeds": false,
+        "observed": 0.020833333333,
+        "per_seed": [
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333
+        ],
+        "queries": 5376,
+        "tolerance": 0.01
+      },
+      "fano_plane_valid_rate": {
+        "agrees": true,
+        "expected": 0.0,
+        "observed": 0.0,
+        "per_seed": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mate": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.552511237726,
+        "binomial_tail_at_query_count": 0.367365682749,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 64,
+        "bootstrap": {
+          "high": 0.080357142857,
+          "low": 0.080357142857,
+          "n": 8
+        },
+        "ceiling": 0.076923076923,
+        "excess": 0.003434065934,
+        "hits": 72,
+        "materially_exceeds": false,
+        "observed": 0.080357142857,
+        "per_seed": [
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857
+        ],
+        "queries": 896,
+        "tolerance": 0.01
+      }
+    },
+    "repair": {
+      "completion": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.623605775851,
+        "binomial_tail_at_query_count": 0.000699880041,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 64,
+        "bootstrap": {
+          "high": 0.020833333333,
+          "low": 0.020833333333,
+          "n": 8
+        },
+        "ceiling": 0.015151515152,
+        "excess": 0.005681818181,
+        "hits": 112,
+        "materially_exceeds": false,
+        "observed": 0.020833333333,
+        "per_seed": [
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333,
+          0.020833333333
+        ],
+        "queries": 5376,
+        "tolerance": 0.01
+      },
+      "fano_plane_valid_rate": {
+        "agrees": true,
+        "expected": 0.0,
+        "observed": 0.0,
+        "per_seed": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mate": {
+        "at_or_below_ceiling": true,
+        "binomial_tail_at_block_count": 0.552511237726,
+        "binomial_tail_at_query_count": 0.367365682749,
+        "block_note": "a degenerate tie-break's hits arrive in per-namespace blocks, so the block count is the effective sample size and the query-count tail overstates significance",
+        "blocks": 64,
+        "bootstrap": {
+          "high": 0.080357142857,
+          "low": 0.080357142857,
+          "n": 8
+        },
+        "ceiling": 0.076923076923,
+        "excess": 0.003434065934,
+        "hits": 72,
+        "materially_exceeds": false,
+        "observed": 0.080357142857,
+        "per_seed": [
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857,
+          0.080357142857
+        ],
+        "queries": 896,
+        "tolerance": 0.01
+      }
+    }
+  },
+  "disposition": {
+    "because": "the same-FFF pairing is materially learned above the control ceiling (0.8750 against an exact 0.0769) but the class-A thresholds are not all met on the frozen run cells: mate_exact_accuracy, fano_completion_exact_set_accuracy, fano_plane_valid_rate, certified_plane_equivalent_rate, transport_rate",
+    "class": "C",
+    "control_at_or_below_ceiling": true,
+    "materially_above_control": {
+      "completion": true,
+      "mate": true,
+      "material_factor": 2.0
+    },
+    "missed_thresholds": [
+      "certified_plane_equivalent_rate",
+      "fano_completion_exact_set_accuracy",
+      "fano_plane_valid_rate",
+      "mate_exact_accuracy",
+      "transport_rate"
+    ],
+    "not_rounded_into_a": "section 8 forbids rounding a near miss into A. The class above is derived from the threshold table by explicit conditions, and the seed partition shows why the mean misses: 5 of 8 seeds reach the exact loss minimum and score 1.0000 on every metric, and the rest do not fit at all",
+    "queries_pass": false,
+    "stalled_seeds_are_fit_failures": true,
+    "structure_pass": false,
+    "transport_pass": false
+  },
+  "judged_block": "primary",
+  "ladder": {
+    "completion": {
+      "cheap_rules_main": 0.0,
+      "localized_control_exact_ceiling": 0.015151515152,
+      "localized_control_learner": 0.020833333333,
+      "main_learner": 0.720610119048,
+      "nonlearned_exact_ceiling": 1.0,
+      "uniform": 0.015151515152
+    },
+    "mate": {
+      "localized_control_exact_ceiling": 0.076923076923,
+      "localized_control_learner": 0.080357142857,
+      "main_learner": 0.875,
+      "nonlearned_exact_ceiling": 1.0,
+      "uniform": 0.076923076923
+    }
+  },
+  "module": "fano_analysis",
+  "provenance": {
+    "base_commit": "d4efc739ffb9ba58a4e79b1b98b3bd0e5aa8cbb2",
+    "inputs": {
+      "fano_sweep_runs": "625b110fc50a4a5759ac7914a68b73cd6683f5cafd850da9c35821ff11c98c66",
+      "fano_task": "d0cfb1451f5d9d1b5e43948d92d5063946b5a51f88d0c3bf137c57c8dc35495f"
+    },
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.11"
+  },
+  "purpose": "011.01 section 8: the predeclared thresholds scored on the frozen run cells with bootstrap intervals, the control against its exact ceilings, the anti-cheating ledger, and the disposition",
+  "recommendation": {
+    "class": "C",
+    "repair_outcome": {
+      "declared": "condition the message on the ordered edge: m_ij = Message([h_i, h_j]). One change, same family, same widths, same depth, same optimizer, same step count, same seeds, same observations, no new hyperparameter",
+      "fano_completion_exact_set_accuracy": 0.497767857143,
+      "judged_block": "the repaired block is judged if and only if it improves on the primary; the primary is reported either way",
+      "mate_exact_accuracy": 0.760044642857,
+      "moved_the_plateau": false,
+      "ran": true,
+      "seeds_at_the_exact_loss_minimum": 3
+    },
+    "suggested_next_turn": "one further local turn on optimization only, with the observation, the control, the thresholds and the recovery audit unchanged. The declared architecture reaches the exact loss minimum whenever it escapes the plateau, so the question is initialization and conditioning, not representation. That is an Owner decision because 011.01 has now spent its one permitted repair",
+    "the_open_question_is_optimization_not_identifiability": "every stalled seed shows train accuracy equal to test accuracy, so no generalization claim is at stake. The one permitted repair changed the message form and did not move the plateau, which locates the failure outside the message mechanism",
+    "what_is_established": "Gate 0 establishes that the anonymous typed observation determines the certified seven-point Fano quotient up to GL(3,2), with an exact nonlearned ceiling of 1.0000 and exact control ceilings of 1/13 and 1/66 from constructed orbit witnesses. The learner reaches the ceiling on a majority of frozen seeds, with the whole-plane reconstruction and fresh-name transport at 1.0000 on exactly those seeds",
+    "what_is_not_established": "H_discovery_global_finite is NOT banked at class A. The seed-mean misses the section 8 thresholds because three of eight seeds do not fit, and section 8 forbids rounding that into A"
+  },
+  "repair": {
+    "declared": "condition the message on the ordered edge: m_ij = Message([h_i, h_j]). One change, same family, same widths, same depth, same optimizer, same step count, same seeds, same observations, no new hyperparameter",
+    "fano_completion_exact_set_accuracy": 0.497767857143,
+    "judged_block": "the repaired block is judged if and only if it improves on the primary; the primary is reported either way",
+    "mate_exact_accuracy": 0.760044642857,
+    "moved_the_plateau": false,
+    "ran": true,
+    "seeds_at_the_exact_loss_minimum": 3
+  },
+  "seed_partition": {
+    "primary": {
+      "converged_count": 5,
+      "converged_seed_metrics": {
+        "fano_completion_exact_set_accuracy": 1.0,
+        "fano_plane_valid_rate": 1.0,
+        "mate_exact_accuracy": 1.0,
+        "transport_rate": 1.0
+      },
+      "converged_seeds": [
+        0,
+        1,
+        2,
+        4,
+        6
+      ],
+      "final_loss_per_seed": [
+        0.346574544907,
+        0.346574306488,
+        0.346574544907,
+        2.526967525482,
+        0.346575737,
+        2.602004051208,
+        0.346575021744,
+        2.524920701981
+      ],
+      "loss_minimum": 0.346574,
+      "reading": "the converged-seed figures are a CONDITIONAL statement about the seeds that fitted, not a result. Section 8's thresholds are scored on all frozen run cells and that is what the class is derived from",
+      "seeds": 8,
+      "seeds_at_the_exact_loss_minimum": 5,
+      "stalled_gap_tolerance": 0.02,
+      "stalled_seeds": [
+        3,
+        5,
+        7
+      ],
+      "stalled_seeds_are_fit_failures_not_generalization_failures": true,
+      "stalled_train_versus_test": [
+        {
+          "seed": 3,
+          "test": {
+            "completion": 0.0,
+            "mate": 0.0
+          },
+          "train": {
+            "completion": 0.0,
+            "mate": 0.0
+          }
+        },
+        {
+          "seed": 5,
+          "test": {
+            "completion": 0.0,
+            "mate": 1.0
+          },
+          "train": {
+            "completion": 0.0,
+            "mate": 1.0
+          }
+        },
+        {
+          "seed": 7,
+          "test": {
+            "completion": 0.764880952381,
+            "mate": 1.0
+          },
+          "train": {
+            "completion": 0.75,
+            "mate": 1.0
+          }
+        }
+      ],
+      "worst_stalled_train_test_gap": 0.014880952381
+    },
+    "repair": {
+      "converged_count": 3,
+      "converged_seed_metrics": {
+        "fano_completion_exact_set_accuracy": 1.0,
+        "fano_plane_valid_rate": 1.0,
+        "mate_exact_accuracy": 1.0,
+        "transport_rate": 1.0
+      },
+      "converged_seeds": [
+        0,
+        2,
+        5
+      ],
+      "final_loss_per_seed": [
+        0.346574038267,
+        2.524928331375,
+        0.346575677395,
+        2.524930953979,
+        2.524803876877,
+        0.34657856822,
+        2.524927854538,
+        2.521821737289
+      ],
+      "loss_minimum": 0.346574,
+      "reading": "the converged-seed figures are a CONDITIONAL statement about the seeds that fitted, not a result. Section 8's thresholds are scored on all frozen run cells and that is what the class is derived from",
+      "seeds": 8,
+      "seeds_at_the_exact_loss_minimum": 3,
+      "stalled_gap_tolerance": 0.02,
+      "stalled_seeds": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "stalled_seeds_are_fit_failures_not_generalization_failures": true,
+      "stalled_train_versus_test": [
+        {
+          "seed": 1,
+          "test": {
+            "completion": 0.0,
+            "mate": 1.0
+          },
+          "train": {
+            "completion": 0.0,
+            "mate": 1.0
+          }
+        },
+        {
+          "seed": 3,
+          "test": {
+            "completion": 0.921130952381,
+            "mate": 0.0
+          },
+          "train": {
+            "completion": 0.903273809524,
+            "mate": 0.0
+          }
+        },
+        {
+          "seed": 4,
+          "test": {
+            "completion": 0.037202380952,
+            "mate": 1.0
+          },
+          "train": {
+            "completion": 0.046130952381,
+            "mate": 1.0
+          }
+        },
+        {
+          "seed": 6,
+          "test": {
+            "completion": 0.02380952381,
+            "mate": 0.080357142857
+          },
+          "train": {
+            "completion": 0.03869047619,
+            "mate": 0.089285714286
+          }
+        },
+        {
+          "seed": 7,
+          "test": {
+            "completion": 0.0,
+            "mate": 1.0
+          },
+          "train": {
+            "completion": 0.0,
+            "mate": 1.0
+          }
+        }
+      ],
+      "worst_stalled_train_test_gap": 0.017857142857
+    }
+  },
+  "threshold_source": "011.01 section 8, transcribed numerically; no threshold was chosen or moved by this module",
+  "threshold_table": {
+    "primary": {
+      "certified_plane_equivalent_rate": {
+        "ci_high": 0.984375,
+        "ci_low": 0.375,
+        "ci_low_passes": false,
+        "observed": 0.734375,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.875
+        ],
+        "seeds": 8,
+        "threshold": 0.9
+      },
+      "fano_completion_exact_set_accuracy": {
+        "ci_high": 0.970610119048,
+        "ci_low": 0.375,
+        "ci_low_passes": false,
+        "observed": 0.720610119048,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.764880952381
+        ],
+        "seeds": 8,
+        "threshold": 0.95
+      },
+      "fano_plane_valid_rate": {
+        "ci_high": 0.984375,
+        "ci_low": 0.375,
+        "ci_low_passes": false,
+        "observed": 0.734375,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          1.0,
+          0.875
+        ],
+        "seeds": 8,
+        "threshold": 0.9
+      },
+      "mate_exact_accuracy": {
+        "ci_high": 1.0,
+        "ci_low": 0.625,
+        "ci_low_passes": false,
+        "observed": 0.875,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "seeds": 8,
+        "threshold": 0.95
+      },
+      "transport_rate": {
+        "ci_high": 1.0,
+        "ci_low": 0.617506377551,
+        "ci_low_passes": false,
+        "observed": 0.845503826531,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.088010204082,
+          1.0,
+          1.0,
+          1.0,
+          0.676020408163
+        ],
+        "seeds": 8,
+        "threshold": 0.99
+      }
+    },
+    "repair": {
+      "certified_plane_equivalent_rate": {
+        "ci_high": 0.75,
+        "ci_low": 0.125,
+        "ci_low_passes": false,
+        "observed": 0.375,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "seeds": 8,
+        "threshold": 0.9
+      },
+      "fano_completion_exact_set_accuracy": {
+        "ci_high": 0.855282738095,
+        "ci_low": 0.140252976191,
+        "ci_low_passes": false,
+        "observed": 0.497767857143,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          0.0,
+          1.0,
+          0.921130952381,
+          0.037202380952,
+          1.0,
+          0.02380952381,
+          0.0
+        ],
+        "seeds": 8,
+        "threshold": 0.95
+      },
+      "fano_plane_valid_rate": {
+        "ci_high": 0.75,
+        "ci_low": 0.125,
+        "ci_low_passes": false,
+        "observed": 0.375,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "seeds": 8,
+        "threshold": 0.9
+      },
+      "mate_exact_accuracy": {
+        "ci_high": 1.0,
+        "ci_low": 0.5,
+        "ci_low_passes": false,
+        "observed": 0.760044642857,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          1.0,
+          1.0,
+          0.080357142857,
+          1.0
+        ],
+        "seeds": 8,
+        "threshold": 0.95
+      },
+      "transport_rate": {
+        "ci_high": 0.971619897959,
+        "ci_low": 0.492028061224,
+        "ci_low_passes": false,
+        "observed": 0.755739795918,
+        "passes": false,
+        "per_seed": [
+          1.0,
+          1.0,
+          1.0,
+          0.772959183673,
+          0.214285714286,
+          1.0,
+          0.058673469388,
+          1.0
+        ],
+        "seeds": 8,
+        "threshold": 0.99
+      }
+    }
+  },
+  "thresholds": {
+    "certified_plane_equivalent_rate": 0.9,
+    "fano_completion_exact_set_accuracy": 0.95,
+    "fano_plane_valid_rate": 0.9,
+    "mate_exact_accuracy": 0.95,
+    "transport_rate": 0.99
+  },
+  "verdict": {
+    "class": "C",
+    "statement": "disposition C: the same-FFF pairing is materially learned above the control ceiling (0.8750 against an exact 0.0769) but the class-A thresholds are not all met on the frozen run cells: mate_exact_accuracy, fano_completion_exact_set_accuracy, fano_plane_valid_rate, certified_plane_equivalent_rate, transport_rate"
+  }
+}

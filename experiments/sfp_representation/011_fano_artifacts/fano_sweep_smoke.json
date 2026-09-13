@@ -1,0 +1,190 @@
+{
+  "configurations": [
+    {
+      "arms": [
+        "main"
+      ],
+      "block": "smoke",
+      "full_audits": false,
+      "message_mode": "node",
+      "seeds": [
+        0
+      ],
+      "steps": 40
+    }
+  ],
+  "control_vs_exact_ceiling": {},
+  "diagnosed_pathology": {
+    "cause": "with m_ij = Message(h_j) the receiver's own state enters only through the update's concatenation, after the neighbour sum has already been formed. The Gate-0 path needs a per-edge conjunction -- this axis node is in the query's support AND that Event's other axis is not -- and assembling it downstream of the sum leaves a flat region the optimizer can settle in",
+    "discipline": "011.01 section 4 permits one architecture pass and at most one mechanically diagnosed repair. Both blocks are run and both are reported; the primary block is not deleted and its three failed seeds are not rounded away",
+    "name": "the uniform-loss plateau on three of eight seeds",
+    "not_expressivity": "the same architecture at five other seeds reaches the exact loss minimum on the same data, so the family can represent the answer",
+    "repair": "condition the message on the ordered edge: m_ij = Message([h_i, h_j]). One change, same family, same widths, same depth, same optimizer, same step count, same seeds, same observations, no new hyperparameter",
+    "symptom": "five seeds reach final loss 0.346574 -- the exact information-theoretic minimum -- and score 1.0000 on both queries, the whole-plane audit and fresh-name transport. Three seeds finish at 2.52 to 2.60, which is the uniform-choice loss",
+    "why_it_is_a_fit_failure_not_a_generalization_failure": "train and test accuracy agree on every stalled cell to within 0.02: seed 3 is 0.000/0.000 on both splits, seed 5 is 1.000 mate and 0.000 completion on both, and seed 7 is 1.000 mate with completion 0.750 train against 0.765 test. A run that does no better on the data it optimized than on data it never saw has not overfitted -- it has not fitted"
+  },
+  "digests": {
+    "runs_digest": "d19f7357b3951580ffca2cebc132544ab63e19e66f45c0c410245c46fcfc2032"
+  },
+  "module": "fano_sweep",
+  "non_replayable_keys": [
+    "host",
+    "numpy_version",
+    "started_at",
+    "sweep_wall_sec",
+    "torch_version",
+    "wall_sec"
+  ],
+  "provenance": {
+    "base_commit": "d4efc739ffb9ba58a4e79b1b98b3bd0e5aa8cbb2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.11",
+    "torch_version": "2.14.0"
+  },
+  "purpose": "011.01 sections 4-7: the declared training runs for both arms, the representation-recovery audit, the fresh-name transport audit and the global L/R swap audit",
+  "runs": [
+    {
+      "arm": "main",
+      "block": "smoke",
+      "config": {
+        "activation": "ReLU",
+        "aggregation": "sum",
+        "buffers": 0,
+        "embedding_tables": 0,
+        "head_routing": "one readout head per query kind over one shared encoder, in the order mate/completion; the head index is an episode-level choice, not a node feature, so the map stays permutation equivariant",
+        "heads": 2,
+        "input_channels": [
+          "is_habitat",
+          "is_event",
+          "is_left",
+          "is_right",
+          "query_mark"
+        ],
+        "input_dim": 5,
+        "layer_norm": true,
+        "message_form": "m_ij = Message(h_j)",
+        "message_hidden": 32,
+        "message_mode": "node",
+        "message_mode_role": "PRIMARY. m_ij = Message(h_j): the message depends on the neighbour's state alone. The Gate-0 relational path conjoins signals arriving from neighbours of DIFFERENT types, whose type one-hots are already in their hidden states, so a neighbour-only message can route them into separate channels and the receiving node's update can threshold their sum.",
+        "node_width": 32,
+        "output": "one scalar score per node; habitat scores are read off",
+        "readout_domain": "011.01 section 4.1 scores the other thirteen habitat nodes and section 4.2 scores all fourteen; the per-node readout is shared and the scored set is the task's, not a learned mask",
+        "readout_hidden": 32,
+        "residual": true,
+        "rounds": 4,
+        "seed_convention": "torch.manual_seed(seed) then np.random.seed(seed)",
+        "tuning": "none. One frozen family, widths carried from the 009.02 constants, depth equal to the Gate-0 path length, no search, no per-arm and no per-query adjustment.",
+        "update_form": "h <- LayerNorm(h + ReLU(Update([h, pooled])))"
+      },
+      "fano_completion_exact_set_accuracy": 0.88244047619,
+      "final_loss": 2.525309801102,
+      "loss_trace": [
+        {
+          "loss": 2.593677282333,
+          "step": 0
+        },
+        {
+          "loss": 2.525309801102,
+          "step": 39
+        }
+      ],
+      "mate_exact_accuracy": 1.0,
+      "per_split": {
+        "test": {
+          "completion": {
+            "accuracy": 0.88244047619,
+            "decisive_fraction": 0.0,
+            "decisive_rows": 0,
+            "hits": 593,
+            "median_margin": 5.9605e-08,
+            "queries": 672
+          },
+          "mate": {
+            "accuracy": 1.0,
+            "decisive_fraction": 1.0,
+            "decisive_rows": 112,
+            "hits": 112,
+            "median_margin": 0.000125288963,
+            "queries": 112
+          }
+        },
+        "train": {
+          "completion": {
+            "accuracy": 0.846726190476,
+            "decisive_fraction": 0.0,
+            "decisive_rows": 0,
+            "hits": 569,
+            "median_margin": 5.9605e-08,
+            "queries": 672
+          },
+          "mate": {
+            "accuracy": 1.0,
+            "decisive_fraction": 1.0,
+            "decisive_rows": 112,
+            "hits": 112,
+            "median_margin": 0.000125288963,
+            "queries": 112
+          }
+        },
+        "validation": {
+          "completion": {
+            "accuracy": 0.845238095238,
+            "decisive_fraction": 0.0,
+            "decisive_rows": 0,
+            "hits": 284,
+            "median_margin": 5.9605e-08,
+            "queries": 336
+          },
+          "mate": {
+            "accuracy": 1.0,
+            "decisive_fraction": 1.0,
+            "decisive_rows": 56,
+            "hits": 56,
+            "median_margin": 0.000125288963,
+            "queries": 56
+          }
+        }
+      },
+      "seed": 0,
+      "wall_sec": 5.845770835876
+    }
+  ],
+  "summary": {
+    "smoke/main": {
+      "fano_completion_exact_set_accuracy": {
+        "max": 0.88244047619,
+        "mean": 0.88244047619,
+        "min": 0.88244047619,
+        "per_seed": [
+          0.88244047619
+        ]
+      },
+      "final_loss": {
+        "max": 2.525309801102,
+        "mean": 2.525309801102,
+        "min": 2.525309801102,
+        "per_seed": [
+          2.525309801102
+        ]
+      },
+      "mate_exact_accuracy": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0,
+        "per_seed": [
+          1.0
+        ]
+      },
+      "seeds": 1
+    }
+  },
+  "train_protocol": {
+    "batching": "full batch: every training namespace and every query of both kinds contributes to every step",
+    "early_stopping": "none",
+    "lr": 0.003,
+    "optimizer": "Adam",
+    "schedule": "none",
+    "steps": 800,
+    "tuning": "none; identical for both arms and every seed"
+  }
+}
