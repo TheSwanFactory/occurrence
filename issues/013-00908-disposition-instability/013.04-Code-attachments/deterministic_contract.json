@@ -1,0 +1,119 @@
+{
+  "contract": "013.04 deterministic 009.08 disposition-stability audit",
+  "contract_version": 1,
+  "frozen_before_scored_run_1": true,
+  "authorization": {
+    "package_revision": "77061e649c0d5436db91b0002b0c7a504ca92e8c6e737463c814e40b371efa08",
+    "task_path": "issues/013-00908-disposition-instability/013.03-Codex-execute-deterministic-00908-disposition-stability-audit.md",
+    "task_sha256": "1de72391785116118e4a0ec18779cd819a7ea4a487b1f2ec61ad0488003afadf"
+  },
+  "frozen_source": {
+    "checkout_commit": "7a37f58444901c32a6e750e617d8d4d82b9f6202",
+    "files_sha256": {
+      "experiments/sfp_representation/locator_task.py": "9475d4ef227a16a7e5fb85c188d5c63be19b276b4c79a2d1b9f5938e6bcf0707",
+      "experiments/sfp_representation/locator_heads.py": "d41b664766be66c1344ebe5ebc8e72dc6404a02a89dbaa856aa95d2f7afdb479",
+      "experiments/sfp_representation/locator_baselines.py": "3189d8c4bf3bf4805e0b3f58f9d2cfe329aedb3b336a25b049b1f7287e1e9223",
+      "experiments/sfp_representation/locator_sweep.py": "78154bbff1c76c571b31c7c21fcfd35f1c1d9e0709455153016697e5d7ca4f02",
+      "experiments/sfp_representation/locator_analysis.py": "00a823526183e662cb466ca670b146c07c7a54bbb8c800ae5978eb2a09032c26"
+    }
+  },
+  "declared_documents": {
+    "package_revision": "a86f883264a6079fd5d5fff6b1603519059151a7ff24a611f1a8994bff15ac15",
+    "sha256": {
+      "issues/013-00908-disposition-instability/013.02-Codex-00908-disposition-stability-audit-frame.md": "a0dc54f1ef5d634afdb7b5c21f028870ff0f2f7403b51573c927d9a47e4732ce",
+      "issues/009-sfp-consequence-representation/009.07-Kiro-query-relative-PP-localization-task.md": "3a37415ee3f3308a55c480215df66607c9406db48a40a7e2275efecd4b706140",
+      "issues/009-sfp-consequence-representation/009.08-Kiro-query-relative-PP-localization-result.md": "92f22c94c4c1ccaf9568dfc3014774840b54dfde10032437f20abc43604ce5c9",
+      "issues/012-independent-discovery-verification/012.04-Verification-009-independent-replay-follow-up.md": "b3489f3df1a1d910ee4898b0c21828c65e08add37ef7ffbb4b40a92ef03f4d6e"
+    }
+  },
+  "machine_artifacts": {
+    "sha256": {
+      "009_locator_artifacts/locator_task.json": "e0e3640b25b2f21da245aaf39af04a14c7e84928102491fa7691580d1c758861",
+      "009_locator_artifacts/locator_heads.json": "811f6d6d6fec0d618230d12eeb49a540293ce393a0da2533078b8e03c79fec1d",
+      "009_locator_artifacts/locator_baselines.json": "f7bc7462f89f7891f27c77f53389ebdf8b44976cf4be4e692a13cec1721ace1c",
+      "009_locator_artifacts/locator_analysis.json": "8b0f8b49c9d4971f84b98441bef22fec54a186df6b202c7bc1a6a49d4b863492",
+      "009_locator_artifacts/locator_sweep.json.pointer.json": "5ac2e6fbb7a684da7e5bf1ab36f4fd2fae3213feea0b237319c59b352566fe0a",
+      "009_locator_artifacts/locator_sweep.json": "5991a1f88225b6c2f48d478478c955e205298ce3796e55775eaab2e98fff44e1",
+      "009_ladder_artifacts/ladder_sweep.json": "27b330d87cce8eba7bf114886ae970d60402b270f675fafe95f5015863e5479e"
+    },
+    "locator_sweep_s3_version_id": "CDhVrwffVoalXe.g4KUf1boEOihnKI7.",
+    "ladder_sweep_pointer_revision": "5010f4e2a72c22604f9091c8c2f750c98b2debe9483e9489667fa860f851b5f7"
+  },
+  "scientific_object": {
+    "preserved_unchanged": true,
+    "folds": "21 structural folds: 14 LOHO and 7 LOFPO",
+    "seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+    "arms": ["A_native", "B_sfp", "C_scrambled", "D_relabeled"],
+    "steps": 800,
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "prohibited": "No tuning, resampling, added seeds, discarded cells, cell retries, threshold changes, scientific-code changes, or reruns after the two declared full executions."
+  },
+  "runtime": {
+    "python": "3.12.11",
+    "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+    "pytorch": "2.14.0",
+    "numpy": "2.5.1",
+    "os": "macOS-26.6.2-arm64-arm-64bit",
+    "architecture": "arm64",
+    "device": "cpu",
+    "cuda_available": false,
+    "mps_available": false
+  },
+  "deterministic_controls": {
+    "torch_use_deterministic_algorithms": true,
+    "torch_cpu_intra_op_threads": 1,
+    "torch_cpu_inter_op_threads": 1,
+    "torch_backends_cudnn_benchmark": false,
+    "torch_backends_cudnn_deterministic": true,
+    "torch_backends_cudnn_allow_tf32": false,
+    "torch_backends_cuda_matmul_allow_tf32": false,
+    "environment": {
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+    },
+    "inactive_backend_note": "CUDA, MPS and cuDNN are unavailable/inactive on the chosen CPU device; their flags are pinned defensively and do not change the scientific computation."
+  },
+  "pre_contract_nondeterminism_audit": {
+    "frozen_source_seeds_torch_then_numpy": true,
+    "frozen_source_enables_deterministic_algorithms": false,
+    "observed_default_intra_op_threads": 10,
+    "observed_default_inter_op_threads": 14,
+    "plausible_surfaces": [
+      "CPU parallel reduction and gather/scatter accumulation order",
+      "backend scheduling under concurrent process load",
+      "un-pinned BLAS and OpenMP thread pools",
+      "runtime/backend version differences between historical environments"
+    ],
+    "historical_mechanism_isolated": false,
+    "scope": "This contract tests repeatability under one frozen deterministic CPU prescription; it does not claim to prove which historical surface caused the producer/checker drift."
+  },
+  "normalization": {
+    "algorithm": "Parse JSON, recursively delete keys named below, then json.dumps(indent=2, sort_keys=True) plus one newline.",
+    "excluded_keys": [
+      "wall_sec",
+      "sweep_wall_sec",
+      "started_at",
+      "host",
+      "torch_version",
+      "numpy_version"
+    ],
+    "implementation": "Frozen locator_sweep.strip_non_replayable and locator_sweep.render from the pinned source checkout."
+  },
+  "audit_scripts": {
+    "run_deterministic_locator_sweep.py_sha256": "417433fced1e7b52196d5994708c3c387a27b19b2e46c00d1819aa6399aab964",
+    "analyse_frozen_locator_sweep.py_sha256": "18b5b8dcd7c954d5536541951adb3cdc57052cffc2fcee8d128db3fbff9f2312"
+  },
+  "commands": {
+    "common_environment": "PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8",
+    "run_1": "PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /Users/ernest/GitHub/occurrence/.venv/bin/python -u /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run_deterministic_locator_sweep.py --source-checkout /Users/ernest/GitHub/occurrence/.scratch/012-independent-verification/check-00908 --output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run1_sweep.json --normalized-output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run1_sweep.normalized.json",
+    "run_2": "PYTHONHASHSEED=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 CUBLAS_WORKSPACE_CONFIG=:4096:8 /Users/ernest/GitHub/occurrence/.venv/bin/python -u /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run_deterministic_locator_sweep.py --source-checkout /Users/ernest/GitHub/occurrence/.scratch/012-independent-verification/check-00908 --output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run2_sweep.json --normalized-output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run2_sweep.normalized.json",
+    "analysis_1": "/Users/ernest/GitHub/occurrence/.venv/bin/python -u /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/analyse_frozen_locator_sweep.py --source-checkout /Users/ernest/GitHub/occurrence/.scratch/012-independent-verification/check-00908 --sweep /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run1_sweep.json --output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run1_analysis.json",
+    "analysis_2": "/Users/ernest/GitHub/occurrence/.venv/bin/python -u /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/analyse_frozen_locator_sweep.py --source-checkout /Users/ernest/GitHub/occurrence/.scratch/012-independent-verification/check-00908 --sweep /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run2_sweep.json --output /Users/ernest/GitHub/occurrence/issues/013-00908-disposition-instability/013.04-Code-attachments/run2_analysis.json"
+  }
+}
