@@ -1,0 +1,84 @@
+{
+  "benchmark_contract_sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd",
+  "delivery_bundle": "014.03a",
+  "files": {
+    "trajectory_regularized_seed2000.json": {
+      "bytes": 112621,
+      "sha256": "5a09d2b38c02af2d2886de27bbae362ffbf913bb01fcd9be0988bb0318c3fd41"
+    },
+    "trajectory_regularized_seed2001.json": {
+      "bytes": 112633,
+      "sha256": "05b885803e01f539e3698efcdc5197ed2a0b2de02955480624b3685a4143a005"
+    },
+    "trajectory_regularized_seed2002.json": {
+      "bytes": 112296,
+      "sha256": "42c18979f1a754529cc21f3059f8554b84659d710fd1c76d93ec0296d61ea145"
+    },
+    "trajectory_regularized_seed2003.json": {
+      "bytes": 112619,
+      "sha256": "cb92b0f5de7455e10d0d8770217aeed446a4847530f3fc166ac145766814a11e"
+    },
+    "trajectory_regularized_seed2004.json": {
+      "bytes": 112316,
+      "sha256": "c683946ee5e5b0c03c94710289328bf66afb29215877533ea9739afa1374248d"
+    },
+    "trajectory_regularized_seed2005.json": {
+      "bytes": 112402,
+      "sha256": "5be5e5a0c86a011685a8be90a7d53b56bb17612e32bcf1c2b48c60e0a502f8ea"
+    },
+    "trajectory_regularized_seed2006.json": {
+      "bytes": 112346,
+      "sha256": "280fedd2cbb791cb703657e8d452d81565bc6291438fdbc05ac9948b0f92e48c"
+    },
+    "trajectory_regularized_seed2007.json": {
+      "bytes": 112454,
+      "sha256": "895c242ce747d6ffdd48c675664fbc25e295f022ee2604e48b12c026c29fcc30"
+    },
+    "trajectory_weight_decay_zero_seed2000.json": {
+      "bytes": 109907,
+      "sha256": "3f0001d32468c23269982b725e3e50b60ed74c1d33ebf82310518e0e22f60c73"
+    },
+    "trajectory_weight_decay_zero_seed2001.json": {
+      "bytes": 109934,
+      "sha256": "ba082830a5b3f2be568be9a70dd4367fddc467ebfeec11dc1d97b6e8c4156337"
+    },
+    "trajectory_weight_decay_zero_seed2002.json": {
+      "bytes": 109822,
+      "sha256": "9a00713efe4554e42ffbecd3c70500c66ec409ab4a9351667d829d6afed14ff1"
+    },
+    "trajectory_weight_decay_zero_seed2003.json": {
+      "bytes": 109792,
+      "sha256": "005f010e6e8004f67cfaf09e4f415645b944b6661f7836324543e41bcc1fe3ae"
+    },
+    "trajectory_weight_decay_zero_seed2004.json": {
+      "bytes": 110256,
+      "sha256": "4122feb2222b67c772afd2ee4754bb5cf233aa4c249e0cc5800fefb9f7d14e73"
+    },
+    "trajectory_weight_decay_zero_seed2005.json": {
+      "bytes": 109974,
+      "sha256": "f17dcaf90330142113289b5a2bc0f644434f94d3e3f5c65a25880e3799b9571b"
+    },
+    "trajectory_weight_decay_zero_seed2006.json": {
+      "bytes": 109879,
+      "sha256": "27e73984b3e496cbfc4ca14adf463e3d3fafb9f342041e2e112fedcd256e7fc1"
+    },
+    "trajectory_weight_decay_zero_seed2007.json": {
+      "bytes": 109857,
+      "sha256": "fc7176f06c344dbc96443fdc15bf8ec1fba3a4d0bc76dbcf830b09ed89b912c8"
+    }
+  },
+  "probe_contract_sha256": "bc7eaef6f21b7bf0ba61cb32f4d18336fe30c67c19bbb1ff8376ddafe6c77517",
+  "purpose": "raw per-(seed, arm) trajectory records, one file per scored run. Every value here also appears in the three aggregate attachments; these files are the unaggregated evidence.",
+  "resume_instructions": "each run is independent and deterministic. To regenerate one file: python run_014.py --bundle 014.03a trajectory --seed <seed> --arm <arm>. To regenerate the aggregates from existing files: python run_014.py --bundle 014.03a aggregate. Determinism requires the single-thread CPU settings recorded in environment.json.",
+  "schema": {
+    "arm": "regularized | weight_decay_zero",
+    "behavioral": "one row per behavioral checkpoint",
+    "config": "the committed optimizer configuration actually used",
+    "final_parameter_digest": "the same digest at the final update",
+    "initial_parameter_digest": "sha256 over named parameter bytes at update 0",
+    "probe": "one row per representation-probe checkpoint",
+    "seed": "int, one of the eight scored seeds"
+  },
+  "selected_regime_sha256": "ecd680fe83bfd0888a870ee64a3669623e61ad3a6fe804cf5405b9b6381ee56c",
+  "self_audit": "run_014.py aggregate refuses to proceed if any scored run file is missing, and analyze_014.py recomputes every temporal quantity from these bytes rather than from any cached summary"
+}

@@ -1,0 +1,1223 @@
+{
+  "baselines": {
+    "certified_sfp_relation": {
+      "description": "the nonlearned certified relation itself (reference oracle); solves all three sets exactly by construction",
+      "results": {
+        "NOVEL_TEST": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 24
+        },
+        "ROLE_TEST": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 96
+        },
+        "TRAIN": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 48
+        }
+      }
+    },
+    "declared_hierarchy_holds": true,
+    "directed_pair_lookup": {
+      "description": "memorizes the 48 observed unordered query pairs and their designated answers; nothing else",
+      "results": {
+        "NOVEL_TEST": {
+          "accuracy": 0.0,
+          "coverage": 0.0,
+          "examples": 24
+        },
+        "ROLE_TEST": {
+          "accuracy": 0.0,
+          "coverage": 0.0,
+          "examples": 96
+        },
+        "TRAIN": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 48
+        }
+      }
+    },
+    "policy": "an uncovered query counts as incorrect; coverage is reported separately so abstention is never scored as a hit",
+    "triad_set_memorization": {
+      "description": "stores the 48 whole triples revealed by TRAIN and answers any query pair contained in a stored triple",
+      "results": {
+        "NOVEL_TEST": {
+          "accuracy": 0.0,
+          "coverage": 0.0,
+          "examples": 24
+        },
+        "ROLE_TEST": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 96
+        },
+        "TRAIN": {
+          "accuracy": 1.0,
+          "coverage": 1.0,
+          "examples": 48
+        }
+      },
+      "stored_triads": 48
+    }
+  },
+  "component_transplant_reading": {
+    "localization": {
+      "all_four_at_or_below_chance": true,
+      "both_cross_hybrids_destroy_train_fit": true,
+      "fence": "component-level evidence only; coadaptation can make both cross-hybrids fail and that is a result, not a licence for another intervention",
+      "localizes_anything": false,
+      "reading": "no localization is possible here. Held-out accuracy is at or below single-event chance in all four combinations, so no combination carries the behavior that would need locating, and the differences between the four ROLE values are far smaller than one held-out example. Both cross-hybrids also destroy the memorized TRAIN fit, which is the coadaptation case the task anticipated.",
+      "role_accuracy_in_all_four_combinations": [
+        0.0013020833721384406,
+        0.0,
+        0.007812500232830644,
+        0.007812500232830644
+      ],
+      "single_event_chance_level": 0.011904761904761904,
+      "train_accuracy_by_combination": {
+        "early_representation_early_downstream": 1.0,
+        "early_representation_late_downstream": 0.08854166767559946,
+        "late_representation_early_downstream": 0.19791666697710752,
+        "late_representation_late_downstream": 1.0
+      }
+    },
+    "means": {
+      "early_representation_early_downstream": {
+        "NOVEL_TEST": 0.010416666977107525,
+        "ROLE_TEST": 0.0013020833721384406,
+        "TRAIN": 1.0
+      },
+      "early_representation_late_downstream": {
+        "NOVEL_TEST": 0.010416666977107525,
+        "ROLE_TEST": 0.007812500232830644,
+        "TRAIN": 0.08854166767559946
+      },
+      "late_representation_early_downstream": {
+        "NOVEL_TEST": 0.0052083334885537624,
+        "ROLE_TEST": 0.007812500232830644,
+        "TRAIN": 0.19791666697710752
+      },
+      "late_representation_late_downstream": {
+        "NOVEL_TEST": 0.0,
+        "ROLE_TEST": 0.0,
+        "TRAIN": 1.0
+      }
+    },
+    "seeds": 8
+  },
+  "delivery_bundle": "014.03a",
+  "does_not_establish": [
+    "all grokking is algebra discovery",
+    "low dimensionality is necessary",
+    "our SFP coordinates appeared neuron-by-neuron",
+    "OT is superior to transformers or language models",
+    "H_native or Outcome constitution",
+    "open-ended or language-scale representation discovery",
+    "physical Event or Outcome semantics",
+    "that probe decodability by itself proves causal use",
+    "that NOVEL_TEST success is guaranteed by the training examples"
+  ],
+  "fences": [
+    "grokking does not universally mean algebra discovery",
+    "no requirement that preferred coordinates appear neuron-by-neuron",
+    "low dimensionality is not required",
+    "decodability alone does not prove mechanistic use",
+    "role generalization does not imply unseen-block algebra",
+    "009 or 011 do not already constitute this experiment",
+    "OT structure need not be the only representation solving the benchmark"
+  ],
+  "inputs": {
+    "benchmark_contract_sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd",
+    "probe_contract_sha256": "bc7eaef6f21b7bf0ba61cb32f4d18336fe30c67c19bbb1ff8376ddafe6c77517",
+    "selected_regime_sha256": "ecd680fe83bfd0888a870ee64a3669623e61ad3a6fe804cf5405b9b6381ee56c"
+  },
+  "matched_control": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "difference_from_selected": "weight_decay only",
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0.0
+  },
+  "module": "analyze_014.py",
+  "probe_controls_summary": {
+    "B_certified_sfp": {
+      "probe_novel_accuracy": 1.0,
+      "probe_role_accuracy": 0.9895833134651184
+    },
+    "B_certified_sfp_concat_secondary": {
+      "probe_novel_accuracy": 0.875,
+      "probe_role_accuracy": 0.96875
+    },
+    "C_scrambled": {
+      "probe_novel_accuracy": 0.0833333358168602,
+      "probe_role_accuracy": 0.15625
+    },
+    "C_scrambled_concat_secondary": {
+      "probe_novel_accuracy": 0.125,
+      "probe_role_accuracy": 0.2291666716337204
+    },
+    "random_gaussian": {
+      "probe_novel_accuracy": 0.0,
+      "probe_role_accuracy": 0.0
+    }
+  },
+  "probe_gate": {
+    "no_stronger_probe_invented": "the probe form, width, optimizer, steps and seed are exactly as frozen in probe_contract.json before any main-model checkpoint existed",
+    "observed_novel": 1.0,
+    "observed_role": 0.9895833134651184,
+    "passed": true,
+    "rule": "the certified-SFP positive control must reach at least 0.95 on BOTH probe ROLE_TEST and probe NOVEL_TEST",
+    "status": "PASS",
+    "threshold": 0.95
+  },
+  "selected_regime": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 1.0
+  },
+  "separated_claims": {
+    "A_memorization": "the main model fits the 48 designated TRAIN answers: reached by 8/8 regularized seeds and 8/8 control seeds",
+    "B_role_consequence": "alternate output roles on seen triads: t_gen reached by 0/8 regularized seeds and 0/8 control seeds",
+    "C_global_extrapolation": "wholly unseen block triples: t_global reached by 0/8 regularized seeds and 0/8 control seeds",
+    "D_representation_readability": "a fresh TRAIN-only decoder reading the relation off frozen token representations: t_repr reached by 0/8 regularized seeds and 0/8 control seeds",
+    "E_load_bearing_location": "see component_transplant_reading; null when the transplant has not yet been executed"
+  },
+  "summary_by_arm": {
+    "regularized": {
+      "delayed_generalization_flagged": 0,
+      "final_novel_accuracy_median": 0.0,
+      "final_probe_novel_accuracy_median": 0.0,
+      "final_probe_role_accuracy_median": 0.0,
+      "final_role_accuracy_median": 0.0,
+      "median_t_fit": 64.0,
+      "median_t_gen": null,
+      "median_t_global": null,
+      "median_t_repr": null,
+      "median_t_repr_exact": null,
+      "median_t_repr_global": null,
+      "reading_histogram": {
+        "M4": 8
+      },
+      "seeds": 8,
+      "seeds_with_exact_56_block_readout": 0,
+      "swap_invariance_bit_exact_everywhere": true,
+      "t_fit_reached": 8,
+      "t_gen_reached": 0,
+      "t_global_reached": 0,
+      "t_repr_exact_reached": 0,
+      "t_repr_global_reached": 0,
+      "t_repr_reached": 0
+    },
+    "weight_decay_zero": {
+      "delayed_generalization_flagged": 0,
+      "final_novel_accuracy_median": 0.0,
+      "final_probe_novel_accuracy_median": 0.0,
+      "final_probe_role_accuracy_median": 0.0,
+      "final_role_accuracy_median": 0.0,
+      "median_t_fit": 64.0,
+      "median_t_gen": null,
+      "median_t_global": null,
+      "median_t_repr": null,
+      "median_t_repr_exact": null,
+      "median_t_repr_global": null,
+      "reading_histogram": {
+        "M4": 8
+      },
+      "seeds": 8,
+      "seeds_with_exact_56_block_readout": 0,
+      "swap_invariance_bit_exact_everywhere": true,
+      "t_fit_reached": 8,
+      "t_gen_reached": 0,
+      "t_global_reached": 0,
+      "t_repr_exact_reached": 0,
+      "t_repr_global_reached": 0,
+      "t_repr_reached": 0
+    }
+  },
+  "task_uri": "quilt+s3://protology#package=occurrence/gpt@a5c2c5a7fac78eae4ba2dacbf45c5951a99096dd5745d1bdc85e9593c5b2ce9f&path=issues/014-grokking-algebraic-representation-readout/014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md",
+  "temporal_definitions": {
+    "delayed_generalization_flag": [
+      "t_fit exists",
+      "t_gen exists",
+      "t_gen - t_fit >= 2048 updates",
+      "ROLE_TEST accuracy at t_fit < 0.5"
+    ],
+    "never_reached": "null, never the final checkpoint",
+    "readings": {
+      "M1": "t_fit < t_repr <= t_gen",
+      "M2": "t_gen < t_repr, or t_repr absent despite generalization",
+      "M3": "t_repr exists but main ROLE_TEST generalization remains absent, or component tests fall below it",
+      "M4": "neither a stable readable relation nor held-out consequence generalization emerges"
+    },
+    "smoothing": "threshold crossings are determined on unsmoothed values; smoothing is only ever a secondary visualization",
+    "t_fit": "first behavioral checkpoint with TRAIN accuracy == 1.0",
+    "t_gen": "first behavioral checkpoint with ROLE_TEST accuracy >= 0.95 at that checkpoint and the next two scheduled behavioral checkpoints",
+    "t_global": "first behavioral checkpoint with NOVEL_TEST accuracy >= 0.95 at that checkpoint and the next two scheduled behavioral checkpoints",
+    "t_repr": "first probe checkpoint with probe ROLE_TEST accuracy >= 0.95 and seen_block_three_role_consistency >= 0.9 at that checkpoint and the next two probe checkpoints",
+    "t_repr_exact": "first probe checkpoint with full_56_block_relation_exact == true",
+    "t_repr_global": "first probe checkpoint with probe NOVEL_TEST accuracy >= 0.95 and all_block_three_role_consistency >= 0.9 at that checkpoint and the next two probe checkpoints"
+  },
+  "temporal_diagnostics": [
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2000,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.010416666977107525,
+      "seed": 2001,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2002,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2003,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2004,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2005,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2006,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "regularized",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2007,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2000,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.010416666977107525,
+      "seed": 2001,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.010416666977107525
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2002,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 32,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2003,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 32,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.010416666977107525,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2004,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0416666679084301,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2005,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.02083333395421505
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2006,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    },
+    {
+      "arm": "weight_decay_zero",
+      "delayed_generalization_components": {
+        "gap_at_least_2048": false,
+        "role_below_half_at_t_fit": true,
+        "t_fit_exists": true,
+        "t_gen_exists": false
+      },
+      "delayed_generalization_flag": false,
+      "final": {
+        "all_block_three_role_consistency": 0.0,
+        "full_56_block_relation_exact": false,
+        "input_swap_invariance_bit_exact": true,
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0,
+        "seen_block_three_role_consistency": 0.0,
+        "train_accuracy": 1.0,
+        "update": 65536
+      },
+      "first_threshold_without_persistence": {
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_global": null
+      },
+      "ordering": {
+        "t_fit": 64,
+        "t_gen": null,
+        "t_repr": null,
+        "t_repr_before_t_gen": null
+      },
+      "peak": {
+        "novel_test_accuracy": 0.0,
+        "probe_novel_accuracy": 0.0416666679084301,
+        "probe_role_accuracy": 0.0,
+        "role_test_accuracy": 0.0
+      },
+      "persistence_notes": {
+        "t_gen": "threshold never met",
+        "t_global": "threshold never met",
+        "t_repr": "threshold never met",
+        "t_repr_global": "threshold never met"
+      },
+      "reading": "M4",
+      "readings_applicable": [
+        "M4"
+      ],
+      "role_test_accuracy_at_t_fit": 0.0,
+      "seed": 2007,
+      "swap_invariance_bit_exact_at_every_checkpoint": true,
+      "t_fit": 64,
+      "t_gen": null,
+      "t_global": null,
+      "t_repr": null,
+      "t_repr_exact": null,
+      "t_repr_global": null
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "controls": {
+    "B_certified_sfp": {
+      "gate": "must reach >= 0.95 on BOTH probe ROLE_TEST and probe NOVEL_TEST accuracy, otherwise the representation instrument is BLOCKED and the main trajectory is not run",
+      "role": "positive control",
+      "vector": "frozen 009 Arm B code, 16 one-hot units per incidence presentation (S:2, FFF:7, PP:4, pp:3), summed over the two presentations; 16 dimensions"
+    },
+    "C_scrambled": {
+      "role": "diagnostic only, never a selection criterion",
+      "vector": "frozen 009 Arm C non-automorphic scramble, identical shape and matched field marginals, pooled identically; 16 dimensions"
+    },
+    "random_gaussian": {
+      "role": "diagnostic only, never a selection criterion",
+      "vector": "seeded standard Gaussian token vectors, 128 dimensions, torch.manual_seed(271828)"
+    },
+    "secondary_declared_variant": "the canonical-concatenation form of the Arm B and Arm C codes (32 dimensions) is additionally reported for transparency; the gate binds only to the summed primary declared above"
+  },
+  "form": {
+    "candidate": "v(c) = Linear(dim, 64, bias=False)",
+    "candidate_set": "all 84 Events",
+    "features": "f(a,b) = concat(z_a + z_b, z_a * z_b, abs(z_a - z_b))",
+    "hidden": "h(a,b) = Linear(3*dim, 64) -> GELU",
+    "score": "score_probe(c|a,b) = dot(h(a,b), v(c))/sqrt(64)"
+  },
+  "metric_definitions": {
+    "all_block_three_role_consistency": "the same fraction over all 56 certified blocks",
+    "canonical_certificate": "when the decoded relation is exact, an exact canonical hypergraph certificate is computed; no preferred SFP coordinate labels are required",
+    "full_56_block_relation_exact": "true only when all three completions of all 56 blocks are correct",
+    "seen_block_three_role_consistency": "fraction of the 48 seen blocks whose three completions are all answered correctly"
+  },
+  "purpose": "fixed direct representation readout: a fresh shared decoder trained only on TRAIN, applied to frozen main-model token representations",
+  "reported_metrics": [
+    "probe_train_accuracy",
+    "probe_role_accuracy",
+    "probe_novel_accuracy",
+    "seen_block_three_role_consistency",
+    "all_block_three_role_consistency",
+    "full_56_block_relation_exact"
+  ],
+  "representation": "z_x = concat(input_embedding[x], candidate_embedding[x]); 128 dimensions; the main model's pair trunk and candidate bias are discarded for this diagnostic",
+  "rules": {
+    "batching": "full batch TRAIN only",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "identity_indexed_probe_parameters": "forbidden",
+    "initialization": "Xavier uniform gain 1.0 on weights, zero biases",
+    "initialization_seed": 314159,
+    "lr": 0.01,
+    "main_model_gradients": "forbidden; representations are detached",
+    "optimizer": "Adam",
+    "steps": 5000,
+    "trained_on": "the 48 TRAIN examples only",
+    "weight_decay": 0.001
+  },
+  "width_adaptation": "only the input projection width and the candidate projection input width follow the control-vector dimension; hidden width stays 64 and the semantic form is unchanged"
+}

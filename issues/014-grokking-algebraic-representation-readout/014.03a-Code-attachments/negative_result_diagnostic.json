@@ -1,0 +1,252 @@
+{
+  "architectural_reading": {
+    "consequence_for_the_result": "the clean M4 negative is consistent with the main learner never forming a role-transferable Event representation at all, rather than forming one that the probe failed to read. Both readings are reported; this diagnostic does not settle which, and no claim beyond the finite tested benchmark is made.",
+    "contrast_with_the_probe": "the representation probe scores candidates with the SAME vector it uses to build the query features, so structure learned in one role is automatically available in the other. On the certified code the probe reaches 0.9896 ROLE and 1.0000 NOVEL from the identical 48 TRAIN examples and the identical 84-way objective. The benchmark is therefore solvable under this output contract; what the main architecture lacks is not capacity but any pressure to make one Event's two rows describe the same object.",
+    "untied_tables": "the frozen architecture gives each Event two independent parameter rows: an input-table row used only when the Event appears in a query pair, and a candidate-table row used only when the Event is scored as an answer. Learning 'z is the answer to {x,y}' updates z's candidate row and leaves z's input row untouched, so a memorized answer carries no information about the same Event as a future query input."
+  },
+  "benchmark_static_facts": {
+    "answer_vocabulary_profile": {
+      "NOVEL_TEST": {
+        "answers_never_designated_anywhere": 17,
+        "answers_that_are_designated_targets_somewhere": 7,
+        "examples": 24
+      },
+      "ROLE_TEST": {
+        "answers_never_designated_anywhere": 65,
+        "answers_that_are_designated_targets_somewhere": 31,
+        "examples": 96
+      },
+      "TRAIN": {
+        "answers_never_designated_anywhere": 0,
+        "answers_that_are_designated_targets_somewhere": 48,
+        "examples": 48
+      }
+    },
+    "distinct_designated_target_events": 43,
+    "events_never_a_designated_target": 41,
+    "why_this_matters": "full 84-way cross entropy on one designated answer per seen block pushes every non-target logit down. Events that are never a designated target therefore receive only downward pressure across the whole run, and a large share of the held-out answers are exactly such events."
+  },
+  "delivery_bundle": "014.03a",
+  "fence": "this diagnostic is explanatory only. It does not license changing the architecture, the benchmark, or any threshold, and it does not convert the delivered negative into a positive result.",
+  "module": "run_014.py (stage: negative-diagnostic)",
+  "per_seed": [
+    {
+      "candidate_bias_mean_designated": -0.035185523331165314,
+      "candidate_bias_mean_never_designated": -0.011064760386943817,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 16,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 55,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 41
+          },
+          "distinct_predicted_events": 39,
+          "share_landing_on_a_designated_target": 0.5729166666666666
+        }
+      },
+      "seed": 2000
+    },
+    {
+      "candidate_bias_mean_designated": -0.06075885519385338,
+      "candidate_bias_mean_never_designated": -0.008197342045605183,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 14,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 62,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 34
+          },
+          "distinct_predicted_events": 31,
+          "share_landing_on_a_designated_target": 0.6458333333333334
+        }
+      },
+      "seed": 2001
+    },
+    {
+      "candidate_bias_mean_designated": -0.01067382749170065,
+      "candidate_bias_mean_never_designated": -0.004558272659778595,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 15,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 64,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 32
+          },
+          "distinct_predicted_events": 38,
+          "share_landing_on_a_designated_target": 0.6666666666666666
+        }
+      },
+      "seed": 2002
+    },
+    {
+      "candidate_bias_mean_designated": -0.024071676656603813,
+      "candidate_bias_mean_never_designated": -0.0077658602967858315,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 15,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 63,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 33
+          },
+          "distinct_predicted_events": 36,
+          "share_landing_on_a_designated_target": 0.65625
+        }
+      },
+      "seed": 2003
+    },
+    {
+      "candidate_bias_mean_designated": -0.040643393993377686,
+      "candidate_bias_mean_never_designated": -0.009104553610086441,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 17,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 64,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 32
+          },
+          "distinct_predicted_events": 38,
+          "share_landing_on_a_designated_target": 0.6666666666666666
+        }
+      },
+      "seed": 2004
+    },
+    {
+      "candidate_bias_mean_designated": -0.033231575042009354,
+      "candidate_bias_mean_never_designated": -0.01301912683993578,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 18,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 64,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 32
+          },
+          "distinct_predicted_events": 38,
+          "share_landing_on_a_designated_target": 0.6666666666666666
+        }
+      },
+      "seed": 2005
+    },
+    {
+      "candidate_bias_mean_designated": -0.008427385240793228,
+      "candidate_bias_mean_never_designated": -0.00441700080409646,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 17,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 64,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 32
+          },
+          "distinct_predicted_events": 37,
+          "share_landing_on_a_designated_target": 0.6666666666666666
+        }
+      },
+      "seed": 2006
+    },
+    {
+      "candidate_bias_mean_designated": -0.06533824652433395,
+      "candidate_bias_mean_never_designated": -0.01062741968780756,
+      "predictions": {
+        "NOVEL_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 24,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 0
+          },
+          "distinct_predicted_events": 12,
+          "share_landing_on_a_designated_target": 1.0
+        },
+        "ROLE_TEST": {
+          "counts": {
+            "a_designated_target_elsewhere": 69,
+            "correct": 0,
+            "never_designated_event": 0,
+            "one_of_the_two_query_inputs": 27
+          },
+          "distinct_predicted_events": 24,
+          "share_landing_on_a_designated_target": 0.71875
+        }
+      },
+      "seed": 2007
+    }
+  ],
+  "question": "every scored seed memorized TRAIN and never generalized; what does the fixed final model do on held-out queries, and what does the frozen output contract do to the held-out answer vocabulary?",
+  "status": "POST-HOC EXPLANATORY DIAGNOSTIC on already-fixed model states; it changes no frozen choice, adds no scored quantity, and does not reinterpret any temporal reading"
+}
