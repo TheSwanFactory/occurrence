@@ -1,0 +1,76 @@
+{
+  "files": {
+    "trajectory_matched_regularized_seed2000.json": {
+      "bytes": 99906,
+      "sha256": "77767159d503f23787779bfe7918a7f3f7ef2321ddd0919b759ec7863bd782e2"
+    },
+    "trajectory_matched_regularized_seed2001.json": {
+      "bytes": 99941,
+      "sha256": "3508b3d53e5dae41888c7da2d1b3e100f4a19f47f24c3bad08b4903729b40331"
+    },
+    "trajectory_matched_regularized_seed2002.json": {
+      "bytes": 100176,
+      "sha256": "6ce86a2a67317c3f7397c78be479416b13694dd45753fb40a2215b19a4c335af"
+    },
+    "trajectory_matched_regularized_seed2003.json": {
+      "bytes": 99912,
+      "sha256": "8732332e295b422056d4af45bb4ffd913b8bb88769f0db0592de6b433f2db983"
+    },
+    "trajectory_matched_regularized_seed2004.json": {
+      "bytes": 99972,
+      "sha256": "49b03379cced6958d9ba51f7e11d4562862ad565f8044f6613af8d643a9cec3e"
+    },
+    "trajectory_matched_regularized_seed2005.json": {
+      "bytes": 99861,
+      "sha256": "218d347f4fd3c640f6f45596768b8e6ed8753e90a13bab36cefcb4c6d39de4c7"
+    },
+    "trajectory_matched_regularized_seed2006.json": {
+      "bytes": 99863,
+      "sha256": "ff2baf62ee412f5f1881bf5627fff210a1339214b59913eb3d4db869aab3611a"
+    },
+    "trajectory_matched_regularized_seed2007.json": {
+      "bytes": 99938,
+      "sha256": "ca4bd298ed3cf1ce2599a4f92a39a10f4043f954aa3cded3ea89ad05ee3a795b"
+    },
+    "trajectory_matched_zero_wd_seed2000.json": {
+      "bytes": 97570,
+      "sha256": "c0845ab16afd0bb14a9afa26a2c4e690f6e90f002707e083a80c948fca583382"
+    },
+    "trajectory_matched_zero_wd_seed2001.json": {
+      "bytes": 97619,
+      "sha256": "cb4dcbfc3945d8a99a50f2044d4a193157608d860d0bf2419e661ebaa3477723"
+    },
+    "trajectory_matched_zero_wd_seed2002.json": {
+      "bytes": 97691,
+      "sha256": "2008acb3f8814b4dff064fe8adcdc19edd338b71c894eadbc138aa71172b2390"
+    },
+    "trajectory_matched_zero_wd_seed2003.json": {
+      "bytes": 98435,
+      "sha256": "8b8d109b886b13d39eda8e20cd5a10bbc893862b5c82fe11cd1ef1153ed1e3f6"
+    },
+    "trajectory_matched_zero_wd_seed2004.json": {
+      "bytes": 97834,
+      "sha256": "e3b7593188063d35bd81af377ac9dbc06327a67a44513320a3aee73872c0a583"
+    },
+    "trajectory_matched_zero_wd_seed2005.json": {
+      "bytes": 97619,
+      "sha256": "45ccdb24dcf462cea2a76f46a73c212c22838625d55e21b9328b061ddcfb6abd"
+    },
+    "trajectory_matched_zero_wd_seed2006.json": {
+      "bytes": 97601,
+      "sha256": "d152840f98fc9bed1b018983047aa872a960c44a58f5380b45596d5aef930f59"
+    },
+    "trajectory_matched_zero_wd_seed2007.json": {
+      "bytes": 97530,
+      "sha256": "b5ba462c718c4dcf2f4bebf1dc137183353c0ddfdd3bfe0de940ecafc421faec"
+    }
+  },
+  "purpose": "raw one-file-per-seed/arm evidence",
+  "resume": "python run_014_tied.py trajectory --seed <seed> --arm <arm>; existing records are never overwritten; aggregate regenerates summaries",
+  "schema": {
+    "behavioral": "exact old schedule with TRAIN/ROLE/NOVEL/swap/norm/rank fields",
+    "model_parameter_identity_audit": "must pass in every run",
+    "probe": "exact old schedule with six frozen readout fields"
+  },
+  "self_audit": "aggregate requires all 16 primaries and, when authorized, exactly eight fallback records"
+}

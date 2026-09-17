@@ -1,0 +1,307 @@
+{
+  "interpretation_fence": "component-level evidence only; coadaptation may make both hybrids fail and does not authorize another intervention",
+  "method": "deterministic replay and four combinations without retraining",
+  "module": "run_014_tied.py (stage: transplant)",
+  "partition": {
+    "DOWNSTREAM": "lin1 + lin2 + candidate bias",
+    "REPRESENTATION": "event_emb only"
+  },
+  "runs": [
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.696593284606934
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0416666679084301,
+          "shared_event_embedding_norm": 14.696593284606934
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 20.90792465209961
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 20.90792465209961
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2000
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.897868156433105
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 14.897868156433105
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.0,
+          "shared_event_embedding_norm": 21.083126068115234
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 21.083126068115234
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2001
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.838545799255371
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0833333358168602,
+          "shared_event_embedding_norm": 14.838545799255371
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.0,
+          "shared_event_embedding_norm": 20.901369094848633
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 20.901369094848633
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2002
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.922808647155762
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 14.922808647155762
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.125,
+          "shared_event_embedding_norm": 20.844669342041016
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 20.844669342041016
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2003
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.820613861083984
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0416666679084301,
+          "shared_event_embedding_norm": 14.820613861083984
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.125,
+          "shared_event_embedding_norm": 21.08543586730957
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 21.08543586730957
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2004
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.828761100769043
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 14.828761100769043
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 21.024816513061523
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 21.024816513061523
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2005
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.76809024810791
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 14.76809024810791
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 20.61505889892578
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 20.61505889892578
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2006
+    },
+    {
+      "basis": "t_fit/final because no distinct t_gen",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 14.860962867736816
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.0416666679084301,
+          "shared_event_embedding_norm": 14.860962867736816
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.02083333395421505,
+          "shared_event_embedding_norm": 20.76558494567871
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0,
+          "shared_event_embedding_norm": 20.76558494567871
+        }
+      },
+      "late_update": 65536,
+      "replay_check": {
+        "behavioral_fields_exact_including_shared_norm": true,
+        "checkpoints_compared": 138,
+        "mismatches": []
+      },
+      "seed": 2007
+    }
+  ]
+}
