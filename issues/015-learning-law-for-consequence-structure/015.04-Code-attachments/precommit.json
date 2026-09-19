@@ -1,0 +1,2083 @@
+{
+  "benchmark": {
+    "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+    "path": "issues/015-learning-law-for-consequence-structure/015.03-Code-attachments/role-learning-benchmark.json",
+    "revision": "6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731",
+    "uri": "quilt+s3://protology#package=occurrence/gpt@6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731&path=issues/015-learning-law-for-consequence-structure/015.03-Code-attachments/role-learning-benchmark.json",
+    "validation": {
+      "all_role_records_three_distinct_events": true,
+      "all_train_records_three_distinct_events": true,
+      "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+      "derived_alternate_role_count": 96,
+      "derived_alternate_roles_equal_role_test": true,
+      "event_count": 84,
+      "novel_test_present": false,
+      "role_test_count": 96,
+      "role_test_digest": "f000b04566a83a3ff7a9536fe4e1d5f8889b51df269879d757b1b2b60e6b7f37",
+      "role_unique_query_pairs": 96,
+      "status": "PASS",
+      "train_and_role_query_pairs_disjoint": true,
+      "train_count": 48,
+      "train_digest": "ca7178877eed4f4a537deb9fb56e9a66f81a39395298a828b5fb058c6a7c9088",
+      "train_unique_query_pairs": 48
+    }
+  },
+  "calibration": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "cap_updates": 4096,
+    "common_capacity_qualified_count": 25,
+    "eps": 1e-08,
+    "full_batch": true,
+    "grid_points": [
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            1094.5,
+            1120,
+            0.0001,
+            0.0
+          ],
+          "triad_symmetric": [
+            950.5,
+            961,
+            0.0001,
+            0.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          1094.5,
+          1120,
+          0.0001,
+          0.0
+        ],
+        "learning_rate": 0.0001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 1110,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1079,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1120,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 1017,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 946,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 961,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 955,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 883,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            1094.5,
+            1120,
+            0.0001,
+            0.001
+          ],
+          "triad_symmetric": [
+            950.5,
+            960,
+            0.0001,
+            0.001
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          1094.5,
+          1120,
+          0.0001,
+          0.001
+        ],
+        "learning_rate": 0.0001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 1110,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1079,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1120,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 1017,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 947,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 960,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 954,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 882,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.001
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            1095.5,
+            1121,
+            0.0001,
+            0.01
+          ],
+          "triad_symmetric": [
+            948.0,
+            962,
+            0.0001,
+            0.01
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          1095.5,
+          1121,
+          0.0001,
+          0.01
+        ],
+        "learning_rate": 0.0001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 1111,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1080,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1121,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 1018,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 940,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 962,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 956,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 883,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.01
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            1105.5,
+            1131,
+            0.0001,
+            0.1
+          ],
+          "triad_symmetric": [
+            958.0,
+            968,
+            0.0001,
+            0.1
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          1105.5,
+          1131,
+          0.0001,
+          0.1
+        ],
+        "learning_rate": 0.0001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 1120,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1091,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1131,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 1028,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 951,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 968,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 965,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 889,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.1
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            1215.0,
+            1251,
+            0.0001,
+            1.0
+          ],
+          "triad_symmetric": [
+            1031.0,
+            1051,
+            0.0001,
+            1.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          1215.0,
+          1251,
+          0.0001,
+          1.0
+        ],
+        "learning_rate": 0.0001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 1220,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1210,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1251,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 1145,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 1025,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 1051,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 1037,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 945,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 1.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            353.5,
+            367,
+            0.0003,
+            0.0
+          ],
+          "triad_symmetric": [
+            318.5,
+            353,
+            0.0003,
+            0.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          353.5,
+          367,
+          0.0003,
+          0.0
+        ],
+        "learning_rate": 0.0003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 367,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 347,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 360,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 330,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 306,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 353,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 331,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 298,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            353.5,
+            367,
+            0.0003,
+            0.001
+          ],
+          "triad_symmetric": [
+            318.5,
+            353,
+            0.0003,
+            0.001
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          353.5,
+          367,
+          0.0003,
+          0.001
+        ],
+        "learning_rate": 0.0003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 367,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 347,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 360,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 330,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 306,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 353,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 331,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 298,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.001
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            353.5,
+            367,
+            0.0003,
+            0.01
+          ],
+          "triad_symmetric": [
+            319.5,
+            353,
+            0.0003,
+            0.01
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          353.5,
+          367,
+          0.0003,
+          0.01
+        ],
+        "learning_rate": 0.0003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 367,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 347,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 360,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 330,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 307,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 353,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 332,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 298,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.01
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            357.0,
+            371,
+            0.0003,
+            0.1
+          ],
+          "triad_symmetric": [
+            322.0,
+            356,
+            0.0003,
+            0.1
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          357.0,
+          371,
+          0.0003,
+          0.1
+        ],
+        "learning_rate": 0.0003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 371,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 351,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 363,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 333,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 310,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 356,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 334,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 300,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.1
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            393.5,
+            406,
+            0.0003,
+            1.0
+          ],
+          "triad_symmetric": [
+            359.0,
+            398,
+            0.0003,
+            1.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          393.5,
+          406,
+          0.0003,
+          1.0
+        ],
+        "learning_rate": 0.0003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 406,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 389,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 398,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 365,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 357,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 398,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 361,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 323,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 1.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            113.0,
+            118,
+            0.001,
+            0.0
+          ],
+          "triad_symmetric": [
+            103.0,
+            114,
+            0.001,
+            0.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          113.0,
+          118,
+          0.001,
+          0.0
+        ],
+        "learning_rate": 0.001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 118,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 110,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 116,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 107,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 101,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 114,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 95,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 105,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            113.0,
+            118,
+            0.001,
+            0.001
+          ],
+          "triad_symmetric": [
+            103.0,
+            114,
+            0.001,
+            0.001
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          113.0,
+          118,
+          0.001,
+          0.001
+        ],
+        "learning_rate": 0.001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 118,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 110,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 116,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 107,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 101,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 114,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 95,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 105,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.001
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            113.5,
+            118,
+            0.001,
+            0.01
+          ],
+          "triad_symmetric": [
+            103.0,
+            114,
+            0.001,
+            0.01
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          113.5,
+          118,
+          0.001,
+          0.01
+        ],
+        "learning_rate": 0.001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 118,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 110,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 117,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 107,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 101,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 114,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 95,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 105,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.01
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            114.5,
+            119,
+            0.001,
+            0.1
+          ],
+          "triad_symmetric": [
+            103.0,
+            116,
+            0.001,
+            0.1
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          114.5,
+          119,
+          0.001,
+          0.1
+        ],
+        "learning_rate": 0.001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 119,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 111,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 118,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 108,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 101,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 116,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 95,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 105,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.1
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            125.0,
+            131,
+            0.001,
+            1.0
+          ],
+          "triad_symmetric": [
+            111.5,
+            132,
+            0.001,
+            1.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          125.0,
+          132,
+          0.001,
+          1.0
+        ],
+        "learning_rate": 0.001,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 131,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 122,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 128,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 118,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 106,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 132,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 113,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 110,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 1.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            45.5,
+            49,
+            0.003,
+            0.0
+          ],
+          "triad_symmetric": [
+            49.5,
+            53,
+            0.003,
+            0.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          49.5,
+          53,
+          0.003,
+          0.0
+        ],
+        "learning_rate": 0.003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 53,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 48,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            45.5,
+            49,
+            0.003,
+            0.001
+          ],
+          "triad_symmetric": [
+            49.5,
+            52,
+            0.003,
+            0.001
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          49.5,
+          52,
+          0.003,
+          0.001
+        ],
+        "learning_rate": 0.003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 52,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 48,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.001
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            45.5,
+            49,
+            0.003,
+            0.01
+          ],
+          "triad_symmetric": [
+            49.5,
+            53,
+            0.003,
+            0.01
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          49.5,
+          53,
+          0.003,
+          0.01
+        ],
+        "learning_rate": 0.003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 45,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 53,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 48,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.01
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            46.0,
+            49,
+            0.003,
+            0.1
+          ],
+          "triad_symmetric": [
+            50.5,
+            53,
+            0.003,
+            0.1
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          50.5,
+          53,
+          0.003,
+          0.1
+        ],
+        "learning_rate": 0.003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 46,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 53,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 52,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 49,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 48,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.1
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            50.0,
+            53,
+            0.003,
+            1.0
+          ],
+          "triad_symmetric": [
+            51.0,
+            53,
+            0.003,
+            1.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          51.0,
+          53,
+          0.003,
+          1.0
+        ],
+        "learning_rate": 0.003,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 53,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 51,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 53,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 51,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 50,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 1.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            18.0,
+            19,
+            0.01,
+            0.0
+          ],
+          "triad_symmetric": [
+            26.5,
+            29,
+            0.01,
+            0.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          26.5,
+          29,
+          0.01,
+          0.0
+        ],
+        "learning_rate": 0.01,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 17,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 19,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 29,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 25,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 27,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 26,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.0
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            18.0,
+            19,
+            0.01,
+            0.001
+          ],
+          "triad_symmetric": [
+            26.5,
+            29,
+            0.01,
+            0.001
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          26.5,
+          29,
+          0.01,
+          0.001
+        ],
+        "learning_rate": 0.01,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 17,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 19,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 29,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 25,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 27,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 26,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.001
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            18.0,
+            19,
+            0.01,
+            0.01
+          ],
+          "triad_symmetric": [
+            26.5,
+            29,
+            0.01,
+            0.01
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          26.5,
+          29,
+          0.01,
+          0.01
+        ],
+        "learning_rate": 0.01,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 17,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 19,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 29,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 25,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 27,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 26,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.01
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            18.0,
+            20,
+            0.01,
+            0.1
+          ],
+          "triad_symmetric": [
+            26.5,
+            30,
+            0.01,
+            0.1
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          26.5,
+          30,
+          0.01,
+          0.1
+        ],
+        "learning_rate": 0.01,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 17,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 18,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 20,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 30,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 25,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 27,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 26,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 0.1
+      },
+      {
+        "arm_capacity_qualified": {
+          "directional": true,
+          "triad_symmetric": true
+        },
+        "arm_selection_keys": {
+          "directional": [
+            22.0,
+            23,
+            0.01,
+            1.0
+          ],
+          "triad_symmetric": [
+            27.5,
+            30,
+            0.01,
+            1.0
+          ]
+        },
+        "common_capacity_qualified": true,
+        "common_selection_key": [
+          27.5,
+          30,
+          0.01,
+          1.0
+        ],
+        "learning_rate": 0.01,
+        "runs": {
+          "directional": {
+            "0": {
+              "first_fit_update": 19,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 22,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 23,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 22,
+              "terminal": "fit"
+            }
+          },
+          "triad_symmetric": {
+            "0": {
+              "first_fit_update": 30,
+              "terminal": "fit"
+            },
+            "1": {
+              "first_fit_update": 27,
+              "terminal": "fit"
+            },
+            "2": {
+              "first_fit_update": 26,
+              "terminal": "fit"
+            },
+            "3": {
+              "first_fit_update": 28,
+              "terminal": "fit"
+            }
+          }
+        },
+        "weight_decay": 1.0
+      }
+    ],
+    "learning_rate_grid": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01
+    ],
+    "optimizer": "AdamW",
+    "schedule": "constant",
+    "seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selection": {
+      "matched_causal_comparison_available": true,
+      "optimizer_by_arm": {
+        "directional": {
+          "learning_rate": 0.01,
+          "weight_decay": 0.0
+        },
+        "triad_symmetric": {
+          "learning_rate": 0.01,
+          "weight_decay": 0.0
+        }
+      },
+      "selection_key": [
+        26.5,
+        29,
+        0.01,
+        0.0
+      ],
+      "status": "COMMON-CAPACITY"
+    },
+    "training_data_audit": {
+      "digest_received": "ca7178877eed4f4a537deb9fb56e9a66f81a39395298a828b5fb058c6a7c9088",
+      "function": "calibrate(train_records)",
+      "records_received": 48,
+      "role_test_argument_or_loader": false,
+      "role_test_metrics_computed_or_logged": false,
+      "selection_uses_train_exact_accuracy_only": true
+    },
+    "weight_decay_grid": [
+      0.0,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ]
+  },
+  "candidate_mask": {
+    "identical_between_arms": true,
+    "legal_classes_per_query": 82,
+    "masked": [
+      "query Event a",
+      "query Event b"
+    ],
+    "universe_classes": 84
+  },
+  "checkpoint_metrics": [
+    "TRAIN cross-entropy",
+    "TRAIN accuracy",
+    "ROLE_TEST accuracy",
+    "ROLE_TEST exact 96/96 boolean",
+    "fraction of 48 observed triples with all three role completions correct",
+    "minimum/median/mean ROLE_TEST completion margin",
+    "per-tensor and total parameter L2 norms",
+    "Event embedding Frobenius norm",
+    "Event embedding entropy effective rank"
+  ],
+  "created_at_utc": "2026-09-19T17:09:48.616554+00:00",
+  "deterministic_settings": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy_random_seeded": true,
+    "python_random_seeded": true,
+    "pythonhashseed": "0",
+    "thread_count_frozen": 10,
+    "torch_seed_per_run": true,
+    "torch_use_deterministic_algorithms": true
+  },
+  "environment": {
+    "cpu_count": 14,
+    "device": "cpu",
+    "machine": "arm64",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]",
+    "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+    "requested_threads": 10,
+    "torch": "2.14.0",
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 10
+  },
+  "handed_task": {
+    "content_sha256": "036595f43505a5185de3ee05976ae180aec45323a7292ab2006fb703826efd56",
+    "path": "issues/015-learning-law-for-consequence-structure/015.03-GPT-role-neutral-triad-learning-Coder.md",
+    "revision": "6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731",
+    "uri": "quilt+s3://protology#package=occurrence/gpt@6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731&path=issues/015-learning-law-for-consequence-structure/015.03-GPT-role-neutral-triad-learning-Coder.md"
+  },
+  "information_exposure": "Production execution with the complete curated Issue-015.03 packet: 84 opaque Event IDs, 48 TRAIN records, and 96 evaluation-only ROLE_TEST records. No NOVEL_TEST data, Issue 016 content, SFP/Fano/habitat coordinates, or certified completion tables were accessed. Optimizer calibration received TRAIN records only.",
+  "interpretation_bins": {
+    "R0": "NO-COMMON-CAPACITY: matched comparison unavailable; report only capacity diagnostics",
+    "R1": "neither arm has >=7/8 seeds reaching t_role95: this score family does not yield robust ROLE transfer; exact role symmetry alone is insufficient here",
+    "R2": "Arm T has >=7/8 seeds reaching t_role95 and Arm D has <7/8: role-neutral triad score constitution is sufficient relative to the matched directional scorer for robust seen-triad consequence",
+    "R3": "both arms have >=7/8 seeds reaching t_role95: the matched scalar-scoring family succeeds, but the experiment does not isolate role symmetry as the decisive cause",
+    "R4": "Arm D has >=7/8 seeds reaching t_role95 and Arm T has <7/8: role symmetry is not beneficial in this setup"
+  },
+  "matched_initialization_audit": {
+    "0": {
+      "byte_identical": true,
+      "directional_sha256": "6b4f3d3fd446da7b70c0fedf8844ff926cfd94e53f44b756f36b5a867fccc84f",
+      "triad_symmetric_sha256": "6b4f3d3fd446da7b70c0fedf8844ff926cfd94e53f44b756f36b5a867fccc84f"
+    },
+    "1": {
+      "byte_identical": true,
+      "directional_sha256": "0ffd4fdd4940d3783aa14aaf5f64a7d1c7e7028d703bbf2e07ef10dd7af9d067",
+      "triad_symmetric_sha256": "0ffd4fdd4940d3783aa14aaf5f64a7d1c7e7028d703bbf2e07ef10dd7af9d067"
+    },
+    "2": {
+      "byte_identical": true,
+      "directional_sha256": "d99d4af2ef7f03be204a02baadbfde790d22b3bb1de82b91aa822f7458e28043",
+      "triad_symmetric_sha256": "d99d4af2ef7f03be204a02baadbfde790d22b3bb1de82b91aa822f7458e28043"
+    },
+    "3": {
+      "byte_identical": true,
+      "directional_sha256": "36ceec59a2d35f2b4f9eb3d7b4db6405c1280c2eed4498028b2431a24d7ab834",
+      "triad_symmetric_sha256": "36ceec59a2d35f2b4f9eb3d7b4db6405c1280c2eed4498028b2431a24d7ab834"
+    },
+    "3000": {
+      "byte_identical": true,
+      "directional_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec",
+      "triad_symmetric_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec"
+    },
+    "3001": {
+      "byte_identical": true,
+      "directional_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745",
+      "triad_symmetric_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745"
+    },
+    "3002": {
+      "byte_identical": true,
+      "directional_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe",
+      "triad_symmetric_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe"
+    },
+    "3003": {
+      "byte_identical": true,
+      "directional_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156",
+      "triad_symmetric_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156"
+    },
+    "3004": {
+      "byte_identical": true,
+      "directional_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b",
+      "triad_symmetric_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b"
+    },
+    "3005": {
+      "byte_identical": true,
+      "directional_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a",
+      "triad_symmetric_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a"
+    },
+    "3006": {
+      "byte_identical": true,
+      "directional_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8",
+      "triad_symmetric_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8"
+    },
+    "3007": {
+      "byte_identical": true,
+      "directional_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d",
+      "triad_symmetric_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d"
+    }
+  },
+  "metric_definitions": {
+    "embedding_effective_rank": "exp(-sum_i p_i log p_i)), p_i=s_i^2/sum_j s_j^2 for the 64 singular values of the 84x64 Event embedding",
+    "margin_median": "ordinary sample median (mean of middle two for n=96)",
+    "role_margin": "correct score minus maximum other legal-candidate score"
+  },
+  "parameter_inventory": {
+    "block_indexed_parameter": false,
+    "candidate_specific_bias": false,
+    "event_tables": 1,
+    "pair_indexed_lookup": false,
+    "positional_role_label": false,
+    "role_specific_event_table": false,
+    "tensor_count": 5,
+    "tensors": [
+      {
+        "count": 5376,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "event.weight",
+        "requires_grad": true,
+        "shape": [
+          84,
+          64
+        ]
+      },
+      {
+        "count": 65536,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "linear1.weight",
+        "requires_grad": true,
+        "shape": [
+          256,
+          256
+        ]
+      },
+      {
+        "count": 256,
+        "dtype": "torch.float32",
+        "initialization": "zeros",
+        "name": "linear1.bias",
+        "requires_grad": true,
+        "shape": [
+          256
+        ]
+      },
+      {
+        "count": 256,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "linear2.weight",
+        "requires_grad": true,
+        "shape": [
+          1,
+          256
+        ]
+      },
+      {
+        "count": 1,
+        "dtype": "torch.float32",
+        "initialization": "zeros",
+        "name": "linear2.bias",
+        "requires_grad": true,
+        "shape": [
+          1
+        ]
+      }
+    ],
+    "trainable_scalar_count": 71425
+  },
+  "publication": {
+    "base_entry_count_observed": 329,
+    "base_revision_observed": "6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731",
+    "expected_entry_count_after_publish": 330,
+    "expected_manifest_delta": 1,
+    "immutable_after_role_metrics": true,
+    "path": "issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/precommit.json",
+    "publish_against": "latest",
+    "workflow": "occurrence"
+  },
+  "role_metrics_computed_before_this_precommit": false,
+  "schema": "occurrence.gpt.01504.precommit.v1",
+  "scientific_fences": [
+    "No discovery or evaluation of the global 56-block relation.",
+    "No NOVEL blocks or NOVEL metric.",
+    "No SFP/Fano/habitat coordinates.",
+    "No claim for a preferred OT learning law.",
+    "No claim that Event embeddings contain a unique readable algebra.",
+    "No necessity claim for symmetry.",
+    "No claim that every consequence-learning problem reduces to permutation invariance.",
+    "No language-scale, physical Event, or physical Outcome semantics claim."
+  ],
+  "score_definitions": {
+    "base": "p=concat(E[a]+E[b], E[a]*E[b], abs(E[a]-E[b]), E[c]); g(a,b;c)=Linear(256,256)->GELU(exact)->Linear(256,1)",
+    "base_pair_swap_invariant": true,
+    "directional": "score_D(c|a,b)=g(a,b;c)",
+    "only_primary_arm_difference": "score semantics",
+    "triad_role_permutation_invariant_by_constitution": true,
+    "triad_symmetric": "for canonical x<y<z, score_T({x,y,z})=((g(x,y;z)+g(x,z;y))+g(y,z;x))/3"
+  },
+  "scored_plan": {
+    "checkpoints": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      1536,
+      2048,
+      2560,
+      3072,
+      3584,
+      4096,
+      4608,
+      5120,
+      5632,
+      6144,
+      6656,
+      7168,
+      7680,
+      8192,
+      8704,
+      9216,
+      9728,
+      10240,
+      10752,
+      11264,
+      11776,
+      12288,
+      12800,
+      13312,
+      13824,
+      14336,
+      14848,
+      15360,
+      15872,
+      16384
+    ],
+    "comparison_kind": "matched-causal",
+    "early_stopping": false,
+    "extra_seeds": false,
+    "horizon_updates": 16384,
+    "optimizer_by_arm": {
+      "directional": {
+        "learning_rate": 0.01,
+        "weight_decay": 0.0
+      },
+      "triad_symmetric": {
+        "learning_rate": 0.01,
+        "weight_decay": 0.0
+      }
+    },
+    "outcome_dependent_reruns": false,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007
+    ]
+  },
+  "status": "PRECOMMITTED-BEFORE-ROLE-EVALUATION",
+  "temporal_definitions": {
+    "never_reached": null,
+    "smoothing": false,
+    "t_fit": "first scheduled checkpoint with TRAIN accuracy == 1.0",
+    "t_role95": "first scheduled checkpoint with ROLE_TEST accuracy >= 0.95 at that checkpoint and the next two scheduled checkpoints",
+    "t_role_exact": "first scheduled checkpoint with ROLE_TEST accuracy == 1.0 at that checkpoint and the next two scheduled checkpoints",
+    "t_triad_exact": "first scheduled checkpoint with all 48 observed triples having all three completions correct at that checkpoint and the next two scheduled checkpoints"
+  },
+  "training_signal": {
+    "alternate_target_cycling": false,
+    "auxiliary_or_contrastive_loss": false,
+    "examples": "designated TRAIN query/target records only",
+    "loss": "full-batch cross-entropy over 82 legal candidates",
+    "records": 48,
+    "role_augmentation": false
+  },
+  "triad_permutation_identity_audit": {
+    "all_six_permutations_bit_identical": true,
+    "bit_identical_score_comparisons": 571704,
+    "canonicalization": "ascending Event ID",
+    "decomposition_accumulation_order": "((g(x,y;z) + g(x,z;y)) + g(y,z;x)) / 3.0 for x<y<z",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "permutations_per_triple": 6,
+    "seed": 0,
+    "status": "PASS",
+    "unordered_distinct_triples": 95284
+  }
+}
