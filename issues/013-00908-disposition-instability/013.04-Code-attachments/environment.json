@@ -1,0 +1,82 @@
+{
+  "artifact": "013.04 deterministic audit environment and conformance record",
+  "conformance_checks": [
+    {
+      "command": "/Users/ernest/GitHub/occurrence/.venv/bin/python experiments/sfp_representation/locator_task.py --check",
+      "evidence": "A/B/D support 1.0; C support 72/336; q-star covariance passed",
+      "outcome": "PASS"
+    },
+    {
+      "command": "/Users/ernest/GitHub/occurrence/.venv/bin/python experiments/sfp_representation/locator_heads.py --check",
+      "evidence": "pointer 3106 parameters; absolute head 2212; zero absolute PP output columns; score covariance and swap checks passed",
+      "outcome": "PASS"
+    },
+    {
+      "command": "/Users/ernest/GitHub/occurrence/.venv/bin/python experiments/sfp_representation/locator_baselines.py --check",
+      "evidence": "298 subsets in each of three arms; no cheap determining subset; declared ceilings passed",
+      "outcome": "PASS"
+    },
+    {
+      "command": "/Users/ernest/GitHub/occurrence/.venv/bin/python experiments/sfp_representation/locator_analysis.py --check",
+      "evidence": "stored producer sweep reproduced disposition B; 3/16 D-minus-B intervals excluded zero; recommendation false",
+      "outcome": "PASS"
+    }
+  ],
+  "conformance_working_directory": "/Users/ernest/GitHub/occurrence/.scratch/012-independent-verification/check-00908",
+  "contract_freeze": {
+    "contract_sha256": "7a504ec215b184e2d503dfe1454f800419dda648595026e7a0fc2fd428da6a0e",
+    "git_commit": "abf6ec8",
+    "occurred_before_scored_run1": true,
+    "package_readback_byte_identical": true,
+    "package_revision": "c4e1a59226a50b2d9e7e36d9a6ca1c6f51745330c8db4ee93c6a959a6773023e"
+  },
+  "match_to_012_04_environment": {
+    "differences": [],
+    "exact_for_reported_fields": true
+  },
+  "nondeterminism_assessment": {
+    "conclusion": "The audit establishes deterministic repeatability under the frozen contract; it does not identify which execution surface caused the historical producer/checker drift.",
+    "historical_mechanism_isolated": false,
+    "plausible_sources": [
+      "CPU parallel reduction and gather/scatter accumulation order",
+      "backend scheduling under concurrent process load",
+      "unpinned BLAS and OpenMP thread pools",
+      "runtime/backend differences between historical environments"
+    ]
+  },
+  "pre_contract_state": {
+    "contract_thread_environment_variables_initially_set": false,
+    "torch_cpu_inter_op_threads": 14,
+    "torch_cpu_intra_op_threads": 10,
+    "torch_deterministic_algorithms": false
+  },
+  "runtime": {
+    "architecture": "arm64",
+    "cuda_available": false,
+    "device": "cpu",
+    "mps_available": false,
+    "numpy": "2.5.1",
+    "os": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.11",
+    "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+    "pytorch": "2.14.0"
+  },
+  "scored_contract_state": {
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PYTHONHASHSEED": "0",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "torch_cpu_inter_op_threads": 1,
+    "torch_cpu_intra_op_threads": 1,
+    "torch_deterministic_algorithms": true
+  }
+}

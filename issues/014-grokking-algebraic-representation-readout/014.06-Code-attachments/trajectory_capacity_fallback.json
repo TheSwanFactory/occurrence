@@ -1,0 +1,13 @@
+{
+  "calibration_selection_sha256": "0d6d80d41036d7340bcf6a602e047db72740a251085f8cbeda036d357f5f4a52",
+  "criterion": "fallback forbidden if either primary has at least 7/8 exact TRAIN fits by update 8192",
+  "decision_inputs": "primary TRAIN accuracy only through update 8192",
+  "invoked": false,
+  "module": "run_014_tied.py (stage: capacity-decision)",
+  "primary_fit_by_8192": {
+    "matched_regularized": 8,
+    "matched_zero_wd": 8
+  },
+  "reason": "at least one primary arm is capacity-qualified; fallback disallowed",
+  "status": "NOT-INVOKED"
+}

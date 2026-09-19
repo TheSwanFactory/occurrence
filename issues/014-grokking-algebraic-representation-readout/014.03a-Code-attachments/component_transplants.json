@@ -1,0 +1,374 @@
+{
+  "delivery_bundle": "014.03a",
+  "interpretation_fence": "component-level evidence about where the functional change resides, not a claim of a uniquely identified causal circuit; coadaptation can make both cross-hybrids fail and that is a result, not permission to invent another intervention",
+  "method": "deterministic replay of the scored regularized run to the declared update counts, then four evaluations without any retraining",
+  "module": "run_014.py (stage: transplant)",
+  "partition": {
+    "DOWNSTREAM": "pair MLP + candidate bias",
+    "REPRESENTATION": "input Event embedding table + candidate Event embedding table"
+  },
+  "predeclared": true,
+  "runs": [
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.2291666716337204
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.4375
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2000
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.1041666641831398
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.1875
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2001
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.0416666679084301
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.2708333432674408
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2002
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.0833333358168602
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0625
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2003
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.1041666641831398
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.2083333283662796
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2004
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.02083333395421505
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0416666679084301,
+          "ROLE_TEST": 0.010416666977107525,
+          "TRAIN": 0.1041666641831398
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2005
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0416666679084301
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.1666666716337204
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2006
+    },
+    {
+      "basis": "no distinct delayed transition existed for this seed, so the declared fallback t_fit vs the final checkpoint is used",
+      "early_update": 64,
+      "hybrids": {
+        "early_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        },
+        "early_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 0.0833333358168602
+        },
+        "late_representation_early_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.02083333395421505,
+          "TRAIN": 0.1458333283662796
+        },
+        "late_representation_late_downstream": {
+          "NOVEL_TEST": 0.0,
+          "ROLE_TEST": 0.0,
+          "TRAIN": 1.0
+        }
+      },
+      "late_update": 65536,
+      "pair": [
+        64,
+        65536
+      ],
+      "replay_check": {
+        "bit_identical_to_scored_run": true,
+        "captured_updates": [
+          64,
+          65536
+        ],
+        "checkpoints_compared": 138,
+        "mismatched_updates": [],
+        "train_accuracy_at_captures": {
+          "64": 1.0,
+          "65536": 1.0
+        }
+      },
+      "seed": 2007
+    }
+  ],
+  "task_uri": "quilt+s3://protology#package=occurrence/gpt@a5c2c5a7fac78eae4ba2dacbf45c5951a99096dd5745d1bdc85e9593c5b2ce9f&path=issues/014-grokking-algebraic-representation-readout/014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md"
+}

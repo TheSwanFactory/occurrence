@@ -1,0 +1,7006 @@
+{
+  "common_deterministic_analysis": {
+    "B_minus_C": {
+      "rung1|LOFPO|pp_set_accuracy": {
+        "ci_95": [
+          0.41369047619,
+          0.47693452381
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.446428571429
+      },
+      "rung1|LOFPO|qstar_exact_accuracy": {
+        "ci_95": [
+          0.662202380952,
+          0.72619047619
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.694196428571
+      },
+      "rung1|LOHO|pp_set_accuracy": {
+        "ci_95": [
+          0.453869047619,
+          0.5
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.476934523809
+      },
+      "rung1|LOHO|qstar_exact_accuracy": {
+        "ci_95": [
+          0.721726190476,
+          0.768601190476
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.745535714286
+      },
+      "rung2|LOFPO|exact_structured_address_accuracy": {
+        "ci_95": [
+          0.704613095238,
+          0.778273809524
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.744047619048
+      },
+      "rung2|LOFPO|field_PP_accuracy": {
+        "ci_95": [
+          0.395833333333,
+          0.46130952381
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.430803571429
+      },
+      "rung2|LOFPO|field_pp_accuracy": {
+        "ci_95": [
+          0.56994047619,
+          0.621279761905
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.595982142857
+      },
+      "rung2|LOFPO|nontrivial_fields_accuracy": {
+        "ci_95": [
+          0.704613095238,
+          0.778273809524
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.744047619048
+      },
+      "rung2|LOFPO|positive_forced_third_exact_accuracy": {
+        "ci_95": [
+          0.704613095238,
+          0.778273809524
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.744047619048
+      },
+      "rung2|LOFPO|qstar_exact_accuracy": {
+        "ci_95": [
+          0.634672619048,
+          0.717261904762
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 7,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.678571428571
+      },
+      "rung2|LOHO|exact_structured_address_accuracy": {
+        "ci_95": [
+          0.758928571429,
+          0.816964285714
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.78943452381
+      },
+      "rung2|LOHO|field_PP_accuracy": {
+        "ci_95": [
+          0.441964285714,
+          0.502232142857
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.473214285714
+      },
+      "rung2|LOHO|field_pp_accuracy": {
+        "ci_95": [
+          0.607886904762,
+          0.662946428571
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.636160714286
+      },
+      "rung2|LOHO|nontrivial_fields_accuracy": {
+        "ci_95": [
+          0.758928571429,
+          0.816964285714
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.78943452381
+      },
+      "rung2|LOHO|positive_forced_third_exact_accuracy": {
+        "ci_95": [
+          0.758928571429,
+          0.816964285714
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.78943452381
+      },
+      "rung2|LOHO|qstar_exact_accuracy": {
+        "ci_95": [
+          0.667410714286,
+          0.728422619048
+        ],
+        "ci_excludes_zero": true,
+        "folds_favouring_left": 14,
+        "folds_favouring_right": 0,
+        "mean_difference": 0.698660714286
+      }
+    },
+    "D_minus_B": {
+      "rung1|LOFPO|pp_set_accuracy": {
+        "ci_95": [
+          -0.017857142857,
+          0.026041666667
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 4,
+        "folds_favouring_right": 1,
+        "mean_difference": 0.004464285714
+      },
+      "rung1|LOFPO|qstar_exact_accuracy": {
+        "ci_95": [
+          -0.019345238095,
+          0.024553571429
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 4,
+        "folds_favouring_right": 1,
+        "mean_difference": 0.002976190476
+      },
+      "rung1|LOHO|pp_set_accuracy": {
+        "ci_95": [
+          -0.001488095238,
+          0.003720238095
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 2,
+        "folds_favouring_right": 1,
+        "mean_difference": 0.000744047619
+      },
+      "rung1|LOHO|qstar_exact_accuracy": {
+        "ci_95": [
+          -0.001488095238,
+          0.003720238095
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 2,
+        "folds_favouring_right": 1,
+        "mean_difference": 0.000744047619
+      },
+      "rung2|LOFPO|exact_structured_address_accuracy": {
+        "ci_95": [
+          -0.080357142857,
+          0.005952380952
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 3,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.035714285714
+      },
+      "rung2|LOFPO|field_PP_accuracy": {
+        "ci_95": [
+          -0.066964285714,
+          0.00744047619
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 3,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.029017857143
+      },
+      "rung2|LOFPO|field_pp_accuracy": {
+        "ci_95": [
+          -0.028273809524,
+          0.004464285714
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 3,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.011160714286
+      },
+      "rung2|LOFPO|nontrivial_fields_accuracy": {
+        "ci_95": [
+          -0.080357142857,
+          0.005952380952
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 3,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.035714285714
+      },
+      "rung2|LOFPO|positive_forced_third_exact_accuracy": {
+        "ci_95": [
+          -0.080357142857,
+          0.005952380952
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 3,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.035714285714
+      },
+      "rung2|LOFPO|qstar_exact_accuracy": {
+        "ci_95": [
+          -0.088541666667,
+          0.001488095238
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 2,
+        "folds_favouring_right": 5,
+        "mean_difference": -0.042410714286
+      },
+      "rung2|LOHO|exact_structured_address_accuracy": {
+        "ci_95": [
+          -0.030505952381,
+          0.026785714286
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 5,
+        "folds_favouring_right": 6,
+        "mean_difference": -0.002232142857
+      },
+      "rung2|LOHO|field_PP_accuracy": {
+        "ci_95": [
+          -0.02380952381,
+          0.024553571429
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 5,
+        "folds_favouring_right": 7,
+        "mean_difference": 0.0
+      },
+      "rung2|LOHO|field_pp_accuracy": {
+        "ci_95": [
+          -0.015625,
+          0.011160714286
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 4,
+        "folds_favouring_right": 4,
+        "mean_difference": -0.001488095238
+      },
+      "rung2|LOHO|nontrivial_fields_accuracy": {
+        "ci_95": [
+          -0.030505952381,
+          0.026785714286
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 5,
+        "folds_favouring_right": 6,
+        "mean_difference": -0.002232142857
+      },
+      "rung2|LOHO|positive_forced_third_exact_accuracy": {
+        "ci_95": [
+          -0.030505952381,
+          0.026785714286
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 5,
+        "folds_favouring_right": 6,
+        "mean_difference": -0.002232142857
+      },
+      "rung2|LOHO|qstar_exact_accuracy": {
+        "ci_95": [
+          -0.029761904762,
+          0.029761904762
+        ],
+        "ci_excludes_zero": false,
+        "folds_favouring_left": 6,
+        "folds_favouring_right": 6,
+        "mean_difference": 0.0
+      }
+    },
+    "D_minus_B_intervals_examined": 16,
+    "D_minus_B_intervals_excluding_zero": 0,
+    "all_structural_controls_pass": true,
+    "disposition": {
+      "blocking_items": [],
+      "class": "A",
+      "interpretation": "the remaining 009.06 gap was substantially another output-constitution mismatch. A query-relative consequence interface carries most of the finite relation.",
+      "reason": "Rung 1 meets section 4.4 on the point criterion, Rung 2 meets section 5.4 on the learned-PP learned-pp system, B > C with a positive interval, D is compatible with B, and fixed resolution loses nothing",
+      "title": "PP obstruction substantially closed"
+    },
+    "recommendation": {
+      "authorizes": "nothing. 009.07 section 9 forbids proceeding to opaque-token discovery in this task even on a positive result; this is a recommendation for the GPT Owner's disposition, not a decision.",
+      "closed_set_habitat_reidentification_still_unresolved": "under the default protocol the learner cannot name an unseen habitat at all; 009.06 recorded field_FFF_accuracy at 0.0320 when FFF was learned. This turn copies S and FFF and therefore says nothing about it. No discovery result may be read as addressing it.",
+      "conditionally_ready": {
+        "condition": "not applicable",
+        "conditional": false
+      },
+      "disposition_class": "A",
+      "pp_closed_enough_to_begin_opaque_token_discovery": true,
+      "residual": {
+        "determining_ceiling": 1.0,
+        "field_PP_accuracy_LOHO": 0.973214285714,
+        "field_pp_accuracy_LOHO": 0.989583333333,
+        "positive_forced_third_exact_accuracy_LOHO": 0.964285714286,
+        "remaining_gap_to_the_ceiling": 0.035714285714
+      },
+      "scoping": "discovery should target PP and pp -- the two fields the certified relation COMPUTES -- holding S and FFF fixed as supplied identity, and should be judged against the 1.000 determining ceiling rather than against chance. That is 009.06's scoping and this turn does not widen it."
+    },
+    "structural_controls": {
+      "architectural_covariance_exact": true,
+      "candidate_order_invariance_exact": true,
+      "capacity_matched_across_science_arms": true,
+      "ceilings_behave": true,
+      "copied_and_learned_fields_as_declared": true,
+      "every_declared_cell_ran": true,
+      "fixed_resolution_never_drops": true,
+      "label_covariance_exact": true,
+      "no_absolute_pp_output_column": true,
+      "no_leakage_on_any_fold": true,
+      "no_unresolved_prediction": true,
+      "qstar_label_source_is_certified": true,
+      "scramble_marginals_match_B": true,
+      "scramble_outside_the_induced_class": true,
+      "swap_invariance_exact_everywhere": true,
+      "upstream_digests_pin": true
+    },
+    "summaries": {
+      "rung1": {
+        "A_native|LOFPO": {
+          "pp_set_accuracy": 0.694196428571,
+          "qstar_exact_accuracy": 0.608630952381
+        },
+        "A_native|LOHO": {
+          "pp_set_accuracy": 0.717261904762,
+          "qstar_exact_accuracy": 0.631696428571
+        },
+        "B_sfp|LOFPO": {
+          "pp_set_accuracy": 0.96056547619,
+          "qstar_exact_accuracy": 0.957589285714
+        },
+        "B_sfp|LOHO": {
+          "pp_set_accuracy": 0.998511904762,
+          "qstar_exact_accuracy": 0.998511904762
+        },
+        "C_scrambled|LOFPO": {
+          "pp_set_accuracy": 0.514136904762,
+          "qstar_exact_accuracy": 0.263392857143
+        },
+        "C_scrambled|LOHO": {
+          "pp_set_accuracy": 0.521577380952,
+          "qstar_exact_accuracy": 0.252976190476
+        },
+        "D_relabeled|LOFPO": {
+          "pp_set_accuracy": 0.965029761905,
+          "qstar_exact_accuracy": 0.96056547619
+        },
+        "D_relabeled|LOHO": {
+          "pp_set_accuracy": 0.999255952381,
+          "qstar_exact_accuracy": 0.999255952381
+        }
+      },
+      "rung2": {
+        "A_native|LOFPO": {
+          "exact_structured_address_accuracy": 0.441964285714,
+          "field_PP_accuracy": 0.700892857143,
+          "field_pp_accuracy": 0.587053571429,
+          "positive_forced_third_exact_accuracy": 0.441964285714,
+          "qstar_exact_accuracy": 0.621279761905
+        },
+        "A_native|LOHO": {
+          "exact_structured_address_accuracy": 0.473214285714,
+          "field_PP_accuracy": 0.714285714286,
+          "field_pp_accuracy": 0.63244047619,
+          "positive_forced_third_exact_accuracy": 0.473214285714,
+          "qstar_exact_accuracy": 0.634672619048
+        },
+        "B_sfp|LOFPO": {
+          "exact_structured_address_accuracy": 0.951636904762,
+          "field_PP_accuracy": 0.961309523809,
+          "field_pp_accuracy": 0.990327380952,
+          "positive_forced_third_exact_accuracy": 0.951636904762,
+          "qstar_exact_accuracy": 0.957589285714
+        },
+        "B_sfp|LOHO": {
+          "exact_structured_address_accuracy": 0.964285714286,
+          "field_PP_accuracy": 0.973214285714,
+          "field_pp_accuracy": 0.989583333333,
+          "positive_forced_third_exact_accuracy": 0.964285714286,
+          "qstar_exact_accuracy": 0.967261904762
+        },
+        "C_scrambled|LOFPO": {
+          "exact_structured_address_accuracy": 0.207589285714,
+          "field_PP_accuracy": 0.530505952381,
+          "field_pp_accuracy": 0.394345238095,
+          "positive_forced_third_exact_accuracy": 0.207589285714,
+          "qstar_exact_accuracy": 0.279017857143
+        },
+        "C_scrambled|LOHO": {
+          "exact_structured_address_accuracy": 0.174851190476,
+          "field_PP_accuracy": 0.5,
+          "field_pp_accuracy": 0.353422619048,
+          "positive_forced_third_exact_accuracy": 0.174851190476,
+          "qstar_exact_accuracy": 0.268601190476
+        },
+        "D_relabeled|LOFPO": {
+          "exact_structured_address_accuracy": 0.915922619048,
+          "field_PP_accuracy": 0.932291666667,
+          "field_pp_accuracy": 0.979166666667,
+          "positive_forced_third_exact_accuracy": 0.915922619048,
+          "qstar_exact_accuracy": 0.915178571429
+        },
+        "D_relabeled|LOHO": {
+          "exact_structured_address_accuracy": 0.962053571429,
+          "field_PP_accuracy": 0.973214285714,
+          "field_pp_accuracy": 0.988095238095,
+          "positive_forced_third_exact_accuracy": 0.962053571429,
+          "qstar_exact_accuracy": 0.967261904762
+        }
+      }
+    },
+    "verdict": {
+      "agrees": true,
+      "statement": "disposition A -- PP obstruction substantially closed"
+    }
+  },
+  "comparison": "013.04 deterministic 009.08 audit",
+  "historical_comparison": {
+    "deterministic_013_04": {
+      "D_minus_B_intervals_excluding_zero": "0/16",
+      "disposition": "A",
+      "execution": "two byte-stable normalized full sweeps",
+      "recommendation_to_proceed": true
+    },
+    "fresh_012_04": {
+      "D_minus_B_intervals_excluding_zero": "0/16",
+      "disposition": "A",
+      "execution": "independent fresh replay",
+      "recommendation_to_proceed": true
+    },
+    "interpretation": "The deterministic contract reproduces the fresh 012.04 A disposition twice. It establishes repeatability under the pinned CPU contract but does not isolate the mechanism behind the historical B/A drift.",
+    "producer_009_08": {
+      "D_minus_B_intervals_excluding_zero": "3/16",
+      "disposition": "B",
+      "execution": "committed producer artifact",
+      "recommendation_to_proceed": false
+    }
+  },
+  "primary_gate": {
+    "all_raw_differences_are_predeclared_non_replayable": true,
+    "analysis_files_equal_byte_for_byte": true,
+    "contract_sha256": "7a504ec215b184e2d503dfe1454f800419dda648595026e7a0fc2fd428da6a0e",
+    "normalized_run1_equals_run2_byte_for_byte": true,
+    "raw_differences": [
+      {
+        "path": "blocks.primary.rung1.runs.0.wall_sec",
+        "run1": 0.466,
+        "run2": 0.468
+      },
+      {
+        "path": "blocks.primary.rung1.runs.2.wall_sec",
+        "run1": 0.421,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.4.wall_sec",
+        "run1": 0.42,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.5.wall_sec",
+        "run1": 0.421,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.6.wall_sec",
+        "run1": 0.423,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.7.wall_sec",
+        "run1": 0.422,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.8.wall_sec",
+        "run1": 0.422,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.9.wall_sec",
+        "run1": 0.566,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.10.wall_sec",
+        "run1": 0.429,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.11.wall_sec",
+        "run1": 0.456,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.13.wall_sec",
+        "run1": 0.456,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.14.wall_sec",
+        "run1": 0.472,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.15.wall_sec",
+        "run1": 0.419,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.16.wall_sec",
+        "run1": 0.419,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.17.wall_sec",
+        "run1": 0.442,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.18.wall_sec",
+        "run1": 0.424,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.19.wall_sec",
+        "run1": 0.423,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.20.wall_sec",
+        "run1": 0.425,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.21.wall_sec",
+        "run1": 0.427,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.22.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.23.wall_sec",
+        "run1": 0.423,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.24.wall_sec",
+        "run1": 0.422,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.25.wall_sec",
+        "run1": 0.428,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.26.wall_sec",
+        "run1": 0.421,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.27.wall_sec",
+        "run1": 0.423,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.28.wall_sec",
+        "run1": 0.419,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.29.wall_sec",
+        "run1": 0.423,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.30.wall_sec",
+        "run1": 0.424,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.31.wall_sec",
+        "run1": 0.424,
+        "run2": 0.441
+      },
+      {
+        "path": "blocks.primary.rung1.runs.32.wall_sec",
+        "run1": 0.424,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.33.wall_sec",
+        "run1": 0.422,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.34.wall_sec",
+        "run1": 0.424,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.35.wall_sec",
+        "run1": 0.422,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.37.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.38.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.39.wall_sec",
+        "run1": 0.42,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.40.wall_sec",
+        "run1": 0.422,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.41.wall_sec",
+        "run1": 0.423,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.43.wall_sec",
+        "run1": 0.423,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.44.wall_sec",
+        "run1": 0.42,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.45.wall_sec",
+        "run1": 0.423,
+        "run2": 0.446
+      },
+      {
+        "path": "blocks.primary.rung1.runs.46.wall_sec",
+        "run1": 0.421,
+        "run2": 0.446
+      },
+      {
+        "path": "blocks.primary.rung1.runs.47.wall_sec",
+        "run1": 0.422,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.48.wall_sec",
+        "run1": 0.423,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.49.wall_sec",
+        "run1": 0.42,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.50.wall_sec",
+        "run1": 0.425,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.51.wall_sec",
+        "run1": 0.424,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.52.wall_sec",
+        "run1": 0.425,
+        "run2": 0.439
+      },
+      {
+        "path": "blocks.primary.rung1.runs.53.wall_sec",
+        "run1": 0.422,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.54.wall_sec",
+        "run1": 0.423,
+        "run2": 0.44
+      },
+      {
+        "path": "blocks.primary.rung1.runs.55.wall_sec",
+        "run1": 0.423,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.56.wall_sec",
+        "run1": 0.42,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.57.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.58.wall_sec",
+        "run1": 0.421,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.59.wall_sec",
+        "run1": 0.419,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.60.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.61.wall_sec",
+        "run1": 0.427,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.62.wall_sec",
+        "run1": 0.424,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.63.wall_sec",
+        "run1": 0.421,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.64.wall_sec",
+        "run1": 0.426,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.65.wall_sec",
+        "run1": 0.423,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.66.wall_sec",
+        "run1": 0.426,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.67.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.68.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.69.wall_sec",
+        "run1": 0.42,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.70.wall_sec",
+        "run1": 0.425,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.71.wall_sec",
+        "run1": 0.421,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.72.wall_sec",
+        "run1": 0.424,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.73.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.74.wall_sec",
+        "run1": 0.423,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.75.wall_sec",
+        "run1": 0.429,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.76.wall_sec",
+        "run1": 0.422,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.77.wall_sec",
+        "run1": 0.418,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.78.wall_sec",
+        "run1": 0.429,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.79.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.80.wall_sec",
+        "run1": 0.42,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.81.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.82.wall_sec",
+        "run1": 0.425,
+        "run2": 0.452
+      },
+      {
+        "path": "blocks.primary.rung1.runs.83.wall_sec",
+        "run1": 0.425,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.84.wall_sec",
+        "run1": 0.424,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.85.wall_sec",
+        "run1": 0.419,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.86.wall_sec",
+        "run1": 0.42,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.87.wall_sec",
+        "run1": 0.424,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.88.wall_sec",
+        "run1": 0.422,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.89.wall_sec",
+        "run1": 0.421,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.90.wall_sec",
+        "run1": 0.418,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.91.wall_sec",
+        "run1": 0.417,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.92.wall_sec",
+        "run1": 0.42,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.93.wall_sec",
+        "run1": 0.426,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.94.wall_sec",
+        "run1": 0.426,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.95.wall_sec",
+        "run1": 0.425,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.96.wall_sec",
+        "run1": 0.424,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.97.wall_sec",
+        "run1": 0.427,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.98.wall_sec",
+        "run1": 0.429,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.99.wall_sec",
+        "run1": 0.424,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.100.wall_sec",
+        "run1": 0.421,
+        "run2": 0.445
+      },
+      {
+        "path": "blocks.primary.rung1.runs.101.wall_sec",
+        "run1": 0.419,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.102.wall_sec",
+        "run1": 0.421,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.103.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.104.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.105.wall_sec",
+        "run1": 0.423,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.106.wall_sec",
+        "run1": 0.42,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.107.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.108.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.109.wall_sec",
+        "run1": 0.419,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.110.wall_sec",
+        "run1": 0.418,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.111.wall_sec",
+        "run1": 0.416,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.112.wall_sec",
+        "run1": 0.413,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.113.wall_sec",
+        "run1": 0.415,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.114.wall_sec",
+        "run1": 0.416,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.115.wall_sec",
+        "run1": 0.414,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.116.wall_sec",
+        "run1": 0.418,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.117.wall_sec",
+        "run1": 0.413,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.118.wall_sec",
+        "run1": 0.414,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.119.wall_sec",
+        "run1": 0.415,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.120.wall_sec",
+        "run1": 0.415,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.121.wall_sec",
+        "run1": 0.411,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.122.wall_sec",
+        "run1": 0.409,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.123.wall_sec",
+        "run1": 0.411,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.124.wall_sec",
+        "run1": 0.412,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.125.wall_sec",
+        "run1": 0.425,
+        "run2": 0.45
+      },
+      {
+        "path": "blocks.primary.rung1.runs.126.wall_sec",
+        "run1": 0.42,
+        "run2": 0.44
+      },
+      {
+        "path": "blocks.primary.rung1.runs.127.wall_sec",
+        "run1": 0.413,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.128.wall_sec",
+        "run1": 0.411,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.129.wall_sec",
+        "run1": 0.408,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.130.wall_sec",
+        "run1": 0.41,
+        "run2": 0.443
+      },
+      {
+        "path": "blocks.primary.rung1.runs.131.wall_sec",
+        "run1": 0.412,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.132.wall_sec",
+        "run1": 0.409,
+        "run2": 0.449
+      },
+      {
+        "path": "blocks.primary.rung1.runs.133.wall_sec",
+        "run1": 0.411,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.134.wall_sec",
+        "run1": 0.407,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.135.wall_sec",
+        "run1": 0.41,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.136.wall_sec",
+        "run1": 0.416,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.137.wall_sec",
+        "run1": 0.414,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.138.wall_sec",
+        "run1": 0.416,
+        "run2": 0.453
+      },
+      {
+        "path": "blocks.primary.rung1.runs.139.wall_sec",
+        "run1": 0.411,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.140.wall_sec",
+        "run1": 0.422,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.141.wall_sec",
+        "run1": 0.409,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.142.wall_sec",
+        "run1": 0.408,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.143.wall_sec",
+        "run1": 0.41,
+        "run2": 0.442
+      },
+      {
+        "path": "blocks.primary.rung1.runs.144.wall_sec",
+        "run1": 0.41,
+        "run2": 0.441
+      },
+      {
+        "path": "blocks.primary.rung1.runs.145.wall_sec",
+        "run1": 0.41,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.146.wall_sec",
+        "run1": 0.409,
+        "run2": 0.446
+      },
+      {
+        "path": "blocks.primary.rung1.runs.147.wall_sec",
+        "run1": 0.411,
+        "run2": 0.439
+      },
+      {
+        "path": "blocks.primary.rung1.runs.148.wall_sec",
+        "run1": 0.408,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.149.wall_sec",
+        "run1": 0.412,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.150.wall_sec",
+        "run1": 0.413,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.151.wall_sec",
+        "run1": 0.414,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.152.wall_sec",
+        "run1": 0.412,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.153.wall_sec",
+        "run1": 0.409,
+        "run2": 0.412
+      },
+      {
+        "path": "blocks.primary.rung1.runs.154.wall_sec",
+        "run1": 0.416,
+        "run2": 0.412
+      },
+      {
+        "path": "blocks.primary.rung1.runs.155.wall_sec",
+        "run1": 0.411,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.156.wall_sec",
+        "run1": 0.413,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.157.wall_sec",
+        "run1": 0.412,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.158.wall_sec",
+        "run1": 0.437,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.159.wall_sec",
+        "run1": 0.475,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.160.wall_sec",
+        "run1": 0.456,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.161.wall_sec",
+        "run1": 0.411,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.162.wall_sec",
+        "run1": 0.411,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.163.wall_sec",
+        "run1": 0.413,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.164.wall_sec",
+        "run1": 0.41,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.165.wall_sec",
+        "run1": 0.412,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.166.wall_sec",
+        "run1": 0.411,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.167.wall_sec",
+        "run1": 0.413,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.168.wall_sec",
+        "run1": 0.419,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.170.wall_sec",
+        "run1": 0.427,
+        "run2": 0.445
+      },
+      {
+        "path": "blocks.primary.rung1.runs.171.wall_sec",
+        "run1": 0.416,
+        "run2": 0.448
+      },
+      {
+        "path": "blocks.primary.rung1.runs.172.wall_sec",
+        "run1": 0.42,
+        "run2": 0.458
+      },
+      {
+        "path": "blocks.primary.rung1.runs.173.wall_sec",
+        "run1": 0.422,
+        "run2": 0.458
+      },
+      {
+        "path": "blocks.primary.rung1.runs.174.wall_sec",
+        "run1": 0.427,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.175.wall_sec",
+        "run1": 0.435,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.176.wall_sec",
+        "run1": 0.418,
+        "run2": 0.456
+      },
+      {
+        "path": "blocks.primary.rung1.runs.177.wall_sec",
+        "run1": 0.422,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.178.wall_sec",
+        "run1": 0.422,
+        "run2": 0.453
+      },
+      {
+        "path": "blocks.primary.rung1.runs.179.wall_sec",
+        "run1": 0.419,
+        "run2": 0.45
+      },
+      {
+        "path": "blocks.primary.rung1.runs.180.wall_sec",
+        "run1": 0.421,
+        "run2": 0.449
+      },
+      {
+        "path": "blocks.primary.rung1.runs.181.wall_sec",
+        "run1": 0.422,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.182.wall_sec",
+        "run1": 0.419,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.183.wall_sec",
+        "run1": 0.428,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.185.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.187.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.188.wall_sec",
+        "run1": 0.422,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.189.wall_sec",
+        "run1": 0.419,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.190.wall_sec",
+        "run1": 0.419,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.191.wall_sec",
+        "run1": 0.418,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.192.wall_sec",
+        "run1": 0.419,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.193.wall_sec",
+        "run1": 0.419,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.194.wall_sec",
+        "run1": 0.423,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.195.wall_sec",
+        "run1": 0.423,
+        "run2": 0.441
+      },
+      {
+        "path": "blocks.primary.rung1.runs.196.wall_sec",
+        "run1": 0.42,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.197.wall_sec",
+        "run1": 0.421,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.198.wall_sec",
+        "run1": 0.422,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.199.wall_sec",
+        "run1": 0.424,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.200.wall_sec",
+        "run1": 0.433,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.201.wall_sec",
+        "run1": 0.42,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.202.wall_sec",
+        "run1": 0.419,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.203.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.204.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.205.wall_sec",
+        "run1": 0.425,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.206.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.207.wall_sec",
+        "run1": 0.42,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.208.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.209.wall_sec",
+        "run1": 0.422,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.210.wall_sec",
+        "run1": 0.422,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.211.wall_sec",
+        "run1": 0.416,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.212.wall_sec",
+        "run1": 0.416,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.213.wall_sec",
+        "run1": 0.442,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.214.wall_sec",
+        "run1": 0.424,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.215.wall_sec",
+        "run1": 0.444,
+        "run2": 0.461
+      },
+      {
+        "path": "blocks.primary.rung1.runs.216.wall_sec",
+        "run1": 0.419,
+        "run2": 0.455
+      },
+      {
+        "path": "blocks.primary.rung1.runs.217.wall_sec",
+        "run1": 0.445,
+        "run2": 0.456
+      },
+      {
+        "path": "blocks.primary.rung1.runs.218.wall_sec",
+        "run1": 0.442,
+        "run2": 0.466
+      },
+      {
+        "path": "blocks.primary.rung1.runs.219.wall_sec",
+        "run1": 0.443,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.220.wall_sec",
+        "run1": 0.457,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.221.wall_sec",
+        "run1": 0.439,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.222.wall_sec",
+        "run1": 0.447,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.223.wall_sec",
+        "run1": 0.45,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.224.wall_sec",
+        "run1": 0.458,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.225.wall_sec",
+        "run1": 0.455,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.226.wall_sec",
+        "run1": 0.453,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.227.wall_sec",
+        "run1": 0.449,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.228.wall_sec",
+        "run1": 0.45,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.229.wall_sec",
+        "run1": 0.442,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.230.wall_sec",
+        "run1": 0.458,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.231.wall_sec",
+        "run1": 0.444,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.232.wall_sec",
+        "run1": 0.444,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.233.wall_sec",
+        "run1": 0.456,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.234.wall_sec",
+        "run1": 0.467,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.235.wall_sec",
+        "run1": 0.445,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.236.wall_sec",
+        "run1": 0.443,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.237.wall_sec",
+        "run1": 0.475,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.238.wall_sec",
+        "run1": 0.413,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.239.wall_sec",
+        "run1": 0.414,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.240.wall_sec",
+        "run1": 0.418,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.241.wall_sec",
+        "run1": 0.417,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.242.wall_sec",
+        "run1": 0.42,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.243.wall_sec",
+        "run1": 0.415,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.244.wall_sec",
+        "run1": 0.423,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.245.wall_sec",
+        "run1": 0.415,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.246.wall_sec",
+        "run1": 0.418,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.247.wall_sec",
+        "run1": 0.419,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.248.wall_sec",
+        "run1": 0.425,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.249.wall_sec",
+        "run1": 0.418,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.250.wall_sec",
+        "run1": 0.423,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.251.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.252.wall_sec",
+        "run1": 0.418,
+        "run2": 0.439
+      },
+      {
+        "path": "blocks.primary.rung1.runs.253.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.254.wall_sec",
+        "run1": 0.416,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.255.wall_sec",
+        "run1": 0.42,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.256.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.257.wall_sec",
+        "run1": 0.423,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.258.wall_sec",
+        "run1": 0.43,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.259.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.260.wall_sec",
+        "run1": 0.423,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.261.wall_sec",
+        "run1": 0.419,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.262.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.263.wall_sec",
+        "run1": 0.42,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.264.wall_sec",
+        "run1": 0.419,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.265.wall_sec",
+        "run1": 0.422,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.266.wall_sec",
+        "run1": 0.424,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.267.wall_sec",
+        "run1": 0.423,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.268.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.269.wall_sec",
+        "run1": 0.423,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.270.wall_sec",
+        "run1": 0.42,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.271.wall_sec",
+        "run1": 0.427,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.272.wall_sec",
+        "run1": 0.422,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.273.wall_sec",
+        "run1": 0.426,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.274.wall_sec",
+        "run1": 0.42,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.275.wall_sec",
+        "run1": 0.426,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.276.wall_sec",
+        "run1": 0.448,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.277.wall_sec",
+        "run1": 0.439,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.278.wall_sec",
+        "run1": 0.445,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.279.wall_sec",
+        "run1": 0.422,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.280.wall_sec",
+        "run1": 0.411,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.281.wall_sec",
+        "run1": 0.415,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.282.wall_sec",
+        "run1": 0.419,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.283.wall_sec",
+        "run1": 0.42,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.284.wall_sec",
+        "run1": 0.415,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.285.wall_sec",
+        "run1": 0.418,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.286.wall_sec",
+        "run1": 0.419,
+        "run2": 0.445
+      },
+      {
+        "path": "blocks.primary.rung1.runs.287.wall_sec",
+        "run1": 0.418,
+        "run2": 0.441
+      },
+      {
+        "path": "blocks.primary.rung1.runs.288.wall_sec",
+        "run1": 0.415,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.289.wall_sec",
+        "run1": 0.417,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.290.wall_sec",
+        "run1": 0.424,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.291.wall_sec",
+        "run1": 0.414,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.292.wall_sec",
+        "run1": 0.417,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.293.wall_sec",
+        "run1": 0.423,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.294.wall_sec",
+        "run1": 0.42,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.295.wall_sec",
+        "run1": 0.427,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.296.wall_sec",
+        "run1": 0.416,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.297.wall_sec",
+        "run1": 0.418,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.298.wall_sec",
+        "run1": 0.417,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.300.wall_sec",
+        "run1": 0.42,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.301.wall_sec",
+        "run1": 0.415,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.302.wall_sec",
+        "run1": 0.413,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.303.wall_sec",
+        "run1": 0.422,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.304.wall_sec",
+        "run1": 0.42,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.305.wall_sec",
+        "run1": 0.421,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.306.wall_sec",
+        "run1": 0.418,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.307.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.308.wall_sec",
+        "run1": 0.415,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.309.wall_sec",
+        "run1": 0.417,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.310.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.311.wall_sec",
+        "run1": 0.418,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.312.wall_sec",
+        "run1": 0.422,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.313.wall_sec",
+        "run1": 0.414,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.314.wall_sec",
+        "run1": 0.424,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.315.wall_sec",
+        "run1": 0.416,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.316.wall_sec",
+        "run1": 0.424,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.317.wall_sec",
+        "run1": 0.427,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.318.wall_sec",
+        "run1": 0.419,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.319.wall_sec",
+        "run1": 0.418,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.320.wall_sec",
+        "run1": 0.415,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.321.wall_sec",
+        "run1": 0.418,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.322.wall_sec",
+        "run1": 0.419,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.323.wall_sec",
+        "run1": 0.418,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.324.wall_sec",
+        "run1": 0.416,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.326.wall_sec",
+        "run1": 0.418,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.328.wall_sec",
+        "run1": 0.429,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.329.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.330.wall_sec",
+        "run1": 0.424,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.331.wall_sec",
+        "run1": 0.415,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.332.wall_sec",
+        "run1": 0.416,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.333.wall_sec",
+        "run1": 0.417,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.334.wall_sec",
+        "run1": 0.417,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.335.wall_sec",
+        "run1": 0.422,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.336.wall_sec",
+        "run1": 0.427,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.337.wall_sec",
+        "run1": 0.426,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.339.wall_sec",
+        "run1": 0.428,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.340.wall_sec",
+        "run1": 0.425,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.341.wall_sec",
+        "run1": 0.418,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.342.wall_sec",
+        "run1": 0.42,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.343.wall_sec",
+        "run1": 0.424,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.344.wall_sec",
+        "run1": 0.429,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.345.wall_sec",
+        "run1": 0.424,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.346.wall_sec",
+        "run1": 0.429,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.347.wall_sec",
+        "run1": 0.424,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.348.wall_sec",
+        "run1": 0.437,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.349.wall_sec",
+        "run1": 0.429,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.350.wall_sec",
+        "run1": 0.429,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.351.wall_sec",
+        "run1": 0.426,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.352.wall_sec",
+        "run1": 0.422,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.353.wall_sec",
+        "run1": 0.434,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.354.wall_sec",
+        "run1": 0.423,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.355.wall_sec",
+        "run1": 0.429,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.356.wall_sec",
+        "run1": 0.42,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.357.wall_sec",
+        "run1": 0.427,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.358.wall_sec",
+        "run1": 0.429,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.359.wall_sec",
+        "run1": 0.428,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.360.wall_sec",
+        "run1": 0.429,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.361.wall_sec",
+        "run1": 0.424,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.362.wall_sec",
+        "run1": 0.424,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.363.wall_sec",
+        "run1": 0.431,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.364.wall_sec",
+        "run1": 0.425,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.365.wall_sec",
+        "run1": 0.422,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.366.wall_sec",
+        "run1": 0.422,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.367.wall_sec",
+        "run1": 0.425,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.370.wall_sec",
+        "run1": 0.429,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.372.wall_sec",
+        "run1": 0.429,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.373.wall_sec",
+        "run1": 0.427,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.374.wall_sec",
+        "run1": 0.424,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.375.wall_sec",
+        "run1": 0.435,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.376.wall_sec",
+        "run1": 0.424,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.377.wall_sec",
+        "run1": 0.428,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.378.wall_sec",
+        "run1": 0.43,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.379.wall_sec",
+        "run1": 0.429,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.380.wall_sec",
+        "run1": 0.427,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.381.wall_sec",
+        "run1": 0.424,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.382.wall_sec",
+        "run1": 0.424,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.383.wall_sec",
+        "run1": 0.427,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.385.wall_sec",
+        "run1": 0.428,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.386.wall_sec",
+        "run1": 0.422,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.387.wall_sec",
+        "run1": 0.422,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.388.wall_sec",
+        "run1": 0.428,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.389.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.390.wall_sec",
+        "run1": 0.427,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.391.wall_sec",
+        "run1": 0.424,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.392.wall_sec",
+        "run1": 0.434,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.393.wall_sec",
+        "run1": 0.422,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.394.wall_sec",
+        "run1": 0.426,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.395.wall_sec",
+        "run1": 0.424,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.396.wall_sec",
+        "run1": 0.422,
+        "run2": 0.446
+      },
+      {
+        "path": "blocks.primary.rung1.runs.397.wall_sec",
+        "run1": 0.42,
+        "run2": 0.45
+      },
+      {
+        "path": "blocks.primary.rung1.runs.398.wall_sec",
+        "run1": 0.428,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.399.wall_sec",
+        "run1": 0.428,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.400.wall_sec",
+        "run1": 0.432,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.401.wall_sec",
+        "run1": 0.423,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.402.wall_sec",
+        "run1": 0.427,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.403.wall_sec",
+        "run1": 0.426,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.404.wall_sec",
+        "run1": 0.423,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.405.wall_sec",
+        "run1": 0.427,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.406.wall_sec",
+        "run1": 0.423,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.407.wall_sec",
+        "run1": 0.422,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.408.wall_sec",
+        "run1": 0.423,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.409.wall_sec",
+        "run1": 0.425,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.410.wall_sec",
+        "run1": 0.428,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.411.wall_sec",
+        "run1": 0.426,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.412.wall_sec",
+        "run1": 0.423,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.413.wall_sec",
+        "run1": 0.429,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.414.wall_sec",
+        "run1": 0.427,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.415.wall_sec",
+        "run1": 0.425,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.416.wall_sec",
+        "run1": 0.419,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.417.wall_sec",
+        "run1": 0.423,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.418.wall_sec",
+        "run1": 0.422,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.419.wall_sec",
+        "run1": 0.424,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.420.wall_sec",
+        "run1": 0.427,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.421.wall_sec",
+        "run1": 0.425,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.423.wall_sec",
+        "run1": 0.427,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.424.wall_sec",
+        "run1": 0.428,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.425.wall_sec",
+        "run1": 0.428,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.426.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.427.wall_sec",
+        "run1": 0.425,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.428.wall_sec",
+        "run1": 0.424,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.429.wall_sec",
+        "run1": 0.427,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.430.wall_sec",
+        "run1": 0.429,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.431.wall_sec",
+        "run1": 0.423,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.432.wall_sec",
+        "run1": 0.433,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.433.wall_sec",
+        "run1": 0.429,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.434.wall_sec",
+        "run1": 0.426,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.435.wall_sec",
+        "run1": 0.427,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.436.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.437.wall_sec",
+        "run1": 0.422,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.438.wall_sec",
+        "run1": 0.425,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.439.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.441.wall_sec",
+        "run1": 0.427,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.442.wall_sec",
+        "run1": 0.426,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.443.wall_sec",
+        "run1": 0.429,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.444.wall_sec",
+        "run1": 0.429,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.445.wall_sec",
+        "run1": 0.428,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.446.wall_sec",
+        "run1": 0.422,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.447.wall_sec",
+        "run1": 0.42,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.448.wall_sec",
+        "run1": 0.418,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.449.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.451.wall_sec",
+        "run1": 0.429,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.453.wall_sec",
+        "run1": 0.419,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.454.wall_sec",
+        "run1": 0.421,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.455.wall_sec",
+        "run1": 0.418,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.456.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.457.wall_sec",
+        "run1": 0.414,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.458.wall_sec",
+        "run1": 0.419,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.459.wall_sec",
+        "run1": 0.416,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.460.wall_sec",
+        "run1": 0.42,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.461.wall_sec",
+        "run1": 0.42,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.462.wall_sec",
+        "run1": 0.421,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.463.wall_sec",
+        "run1": 0.416,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.464.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.465.wall_sec",
+        "run1": 0.423,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.466.wall_sec",
+        "run1": 0.431,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.467.wall_sec",
+        "run1": 0.426,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.468.wall_sec",
+        "run1": 0.427,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.469.wall_sec",
+        "run1": 0.415,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.470.wall_sec",
+        "run1": 0.414,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.471.wall_sec",
+        "run1": 0.42,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.473.wall_sec",
+        "run1": 0.425,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.474.wall_sec",
+        "run1": 0.422,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.475.wall_sec",
+        "run1": 0.422,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.476.wall_sec",
+        "run1": 0.419,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.478.wall_sec",
+        "run1": 0.425,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.479.wall_sec",
+        "run1": 0.419,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.480.wall_sec",
+        "run1": 0.417,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.481.wall_sec",
+        "run1": 0.418,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.482.wall_sec",
+        "run1": 0.416,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.483.wall_sec",
+        "run1": 0.417,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.484.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.485.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.486.wall_sec",
+        "run1": 0.419,
+        "run2": 0.439
+      },
+      {
+        "path": "blocks.primary.rung1.runs.487.wall_sec",
+        "run1": 0.423,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.488.wall_sec",
+        "run1": 0.421,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.489.wall_sec",
+        "run1": 0.422,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.491.wall_sec",
+        "run1": 0.42,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.492.wall_sec",
+        "run1": 0.418,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.494.wall_sec",
+        "run1": 0.42,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.495.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.496.wall_sec",
+        "run1": 0.431,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.497.wall_sec",
+        "run1": 0.42,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.498.wall_sec",
+        "run1": 0.416,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.499.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.500.wall_sec",
+        "run1": 0.427,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.501.wall_sec",
+        "run1": 0.424,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.503.wall_sec",
+        "run1": 0.416,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.504.wall_sec",
+        "run1": 0.421,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.505.wall_sec",
+        "run1": 0.425,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.506.wall_sec",
+        "run1": 0.429,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.507.wall_sec",
+        "run1": 0.428,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.508.wall_sec",
+        "run1": 0.461,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.509.wall_sec",
+        "run1": 0.455,
+        "run2": 0.459
+      },
+      {
+        "path": "blocks.primary.rung1.runs.510.wall_sec",
+        "run1": 0.452,
+        "run2": 0.443
+      },
+      {
+        "path": "blocks.primary.rung1.runs.511.wall_sec",
+        "run1": 0.442,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.512.wall_sec",
+        "run1": 0.428,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.513.wall_sec",
+        "run1": 0.424,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.514.wall_sec",
+        "run1": 0.43,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.515.wall_sec",
+        "run1": 0.426,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.517.wall_sec",
+        "run1": 0.43,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.518.wall_sec",
+        "run1": 0.424,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.519.wall_sec",
+        "run1": 0.42,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.520.wall_sec",
+        "run1": 0.425,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.521.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.522.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.523.wall_sec",
+        "run1": 0.428,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.524.wall_sec",
+        "run1": 0.428,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.525.wall_sec",
+        "run1": 0.428,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.526.wall_sec",
+        "run1": 0.425,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.527.wall_sec",
+        "run1": 0.424,
+        "run2": 0.436
+      },
+      {
+        "path": "blocks.primary.rung1.runs.528.wall_sec",
+        "run1": 0.427,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.529.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.530.wall_sec",
+        "run1": 0.424,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.531.wall_sec",
+        "run1": 0.422,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.532.wall_sec",
+        "run1": 0.42,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.533.wall_sec",
+        "run1": 0.43,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.534.wall_sec",
+        "run1": 0.425,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.535.wall_sec",
+        "run1": 0.426,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.536.wall_sec",
+        "run1": 0.427,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.537.wall_sec",
+        "run1": 0.425,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.538.wall_sec",
+        "run1": 0.424,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.539.wall_sec",
+        "run1": 0.424,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.540.wall_sec",
+        "run1": 0.432,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.541.wall_sec",
+        "run1": 0.423,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.542.wall_sec",
+        "run1": 0.42,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.543.wall_sec",
+        "run1": 0.427,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.544.wall_sec",
+        "run1": 0.427,
+        "run2": 0.432
+      },
+      {
+        "path": "blocks.primary.rung1.runs.545.wall_sec",
+        "run1": 0.428,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.546.wall_sec",
+        "run1": 0.426,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.547.wall_sec",
+        "run1": 0.426,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.548.wall_sec",
+        "run1": 0.429,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.549.wall_sec",
+        "run1": 0.425,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.550.wall_sec",
+        "run1": 0.428,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.551.wall_sec",
+        "run1": 0.424,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.552.wall_sec",
+        "run1": 0.421,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.553.wall_sec",
+        "run1": 0.424,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.554.wall_sec",
+        "run1": 0.432,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.555.wall_sec",
+        "run1": 0.433,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.557.wall_sec",
+        "run1": 0.425,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.558.wall_sec",
+        "run1": 0.427,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.560.wall_sec",
+        "run1": 0.427,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.561.wall_sec",
+        "run1": 0.421,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.562.wall_sec",
+        "run1": 0.423,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.563.wall_sec",
+        "run1": 0.423,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.565.wall_sec",
+        "run1": 0.428,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.566.wall_sec",
+        "run1": 0.425,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.567.wall_sec",
+        "run1": 0.425,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.568.wall_sec",
+        "run1": 0.426,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.569.wall_sec",
+        "run1": 0.429,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.570.wall_sec",
+        "run1": 0.427,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.571.wall_sec",
+        "run1": 0.424,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.572.wall_sec",
+        "run1": 0.423,
+        "run2": 0.462
+      },
+      {
+        "path": "blocks.primary.rung1.runs.573.wall_sec",
+        "run1": 0.426,
+        "run2": 0.515
+      },
+      {
+        "path": "blocks.primary.rung1.runs.574.wall_sec",
+        "run1": 0.427,
+        "run2": 0.448
+      },
+      {
+        "path": "blocks.primary.rung1.runs.575.wall_sec",
+        "run1": 0.431,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.576.wall_sec",
+        "run1": 0.426,
+        "run2": 0.438
+      },
+      {
+        "path": "blocks.primary.rung1.runs.577.wall_sec",
+        "run1": 0.426,
+        "run2": 0.48
+      },
+      {
+        "path": "blocks.primary.rung1.runs.578.wall_sec",
+        "run1": 0.428,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.579.wall_sec",
+        "run1": 0.427,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.580.wall_sec",
+        "run1": 0.425,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.581.wall_sec",
+        "run1": 0.424,
+        "run2": 0.434
+      },
+      {
+        "path": "blocks.primary.rung1.runs.582.wall_sec",
+        "run1": 0.42,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.583.wall_sec",
+        "run1": 0.422,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.584.wall_sec",
+        "run1": 0.435,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.585.wall_sec",
+        "run1": 0.428,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.586.wall_sec",
+        "run1": 0.429,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.587.wall_sec",
+        "run1": 0.43,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.588.wall_sec",
+        "run1": 0.429,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.589.wall_sec",
+        "run1": 0.429,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.590.wall_sec",
+        "run1": 0.426,
+        "run2": 0.512
+      },
+      {
+        "path": "blocks.primary.rung1.runs.591.wall_sec",
+        "run1": 0.422,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.592.wall_sec",
+        "run1": 0.422,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.593.wall_sec",
+        "run1": 0.422,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.594.wall_sec",
+        "run1": 0.427,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.595.wall_sec",
+        "run1": 0.422,
+        "run2": 0.439
+      },
+      {
+        "path": "blocks.primary.rung1.runs.597.wall_sec",
+        "run1": 0.425,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.598.wall_sec",
+        "run1": 0.428,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.599.wall_sec",
+        "run1": 0.425,
+        "run2": 0.426
+      },
+      {
+        "path": "blocks.primary.rung1.runs.600.wall_sec",
+        "run1": 0.43,
+        "run2": 0.513
+      },
+      {
+        "path": "blocks.primary.rung1.runs.601.wall_sec",
+        "run1": 0.423,
+        "run2": 0.511
+      },
+      {
+        "path": "blocks.primary.rung1.runs.602.wall_sec",
+        "run1": 0.449,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.603.wall_sec",
+        "run1": 0.461,
+        "run2": 0.429
+      },
+      {
+        "path": "blocks.primary.rung1.runs.604.wall_sec",
+        "run1": 0.459,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.605.wall_sec",
+        "run1": 0.427,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.606.wall_sec",
+        "run1": 0.421,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.607.wall_sec",
+        "run1": 0.426,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.608.wall_sec",
+        "run1": 0.421,
+        "run2": 0.431
+      },
+      {
+        "path": "blocks.primary.rung1.runs.609.wall_sec",
+        "run1": 0.424,
+        "run2": 0.435
+      },
+      {
+        "path": "blocks.primary.rung1.runs.610.wall_sec",
+        "run1": 0.421,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.611.wall_sec",
+        "run1": 0.419,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.612.wall_sec",
+        "run1": 0.424,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.613.wall_sec",
+        "run1": 0.429,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.614.wall_sec",
+        "run1": 0.432,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.615.wall_sec",
+        "run1": 0.422,
+        "run2": 0.43
+      },
+      {
+        "path": "blocks.primary.rung1.runs.616.wall_sec",
+        "run1": 0.42,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.617.wall_sec",
+        "run1": 0.419,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.618.wall_sec",
+        "run1": 0.423,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.619.wall_sec",
+        "run1": 0.419,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.620.wall_sec",
+        "run1": 0.418,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.622.wall_sec",
+        "run1": 0.416,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.623.wall_sec",
+        "run1": 0.421,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.624.wall_sec",
+        "run1": 0.42,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.625.wall_sec",
+        "run1": 0.431,
+        "run2": 0.451
+      },
+      {
+        "path": "blocks.primary.rung1.runs.626.wall_sec",
+        "run1": 0.42,
+        "run2": 0.415
+      },
+      {
+        "path": "blocks.primary.rung1.runs.628.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.629.wall_sec",
+        "run1": 0.413,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.630.wall_sec",
+        "run1": 0.406,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.631.wall_sec",
+        "run1": 0.407,
+        "run2": 0.416
+      },
+      {
+        "path": "blocks.primary.rung1.runs.632.wall_sec",
+        "run1": 0.406,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.633.wall_sec",
+        "run1": 0.409,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.634.wall_sec",
+        "run1": 0.407,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.635.wall_sec",
+        "run1": 0.406,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.636.wall_sec",
+        "run1": 0.409,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.637.wall_sec",
+        "run1": 0.408,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.638.wall_sec",
+        "run1": 0.412,
+        "run2": 0.449
+      },
+      {
+        "path": "blocks.primary.rung1.runs.639.wall_sec",
+        "run1": 0.412,
+        "run2": 0.444
+      },
+      {
+        "path": "blocks.primary.rung1.runs.640.wall_sec",
+        "run1": 0.404,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.641.wall_sec",
+        "run1": 0.409,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.642.wall_sec",
+        "run1": 0.406,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.643.wall_sec",
+        "run1": 0.407,
+        "run2": 0.413
+      },
+      {
+        "path": "blocks.primary.rung1.runs.644.wall_sec",
+        "run1": 0.409,
+        "run2": 0.413
+      },
+      {
+        "path": "blocks.primary.rung1.runs.645.wall_sec",
+        "run1": 0.41,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.646.wall_sec",
+        "run1": 0.409,
+        "run2": 0.427
+      },
+      {
+        "path": "blocks.primary.rung1.runs.647.wall_sec",
+        "run1": 0.408,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.648.wall_sec",
+        "run1": 0.408,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.649.wall_sec",
+        "run1": 0.411,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.650.wall_sec",
+        "run1": 0.413,
+        "run2": 0.428
+      },
+      {
+        "path": "blocks.primary.rung1.runs.651.wall_sec",
+        "run1": 0.409,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.652.wall_sec",
+        "run1": 0.406,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.653.wall_sec",
+        "run1": 0.434,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.654.wall_sec",
+        "run1": 0.415,
+        "run2": 0.414
+      },
+      {
+        "path": "blocks.primary.rung1.runs.655.wall_sec",
+        "run1": 0.407,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.656.wall_sec",
+        "run1": 0.424,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung1.runs.657.wall_sec",
+        "run1": 0.409,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.658.wall_sec",
+        "run1": 0.408,
+        "run2": 0.433
+      },
+      {
+        "path": "blocks.primary.rung1.runs.659.wall_sec",
+        "run1": 0.413,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.660.wall_sec",
+        "run1": 0.406,
+        "run2": 0.417
+      },
+      {
+        "path": "blocks.primary.rung1.runs.661.wall_sec",
+        "run1": 0.404,
+        "run2": 0.419
+      },
+      {
+        "path": "blocks.primary.rung1.runs.662.wall_sec",
+        "run1": 0.405,
+        "run2": 0.424
+      },
+      {
+        "path": "blocks.primary.rung1.runs.663.wall_sec",
+        "run1": 0.405,
+        "run2": 0.42
+      },
+      {
+        "path": "blocks.primary.rung1.runs.664.wall_sec",
+        "run1": 0.406,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.665.wall_sec",
+        "run1": 0.407,
+        "run2": 0.411
+      },
+      {
+        "path": "blocks.primary.rung1.runs.666.wall_sec",
+        "run1": 0.407,
+        "run2": 0.418
+      },
+      {
+        "path": "blocks.primary.rung1.runs.667.wall_sec",
+        "run1": 0.406,
+        "run2": 0.422
+      },
+      {
+        "path": "blocks.primary.rung1.runs.668.wall_sec",
+        "run1": 0.408,
+        "run2": 0.423
+      },
+      {
+        "path": "blocks.primary.rung1.runs.669.wall_sec",
+        "run1": 0.406,
+        "run2": 0.425
+      },
+      {
+        "path": "blocks.primary.rung1.runs.670.wall_sec",
+        "run1": 0.409,
+        "run2": 0.437
+      },
+      {
+        "path": "blocks.primary.rung1.runs.671.wall_sec",
+        "run1": 0.417,
+        "run2": 0.421
+      },
+      {
+        "path": "blocks.primary.rung2.runs.0.wall_sec",
+        "run1": 0.774,
+        "run2": 0.771
+      },
+      {
+        "path": "blocks.primary.rung2.runs.1.wall_sec",
+        "run1": 0.764,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.2.wall_sec",
+        "run1": 0.777,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.3.wall_sec",
+        "run1": 0.765,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.4.wall_sec",
+        "run1": 0.769,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.5.wall_sec",
+        "run1": 0.777,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.6.wall_sec",
+        "run1": 0.767,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.7.wall_sec",
+        "run1": 0.768,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.8.wall_sec",
+        "run1": 0.768,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.9.wall_sec",
+        "run1": 0.777,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.10.wall_sec",
+        "run1": 0.773,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.11.wall_sec",
+        "run1": 0.781,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.12.wall_sec",
+        "run1": 0.769,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.13.wall_sec",
+        "run1": 0.898,
+        "run2": 0.77
+      },
+      {
+        "path": "blocks.primary.rung2.runs.14.wall_sec",
+        "run1": 0.815,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.15.wall_sec",
+        "run1": 0.768,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.16.wall_sec",
+        "run1": 0.852,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.17.wall_sec",
+        "run1": 0.793,
+        "run2": 0.769
+      },
+      {
+        "path": "blocks.primary.rung2.runs.18.wall_sec",
+        "run1": 0.772,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.19.wall_sec",
+        "run1": 0.791,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.20.wall_sec",
+        "run1": 0.775,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.21.wall_sec",
+        "run1": 0.775,
+        "run2": 0.795
+      },
+      {
+        "path": "blocks.primary.rung2.runs.22.wall_sec",
+        "run1": 0.769,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.23.wall_sec",
+        "run1": 0.774,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.24.wall_sec",
+        "run1": 0.777,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.25.wall_sec",
+        "run1": 0.773,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.26.wall_sec",
+        "run1": 0.773,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.27.wall_sec",
+        "run1": 0.768,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.28.wall_sec",
+        "run1": 0.771,
+        "run2": 0.808
+      },
+      {
+        "path": "blocks.primary.rung2.runs.29.wall_sec",
+        "run1": 0.772,
+        "run2": 0.798
+      },
+      {
+        "path": "blocks.primary.rung2.runs.30.wall_sec",
+        "run1": 0.772,
+        "run2": 0.791
+      },
+      {
+        "path": "blocks.primary.rung2.runs.31.wall_sec",
+        "run1": 0.77,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.32.wall_sec",
+        "run1": 0.769,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.33.wall_sec",
+        "run1": 0.773,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.34.wall_sec",
+        "run1": 0.778,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.35.wall_sec",
+        "run1": 0.777,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.36.wall_sec",
+        "run1": 0.768,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.37.wall_sec",
+        "run1": 0.775,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.38.wall_sec",
+        "run1": 0.771,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.39.wall_sec",
+        "run1": 0.77,
+        "run2": 0.769
+      },
+      {
+        "path": "blocks.primary.rung2.runs.40.wall_sec",
+        "run1": 0.77,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.41.wall_sec",
+        "run1": 0.778,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.42.wall_sec",
+        "run1": 0.768,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.43.wall_sec",
+        "run1": 0.777,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.44.wall_sec",
+        "run1": 0.774,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.45.wall_sec",
+        "run1": 0.766,
+        "run2": 0.814
+      },
+      {
+        "path": "blocks.primary.rung2.runs.46.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.47.wall_sec",
+        "run1": 0.769,
+        "run2": 0.786
+      },
+      {
+        "path": "blocks.primary.rung2.runs.48.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.49.wall_sec",
+        "run1": 0.782,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.50.wall_sec",
+        "run1": 0.77,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.51.wall_sec",
+        "run1": 0.774,
+        "run2": 0.819
+      },
+      {
+        "path": "blocks.primary.rung2.runs.52.wall_sec",
+        "run1": 0.769,
+        "run2": 0.805
+      },
+      {
+        "path": "blocks.primary.rung2.runs.53.wall_sec",
+        "run1": 0.771,
+        "run2": 0.798
+      },
+      {
+        "path": "blocks.primary.rung2.runs.54.wall_sec",
+        "run1": 0.77,
+        "run2": 0.789
+      },
+      {
+        "path": "blocks.primary.rung2.runs.55.wall_sec",
+        "run1": 0.788,
+        "run2": 0.77
+      },
+      {
+        "path": "blocks.primary.rung2.runs.56.wall_sec",
+        "run1": 0.767,
+        "run2": 0.771
+      },
+      {
+        "path": "blocks.primary.rung2.runs.57.wall_sec",
+        "run1": 0.761,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.58.wall_sec",
+        "run1": 0.766,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.59.wall_sec",
+        "run1": 0.766,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.60.wall_sec",
+        "run1": 0.766,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.61.wall_sec",
+        "run1": 0.779,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.62.wall_sec",
+        "run1": 0.772,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.63.wall_sec",
+        "run1": 0.767,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.65.wall_sec",
+        "run1": 0.774,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.66.wall_sec",
+        "run1": 0.767,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.67.wall_sec",
+        "run1": 0.768,
+        "run2": 0.786
+      },
+      {
+        "path": "blocks.primary.rung2.runs.68.wall_sec",
+        "run1": 0.769,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.69.wall_sec",
+        "run1": 0.773,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.70.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.71.wall_sec",
+        "run1": 0.77,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.72.wall_sec",
+        "run1": 0.767,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.73.wall_sec",
+        "run1": 0.766,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.74.wall_sec",
+        "run1": 0.773,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.75.wall_sec",
+        "run1": 0.77,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.76.wall_sec",
+        "run1": 0.77,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.77.wall_sec",
+        "run1": 0.767,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.78.wall_sec",
+        "run1": 0.771,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.79.wall_sec",
+        "run1": 0.778,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.80.wall_sec",
+        "run1": 0.771,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.81.wall_sec",
+        "run1": 0.772,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.82.wall_sec",
+        "run1": 0.768,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.83.wall_sec",
+        "run1": 0.775,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.84.wall_sec",
+        "run1": 0.77,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.85.wall_sec",
+        "run1": 0.772,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.86.wall_sec",
+        "run1": 0.764,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.87.wall_sec",
+        "run1": 0.77,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.88.wall_sec",
+        "run1": 0.765,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.89.wall_sec",
+        "run1": 0.768,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.90.wall_sec",
+        "run1": 0.767,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.91.wall_sec",
+        "run1": 0.766,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.92.wall_sec",
+        "run1": 0.767,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.93.wall_sec",
+        "run1": 0.775,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.94.wall_sec",
+        "run1": 0.783,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.95.wall_sec",
+        "run1": 0.78,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.96.wall_sec",
+        "run1": 0.772,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.98.wall_sec",
+        "run1": 0.778,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.99.wall_sec",
+        "run1": 0.773,
+        "run2": 0.787
+      },
+      {
+        "path": "blocks.primary.rung2.runs.100.wall_sec",
+        "run1": 0.777,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.101.wall_sec",
+        "run1": 0.771,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.102.wall_sec",
+        "run1": 0.771,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.103.wall_sec",
+        "run1": 0.775,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.104.wall_sec",
+        "run1": 0.773,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.105.wall_sec",
+        "run1": 0.773,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.106.wall_sec",
+        "run1": 0.769,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.107.wall_sec",
+        "run1": 0.771,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.108.wall_sec",
+        "run1": 0.768,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.109.wall_sec",
+        "run1": 0.779,
+        "run2": 0.787
+      },
+      {
+        "path": "blocks.primary.rung2.runs.110.wall_sec",
+        "run1": 0.77,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.111.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.112.wall_sec",
+        "run1": 0.747,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.113.wall_sec",
+        "run1": 0.747,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.114.wall_sec",
+        "run1": 0.746,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.115.wall_sec",
+        "run1": 0.752,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.116.wall_sec",
+        "run1": 0.749,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.117.wall_sec",
+        "run1": 0.75,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.118.wall_sec",
+        "run1": 0.748,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.119.wall_sec",
+        "run1": 0.759,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.120.wall_sec",
+        "run1": 0.753,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.121.wall_sec",
+        "run1": 0.749,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.122.wall_sec",
+        "run1": 0.745,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.123.wall_sec",
+        "run1": 0.745,
+        "run2": 0.809
+      },
+      {
+        "path": "blocks.primary.rung2.runs.124.wall_sec",
+        "run1": 0.753,
+        "run2": 0.807
+      },
+      {
+        "path": "blocks.primary.rung2.runs.125.wall_sec",
+        "run1": 0.756,
+        "run2": 0.816
+      },
+      {
+        "path": "blocks.primary.rung2.runs.126.wall_sec",
+        "run1": 0.749,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.127.wall_sec",
+        "run1": 0.745,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.128.wall_sec",
+        "run1": 0.747,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.129.wall_sec",
+        "run1": 0.746,
+        "run2": 0.803
+      },
+      {
+        "path": "blocks.primary.rung2.runs.130.wall_sec",
+        "run1": 0.744,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.131.wall_sec",
+        "run1": 0.746,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.132.wall_sec",
+        "run1": 0.749,
+        "run2": 0.797
+      },
+      {
+        "path": "blocks.primary.rung2.runs.133.wall_sec",
+        "run1": 0.739,
+        "run2": 0.789
+      },
+      {
+        "path": "blocks.primary.rung2.runs.134.wall_sec",
+        "run1": 0.749,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.135.wall_sec",
+        "run1": 0.746,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.136.wall_sec",
+        "run1": 0.751,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.137.wall_sec",
+        "run1": 0.744,
+        "run2": 0.791
+      },
+      {
+        "path": "blocks.primary.rung2.runs.138.wall_sec",
+        "run1": 0.746,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.139.wall_sec",
+        "run1": 0.745,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.140.wall_sec",
+        "run1": 0.743,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.141.wall_sec",
+        "run1": 0.745,
+        "run2": 0.799
+      },
+      {
+        "path": "blocks.primary.rung2.runs.142.wall_sec",
+        "run1": 0.741,
+        "run2": 0.808
+      },
+      {
+        "path": "blocks.primary.rung2.runs.143.wall_sec",
+        "run1": 0.743,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.144.wall_sec",
+        "run1": 0.744,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.145.wall_sec",
+        "run1": 0.739,
+        "run2": 0.802
+      },
+      {
+        "path": "blocks.primary.rung2.runs.146.wall_sec",
+        "run1": 0.738,
+        "run2": 0.787
+      },
+      {
+        "path": "blocks.primary.rung2.runs.147.wall_sec",
+        "run1": 0.743,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.148.wall_sec",
+        "run1": 0.742,
+        "run2": 0.748
+      },
+      {
+        "path": "blocks.primary.rung2.runs.149.wall_sec",
+        "run1": 0.742,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.150.wall_sec",
+        "run1": 0.746,
+        "run2": 0.749
+      },
+      {
+        "path": "blocks.primary.rung2.runs.151.wall_sec",
+        "run1": 0.745,
+        "run2": 0.751
+      },
+      {
+        "path": "blocks.primary.rung2.runs.152.wall_sec",
+        "run1": 0.745,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.153.wall_sec",
+        "run1": 0.744,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.154.wall_sec",
+        "run1": 0.749,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.155.wall_sec",
+        "run1": 0.754,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.156.wall_sec",
+        "run1": 0.747,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.157.wall_sec",
+        "run1": 0.742,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.158.wall_sec",
+        "run1": 0.854,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.159.wall_sec",
+        "run1": 0.833,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.160.wall_sec",
+        "run1": 0.795,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.161.wall_sec",
+        "run1": 0.742,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.162.wall_sec",
+        "run1": 0.748,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.163.wall_sec",
+        "run1": 0.745,
+        "run2": 0.748
+      },
+      {
+        "path": "blocks.primary.rung2.runs.164.wall_sec",
+        "run1": 0.743,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.165.wall_sec",
+        "run1": 0.741,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.166.wall_sec",
+        "run1": 0.744,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.167.wall_sec",
+        "run1": 0.748,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.168.wall_sec",
+        "run1": 0.77,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.169.wall_sec",
+        "run1": 0.766,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.170.wall_sec",
+        "run1": 0.791,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.171.wall_sec",
+        "run1": 0.769,
+        "run2": 0.85
+      },
+      {
+        "path": "blocks.primary.rung2.runs.172.wall_sec",
+        "run1": 0.775,
+        "run2": 0.851
+      },
+      {
+        "path": "blocks.primary.rung2.runs.173.wall_sec",
+        "run1": 0.768,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.174.wall_sec",
+        "run1": 0.771,
+        "run2": 0.787
+      },
+      {
+        "path": "blocks.primary.rung2.runs.175.wall_sec",
+        "run1": 0.788,
+        "run2": 0.822
+      },
+      {
+        "path": "blocks.primary.rung2.runs.176.wall_sec",
+        "run1": 0.776,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.177.wall_sec",
+        "run1": 0.771,
+        "run2": 0.812
+      },
+      {
+        "path": "blocks.primary.rung2.runs.178.wall_sec",
+        "run1": 0.769,
+        "run2": 0.823
+      },
+      {
+        "path": "blocks.primary.rung2.runs.179.wall_sec",
+        "run1": 0.772,
+        "run2": 0.823
+      },
+      {
+        "path": "blocks.primary.rung2.runs.180.wall_sec",
+        "run1": 0.781,
+        "run2": 0.82
+      },
+      {
+        "path": "blocks.primary.rung2.runs.181.wall_sec",
+        "run1": 0.769,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.182.wall_sec",
+        "run1": 0.767,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.183.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.184.wall_sec",
+        "run1": 0.772,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.185.wall_sec",
+        "run1": 0.785,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.186.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.187.wall_sec",
+        "run1": 0.773,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.188.wall_sec",
+        "run1": 0.773,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.189.wall_sec",
+        "run1": 0.768,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.190.wall_sec",
+        "run1": 0.772,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.191.wall_sec",
+        "run1": 0.769,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.192.wall_sec",
+        "run1": 0.767,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.193.wall_sec",
+        "run1": 0.769,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.194.wall_sec",
+        "run1": 0.768,
+        "run2": 0.807
+      },
+      {
+        "path": "blocks.primary.rung2.runs.195.wall_sec",
+        "run1": 0.78,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.196.wall_sec",
+        "run1": 0.769,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.197.wall_sec",
+        "run1": 0.772,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.198.wall_sec",
+        "run1": 0.769,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.199.wall_sec",
+        "run1": 0.767,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.200.wall_sec",
+        "run1": 0.773,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.201.wall_sec",
+        "run1": 0.772,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.202.wall_sec",
+        "run1": 0.773,
+        "run2": 0.789
+      },
+      {
+        "path": "blocks.primary.rung2.runs.203.wall_sec",
+        "run1": 0.769,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.204.wall_sec",
+        "run1": 0.772,
+        "run2": 0.771
+      },
+      {
+        "path": "blocks.primary.rung2.runs.205.wall_sec",
+        "run1": 0.77,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.206.wall_sec",
+        "run1": 0.771,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.207.wall_sec",
+        "run1": 0.769,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.208.wall_sec",
+        "run1": 0.769,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.209.wall_sec",
+        "run1": 0.772,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.210.wall_sec",
+        "run1": 0.778,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.212.wall_sec",
+        "run1": 0.774,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.213.wall_sec",
+        "run1": 0.788,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.214.wall_sec",
+        "run1": 0.796,
+        "run2": 0.803
+      },
+      {
+        "path": "blocks.primary.rung2.runs.215.wall_sec",
+        "run1": 0.8,
+        "run2": 0.857
+      },
+      {
+        "path": "blocks.primary.rung2.runs.216.wall_sec",
+        "run1": 0.802,
+        "run2": 0.843
+      },
+      {
+        "path": "blocks.primary.rung2.runs.217.wall_sec",
+        "run1": 0.832,
+        "run2": 0.834
+      },
+      {
+        "path": "blocks.primary.rung2.runs.218.wall_sec",
+        "run1": 0.818,
+        "run2": 0.81
+      },
+      {
+        "path": "blocks.primary.rung2.runs.219.wall_sec",
+        "run1": 0.808,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.220.wall_sec",
+        "run1": 0.823,
+        "run2": 0.769
+      },
+      {
+        "path": "blocks.primary.rung2.runs.221.wall_sec",
+        "run1": 0.811,
+        "run2": 0.766
+      },
+      {
+        "path": "blocks.primary.rung2.runs.222.wall_sec",
+        "run1": 0.806,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.223.wall_sec",
+        "run1": 0.811,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.224.wall_sec",
+        "run1": 0.807,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.225.wall_sec",
+        "run1": 0.808,
+        "run2": 0.77
+      },
+      {
+        "path": "blocks.primary.rung2.runs.226.wall_sec",
+        "run1": 0.822,
+        "run2": 0.771
+      },
+      {
+        "path": "blocks.primary.rung2.runs.227.wall_sec",
+        "run1": 0.81,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.228.wall_sec",
+        "run1": 0.822,
+        "run2": 0.771
+      },
+      {
+        "path": "blocks.primary.rung2.runs.229.wall_sec",
+        "run1": 0.819,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.230.wall_sec",
+        "run1": 0.815,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.231.wall_sec",
+        "run1": 0.83,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.232.wall_sec",
+        "run1": 0.818,
+        "run2": 0.767
+      },
+      {
+        "path": "blocks.primary.rung2.runs.233.wall_sec",
+        "run1": 0.841,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.234.wall_sec",
+        "run1": 0.823,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.235.wall_sec",
+        "run1": 0.836,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.236.wall_sec",
+        "run1": 0.855,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.237.wall_sec",
+        "run1": 0.818,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.238.wall_sec",
+        "run1": 0.767,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.239.wall_sec",
+        "run1": 0.769,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.241.wall_sec",
+        "run1": 0.765,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.242.wall_sec",
+        "run1": 0.762,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.243.wall_sec",
+        "run1": 0.775,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.244.wall_sec",
+        "run1": 0.767,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.245.wall_sec",
+        "run1": 0.763,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.246.wall_sec",
+        "run1": 0.765,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.247.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.248.wall_sec",
+        "run1": 0.775,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.249.wall_sec",
+        "run1": 0.766,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.250.wall_sec",
+        "run1": 0.765,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.251.wall_sec",
+        "run1": 0.767,
+        "run2": 0.795
+      },
+      {
+        "path": "blocks.primary.rung2.runs.252.wall_sec",
+        "run1": 0.774,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.253.wall_sec",
+        "run1": 0.763,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.254.wall_sec",
+        "run1": 0.771,
+        "run2": 0.8
+      },
+      {
+        "path": "blocks.primary.rung2.runs.255.wall_sec",
+        "run1": 0.769,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.256.wall_sec",
+        "run1": 0.777,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.257.wall_sec",
+        "run1": 0.804,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.258.wall_sec",
+        "run1": 0.798,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.259.wall_sec",
+        "run1": 0.768,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.260.wall_sec",
+        "run1": 0.766,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.261.wall_sec",
+        "run1": 0.771,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.262.wall_sec",
+        "run1": 0.769,
+        "run2": 0.791
+      },
+      {
+        "path": "blocks.primary.rung2.runs.263.wall_sec",
+        "run1": 0.767,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.264.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.265.wall_sec",
+        "run1": 0.779,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.266.wall_sec",
+        "run1": 0.799,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.267.wall_sec",
+        "run1": 0.769,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.268.wall_sec",
+        "run1": 0.768,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.269.wall_sec",
+        "run1": 0.771,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.270.wall_sec",
+        "run1": 0.772,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.271.wall_sec",
+        "run1": 0.769,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.272.wall_sec",
+        "run1": 0.769,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.273.wall_sec",
+        "run1": 0.778,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.275.wall_sec",
+        "run1": 0.806,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.276.wall_sec",
+        "run1": 0.822,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.277.wall_sec",
+        "run1": 0.808,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.278.wall_sec",
+        "run1": 0.799,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.279.wall_sec",
+        "run1": 0.775,
+        "run2": 0.819
+      },
+      {
+        "path": "blocks.primary.rung2.runs.280.wall_sec",
+        "run1": 0.748,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.281.wall_sec",
+        "run1": 0.751,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.282.wall_sec",
+        "run1": 0.755,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.283.wall_sec",
+        "run1": 0.75,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.284.wall_sec",
+        "run1": 0.754,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.285.wall_sec",
+        "run1": 0.761,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.286.wall_sec",
+        "run1": 0.752,
+        "run2": 0.804
+      },
+      {
+        "path": "blocks.primary.rung2.runs.287.wall_sec",
+        "run1": 0.758,
+        "run2": 0.799
+      },
+      {
+        "path": "blocks.primary.rung2.runs.288.wall_sec",
+        "run1": 0.765,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.289.wall_sec",
+        "run1": 0.759,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.290.wall_sec",
+        "run1": 0.752,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.291.wall_sec",
+        "run1": 0.75,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.292.wall_sec",
+        "run1": 0.749,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.293.wall_sec",
+        "run1": 0.781,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.294.wall_sec",
+        "run1": 0.752,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.295.wall_sec",
+        "run1": 0.755,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.296.wall_sec",
+        "run1": 0.756,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.297.wall_sec",
+        "run1": 0.755,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.298.wall_sec",
+        "run1": 0.761,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.299.wall_sec",
+        "run1": 0.751,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.300.wall_sec",
+        "run1": 0.749,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.301.wall_sec",
+        "run1": 0.749,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.302.wall_sec",
+        "run1": 0.751,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.304.wall_sec",
+        "run1": 0.754,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.305.wall_sec",
+        "run1": 0.748,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.306.wall_sec",
+        "run1": 0.75,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.307.wall_sec",
+        "run1": 0.751,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.308.wall_sec",
+        "run1": 0.75,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.309.wall_sec",
+        "run1": 0.748,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.310.wall_sec",
+        "run1": 0.75,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.311.wall_sec",
+        "run1": 0.749,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.312.wall_sec",
+        "run1": 0.753,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.313.wall_sec",
+        "run1": 0.757,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.314.wall_sec",
+        "run1": 0.75,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.315.wall_sec",
+        "run1": 0.756,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.316.wall_sec",
+        "run1": 0.753,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.317.wall_sec",
+        "run1": 0.754,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.318.wall_sec",
+        "run1": 0.765,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.319.wall_sec",
+        "run1": 0.754,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.320.wall_sec",
+        "run1": 0.749,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.321.wall_sec",
+        "run1": 0.754,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.322.wall_sec",
+        "run1": 0.752,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.323.wall_sec",
+        "run1": 0.75,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.324.wall_sec",
+        "run1": 0.753,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.325.wall_sec",
+        "run1": 0.764,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.326.wall_sec",
+        "run1": 0.759,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.327.wall_sec",
+        "run1": 0.755,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.328.wall_sec",
+        "run1": 0.759,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.329.wall_sec",
+        "run1": 0.757,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.331.wall_sec",
+        "run1": 0.751,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.332.wall_sec",
+        "run1": 0.749,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.333.wall_sec",
+        "run1": 0.765,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.334.wall_sec",
+        "run1": 0.749,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.335.wall_sec",
+        "run1": 0.757,
+        "run2": 0.764
+      },
+      {
+        "path": "blocks.primary.rung2.runs.337.wall_sec",
+        "run1": 0.778,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.338.wall_sec",
+        "run1": 0.771,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.339.wall_sec",
+        "run1": 0.772,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.340.wall_sec",
+        "run1": 0.772,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.341.wall_sec",
+        "run1": 0.773,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.342.wall_sec",
+        "run1": 0.77,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.343.wall_sec",
+        "run1": 0.769,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.344.wall_sec",
+        "run1": 0.771,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.345.wall_sec",
+        "run1": 0.774,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.346.wall_sec",
+        "run1": 0.773,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.347.wall_sec",
+        "run1": 0.772,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.348.wall_sec",
+        "run1": 0.778,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.349.wall_sec",
+        "run1": 0.771,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.350.wall_sec",
+        "run1": 0.775,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.351.wall_sec",
+        "run1": 0.773,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.352.wall_sec",
+        "run1": 0.771,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.353.wall_sec",
+        "run1": 0.771,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.354.wall_sec",
+        "run1": 0.773,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.355.wall_sec",
+        "run1": 0.77,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.356.wall_sec",
+        "run1": 0.78,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.359.wall_sec",
+        "run1": 0.777,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.360.wall_sec",
+        "run1": 0.775,
+        "run2": 0.791
+      },
+      {
+        "path": "blocks.primary.rung2.runs.361.wall_sec",
+        "run1": 0.774,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.363.wall_sec",
+        "run1": 0.776,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.364.wall_sec",
+        "run1": 0.767,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.365.wall_sec",
+        "run1": 0.772,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.366.wall_sec",
+        "run1": 0.775,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.367.wall_sec",
+        "run1": 0.784,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.369.wall_sec",
+        "run1": 0.774,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.370.wall_sec",
+        "run1": 0.775,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.371.wall_sec",
+        "run1": 0.776,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.372.wall_sec",
+        "run1": 0.775,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.373.wall_sec",
+        "run1": 0.77,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.374.wall_sec",
+        "run1": 0.796,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.375.wall_sec",
+        "run1": 0.775,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.376.wall_sec",
+        "run1": 0.779,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.377.wall_sec",
+        "run1": 0.785,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.378.wall_sec",
+        "run1": 0.774,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.379.wall_sec",
+        "run1": 0.774,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.380.wall_sec",
+        "run1": 0.772,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.381.wall_sec",
+        "run1": 0.776,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.382.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.383.wall_sec",
+        "run1": 0.774,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.384.wall_sec",
+        "run1": 0.767,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.385.wall_sec",
+        "run1": 0.772,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.386.wall_sec",
+        "run1": 0.774,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.387.wall_sec",
+        "run1": 0.775,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.388.wall_sec",
+        "run1": 0.774,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.389.wall_sec",
+        "run1": 0.774,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.390.wall_sec",
+        "run1": 0.773,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.391.wall_sec",
+        "run1": 0.771,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.392.wall_sec",
+        "run1": 0.773,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.393.wall_sec",
+        "run1": 0.77,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.394.wall_sec",
+        "run1": 0.765,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.395.wall_sec",
+        "run1": 0.767,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.396.wall_sec",
+        "run1": 0.771,
+        "run2": 0.846
+      },
+      {
+        "path": "blocks.primary.rung2.runs.397.wall_sec",
+        "run1": 0.77,
+        "run2": 0.793
+      },
+      {
+        "path": "blocks.primary.rung2.runs.398.wall_sec",
+        "run1": 0.767,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.399.wall_sec",
+        "run1": 0.773,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.400.wall_sec",
+        "run1": 0.77,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.401.wall_sec",
+        "run1": 0.77,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.402.wall_sec",
+        "run1": 0.776,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.403.wall_sec",
+        "run1": 0.77,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.404.wall_sec",
+        "run1": 0.772,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.405.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.406.wall_sec",
+        "run1": 0.775,
+        "run2": 0.774
+      },
+      {
+        "path": "blocks.primary.rung2.runs.407.wall_sec",
+        "run1": 0.771,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.408.wall_sec",
+        "run1": 0.772,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.409.wall_sec",
+        "run1": 0.771,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.410.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.411.wall_sec",
+        "run1": 0.776,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.412.wall_sec",
+        "run1": 0.77,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.413.wall_sec",
+        "run1": 0.776,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.414.wall_sec",
+        "run1": 0.767,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.415.wall_sec",
+        "run1": 0.77,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.416.wall_sec",
+        "run1": 0.773,
+        "run2": 0.786
+      },
+      {
+        "path": "blocks.primary.rung2.runs.417.wall_sec",
+        "run1": 0.773,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.418.wall_sec",
+        "run1": 0.769,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.419.wall_sec",
+        "run1": 0.775,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.420.wall_sec",
+        "run1": 0.776,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.421.wall_sec",
+        "run1": 0.782,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.422.wall_sec",
+        "run1": 0.77,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.423.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.424.wall_sec",
+        "run1": 0.771,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.425.wall_sec",
+        "run1": 0.782,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.426.wall_sec",
+        "run1": 0.775,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.427.wall_sec",
+        "run1": 0.775,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.428.wall_sec",
+        "run1": 0.771,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.429.wall_sec",
+        "run1": 0.768,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.430.wall_sec",
+        "run1": 0.771,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.431.wall_sec",
+        "run1": 0.774,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.432.wall_sec",
+        "run1": 0.774,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.433.wall_sec",
+        "run1": 0.775,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.434.wall_sec",
+        "run1": 0.774,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.435.wall_sec",
+        "run1": 0.772,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.436.wall_sec",
+        "run1": 0.789,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.437.wall_sec",
+        "run1": 0.776,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.438.wall_sec",
+        "run1": 0.773,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.440.wall_sec",
+        "run1": 0.771,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.441.wall_sec",
+        "run1": 0.776,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.442.wall_sec",
+        "run1": 0.772,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.443.wall_sec",
+        "run1": 0.788,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.444.wall_sec",
+        "run1": 0.774,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.445.wall_sec",
+        "run1": 0.775,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.446.wall_sec",
+        "run1": 0.778,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.447.wall_sec",
+        "run1": 0.769,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.448.wall_sec",
+        "run1": 0.752,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.449.wall_sec",
+        "run1": 0.751,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.450.wall_sec",
+        "run1": 0.752,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.451.wall_sec",
+        "run1": 0.765,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.452.wall_sec",
+        "run1": 0.757,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.453.wall_sec",
+        "run1": 0.753,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.454.wall_sec",
+        "run1": 0.752,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.455.wall_sec",
+        "run1": 0.752,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.456.wall_sec",
+        "run1": 0.752,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.457.wall_sec",
+        "run1": 0.754,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.458.wall_sec",
+        "run1": 0.75,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.459.wall_sec",
+        "run1": 0.751,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.460.wall_sec",
+        "run1": 0.751,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.462.wall_sec",
+        "run1": 0.754,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.463.wall_sec",
+        "run1": 0.761,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.464.wall_sec",
+        "run1": 0.756,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.465.wall_sec",
+        "run1": 0.751,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.466.wall_sec",
+        "run1": 0.752,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.467.wall_sec",
+        "run1": 0.751,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.468.wall_sec",
+        "run1": 0.755,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.470.wall_sec",
+        "run1": 0.751,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.471.wall_sec",
+        "run1": 0.762,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.472.wall_sec",
+        "run1": 0.758,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.473.wall_sec",
+        "run1": 0.751,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.474.wall_sec",
+        "run1": 0.753,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.475.wall_sec",
+        "run1": 0.754,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.476.wall_sec",
+        "run1": 0.753,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.477.wall_sec",
+        "run1": 0.763,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.478.wall_sec",
+        "run1": 0.754,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.479.wall_sec",
+        "run1": 0.752,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.480.wall_sec",
+        "run1": 0.751,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.481.wall_sec",
+        "run1": 0.758,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.482.wall_sec",
+        "run1": 0.749,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.483.wall_sec",
+        "run1": 0.752,
+        "run2": 0.751
+      },
+      {
+        "path": "blocks.primary.rung2.runs.484.wall_sec",
+        "run1": 0.752,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.485.wall_sec",
+        "run1": 0.753,
+        "run2": 0.786
+      },
+      {
+        "path": "blocks.primary.rung2.runs.486.wall_sec",
+        "run1": 0.753,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.487.wall_sec",
+        "run1": 0.755,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.488.wall_sec",
+        "run1": 0.758,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.489.wall_sec",
+        "run1": 0.752,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.491.wall_sec",
+        "run1": 0.752,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.492.wall_sec",
+        "run1": 0.751,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.493.wall_sec",
+        "run1": 0.751,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.494.wall_sec",
+        "run1": 0.754,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.495.wall_sec",
+        "run1": 0.753,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.496.wall_sec",
+        "run1": 0.756,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.497.wall_sec",
+        "run1": 0.754,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.498.wall_sec",
+        "run1": 0.754,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.499.wall_sec",
+        "run1": 0.753,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.500.wall_sec",
+        "run1": 0.752,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.501.wall_sec",
+        "run1": 0.754,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.502.wall_sec",
+        "run1": 0.751,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.503.wall_sec",
+        "run1": 0.752,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.504.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.505.wall_sec",
+        "run1": 0.771,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.506.wall_sec",
+        "run1": 0.771,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.507.wall_sec",
+        "run1": 0.811,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.508.wall_sec",
+        "run1": 0.835,
+        "run2": 0.798
+      },
+      {
+        "path": "blocks.primary.rung2.runs.509.wall_sec",
+        "run1": 0.825,
+        "run2": 0.835
+      },
+      {
+        "path": "blocks.primary.rung2.runs.510.wall_sec",
+        "run1": 0.841,
+        "run2": 0.787
+      },
+      {
+        "path": "blocks.primary.rung2.runs.511.wall_sec",
+        "run1": 0.774,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.512.wall_sec",
+        "run1": 0.78,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.513.wall_sec",
+        "run1": 0.773,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.514.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.515.wall_sec",
+        "run1": 0.773,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.516.wall_sec",
+        "run1": 0.775,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.517.wall_sec",
+        "run1": 0.791,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.518.wall_sec",
+        "run1": 0.776,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.519.wall_sec",
+        "run1": 0.768,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.520.wall_sec",
+        "run1": 0.772,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.521.wall_sec",
+        "run1": 0.775,
+        "run2": 0.812
+      },
+      {
+        "path": "blocks.primary.rung2.runs.522.wall_sec",
+        "run1": 0.779,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.523.wall_sec",
+        "run1": 0.775,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.524.wall_sec",
+        "run1": 0.783,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.525.wall_sec",
+        "run1": 0.787,
+        "run2": 0.805
+      },
+      {
+        "path": "blocks.primary.rung2.runs.526.wall_sec",
+        "run1": 0.77,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.527.wall_sec",
+        "run1": 0.778,
+        "run2": 0.793
+      },
+      {
+        "path": "blocks.primary.rung2.runs.528.wall_sec",
+        "run1": 0.776,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.529.wall_sec",
+        "run1": 0.771,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.530.wall_sec",
+        "run1": 0.769,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.531.wall_sec",
+        "run1": 0.769,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.532.wall_sec",
+        "run1": 0.773,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.533.wall_sec",
+        "run1": 0.772,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.534.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.535.wall_sec",
+        "run1": 0.772,
+        "run2": 0.773
+      },
+      {
+        "path": "blocks.primary.rung2.runs.537.wall_sec",
+        "run1": 0.779,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.538.wall_sec",
+        "run1": 0.782,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.539.wall_sec",
+        "run1": 0.773,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.540.wall_sec",
+        "run1": 0.775,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.541.wall_sec",
+        "run1": 0.774,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.542.wall_sec",
+        "run1": 0.77,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.543.wall_sec",
+        "run1": 0.774,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.544.wall_sec",
+        "run1": 0.773,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.545.wall_sec",
+        "run1": 0.775,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.546.wall_sec",
+        "run1": 0.772,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.547.wall_sec",
+        "run1": 0.774,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.548.wall_sec",
+        "run1": 0.769,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.549.wall_sec",
+        "run1": 0.771,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.550.wall_sec",
+        "run1": 0.773,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.551.wall_sec",
+        "run1": 0.782,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.552.wall_sec",
+        "run1": 0.776,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.553.wall_sec",
+        "run1": 0.777,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.554.wall_sec",
+        "run1": 0.793,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.555.wall_sec",
+        "run1": 0.774,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.556.wall_sec",
+        "run1": 0.775,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.557.wall_sec",
+        "run1": 0.775,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.558.wall_sec",
+        "run1": 0.772,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.559.wall_sec",
+        "run1": 0.777,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.560.wall_sec",
+        "run1": 0.769,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.561.wall_sec",
+        "run1": 0.773,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.562.wall_sec",
+        "run1": 0.772,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.563.wall_sec",
+        "run1": 0.769,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.564.wall_sec",
+        "run1": 0.779,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.565.wall_sec",
+        "run1": 0.773,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.566.wall_sec",
+        "run1": 0.774,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.567.wall_sec",
+        "run1": 0.772,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.568.wall_sec",
+        "run1": 0.777,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.569.wall_sec",
+        "run1": 0.788,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.570.wall_sec",
+        "run1": 0.772,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.571.wall_sec",
+        "run1": 0.774,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.572.wall_sec",
+        "run1": 0.77,
+        "run2": 0.929
+      },
+      {
+        "path": "blocks.primary.rung2.runs.573.wall_sec",
+        "run1": 0.773,
+        "run2": 0.921
+      },
+      {
+        "path": "blocks.primary.rung2.runs.574.wall_sec",
+        "run1": 0.772,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.575.wall_sec",
+        "run1": 0.775,
+        "run2": 0.799
+      },
+      {
+        "path": "blocks.primary.rung2.runs.576.wall_sec",
+        "run1": 0.774,
+        "run2": 0.798
+      },
+      {
+        "path": "blocks.primary.rung2.runs.577.wall_sec",
+        "run1": 0.78,
+        "run2": 0.788
+      },
+      {
+        "path": "blocks.primary.rung2.runs.578.wall_sec",
+        "run1": 0.773,
+        "run2": 0.791
+      },
+      {
+        "path": "blocks.primary.rung2.runs.579.wall_sec",
+        "run1": 0.774,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.580.wall_sec",
+        "run1": 0.771,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.581.wall_sec",
+        "run1": 0.772,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.582.wall_sec",
+        "run1": 0.775,
+        "run2": 0.777
+      },
+      {
+        "path": "blocks.primary.rung2.runs.583.wall_sec",
+        "run1": 0.769,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.584.wall_sec",
+        "run1": 0.774,
+        "run2": 0.792
+      },
+      {
+        "path": "blocks.primary.rung2.runs.585.wall_sec",
+        "run1": 0.77,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.587.wall_sec",
+        "run1": 0.776,
+        "run2": 0.79
+      },
+      {
+        "path": "blocks.primary.rung2.runs.589.wall_sec",
+        "run1": 0.77,
+        "run2": 0.872
+      },
+      {
+        "path": "blocks.primary.rung2.runs.590.wall_sec",
+        "run1": 0.788,
+        "run2": 0.943
+      },
+      {
+        "path": "blocks.primary.rung2.runs.591.wall_sec",
+        "run1": 0.777,
+        "run2": 0.775
+      },
+      {
+        "path": "blocks.primary.rung2.runs.592.wall_sec",
+        "run1": 0.773,
+        "run2": 0.785
+      },
+      {
+        "path": "blocks.primary.rung2.runs.593.wall_sec",
+        "run1": 0.77,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.594.wall_sec",
+        "run1": 0.769,
+        "run2": 0.786
+      },
+      {
+        "path": "blocks.primary.rung2.runs.595.wall_sec",
+        "run1": 0.771,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.596.wall_sec",
+        "run1": 0.775,
+        "run2": 0.782
+      },
+      {
+        "path": "blocks.primary.rung2.runs.597.wall_sec",
+        "run1": 0.775,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.598.wall_sec",
+        "run1": 0.799,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.599.wall_sec",
+        "run1": 0.771,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.600.wall_sec",
+        "run1": 0.773,
+        "run2": 0.918
+      },
+      {
+        "path": "blocks.primary.rung2.runs.601.wall_sec",
+        "run1": 0.777,
+        "run2": 0.856
+      },
+      {
+        "path": "blocks.primary.rung2.runs.602.wall_sec",
+        "run1": 0.824,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.603.wall_sec",
+        "run1": 0.833,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.604.wall_sec",
+        "run1": 0.861,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.605.wall_sec",
+        "run1": 0.771,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.606.wall_sec",
+        "run1": 0.768,
+        "run2": 0.78
+      },
+      {
+        "path": "blocks.primary.rung2.runs.607.wall_sec",
+        "run1": 0.771,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.608.wall_sec",
+        "run1": 0.771,
+        "run2": 0.776
+      },
+      {
+        "path": "blocks.primary.rung2.runs.609.wall_sec",
+        "run1": 0.77,
+        "run2": 0.781
+      },
+      {
+        "path": "blocks.primary.rung2.runs.611.wall_sec",
+        "run1": 0.767,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.612.wall_sec",
+        "run1": 0.767,
+        "run2": 0.779
+      },
+      {
+        "path": "blocks.primary.rung2.runs.613.wall_sec",
+        "run1": 0.785,
+        "run2": 0.796
+      },
+      {
+        "path": "blocks.primary.rung2.runs.614.wall_sec",
+        "run1": 0.773,
+        "run2": 0.783
+      },
+      {
+        "path": "blocks.primary.rung2.runs.615.wall_sec",
+        "run1": 0.772,
+        "run2": 0.784
+      },
+      {
+        "path": "blocks.primary.rung2.runs.616.wall_sec",
+        "run1": 0.753,
+        "run2": 0.768
+      },
+      {
+        "path": "blocks.primary.rung2.runs.617.wall_sec",
+        "run1": 0.75,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.618.wall_sec",
+        "run1": 0.753,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.619.wall_sec",
+        "run1": 0.752,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.620.wall_sec",
+        "run1": 0.752,
+        "run2": 0.762
+      },
+      {
+        "path": "blocks.primary.rung2.runs.621.wall_sec",
+        "run1": 0.76,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.622.wall_sec",
+        "run1": 0.753,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.623.wall_sec",
+        "run1": 0.751,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.624.wall_sec",
+        "run1": 0.75,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.625.wall_sec",
+        "run1": 0.754,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.626.wall_sec",
+        "run1": 0.752,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.627.wall_sec",
+        "run1": 0.769,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.628.wall_sec",
+        "run1": 0.756,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.629.wall_sec",
+        "run1": 0.741,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.630.wall_sec",
+        "run1": 0.74,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.631.wall_sec",
+        "run1": 0.738,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.632.wall_sec",
+        "run1": 0.736,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.633.wall_sec",
+        "run1": 0.735,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.634.wall_sec",
+        "run1": 0.736,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.635.wall_sec",
+        "run1": 0.736,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.636.wall_sec",
+        "run1": 0.739,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.637.wall_sec",
+        "run1": 0.742,
+        "run2": 0.772
+      },
+      {
+        "path": "blocks.primary.rung2.runs.638.wall_sec",
+        "run1": 0.749,
+        "run2": 0.804
+      },
+      {
+        "path": "blocks.primary.rung2.runs.639.wall_sec",
+        "run1": 0.744,
+        "run2": 0.761
+      },
+      {
+        "path": "blocks.primary.rung2.runs.640.wall_sec",
+        "run1": 0.737,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.641.wall_sec",
+        "run1": 0.742,
+        "run2": 0.75
+      },
+      {
+        "path": "blocks.primary.rung2.runs.642.wall_sec",
+        "run1": 0.74,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.643.wall_sec",
+        "run1": 0.748,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.644.wall_sec",
+        "run1": 0.74,
+        "run2": 0.804
+      },
+      {
+        "path": "blocks.primary.rung2.runs.645.wall_sec",
+        "run1": 0.733,
+        "run2": 0.76
+      },
+      {
+        "path": "blocks.primary.rung2.runs.646.wall_sec",
+        "run1": 0.739,
+        "run2": 0.757
+      },
+      {
+        "path": "blocks.primary.rung2.runs.647.wall_sec",
+        "run1": 0.739,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.648.wall_sec",
+        "run1": 0.74,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.649.wall_sec",
+        "run1": 0.741,
+        "run2": 0.763
+      },
+      {
+        "path": "blocks.primary.rung2.runs.650.wall_sec",
+        "run1": 0.743,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.651.wall_sec",
+        "run1": 0.733,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.652.wall_sec",
+        "run1": 0.736,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.653.wall_sec",
+        "run1": 0.749,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.654.wall_sec",
+        "run1": 0.767,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.655.wall_sec",
+        "run1": 0.736,
+        "run2": 0.751
+      },
+      {
+        "path": "blocks.primary.rung2.runs.656.wall_sec",
+        "run1": 0.752,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.657.wall_sec",
+        "run1": 0.739,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.658.wall_sec",
+        "run1": 0.733,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.659.wall_sec",
+        "run1": 0.741,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.660.wall_sec",
+        "run1": 0.737,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.661.wall_sec",
+        "run1": 0.734,
+        "run2": 0.753
+      },
+      {
+        "path": "blocks.primary.rung2.runs.662.wall_sec",
+        "run1": 0.733,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.663.wall_sec",
+        "run1": 0.736,
+        "run2": 0.754
+      },
+      {
+        "path": "blocks.primary.rung2.runs.664.wall_sec",
+        "run1": 0.737,
+        "run2": 0.752
+      },
+      {
+        "path": "blocks.primary.rung2.runs.665.wall_sec",
+        "run1": 0.741,
+        "run2": 0.755
+      },
+      {
+        "path": "blocks.primary.rung2.runs.666.wall_sec",
+        "run1": 0.741,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.rung2.runs.667.wall_sec",
+        "run1": 0.737,
+        "run2": 0.759
+      },
+      {
+        "path": "blocks.primary.rung2.runs.668.wall_sec",
+        "run1": 0.732,
+        "run2": 0.758
+      },
+      {
+        "path": "blocks.primary.rung2.runs.669.wall_sec",
+        "run1": 0.735,
+        "run2": 0.778
+      },
+      {
+        "path": "blocks.primary.rung2.runs.670.wall_sec",
+        "run1": 0.767,
+        "run2": 0.765
+      },
+      {
+        "path": "blocks.primary.rung2.runs.671.wall_sec",
+        "run1": 0.746,
+        "run2": 0.756
+      },
+      {
+        "path": "blocks.primary.sweep_wall_sec",
+        "run1": 801.19,
+        "run2": 808.548
+      },
+      {
+        "path": "started_at",
+        "run1": "2026-09-15T07:02:58-0700",
+        "run2": "2026-09-15T09:27:37-0700"
+      }
+    ],
+    "raw_files_equal": false,
+    "run1_analysis_sha256": "548aae6f4e1ae2e6969b89801909d0dc04bbf227753b4c0a53218828ba48e9db",
+    "run1_normalized_sha256": "1f41eee6b2a33e0ae2fbf51ce9a5d7cf3d603630d79cc1f0cc3e678b40618122",
+    "run1_raw_sha256": "cc521a9f053f68b5dffab15f3806c22720c975a0b02db329c98b48d6ec239dee",
+    "run2_analysis_sha256": "548aae6f4e1ae2e6969b89801909d0dc04bbf227753b4c0a53218828ba48e9db",
+    "run2_normalized_sha256": "1f41eee6b2a33e0ae2fbf51ce9a5d7cf3d603630d79cc1f0cc3e678b40618122",
+    "run2_raw_sha256": "1595f9b94f534941e0ac2252b3c2e3696ab0503732841ddda7df1977f6dfe132"
+  },
+  "run_execution": {
+    "additional_full_sweeps": 0,
+    "cells_dropped": 0,
+    "cells_retried": 0,
+    "run1_cells": 672,
+    "run1_laws": {
+      "capacity_matched_across_science_arms": true,
+      "copied_fields_are_S_and_FFF_everywhere": true,
+      "every_cell_ran": true,
+      "learned_fields_are_PP_and_pp_everywhere": true,
+      "no_unresolved_prediction_anywhere": true,
+      "resolution_never_drops": true,
+      "swap_invariance_exact_everywhere": true
+    },
+    "run1_wall_sec": 801.19,
+    "run2_cells": 672,
+    "run2_laws": {
+      "capacity_matched_across_science_arms": true,
+      "copied_fields_are_S_and_FFF_everywhere": true,
+      "every_cell_ran": true,
+      "learned_fields_are_PP_and_pp_everywhere": true,
+      "no_unresolved_prediction_anywhere": true,
+      "resolution_never_drops": true,
+      "swap_invariance_exact_everywhere": true
+    },
+    "run2_wall_sec": 808.548
+  }
+}

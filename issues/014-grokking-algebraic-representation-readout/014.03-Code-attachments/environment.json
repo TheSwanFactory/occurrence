@@ -1,0 +1,101 @@
+{
+  "declared_environment_differences": [
+    "the pinned 009.02 artifacts were produced under topographo 0.8.2; this execution runs topographo 0.8.4. The certified relation is unchanged: fips_basic.TABLE_SHA256 still equals the pinned eb31fba3dbc3a4bbccb0154bcb2c26bcbc5809e477078ddf3ef5839d8904cdea, and the catalogue / blocks / dataset / chart digests all reproduce their pinned values exactly."
+  ],
+  "delivery_bundle": {
+    "bundle": "014.03",
+    "character": "immutable literal execution; stopped at BLOCKED",
+    "probe_optimizer": "Adam",
+    "probe_optimizer_reading": "coupled_L2_inside_torch_optim_Adam"
+  },
+  "determinism": {
+    "device": "cpu",
+    "dtype": "float32",
+    "thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 1,
+    "torch_use_deterministic_algorithms": true
+  },
+  "execution_identity": "Kiro (Claude Opus 5) acting in the generic Coder role",
+  "incorporated_specification_uri": "quilt+s3://protology#package=occurrence/gpt@71e5cc70df2fb001d27790c33f8dbfa6317f1513384bfb8200561465705d8ade&path=issues/014-grokking-algebraic-representation-readout/014.02-Codex-EXECUTE-readable-algebraic-grokking-trajectory.md",
+  "numpy": "1.26.4",
+  "pinned_inputs": {
+    "007.05-Klein-fair-grokking-interface-conjecture.md": {
+      "bytes": 7753,
+      "local_copy": "pins/007.05-fair-grokking.md",
+      "sha256": "defa9e9aca5f055873f8f517962ff7b2a50b94d6e33f59f7b200569efdde0eeb"
+    },
+    "009.02-Code-attachments/arms.json": {
+      "bytes": 123166,
+      "local_copy": "pins/arms.json",
+      "sha256": "7f9b71d79c6a802b210aa6f18b099111928ba8b7f11dd31f4be2af74b5ad57c9"
+    },
+    "009.02-Code-attachments/sfp_codec.json": {
+      "bytes": 46228,
+      "local_copy": "pins/sfp_codec.json",
+      "sha256": "2b26f8958c8f0418b236014316f4787c141c11c24c8edde49ebf1f326d5a60b2"
+    },
+    "009.02-Code-attachments/task_dataset.json": {
+      "bytes": 52952,
+      "local_copy": "pins/task_dataset.json",
+      "sha256": "2c78f5cca13a89ee0faa050c3ebc3d109909c23e941189e68df40ac878386e36"
+    },
+    "009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md": {
+      "bytes": 27558,
+      "local_copy": "pins/009.02-result.md",
+      "sha256": "55cbfe523b77c0cdd85fb0dcb875d17b600ff4058a4cba14ddac06cc1a134786"
+    },
+    "009.08-Kiro-query-relative-PP-localization-result.md": {
+      "bytes": 30062,
+      "local_copy": "pins/009.08-result.md",
+      "sha256": "92f22c94c4c1ccaf9568dfc3014774840b54dfde10032437f20abc43604ce5c9"
+    },
+    "014.01-GPT-Owner-future-grokking-representation-readout-frame.md": {
+      "bytes": 4497,
+      "local_copy": "pins/014.01-frame.md",
+      "sha256": "043b2b165a95ef6ed1d271d01cef03e7cec5ba2c9fee0047f4c1e64647b45cb6"
+    },
+    "014.02-Codex-EXECUTE-readable-algebraic-grokking-trajectory.md": {
+      "bytes": 22946,
+      "local_copy": "pins/014.02-task.md",
+      "sha256": "30d8cc5b66e3ed4ff6324259bfbf4ed5e3986e38a54d6b399ab5d40451353f39"
+    },
+    "014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md": {
+      "bytes": 3789,
+      "local_copy": "pins/014.02a-dispatch.md",
+      "sha256": "2c330d8829430e2afefc3353d051060d5e103df0e26e8d33b7ac7bb5e7538663"
+    },
+    "13-query-relative-consequence-addressing.md": {
+      "bytes": 8905,
+      "local_copy": "pins/13-surface.md",
+      "sha256": "d959dd642637a45a54cab19251f4299e4515b3905ce07089f4f649a0e290ffc8"
+    },
+    "outcome/021.05-Research-SFP-zero-completion-result.md": {
+      "bytes": 14864,
+      "local_copy": "pins/021.05-outcome.md",
+      "sha256": "e06f2a27d6a0b26d6d4f84e0865248e214df763492ddec410eb12894a0c86236"
+    }
+  },
+  "platform": {
+    "machine": "arm64",
+    "processor": "arm",
+    "release": "25.6.0",
+    "system": "Darwin"
+  },
+  "python": "3.11.13 (main, Jul 30 2025, 20:57:01) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "repository": {
+    "branch": "codex/013-deterministic-00908-stability-audit",
+    "commit": "0dc57d41f522b9fb98c139cfa2b5d72cc4e6f6df",
+    "dirty": true,
+    "root": "/Users/ernest/GitHub/occurrence"
+  },
+  "task_uri": "quilt+s3://protology#package=occurrence/gpt@a5c2c5a7fac78eae4ba2dacbf45c5951a99096dd5745d1bdc85e9593c5b2ce9f&path=issues/014-grokking-algebraic-representation-readout/014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md",
+  "topographo": "0.8.4",
+  "torch": "2.14.0"
+}

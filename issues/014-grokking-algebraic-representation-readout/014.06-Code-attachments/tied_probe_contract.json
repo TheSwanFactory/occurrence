@@ -1,0 +1,166 @@
+{
+  "controls": {
+    "B_certified_sfp": "accepted summed Arm B primary positive control",
+    "C_scrambled": "accepted summed matched non-automorphic Arm C diagnostic",
+    "random_gaussian": "seed 271828, shape [84,64] diagnostic",
+    "secondary_predecessor_controls": "accepted concat variants may be reported, explicitly secondary"
+  },
+  "dispatch_uri": "quilt+s3://protology#package=occurrence/gpt@f5fbf710e80d4285730b84872581b4246ba77d973a89414ca20f473bf6f540c4&path=issues/014-grokking-algebraic-representation-readout/014.05a-GPT-tied-Event-identity-grokking-ablation-Coder.md",
+  "form": {
+    "candidate": "Linear(64,64,bias=False)",
+    "candidate_set": "all 84 Events",
+    "features": "concat(z_a+z_b, z_a*z_b, abs(z_a-z_b)); 192 units",
+    "hidden": "Linear(192,64) -> GELU",
+    "score": "dot(hidden, candidate(z_c))/sqrt(64)"
+  },
+  "gate": {
+    "NOVEL_TEST": 0.95,
+    "ROLE_TEST": 0.95,
+    "failure": "BLOCKED-PROBE-REGRESSION"
+  },
+  "module": "run_014_tied.py (stage: contracts)",
+  "optimizer": {
+    "batching": "full-batch TRAIN only",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "identity_indexed_parameters": "forbidden",
+    "implementation": "torch.optim.AdamW",
+    "lr": 0.01,
+    "main_gradients": "forbidden; representation detached",
+    "seed": 314159,
+    "semantics": "decoupled weight decay",
+    "steps": 5000,
+    "weight_decay": 0.001
+  },
+  "owner_uri": "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.04-GPT-Owner-adjudication-after-01403a.md",
+  "pinned_inputs": {
+    "007.05-Klein-fair-grokking-interface-conjecture.md": {
+      "bytes": 7753,
+      "local_copy": "pins/007.05-fair-grokking.md",
+      "sha256": "defa9e9aca5f055873f8f517962ff7b2a50b94d6e33f59f7b200569efdde0eeb"
+    },
+    "009.02-Code-attachments/arms.json": {
+      "bytes": 123166,
+      "local_copy": "pins/arms.json",
+      "sha256": "7f9b71d79c6a802b210aa6f18b099111928ba8b7f11dd31f4be2af74b5ad57c9"
+    },
+    "009.02-Code-attachments/sfp_codec.json": {
+      "bytes": 46228,
+      "local_copy": "pins/sfp_codec.json",
+      "sha256": "2b26f8958c8f0418b236014316f4787c141c11c24c8edde49ebf1f326d5a60b2"
+    },
+    "009.02-Code-attachments/task_dataset.json": {
+      "bytes": 52952,
+      "local_copy": "pins/task_dataset.json",
+      "sha256": "2c78f5cca13a89ee0faa050c3ebc3d109909c23e941189e68df40ac878386e36"
+    },
+    "009.02-Kiro-native-FIPS-vs-SFP-representation-ablation-result.md": {
+      "bytes": 27558,
+      "local_copy": "pins/009.02-result.md",
+      "sha256": "55cbfe523b77c0cdd85fb0dcb875d17b600ff4058a4cba14ddac06cc1a134786"
+    },
+    "009.08-Kiro-query-relative-PP-localization-result.md": {
+      "bytes": 30062,
+      "local_copy": "pins/009.08-result.md",
+      "sha256": "92f22c94c4c1ccaf9568dfc3014774840b54dfde10032437f20abc43604ce5c9"
+    },
+    "014.01-GPT-Owner-future-grokking-representation-readout-frame.md": {
+      "bytes": 4497,
+      "local_copy": "pins/014.01-frame.md",
+      "sha256": "043b2b165a95ef6ed1d271d01cef03e7cec5ba2c9fee0047f4c1e64647b45cb6"
+    },
+    "014.02-Codex-EXECUTE-readable-algebraic-grokking-trajectory.md": {
+      "bytes": 22946,
+      "local_copy": "pins/014.02-task.md",
+      "sha256": "30d8cc5b66e3ed4ff6324259bfbf4ed5e3986e38a54d6b399ab5d40451353f39"
+    },
+    "014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md": {
+      "bytes": 3789,
+      "local_copy": "pins/014.02a-dispatch.md",
+      "sha256": "2c330d8829430e2afefc3353d051060d5e103df0e26e8d33b7ac7bb5e7538663"
+    },
+    "13-query-relative-consequence-addressing.md": {
+      "bytes": 8905,
+      "local_copy": "pins/13-surface.md",
+      "sha256": "d959dd642637a45a54cab19251f4299e4515b3905ce07089f4f649a0e290ffc8"
+    },
+    "outcome/021.05-Research-SFP-zero-completion-result.md": {
+      "bytes": 14864,
+      "local_copy": "pins/021.05-outcome.md",
+      "sha256": "e06f2a27d6a0b26d6d4f84e0865248e214df763492ddec410eb12894a0c86236"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.04-GPT-Owner-adjudication-after-01403a.md": {
+      "bytes": 3551,
+      "local_copy": "pins/014.04-owner.md",
+      "sha256": "a10874b5a4b2d9575d5875cc549bd0279bc38d708896fb34a4a1e6a603506375",
+      "uri_resolution": {
+        "local_bytes_match_resolved_object": true,
+        "resolved_before_contract_state": true,
+        "versioned_s3_etag_md5": "643768e2026e550330f9f6288ecd0821"
+      }
+    },
+    "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.05-GPT-tied-Event-identity-grokking-ablation-Coder.md": {
+      "bytes": 18524,
+      "local_copy": "pins/014.05-spec.md",
+      "sha256": "52e3f1ed0ff7230ac30e4a365bcd7fce73f67ab9a1185bf9b23059dc28eaea32",
+      "uri_resolution": {
+        "local_bytes_match_resolved_object": true,
+        "resolved_before_contract_state": true,
+        "versioned_s3_etag_md5": "eb01d1203a44de4fcc40236116d87551"
+      }
+    },
+    "quilt+s3://protology#package=occurrence/gpt@1625721c0169a458ea75cd83bab276db294c24fcb8953358efd4ae0bf68cb867&path=issues/014-grokking-algebraic-representation-readout/014.03a-Code-attachments/analysis.json": {
+      "bytes": 38732,
+      "local_copy": "014.03a-Code-attachments/analysis.json",
+      "sha256": "336949622f07e54940b807b7732bc5ca8a161f7d162ddc90f02e10071b66e9b8"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@1625721c0169a458ea75cd83bab276db294c24fcb8953358efd4ae0bf68cb867&path=issues/014-grokking-algebraic-representation-readout/014.03a-Code-attachments/benchmark_contract.json": {
+      "bytes": 32844,
+      "local_copy": "014.03a-Code-attachments/benchmark_contract.json",
+      "sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@1625721c0169a458ea75cd83bab276db294c24fcb8953358efd4ae0bf68cb867&path=issues/014-grokking-algebraic-representation-readout/014.03a-Code-attachments/negative_result_diagnostic.json": {
+      "bytes": 9885,
+      "local_copy": "014.03a-Code-attachments/negative_result_diagnostic.json",
+      "sha256": "26a9d5fc6041a18c1dc7bce8e845eb5c22b6974566024b19ce3b00dcbf5397b3"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@1625721c0169a458ea75cd83bab276db294c24fcb8953358efd4ae0bf68cb867&path=issues/014-grokking-algebraic-representation-readout/014.03a-Code-attachments/probe_controls.json": {
+      "bytes": 4230,
+      "local_copy": "014.03a-Code-attachments/probe_controls.json",
+      "sha256": "4f8375a0a3db1c41167234e00734eb478e249c3b001d83f266787e115ab83b1d"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@1625721c0169a458ea75cd83bab276db294c24fcb8953358efd4ae0bf68cb867&path=issues/014-grokking-algebraic-representation-readout/014.03a-Coder-readable-algebraic-grokking-trajectory-result-GPT.md": {
+      "bytes": 13596,
+      "local_copy": "014.03a-Coder-readable-algebraic-grokking-trajectory-result-GPT.md",
+      "sha256": "6b5d26e0959f59e42bee4dfc59bfc493c00ecbc8b3518b8ac78c50e5045cff5a"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@88e238a596901add8ef311c8f9cea5b5c54806976a7bcb114fd34f5cd8491f44&path=issues/014-grokking-algebraic-representation-readout/014.01-GPT-Owner-future-grokking-representation-readout-frame.md": {
+      "bytes": 4497,
+      "local_copy": "014.06-Code-attachments/pins/014.01-frame.md",
+      "sha256": "043b2b165a95ef6ed1d271d01cef03e7cec5ba2c9fee0047f4c1e64647b45cb6"
+    },
+    "quilt+s3://protology#package=occurrence/gpt@f5fbf710e80d4285730b84872581b4246ba77d973a89414ca20f473bf6f540c4&path=issues/014-grokking-algebraic-representation-readout/014.05a-GPT-tied-Event-identity-grokking-ablation-Coder.md": {
+      "bytes": 2362,
+      "local_copy": "pins/014.05a-dispatch.md",
+      "sha256": "9ba777a1ec40def878319c2190f670f04cc6bf3f61af9c08dc65828c7e358671",
+      "uri_resolution": {
+        "local_bytes_match_resolved_object": true,
+        "resolved_before_contract_state": true,
+        "versioned_s3_etag_md5": "1650029eebf7ac10136fcc14b417c7eb"
+      }
+    }
+  },
+  "reported_metrics": [
+    "probe_train_accuracy",
+    "probe_role_accuracy",
+    "probe_novel_accuracy",
+    "seen_block_three_role_consistency",
+    "all_block_three_role_consistency",
+    "full_56_block_relation_exact"
+  ],
+  "representation": "z_x = detached clone of event_emb[x], 64 dimensions",
+  "spec_uri": "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.05-GPT-tied-Event-identity-grokking-ablation-Coder.md"
+}

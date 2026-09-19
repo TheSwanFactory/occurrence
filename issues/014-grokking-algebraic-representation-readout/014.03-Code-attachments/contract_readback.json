@@ -1,0 +1,30 @@
+{
+  "delivery_bundle": "014.03",
+  "readbacks": {
+    "benchmark_contract.json": {
+      "bytes": 32844,
+      "path": "benchmark_contract.json",
+      "payload_digest": "be94ebe4b4d8cd277a5dac17ed545fed6d31c6e063555c0ee3a1ac6be81f19d7",
+      "readback_exact": true,
+      "readback_payload_digest": "be94ebe4b4d8cd277a5dac17ed545fed6d31c6e063555c0ee3a1ac6be81f19d7",
+      "sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd"
+    },
+    "environment.json": {
+      "bytes": 4486,
+      "path": "environment.json",
+      "payload_digest": "fd1dcb2bf8b3fc4c2f56a012ece838442a0c14e02de259725fe2c4a139f666fb",
+      "readback_exact": true,
+      "readback_payload_digest": "fd1dcb2bf8b3fc4c2f56a012ece838442a0c14e02de259725fe2c4a139f666fb",
+      "sha256": "c5cbc77a9406809adbace5f1d85faf84cbd2fa2a95d4193ec47fbdf9a38abeb7"
+    },
+    "probe_contract.json": {
+      "bytes": 3122,
+      "path": "probe_contract.json",
+      "payload_digest": "a646c310e8f7eb83dd0fa6be88c91cf89b85a879cf9e43166447b730db41aaf9",
+      "readback_exact": true,
+      "readback_payload_digest": "a646c310e8f7eb83dd0fa6be88c91cf89b85a879cf9e43166447b730db41aaf9",
+      "sha256": "b4d57c352dd0080bd07387f338d5bd124152c1e36f028d9ef22f444e13475edf"
+    }
+  },
+  "stage_elapsed_seconds": 1.48
+}

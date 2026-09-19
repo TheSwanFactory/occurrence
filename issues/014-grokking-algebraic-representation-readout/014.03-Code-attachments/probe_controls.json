@@ -1,0 +1,97 @@
+{
+  "arm_control_audit": {
+    "arm_b_pinned_digest": {
+      "agrees": true,
+      "expected": "767a26b2c1677a59d7b99f98512b5cf17539b3e3be0204456a86cb5fc4c76954",
+      "observed": "767a26b2c1677a59d7b99f98512b5cf17539b3e3be0204456a86cb5fc4c76954"
+    },
+    "arm_b_regenerated_matches_pinned": true,
+    "arm_c_is_non_automorphic": true,
+    "arm_c_marginals_match_arm_b": true,
+    "arm_c_pinned_digest": {
+      "agrees": true,
+      "expected": "b2c0b35d83c037943254411c3af13976b389534d478b9445a12804bce9d585cd",
+      "observed": "b2c0b35d83c037943254411c3af13976b389534d478b9445a12804bce9d585cd"
+    },
+    "arm_c_relation_destroyed": true,
+    "pooled_dim": 16,
+    "pooling": "sum over the two canonical incidence presentations",
+    "token_dim_per_presentation": 16
+  },
+  "benchmark_contract_sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd",
+  "controls": {
+    "B_certified_sfp": {
+      "all_block_three_role_consistency": 0.7142857142857143,
+      "decoded_distinct_triples": 72,
+      "elapsed_seconds": 0.759,
+      "full_56_block_relation_exact": false,
+      "probe_final_train_loss": 0.016703324392437935,
+      "probe_novel_accuracy": 0.6666666865348816,
+      "probe_role_accuracy": 0.9166666865348816,
+      "probe_train_accuracy": 1.0,
+      "representation_dim": 16,
+      "seen_block_three_role_consistency": 0.8333333333333334
+    },
+    "B_certified_sfp_concat_secondary": {
+      "all_block_three_role_consistency": 0.875,
+      "decoded_distinct_triples": 63,
+      "elapsed_seconds": 0.725,
+      "full_56_block_relation_exact": false,
+      "probe_final_train_loss": 0.026123495772480965,
+      "probe_novel_accuracy": 0.875,
+      "probe_role_accuracy": 0.9583333134651184,
+      "probe_train_accuracy": 1.0,
+      "representation_dim": 32,
+      "seen_block_three_role_consistency": 0.9166666666666666
+    },
+    "C_scrambled": {
+      "all_block_three_role_consistency": 0.017857142857142856,
+      "decoded_distinct_triples": 140,
+      "elapsed_seconds": 0.715,
+      "full_56_block_relation_exact": false,
+      "probe_final_train_loss": 0.02404800057411194,
+      "probe_novel_accuracy": 0.125,
+      "probe_role_accuracy": 0.1979166716337204,
+      "probe_train_accuracy": 1.0,
+      "representation_dim": 16,
+      "seen_block_three_role_consistency": 0.020833333333333332
+    },
+    "C_scrambled_concat_secondary": {
+      "all_block_three_role_consistency": 0.017857142857142856,
+      "decoded_distinct_triples": 140,
+      "elapsed_seconds": 0.722,
+      "full_56_block_relation_exact": false,
+      "probe_final_train_loss": 0.041906263679265976,
+      "probe_novel_accuracy": 0.0833333358168602,
+      "probe_role_accuracy": 0.1875,
+      "probe_train_accuracy": 1.0,
+      "representation_dim": 32,
+      "seen_block_three_role_consistency": 0.020833333333333332
+    },
+    "random_gaussian": {
+      "all_block_three_role_consistency": 0.0,
+      "decoded_distinct_triples": 160,
+      "elapsed_seconds": 0.85,
+      "full_56_block_relation_exact": false,
+      "probe_final_train_loss": 0.0014409484574571252,
+      "probe_novel_accuracy": 0.0,
+      "probe_role_accuracy": 0.0,
+      "probe_train_accuracy": 1.0,
+      "representation_dim": 128,
+      "seen_block_three_role_consistency": 0.0
+    }
+  },
+  "diagnostic_note": "the scramble and random controls are diagnostic, never selection criteria; they are reported regardless of outcome",
+  "gate": {
+    "no_stronger_probe_invented": "the probe form, width, optimizer, steps and seed are exactly as frozen in probe_contract.json before any main-model checkpoint existed",
+    "observed_novel": 0.6666666865348816,
+    "observed_role": 0.9166666865348816,
+    "passed": false,
+    "rule": "the certified-SFP positive control must reach at least 0.95 on BOTH probe ROLE_TEST and probe NOVEL_TEST",
+    "status": "BLOCKED",
+    "threshold": 0.95
+  },
+  "module": "run_014.py (stage: probe-controls)",
+  "probe_contract_sha256": "b4d57c352dd0080bd07387f338d5bd124152c1e36f028d9ef22f444e13475edf",
+  "task_uri": "quilt+s3://protology#package=occurrence/gpt@a5c2c5a7fac78eae4ba2dacbf45c5951a99096dd5745d1bdc85e9593c5b2ce9f&path=issues/014-grokking-algebraic-representation-readout/014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md"
+}

@@ -1,0 +1,353 @@
+{
+  "accepted_untied_outcome": {
+    "reading": "uniform M4",
+    "regularized": {
+      "delayed_generalization_flagged": 0,
+      "final_novel_accuracy_median": 0.0,
+      "final_probe_novel_accuracy_median": 0.0,
+      "final_probe_role_accuracy_median": 0.0,
+      "final_role_accuracy_median": 0.0,
+      "median_t_fit": 64.0,
+      "median_t_gen": null,
+      "median_t_global": null,
+      "median_t_repr": null,
+      "median_t_repr_exact": null,
+      "median_t_repr_global": null,
+      "reading_histogram": {
+        "M4": 8
+      },
+      "seeds": 8,
+      "seeds_with_exact_56_block_readout": 0,
+      "swap_invariance_bit_exact_everywhere": true,
+      "t_fit_reached": 8,
+      "t_gen_reached": 0,
+      "t_global_reached": 0,
+      "t_repr_exact_reached": 0,
+      "t_repr_global_reached": 0,
+      "t_repr_reached": 0
+    },
+    "weight_decay_zero": {
+      "delayed_generalization_flagged": 0,
+      "final_novel_accuracy_median": 0.0,
+      "final_probe_novel_accuracy_median": 0.0,
+      "final_probe_role_accuracy_median": 0.0,
+      "final_role_accuracy_median": 0.0,
+      "median_t_fit": 64.0,
+      "median_t_gen": null,
+      "median_t_global": null,
+      "median_t_repr": null,
+      "median_t_repr_exact": null,
+      "median_t_repr_global": null,
+      "reading_histogram": {
+        "M4": 8
+      },
+      "seeds": 8,
+      "seeds_with_exact_56_block_readout": 0,
+      "swap_invariance_bit_exact_everywhere": true,
+      "t_fit_reached": 8,
+      "t_gen_reached": 0,
+      "t_global_reached": 0,
+      "t_repr_exact_reached": 0,
+      "t_repr_global_reached": 0,
+      "t_repr_reached": 0
+    }
+  },
+  "architectural_contrast": {
+    "014.03a_untied": "independent input_emb[84,64] and cand_emb[84,64] Event Parameters",
+    "014.05a_tied": "one event_emb[84,64] Parameter used by exact object identity for query and candidate scoring",
+    "predecessor_diagnostic_status": "POST-HOC EXPLANATORY DIAGNOSTIC on already-fixed model states; it changes no frozen choice, adds no scored quantity, and does not reinterpret any temporal reading",
+    "single_conceptual_change": "Event identity tying across query and answer roles"
+  },
+  "claim_boundary": {
+    "negative_boundary": "a negative result does not establish that no architecture can grok this benchmark",
+    "no_causal_overclaim": "architectural contrast plus trajectory association does not by itself identify a unique causal circuit",
+    "sufficiency_only": "a positive result tests sufficiency relative to one untied predecessor; it does not establish necessity"
+  },
+  "classification_definitions": {
+    "T0": "tied model cannot reliably fit TRAIN; capacity/optimization boundary, no grokking conclusion",
+    "T1": "tied model fits TRAIN but gains no role consequence; tying alone insufficient under this benchmark/training signal",
+    "T2": "ROLE_TEST but not stronger NOVEL_TEST evidence; seen-triad role-neutral consequence only",
+    "T3": "ROLE_TEST plus readable representation with t_repr conservatively no later than t_gen",
+    "T4": "NOVEL_TEST, t_repr_global, or exact full-relation evidence; stronger finite relation-level organization"
+  },
+  "dispatch_uri": "quilt+s3://protology#package=occurrence/gpt@f5fbf710e80d4285730b84872581b4246ba77d973a89414ca20f473bf6f540c4&path=issues/014-grokking-algebraic-representation-readout/014.05a-GPT-tied-Event-identity-grokking-ablation-Coder.md",
+  "inputs": {
+    "predecessor_analysis": {
+      "path": "../014.03a-Code-attachments/analysis.json",
+      "sha256": "336949622f07e54940b807b7732bc5ca8a161f7d162ddc90f02e10071b66e9b8"
+    },
+    "predecessor_negative_diagnostic": {
+      "path": "../014.03a-Code-attachments/negative_result_diagnostic.json",
+      "sha256": "26a9d5fc6041a18c1dc7bce8e845eb5c22b6974566024b19ce3b00dcbf5397b3"
+    },
+    "tied_analysis_source": "same-pass temporal diagnostics"
+  },
+  "module": "analyze_014_tied.py",
+  "owner_uri": "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.04-GPT-Owner-adjudication-after-01403a.md",
+  "required_fences": [
+    "does not establish that all grokking is algebra discovery",
+    "does not establish OT superiority to transformers or LLMs",
+    "does not test H_native",
+    "does not establish language-scale or open-ended discovery",
+    "does not require preferred coordinates neuron-by-neuron",
+    "does not establish low dimensionality as necessary",
+    "probe decodability alone does not prove causal use",
+    "does not establish tied embeddings as the only route to a role-neutral relation",
+    "does not establish physical Event/Outcome semantics",
+    "does not claim tying is necessary from a positive result",
+    "does not claim all grokking works this way",
+    "a negative does not establish that no architecture can grok the benchmark"
+  ],
+  "spec_uri": "quilt+s3://protology#package=occurrence/gpt@064a638e189f38a63a351c8889c29464e87af59f0684ff31c10b564dfdab8fa3&path=issues/014-grokking-algebraic-representation-readout/014.05-GPT-tied-Event-identity-grokking-ablation-Coder.md",
+  "tied_outcome": {
+    "individual_readings": [
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2000,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2001,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2002,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2003,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2004,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2005,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2006,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_regularized",
+        "reading": "M4",
+        "seed": 2007,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2000,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2001,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2002,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2003,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2004,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2005,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2006,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      },
+      {
+        "arm": "matched_zero_wd",
+        "reading": "M4",
+        "seed": 2007,
+        "t_fit": 64,
+        "t_gen": null,
+        "t_global": null,
+        "t_repr": null,
+        "t_repr_exact": null,
+        "t_repr_global": null
+      }
+    ],
+    "overall": {
+      "capacity_basis": "primary arm reached at least 7/8 exact TRAIN fits by update 8192",
+      "classification": "T1",
+      "effective_arms": [
+        "matched_regularized",
+        "matched_zero_wd"
+      ],
+      "near_note": "the task gives no numeric 'near' window, so T3 uses only the predeclared unambiguous condition t_repr <= t_gen and does not invent a post-hoc tolerance",
+      "precedence": "T0 capacity gate; otherwise T4 > T3 > T2 > T1",
+      "rule": "capacity-qualified tied model fit TRAIN but gained no ROLE_TEST consequence; tying alone was insufficient under this signal"
+    },
+    "summary_by_arm": {
+      "matched_regularized": {
+        "arm_capacity_qualification_basis": "8/8 scored seeds fit by update 8192; primary requires >=7/8",
+        "arm_capacity_qualified": true,
+        "delayed_generalization_flagged": 0,
+        "final_novel_test_accuracy_median": 0.0,
+        "final_probe_novel_accuracy_median": 0.0,
+        "final_probe_role_accuracy_median": 0.0,
+        "final_role_test_accuracy_median": 0.0,
+        "fit_by_update_8192": 8,
+        "individual_capacity_unqualified": 0,
+        "median_t_fit": 64.0,
+        "median_t_gen": null,
+        "median_t_global": null,
+        "median_t_repr": null,
+        "median_t_repr_exact": null,
+        "median_t_repr_global": null,
+        "reading_histogram": {
+          "M4": 8
+        },
+        "seeds": 8,
+        "seeds_with_exact_56_block_readout": 0,
+        "swap_invariance_bit_exact_everywhere": true,
+        "t_fit_reached": 8,
+        "t_gen_reached": 0,
+        "t_global_reached": 0,
+        "t_repr_exact_reached": 0,
+        "t_repr_global_reached": 0,
+        "t_repr_reached": 0
+      },
+      "matched_zero_wd": {
+        "arm_capacity_qualification_basis": "8/8 scored seeds fit by update 8192; primary requires >=7/8",
+        "arm_capacity_qualified": true,
+        "delayed_generalization_flagged": 0,
+        "final_novel_test_accuracy_median": 0.0,
+        "final_probe_novel_accuracy_median": 0.0,
+        "final_probe_role_accuracy_median": 0.0,
+        "final_role_test_accuracy_median": 0.0,
+        "fit_by_update_8192": 8,
+        "individual_capacity_unqualified": 0,
+        "median_t_fit": 64.0,
+        "median_t_gen": null,
+        "median_t_global": null,
+        "median_t_repr": null,
+        "median_t_repr_exact": null,
+        "median_t_repr_global": null,
+        "reading_histogram": {
+          "M4": 8
+        },
+        "seeds": 8,
+        "seeds_with_exact_56_block_readout": 0,
+        "swap_invariance_bit_exact_everywhere": true,
+        "t_fit_reached": 8,
+        "t_gen_reached": 0,
+        "t_global_reached": 0,
+        "t_repr_exact_reached": 0,
+        "t_repr_global_reached": 0,
+        "t_repr_reached": 0
+      }
+    }
+  }
+}

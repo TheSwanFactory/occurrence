@@ -1,0 +1,329 @@
+{
+  "ambiguity_under_test": {
+    "resolved_in_code_as": "torch.optim.Adam(weight_decay=1e-3) (coupled L2)",
+    "specification_text": "014.02 section 4 freezes the probe optimizer as 'Adam' with 'weight decay 1e-3'. In PyTorch that phrase has two implementations: torch.optim.Adam(weight_decay=1e-3), which adds a coupled L2 term to the gradient, and decoupled weight decay as in torch.optim.AdamW(weight_decay=1e-3). 014.02 names 'AdamW' explicitly for the main-model regime grid in section 5, so the literal reading of 'Adam' in section 4 is the coupled form, which is what probe_contract.json declared and what the gate ran."
+  },
+  "committed_gate_verdict": {
+    "no_stronger_probe_invented": "the probe form, width, optimizer, steps and seed are exactly as frozen in probe_contract.json before any main-model checkpoint existed",
+    "observed_novel": 0.6666666865348816,
+    "observed_role": 0.9166666865348816,
+    "passed": false,
+    "rule": "the certified-SFP positive control must reach at least 0.95 on BOTH probe ROLE_TEST and probe NOVEL_TEST",
+    "status": "BLOCKED",
+    "threshold": 0.95
+  },
+  "instrument_discrimination_survives_both_readings": "the non-automorphic scramble control stays near 0.16-0.20 ROLE and 0.08-0.13 NOVEL and the random control stays at 0.0 under every reading, so the instrument separates the certified code from matched misalignment either way; only the absolute level of the positive control moves across the 0.95 gate",
+  "isolation": {
+    "control_pooling_is_not_the_cause": "both the declared summed 16-dimensional primary and the declared 32-dimensional canonical-concat secondary fail the gate under the coupled reading",
+    "coupled_positive_control": {
+      "NOVEL_TEST": 0.6666666865348816,
+      "ROLE_TEST": 0.9166666865348816,
+      "TRAIN": 1.0
+    },
+    "decisive_knob": "coupled versus decoupled weight decay",
+    "decoupled_positive_control": {
+      "NOVEL_TEST": 1.0,
+      "ROLE_TEST": 0.9895833134651184,
+      "TRAIN": 1.0
+    },
+    "probe_initialization_is_not_the_cause": "the declared Xavier-uniform/zero-bias init and the PyTorch default Linear init give the same failing levels under the coupled reading",
+    "step_count_is_not_the_cause": "under the coupled reading the positive control is flat in NOVEL accuracy from 500 through 12000 steps",
+    "zero_decay_positive_control": {
+      "NOVEL_TEST": 1.0,
+      "ROLE_TEST": 0.9895833134651184,
+      "TRAIN": 1.0
+    }
+  },
+  "matrix": {
+    "B_certified_sfp": {
+      "dim": 16,
+      "readings": {
+        "coupled_Adam_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.625,
+            "ROLE_TEST": 0.8854166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.6666666865348816,
+            "ROLE_TEST": 0.90625,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.6666666865348816,
+            "ROLE_TEST": 0.9166666865348816,
+            "TRAIN": 1.0
+          }
+        },
+        "decoupled_AdamW_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.9166666865348816,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 1.0,
+            "ROLE_TEST": 0.96875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 1.0,
+            "ROLE_TEST": 0.9895833134651184,
+            "TRAIN": 1.0
+          }
+        },
+        "no_weight_decay": {
+          "1000": {
+            "NOVEL_TEST": 0.9166666865348816,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.9583333134651184,
+            "ROLE_TEST": 0.9583333134651184,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 1.0,
+            "ROLE_TEST": 0.9895833134651184,
+            "TRAIN": 1.0
+          }
+        }
+      }
+    },
+    "B_certified_sfp_concat_secondary": {
+      "dim": 32,
+      "readings": {
+        "coupled_Adam_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.8333333134651184,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.875,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.875,
+            "ROLE_TEST": 0.9583333134651184,
+            "TRAIN": 1.0
+          }
+        },
+        "decoupled_AdamW_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.75,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.8333333134651184,
+            "ROLE_TEST": 0.96875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.875,
+            "ROLE_TEST": 0.96875,
+            "TRAIN": 1.0
+          }
+        },
+        "no_weight_decay": {
+          "1000": {
+            "NOVEL_TEST": 0.75,
+            "ROLE_TEST": 0.9479166865348816,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.8333333134651184,
+            "ROLE_TEST": 0.96875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.875,
+            "ROLE_TEST": 0.96875,
+            "TRAIN": 1.0
+          }
+        }
+      }
+    },
+    "C_scrambled": {
+      "dim": 16,
+      "readings": {
+        "coupled_Adam_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.1770833283662796,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.1979166716337204,
+            "TRAIN": 1.0
+          }
+        },
+        "decoupled_AdamW_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.15625,
+            "TRAIN": 1.0
+          }
+        },
+        "no_weight_decay": {
+          "1000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1979166716337204,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.15625,
+            "TRAIN": 1.0
+          }
+        }
+      }
+    },
+    "C_scrambled_concat_secondary": {
+      "dim": 32,
+      "readings": {
+        "coupled_Adam_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0833333358168602,
+            "ROLE_TEST": 0.1875,
+            "TRAIN": 1.0
+          }
+        },
+        "decoupled_AdamW_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          }
+        },
+        "no_weight_decay": {
+          "1000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.125,
+            "ROLE_TEST": 0.2291666716337204,
+            "TRAIN": 1.0
+          }
+        }
+      }
+    },
+    "random_gaussian": {
+      "dim": 128,
+      "readings": {
+        "coupled_Adam_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          }
+        },
+        "decoupled_AdamW_wd_1e-3": {
+          "1000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          }
+        },
+        "no_weight_decay": {
+          "1000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "2000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          },
+          "5000": {
+            "NOVEL_TEST": 0.0,
+            "ROLE_TEST": 0.0,
+            "TRAIN": 1.0
+          }
+        }
+      }
+    }
+  },
+  "module": "run_014.py (stage: probe-diagnostics)",
+  "owner_decision_required": "whether to re-authorize execution under the decoupled reading of the frozen probe optimizer, or to accept BLOCKED as the delivered result",
+  "question": "the frozen instrument failed its own certified-SFP positive control; this diagnostic isolates which frozen or implementation-resolved degree of freedom is responsible",
+  "status": "DIAGNOSTIC ONLY \u2014 does not alter the committed gate verdict",
+  "what_this_does_not_do": [
+    "it does not modify probe_contract.json",
+    "it does not modify or reopen the committed gate verdict",
+    "it does not authorize the main trajectory",
+    "no main-model checkpoint has been produced or observed at this point"
+  ]
+}

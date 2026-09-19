@@ -1,0 +1,465 @@
+{
+  "benchmark_contract_sha256": "26f816cc5ae514cd73ad8d3603da70ac08aee99bd8343b8a0fc6f3f730f7e2dd",
+  "boundary_audit": {
+    "clean": true,
+    "forbidden_substrings": [
+      "role_test",
+      "novel_test",
+      "role_accuracy",
+      "novel_accuracy",
+      "probe",
+      "sfp",
+      "certif",
+      "equival",
+      "oracle",
+      "third_of_pair",
+      "block_of_pair",
+      "relation",
+      "arm_control",
+      "holdout"
+    ],
+    "identifiers_scanned": 131,
+    "method": "AST call-graph walk from the selector roots over module-level functions; every Name, Attribute, argument, keyword and string constant in the reachable set is matched against the forbidden list",
+    "reachable_functions": [
+      "build_main_model",
+      "calibrate_candidate",
+      "exact_fit_accuracy",
+      "select_regime_core",
+      "xavier_uniform_"
+    ],
+    "selector_roots": [
+      "select_regime_core",
+      "calibrate_candidate",
+      "build_main_model",
+      "exact_fit_accuracy",
+      "xavier_uniform_"
+    ],
+    "violations": []
+  },
+  "calibration": [
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 295.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.7675688862800598,
+          "first_exact_fit_update": 306,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.6838242411613464,
+          "first_exact_fit_update": 309,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.2561527490615845,
+          "first_exact_fit_update": 275,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.167868971824646,
+          "first_exact_fit_update": 284,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.01
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 298.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.7645424008369446,
+          "first_exact_fit_update": 309,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.6818180084228516,
+          "first_exact_fit_update": 312,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.2428985834121704,
+          "first_exact_fit_update": 278,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.157284140586853,
+          "first_exact_fit_update": 287,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 328.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.7420840263366699,
+          "first_exact_fit_update": 342,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.5976881384849548,
+          "first_exact_fit_update": 353,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.1128368377685547,
+          "first_exact_fit_update": 312,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.142764925956726,
+          "first_exact_fit_update": 314,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 1.0
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 92.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.7771034836769104,
+          "first_exact_fit_update": 94,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.6641395092010498,
+          "first_exact_fit_update": 95,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.4959219694137573,
+          "first_exact_fit_update": 83,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.0963106155395508,
+          "first_exact_fit_update": 90,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.01
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 92.5,
+      "seeds": [
+        {
+          "final_designated_loss": 0.8127251267433167,
+          "first_exact_fit_update": 94,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.6984795928001404,
+          "first_exact_fit_update": 95,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.534531593322754,
+          "first_exact_fit_update": 83,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.0756503343582153,
+          "first_exact_fit_update": 91,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 101.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.762537956237793,
+          "first_exact_fit_update": 103,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.5890867114067078,
+          "first_exact_fit_update": 106,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.2435587644577026,
+          "first_exact_fit_update": 94,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.0334736108779907,
+          "first_exact_fit_update": 99,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 1.0
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 35.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.9438368678092957,
+          "first_exact_fit_update": 36,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 1.1792593002319336,
+          "first_exact_fit_update": 34,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.5210188627243042,
+          "first_exact_fit_update": 33,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.0442867279052734,
+          "first_exact_fit_update": 36,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.01
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 35.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.8423908352851868,
+          "first_exact_fit_update": 37,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 1.2243640422821045,
+          "first_exact_fit_update": 34,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.3889975547790527,
+          "first_exact_fit_update": 34,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.0897655487060547,
+          "first_exact_fit_update": 36,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 39.0,
+      "seeds": [
+        {
+          "final_designated_loss": 0.8700924515724182,
+          "first_exact_fit_update": 40,
+          "reached_exact_fit": true,
+          "seed": 0
+        },
+        {
+          "final_designated_loss": 0.4694423973560333,
+          "first_exact_fit_update": 43,
+          "reached_exact_fit": true,
+          "seed": 1
+        },
+        {
+          "final_designated_loss": 1.505615234375,
+          "first_exact_fit_update": 36,
+          "reached_exact_fit": true,
+          "seed": 2
+        },
+        {
+          "final_designated_loss": 1.2441248893737793,
+          "first_exact_fit_update": 38,
+          "reached_exact_fit": true,
+          "seed": 3
+        }
+      ],
+      "weight_decay": 1.0
+    }
+  ],
+  "elapsed_seconds": 2.089,
+  "manifest": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "boundary": "selector code may not compute, load, log or inspect ROLE_TEST, NOVEL_TEST, representation-probe, SFP-factor or certified-equivalence metrics; audited mechanically",
+    "calibration_cap": 4096,
+    "calibration_seeds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "candidates": 9,
+    "eps": 1e-08,
+    "failure_state": "NO-REGIME (stop; do not widen the grid)",
+    "full_batch": true,
+    "learning_rate_grid": [
+      0.0003,
+      0.001,
+      0.003
+    ],
+    "matched_control": "selected configuration with weight_decay = 0.0",
+    "optimizer": "AdamW",
+    "requirement": "4/4 calibration seeds must reach exact TRAIN fit",
+    "schedule": "constant",
+    "selection_key": [
+      "number of the four calibration seeds reaching exact TRAIN accuracy 1.0 by update 4096, descending",
+      "weight decay, descending",
+      "median first exact-fit update among converged seeds, ascending",
+      "learning rate, ascending"
+    ],
+    "weight_decay_grid": [
+      0.01,
+      0.1,
+      1.0
+    ]
+  },
+  "matched_memorization_control": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "difference_from_selected": "weight_decay only",
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0.0
+  },
+  "module": "run_014.py (stage: select-regime)",
+  "ranking": [
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 39.0,
+      "weight_decay": 1.0
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 101.0,
+      "weight_decay": 1.0
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 328.0,
+      "weight_decay": 1.0
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 35.0,
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 92.5,
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 298.0,
+      "weight_decay": 0.1
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.003,
+      "median_first_exact_fit_update": 35.0,
+      "weight_decay": 0.01
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.001,
+      "median_first_exact_fit_update": 92.0,
+      "weight_decay": 0.01
+    },
+    {
+      "converged_seeds": 4,
+      "learning_rate": 0.0003,
+      "median_first_exact_fit_update": 295.0,
+      "weight_decay": 0.01
+    }
+  ],
+  "requirement_4_of_4_met": true,
+  "scored_seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007
+  ],
+  "sealed_holdout_touched_during_selection": false,
+  "selected_regime": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.003,
+    "optimizer": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 1.0
+  },
+  "status": "SELECTED",
+  "task_uri": "quilt+s3://protology#package=occurrence/gpt@a5c2c5a7fac78eae4ba2dacbf45c5951a99096dd5745d1bdc85e9593c5b2ce9f&path=issues/014-grokking-algebraic-representation-readout/014.02a-GPT-readable-algebraic-grokking-trajectory-Coder.md",
+  "training_horizon": 65536
+}
