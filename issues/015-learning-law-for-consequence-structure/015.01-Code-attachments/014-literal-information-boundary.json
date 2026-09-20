@@ -1,0 +1,943 @@
+{
+  "schema": "occurrence.gpt.015.identifiability-input.v1",
+  "source_note": "Curated by the GPT Owner from the accepted Issue-014 frozen benchmark. Held-out target labels, the certified full relation, neural outcomes, representation diagnostics, and Owner expectations are intentionally omitted.",
+  "token_universe": {
+    "count": 84,
+    "ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83
+    ],
+    "semantics": "opaque Event-token identifiers only"
+  },
+  "learner_visible_contract": {
+    "input": "unordered pair of Event-token IDs",
+    "output": "one of all 84 Event-token IDs",
+    "input_swap_invariant": true,
+    "output_masking": "none; all 84 tokens are legal output candidates at the literal learner interface",
+    "training_examples": "exactly the 48 records below",
+    "extra_relational_features": "none"
+  },
+  "train": [
+    {
+      "query": [
+        0,
+        68
+      ],
+      "target": 79
+    },
+    {
+      "query": [
+        3,
+        81
+      ],
+      "target": 67
+    },
+    {
+      "query": [
+        5,
+        75
+      ],
+      "target": 64
+    },
+    {
+      "query": [
+        6,
+        77
+      ],
+      "target": 63
+    },
+    {
+      "query": [
+        7,
+        76
+      ],
+      "target": 62
+    },
+    {
+      "query": [
+        8,
+        19
+      ],
+      "target": 29
+    },
+    {
+      "query": [
+        8,
+        40
+      ],
+      "target": 50
+    },
+    {
+      "query": [
+        9,
+        18
+      ],
+      "target": 28
+    },
+    {
+      "query": [
+        10,
+        16
+      ],
+      "target": 31
+    },
+    {
+      "query": [
+        10,
+        52
+      ],
+      "target": 39
+    },
+    {
+      "query": [
+        11,
+        38
+      ],
+      "target": 53
+    },
+    {
+      "query": [
+        12,
+        78
+      ],
+      "target": 56
+    },
+    {
+      "query": [
+        13,
+        46
+      ],
+      "target": 68
+    },
+    {
+      "query": [
+        14,
+        71
+      ],
+      "target": 42
+    },
+    {
+      "query": [
+        14,
+        82
+      ],
+      "target": 55
+    },
+    {
+      "query": [
+        15,
+        83
+      ],
+      "target": 54
+    },
+    {
+      "query": [
+        16,
+        73
+      ],
+      "target": 52
+    },
+    {
+      "query": [
+        17,
+        30
+      ],
+      "target": 11
+    },
+    {
+      "query": [
+        17,
+        53
+      ],
+      "target": 72
+    },
+    {
+      "query": [
+        18,
+        41
+      ],
+      "target": 60
+    },
+    {
+      "query": [
+        20,
+        49
+      ],
+      "target": 77
+    },
+    {
+      "query": [
+        23,
+        37
+      ],
+      "target": 65
+    },
+    {
+      "query": [
+        25,
+        45
+      ],
+      "target": 80
+    },
+    {
+      "query": [
+        25,
+        66
+      ],
+      "target": 59
+    },
+    {
+      "query": [
+        26,
+        83
+      ],
+      "target": 43
+    },
+    {
+      "query": [
+        27,
+        55
+      ],
+      "target": 71
+    },
+    {
+      "query": [
+        27,
+        82
+      ],
+      "target": 42
+    },
+    {
+      "query": [
+        28,
+        51
+      ],
+      "target": 60
+    },
+    {
+      "query": [
+        29,
+        61
+      ],
+      "target": 50
+    },
+    {
+      "query": [
+        32,
+        74
+      ],
+      "target": 37
+    },
+    {
+      "query": [
+        33,
+        75
+      ],
+      "target": 36
+    },
+    {
+      "query": [
+        34,
+        63
+      ],
+      "target": 49
+    },
+    {
+      "query": [
+        35,
+        62
+      ],
+      "target": 48
+    },
+    {
+      "query": [
+        36,
+        64
+      ],
+      "target": 22
+    },
+    {
+      "query": [
+        38,
+        72
+      ],
+      "target": 30
+    },
+    {
+      "query": [
+        39,
+        73
+      ],
+      "target": 31
+    },
+    {
+      "query": [
+        40,
+        61
+      ],
+      "target": 19
+    },
+    {
+      "query": [
+        41,
+        51
+      ],
+      "target": 9
+    },
+    {
+      "query": [
+        43,
+        70
+      ],
+      "target": 15
+    },
+    {
+      "query": [
+        44,
+        81
+      ],
+      "target": 24
+    },
+    {
+      "query": [
+        47,
+        69
+      ],
+      "target": 12
+    },
+    {
+      "query": [
+        48,
+        76
+      ],
+      "target": 21
+    },
+    {
+      "query": [
+        54,
+        70
+      ],
+      "target": 26
+    },
+    {
+      "query": [
+        57,
+        79
+      ],
+      "target": 13
+    },
+    {
+      "query": [
+        58,
+        67
+      ],
+      "target": 24
+    },
+    {
+      "query": [
+        65,
+        74
+      ],
+      "target": 4
+    },
+    {
+      "query": [
+        66,
+        80
+      ],
+      "target": 2
+    },
+    {
+      "query": [
+        69,
+        78
+      ],
+      "target": 1
+    }
+  ],
+  "heldout_queries": {
+    "role_test": [
+      [
+        0,
+        79
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        2,
+        66
+      ],
+      [
+        2,
+        80
+      ],
+      [
+        3,
+        67
+      ],
+      [
+        4,
+        65
+      ],
+      [
+        4,
+        74
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        6,
+        63
+      ],
+      [
+        7,
+        62
+      ],
+      [
+        8,
+        29
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        9,
+        28
+      ],
+      [
+        9,
+        41
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        10,
+        31
+      ],
+      [
+        10,
+        39
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        12,
+        47
+      ],
+      [
+        12,
+        56
+      ],
+      [
+        12,
+        69
+      ],
+      [
+        13,
+        57
+      ],
+      [
+        13,
+        68
+      ],
+      [
+        13,
+        79
+      ],
+      [
+        14,
+        42
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        70
+      ],
+      [
+        16,
+        31
+      ],
+      [
+        16,
+        52
+      ],
+      [
+        17,
+        72
+      ],
+      [
+        18,
+        28
+      ],
+      [
+        18,
+        60
+      ],
+      [
+        19,
+        29
+      ],
+      [
+        19,
+        40
+      ],
+      [
+        19,
+        61
+      ],
+      [
+        20,
+        77
+      ],
+      [
+        21,
+        48
+      ],
+      [
+        21,
+        76
+      ],
+      [
+        22,
+        36
+      ],
+      [
+        22,
+        64
+      ],
+      [
+        23,
+        65
+      ],
+      [
+        24,
+        44
+      ],
+      [
+        24,
+        58
+      ],
+      [
+        24,
+        67
+      ],
+      [
+        24,
+        81
+      ],
+      [
+        25,
+        59
+      ],
+      [
+        25,
+        80
+      ],
+      [
+        26,
+        43
+      ],
+      [
+        26,
+        54
+      ],
+      [
+        26,
+        70
+      ],
+      [
+        27,
+        42
+      ],
+      [
+        27,
+        71
+      ],
+      [
+        28,
+        60
+      ],
+      [
+        29,
+        50
+      ],
+      [
+        30,
+        38
+      ],
+      [
+        30,
+        72
+      ],
+      [
+        31,
+        39
+      ],
+      [
+        31,
+        73
+      ],
+      [
+        32,
+        37
+      ],
+      [
+        33,
+        36
+      ],
+      [
+        34,
+        49
+      ],
+      [
+        35,
+        48
+      ],
+      [
+        36,
+        75
+      ],
+      [
+        37,
+        65
+      ],
+      [
+        37,
+        74
+      ],
+      [
+        38,
+        53
+      ],
+      [
+        39,
+        52
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        41,
+        60
+      ],
+      [
+        42,
+        71
+      ],
+      [
+        42,
+        82
+      ],
+      [
+        43,
+        83
+      ],
+      [
+        45,
+        80
+      ],
+      [
+        46,
+        68
+      ],
+      [
+        48,
+        62
+      ],
+      [
+        49,
+        63
+      ],
+      [
+        49,
+        77
+      ],
+      [
+        50,
+        61
+      ],
+      [
+        51,
+        60
+      ],
+      [
+        52,
+        73
+      ],
+      [
+        53,
+        72
+      ],
+      [
+        54,
+        83
+      ],
+      [
+        55,
+        71
+      ],
+      [
+        55,
+        82
+      ],
+      [
+        56,
+        78
+      ],
+      [
+        59,
+        66
+      ],
+      [
+        62,
+        76
+      ],
+      [
+        63,
+        77
+      ],
+      [
+        64,
+        75
+      ],
+      [
+        67,
+        81
+      ],
+      [
+        68,
+        79
+      ]
+    ],
+    "novel_test": [
+      [
+        0,
+        46
+      ],
+      [
+        0,
+        57
+      ],
+      [
+        1,
+        47
+      ],
+      [
+        1,
+        56
+      ],
+      [
+        2,
+        45
+      ],
+      [
+        2,
+        59
+      ],
+      [
+        3,
+        44
+      ],
+      [
+        3,
+        58
+      ],
+      [
+        4,
+        23
+      ],
+      [
+        4,
+        32
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        5,
+        33
+      ],
+      [
+        6,
+        20
+      ],
+      [
+        6,
+        34
+      ],
+      [
+        7,
+        21
+      ],
+      [
+        7,
+        35
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        21,
+        35
+      ],
+      [
+        22,
+        33
+      ],
+      [
+        23,
+        32
+      ],
+      [
+        44,
+        58
+      ],
+      [
+        45,
+        59
+      ],
+      [
+        46,
+        57
+      ],
+      [
+        47,
+        56
+      ]
+    ]
+  },
+  "sizes": {
+    "train": 48,
+    "role_test_queries": 96,
+    "novel_test_queries": 24
+  },
+  "disjointness_note": "TRAIN, ROLE_TEST, and NOVEL_TEST query pairs are disjoint across the frozen benchmark. No held-out target is supplied here.",
+  "withheld_from_this_packet": [
+    "ROLE_TEST and NOVEL_TEST target labels",
+    "the certified 56-block relation outside what is literally revealed by TRAIN",
+    "block or habitat IDs",
+    "SFP/FFF/PP/pp coordinates or code words",
+    "ADMIT/support/XOR/completion tables",
+    "automorphism labels or groups",
+    "Issue-014 neural outcomes and representation diagnostics",
+    "Surface 14",
+    "the Issue-015 Owner expectation about the audit outcome"
+  ]
+}

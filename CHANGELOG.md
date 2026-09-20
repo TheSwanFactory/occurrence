@@ -3,6 +3,34 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.8.5] - 2026-09-19
+
+### Added
+
+- PR #51 adds Issue 012's independent execution replay and follow-up, Issue
+  013's deterministic disposition-stability audit, and the completed Issue 014
+  readable-algebraic and tied-Event-identity experiments.
+- Close Issue 015 at terminal interpretation `C3`. Literal function
+  supervision forces 0/96 ROLE and 0/24 NOVEL queries; minimal role-neutral
+  triad semantics forces 96/96 ROLE but 0/24 NOVEL queries. Exact
+  triad-symmetric designated-query cross-entropy reaches robust ROLE transfer
+  in 0/8 seeds, while TRAIN-only relational competition against all 243 local
+  corruptions reaches exact relation and exact ROLE in 8/8 seeds with exact
+  baseline replication. This is narrow sufficiency relative to query
+  cross-entropy on seen triads, with no necessity, NOVEL, global-relation or
+  unique-law claim.
+- Add the Issue 015 closure index and reproduction guide, and restore its
+  revision-pinned blind input packet with both raw-byte and normalized semantic
+  hashes verified against the accepted audit.
+
+### Changed
+
+- PR #50 corrects the Issue 011 closure index and provenance references,
+  distinguishing unchanged scientific artifacts from commitment-ancestry
+  checks that cannot pass on squash-merged `main`.
+- Advance the `topographo` package and editable lock entry from 0.8.4 to 0.8.5;
+  dependencies are unchanged.
+
 ## [0.8.4] - 2026-09-12
 
 ### Added

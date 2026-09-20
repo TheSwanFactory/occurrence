@@ -1,0 +1,443 @@
+{
+  "artifact_hashes": {
+    "precommit.json": "718bd4c756eb95999422fd0f516517fa5ec227e3e2ddb77c273ab1809eccec8f",
+    "run_015_role.py": "163118e4a5dc6af9589ac98cac7734c1d5bd627d32904741b43e28bf604abadd",
+    "trajectory_directional.json": "66464cb6a62571918002ba31f4cee8562dddd78bcc1ae44685cc5a549b0ba977",
+    "trajectory_triad_symmetric.json": "3f796d234067c469d1cb4378199d5fe790cb84cc372ec5e10bd8897952e13a24"
+  },
+  "benchmark_validation": {
+    "all_role_records_three_distinct_events": true,
+    "all_train_records_three_distinct_events": true,
+    "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+    "derived_alternate_role_count": 96,
+    "derived_alternate_roles_equal_role_test": true,
+    "event_count": 84,
+    "novel_test_present": false,
+    "role_test_count": 96,
+    "role_test_digest": "f000b04566a83a3ff7a9536fe4e1d5f8889b51df269879d757b1b2b60e6b7f37",
+    "role_unique_query_pairs": 96,
+    "status": "PASS",
+    "train_and_role_query_pairs_disjoint": true,
+    "train_count": 48,
+    "train_digest": "ca7178877eed4f4a537deb9fb56e9a66f81a39395298a828b5fb058c6a7c9088",
+    "train_unique_query_pairs": 48
+  },
+  "calibration_selection": {
+    "matched_causal_comparison_available": true,
+    "optimizer_by_arm": {
+      "directional": {
+        "learning_rate": 0.01,
+        "weight_decay": 0.0
+      },
+      "triad_symmetric": {
+        "learning_rate": 0.01,
+        "weight_decay": 0.0
+      }
+    },
+    "selection_key": [
+      26.5,
+      29,
+      0.01,
+      0.0
+    ],
+    "status": "COMMON-CAPACITY"
+  },
+  "comparison_kind": "matched-causal",
+  "created_at_utc": "2026-09-19T17:39:15.071033+00:00",
+  "final_metrics_by_arm_and_seed": {
+    "directional": {
+      "3000": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -2466.6432291666665,
+        "role_margin_median": -2275.0,
+        "role_margin_minimum": -6838.0,
+        "role_test_accuracy": 0.03125
+      },
+      "3001": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -5098.209309895833,
+        "role_margin_median": -5298.078125,
+        "role_margin_minimum": -17481.0,
+        "role_test_accuracy": 0.010416666666666666
+      },
+      "3002": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -2357.5046895345054,
+        "role_margin_median": -2053.875,
+        "role_margin_minimum": -7600.0,
+        "role_test_accuracy": 0.020833333333333332
+      },
+      "3003": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -2661.6633097330728,
+        "role_margin_median": -2642.125,
+        "role_margin_minimum": -7872.0,
+        "role_test_accuracy": 0.020833333333333332
+      },
+      "3004": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -3854.4119262695312,
+        "role_margin_median": -3068.328125,
+        "role_margin_minimum": -12402.0,
+        "role_test_accuracy": 0.020833333333333332
+      },
+      "3005": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -3274.5726725260415,
+        "role_margin_median": -2839.125,
+        "role_margin_minimum": -11240.0,
+        "role_test_accuracy": 0.010416666666666666
+      },
+      "3006": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -2952.088144938151,
+        "role_margin_median": -2617.3125,
+        "role_margin_minimum": -9382.0,
+        "role_test_accuracy": 0.03125
+      },
+      "3007": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -3181.6434733072915,
+        "role_margin_median": -3011.0,
+        "role_margin_minimum": -8242.0,
+        "role_test_accuracy": 0.020833333333333332
+      }
+    },
+    "triad_symmetric": {
+      "3000": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -784.7593627373377,
+        "role_margin_median": -408.6719512939453,
+        "role_margin_minimum": -3406.14404296875,
+        "role_test_accuracy": 0.09375
+      },
+      "3001": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -168.60295904676119,
+        "role_margin_median": -102.20378112792969,
+        "role_margin_minimum": -1495.9346923828125,
+        "role_test_accuracy": 0.16666666666666666
+      },
+      "3002": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -445.26457792520523,
+        "role_margin_median": -223.1981430053711,
+        "role_margin_minimum": -2694.41015625,
+        "role_test_accuracy": 0.125
+      },
+      "3003": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -407.59357166290283,
+        "role_margin_median": -210.1217041015625,
+        "role_margin_minimum": -2648.44970703125,
+        "role_test_accuracy": 0.11458333333333333
+      },
+      "3004": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -628.5720467567444,
+        "role_margin_median": -328.9296569824219,
+        "role_margin_minimum": -3340.575439453125,
+        "role_test_accuracy": 0.09375
+      },
+      "3005": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "role_margin_mean": -308.3812063932419,
+        "role_margin_median": -193.30687713623047,
+        "role_margin_minimum": -1877.2689208984375,
+        "role_test_accuracy": 0.15625
+      },
+      "3006": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -614.0606080094973,
+        "role_margin_median": -370.798095703125,
+        "role_margin_minimum": -2794.629150390625,
+        "role_test_accuracy": 0.11458333333333333
+      },
+      "3007": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "role_margin_mean": -652.5173952827851,
+        "role_margin_median": -230.46115112304688,
+        "role_margin_minimum": -7618.63232421875,
+        "role_test_accuracy": 0.15625
+      }
+    }
+  },
+  "information_exposure": "Production execution with the complete curated Issue-015.03 packet: 84 opaque Event IDs, 48 TRAIN records, and 96 evaluation-only ROLE_TEST records. No NOVEL_TEST data, Issue 016 content, SFP/Fano/habitat coordinates, or certified completion tables were accessed. Optimizer calibration received TRAIN records only.",
+  "interpretation": {
+    "all_bins": {
+      "R0": "NO-COMMON-CAPACITY: matched comparison unavailable; report only capacity diagnostics",
+      "R1": "neither arm has >=7/8 seeds reaching t_role95: this score family does not yield robust ROLE transfer; exact role symmetry alone is insufficient here",
+      "R2": "Arm T has >=7/8 seeds reaching t_role95 and Arm D has <7/8: role-neutral triad score constitution is sufficient relative to the matched directional scorer for robust seen-triad consequence",
+      "R3": "both arms have >=7/8 seeds reaching t_role95: the matched scalar-scoring family succeeds, but the experiment does not isolate role symmetry as the decisive cause",
+      "R4": "Arm D has >=7/8 seeds reaching t_role95 and Arm T has <7/8: role symmetry is not beneficial in this setup"
+    },
+    "bin": "R1",
+    "definition": "neither arm has >=7/8 seeds reaching t_role95: this score family does not yield robust ROLE transfer; exact role symmetry alone is insufficient here",
+    "necessity_inferred": false,
+    "seed_level_exceptions": []
+  },
+  "matched_scored_initialization_audit": {
+    "3000": {
+      "byte_identical": true,
+      "directional_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec",
+      "triad_symmetric_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec"
+    },
+    "3001": {
+      "byte_identical": true,
+      "directional_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745",
+      "triad_symmetric_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745"
+    },
+    "3002": {
+      "byte_identical": true,
+      "directional_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe",
+      "triad_symmetric_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe"
+    },
+    "3003": {
+      "byte_identical": true,
+      "directional_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156",
+      "triad_symmetric_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156"
+    },
+    "3004": {
+      "byte_identical": true,
+      "directional_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b",
+      "triad_symmetric_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b"
+    },
+    "3005": {
+      "byte_identical": true,
+      "directional_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a",
+      "triad_symmetric_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a"
+    },
+    "3006": {
+      "byte_identical": true,
+      "directional_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8",
+      "triad_symmetric_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8"
+    },
+    "3007": {
+      "byte_identical": true,
+      "directional_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d",
+      "triad_symmetric_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d"
+    }
+  },
+  "paired_final_differences": [
+    {
+      "seed": 3000,
+      "triad_minus_directional_final_margin_mean": 1681.883866429329,
+      "triad_minus_directional_final_margin_median": 1866.3280487060547,
+      "triad_minus_directional_final_margin_minimum": 3431.85595703125,
+      "triad_minus_directional_final_role_accuracy": 0.0625
+    },
+    {
+      "seed": 3001,
+      "triad_minus_directional_final_margin_mean": 4929.6063508490715,
+      "triad_minus_directional_final_margin_median": 5195.87434387207,
+      "triad_minus_directional_final_margin_minimum": 15985.065307617188,
+      "triad_minus_directional_final_role_accuracy": 0.15625
+    },
+    {
+      "seed": 3002,
+      "triad_minus_directional_final_margin_mean": 1912.2401116093001,
+      "triad_minus_directional_final_margin_median": 1830.676856994629,
+      "triad_minus_directional_final_margin_minimum": 4905.58984375,
+      "triad_minus_directional_final_role_accuracy": 0.10416666666666667
+    },
+    {
+      "seed": 3003,
+      "triad_minus_directional_final_margin_mean": 2254.06973807017,
+      "triad_minus_directional_final_margin_median": 2432.0032958984375,
+      "triad_minus_directional_final_margin_minimum": 5223.55029296875,
+      "triad_minus_directional_final_role_accuracy": 0.09375
+    },
+    {
+      "seed": 3004,
+      "triad_minus_directional_final_margin_mean": 3225.839879512787,
+      "triad_minus_directional_final_margin_median": 2739.398468017578,
+      "triad_minus_directional_final_margin_minimum": 9061.424560546875,
+      "triad_minus_directional_final_role_accuracy": 0.07291666666666667
+    },
+    {
+      "seed": 3005,
+      "triad_minus_directional_final_margin_mean": 2966.1914661327996,
+      "triad_minus_directional_final_margin_median": 2645.8181228637695,
+      "triad_minus_directional_final_margin_minimum": 9362.731079101562,
+      "triad_minus_directional_final_role_accuracy": 0.14583333333333334
+    },
+    {
+      "seed": 3006,
+      "triad_minus_directional_final_margin_mean": 2338.0275369286537,
+      "triad_minus_directional_final_margin_median": 2246.514404296875,
+      "triad_minus_directional_final_margin_minimum": 6587.370849609375,
+      "triad_minus_directional_final_role_accuracy": 0.08333333333333333
+    },
+    {
+      "seed": 3007,
+      "triad_minus_directional_final_margin_mean": 2529.1260780245066,
+      "triad_minus_directional_final_margin_median": 2780.538848876953,
+      "triad_minus_directional_final_margin_minimum": 623.36767578125,
+      "triad_minus_directional_final_role_accuracy": 0.13541666666666666
+    }
+  ],
+  "paired_final_summary": {
+    "role_accuracy_difference_mean": 0.10677083333333333,
+    "role_accuracy_difference_median": 0.09895833333333334,
+    "role_margin_mean_difference_mean": 2729.623128444577,
+    "role_margin_mean_difference_median": 2433.57680747658
+  },
+  "precommit": {
+    "content_sha256": "718bd4c756eb95999422fd0f516517fa5ec227e3e2ddb77c273ab1809eccec8f",
+    "modified_after_role_metrics": false,
+    "package_readback_revision": "45f62ae4a246ffbbd7747f0c18c21ee1a72c66a31aad2b7e598837ec00d77321",
+    "read_back_before_any_role_metric": true
+  },
+  "schema": "occurrence.gpt.01504.analysis.v1",
+  "scientific_fences": [
+    "No discovery or evaluation of the global 56-block relation.",
+    "No NOVEL blocks or NOVEL metric.",
+    "No SFP/Fano/habitat coordinates.",
+    "No claim for a preferred OT learning law.",
+    "No claim that Event embeddings contain a unique readable algebra.",
+    "No necessity claim for symmetry.",
+    "No claim that every consequence-learning problem reduces to permutation invariance.",
+    "No language-scale, physical Event, or physical Outcome semantics claim."
+  ],
+  "scored_execution_audit": {
+    "all_runs_completed_horizon": true,
+    "arms": [
+      "directional",
+      "triad_symmetric"
+    ],
+    "early_stops": 0,
+    "extra_seeds": 0,
+    "horizon_updates_each": 16384,
+    "novel_metrics_computed": false,
+    "outcome_dependent_reruns": 0,
+    "role_examples_in_training": 0,
+    "runs": 16,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007
+    ]
+  },
+  "seeds_reaching": {
+    "directional": {
+      "t_fit": 8,
+      "t_role95": 0,
+      "t_role_exact": 0,
+      "t_triad_exact": 0
+    },
+    "triad_symmetric": {
+      "t_fit": 8,
+      "t_role95": 0,
+      "t_role_exact": 0,
+      "t_triad_exact": 0
+    }
+  },
+  "status": "COMPLETE",
+  "temporal_quantities": {
+    "directional": {
+      "3000": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3001": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3002": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3003": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3004": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3005": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3006": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3007": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      }
+    },
+    "triad_symmetric": {
+      "3000": {
+        "t_fit": 64,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3001": {
+        "t_fit": 64,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3002": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3003": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3004": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3005": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3006": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      },
+      "3007": {
+        "t_fit": 32,
+        "t_role95": null,
+        "t_role_exact": null,
+        "t_triad_exact": null
+      }
+    }
+  }
+}
