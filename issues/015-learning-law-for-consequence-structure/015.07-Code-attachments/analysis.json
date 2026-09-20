@@ -1,0 +1,1101 @@
+{
+  "artifact_hashes": {
+    "accepted_predecessor_trajectory": "3f796d234067c469d1cb4378199d5fe790cb84cc372ec5e10bd8897952e13a24",
+    "precommit.json": "e14af6665f09b670cad4499585e9f39ade935ed7676e682ed0954bd68c3b5928",
+    "run_015_competitive.py": "35e8fac1d1f6de2d83cdb2bc9d957f0287183ea9567c82f5d38f4931e0562949",
+    "trajectory_query_ce.json": "b1a0d2a637826e1337462edb3809c655e26c7e1f019a98625d972f865ab20362",
+    "trajectory_relational_competition.json": "55f55e4afcf826297f437b0d15c6e3de94effa7146c5e7e83a80e6190af20f34"
+  },
+  "baseline_replication": {
+    "accepted_environment": {
+      "cpu_count": 14,
+      "device": "cpu",
+      "machine": "arm64",
+      "numpy": "2.5.1",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]",
+      "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+      "requested_threads": 10,
+      "torch": "2.14.0",
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 10
+    },
+    "all_shared_checkpoints_exact": true,
+    "all_shared_final_behavior_exact": true,
+    "all_shared_temporals_exact": true,
+    "causal_interpretation_permitted": true,
+    "environment_difference_count": 0,
+    "environment_differences": [],
+    "final_shared_checkpoint_exact_by_seed": {
+      "3000": true,
+      "3001": true,
+      "3002": true,
+      "3003": true,
+      "3004": true,
+      "3005": true,
+      "3006": true,
+      "3007": true
+    },
+    "policy": {
+      "comparison": "exact recursive equality of every shared stored value",
+      "environment_differences_are_reported_but_do_not_waive_a_deviation": true,
+      "failure_disposition": "C0/BLOCKED-BASELINE-REPLICATION; no causal interpretation",
+      "material_mismatch_definition": "any shared-value deviation",
+      "new_relation_diagnostics_excluded": true,
+      "shared_scope": "seed and initialization hash; optimizer; completed horizon and early-stop flag; every checkpoint update, designated-query CE/accuracy, ROLE metrics, all-three-completion metrics, ROLE margins, parameter norms, and Event embedding diagnostics; derived shared temporal and final behavior",
+      "timestamps_and_new_provenance_excluded": true,
+      "tuning_to_recover_replication": false
+    },
+    "reference_content_sha256": "3f796d234067c469d1cb4378199d5fe790cb84cc372ec5e10bd8897952e13a24",
+    "scoring_environment": {
+      "cpu_count": 14,
+      "device": "cpu",
+      "machine": "arm64",
+      "numpy": "2.5.1",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]",
+      "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+      "requested_threads": 10,
+      "torch": "2.14.0",
+      "torch_num_interop_threads": 1,
+      "torch_num_threads": 10
+    },
+    "shared_value_deviation_count": 0,
+    "shared_value_deviations": [],
+    "status": "PASS",
+    "temporal_comparison_by_seed": {
+      "3000": {
+        "exact": true,
+        "expected": {
+          "t_fit": 64,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 64,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3001": {
+        "exact": true,
+        "expected": {
+          "t_fit": 64,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 64,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3002": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3003": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3004": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3005": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3006": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      },
+      "3007": {
+        "exact": true,
+        "expected": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        },
+        "observed": {
+          "t_fit": 32,
+          "t_role95": null,
+          "t_role_exact": null,
+          "t_triad_exact": null
+        }
+      }
+    }
+  },
+  "benchmark_validation": {
+    "all_role_records_three_distinct_events": true,
+    "all_train_records_three_distinct_events": true,
+    "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+    "derived_alternate_role_count": 96,
+    "derived_alternate_roles_equal_role_test": true,
+    "event_count": 84,
+    "novel_test_present": false,
+    "role_test_count": 96,
+    "role_test_digest": "f000b04566a83a3ff7a9536fe4e1d5f8889b51df269879d757b1b2b60e6b7f37",
+    "role_unique_query_pairs": 96,
+    "status": "PASS",
+    "train_and_role_query_pairs_disjoint": true,
+    "train_count": 48,
+    "train_digest": "ca7178877eed4f4a537deb9fb56e9a66f81a39395298a828b5fb058c6a7c9088",
+    "train_unique_query_pairs": 48
+  },
+  "created_at_utc": "2026-09-19T21:31:49.986587+00:00",
+  "environment": {
+    "cpu_count": 14,
+    "device": "cpu",
+    "machine": "arm64",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]",
+    "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+    "requested_threads": 10,
+    "torch": "2.14.0",
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 10
+  },
+  "final_metrics_by_arm_and_seed": {
+    "query_ce": {
+      "3000": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -1197.4940107663472,
+        "local_relation_margin_median": -649.3279113769531,
+        "local_relation_margin_minimum": -3406.14404296875,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 1197.9066162109375,
+        "role_margin_mean": -784.7593627373377,
+        "role_margin_median": -408.6719512939453,
+        "role_margin_minimum": -3406.14404296875,
+        "role_test_accuracy": 0.09375,
+        "role_test_correct": 9,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      },
+      "3001": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "local_relation_margin_mean": -267.803999265035,
+        "local_relation_margin_median": -135.2104721069336,
+        "local_relation_margin_minimum": -1495.9346923828125,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 267.84832763671875,
+        "role_margin_mean": -168.60295904676119,
+        "role_margin_median": -102.20378112792969,
+        "role_margin_minimum": -1495.9346923828125,
+        "role_test_accuracy": 0.16666666666666666,
+        "role_test_correct": 16,
+        "strict_relation_domination_count": 0,
+        "strict_relation_domination_fraction": 0.0,
+        "triads_all_three_roles_correct": 0
+      },
+      "3002": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -683.3565324544907,
+        "local_relation_margin_median": -450.6736755371094,
+        "local_relation_margin_minimum": -2694.41015625,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 683.7733764648438,
+        "role_margin_mean": -445.26457792520523,
+        "role_margin_median": -223.1981430053711,
+        "role_margin_minimum": -2694.41015625,
+        "role_test_accuracy": 0.125,
+        "role_test_correct": 12,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      },
+      "3003": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -635.8958279291788,
+        "local_relation_margin_median": -345.00770568847656,
+        "local_relation_margin_minimum": -2648.44970703125,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 637.2429809570312,
+        "role_margin_mean": -407.59357166290283,
+        "role_margin_median": -210.1217041015625,
+        "role_margin_minimum": -2648.44970703125,
+        "role_test_accuracy": 0.11458333333333333,
+        "role_test_correct": 11,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      },
+      "3004": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -977.9724882443746,
+        "local_relation_margin_median": -521.7178344726562,
+        "local_relation_margin_minimum": -3340.575439453125,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 978.274169921875,
+        "role_margin_mean": -628.5720467567444,
+        "role_margin_median": -328.9296569824219,
+        "role_margin_minimum": -3340.575439453125,
+        "role_test_accuracy": 0.09375,
+        "role_test_correct": 9,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      },
+      "3005": {
+        "fraction_triads_all_three_roles_correct": 0.0,
+        "local_relation_margin_mean": -467.7409819761912,
+        "local_relation_margin_median": -277.2406005859375,
+        "local_relation_margin_minimum": -1877.2689208984375,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 467.7947998046875,
+        "role_margin_mean": -308.3812063932419,
+        "role_margin_median": -193.30687713623047,
+        "role_margin_minimum": -1877.2689208984375,
+        "role_test_accuracy": 0.15625,
+        "role_test_correct": 15,
+        "strict_relation_domination_count": 0,
+        "strict_relation_domination_fraction": 0.0,
+        "triads_all_three_roles_correct": 0
+      },
+      "3006": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -952.7748115062714,
+        "local_relation_margin_median": -646.6217651367188,
+        "local_relation_margin_minimum": -2794.629150390625,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 953.2250366210938,
+        "role_margin_mean": -614.0606080094973,
+        "role_margin_median": -370.798095703125,
+        "role_margin_minimum": -2794.629150390625,
+        "role_test_accuracy": 0.11458333333333333,
+        "role_test_correct": 11,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      },
+      "3007": {
+        "fraction_triads_all_three_roles_correct": 0.020833333333333332,
+        "local_relation_margin_mean": -1055.7573874791462,
+        "local_relation_margin_median": -452.710693359375,
+        "local_relation_margin_minimum": -7618.63232421875,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 1056.7650146484375,
+        "role_margin_mean": -652.5173952827851,
+        "role_margin_median": -230.46115112304688,
+        "role_margin_minimum": -7618.63232421875,
+        "role_test_accuracy": 0.15625,
+        "role_test_correct": 15,
+        "strict_relation_domination_count": 1,
+        "strict_relation_domination_fraction": 0.020833333333333332,
+        "triads_all_three_roles_correct": 1
+      }
+    },
+    "relational_competition": {
+      "3000": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 64.34362411499023,
+        "local_relation_margin_median": 51.39642333984375,
+        "local_relation_margin_minimum": 30.2110595703125,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 93.38911565144856,
+        "role_margin_median": 92.094970703125,
+        "role_margin_minimum": 30.2110595703125,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3001": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 53.15457661946615,
+        "local_relation_margin_median": 40.090240478515625,
+        "local_relation_margin_minimum": 27.3780517578125,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 73.870667775472,
+        "role_margin_median": 62.23699951171875,
+        "role_margin_minimum": 27.3780517578125,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3002": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 67.50936381022136,
+        "local_relation_margin_median": 54.292236328125,
+        "local_relation_margin_minimum": 30.9049072265625,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 103.73647562662761,
+        "role_margin_median": 99.17572021484375,
+        "role_margin_minimum": 30.9140625,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3003": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 54.09542338053385,
+        "local_relation_margin_median": 56.76348876953125,
+        "local_relation_margin_minimum": 28.8797607421875,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 81.95428276062012,
+        "role_margin_median": 75.67764282226562,
+        "role_margin_minimum": 28.8797607421875,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3004": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 45.37645594278971,
+        "local_relation_margin_median": 37.390106201171875,
+        "local_relation_margin_minimum": 28.386474609375,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 58.945908546447754,
+        "role_margin_median": 50.532806396484375,
+        "role_margin_minimum": 28.55755615234375,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3005": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 81.8751729329427,
+        "local_relation_margin_median": 68.15298461914062,
+        "local_relation_margin_minimum": 29.56146240234375,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 112.7112356821696,
+        "role_margin_median": 97.4925537109375,
+        "role_margin_minimum": 29.56146240234375,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3006": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 64.34387842814128,
+        "local_relation_margin_median": 64.08984375,
+        "local_relation_margin_minimum": 25.84820556640625,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 96.99291547139485,
+        "role_margin_median": 86.79547119140625,
+        "role_margin_minimum": 25.84820556640625,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      },
+      "3007": {
+        "fraction_triads_all_three_roles_correct": 1.0,
+        "local_relation_margin_mean": 84.05161031087239,
+        "local_relation_margin_median": 85.22894287109375,
+        "local_relation_margin_minimum": 18.1968994140625,
+        "query_accuracy": 1.0,
+        "query_cross_entropy": 0.0,
+        "relation_cross_entropy": 0.0,
+        "role_margin_mean": 130.3168042500814,
+        "role_margin_median": 124.02679443359375,
+        "role_margin_minimum": 20.1690673828125,
+        "role_test_accuracy": 1.0,
+        "role_test_correct": 96,
+        "strict_relation_domination_count": 48,
+        "strict_relation_domination_fraction": 1.0,
+        "triads_all_three_roles_correct": 48
+      }
+    }
+  },
+  "information_exposure": "Production execution with the complete curated Issue-015.03 packet: 84 opaque Event IDs, 48 TRAIN records, and 96 evaluation-only ROLE_TEST records; the authorized Issue-015.05/015.06 texts; and the accepted Issue-015.04 artifacts. No NOVEL_TEST data, Issue 016 content, SFP/Fano/habitat coordinates, global completion relation, or certified completion tables were accessed. Both optimization objectives received only the 48 TRAIN positives and deterministic structures derived from them; current ROLE_TEST metrics were first computed after an externally published and read-back precommit.",
+  "interpretation": {
+    "all_bins": {
+      "C0": "BLOCKED-BASELINE-REPLICATION -> no causal interpretation",
+      "C1": "R reaches sustained t_relation95 in <7/8 seeds -> the tested scorer/optimizer does not reliably realize the relational competition objective; optimization/capacity boundary",
+      "C2": "R reaches sustained t_relation95 in >=7/8 seeds but sustained t_role95 in <7/8 -> contradiction with the proved objective-to-consequence implication; treat as implementation/audit failure, not a scientific result",
+      "C3": "R reaches sustained t_role95 in >=7/8 seeds while replicated Q remains <7/8 -> role-neutral competitive relation learning is sufficient, relative to designated-query CE, for robust seen-triad consequence",
+      "C4": "both Q and R reach sustained t_role95 in >=7/8 seeds -> ROLE succeeds but the objective contrast is not isolated",
+      "C5": "Q reaches sustained t_role95 in >=7/8 seeds while R does not -> predecessor baseline behavior changed or relational competition is harmful; inspect without positive reinterpretation"
+    },
+    "baseline_gate_passed": true,
+    "bin": "C3",
+    "causal_interpretation_available": true,
+    "definition": "R reaches sustained t_role95 in >=7/8 seeds while replicated Q remains <7/8 -> role-neutral competitive relation learning is sufficient, relative to designated-query CE, for robust seen-triad consequence",
+    "necessity_inferred": false,
+    "precedence": [
+      "C0 first if exact baseline replication fails",
+      "C4 if Q and R both robustly reach t_role95",
+      "C5 if Q alone robustly reaches t_role95",
+      "C3 if R alone robustly reaches t_role95",
+      "C1 if neither reaches robust t_role95 and R reaches t_relation95 in <7/8",
+      "C2 otherwise (R relation95 robust but ROLE95 not robust)"
+    ]
+  },
+  "matched_scored_initialization_audit": {
+    "3000": {
+      "byte_identical": true,
+      "query_ce_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec",
+      "relational_competition_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec"
+    },
+    "3001": {
+      "byte_identical": true,
+      "query_ce_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745",
+      "relational_competition_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745"
+    },
+    "3002": {
+      "byte_identical": true,
+      "query_ce_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe",
+      "relational_competition_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe"
+    },
+    "3003": {
+      "byte_identical": true,
+      "query_ce_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156",
+      "relational_competition_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156"
+    },
+    "3004": {
+      "byte_identical": true,
+      "query_ce_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b",
+      "relational_competition_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b"
+    },
+    "3005": {
+      "byte_identical": true,
+      "query_ce_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a",
+      "relational_competition_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a"
+    },
+    "3006": {
+      "byte_identical": true,
+      "query_ce_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8",
+      "relational_competition_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8"
+    },
+    "3007": {
+      "byte_identical": true,
+      "query_ce_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d",
+      "relational_competition_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d"
+    }
+  },
+  "objective_to_consequence_checkpoint_violations": [],
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.01,
+    "name": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0.0
+  },
+  "paired_final_differences": [
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 1261.8376348813374,
+      "relational_minus_query_local_relation_margin_median": 700.7243347167969,
+      "relational_minus_query_local_relation_margin_minimum": 3436.3551025390625,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -1197.9066162109375,
+      "relational_minus_query_role_margin_mean": 878.1484783887863,
+      "relational_minus_query_role_margin_median": 500.7669219970703,
+      "relational_minus_query_role_margin_minimum": 3436.3551025390625,
+      "relational_minus_query_role_test_accuracy": 0.90625,
+      "relational_minus_query_role_test_correct": 87,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3000
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 1.0,
+      "relational_minus_query_local_relation_margin_mean": 320.9585758845011,
+      "relational_minus_query_local_relation_margin_median": 175.30071258544922,
+      "relational_minus_query_local_relation_margin_minimum": 1523.312744140625,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -267.84832763671875,
+      "relational_minus_query_role_margin_mean": 242.4736268222332,
+      "relational_minus_query_role_margin_median": 164.44078063964844,
+      "relational_minus_query_role_margin_minimum": 1523.312744140625,
+      "relational_minus_query_role_test_accuracy": 0.8333333333333334,
+      "relational_minus_query_role_test_correct": 80,
+      "relational_minus_query_strict_relation_domination_count": 48,
+      "relational_minus_query_strict_relation_domination_fraction": 1.0,
+      "relational_minus_query_triads_all_three_roles_correct": 48,
+      "seed": 3001
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 750.865896264712,
+      "relational_minus_query_local_relation_margin_median": 504.9659118652344,
+      "relational_minus_query_local_relation_margin_minimum": 2725.3150634765625,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -683.7733764648438,
+      "relational_minus_query_role_margin_mean": 549.0010535518328,
+      "relational_minus_query_role_margin_median": 322.37386322021484,
+      "relational_minus_query_role_margin_minimum": 2725.32421875,
+      "relational_minus_query_role_test_accuracy": 0.875,
+      "relational_minus_query_role_test_correct": 84,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3002
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 689.9912513097127,
+      "relational_minus_query_local_relation_margin_median": 401.7711944580078,
+      "relational_minus_query_local_relation_margin_minimum": 2677.3294677734375,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -637.2429809570312,
+      "relational_minus_query_role_margin_mean": 489.54785442352295,
+      "relational_minus_query_role_margin_median": 285.7993469238281,
+      "relational_minus_query_role_margin_minimum": 2677.3294677734375,
+      "relational_minus_query_role_test_accuracy": 0.8854166666666666,
+      "relational_minus_query_role_test_correct": 85,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3003
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 1023.3489441871643,
+      "relational_minus_query_local_relation_margin_median": 559.1079406738281,
+      "relational_minus_query_local_relation_margin_minimum": 3368.9619140625,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -978.274169921875,
+      "relational_minus_query_role_margin_mean": 687.5179553031921,
+      "relational_minus_query_role_margin_median": 379.46246337890625,
+      "relational_minus_query_role_margin_minimum": 3369.1329956054688,
+      "relational_minus_query_role_test_accuracy": 0.90625,
+      "relational_minus_query_role_test_correct": 87,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3004
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 1.0,
+      "relational_minus_query_local_relation_margin_mean": 549.6161549091339,
+      "relational_minus_query_local_relation_margin_median": 345.3935852050781,
+      "relational_minus_query_local_relation_margin_minimum": 1906.8303833007812,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -467.7947998046875,
+      "relational_minus_query_role_margin_mean": 421.0924420754115,
+      "relational_minus_query_role_margin_median": 290.79943084716797,
+      "relational_minus_query_role_margin_minimum": 1906.8303833007812,
+      "relational_minus_query_role_test_accuracy": 0.84375,
+      "relational_minus_query_role_test_correct": 81,
+      "relational_minus_query_strict_relation_domination_count": 48,
+      "relational_minus_query_strict_relation_domination_fraction": 1.0,
+      "relational_minus_query_triads_all_three_roles_correct": 48,
+      "seed": 3005
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 1017.1186899344126,
+      "relational_minus_query_local_relation_margin_median": 710.7116088867188,
+      "relational_minus_query_local_relation_margin_minimum": 2820.4773559570312,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -953.2250366210938,
+      "relational_minus_query_role_margin_mean": 711.0535234808922,
+      "relational_minus_query_role_margin_median": 457.59356689453125,
+      "relational_minus_query_role_margin_minimum": 2820.4773559570312,
+      "relational_minus_query_role_test_accuracy": 0.8854166666666666,
+      "relational_minus_query_role_test_correct": 85,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3006
+    },
+    {
+      "relational_minus_query_fraction_triads_all_three_roles_correct": 0.9791666666666666,
+      "relational_minus_query_local_relation_margin_mean": 1139.8089977900186,
+      "relational_minus_query_local_relation_margin_median": 537.9396362304688,
+      "relational_minus_query_local_relation_margin_minimum": 7636.8292236328125,
+      "relational_minus_query_query_accuracy": 0.0,
+      "relational_minus_query_query_cross_entropy": 0.0,
+      "relational_minus_query_relation_cross_entropy": -1056.7650146484375,
+      "relational_minus_query_role_margin_mean": 782.8341995328665,
+      "relational_minus_query_role_margin_median": 354.4879455566406,
+      "relational_minus_query_role_margin_minimum": 7638.8013916015625,
+      "relational_minus_query_role_test_accuracy": 0.84375,
+      "relational_minus_query_role_test_correct": 81,
+      "relational_minus_query_strict_relation_domination_count": 47,
+      "relational_minus_query_strict_relation_domination_fraction": 0.9791666666666666,
+      "relational_minus_query_triads_all_three_roles_correct": 47,
+      "seed": 3007
+    }
+  ],
+  "paired_final_summary": {
+    "relational_minus_query_fraction_triads_all_three_roles_correct_mean": 0.984375,
+    "relational_minus_query_fraction_triads_all_three_roles_correct_median": 0.9791666666666666,
+    "relational_minus_query_local_relation_margin_mean_mean": 844.1932681451241,
+    "relational_minus_query_local_relation_margin_mean_median": 883.9922930995623,
+    "relational_minus_query_local_relation_margin_median_mean": 491.98936557769775,
+    "relational_minus_query_local_relation_margin_median_median": 521.4527740478516,
+    "relational_minus_query_local_relation_margin_minimum_mean": 3261.9264068603516,
+    "relational_minus_query_local_relation_margin_minimum_median": 2772.896209716797,
+    "relational_minus_query_query_accuracy_mean": 0.0,
+    "relational_minus_query_query_accuracy_median": 0.0,
+    "relational_minus_query_query_cross_entropy_mean": 0.0,
+    "relational_minus_query_query_cross_entropy_median": 0.0,
+    "relational_minus_query_relation_cross_entropy_mean": -780.3537902832031,
+    "relational_minus_query_relation_cross_entropy_median": -818.4992065429688,
+    "relational_minus_query_role_margin_mean_mean": 595.2086416973422,
+    "relational_minus_query_role_margin_mean_median": 618.2595044275124,
+    "relational_minus_query_role_margin_median_mean": 344.465539932251,
+    "relational_minus_query_role_margin_median_median": 338.43090438842773,
+    "relational_minus_query_role_margin_minimum_mean": 3262.195457458496,
+    "relational_minus_query_role_margin_minimum_median": 2772.9007873535156,
+    "relational_minus_query_role_test_accuracy_mean": 0.8723958333333334,
+    "relational_minus_query_role_test_accuracy_median": 0.8802083333333333,
+    "relational_minus_query_role_test_correct_mean": 83.75,
+    "relational_minus_query_role_test_correct_median": 84.5,
+    "relational_minus_query_strict_relation_domination_count_mean": 47.25,
+    "relational_minus_query_strict_relation_domination_count_median": 47.0,
+    "relational_minus_query_strict_relation_domination_fraction_mean": 0.984375,
+    "relational_minus_query_strict_relation_domination_fraction_median": 0.9791666666666666,
+    "relational_minus_query_triads_all_three_roles_correct_mean": 47.25,
+    "relational_minus_query_triads_all_three_roles_correct_median": 47.0
+  },
+  "precommit": {
+    "content_sha256": "e14af6665f09b670cad4499585e9f39ade935ed7676e682ed0954bd68c3b5928",
+    "modified_after_role_metrics": false,
+    "package_readback_revision": "9cb58b90c299807b88a475eabb2af37ae1126a5e64a0bfe7e7207b9384f31a38",
+    "read_back_before_any_current_role_metric": true
+  },
+  "schema": "occurrence.gpt.01507.analysis.v1",
+  "scientific_fences": [
+    "No discovery or evaluation of the global 56-block relation.",
+    "No NOVEL blocks or NOVEL metric.",
+    "No SFP/Fano/habitat coordinates.",
+    "No claim for a preferred, unique, optimal, or necessary OT learning law.",
+    "No claim that Event embeddings contain a unique readable algebra.",
+    "No necessity claim for relational competition or symmetry.",
+    "No claim that every consequence-learning problem reduces to permutation invariance.",
+    "No language-scale, physical Event, or physical Outcome semantics claim.",
+    "No claim that R discovers its local alternatives spontaneously; N(T) is licensed TRAIN-derived structure."
+  ],
+  "scored_execution_audit": {
+    "all_runs_completed_horizon": true,
+    "arms": [
+      "query_ce",
+      "relational_competition"
+    ],
+    "early_stops": 0,
+    "extra_seeds": 0,
+    "horizon_updates_each": 16384,
+    "hyperparameter_searches": 0,
+    "novel_examples_in_training": 0,
+    "novel_metrics_computed": false,
+    "outcome_dependent_reruns": 0,
+    "query_role_augmented_examples": 0,
+    "relation_corruptions_per_positive": 243,
+    "role_examples_in_training": 0,
+    "runs": 16,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007
+    ]
+  },
+  "seed_level_exceptions": [
+    {
+      "query_ce": {
+        "t_fit": 64,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3000
+    },
+    {
+      "query_ce": {
+        "t_fit": 64,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3001
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 32,
+        "t_role_exact": 64
+      },
+      "seed": 3002
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3003
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3004
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3005
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3006
+    },
+    {
+      "query_ce": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "reasons": [
+        "arms_differ_on_sustained_role95"
+      ],
+      "relational_competition": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "seed": 3007
+    }
+  ],
+  "seeds_reaching": {
+    "query_ce": {
+      "t_fit": 8,
+      "t_relation95": 0,
+      "t_relation_exact": 0,
+      "t_role95": 0,
+      "t_role_exact": 0
+    },
+    "relational_competition": {
+      "t_fit": 8,
+      "t_relation95": 8,
+      "t_relation_exact": 8,
+      "t_role95": 8,
+      "t_role_exact": 8
+    }
+  },
+  "status": "COMPLETE",
+  "temporal_quantities": {
+    "query_ce": {
+      "3000": {
+        "t_fit": 64,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3001": {
+        "t_fit": 64,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3002": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3003": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3004": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3005": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3006": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      },
+      "3007": {
+        "t_fit": 32,
+        "t_relation95": null,
+        "t_relation_exact": null,
+        "t_role95": null,
+        "t_role_exact": null
+      }
+    },
+    "relational_competition": {
+      "3000": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3001": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3002": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 32,
+        "t_role_exact": 64
+      },
+      "3003": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3004": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3005": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3006": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      },
+      "3007": {
+        "t_fit": 64,
+        "t_relation95": 64,
+        "t_relation_exact": 64,
+        "t_role95": 64,
+        "t_role_exact": 64
+      }
+    }
+  }
+}

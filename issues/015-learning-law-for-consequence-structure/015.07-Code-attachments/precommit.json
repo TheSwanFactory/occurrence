@@ -1,0 +1,3416 @@
+{
+  "accepted_baseline_trajectory_validation": {
+    "all_runs_completed_horizon": true,
+    "arm": "triad_symmetric",
+    "checkpoint_count_per_run": 42,
+    "checkpoint_schedule_exact": true,
+    "content_sha256": "3f796d234067c469d1cb4378199d5fe790cb84cc372ec5e10bd8897952e13a24",
+    "horizon_updates": 16384,
+    "novel_metrics_computed": false,
+    "optimizer_exact": true,
+    "schema": "occurrence.gpt.01504.trajectory.v1",
+    "seed_count": 8,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007
+    ],
+    "status": "PASS"
+  },
+  "baseline_replication_policy": {
+    "comparison": "exact recursive equality of every shared stored value",
+    "environment_differences_are_reported_but_do_not_waive_a_deviation": true,
+    "failure_disposition": "C0/BLOCKED-BASELINE-REPLICATION; no causal interpretation",
+    "material_mismatch_definition": "any shared-value deviation",
+    "new_relation_diagnostics_excluded": true,
+    "shared_scope": "seed and initialization hash; optimizer; completed horizon and early-stop flag; every checkpoint update, designated-query CE/accuracy, ROLE metrics, all-three-completion metrics, ROLE margins, parameter norms, and Event embedding diagnostics; derived shared temporal and final behavior",
+    "timestamps_and_new_provenance_excluded": true,
+    "tuning_to_recover_replication": false
+  },
+  "benchmark_validation": {
+    "all_role_records_three_distinct_events": true,
+    "all_train_records_three_distinct_events": true,
+    "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+    "derived_alternate_role_count": 96,
+    "derived_alternate_roles_equal_role_test": true,
+    "event_count": 84,
+    "novel_test_present": false,
+    "role_test_count": 96,
+    "role_test_digest": "f000b04566a83a3ff7a9536fe4e1d5f8889b51df269879d757b1b2b60e6b7f37",
+    "role_unique_query_pairs": 96,
+    "status": "PASS",
+    "train_and_role_query_pairs_disjoint": true,
+    "train_count": 48,
+    "train_digest": "ca7178877eed4f4a537deb9fb56e9a66f81a39395298a828b5fb058c6a7c9088",
+    "train_unique_query_pairs": 48
+  },
+  "candidate_mask": {
+    "identical_between_arms": true,
+    "legal_classes_per_query": 82,
+    "masked": [
+      "query Event a",
+      "query Event b"
+    ],
+    "universe_classes": 84
+  },
+  "checkpoint_metrics": [
+    "designated-query cross-entropy and accuracy",
+    "relation-level cross-entropy",
+    "strict relation domination fraction/count",
+    "minimum/median/mean local-relation margin",
+    "ROLE_TEST accuracy/count/exact 96/96 boolean",
+    "fraction/count of 48 triads with all three completions correct",
+    "minimum/median/mean ROLE_TEST completion margin",
+    "per-tensor and total parameter L2 norms",
+    "Event embedding Frobenius norm and entropy effective rank"
+  ],
+  "created_at_utc": "2026-09-19T19:56:48.190278+00:00",
+  "deterministic_settings": {
+    "device": "cpu",
+    "dtype": "float32",
+    "numpy_random_seeded": true,
+    "python_random_seeded": true,
+    "pythonhashseed": "0",
+    "thread_count_frozen": 10,
+    "torch_seed_per_run": true,
+    "torch_use_deterministic_algorithms": true
+  },
+  "environment": {
+    "cpu_count": 14,
+    "device": "cpu",
+    "machine": "arm64",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.11 (main, Jun  4 2025, 17:42:58) [Clang 20.1.4 ]",
+    "python_executable": "/Users/ernest/GitHub/occurrence/.venv/bin/python",
+    "requested_threads": 10,
+    "torch": "2.14.0",
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 10
+  },
+  "hyperparameter_search": false,
+  "information_exposure": "Production execution with the complete curated Issue-015.03 packet: 84 opaque Event IDs, 48 TRAIN records, and 96 evaluation-only ROLE_TEST records; the authorized Issue-015.05/015.06 texts; and the accepted Issue-015.04 artifacts. No NOVEL_TEST data, Issue 016 content, SFP/Fano/habitat coordinates, global completion relation, or certified completion tables were accessed. Both optimization objectives received only the 48 TRAIN positives and deterministic structures derived from them; current ROLE_TEST metrics were first computed after an externally published and read-back precommit.",
+  "interpretation_bins": {
+    "C0": "BLOCKED-BASELINE-REPLICATION -> no causal interpretation",
+    "C1": "R reaches sustained t_relation95 in <7/8 seeds -> the tested scorer/optimizer does not reliably realize the relational competition objective; optimization/capacity boundary",
+    "C2": "R reaches sustained t_relation95 in >=7/8 seeds but sustained t_role95 in <7/8 -> contradiction with the proved objective-to-consequence implication; treat as implementation/audit failure, not a scientific result",
+    "C3": "R reaches sustained t_role95 in >=7/8 seeds while replicated Q remains <7/8 -> role-neutral competitive relation learning is sufficient, relative to designated-query CE, for robust seen-triad consequence",
+    "C4": "both Q and R reach sustained t_role95 in >=7/8 seeds -> ROLE succeeds but the objective contrast is not isolated",
+    "C5": "Q reaches sustained t_role95 in >=7/8 seeds while R does not -> predecessor baseline behavior changed or relational competition is harmful; inspect without positive reinterpretation"
+  },
+  "interpretation_precedence": [
+    "C0 first if exact baseline replication fails",
+    "C4 if Q and R both robustly reach t_role95",
+    "C5 if Q alone robustly reaches t_role95",
+    "C3 if R alone robustly reaches t_role95",
+    "C1 if neither reaches robust t_role95 and R reaches t_relation95 in <7/8",
+    "C2 otherwise (R relation95 robust but ROLE95 not robust)"
+  ],
+  "matched_initialization_audit": {
+    "3000": {
+      "byte_identical": true,
+      "query_ce_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec",
+      "relational_competition_sha256": "8e307a83c0de4ed744ddb5fd7747341eb9768d0b0879cb2246d7129d14cfebec"
+    },
+    "3001": {
+      "byte_identical": true,
+      "query_ce_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745",
+      "relational_competition_sha256": "b1b6dea327e86cf21005be98dcb1d32f29ed934c82a31be40921c2ecf7ca6745"
+    },
+    "3002": {
+      "byte_identical": true,
+      "query_ce_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe",
+      "relational_competition_sha256": "748b2e14b150bab491824999fff38392cdf30dfca0c7cd6fa1dd60a46b6189fe"
+    },
+    "3003": {
+      "byte_identical": true,
+      "query_ce_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156",
+      "relational_competition_sha256": "70a2a6c6c83474a704ea01f910ee278ab9a16b986f460c275e853348d66aa156"
+    },
+    "3004": {
+      "byte_identical": true,
+      "query_ce_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b",
+      "relational_competition_sha256": "c2e224c7caf1c6dc81e2c0bd28090f6f37a910aa37b2300f9165a3d0e2dab33b"
+    },
+    "3005": {
+      "byte_identical": true,
+      "query_ce_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a",
+      "relational_competition_sha256": "5a1fcc1778bcae6f7e0d990f4e59f08f29dd38ae583f3c5f7c24891d31ecec0a"
+    },
+    "3006": {
+      "byte_identical": true,
+      "query_ce_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8",
+      "relational_competition_sha256": "7edca68c4fc2fbc21b677cedd18d56043de4ea6a5925f880b8e0a9aa098487f8"
+    },
+    "3007": {
+      "byte_identical": true,
+      "query_ce_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d",
+      "relational_competition_sha256": "5c3c4ba0ff840b8dea60840b8769b387c9fbd7937053365b643c893af6bc855d"
+    }
+  },
+  "metric_definitions": {
+    "embedding_effective_rank": "exp(-sum_i p_i log p_i)), p_i=s_i^2/sum_j s_j^2 for the 64 singular values of the 84x64 Event embedding",
+    "local_relation_margin": "s(T) minus max corruption score in N(T)",
+    "margin_median": "ordinary sample median (mean of the middle two for even n)",
+    "role_margin": "correct score minus maximum other legal-candidate score",
+    "strict_relation_domination": "s(T) > max_{T' in N(T)} s(T')"
+  },
+  "objective_definitions": {
+    "query_ce": {
+      "backpropagated_diagnostics": [
+        "query_cross_entropy"
+      ],
+      "classes_per_row": 82,
+      "definition": "mean of 48 designated-query cross-entropies; each row scores the target and 81 other legal candidates with s({a,b,c})",
+      "positive_class": "designated TRAIN target position",
+      "role_augmentation": false,
+      "rows": 48
+    },
+    "relational_competition": {
+      "backpropagated_diagnostics": [
+        "relation_cross_entropy"
+      ],
+      "classes_per_row": 244,
+      "definition": "mean of 48 relation-level cross-entropies; each row is [s(T), s(T'_1), ..., s(T'_243)] for frozen N(T)",
+      "hard_negative_mining": false,
+      "margin": null,
+      "positive_class": 0,
+      "role_records_used": false,
+      "rows": 48,
+      "sampling": null,
+      "temperature": 1.0,
+      "weights": null
+    }
+  },
+  "objective_to_consequence_implication": {
+    "all_presentation_wrong_candidate_memberships_checked": 11664,
+    "all_three_presentations_checked": 144,
+    "alternate_queries_checked": 96,
+    "alternate_wrong_candidate_memberships_checked": 7776,
+    "every_designated_completion_maps_to_positive": true,
+    "every_wrong_completion_maps_to_its_positive_N_T": true,
+    "mechanical_check_data": "TRAIN only",
+    "proof": "Fix T={a,b,c}. For alternate query {a,c} with target b, every legal wrong candidate d is distinct from a, b, and c, so {a,c,d} is the pair-preserving corruption in N(T). Strict domination s(T)>s({a,c,d}) for every one of the 81 wrong d makes b the unique argmax. The same argument for query {b,c} makes a the unique argmax. Applying both arguments to each of the 48 TRAIN-derived positive triads proves all 96 derived alternate-role completions. The argument uses only Event distinctness, candidate exclusion, N(T), and score symmetry.",
+    "role_record_argument_or_loader": false,
+    "statement": "If, for every observed triad T, its score is strictly greater than the score of every T' in N(T), then all 96 ROLE_TEST completions derived from those 48 triads are predicted correctly by pair-to-third argmax.",
+    "status": "PASS",
+    "strict_domination_forces_unique_argmax": true,
+    "wrong_legal_candidates_per_alternate_query": 81
+  },
+  "optimizer": {
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "eps": 1e-08,
+    "full_batch": true,
+    "learning_rate": 0.01,
+    "name": "AdamW",
+    "schedule": "constant",
+    "weight_decay": 0.0
+  },
+  "parameter_inventory": {
+    "block_indexed_parameter": false,
+    "candidate_specific_bias": false,
+    "event_tables": 1,
+    "pair_indexed_lookup": false,
+    "positional_role_label": false,
+    "role_specific_event_table": false,
+    "tensor_count": 5,
+    "tensors": [
+      {
+        "count": 5376,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "event.weight",
+        "requires_grad": true,
+        "shape": [
+          84,
+          64
+        ]
+      },
+      {
+        "count": 65536,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "linear1.weight",
+        "requires_grad": true,
+        "shape": [
+          256,
+          256
+        ]
+      },
+      {
+        "count": 256,
+        "dtype": "torch.float32",
+        "initialization": "zeros",
+        "name": "linear1.bias",
+        "requires_grad": true,
+        "shape": [
+          256
+        ]
+      },
+      {
+        "count": 256,
+        "dtype": "torch.float32",
+        "initialization": "xavier_uniform_gain_1.0",
+        "name": "linear2.weight",
+        "requires_grad": true,
+        "shape": [
+          1,
+          256
+        ]
+      },
+      {
+        "count": 1,
+        "dtype": "torch.float32",
+        "initialization": "zeros",
+        "name": "linear2.bias",
+        "requires_grad": true,
+        "shape": [
+          1
+        ]
+      }
+    ],
+    "trainable_scalar_count": 71425
+  },
+  "pinned_inputs": {
+    "accepted_predecessor": {
+      "analysis": {
+        "content_sha256": "d5de3f676accd94724ee8a4bd5c13a4eee778eca799d9fd1114502a1c8387987",
+        "path": "issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/analysis.json",
+        "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4&path=issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/analysis.json"
+      },
+      "precommit": {
+        "content_sha256": "718bd4c756eb95999422fd0f516517fa5ec227e3e2ddb77c273ab1809eccec8f",
+        "path": "issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/precommit.json",
+        "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4&path=issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/precommit.json"
+      },
+      "result": {
+        "content_sha256": "a9b33345e911e68f53c1abe995cb5bfe99c9dd466d310a34d5c2715e8d57de79",
+        "path": "issues/015-learning-law-for-consequence-structure/015.04-Coder-role-neutral-triad-learning-result-GPT.md",
+        "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4&path=issues/015-learning-law-for-consequence-structure/015.04-Coder-role-neutral-triad-learning-result-GPT.md"
+      },
+      "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+      "runner": {
+        "content_sha256": "163118e4a5dc6af9589ac98cac7734c1d5bd627d32904741b43e28bf604abadd",
+        "path": "issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/run_015_role.py",
+        "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4&path=issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/run_015_role.py"
+      },
+      "triad_symmetric_trajectory": {
+        "content_sha256": "3f796d234067c469d1cb4378199d5fe790cb84cc372ec5e10bd8897952e13a24",
+        "path": "issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/trajectory_triad_symmetric.json",
+        "revision": "27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@27612778252e0858328b4325154d07f068eafe6cc961dfe36c0861cbf79b5bf4&path=issues/015-learning-law-for-consequence-structure/015.04-Code-attachments/trajectory_triad_symmetric.json"
+      }
+    },
+    "benchmark": {
+      "content_sha256": "c9b7a0931ff9cd5e3084048bfa190dbaf7aef22f514d6fc2f0851b2abdc70dac",
+      "path": "issues/015-learning-law-for-consequence-structure/015.03-Code-attachments/role-learning-benchmark.json",
+      "revision": "6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731",
+      "uri": "quilt+s3://protology#package=occurrence/gpt@6ceb230dae9e069011062ca88b13198042cee20b0ba8dc85ec4f3cf1623f5731&path=issues/015-learning-law-for-consequence-structure/015.03-Code-attachments/role-learning-benchmark.json"
+    },
+    "handed_task": {
+      "content_sha256": "71538e0d59c50d818969e5b4a752b863826de2568eb3640610e9be35301e6614",
+      "path": "issues/015-learning-law-for-consequence-structure/015.06-GPT-role-neutral-competitive-consequence-learning-Coder.md",
+      "revision": "522ff97ad90d2462595398ed0271ff6219d15ce68a0ca654c7cbd4490445aaac",
+      "uri": "quilt+s3://protology#package=occurrence/gpt@522ff97ad90d2462595398ed0271ff6219d15ce68a0ca654c7cbd4490445aaac&path=issues/015-learning-law-for-consequence-structure/015.06-GPT-role-neutral-competitive-consequence-learning-Coder.md"
+    },
+    "owner_adjudication": {
+      "content_sha256": "b2ad42ddc793f5d9aac6a2ac9db6fd579ad03601d214b652f44b2ece60b9685a",
+      "path": "issues/015-learning-law-for-consequence-structure/015.05-GPT-Owner-adjudication-of-role-neutral-score-result.md",
+      "revision": "522ff97ad90d2462595398ed0271ff6219d15ce68a0ca654c7cbd4490445aaac",
+      "uri": "quilt+s3://protology#package=occurrence/gpt@522ff97ad90d2462595398ed0271ff6219d15ce68a0ca654c7cbd4490445aaac&path=issues/015-learning-law-for-consequence-structure/015.05-GPT-Owner-adjudication-of-role-neutral-score-result.md"
+    }
+  },
+  "publication": {
+    "base_entry_count_observed": 337,
+    "base_revision_observed": "522ff97ad90d2462595398ed0271ff6219d15ce68a0ca654c7cbd4490445aaac",
+    "expected_entry_count_after_publish": 338,
+    "expected_manifest_delta": 1,
+    "final_bundle_additional_entries": 5,
+    "immutable_after_role_metrics": true,
+    "path": "issues/015-learning-law-for-consequence-structure/015.07-Code-attachments/precommit.json",
+    "publish_against": "latest",
+    "workflow": "occurrence"
+  },
+  "relation_substrate": {
+    "all_neighborhoods_exactly_243_unique": true,
+    "branches_per_positive": 3,
+    "constituent_pair_count": 144,
+    "constituent_pair_order": "(x,y), (x,z), (y,z) for canonical x<y<z",
+    "constituent_pairs": [
+      [
+        0,
+        68
+      ],
+      [
+        0,
+        79
+      ],
+      [
+        68,
+        79
+      ],
+      [
+        3,
+        67
+      ],
+      [
+        3,
+        81
+      ],
+      [
+        67,
+        81
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        5,
+        75
+      ],
+      [
+        64,
+        75
+      ],
+      [
+        6,
+        63
+      ],
+      [
+        6,
+        77
+      ],
+      [
+        63,
+        77
+      ],
+      [
+        7,
+        62
+      ],
+      [
+        7,
+        76
+      ],
+      [
+        62,
+        76
+      ],
+      [
+        8,
+        19
+      ],
+      [
+        8,
+        29
+      ],
+      [
+        19,
+        29
+      ],
+      [
+        8,
+        40
+      ],
+      [
+        8,
+        50
+      ],
+      [
+        40,
+        50
+      ],
+      [
+        9,
+        18
+      ],
+      [
+        9,
+        28
+      ],
+      [
+        18,
+        28
+      ],
+      [
+        10,
+        16
+      ],
+      [
+        10,
+        31
+      ],
+      [
+        16,
+        31
+      ],
+      [
+        10,
+        39
+      ],
+      [
+        10,
+        52
+      ],
+      [
+        39,
+        52
+      ],
+      [
+        11,
+        38
+      ],
+      [
+        11,
+        53
+      ],
+      [
+        38,
+        53
+      ],
+      [
+        12,
+        56
+      ],
+      [
+        12,
+        78
+      ],
+      [
+        56,
+        78
+      ],
+      [
+        13,
+        46
+      ],
+      [
+        13,
+        68
+      ],
+      [
+        46,
+        68
+      ],
+      [
+        14,
+        42
+      ],
+      [
+        14,
+        71
+      ],
+      [
+        42,
+        71
+      ],
+      [
+        14,
+        55
+      ],
+      [
+        14,
+        82
+      ],
+      [
+        55,
+        82
+      ],
+      [
+        15,
+        54
+      ],
+      [
+        15,
+        83
+      ],
+      [
+        54,
+        83
+      ],
+      [
+        16,
+        52
+      ],
+      [
+        16,
+        73
+      ],
+      [
+        52,
+        73
+      ],
+      [
+        11,
+        17
+      ],
+      [
+        11,
+        30
+      ],
+      [
+        17,
+        30
+      ],
+      [
+        17,
+        53
+      ],
+      [
+        17,
+        72
+      ],
+      [
+        53,
+        72
+      ],
+      [
+        18,
+        41
+      ],
+      [
+        18,
+        60
+      ],
+      [
+        41,
+        60
+      ],
+      [
+        20,
+        49
+      ],
+      [
+        20,
+        77
+      ],
+      [
+        49,
+        77
+      ],
+      [
+        23,
+        37
+      ],
+      [
+        23,
+        65
+      ],
+      [
+        37,
+        65
+      ],
+      [
+        25,
+        45
+      ],
+      [
+        25,
+        80
+      ],
+      [
+        45,
+        80
+      ],
+      [
+        25,
+        59
+      ],
+      [
+        25,
+        66
+      ],
+      [
+        59,
+        66
+      ],
+      [
+        26,
+        43
+      ],
+      [
+        26,
+        83
+      ],
+      [
+        43,
+        83
+      ],
+      [
+        27,
+        55
+      ],
+      [
+        27,
+        71
+      ],
+      [
+        55,
+        71
+      ],
+      [
+        27,
+        42
+      ],
+      [
+        27,
+        82
+      ],
+      [
+        42,
+        82
+      ],
+      [
+        28,
+        51
+      ],
+      [
+        28,
+        60
+      ],
+      [
+        51,
+        60
+      ],
+      [
+        29,
+        50
+      ],
+      [
+        29,
+        61
+      ],
+      [
+        50,
+        61
+      ],
+      [
+        32,
+        37
+      ],
+      [
+        32,
+        74
+      ],
+      [
+        37,
+        74
+      ],
+      [
+        33,
+        36
+      ],
+      [
+        33,
+        75
+      ],
+      [
+        36,
+        75
+      ],
+      [
+        34,
+        49
+      ],
+      [
+        34,
+        63
+      ],
+      [
+        49,
+        63
+      ],
+      [
+        35,
+        48
+      ],
+      [
+        35,
+        62
+      ],
+      [
+        48,
+        62
+      ],
+      [
+        22,
+        36
+      ],
+      [
+        22,
+        64
+      ],
+      [
+        36,
+        64
+      ],
+      [
+        30,
+        38
+      ],
+      [
+        30,
+        72
+      ],
+      [
+        38,
+        72
+      ],
+      [
+        31,
+        39
+      ],
+      [
+        31,
+        73
+      ],
+      [
+        39,
+        73
+      ],
+      [
+        19,
+        40
+      ],
+      [
+        19,
+        61
+      ],
+      [
+        40,
+        61
+      ],
+      [
+        9,
+        41
+      ],
+      [
+        9,
+        51
+      ],
+      [
+        41,
+        51
+      ],
+      [
+        15,
+        43
+      ],
+      [
+        15,
+        70
+      ],
+      [
+        43,
+        70
+      ],
+      [
+        24,
+        44
+      ],
+      [
+        24,
+        81
+      ],
+      [
+        44,
+        81
+      ],
+      [
+        12,
+        47
+      ],
+      [
+        12,
+        69
+      ],
+      [
+        47,
+        69
+      ],
+      [
+        21,
+        48
+      ],
+      [
+        21,
+        76
+      ],
+      [
+        48,
+        76
+      ],
+      [
+        26,
+        54
+      ],
+      [
+        26,
+        70
+      ],
+      [
+        54,
+        70
+      ],
+      [
+        13,
+        57
+      ],
+      [
+        13,
+        79
+      ],
+      [
+        57,
+        79
+      ],
+      [
+        24,
+        58
+      ],
+      [
+        24,
+        67
+      ],
+      [
+        58,
+        67
+      ],
+      [
+        4,
+        65
+      ],
+      [
+        4,
+        74
+      ],
+      [
+        65,
+        74
+      ],
+      [
+        2,
+        66
+      ],
+      [
+        2,
+        80
+      ],
+      [
+        66,
+        80
+      ],
+      [
+        1,
+        69
+      ],
+      [
+        1,
+        78
+      ],
+      [
+        69,
+        78
+      ]
+    ],
+    "corruptions_per_branch": 81,
+    "corruptions_per_positive": 243,
+    "derivation_data": "48 TRAIN records only",
+    "neighborhood_audits": [
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              0,
+              68
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "58075f45f612c35cd73a87ebea5ff852abc497f983d75ec77f3082fe7f47ccef",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              0,
+              79
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "ec0e7eaab2a8432a5cd142863e8b4369089e66674359b307eb7cbf4fe64f9225",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              68,
+              79
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "6709c7a43ed79569f7753dbe09beaed9d8f41741e54d831dfb557131d8d1e8dd",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 0,
+        "positive_triad": [
+          0,
+          68,
+          79
+        ],
+        "sha256": "f0e7d4b9bacb1eb3af8a8b8a62028d7d06b9373abf91559672b08e20a75254b8",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              3,
+              67
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e902fb406eaf127d2f098ffd15d9511edfb59934f5f0b90439182618ebcdc13f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              3,
+              81
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "2a239ab8c4e1a6863499657ce382a431b75239967acb5f6c24efeafe2b9cae33",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              67,
+              81
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d31f1843c0cdc4a9ec3b4cf43f6f367234c0982e50a45ebcff6fc90ad6a71015",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 1,
+        "positive_triad": [
+          3,
+          67,
+          81
+        ],
+        "sha256": "b765d0d13e88a780832c5a3b257a29007f4a7354d5f8648f7a46445f24704dca",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              5,
+              64
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a83a690de25afccdcd51fc20d25a725630c20a2eb43b2022c27527a56514cf97",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              5,
+              75
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "3c260be0919dd2ccc3efe3fb98379b3f8c75f59053362c0054fa95311e6076ed",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              64,
+              75
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "b083d2cf503f770e8e9288f98371a93bfab5ec8af5cd73d56e2a5dd76a22c5cf",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 2,
+        "positive_triad": [
+          5,
+          64,
+          75
+        ],
+        "sha256": "780c9c40f5c93cda56ad9c13b9e190e54991792516a39ac1a687274c2210ecfd",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              6,
+              63
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "2b796f3608a5473281a6ef7accdb1ad00375550310138a735effcaa99bc0dd99",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              6,
+              77
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "7147cd5be58df673edc0326c9acb282d3ee1065201f1c2f6bb51b44cf7decf29",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              63,
+              77
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "be2d2f1cdd0ebe8a03c02bdac4c885e368b9317af26d5c79bb444dd7aa2ab0c7",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 3,
+        "positive_triad": [
+          6,
+          63,
+          77
+        ],
+        "sha256": "59fbd0802c3c865889f690063df14ddf7c0f4f249c632215c2e26f803bda18ca",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              7,
+              62
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a7ac13efe0827f75830422b217bf6eeaad3b31c51378c300b34323543713448d",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              7,
+              76
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "9afee88fd423b58fe507c70f8c3ff9cc0548411402c4ab0ff5b6c55098ba2a4f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              62,
+              76
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f802d3fd3703dcae316c9f4f47e1b60eef33794c876068e3014694e0053bcb7c",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 4,
+        "positive_triad": [
+          7,
+          62,
+          76
+        ],
+        "sha256": "be3d558b1313537f645dcedba22fc2648c804268662cb83a5a2a6ee271ba8adc",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              8,
+              19
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "48a4cec0e648c4bb65b258ad68bcf7f8bf24c8b0b914dd25123d72dcb4fd837f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              8,
+              29
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "401d201ba6521c7e661ef379e06cd05b8500b72fa6b7acef0bcf54ca1055e7d6",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              19,
+              29
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "073da76ec60cda3f8d272036f6500ade52320d9d903bd0bbc5463519aba4d56c",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 5,
+        "positive_triad": [
+          8,
+          19,
+          29
+        ],
+        "sha256": "92e03b7ca8453e462df0ad4b26e38677e478b22d43802487d741ac742ff6c4cd",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              8,
+              40
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "18e3243558e916fea18a3f116d3b7bdbf96657d65699e7324013b7bcaedf95a5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              8,
+              50
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f448cb497a1a634cf07cc5c856b3a962167360a5e6423612eb502c4ee878fd49",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              40,
+              50
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "094f7b55f2d850a478579cb383226b0cb6681e5b67dff04224477d51d389fc9a",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 6,
+        "positive_triad": [
+          8,
+          40,
+          50
+        ],
+        "sha256": "719d5808b1bd3d59412e78b5e0bbc52fd4541b66e56aab98be56b76ce58fb63d",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              9,
+              18
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "279607f85c492c6fc53230903ea46b63bf0944160b8f42a89350ff215e441bdb",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              9,
+              28
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0ddb5b41c42e3d16938ec6eba1ecf2843ece1a1a2ad43efbfb199705e1a9c60a",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              18,
+              28
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "af090564a15f223d1e0281fe3b7e8dee16003f313f7b074ab3eba8cabcebf8c9",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 7,
+        "positive_triad": [
+          9,
+          18,
+          28
+        ],
+        "sha256": "98da1981340bfebb9597ef3ffba9567457429a37203d9dd52836f3404a3cba74",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              10,
+              16
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0aa9b10b1973eb96ebbf4265f2852a14682757c90a66ce98f212a223963eea3d",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              10,
+              31
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "1b7e4f6ac0ede98d9164b5d6a73a25b82d72498cbe58465ac7e76bee8548067b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              16,
+              31
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "64f9b2bc5ccd8cf5c26a6a85195d90fac9854c7ee17928c3afc0495ea9e730d9",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 8,
+        "positive_triad": [
+          10,
+          16,
+          31
+        ],
+        "sha256": "b76de6f1772d0c31d6860558622b8ef02dba2f1f53ca0e706512de8c833135fd",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              10,
+              39
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a6869df49171710d71a3c60b291273341d81fb8d8beb88f5a77c243ae900dd42",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              10,
+              52
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "78f92eedf7abca820b20ff46a04180ca629b93a0b550cef198c90b5254552ca2",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              39,
+              52
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "3614ce412703977479bd461cd8ad76490b7857c7218b9506dcdb4df6bff0fa40",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 9,
+        "positive_triad": [
+          10,
+          39,
+          52
+        ],
+        "sha256": "57a43cb3adba938f4967674ca07ff8d292aa5bf118b601a2a10936ff5faa45bf",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              11,
+              38
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a349c98765ff55ca3a21bddfc7680e3c3e3f4952d9fb419608d4b86b96fcdcd4",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              11,
+              53
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0c2b8c8a2565116ef4fe4a2f1c29f15691f2b10b4276b79539908fe1f4716f80",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              38,
+              53
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "03f691abd19dbb6f494584a22966e8ff9656bb2648cc056cd256f824738a91fb",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 10,
+        "positive_triad": [
+          11,
+          38,
+          53
+        ],
+        "sha256": "7c40a622392eb410bbe49c81bf83ff8c1fabb54c6e67678e9b11fec4649c03c2",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              12,
+              56
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d809d915faf67aa412b2e7f817fe914e5938a82f97db5055c7db4de22687b9c5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              12,
+              78
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "08e3a42ee0ebea7296a75b921f311794e97eaa247a4eea3097791039c32803a5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              56,
+              78
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "c02ae29bf2bd22cff0e6d08bebae0dd29c66b8f7d793de9a2137b73dc0abe71c",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 11,
+        "positive_triad": [
+          12,
+          56,
+          78
+        ],
+        "sha256": "8c001b77dded86b7167f87a6f5e70bba2413f5fcd4708643a20be2f48097970d",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              13,
+              46
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8f1f764960dbb883f0c4acfa0479ededfc962a1173e20d902ad0e847dce0d471",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              13,
+              68
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "85a27221d6d0f9054f3ed5d6cde700492d70bdee5c22f1056f4170495413590e",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              46,
+              68
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "49a3fec03dfc986234f0ca505384dfa7d4bcd3d8094d4a345904b8bf311b6ee5",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 12,
+        "positive_triad": [
+          13,
+          46,
+          68
+        ],
+        "sha256": "77d7fa382e23e8875cb93a08aabff4c867b9dfccec90a0991bcca2e3de11987a",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              14,
+              42
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0e01241f5649d1534f7d88de73e17ff29420f32e3bb8b2c2991d789c48b1872f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              14,
+              71
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "46ed44baad49156d3042d73eec0fcfdf5705ed93cd33741d063cfcfad0b4eba3",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              42,
+              71
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "bfb68d0d7240db09b42f74de6f0a8426af7538162d5c459466aa0379fa099838",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 13,
+        "positive_triad": [
+          14,
+          42,
+          71
+        ],
+        "sha256": "70b64185c51293d211095c96b64d779d1022616e8a61c38ed4e2e8676bf3ad03",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              14,
+              55
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "48cb7fb72277e73fd8363d288278e81a1af617766cfdccb0b961ff312d1e55ed",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              14,
+              82
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "acb795afa2691b15f62b858c54b3dc41ab426536426b26d4ac24518c7339d26c",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              55,
+              82
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "7ac677567d02be8e4748a606c21195879461f8d41508da7e54a4b1f26ba259bd",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 14,
+        "positive_triad": [
+          14,
+          55,
+          82
+        ],
+        "sha256": "3adbe41c392c7bd87e2600d1dd2ec988fa9f7c6470e3909486d3056c77dbfa67",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              15,
+              54
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "66c50bedb911e71e992e70a5be4c7406ee5f12ccd4a88537ed3179dfb365aa07",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              15,
+              83
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "5b5a7f13e5abca378820589271c79fede322feabe1d96de56d402b82102948c5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              54,
+              83
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "7ed8ba8e72e704c892c3576787eaf93f6b0aaa531ab818741cd89e47ad0c2ba1",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 15,
+        "positive_triad": [
+          15,
+          54,
+          83
+        ],
+        "sha256": "58c244f366554cfc10ae45b9fefba57810498214e3b8a2d43ad20c6a383aad7d",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              16,
+              52
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "47c28610ed938f37ffc444d53b9dd924be570229a94534b5093ea9eba222150c",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              16,
+              73
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "9a13c1cb6eb7bf66e2c8fbfb4f9e1a944af7d84d3cb12ce2e5a08fd7f37c493e",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              52,
+              73
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "fed8f077e4301c0e898fcff2e31e7e2cd658d569888aca7de84ce4115c8fdb81",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 16,
+        "positive_triad": [
+          16,
+          52,
+          73
+        ],
+        "sha256": "c8879b8bccd8d912a6d1be2c0b78055b295edce099527f882e2ea593d5c6f2b1",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              11,
+              17
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "731fd6fbe71a24f576d08bb9519eb037cb0d6847ff20d3d8635933a329a37f29",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              11,
+              30
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f4f9724a68e0bac56cb37ae984c1ccf889d55ed1ddf1e3d0ef2e980ccfa78c85",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              17,
+              30
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "06c8e4c2f62e48374c9ffff2ab18afcdd512ab126e2c915a7f2ab3881737f35d",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 17,
+        "positive_triad": [
+          11,
+          17,
+          30
+        ],
+        "sha256": "a1e702322b393d1cea3a6abb583ce2163c96ea158441c80f76021f5f7c579a99",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              17,
+              53
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "4acc4b96f86cf57cd29e43ddb3b705422abd06021f58b8e2cec854e5a6c2c7b6",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              17,
+              72
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "03bcccc40b94c36449a5dbbb4f6e811a78bd9f260865e396e7f8eb4abb07e6df",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              53,
+              72
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "55f7fe4a8be74016e71adfa592ebd20d858e2e82e762e277a9ab8a5ed188b6ea",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 18,
+        "positive_triad": [
+          17,
+          53,
+          72
+        ],
+        "sha256": "ed1e5d518582ae6a6d8930a2de8b1c14b1113a730671405c1d26c0e7935550d6",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              18,
+              41
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "aa5b6716e5934aae60a4774c78c4218e1725dcbac32f88255c1305f2e4c0029e",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              18,
+              60
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "4f92bd1aec1771564a45e56d4b69c675197ffe7f3216a772a3d9248bc30ba89b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              41,
+              60
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0c4565acc9b8d3c6e0c117ff145d2e6f5de56751430d98172eaa0674ec741cb9",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 19,
+        "positive_triad": [
+          18,
+          41,
+          60
+        ],
+        "sha256": "923cc8e91e5a932291f4ec5be8b45879848fad992a4036e98faf1dbba0a313b5",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              20,
+              49
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "182b182d626c939a1ff35c731d8a41cff0964cd1e9f42ec1413b6ad9893093d6",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              20,
+              77
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e34e3cf71fa0319ac7e568f22d065d374fff838d620477f1270b2094d6b6e507",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              49,
+              77
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "06bd54b3a045865517dccf6f10b0291ae3505e381665fa20c2b09c6740e4602c",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 20,
+        "positive_triad": [
+          20,
+          49,
+          77
+        ],
+        "sha256": "87a86d84b87ca503d8c113c697ca8a04c2e047be2470b6f72f66930384920510",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              23,
+              37
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "fb9721cb197ed794d34739f4cfb35a71470b48f885adfe5117a47707086b403d",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              23,
+              65
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "311f20f879493c7381bef3f30e572126dbfac3c48f02f58468575c37ffc0298d",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              37,
+              65
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "dc689c57b80afa74183be5a912a7f21989be5ad4257e70d2295af971c30e0f20",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 21,
+        "positive_triad": [
+          23,
+          37,
+          65
+        ],
+        "sha256": "07acd2cdc9dc9c884f1b01075f4533127d0db145c2f2fbe5827b6aa7033864a0",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              25,
+              45
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "ca3894c284d9d247c9c4fb0c8a3644b6ecd9aa19e9c81754068121baaf728bdc",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              25,
+              80
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "bef16471b6a8c9a4c5d1971b18a06b0066062c5c6ef075da40c6ca8e202bcb2b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              45,
+              80
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8a8b8a43e78e1ba4aa26b983cdd5ec560533ba91735d79459462fcfd91d4a15f",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 22,
+        "positive_triad": [
+          25,
+          45,
+          80
+        ],
+        "sha256": "fab3739ff7df9745bdaab7c450fec3633109c6b570f8f375691f2eec52a6e3c9",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              25,
+              59
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "55b503bf23b13009248db4c5cf369b56aafe189eef5cc286bcc835ca6b5918d7",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              25,
+              66
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "90d8f7d53c1987c4428e35fdc42c0940d241acd8b483fc6e8b7cacec86c61df9",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              59,
+              66
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e9dfeec5524e2b9030313f99b7b4da4b1632d3759390257a7796da4b5a586458",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 23,
+        "positive_triad": [
+          25,
+          59,
+          66
+        ],
+        "sha256": "d85fa4aeddbcf8491ffff2936baafb79c575caa818f183608b51df7b9193310f",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              26,
+              43
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f10575de529cd3ed259e2d790a74cda7c1f3a91051b759093589ba4f613420ca",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              26,
+              83
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "6d24083a1be0321685512e05b216c8ee17275e4fe9a99aa64caaebc2634ee42c",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              43,
+              83
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8313a7266b7202108b0df85571d207e45da7071418ef9adf0de4d0739a2a1c6f",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 24,
+        "positive_triad": [
+          26,
+          43,
+          83
+        ],
+        "sha256": "d829911fefaebe707c8fd8078947b9067ad3d2d654b0d289cb812b4d58cfb1c0",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              27,
+              55
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d93063bbf13642d02816189b77d9e411d1cedfe0a8a2b58ba69061315e80b703",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              27,
+              71
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a1eeb10de4240813eaee2adb68b80cf416cbca4679e6ecb29d720b89061674e1",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              55,
+              71
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "051f081d90a74174d7d170f6e86cb5017998ae78f4a20fb69fc5120a3bcb742a",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 25,
+        "positive_triad": [
+          27,
+          55,
+          71
+        ],
+        "sha256": "649a5bc3cc019ca9f0f46a792d08f1b21eae82b3bd0a6bb4eb9bfe7adbf0e30e",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              27,
+              42
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f48b43a1ff2a827cd199d2bd32f8ec7e3f1921600e3f4e1adf119871ea111144",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              27,
+              82
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "774354fe82a465a0ee51d77a505006aca67a6b7fa860071b488fe69d69cba281",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              42,
+              82
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d49e852062253f945527bac76a37d46062f38ee31da9e3d3363ea124a7ccf196",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 26,
+        "positive_triad": [
+          27,
+          42,
+          82
+        ],
+        "sha256": "f7aeb31c14d7daa38b5d2a72c8bd4061ce28ad948636bf30bcd2440bbe5a0e5d",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              28,
+              51
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "c22e29d5e2e1a5d1a518390e0edf081a435fecb4de730a575066901b01ab3896",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              28,
+              60
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "52b59c5ce3d9d1b2856a32186757a5e8c0a2b451a465a78ae410195c935a0922",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              51,
+              60
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "fd9018a2652debe51f6a800a2886fe954a0c61b74d1c251dcde6ca137577b7ac",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 27,
+        "positive_triad": [
+          28,
+          51,
+          60
+        ],
+        "sha256": "0c9ed7e1fe9dba4b5d3735a4b6f3fb6340191c4ab4f3e17154cc254ad1c1f447",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              29,
+              50
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "81575943baa8cf1c1cdb28ae2890c9ff244a761e01c665ef8caae785297801f1",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              29,
+              61
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "9ea35dd1e672a7fb6f0a3e270d24b6f59dce3db8ca9de81f5b32ad17f49b86f4",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              50,
+              61
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "46ac9f2aff849ad6fe8bf07f8d4a2fec13c96e56ad92162a9b8a415a03d2421f",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 28,
+        "positive_triad": [
+          29,
+          50,
+          61
+        ],
+        "sha256": "481c319b5cc7eca6afc50b82d2c5b3252c55941dcf68dd3202ae499811729241",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              32,
+              37
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8ec033efffc61ebaa85ddac7dfcd2794c32ba11f4e7f404787d8f0b8f76019ee",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              32,
+              74
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "c3dff6fa6e22daa0747d8b21463faf3be4a9ba7212fa80c0287db9be50b84cfb",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              37,
+              74
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8a7dc42fbd20bab544d2c62a1a7f19a9dc97024a8d47f121ced5d971202f06bd",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 29,
+        "positive_triad": [
+          32,
+          37,
+          74
+        ],
+        "sha256": "f8caa855be5561fec05afc2fa6aa2a8c3fa7e611f93b37090dbb1fb9b12ebdae",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              33,
+              36
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "1e18d14f0c384daf2f09ddea199214ba62addcaf1c22aa1d32aa44b6db95155b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              33,
+              75
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "468bbcfd0940c98bafa9c712005decff095bbcca7808a1c9dffa5bc946627746",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              36,
+              75
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "747408fb7923ae14860decb6ac627d9df805feadd3fd39025e81a2535a9d0f5a",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 30,
+        "positive_triad": [
+          33,
+          36,
+          75
+        ],
+        "sha256": "6268f96f09c01659a5754af826dc2eedbe1cd60442fd3db36938268fdfe56d2a",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              34,
+              49
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "7934e648d83d082fae1f4ba1e8a7abb905cd773fe86ed91f577bf23533550242",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              34,
+              63
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "ae6235513b32db5b8f87987d7816690f595f35d5db2489c7f5a2134835fe46f5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              49,
+              63
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e4e7b33b1bf2bb6101315be432c12749fe12aa0d8b62201a10babfece4202a64",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 31,
+        "positive_triad": [
+          34,
+          49,
+          63
+        ],
+        "sha256": "f0ab5e1d18a2f41dd1d2a35d880a15f2f52a467f9fe2364940bedcd06d8fdba3",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              35,
+              48
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0ad4b21f97ecc0781566f3b9b2c3de2507cd6474b4fb646e2a8f20d54019db2c",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              35,
+              62
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "48c48d41b3bf0e7ec51d0e35a379869753c320be68c01dbb77ebfb416408ffb0",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              48,
+              62
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "674214ce98fbd7b1a616c8b405c560fc3ca5e27f5f2d3b53fece19cd93752e0f",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 32,
+        "positive_triad": [
+          35,
+          48,
+          62
+        ],
+        "sha256": "a5308a8e6003f8215281d003a055a26afe06fb36ecab23da57fe4c9d54f5ff5b",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              22,
+              36
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8656fe5598c6efba25107013d94ce3650eef861aae7f5ac2c3649897c4e8d016",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              22,
+              64
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e607685a5f02eb0b0771b7d2624c457be24d5e09b8d62f5494ed0a3a7c37c6fb",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              36,
+              64
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "5d75bbf67c31562568761990d8bfb9f7c0b90a51fc0f7a74f1f5690499b42e05",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 33,
+        "positive_triad": [
+          22,
+          36,
+          64
+        ],
+        "sha256": "ee9a3ac39c864678ed96d5bd9ff4293f2f863b142785aaf155d99345f94c7038",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              30,
+              38
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "913f11c012a2f7194bb43f89be4bc758bce98c63f5eedb1bc5f040cead69cf90",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              30,
+              72
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "1ae87d432375176f014ef60df29c0ea6402404f2d445f9b3d61debd9a3e4cd9e",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              38,
+              72
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d1409dd0dbef6f0796be79d46db16ac0ba1de838c4a191fcccdd5494a7896017",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 34,
+        "positive_triad": [
+          30,
+          38,
+          72
+        ],
+        "sha256": "d01368769d5686eae9b455b610fb57a9f1e4c426b579304f41df299b834b73c6",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              31,
+              39
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "25745f50548deefb1466e7551972041a906c48945b5cfc9a707f22ee6ba55509",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              31,
+              73
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "247c331e917d13c8e69b192e5739e485e8dee5f50b888a3ccac1f85d9b864be0",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              39,
+              73
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "5fbbf7dda906d0ce3c7b109378ea03c2081c12388c0b884bed502b6d6a2b61ca",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 35,
+        "positive_triad": [
+          31,
+          39,
+          73
+        ],
+        "sha256": "2e4faada3f5c2ffc3869cd9ca26aa9fb1f0dc24186a23e174f6cb28ea0177bd2",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              19,
+              40
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "fdde1312e7e82a7ec68a13b50200e94b4e17c37999450fdb6855b35fd665dae8",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              19,
+              61
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "0ac685ca4487f30db74e14f3b5c6dbe2a842659991e397219141d5edece3a2d9",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              40,
+              61
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8eb47b3a2b2222808a2a32d2973dbba38a9d9f0b1c757cc27727507ca1cb8bfd",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 36,
+        "positive_triad": [
+          19,
+          40,
+          61
+        ],
+        "sha256": "78789aadb4256b48d3e71ad67c75b5a68ead967d4233947fea1c8b0833a3f72f",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              9,
+              41
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "bf579525bf6c0f126c4693a91c1babd587b88ff48defd9fb21a8cc6d2d5b1ecd",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              9,
+              51
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "8fb37aaf8a29837c117b3e0d9c21da9df8d28aebff58d10ed3fa950e26fff9ff",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              41,
+              51
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "c2cd6a928075d67b89bba41503b215c7cfa036033480fdcb906d9add1d68cdcd",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 37,
+        "positive_triad": [
+          9,
+          41,
+          51
+        ],
+        "sha256": "57ddf45a74fa3dbbf0dfba73140b986178c4b6d09381f990d93aceea62b046f5",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              15,
+              43
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "763b377f6d4844248ae0c9a9c44e2189a10cf9a387d17e67a0fab5755c32e34a",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              15,
+              70
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "37d821107324434aa39442b20e29d588d2695ff376b7d736441ed174df642456",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              43,
+              70
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "5aff1a23fc790e6f7c50d2441c7accc6c47c5aea48c37d4f4d56ecd837a42257",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 38,
+        "positive_triad": [
+          15,
+          43,
+          70
+        ],
+        "sha256": "dfe5f41580ff03cf6eb2e821459243117ae096e0889b1a6afe7de9741574d77a",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              24,
+              44
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "1439b5e62e7f6bed62ed55294e1bc2cbda3128529eb5ad116fd1c53e5bf2068b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              24,
+              81
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "1e6f62da1b588e4cfaa40c3c337d90fa5b6fe1800cf25b931cec2d7e318ff50c",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              44,
+              81
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a86e683d2f08ef58df5c9211a4031a4fc67ecdc91f9273cf5754e444fd838eac",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 39,
+        "positive_triad": [
+          24,
+          44,
+          81
+        ],
+        "sha256": "ad26caef361e527651217bda1a707d73ab74a04fbd2cbed28da2cf3fac68f812",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              12,
+              47
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "7265567c51890dcdb3b0dc5cd0e8cf3bd2116de0f0fe3f5d60b0bfc0c091ab3f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              12,
+              69
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a8df6d623575f2619d1ba373ff909076e86e3854d715b0863cc818ea77b282c5",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              47,
+              69
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "00de3ff294468227cfd4e7294c432399a7b98a210c228ccadd10410fc3de8ea1",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 40,
+        "positive_triad": [
+          12,
+          47,
+          69
+        ],
+        "sha256": "d1096782d5687c5b2d04fd7d1393918b7bbb459f56e95de6d70b42f8af27445b",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              21,
+              48
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f277cabf4e23eb816840ab59b6e38d3de564902bf7c696c9d615748979cf9226",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              21,
+              76
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "ce6129105a5b44d741b54d8c028eaaa1eab2657570b7fbe460b168f5c16316fe",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              48,
+              76
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "ef46d7d3e763d87e4ddffa5b50bbc38ab70069d278059081863f3342f8ed2cc9",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 41,
+        "positive_triad": [
+          21,
+          48,
+          76
+        ],
+        "sha256": "6ea6f9e97a5fc06d5e4c2c1f915a21448990360539f5d5fffd36ee798fb4e39f",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              26,
+              54
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "4efff3d520baf1f291fd339b12adf26d832bac1235bdf6f4ea3dcdcef8d2a74b",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              26,
+              70
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "3725fff07a078fddaa0766c9a3a27167b4360acc850497d542b8c97ee8afd418",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              54,
+              70
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "c8e43c51ddc24f831d575482d36a99fe4af11da9bb13a44ea3126612de8e9a1a",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 42,
+        "positive_triad": [
+          26,
+          54,
+          70
+        ],
+        "sha256": "8b4afdea787306692a1bd8d88514c72b99b1dfd75e43fe5e5f3b918b06508b32",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              13,
+              57
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "9d79ddd7e9e3ac399e14de63013c2610fb53440752d27348a128f5e0e9de9843",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              13,
+              79
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "4e76773023ee7f39b377e8438661475089683ff01189725cdebc3e6358b5f21a",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              57,
+              79
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "d39ee5962e274cbbe29a2e412c9b52d0fcae8212b0badf023dbfcf64e80a5105",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 43,
+        "positive_triad": [
+          13,
+          57,
+          79
+        ],
+        "sha256": "d019620d470f31f2a0a701a5e516e07fdcebcd6dd784cdb4759cb953509acabe",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              24,
+              58
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "e4757c47cd197853049ed4593870fe0dfa5b2782a98d3a6e9d7f9b60d303ebca",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              24,
+              67
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "982a8306aa8ee5d552840ac3b15c797355ed25bc1b75b93b985133e627b2f87d",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              58,
+              67
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "617faedf111af3484cb6216d5ffb78c003e124d74ff95c747366db7c1d555734",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 44,
+        "positive_triad": [
+          24,
+          58,
+          67
+        ],
+        "sha256": "b155649168e28ad98a0910c1335e14b7db8f947e2fada14c5d3718aeae380534",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              4,
+              65
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "789ba65620307343216aef5962e54c52e7063acb60a3d6a8f947a278b036739f",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              4,
+              74
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "a9f9be0cc56a661812866b691eb144440b38fb8931534d4156901304a9d59eaa",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              65,
+              74
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "5734d955fd16f3349e3c13fe7c25771dbd54c6adf97d5a9ceda558fefbf3d067",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 45,
+        "positive_triad": [
+          4,
+          65,
+          74
+        ],
+        "sha256": "057c20d0d5afd0b22513bc9f431cf026d85fd0e0311ad218b3d7809470a803b2",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              2,
+              66
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "f1c6ccfd3964de47c124058aa0490169cdede16891a1f73ef607294a86d24408",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              2,
+              80
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "30c8b8051c9b1fd6678236466eaf1a72853a2b3bb86410a08806b6744fe1f2c3",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              66,
+              80
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "053b63bf5da59a2b6cb1ac9de322b39fe1fc4d69163bd58e0cd3dcffcbdb3049",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 46,
+        "positive_triad": [
+          2,
+          66,
+          80
+        ],
+        "sha256": "661bab90f3ee0b20460c0c7c64d0d4f6c8ca10c340f4db0f918e8b7015740b11",
+        "unique_corruption_count": 243
+      },
+      {
+        "branches": [
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              1,
+              69
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "97a308b884abcd7e96c72506440f3795c8e046be5347f288727b098462756fd8",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              1,
+              78
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "da46126180dd62457947e768940cbc13ee1e95bb1ab495da790c87572ee11e8e",
+            "unique_corruption_count": 81
+          },
+          {
+            "corruption_count": 81,
+            "preserved_pair": [
+              69,
+              78
+            ],
+            "replacement_order": "ascending Event ID outside positive triad",
+            "sha256": "699346e39002f98ffba291d0f9646acd06228e34509c714a19e8de8dbba7749c",
+            "unique_corruption_count": 81
+          }
+        ],
+        "corruption_count": 243,
+        "positive_collision_count": 0,
+        "positive_index": 47,
+        "positive_triad": [
+          1,
+          69,
+          78
+        ],
+        "sha256": "b3c0f25c559d677b665b9ef4e157143d0156be057b304d9b5942e2c054e006f3",
+        "unique_corruption_count": 243
+      }
+    ],
+    "neighborhood_definition": "N(T) is the union of three pair-preserving one-vertex replacement branches; replacements range over the 81 Events outside T",
+    "no_positive_collisions": true,
+    "novel_data_used": false,
+    "positive_collision_count": 0,
+    "positive_count": 48,
+    "positive_order": "TRAIN record order; each triad canonicalized ascending",
+    "positive_triads": [
+      [
+        0,
+        68,
+        79
+      ],
+      [
+        3,
+        67,
+        81
+      ],
+      [
+        5,
+        64,
+        75
+      ],
+      [
+        6,
+        63,
+        77
+      ],
+      [
+        7,
+        62,
+        76
+      ],
+      [
+        8,
+        19,
+        29
+      ],
+      [
+        8,
+        40,
+        50
+      ],
+      [
+        9,
+        18,
+        28
+      ],
+      [
+        10,
+        16,
+        31
+      ],
+      [
+        10,
+        39,
+        52
+      ],
+      [
+        11,
+        38,
+        53
+      ],
+      [
+        12,
+        56,
+        78
+      ],
+      [
+        13,
+        46,
+        68
+      ],
+      [
+        14,
+        42,
+        71
+      ],
+      [
+        14,
+        55,
+        82
+      ],
+      [
+        15,
+        54,
+        83
+      ],
+      [
+        16,
+        52,
+        73
+      ],
+      [
+        11,
+        17,
+        30
+      ],
+      [
+        17,
+        53,
+        72
+      ],
+      [
+        18,
+        41,
+        60
+      ],
+      [
+        20,
+        49,
+        77
+      ],
+      [
+        23,
+        37,
+        65
+      ],
+      [
+        25,
+        45,
+        80
+      ],
+      [
+        25,
+        59,
+        66
+      ],
+      [
+        26,
+        43,
+        83
+      ],
+      [
+        27,
+        55,
+        71
+      ],
+      [
+        27,
+        42,
+        82
+      ],
+      [
+        28,
+        51,
+        60
+      ],
+      [
+        29,
+        50,
+        61
+      ],
+      [
+        32,
+        37,
+        74
+      ],
+      [
+        33,
+        36,
+        75
+      ],
+      [
+        34,
+        49,
+        63
+      ],
+      [
+        35,
+        48,
+        62
+      ],
+      [
+        22,
+        36,
+        64
+      ],
+      [
+        30,
+        38,
+        72
+      ],
+      [
+        31,
+        39,
+        73
+      ],
+      [
+        19,
+        40,
+        61
+      ],
+      [
+        9,
+        41,
+        51
+      ],
+      [
+        15,
+        43,
+        70
+      ],
+      [
+        24,
+        44,
+        81
+      ],
+      [
+        12,
+        47,
+        69
+      ],
+      [
+        21,
+        48,
+        76
+      ],
+      [
+        26,
+        54,
+        70
+      ],
+      [
+        13,
+        57,
+        79
+      ],
+      [
+        24,
+        58,
+        67
+      ],
+      [
+        4,
+        65,
+        74
+      ],
+      [
+        2,
+        66,
+        80
+      ],
+      [
+        1,
+        69,
+        78
+      ]
+    ],
+    "positive_triads_sha256": "09a8c61282154efd90239048a55873acfa45149e2130bb781140101d26d49f62",
+    "relation_classes_per_positive": 244,
+    "role_records_used": false,
+    "total_corruption_entries": 11664,
+    "unique_constituent_pair_count": 144,
+    "unique_positive_count": 48
+  },
+  "role_metrics_computed_before_this_precommit": false,
+  "runner": {
+    "content_sha256": "35e8fac1d1f6de2d83cdb2bc9d957f0287183ea9567c82f5d38f4931e0562949",
+    "path": "issues/015-learning-law-for-consequence-structure/015.07-Code-attachments/run_015_competitive.py"
+  },
+  "schema": "occurrence.gpt.01507.precommit.v1",
+  "scientific_fences": [
+    "No discovery or evaluation of the global 56-block relation.",
+    "No NOVEL blocks or NOVEL metric.",
+    "No SFP/Fano/habitat coordinates.",
+    "No claim for a preferred, unique, optimal, or necessary OT learning law.",
+    "No claim that Event embeddings contain a unique readable algebra.",
+    "No necessity claim for relational competition or symmetry.",
+    "No claim that every consequence-learning problem reduces to permutation invariance.",
+    "No language-scale, physical Event, or physical Outcome semantics claim.",
+    "No claim that R discovers its local alternatives spontaneously; N(T) is licensed TRAIN-derived structure."
+  ],
+  "score_definitions": {
+    "base": "p=concat(E[a]+E[b], E[a]*E[b], abs(E[a]-E[b]), E[c]); g(a,b;c)=Linear(256,256)->GELU(exact)->Linear(256,1)",
+    "base_pair_swap_invariant": true,
+    "only_primary_arm_difference": "TRAIN-only objective",
+    "shared_by_both_arms": true,
+    "triad_role_permutation_invariant_by_constitution": true,
+    "triad_symmetric": "for canonical x<y<z, s({x,y,z})=((g(x,y;z)+g(x,z;y))+g(y,z;x))/3"
+  },
+  "scored_plan": {
+    "arms": [
+      "query_ce",
+      "relational_competition"
+    ],
+    "checkpoints": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      1536,
+      2048,
+      2560,
+      3072,
+      3584,
+      4096,
+      4608,
+      5120,
+      5632,
+      6144,
+      6656,
+      7168,
+      7680,
+      8192,
+      8704,
+      9216,
+      9728,
+      10240,
+      10752,
+      11264,
+      11776,
+      12288,
+      12800,
+      13312,
+      13824,
+      14336,
+      14848,
+      15360,
+      15872,
+      16384
+    ],
+    "early_stopping": false,
+    "extra_seeds": false,
+    "horizon_updates": 16384,
+    "matched_initialization": true,
+    "optimizer_identical": true,
+    "outcome_dependent_reruns": false,
+    "seeds": [
+      3000,
+      3001,
+      3002,
+      3003,
+      3004,
+      3005,
+      3006,
+      3007
+    ],
+    "shared_scorer": true
+  },
+  "status": "PRECOMMITTED-BEFORE-CURRENT-ROLE-EVALUATION",
+  "temporal_definitions": {
+    "never_reached": null,
+    "smoothing": false,
+    "t_fit": "first scheduled checkpoint with designated-query accuracy == 1.0",
+    "t_relation95": "first scheduled checkpoint with >=46/48 strict local relation dominations at that checkpoint and the next two scheduled checkpoints",
+    "t_relation_exact": "first scheduled checkpoint with 48/48 strict local relation dominations at that checkpoint and the next two scheduled checkpoints",
+    "t_role95": "first scheduled checkpoint with ROLE_TEST accuracy >=0.95 at that checkpoint and the next two scheduled checkpoints",
+    "t_role_exact": "first scheduled checkpoint with ROLE_TEST accuracy ==1.0 at that checkpoint and the next two scheduled checkpoints"
+  },
+  "triad_permutation_identity_audit": {
+    "all_six_permutations_bit_identical": true,
+    "bit_identical_score_comparisons": 571704,
+    "canonicalization": "ascending Event ID",
+    "decomposition_accumulation_order": "((g(x,y;z) + g(x,z;y)) + g(y,z;x)) / 3.0 for x<y<z",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "permutations_per_triple": 6,
+    "seed": 0,
+    "status": "PASS",
+    "unordered_distinct_triples": 95284
+  }
+}
