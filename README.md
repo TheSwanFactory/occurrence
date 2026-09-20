@@ -57,6 +57,10 @@ The repository is split along a **library / consumer** seam:
   guard it, and independent reviewer cells; its CI (`occurrence.yml`) installs
   `topographo` and runs the audits as exit-code gates. See
   [`verify/README.md`](verify/README.md) for the naming convention.
+- **`issues/`** — numbered research evidence bundles of turn-specific results,
+  attachments, and, where included, tasks; contents and evidentiary scope vary
+  by issue. See the
+  [Issue 015 status/index and reproduction guide](issues/015-learning-law-for-consequence-structure/README.md).
 
 The papers live at the top level — `occurrence-theory.md` (Paper I) and
 `occurrence-theory-ii.md` (Paper II) — with supporting material in `docs/` and
