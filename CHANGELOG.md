@@ -3,6 +3,20 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.8.6] - 2026-09-19
+
+### Added
+
+- Add Issue 016's blind exact observed-symmetry completion audit, including the
+  verified automorphism group of the 48-block partial relation, exact local and
+  symmetry-invariant candidate sets for all 24 unseen queries, and deterministic
+  machine-checkable certificates and singleton exclusion witnesses.
+
+### Changed
+
+- Advance the `topographo` package and editable lock entry from 0.8.5 to 0.8.6;
+  dependencies are unchanged.
+
 ## [0.8.5] - 2026-09-19
 
 ### Added
