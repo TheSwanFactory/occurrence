@@ -3,6 +3,28 @@
 
 All notable changes to this project are documented in this file.
 
+## [0.8.6] - 2026-09-19
+
+### Added
+
+- Add Issue 016's blind exact observed-symmetry completion audit, including the
+  verified automorphism group of the 48-block partial relation, exact local and
+  symmetry-invariant candidate sets for all 24 unseen queries, and deterministic
+  machine-checkable certificates and singleton exclusion witnesses.
+- Add Issue 016's three blind exact follow-up audits: within the nine canonical
+  I/K/W constitutions, `H_KI` is the sole inclusion-minimal constitution that
+  reproduces all 24 full-group singleton completions; observed-component
+  locality agrees with `H_KI` on those handed queries but on only 24/48 relevant
+  unresolved pairs; and query-independent component-preserving local saturation
+  yields one 56-block maximal linear completion, adding eight blocks and matching
+  all 24 singletons. These are conditional sufficiency results, not necessity or
+  a certified/global-target claim.
+
+### Changed
+
+- Advance the `topographo` package and editable lock entry from 0.8.5 to 0.8.6;
+  dependencies are unchanged.
+
 ## [0.8.5] - 2026-09-19
 
 ### Added

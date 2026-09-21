@@ -1,0 +1,6838 @@
+{
+  "forbidden_additions_audit": {
+    "automorphism_orbit_closure_used_as_completion_rule": false,
+    "certified_full_relation_used": false,
+    "certified_targets_used": false,
+    "completion_table_used": false,
+    "cross_component_blocks_used": false,
+    "desired_final_block_count_used": false,
+    "equal_degree_axiom_used": false,
+    "external_geometry_or_coordinates_used": false,
+    "global_maximality_over_84_events_used": false,
+    "neural_learning_used": false,
+    "symmetry_use": "Only after exhaustive completion, to compress unresolved-pair consequences and verify isomorphic profiles."
+  },
+  "handed_query_audit_after_freeze": {
+    "candidate_size_histogram": {
+      "1": 24
+    },
+    "completed_in_every_count": 24,
+    "exact_01608_singleton_reproduction_count": 24,
+    "forced_singleton_count": 24,
+    "forced_size_histogram": {
+      "1": 24
+    },
+    "loaded_only_after_query_independent_completion_frozen": true,
+    "query_count": 24,
+    "records": [
+      {
+        "C_sat": [
+          57
+        ],
+        "F_sat": [
+          57
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          57
+        ],
+        "pinned_01608_C_component": [
+          57
+        ],
+        "query": [
+          0,
+          46
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          46
+        ],
+        "F_sat": [
+          46
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          46
+        ],
+        "pinned_01608_C_component": [
+          46
+        ],
+        "query": [
+          0,
+          57
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          56
+        ],
+        "F_sat": [
+          56
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          56
+        ],
+        "pinned_01608_C_component": [
+          56
+        ],
+        "query": [
+          1,
+          47
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          47
+        ],
+        "F_sat": [
+          47
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          47
+        ],
+        "pinned_01608_C_component": [
+          47
+        ],
+        "query": [
+          1,
+          56
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          59
+        ],
+        "F_sat": [
+          59
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          59
+        ],
+        "pinned_01608_C_component": [
+          59
+        ],
+        "query": [
+          2,
+          45
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          45
+        ],
+        "F_sat": [
+          45
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          45
+        ],
+        "pinned_01608_C_component": [
+          45
+        ],
+        "query": [
+          2,
+          59
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          58
+        ],
+        "F_sat": [
+          58
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          58
+        ],
+        "pinned_01608_C_component": [
+          58
+        ],
+        "query": [
+          3,
+          44
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          44
+        ],
+        "F_sat": [
+          44
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          44
+        ],
+        "pinned_01608_C_component": [
+          44
+        ],
+        "query": [
+          3,
+          58
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          32
+        ],
+        "F_sat": [
+          32
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          32
+        ],
+        "pinned_01608_C_component": [
+          32
+        ],
+        "query": [
+          4,
+          23
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          23
+        ],
+        "F_sat": [
+          23
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          23
+        ],
+        "pinned_01608_C_component": [
+          23
+        ],
+        "query": [
+          4,
+          32
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          33
+        ],
+        "F_sat": [
+          33
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          33
+        ],
+        "pinned_01608_C_component": [
+          33
+        ],
+        "query": [
+          5,
+          22
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          22
+        ],
+        "F_sat": [
+          22
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          22
+        ],
+        "pinned_01608_C_component": [
+          22
+        ],
+        "query": [
+          5,
+          33
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          34
+        ],
+        "F_sat": [
+          34
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          34
+        ],
+        "pinned_01608_C_component": [
+          34
+        ],
+        "query": [
+          6,
+          20
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          20
+        ],
+        "F_sat": [
+          20
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          20
+        ],
+        "pinned_01608_C_component": [
+          20
+        ],
+        "query": [
+          6,
+          34
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          35
+        ],
+        "F_sat": [
+          35
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          35
+        ],
+        "pinned_01608_C_component": [
+          35
+        ],
+        "query": [
+          7,
+          21
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          21
+        ],
+        "F_sat": [
+          21
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          21
+        ],
+        "pinned_01608_C_component": [
+          21
+        ],
+        "query": [
+          7,
+          35
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          6
+        ],
+        "F_sat": [
+          6
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          6
+        ],
+        "pinned_01608_C_component": [
+          6
+        ],
+        "query": [
+          20,
+          34
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          7
+        ],
+        "F_sat": [
+          7
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          7
+        ],
+        "pinned_01608_C_component": [
+          7
+        ],
+        "query": [
+          21,
+          35
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          5
+        ],
+        "F_sat": [
+          5
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          5
+        ],
+        "pinned_01608_C_component": [
+          5
+        ],
+        "query": [
+          22,
+          33
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          4
+        ],
+        "F_sat": [
+          4
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          4
+        ],
+        "pinned_01608_C_component": [
+          4
+        ],
+        "query": [
+          23,
+          32
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          3
+        ],
+        "F_sat": [
+          3
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          3
+        ],
+        "pinned_01608_C_component": [
+          3
+        ],
+        "query": [
+          44,
+          58
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          2
+        ],
+        "F_sat": [
+          2
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          2
+        ],
+        "pinned_01608_C_component": [
+          2
+        ],
+        "query": [
+          45,
+          59
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          0
+        ],
+        "F_sat": [
+          0
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          0
+        ],
+        "pinned_01608_C_component": [
+          0
+        ],
+        "query": [
+          46,
+          57
+        ],
+        "reproduces_01608_singleton": true
+      },
+      {
+        "C_sat": [
+          1
+        ],
+        "F_sat": [
+          1
+        ],
+        "comparison": {
+          "01608_sets_equal_singletons": true,
+          "C_sat_equals_01608_C_HKI": true,
+          "C_sat_equals_01608_C_component": true,
+          "F_sat_equals_01608_C_HKI": true,
+          "F_sat_equals_01608_C_component": true
+        },
+        "completed_in_every_global_completion": true,
+        "forced_completion_is_singleton": true,
+        "pinned_01608_C_HKI": [
+          1
+        ],
+        "pinned_01608_C_component": [
+          1
+        ],
+        "query": [
+          47,
+          56
+        ],
+        "reproduces_01608_singleton": true
+      }
+    ],
+    "target_labels_loaded": false
+  },
+  "information_exposure": "The immutable 016.10 task was located through mcp_open package revision and directory-browse calls. The manifest listed path names and its message restated the handed agreement, the second unresolved-pair orbit, and the observed-template relation that are all present in the authorized 016.08 parent result; it exposed no certified target, certified full relation, target reveal, or additional Owner-only scientific conclusion and was not material contamination. Repository inspection was restricted to git state, tool configuration, and publication mechanics; one historical publication helper contained an unrelated Issue-011 message with no Issue-016 completion information. The only Issue-016 scientific contents read were this immutable task, the pinned blind 016.01 packet, and the pinned 016.08 result, JSON certificate, and runner. The mutable Issue-016 README and 016.03, 016.06, and 016.09 contents were not read. No certified target, certified full relation, preferred global structure, external completion table, withheld coordinate system, or forbidden geometric terminology was exposed or used.",
+  "interpretation": {
+    "allowed_S2_statement": "on the frozen observed 48-block substrate, component preservation plus local linear maximality is sufficient to reconstruct the same 24 conditional completions previously selected by H_KI.",
+    "bin_code": "S2",
+    "bin_name": "UNIQUE-LOCAL-SATURATION-MATCH",
+    "necessity_or_physical_justification_claimed": false
+  },
+  "logical_fence": {
+    "A_fact": "The 48 observed blocks have disconnected components.",
+    "B_constitution": "New blocks are required to stay inside those components.",
+    "C_constitution": "Each component is required to be locally maximal linear.",
+    "D_consequence": "The resulting completion, if unique, is forced by constitutions B+C.",
+    "attribution": "The result is generated by the 48 observed blocks under explicit component-preservation and local-maximality constitutions, not by the observed blocks alone.",
+    "non_implication": "A does not imply B or C."
+  },
+  "mechanical_checks": {
+    "all_14_component_completions_unique": true,
+    "all_24_queries_completed_forced_singletons": true,
+    "all_24_queries_reproduce_01608": true,
+    "all_components_have_6_events": true,
+    "all_five_authorized_source_hashes_gated": true,
+    "all_internal_unresolved_pairs_exhausted": true,
+    "all_observed_template_isomorphism_certificates_verify": true,
+    "all_reported_component_completions_linear_and_maximal": true,
+    "class_0_exact_profile": true,
+    "class_1_exact_profile": true,
+    "class_multiplicities_are_8_and_6": true,
+    "constructor_has_only_observed_triads_parameter": true,
+    "decomposition_is_14_components_2_classes": true,
+    "decomposition_matches_pinned_01608": true,
+    "every_component_profile_isomorphic_within_observed_class": true,
+    "exactly_8_blocks_added": true,
+    "final_count_is_derived_not_supplied": true,
+    "global_completion_count_is_exact_cartesian_product": true,
+    "no_sampling_or_greedy_search": true,
+    "no_target_labels_loaded": true,
+    "observed_relation_is_48_block_linear": true,
+    "query_list_decoded_only_after_completion_freeze": true
+  },
+  "provenance": {
+    "authorized_inputs": {
+      "input": {
+        "pinned_uri": "quilt+s3://protology#package=occurrence/gpt@1339739309f484ad738449f8733b2df12869f970030cdc9878e60de0753fa772&path=issues/016-global-relational-completion/016.01-Code-attachments/observed-symmetry-input.json",
+        "sha256": "992616907f4d16018b579076374db5eea03f188b754cdee3b205fd9cc084de59"
+      },
+      "parent_json": {
+        "pinned_uri": "quilt+s3://protology#package=occurrence/gpt@9443b8c03e9491fad7a2ea39b47069d594e09b997d5eeececa1fe9276db7f5f9&path=issues/016-global-relational-completion/016.08-Code-attachments/component_locality_audit.json",
+        "sha256": "d184301132337fbfb583bd3b47ac6365559a50507f7cf50dc9fac69f90c18631"
+      },
+      "parent_result": {
+        "pinned_uri": "quilt+s3://protology#package=occurrence/gpt@9443b8c03e9491fad7a2ea39b47069d594e09b997d5eeececa1fe9276db7f5f9&path=issues/016-global-relational-completion/016.08-Coder-component-locality-versus-symmetry-GPT.md",
+        "sha256": "32979723a52e7c459c10cece9832a3670de8d7282246af7946228fc8484eb193"
+      },
+      "parent_runner": {
+        "pinned_uri": "quilt+s3://protology#package=occurrence/gpt@9443b8c03e9491fad7a2ea39b47069d594e09b997d5eeececa1fe9276db7f5f9&path=issues/016-global-relational-completion/016.08-Code-attachments/audit_component_locality.py",
+        "sha256": "235c342fa2c2ffd09bbfde72e04294a4eaa53fc4d5f38922cbef85b6f3e6c05a"
+      },
+      "task": {
+        "pinned_uri": "quilt+s3://protology#package=occurrence/gpt@1ccda27f8265fe39e42cb5813f1a11b453e36065b1fe4f251ee7b9d092153f14&path=issues/016-global-relational-completion/016.10-GPT-blind-component-preserving-local-saturation-Coder.md",
+        "sha256": "c2900e29124afb029e6fe4c09bc56d9bdc40f89ec6bc30c932a639598d058cb1"
+      }
+    },
+    "finite_computation_dependencies": "Python standard library; quilt3 only for immutable input transport",
+    "runner_sha256": "97f14e5bef0f6a2c75796e0a8aece14dd26b1f16bbabf69d41a6179733b653f4",
+    "sampling": null
+  },
+  "publication_contract": {
+    "expected_manifest_entry_delta": 3,
+    "paths": [
+      "issues/016-global-relational-completion/016.11-Coder-component-preserving-local-saturation-GPT.md",
+      "issues/016-global-relational-completion/016.11-Code-attachments/local_saturation_audit.json",
+      "issues/016-global-relational-completion/016.11-Code-attachments/audit_local_saturation.py"
+    ],
+    "publish_against": "latest",
+    "workflow": "occurrence"
+  },
+  "query_independent_completion": {
+    "all_observed_internal_unresolved_pairs": {
+      "by_observed_class_and_pair_orbit": [
+        {
+          "automorphism_group_order_used_only_after_completion_enumeration": 6,
+          "component_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "observed_class_id": 0,
+          "unresolved_pair_orbits": [
+            {
+              "canonical_pairs": [
+                [
+                  0,
+                  5
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              "every_completion_count": 0,
+              "orbit_id": 0,
+              "pair_count": 3,
+              "pair_records": [
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    0,
+                    5
+                  ],
+                  "canonical_possible_third_events": []
+                },
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    1,
+                    4
+                  ],
+                  "canonical_possible_third_events": []
+                },
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    2,
+                    3
+                  ],
+                  "canonical_possible_third_events": []
+                }
+              ],
+              "some_completion_count": 0
+            },
+            {
+              "canonical_pairs": [
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  5
+                ],
+                [
+                  4,
+                  5
+                ]
+              ],
+              "every_completion_count": 3,
+              "orbit_id": 1,
+              "pair_count": 3,
+              "pair_records": [
+                {
+                  "appears_in_every_maximal_completion": true,
+                  "appears_in_some_added_block": true,
+                  "canonical_forced_third_events": [
+                    5
+                  ],
+                  "canonical_pair": [
+                    2,
+                    4
+                  ],
+                  "canonical_possible_third_events": [
+                    5
+                  ]
+                },
+                {
+                  "appears_in_every_maximal_completion": true,
+                  "appears_in_some_added_block": true,
+                  "canonical_forced_third_events": [
+                    4
+                  ],
+                  "canonical_pair": [
+                    2,
+                    5
+                  ],
+                  "canonical_possible_third_events": [
+                    4
+                  ]
+                },
+                {
+                  "appears_in_every_maximal_completion": true,
+                  "appears_in_some_added_block": true,
+                  "canonical_forced_third_events": [
+                    2
+                  ],
+                  "canonical_pair": [
+                    4,
+                    5
+                  ],
+                  "canonical_possible_third_events": [
+                    2
+                  ]
+                }
+              ],
+              "some_completion_count": 3
+            }
+          ]
+        },
+        {
+          "automorphism_group_order_used_only_after_completion_enumeration": 24,
+          "component_ids": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "observed_class_id": 1,
+          "unresolved_pair_orbits": [
+            {
+              "canonical_pairs": [
+                [
+                  0,
+                  5
+                ],
+                [
+                  1,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ]
+              ],
+              "every_completion_count": 0,
+              "orbit_id": 0,
+              "pair_count": 3,
+              "pair_records": [
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    0,
+                    5
+                  ],
+                  "canonical_possible_third_events": []
+                },
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    1,
+                    4
+                  ],
+                  "canonical_possible_third_events": []
+                },
+                {
+                  "appears_in_every_maximal_completion": false,
+                  "appears_in_some_added_block": false,
+                  "canonical_forced_third_events": [],
+                  "canonical_pair": [
+                    2,
+                    3
+                  ],
+                  "canonical_possible_third_events": []
+                }
+              ],
+              "some_completion_count": 0
+            }
+          ]
+        }
+      ],
+      "definition": "Every pair internal to an observed component but absent from every observed block; occurrence consequences use added blocks only.",
+      "orbit_compression_applied_after_exhaustive_completion": true,
+      "record_count": 66,
+      "records": [
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 0,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            0,
+            13
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 0,
+          "forced_third_events": [
+            57
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            0,
+            46
+          ],
+          "possible_third_events": [
+            57
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 0,
+          "forced_third_events": [
+            46
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            0,
+            57
+          ],
+          "possible_third_events": [
+            46
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 0,
+          "forced_third_events": [
+            0
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            46,
+            57
+          ],
+          "possible_third_events": [
+            0
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 0,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            46,
+            79
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 0,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            57,
+            68
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 1,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            1,
+            12
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 1,
+          "forced_third_events": [
+            56
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            1,
+            47
+          ],
+          "possible_third_events": [
+            56
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 1,
+          "forced_third_events": [
+            47
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            1,
+            56
+          ],
+          "possible_third_events": [
+            47
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 1,
+          "forced_third_events": [
+            1
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            47,
+            56
+          ],
+          "possible_third_events": [
+            1
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 1,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            47,
+            78
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 1,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            56,
+            69
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 2,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            2,
+            25
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 2,
+          "forced_third_events": [
+            59
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            2,
+            45
+          ],
+          "possible_third_events": [
+            59
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 2,
+          "forced_third_events": [
+            45
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            2,
+            59
+          ],
+          "possible_third_events": [
+            45
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 2,
+          "forced_third_events": [
+            2
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            45,
+            59
+          ],
+          "possible_third_events": [
+            2
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 2,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            45,
+            66
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 2,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            59,
+            80
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 3,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            3,
+            24
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 3,
+          "forced_third_events": [
+            58
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            3,
+            44
+          ],
+          "possible_third_events": [
+            58
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 3,
+          "forced_third_events": [
+            44
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            3,
+            58
+          ],
+          "possible_third_events": [
+            44
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 3,
+          "forced_third_events": [
+            3
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            44,
+            58
+          ],
+          "possible_third_events": [
+            3
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 3,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            44,
+            67
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 3,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            58,
+            81
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 4,
+          "forced_third_events": [
+            32
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            4,
+            23
+          ],
+          "possible_third_events": [
+            32
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 4,
+          "forced_third_events": [
+            23
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            4,
+            32
+          ],
+          "possible_third_events": [
+            23
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 4,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            4,
+            37
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 4,
+          "forced_third_events": [
+            4
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            23,
+            32
+          ],
+          "possible_third_events": [
+            4
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 4,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            23,
+            74
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 4,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            32,
+            65
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 5,
+          "forced_third_events": [
+            33
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            5,
+            22
+          ],
+          "possible_third_events": [
+            33
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 5,
+          "forced_third_events": [
+            22
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            5,
+            33
+          ],
+          "possible_third_events": [
+            22
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 5,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            5,
+            36
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 5,
+          "forced_third_events": [
+            5
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            22,
+            33
+          ],
+          "possible_third_events": [
+            5
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 5,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            22,
+            75
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 5,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            33,
+            64
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 6,
+          "forced_third_events": [
+            34
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            6,
+            20
+          ],
+          "possible_third_events": [
+            34
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 6,
+          "forced_third_events": [
+            20
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            6,
+            34
+          ],
+          "possible_third_events": [
+            20
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 6,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            6,
+            49
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 6,
+          "forced_third_events": [
+            6
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            20,
+            34
+          ],
+          "possible_third_events": [
+            6
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 6,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            20,
+            63
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 6,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            34,
+            77
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            5
+          ],
+          "canonical_pair": [
+            2,
+            4
+          ],
+          "canonical_possible_third_events": [
+            5
+          ],
+          "component_id": 7,
+          "forced_third_events": [
+            35
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            7,
+            21
+          ],
+          "possible_third_events": [
+            35
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            4
+          ],
+          "canonical_pair": [
+            2,
+            5
+          ],
+          "canonical_possible_third_events": [
+            4
+          ],
+          "component_id": 7,
+          "forced_third_events": [
+            21
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            7,
+            35
+          ],
+          "possible_third_events": [
+            21
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 7,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            7,
+            48
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": true,
+          "appears_in_some_added_block": true,
+          "canonical_forced_third_events": [
+            2
+          ],
+          "canonical_pair": [
+            4,
+            5
+          ],
+          "canonical_possible_third_events": [
+            2
+          ],
+          "component_id": 7,
+          "forced_third_events": [
+            7
+          ],
+          "observed_class_id": 0,
+          "pair": [
+            21,
+            35
+          ],
+          "possible_third_events": [
+            7
+          ]
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 7,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            21,
+            62
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 7,
+          "forced_third_events": [],
+          "observed_class_id": 0,
+          "pair": [
+            35,
+            76
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 8,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            8,
+            61
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 8,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            19,
+            50
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 8,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            29,
+            40
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 9,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            9,
+            60
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 9,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            18,
+            51
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 9,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            28,
+            41
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 10,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            10,
+            73
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 10,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            16,
+            39
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 10,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            31,
+            52
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 11,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            11,
+            72
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 11,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            17,
+            38
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 11,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            30,
+            53
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 12,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            14,
+            27
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 12,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            42,
+            55
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 12,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            71,
+            82
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            0,
+            5
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 13,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            15,
+            26
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            1,
+            4
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 13,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            43,
+            54
+          ],
+          "possible_third_events": []
+        },
+        {
+          "appears_in_every_maximal_completion": false,
+          "appears_in_some_added_block": false,
+          "canonical_forced_third_events": [],
+          "canonical_pair": [
+            2,
+            3
+          ],
+          "canonical_possible_third_events": [],
+          "component_id": 13,
+          "forced_third_events": [],
+          "observed_class_id": 1,
+          "pair": [
+            70,
+            83
+          ],
+          "possible_third_events": []
+        }
+      ]
+    },
+    "components": [
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 0
+          },
+          {
+            "canonical_label": 3,
+            "event": 13
+          },
+          {
+            "canonical_label": 4,
+            "event": 46
+          },
+          {
+            "canonical_label": 5,
+            "event": 57
+          },
+          {
+            "canonical_label": 0,
+            "event": 68
+          },
+          {
+            "canonical_label": 1,
+            "event": 79
+          }
+        ],
+        "component_id": 0,
+        "events": [
+          0,
+          13,
+          46,
+          57,
+          68,
+          79
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              0,
+              46,
+              57
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            0,
+            46,
+            57
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                0,
+                46,
+                57
+              ]
+            ],
+            "blocks": [
+              [
+                0,
+                46,
+                57
+              ],
+              [
+                0,
+                68,
+                79
+              ],
+              [
+                13,
+                46,
+                68
+              ],
+              [
+                13,
+                57,
+                79
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            0,
+            68,
+            79
+          ],
+          [
+            13,
+            46,
+            68
+          ],
+          [
+            13,
+            57,
+            79
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 1
+          },
+          {
+            "canonical_label": 3,
+            "event": 12
+          },
+          {
+            "canonical_label": 4,
+            "event": 47
+          },
+          {
+            "canonical_label": 5,
+            "event": 56
+          },
+          {
+            "canonical_label": 0,
+            "event": 69
+          },
+          {
+            "canonical_label": 1,
+            "event": 78
+          }
+        ],
+        "component_id": 1,
+        "events": [
+          1,
+          12,
+          47,
+          56,
+          69,
+          78
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              1,
+              47,
+              56
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            1,
+            47,
+            56
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                1,
+                47,
+                56
+              ]
+            ],
+            "blocks": [
+              [
+                1,
+                47,
+                56
+              ],
+              [
+                1,
+                69,
+                78
+              ],
+              [
+                12,
+                47,
+                69
+              ],
+              [
+                12,
+                56,
+                78
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            1,
+            69,
+            78
+          ],
+          [
+            12,
+            47,
+            69
+          ],
+          [
+            12,
+            56,
+            78
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 2
+          },
+          {
+            "canonical_label": 3,
+            "event": 25
+          },
+          {
+            "canonical_label": 4,
+            "event": 45
+          },
+          {
+            "canonical_label": 5,
+            "event": 59
+          },
+          {
+            "canonical_label": 1,
+            "event": 66
+          },
+          {
+            "canonical_label": 0,
+            "event": 80
+          }
+        ],
+        "component_id": 2,
+        "events": [
+          2,
+          25,
+          45,
+          59,
+          66,
+          80
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              2,
+              45,
+              59
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            2,
+            45,
+            59
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                2,
+                45,
+                59
+              ]
+            ],
+            "blocks": [
+              [
+                2,
+                45,
+                59
+              ],
+              [
+                2,
+                66,
+                80
+              ],
+              [
+                25,
+                45,
+                80
+              ],
+              [
+                25,
+                59,
+                66
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            2,
+            66,
+            80
+          ],
+          [
+            25,
+            45,
+            80
+          ],
+          [
+            25,
+            59,
+            66
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 3
+          },
+          {
+            "canonical_label": 3,
+            "event": 24
+          },
+          {
+            "canonical_label": 4,
+            "event": 44
+          },
+          {
+            "canonical_label": 5,
+            "event": 58
+          },
+          {
+            "canonical_label": 1,
+            "event": 67
+          },
+          {
+            "canonical_label": 0,
+            "event": 81
+          }
+        ],
+        "component_id": 3,
+        "events": [
+          3,
+          24,
+          44,
+          58,
+          67,
+          81
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              3,
+              44,
+              58
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            3,
+            44,
+            58
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                3,
+                44,
+                58
+              ]
+            ],
+            "blocks": [
+              [
+                3,
+                44,
+                58
+              ],
+              [
+                3,
+                67,
+                81
+              ],
+              [
+                24,
+                44,
+                81
+              ],
+              [
+                24,
+                58,
+                67
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            3,
+            67,
+            81
+          ],
+          [
+            24,
+            44,
+            81
+          ],
+          [
+            24,
+            58,
+            67
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 4
+          },
+          {
+            "canonical_label": 4,
+            "event": 23
+          },
+          {
+            "canonical_label": 5,
+            "event": 32
+          },
+          {
+            "canonical_label": 3,
+            "event": 37
+          },
+          {
+            "canonical_label": 0,
+            "event": 65
+          },
+          {
+            "canonical_label": 1,
+            "event": 74
+          }
+        ],
+        "component_id": 4,
+        "events": [
+          4,
+          23,
+          32,
+          37,
+          65,
+          74
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              4,
+              23,
+              32
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            4,
+            23,
+            32
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                4,
+                23,
+                32
+              ]
+            ],
+            "blocks": [
+              [
+                4,
+                23,
+                32
+              ],
+              [
+                4,
+                65,
+                74
+              ],
+              [
+                23,
+                37,
+                65
+              ],
+              [
+                32,
+                37,
+                74
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            4,
+            65,
+            74
+          ],
+          [
+            23,
+            37,
+            65
+          ],
+          [
+            32,
+            37,
+            74
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 5
+          },
+          {
+            "canonical_label": 4,
+            "event": 22
+          },
+          {
+            "canonical_label": 5,
+            "event": 33
+          },
+          {
+            "canonical_label": 3,
+            "event": 36
+          },
+          {
+            "canonical_label": 0,
+            "event": 64
+          },
+          {
+            "canonical_label": 1,
+            "event": 75
+          }
+        ],
+        "component_id": 5,
+        "events": [
+          5,
+          22,
+          33,
+          36,
+          64,
+          75
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              5,
+              22,
+              33
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            5,
+            22,
+            33
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                5,
+                22,
+                33
+              ]
+            ],
+            "blocks": [
+              [
+                5,
+                22,
+                33
+              ],
+              [
+                5,
+                64,
+                75
+              ],
+              [
+                22,
+                36,
+                64
+              ],
+              [
+                33,
+                36,
+                75
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            5,
+            64,
+            75
+          ],
+          [
+            22,
+            36,
+            64
+          ],
+          [
+            33,
+            36,
+            75
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 6
+          },
+          {
+            "canonical_label": 4,
+            "event": 20
+          },
+          {
+            "canonical_label": 5,
+            "event": 34
+          },
+          {
+            "canonical_label": 3,
+            "event": 49
+          },
+          {
+            "canonical_label": 1,
+            "event": 63
+          },
+          {
+            "canonical_label": 0,
+            "event": 77
+          }
+        ],
+        "component_id": 6,
+        "events": [
+          6,
+          20,
+          34,
+          49,
+          63,
+          77
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              6,
+              20,
+              34
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            6,
+            20,
+            34
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                6,
+                20,
+                34
+              ]
+            ],
+            "blocks": [
+              [
+                6,
+                20,
+                34
+              ],
+              [
+                6,
+                63,
+                77
+              ],
+              [
+                20,
+                49,
+                77
+              ],
+              [
+                34,
+                49,
+                63
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            6,
+            63,
+            77
+          ],
+          [
+            20,
+            49,
+            77
+          ],
+          [
+            34,
+            49,
+            63
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "singleton",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 2,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 2,
+            "event": 7
+          },
+          {
+            "canonical_label": 4,
+            "event": 21
+          },
+          {
+            "canonical_label": 5,
+            "event": 35
+          },
+          {
+            "canonical_label": 3,
+            "event": 48
+          },
+          {
+            "canonical_label": 1,
+            "event": 62
+          },
+          {
+            "canonical_label": 0,
+            "event": 76
+          }
+        ],
+        "component_id": 7,
+        "events": [
+          7,
+          21,
+          35,
+          48,
+          62,
+          76
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 2,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": [
+            [
+              7,
+              21,
+              35
+            ]
+          ]
+        },
+        "initially_admissible_internal_block_count": 1,
+        "initially_admissible_internal_blocks": [
+          [
+            7,
+            21,
+            35
+          ]
+        ],
+        "linear_candidate_addition_subset_count": 2,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [
+              [
+                7,
+                21,
+                35
+              ]
+            ],
+            "blocks": [
+              [
+                7,
+                21,
+                35
+              ],
+              [
+                7,
+                62,
+                76
+              ],
+              [
+                21,
+                48,
+                76
+              ],
+              [
+                35,
+                48,
+                62
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            7,
+            62,
+            76
+          ],
+          [
+            21,
+            48,
+            76
+          ],
+          [
+            35,
+            48,
+            62
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0,
+        "observed_component_already_maximal": false
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 8
+          },
+          {
+            "canonical_label": 1,
+            "event": 19
+          },
+          {
+            "canonical_label": 2,
+            "event": 29
+          },
+          {
+            "canonical_label": 3,
+            "event": 40
+          },
+          {
+            "canonical_label": 4,
+            "event": 50
+          },
+          {
+            "canonical_label": 5,
+            "event": 61
+          }
+        ],
+        "component_id": 8,
+        "events": [
+          8,
+          19,
+          29,
+          40,
+          50,
+          61
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                8,
+                19,
+                29
+              ],
+              [
+                8,
+                40,
+                50
+              ],
+              [
+                19,
+                40,
+                61
+              ],
+              [
+                29,
+                50,
+                61
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            8,
+            19,
+            29
+          ],
+          [
+            8,
+            40,
+            50
+          ],
+          [
+            19,
+            40,
+            61
+          ],
+          [
+            29,
+            50,
+            61
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 9
+          },
+          {
+            "canonical_label": 1,
+            "event": 18
+          },
+          {
+            "canonical_label": 2,
+            "event": 28
+          },
+          {
+            "canonical_label": 3,
+            "event": 41
+          },
+          {
+            "canonical_label": 4,
+            "event": 51
+          },
+          {
+            "canonical_label": 5,
+            "event": 60
+          }
+        ],
+        "component_id": 9,
+        "events": [
+          9,
+          18,
+          28,
+          41,
+          51,
+          60
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                9,
+                18,
+                28
+              ],
+              [
+                9,
+                41,
+                51
+              ],
+              [
+                18,
+                41,
+                60
+              ],
+              [
+                28,
+                51,
+                60
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            9,
+            18,
+            28
+          ],
+          [
+            9,
+            41,
+            51
+          ],
+          [
+            18,
+            41,
+            60
+          ],
+          [
+            28,
+            51,
+            60
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 10
+          },
+          {
+            "canonical_label": 1,
+            "event": 16
+          },
+          {
+            "canonical_label": 2,
+            "event": 31
+          },
+          {
+            "canonical_label": 4,
+            "event": 39
+          },
+          {
+            "canonical_label": 3,
+            "event": 52
+          },
+          {
+            "canonical_label": 5,
+            "event": 73
+          }
+        ],
+        "component_id": 10,
+        "events": [
+          10,
+          16,
+          31,
+          39,
+          52,
+          73
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                10,
+                16,
+                31
+              ],
+              [
+                10,
+                39,
+                52
+              ],
+              [
+                16,
+                52,
+                73
+              ],
+              [
+                31,
+                39,
+                73
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            10,
+            16,
+            31
+          ],
+          [
+            10,
+            39,
+            52
+          ],
+          [
+            16,
+            52,
+            73
+          ],
+          [
+            31,
+            39,
+            73
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 11
+          },
+          {
+            "canonical_label": 1,
+            "event": 17
+          },
+          {
+            "canonical_label": 2,
+            "event": 30
+          },
+          {
+            "canonical_label": 4,
+            "event": 38
+          },
+          {
+            "canonical_label": 3,
+            "event": 53
+          },
+          {
+            "canonical_label": 5,
+            "event": 72
+          }
+        ],
+        "component_id": 11,
+        "events": [
+          11,
+          17,
+          30,
+          38,
+          53,
+          72
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                11,
+                17,
+                30
+              ],
+              [
+                11,
+                38,
+                53
+              ],
+              [
+                17,
+                53,
+                72
+              ],
+              [
+                30,
+                38,
+                72
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            11,
+            17,
+            30
+          ],
+          [
+            11,
+            38,
+            53
+          ],
+          [
+            17,
+            53,
+            72
+          ],
+          [
+            30,
+            38,
+            72
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 14
+          },
+          {
+            "canonical_label": 5,
+            "event": 27
+          },
+          {
+            "canonical_label": 1,
+            "event": 42
+          },
+          {
+            "canonical_label": 4,
+            "event": 55
+          },
+          {
+            "canonical_label": 2,
+            "event": 71
+          },
+          {
+            "canonical_label": 3,
+            "event": 82
+          }
+        ],
+        "component_id": 12,
+        "events": [
+          14,
+          27,
+          42,
+          55,
+          71,
+          82
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                14,
+                42,
+                71
+              ],
+              [
+                14,
+                55,
+                82
+              ],
+              [
+                27,
+                42,
+                82
+              ],
+              [
+                27,
+                55,
+                71
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            14,
+            42,
+            71
+          ],
+          [
+            14,
+            55,
+            82
+          ],
+          [
+            27,
+            42,
+            82
+          ],
+          [
+            27,
+            55,
+            71
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      },
+      {
+        "A0_classification": "empty",
+        "all_internal_3_subset_count": 20,
+        "block_count_histogram_across_maximal_completions": {
+          "4": 1
+        },
+        "candidate_addition_subsets_exhaustively_tested": 1,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "canonical_label_by_event": [
+          {
+            "canonical_label": 0,
+            "event": 15
+          },
+          {
+            "canonical_label": 5,
+            "event": 26
+          },
+          {
+            "canonical_label": 1,
+            "event": 43
+          },
+          {
+            "canonical_label": 4,
+            "event": 54
+          },
+          {
+            "canonical_label": 2,
+            "event": 70
+          },
+          {
+            "canonical_label": 3,
+            "event": 83
+          }
+        ],
+        "component_id": 13,
+        "events": [
+          15,
+          26,
+          43,
+          54,
+          70,
+          83
+        ],
+        "finite_uniqueness_certificate": {
+          "all_internal_3_subsets_tested": 20,
+          "all_subsets_of_initially_admissible_blocks_tested": 1,
+          "candidate_universe": "every 3-subset of the existing component Event set",
+          "every_reported_family_rechecked_against_every_internal_3_subset": true,
+          "maximal_families_found": 1
+        },
+        "initial_compatibility_graph": {
+          "edge_definition": "Two initially admissible blocks are adjacent exactly when adding both to the observed component remains linear.",
+          "edges": [],
+          "nodes": []
+        },
+        "initially_admissible_internal_block_count": 0,
+        "initially_admissible_internal_blocks": [],
+        "linear_candidate_addition_subset_count": 1,
+        "maximal_completion_count": 1,
+        "maximal_completion_unique": true,
+        "maximal_completions": [
+          {
+            "added_blocks": [],
+            "blocks": [
+              [
+                15,
+                43,
+                70
+              ],
+              [
+                15,
+                54,
+                83
+              ],
+              [
+                26,
+                43,
+                83
+              ],
+              [
+                26,
+                54,
+                70
+              ]
+            ],
+            "completion_id": 0,
+            "final_block_count": 4,
+            "linearity_verified": true,
+            "maximality_all_internal_3_subsets_tested": 20,
+            "remaining_addable_blocks": []
+          }
+        ],
+        "nonlinear_candidate_addition_subset_count": 0,
+        "observed_blocks": [
+          [
+            15,
+            43,
+            70
+          ],
+          [
+            15,
+            54,
+            83
+          ],
+          [
+            26,
+            43,
+            83
+          ],
+          [
+            26,
+            54,
+            70
+          ]
+        ],
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1,
+        "observed_component_already_maximal": true
+      }
+    ],
+    "constructor": {
+      "constitution": {
+        "component_preservation": "Every added block is contained in one connected component of the typed incidence graph reconstructed from the observed triads.",
+        "local_linear_maximality": "Within every component, the final family is linear and no other 3-subset of that component's existing Event set can be added."
+      },
+      "greedy_completion_used": false,
+      "name": "complete",
+      "semantic_interface": "complete(observed_triads) -> completion_result",
+      "symmetry_used_to_define_completion": false
+    },
+    "global_component_preserving_maximal_completions": {
+      "all_completions": [
+        {
+          "added_blocks": [
+            [
+              0,
+              46,
+              57
+            ],
+            [
+              1,
+              47,
+              56
+            ],
+            [
+              2,
+              45,
+              59
+            ],
+            [
+              3,
+              44,
+              58
+            ],
+            [
+              4,
+              23,
+              32
+            ],
+            [
+              5,
+              22,
+              33
+            ],
+            [
+              6,
+              20,
+              34
+            ],
+            [
+              7,
+              21,
+              35
+            ]
+          ],
+          "component_completion_choices": [
+            {
+              "completion_id": 0,
+              "component_id": 0
+            },
+            {
+              "completion_id": 0,
+              "component_id": 1
+            },
+            {
+              "completion_id": 0,
+              "component_id": 2
+            },
+            {
+              "completion_id": 0,
+              "component_id": 3
+            },
+            {
+              "completion_id": 0,
+              "component_id": 4
+            },
+            {
+              "completion_id": 0,
+              "component_id": 5
+            },
+            {
+              "completion_id": 0,
+              "component_id": 6
+            },
+            {
+              "completion_id": 0,
+              "component_id": 7
+            },
+            {
+              "completion_id": 0,
+              "component_id": 8
+            },
+            {
+              "completion_id": 0,
+              "component_id": 9
+            },
+            {
+              "completion_id": 0,
+              "component_id": 10
+            },
+            {
+              "completion_id": 0,
+              "component_id": 11
+            },
+            {
+              "completion_id": 0,
+              "component_id": 12
+            },
+            {
+              "completion_id": 0,
+              "component_id": 13
+            }
+          ],
+          "final_block_count": 56,
+          "final_blocks": [
+            [
+              0,
+              46,
+              57
+            ],
+            [
+              0,
+              68,
+              79
+            ],
+            [
+              1,
+              47,
+              56
+            ],
+            [
+              1,
+              69,
+              78
+            ],
+            [
+              2,
+              45,
+              59
+            ],
+            [
+              2,
+              66,
+              80
+            ],
+            [
+              3,
+              44,
+              58
+            ],
+            [
+              3,
+              67,
+              81
+            ],
+            [
+              4,
+              23,
+              32
+            ],
+            [
+              4,
+              65,
+              74
+            ],
+            [
+              5,
+              22,
+              33
+            ],
+            [
+              5,
+              64,
+              75
+            ],
+            [
+              6,
+              20,
+              34
+            ],
+            [
+              6,
+              63,
+              77
+            ],
+            [
+              7,
+              21,
+              35
+            ],
+            [
+              7,
+              62,
+              76
+            ],
+            [
+              8,
+              19,
+              29
+            ],
+            [
+              8,
+              40,
+              50
+            ],
+            [
+              9,
+              18,
+              28
+            ],
+            [
+              9,
+              41,
+              51
+            ],
+            [
+              10,
+              16,
+              31
+            ],
+            [
+              10,
+              39,
+              52
+            ],
+            [
+              11,
+              17,
+              30
+            ],
+            [
+              11,
+              38,
+              53
+            ],
+            [
+              12,
+              47,
+              69
+            ],
+            [
+              12,
+              56,
+              78
+            ],
+            [
+              13,
+              46,
+              68
+            ],
+            [
+              13,
+              57,
+              79
+            ],
+            [
+              14,
+              42,
+              71
+            ],
+            [
+              14,
+              55,
+              82
+            ],
+            [
+              15,
+              43,
+              70
+            ],
+            [
+              15,
+              54,
+              83
+            ],
+            [
+              16,
+              52,
+              73
+            ],
+            [
+              17,
+              53,
+              72
+            ],
+            [
+              18,
+              41,
+              60
+            ],
+            [
+              19,
+              40,
+              61
+            ],
+            [
+              20,
+              49,
+              77
+            ],
+            [
+              21,
+              48,
+              76
+            ],
+            [
+              22,
+              36,
+              64
+            ],
+            [
+              23,
+              37,
+              65
+            ],
+            [
+              24,
+              44,
+              81
+            ],
+            [
+              24,
+              58,
+              67
+            ],
+            [
+              25,
+              45,
+              80
+            ],
+            [
+              25,
+              59,
+              66
+            ],
+            [
+              26,
+              43,
+              83
+            ],
+            [
+              26,
+              54,
+              70
+            ],
+            [
+              27,
+              42,
+              82
+            ],
+            [
+              27,
+              55,
+              71
+            ],
+            [
+              28,
+              51,
+              60
+            ],
+            [
+              29,
+              50,
+              61
+            ],
+            [
+              30,
+              38,
+              72
+            ],
+            [
+              31,
+              39,
+              73
+            ],
+            [
+              32,
+              37,
+              74
+            ],
+            [
+              33,
+              36,
+              75
+            ],
+            [
+              34,
+              49,
+              63
+            ],
+            [
+              35,
+              48,
+              62
+            ]
+          ],
+          "global_completion_id": 0,
+          "linearity_verified": true
+        }
+      ],
+      "count": 1,
+      "definition": "The disjoint union of one exhaustively enumerated maximal component-local linear completion from each observed component.",
+      "exact_added_block_set_if_unique": [
+        [
+          0,
+          46,
+          57
+        ],
+        [
+          1,
+          47,
+          56
+        ],
+        [
+          2,
+          45,
+          59
+        ],
+        [
+          3,
+          44,
+          58
+        ],
+        [
+          4,
+          23,
+          32
+        ],
+        [
+          5,
+          22,
+          33
+        ],
+        [
+          6,
+          20,
+          34
+        ],
+        [
+          7,
+          21,
+          35
+        ]
+      ],
+      "exact_final_block_set_if_unique": [
+        [
+          0,
+          46,
+          57
+        ],
+        [
+          0,
+          68,
+          79
+        ],
+        [
+          1,
+          47,
+          56
+        ],
+        [
+          1,
+          69,
+          78
+        ],
+        [
+          2,
+          45,
+          59
+        ],
+        [
+          2,
+          66,
+          80
+        ],
+        [
+          3,
+          44,
+          58
+        ],
+        [
+          3,
+          67,
+          81
+        ],
+        [
+          4,
+          23,
+          32
+        ],
+        [
+          4,
+          65,
+          74
+        ],
+        [
+          5,
+          22,
+          33
+        ],
+        [
+          5,
+          64,
+          75
+        ],
+        [
+          6,
+          20,
+          34
+        ],
+        [
+          6,
+          63,
+          77
+        ],
+        [
+          7,
+          21,
+          35
+        ],
+        [
+          7,
+          62,
+          76
+        ],
+        [
+          8,
+          19,
+          29
+        ],
+        [
+          8,
+          40,
+          50
+        ],
+        [
+          9,
+          18,
+          28
+        ],
+        [
+          9,
+          41,
+          51
+        ],
+        [
+          10,
+          16,
+          31
+        ],
+        [
+          10,
+          39,
+          52
+        ],
+        [
+          11,
+          17,
+          30
+        ],
+        [
+          11,
+          38,
+          53
+        ],
+        [
+          12,
+          47,
+          69
+        ],
+        [
+          12,
+          56,
+          78
+        ],
+        [
+          13,
+          46,
+          68
+        ],
+        [
+          13,
+          57,
+          79
+        ],
+        [
+          14,
+          42,
+          71
+        ],
+        [
+          14,
+          55,
+          82
+        ],
+        [
+          15,
+          43,
+          70
+        ],
+        [
+          15,
+          54,
+          83
+        ],
+        [
+          16,
+          52,
+          73
+        ],
+        [
+          17,
+          53,
+          72
+        ],
+        [
+          18,
+          41,
+          60
+        ],
+        [
+          19,
+          40,
+          61
+        ],
+        [
+          20,
+          49,
+          77
+        ],
+        [
+          21,
+          48,
+          76
+        ],
+        [
+          22,
+          36,
+          64
+        ],
+        [
+          23,
+          37,
+          65
+        ],
+        [
+          24,
+          44,
+          81
+        ],
+        [
+          24,
+          58,
+          67
+        ],
+        [
+          25,
+          45,
+          80
+        ],
+        [
+          25,
+          59,
+          66
+        ],
+        [
+          26,
+          43,
+          83
+        ],
+        [
+          26,
+          54,
+          70
+        ],
+        [
+          27,
+          42,
+          82
+        ],
+        [
+          27,
+          55,
+          71
+        ],
+        [
+          28,
+          51,
+          60
+        ],
+        [
+          29,
+          50,
+          61
+        ],
+        [
+          30,
+          38,
+          72
+        ],
+        [
+          31,
+          39,
+          73
+        ],
+        [
+          32,
+          37,
+          74
+        ],
+        [
+          33,
+          36,
+          75
+        ],
+        [
+          34,
+          49,
+          63
+        ],
+        [
+          35,
+          48,
+          62
+        ]
+      ],
+      "explicit_witnesses": [
+        {
+          "added_blocks": [
+            [
+              0,
+              46,
+              57
+            ],
+            [
+              1,
+              47,
+              56
+            ],
+            [
+              2,
+              45,
+              59
+            ],
+            [
+              3,
+              44,
+              58
+            ],
+            [
+              4,
+              23,
+              32
+            ],
+            [
+              5,
+              22,
+              33
+            ],
+            [
+              6,
+              20,
+              34
+            ],
+            [
+              7,
+              21,
+              35
+            ]
+          ],
+          "component_completion_choices": [
+            {
+              "completion_id": 0,
+              "component_id": 0
+            },
+            {
+              "completion_id": 0,
+              "component_id": 1
+            },
+            {
+              "completion_id": 0,
+              "component_id": 2
+            },
+            {
+              "completion_id": 0,
+              "component_id": 3
+            },
+            {
+              "completion_id": 0,
+              "component_id": 4
+            },
+            {
+              "completion_id": 0,
+              "component_id": 5
+            },
+            {
+              "completion_id": 0,
+              "component_id": 6
+            },
+            {
+              "completion_id": 0,
+              "component_id": 7
+            },
+            {
+              "completion_id": 0,
+              "component_id": 8
+            },
+            {
+              "completion_id": 0,
+              "component_id": 9
+            },
+            {
+              "completion_id": 0,
+              "component_id": 10
+            },
+            {
+              "completion_id": 0,
+              "component_id": 11
+            },
+            {
+              "completion_id": 0,
+              "component_id": 12
+            },
+            {
+              "completion_id": 0,
+              "component_id": 13
+            }
+          ],
+          "final_block_count": 56,
+          "final_blocks": [
+            [
+              0,
+              46,
+              57
+            ],
+            [
+              0,
+              68,
+              79
+            ],
+            [
+              1,
+              47,
+              56
+            ],
+            [
+              1,
+              69,
+              78
+            ],
+            [
+              2,
+              45,
+              59
+            ],
+            [
+              2,
+              66,
+              80
+            ],
+            [
+              3,
+              44,
+              58
+            ],
+            [
+              3,
+              67,
+              81
+            ],
+            [
+              4,
+              23,
+              32
+            ],
+            [
+              4,
+              65,
+              74
+            ],
+            [
+              5,
+              22,
+              33
+            ],
+            [
+              5,
+              64,
+              75
+            ],
+            [
+              6,
+              20,
+              34
+            ],
+            [
+              6,
+              63,
+              77
+            ],
+            [
+              7,
+              21,
+              35
+            ],
+            [
+              7,
+              62,
+              76
+            ],
+            [
+              8,
+              19,
+              29
+            ],
+            [
+              8,
+              40,
+              50
+            ],
+            [
+              9,
+              18,
+              28
+            ],
+            [
+              9,
+              41,
+              51
+            ],
+            [
+              10,
+              16,
+              31
+            ],
+            [
+              10,
+              39,
+              52
+            ],
+            [
+              11,
+              17,
+              30
+            ],
+            [
+              11,
+              38,
+              53
+            ],
+            [
+              12,
+              47,
+              69
+            ],
+            [
+              12,
+              56,
+              78
+            ],
+            [
+              13,
+              46,
+              68
+            ],
+            [
+              13,
+              57,
+              79
+            ],
+            [
+              14,
+              42,
+              71
+            ],
+            [
+              14,
+              55,
+              82
+            ],
+            [
+              15,
+              43,
+              70
+            ],
+            [
+              15,
+              54,
+              83
+            ],
+            [
+              16,
+              52,
+              73
+            ],
+            [
+              17,
+              53,
+              72
+            ],
+            [
+              18,
+              41,
+              60
+            ],
+            [
+              19,
+              40,
+              61
+            ],
+            [
+              20,
+              49,
+              77
+            ],
+            [
+              21,
+              48,
+              76
+            ],
+            [
+              22,
+              36,
+              64
+            ],
+            [
+              23,
+              37,
+              65
+            ],
+            [
+              24,
+              44,
+              81
+            ],
+            [
+              24,
+              58,
+              67
+            ],
+            [
+              25,
+              45,
+              80
+            ],
+            [
+              25,
+              59,
+              66
+            ],
+            [
+              26,
+              43,
+              83
+            ],
+            [
+              26,
+              54,
+              70
+            ],
+            [
+              27,
+              42,
+              82
+            ],
+            [
+              27,
+              55,
+              71
+            ],
+            [
+              28,
+              51,
+              60
+            ],
+            [
+              29,
+              50,
+              61
+            ],
+            [
+              30,
+              38,
+              72
+            ],
+            [
+              31,
+              39,
+              73
+            ],
+            [
+              32,
+              37,
+              74
+            ],
+            [
+              33,
+              36,
+              75
+            ],
+            [
+              34,
+              49,
+              63
+            ],
+            [
+              35,
+              48,
+              62
+            ]
+          ],
+          "global_completion_id": 0,
+          "linearity_verified": true
+        }
+      ],
+      "maximum_final_block_count": 56,
+      "minimum_final_block_count": 56,
+      "unique": true
+    },
+    "observed_component_classes": [
+      {
+        "all_members_have_same_profile_up_to_isomorphism": true,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "canonical_maximal_added_block_sets": [
+            [
+              [
+                2,
+                4,
+                5
+              ]
+            ]
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "b30269caf26777f4664a32c6394608673659e7c5ab830a810416b43f8edfe76d",
+        "component_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "multiplicity": 8,
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 3,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 9,
+          "serialization": "{\"block_vertex_count\":3,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5]],\"event_vertex_count\":6,\"incidence_edge_count\":9}",
+          "sha256": "3f834b5f32747d2cf848c693fb28d687169562a5dc98cc1bc9159d069addea56"
+        },
+        "observed_class_id": 0
+      },
+      {
+        "all_members_have_same_profile_up_to_isomorphism": true,
+        "canonical_completion_profile": {
+          "block_count_histogram": {
+            "4": 1
+          },
+          "canonical_initially_admissible_blocks": [],
+          "canonical_maximal_added_block_sets": [
+            []
+          ],
+          "canonical_observed_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "canonical_completion_profile_sha256": "11d7d19f2b43385394546c067036c73fdee9336d07d229fd3c181f7e65123376",
+        "component_ids": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "multiplicity": 6,
+        "observed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "observed_class_id": 1
+      }
+    ],
+    "observed_relation": {
+      "event_count_inferred_from_observed_triads": 84,
+      "observed_block_count": 48,
+      "observed_blocks": [
+        [
+          0,
+          68,
+          79
+        ],
+        [
+          1,
+          69,
+          78
+        ],
+        [
+          2,
+          66,
+          80
+        ],
+        [
+          3,
+          67,
+          81
+        ],
+        [
+          4,
+          65,
+          74
+        ],
+        [
+          5,
+          64,
+          75
+        ],
+        [
+          6,
+          63,
+          77
+        ],
+        [
+          7,
+          62,
+          76
+        ],
+        [
+          8,
+          19,
+          29
+        ],
+        [
+          8,
+          40,
+          50
+        ],
+        [
+          9,
+          18,
+          28
+        ],
+        [
+          9,
+          41,
+          51
+        ],
+        [
+          10,
+          16,
+          31
+        ],
+        [
+          10,
+          39,
+          52
+        ],
+        [
+          11,
+          17,
+          30
+        ],
+        [
+          11,
+          38,
+          53
+        ],
+        [
+          12,
+          47,
+          69
+        ],
+        [
+          12,
+          56,
+          78
+        ],
+        [
+          13,
+          46,
+          68
+        ],
+        [
+          13,
+          57,
+          79
+        ],
+        [
+          14,
+          42,
+          71
+        ],
+        [
+          14,
+          55,
+          82
+        ],
+        [
+          15,
+          43,
+          70
+        ],
+        [
+          15,
+          54,
+          83
+        ],
+        [
+          16,
+          52,
+          73
+        ],
+        [
+          17,
+          53,
+          72
+        ],
+        [
+          18,
+          41,
+          60
+        ],
+        [
+          19,
+          40,
+          61
+        ],
+        [
+          20,
+          49,
+          77
+        ],
+        [
+          21,
+          48,
+          76
+        ],
+        [
+          22,
+          36,
+          64
+        ],
+        [
+          23,
+          37,
+          65
+        ],
+        [
+          24,
+          44,
+          81
+        ],
+        [
+          24,
+          58,
+          67
+        ],
+        [
+          25,
+          45,
+          80
+        ],
+        [
+          25,
+          59,
+          66
+        ],
+        [
+          26,
+          43,
+          83
+        ],
+        [
+          26,
+          54,
+          70
+        ],
+        [
+          27,
+          42,
+          82
+        ],
+        [
+          27,
+          55,
+          71
+        ],
+        [
+          28,
+          51,
+          60
+        ],
+        [
+          29,
+          50,
+          61
+        ],
+        [
+          30,
+          38,
+          72
+        ],
+        [
+          31,
+          39,
+          73
+        ],
+        [
+          32,
+          37,
+          74
+        ],
+        [
+          33,
+          36,
+          75
+        ],
+        [
+          34,
+          49,
+          63
+        ],
+        [
+          35,
+          48,
+          62
+        ]
+      ],
+      "observed_linearity_verified": true
+    },
+    "observed_template_relation": [
+      {
+        "completed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "explicit_isomorphism_certificate": {
+          "block_image_equality_verified": true,
+          "canonical_event_map": [
+            {
+              "observed_template_label": 0,
+              "source_completed_label": 0
+            },
+            {
+              "observed_template_label": 1,
+              "source_completed_label": 1
+            },
+            {
+              "observed_template_label": 2,
+              "source_completed_label": 2
+            },
+            {
+              "observed_template_label": 3,
+              "source_completed_label": 3
+            },
+            {
+              "observed_template_label": 4,
+              "source_completed_label": 4
+            },
+            {
+              "observed_template_label": 5,
+              "source_completed_label": 5
+            }
+          ],
+          "representative_event_to_observed_template_label": [
+            {
+              "event": 0,
+              "observed_template_label": 0
+            },
+            {
+              "event": 13,
+              "observed_template_label": 5
+            },
+            {
+              "event": 46,
+              "observed_template_label": 1
+            },
+            {
+              "event": 57,
+              "observed_template_label": 2
+            },
+            {
+              "event": 68,
+              "observed_template_label": 3
+            },
+            {
+              "event": 79,
+              "observed_template_label": 4
+            }
+          ],
+          "source_completed_canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "target_observed_canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "isomorphic_to_already_observed_class": true,
+        "matched_observed_class_id": 1,
+        "maximal_completion_type_id": 0,
+        "new_completion_type": false,
+        "representative_completion_ids": [
+          0
+        ],
+        "representative_component_id": 0,
+        "source_observed_class_id": 0
+      },
+      {
+        "completed_canonical_signature": {
+          "all_event_bijections_tested": 720,
+          "block_vertex_count": 4,
+          "canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "event_vertex_count": 6,
+          "incidence_edge_count": 12,
+          "serialization": "{\"block_vertex_count\":4,\"canonical_blocks\":[[0,1,2],[0,3,4],[1,3,5],[2,4,5]],\"event_vertex_count\":6,\"incidence_edge_count\":12}",
+          "sha256": "400a5bd1e565e4b1dbd22739e9255d5d3997488698765eaee2ae93ec9c80483b"
+        },
+        "explicit_isomorphism_certificate": {
+          "block_image_equality_verified": true,
+          "canonical_event_map": [
+            {
+              "observed_template_label": 0,
+              "source_completed_label": 0
+            },
+            {
+              "observed_template_label": 1,
+              "source_completed_label": 1
+            },
+            {
+              "observed_template_label": 2,
+              "source_completed_label": 2
+            },
+            {
+              "observed_template_label": 3,
+              "source_completed_label": 3
+            },
+            {
+              "observed_template_label": 4,
+              "source_completed_label": 4
+            },
+            {
+              "observed_template_label": 5,
+              "source_completed_label": 5
+            }
+          ],
+          "representative_event_to_observed_template_label": [
+            {
+              "event": 8,
+              "observed_template_label": 0
+            },
+            {
+              "event": 19,
+              "observed_template_label": 1
+            },
+            {
+              "event": 29,
+              "observed_template_label": 2
+            },
+            {
+              "event": 40,
+              "observed_template_label": 3
+            },
+            {
+              "event": 50,
+              "observed_template_label": 4
+            },
+            {
+              "event": 61,
+              "observed_template_label": 5
+            }
+          ],
+          "source_completed_canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ],
+          "target_observed_canonical_blocks": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        "isomorphic_to_already_observed_class": true,
+        "matched_observed_class_id": 1,
+        "maximal_completion_type_id": 0,
+        "new_completion_type": false,
+        "representative_completion_ids": [
+          0
+        ],
+        "representative_component_id": 8,
+        "source_observed_class_id": 1
+      }
+    ],
+    "typed_incidence_graph": {
+      "block_vertex_count": 48,
+      "component_isomorphism_class_count": 2,
+      "connected_component_count": 14,
+      "construction": "Bipartite Event/block incidence is reconstructed from observed triads alone; equivalent Event adjacency is used for deterministic BFS.",
+      "event_vertex_count": 84,
+      "incidence_edge_count": 144
+    }
+  },
+  "query_independent_construction_audit": {
+    "callable": "complete",
+    "closure_free_variables": [],
+    "completion_call_argument_count": 1,
+    "completion_call_argument_source": "the observed_triads top-level member decoded in isolation from the hash-gated blind packet",
+    "completion_frozen_as_canonical_json_before_query_decode": true,
+    "event_order": [
+      "hash-gate all five authorized immutable source byte strings",
+      "decode only the blind packet observed_triads member",
+      "call complete(observed_triads)",
+      "freeze the complete query-independent result as canonical JSON bytes",
+      "decode the blind packet unseen_queries member",
+      "decode pinned 016.08 JSON and evaluate comparisons"
+    ],
+    "forbidden_parameter_names_present": [],
+    "frozen_query_independent_completion_sha256": "b522b2e00f78d780f62222a7ea29228337232ebfa53f12c5e08d48584c40338c",
+    "inspect_signature": "(observed_triads: 'Sequence[Sequence[int]]') -> 'dict[str, Any]'",
+    "packet_unseen_queries_member_decoded_before_call": false,
+    "packet_unseen_queries_member_decoded_before_freeze": false,
+    "parameter_count": 1,
+    "parameters": [
+      {
+        "has_default": false,
+        "kind": "POSITIONAL_OR_KEYWORD",
+        "name": "observed_triads"
+      }
+    ],
+    "sole_parameter_is_observed_triads": true
+  },
+  "schema": "occurrence.gpt.01611.local-saturation-audit.v1"
+}
