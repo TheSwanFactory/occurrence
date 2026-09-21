@@ -161,6 +161,26 @@ Do not claim a complete measurement law until composition, outcome
 normalization, interference, and conditioning/collapse are separately defined
 and verified.
 
+## Numbered execution sequence
+
+The implementation and successor SOBER work are recorded as five ordered steps:
+
+1. [`017.01`](017.01-topographo-born-transport-api.md) — implement the reusable
+   OT Born transport API under `topographo`. This is the only numbered step
+   required to close Issue 017.
+2. [`017.02`](017.02-sober-package-contract.md) — define the separate SOBER
+   package contract and one-way dependency on `topographo`.
+3. [`017.03`](017.03-sober-zero-exact-nonlinguistic-demo.md) — build SOBER-0 as
+   an exact, nonlinguistic, deterministic demonstration.
+4. [`017.04`](017.04-sober-topographo-backend.md) — integrate SOBER through a
+   thin `topographo` backend without overstating the underlying theorem.
+5. [`017.05`](017.05-preparation-and-test-bridges.md) — add preparation and
+   test-interpretation bridges separately after the resolver is stable.
+
+Steps 017.02–017.05 are successor package and research work. Their inclusion
+here records dependency order and claim boundaries; they do not enlarge the
+acceptance criteria of this deliberately narrow repository issue.
+
 ## Acceptance criteria
 
 - A reusable implementation lives under `topographo`, not under `verify/` or an
