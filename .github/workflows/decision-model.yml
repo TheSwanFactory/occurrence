@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
-      - "packages/decision-model/**"
+      - "decision-model/**"
       - ".github/workflows/decision-model.yml"
       - "CHANGELOG.md"
   push:
     branches:
       - main
     paths:
-      - "packages/decision-model/**"
+      - "decision-model/**"
       - ".github/workflows/decision-model.yml"
       - "CHANGELOG.md"
 
@@ -37,7 +37,7 @@ jobs:
         uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
         with:
           enable-cache: true
-          cache-dependency-glob: "packages/decision-model/uv.lock"
+          cache-dependency-glob: "decision-model/uv.lock"
 
       - name: Set up Python
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
@@ -45,23 +45,23 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Check package lockfile
-        run: uv lock --project packages/decision-model --check
+        run: uv lock --project decision-model --check
 
       - name: Lint package
         if: matrix.python-version == '3.12'
         run: >-
-          uv run --project packages/decision-model --frozen ruff check
-          packages/decision-model/src packages/decision-model/tests
+          uv run --project decision-model --frozen ruff check
+          decision-model/src decision-model/tests
 
       - name: Check shipped typing contract
         run: >-
-          uv run --project packages/decision-model --frozen mypy --strict
-          packages/decision-model/src/decision_model
+          uv run --project decision-model --frozen mypy --strict
+          decision-model/src/decision_model
 
       - name: Run package tests
         run: >-
-          uv run --project packages/decision-model --frozen pytest
-          packages/decision-model/tests
+          uv run --project decision-model --frozen pytest
+          decision-model/tests
 
   package:
     name: Build decision-model
@@ -83,7 +83,7 @@ jobs:
         uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
         with:
           enable-cache: true
-          cache-dependency-glob: "packages/decision-model/uv.lock"
+          cache-dependency-glob: "decision-model/uv.lock"
 
       - name: Set up Python
         uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
@@ -98,7 +98,7 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           BEFORE_SHA: ${{ github.event.before }}
         run: |
-          uv run --project packages/decision-model --frozen python - <<'PY'
+          uv run --project decision-model --frozen python - <<'PY'
           import json
           import os
           from pathlib import Path
@@ -111,7 +111,7 @@ jobs:
           from packaging.version import Version
 
           project = tomllib.loads(
-              Path("packages/decision-model/pyproject.toml").read_text()
+              Path("decision-model/pyproject.toml").read_text()
           )["project"]
           version = project["version"]
           current = Version(version)
@@ -152,7 +152,7 @@ jobs:
                       comparison,
                       "HEAD",
                       "--",
-                      "packages/decision-model",
+                      "decision-model",
                   ],
                   check=False,
               ).returncode
@@ -181,13 +181,13 @@ jobs:
           PY
 
       - name: Build wheel and source distribution
-        run: uv build --project packages/decision-model --out-dir decision-model-dist
+        run: uv build --project decision-model --out-dir decision-model-dist
 
       - name: Verify distribution metadata and namespace boundary
         env:
           VERSION: ${{ steps.release.outputs.version }}
         run: |
-          uv run --project packages/decision-model --frozen python - <<'PY'
+          uv run --project decision-model --frozen python - <<'PY'
           import email
           import os
           from pathlib import Path

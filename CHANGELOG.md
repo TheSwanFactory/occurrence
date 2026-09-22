@@ -14,7 +14,7 @@ All notable changes to this project are documented in this file.
   committed Kraus-84 family, and a strict scientific fence against presenting
   the quotient as a complete generalized measurement law.
 - Add the independently buildable `decision-model` 1.0.0 distribution under
-  `packages/decision-model`, exposing the backend-neutral `decision_model`
+  `decision-model`, exposing the backend-neutral `decision_model`
   import contract for State, Effect, Test, Probability, Distribution, Resolver,
   strict resolution, and typed failures. The generic package has no runtime
   dependency on `topographo`; future adapters may depend on it only in the

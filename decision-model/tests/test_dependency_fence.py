@@ -7,7 +7,7 @@ from collections.abc import Iterable
 from pathlib import Path
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
-REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 DECISION_MODEL_SOURCE = PACKAGE_ROOT / "src" / "decision_model"
 TOPOGRAPHO_SOURCE = REPOSITORY_ROOT / "topographo"
 

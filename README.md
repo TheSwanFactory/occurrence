@@ -51,10 +51,10 @@ The repository is split along a **library / consumer** seam:
   the exact single-step OT Born transport API. It ships as the `topographo`
   distribution with its own tests and CI. See
   [`topographo/README.md`](topographo/README.md).
-- **`packages/decision-model/`** — the independently buildable, backend-neutral
-  Decision Model contract. Install the `decision-model` distribution and import
-  `decision_model` for typed State/Effect/Test resolution. Its transitional
-  monorepo placement does not permit a reverse dependency from `topographo`.
+- **`decision-model/`** — the independently buildable, backend-neutral Decision
+  Model project. Install the `decision-model` distribution and import
+  `decision_model` for typed State/Effect/Test resolution. Its dependency fence
+  does not permit a reverse dependency from `topographo`.
 - **`verify/`** — the consumer side: canonical paper audits and independent
   reviewer cells. Its CI installs `topographo` and treats audit exit codes as
   gates. See [`verify/README.md`](verify/README.md).
@@ -82,11 +82,11 @@ For repository development with `uv`:
 ```bash
 uv run python verify/occurrence_i_audit.py
 uv run pytest topographo/tests
-uv run --project packages/decision-model pytest
+uv run --project decision-model pytest
 ```
 
 The public package overviews live in [`topographo/README.md`](topographo/README.md)
-and [`packages/decision-model/README.md`](packages/decision-model/README.md). API
+and [`decision-model/README.md`](decision-model/README.md). API
 docs are published at <https://theswanfactory.github.io/occurrence/>.
 
 ## Run the Audit

@@ -85,9 +85,9 @@ decision_model.backends.topographo  --->  topographo
 Such an adapter may consume only public `topographo` APIs. `topographo` must
 never import `decision_model`, and generic Decision Model modules must remain
 independent of `topographo`. No optional backend dependency is declared until
-that adapter exists. The current `packages/decision-model` monorepo location is
-transitional; the package is independently buildable and preserves the same
-dependency fence expected of a separate repository.
+that adapter exists. The top-level `decision-model/` directory is an
+independently buildable project with the same dependency fence expected if it
+is later moved to a separate repository.
 
 ## Scope and claims
 
@@ -121,9 +121,9 @@ Breaking public changes require a new major version.
 From the repository root:
 
 ```console
-uv run --project packages/decision-model --frozen ruff check \
-  packages/decision-model/src packages/decision-model/tests
-uv run --project packages/decision-model --frozen pytest \
-  packages/decision-model/tests
-uv build --project packages/decision-model
+uv run --project decision-model --frozen ruff check \
+  decision-model/src decision-model/tests
+uv run --project decision-model --frozen pytest \
+  decision-model/tests
+uv build --project decision-model
 ```
