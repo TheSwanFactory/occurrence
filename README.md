@@ -47,20 +47,19 @@ separable from it.
 The repository is split along a **library / consumer** seam:
 
 - **`topographo/`** — the reusable Python library: Cayley-Dickson algebra,
-  validation gates, operators, SSD helpers, and the exceptional-algebra
-  (Albert / F4 / G2) layer. Ships to PyPI with its own tests and CI
-  (`topographo.yml`). See [`topographo/README.md`](topographo/README.md) for
-  the library's own overview, install, and usage — that file is also the PyPI
-  long description.
-- **`verify/`** — the consumer side: all paper verification. Each paper has a
-  canonical, CI-gating audit (`occurrence_<paper>_audit.py`), the tests that
-  guard it, and independent reviewer cells; its CI (`occurrence.yml`) installs
-  `topographo` and runs the audits as exit-code gates. See
-  [`verify/README.md`](verify/README.md) for the naming convention.
-- **`issues/`** — numbered research evidence bundles of turn-specific results,
-  attachments, and, where included, tasks; contents and evidentiary scope vary
-  by issue. See the
-  [Issue 015 status/index and reproduction guide](issues/015-learning-law-for-consequence-structure/README.md).
+  validation gates, operators, SSD helpers, the exceptional-algebra layer, and
+  the exact single-step OT Born transport API. It ships as the `topographo`
+  distribution with its own tests and CI. See
+  [`topographo/README.md`](topographo/README.md).
+- **`decision-model/`** — the independently buildable, backend-neutral Decision
+  Model project. Install the `decision-model` distribution and import
+  `decision_model` for typed State/Effect/Test resolution. Its dependency fence
+  does not permit a reverse dependency from `topographo`.
+- **`verify/`** — the consumer side: canonical paper audits and independent
+  reviewer cells. Its CI installs `topographo` and treats audit exit codes as
+  gates. See [`verify/README.md`](verify/README.md).
+- **`issues/`** — numbered research evidence bundles, implementation records,
+  attachments, and tasks; contents and evidentiary scope vary by issue.
 
 The papers live at the top level — `occurrence-theory.md` (Paper I) and
 `occurrence-theory-ii.md` (Paper II) — with supporting material in `docs/` and
@@ -68,25 +67,27 @@ shared ground-truth data in `data/`.
 
 ## Requirements
 
-The audit script requires Python 3.11 or newer and NumPy, plus the `topographo`
-package (which it imports for the verified algebra).
+Python 3.11 or newer is required. `topographo` requires NumPy; the generic
+`decision_model` contract uses only the standard library.
 
-`uv` is the preferred runner for local audit work:
+Install the two distributions independently:
+
+```bash
+pip install topographo
+pip install decision-model
+```
+
+For repository development with `uv`:
 
 ```bash
 uv run python verify/occurrence_i_audit.py
+uv run pytest topographo/tests
+uv run --project decision-model pytest
 ```
 
-For editable package installation:
-
-```bash
-uv pip install -e .
-```
-
-The reusable library — its own install, import examples, layout, and API
-documentation — is documented in [`topographo/README.md`](topographo/README.md).
-API docs are published to GitHub Pages:
-<https://theswanfactory.github.io/occurrence/>.
+The public package overviews live in [`topographo/README.md`](topographo/README.md)
+and [`decision-model/README.md`](decision-model/README.md). API
+docs are published at <https://theswanfactory.github.io/occurrence/>.
 
 ## Run the Audit
 
@@ -102,19 +103,19 @@ To save the output:
 uv run python verify/occurrence_i_audit.py > audit_results.txt
 ```
 
-The audit exits `0` only if every certificate meets its threshold, and `1`
-otherwise, so it is safe to gate CI on it. A passing run means the paper's
-`[C]`-tagged claims reproduce on this implementation. It does not mean the
-paper's `[I]` interpretations are correct; those are not tested.
+The audit exits `0` only if every certificate meets its threshold. A passing run
+means the paper's `[C]`-tagged claims reproduce on this implementation; it does
+not validate the paper's `[I]` interpretations.
 
-CI runs two workflows on pull requests and pushes to `main`: `topographo.yml`
-(library: tests, build, release) and `occurrence.yml` (consumer: installs the
-package, runs this audit as an exit-code gate, and runs the `verify/` tests).
+CI runs the topographo library/release workflow, the independent Decision Model
+package/release workflow, and the Occurrence consumer/audit workflow on relevant
+changes.
 
 ## Status
 
-This is a research workspace, not a packaged library. The paper is the primary
-artifact; the script is included to reproduce the computation-backed claims.
+This repository contains two packaged public software surfaces alongside the
+research papers and independent verification record. Their APIs and scientific
+claims are intentionally narrower than the interpretive programme.
 
 ## License
 

@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decision-model"
+version = "1.0.0"
+description = "Backend-neutral typed state, effect, test, and decision contracts."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "The Swan Factory" }
+]
+dependencies = []
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/TheSwanFactory/occurrence"
+Source = "https://github.com/TheSwanFactory/occurrence"
+Issues = "https://github.com/TheSwanFactory/occurrence/issues"
+
+[dependency-groups]
+dev = [
+  "mypy==1.18.2",
+  "packaging==26.2",
+  "pytest==9.1.1",
+  "ruff==0.16.0",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["decision_model*"]
+
+[tool.setuptools.package-data]
+decision_model = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
