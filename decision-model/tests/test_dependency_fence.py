@@ -82,7 +82,10 @@ def test_distribution_metadata_is_independent_and_pinned() -> None:
     project = metadata["project"]
 
     assert project["name"] == "decision-model"
-    assert project["version"] == "1.0.0"
+    assert project["version"] == "1.1.0"
+    assert project["scripts"] == {
+        "decision-model-zero": "decision_model._zero:main"
+    }
     assert project["requires-python"] == ">=3.11"
     assert project["license"] == "MIT"
     assert project["authors"] == [{"name": "The Swan Factory"}]

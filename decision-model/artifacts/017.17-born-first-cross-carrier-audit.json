@@ -1,0 +1,415 @@
+{
+  "admission_checks": [
+    {
+      "id": "required_exact_born_probabilities",
+      "passed": true
+    },
+    {
+      "id": "one_fixed_preparation_independent_test",
+      "passed": true
+    },
+    {
+      "id": "effect_complement_is_unit",
+      "passed": true
+    },
+    {
+      "id": "required_equality_complement_control",
+      "passed": true
+    },
+    {
+      "id": "no_state_dependent_effects",
+      "passed": true
+    },
+    {
+      "id": "no_interact_lookup_geometry",
+      "passed": true
+    },
+    {
+      "id": "zero_not_defined_as_illegality",
+      "passed": true
+    },
+    {
+      "id": "no_learned_transition",
+      "passed": true
+    }
+  ],
+  "architectural_classification": {
+    "admission": "important partial positive",
+    "code": "E3",
+    "label": "Born-only TDM"
+  },
+  "authority": {
+    "added_authority": [],
+    "gpt": {
+      "files_inspected": [
+        "017.13-GPT-synchronize-Jev-with-actualization-regeneration-frontier.md",
+        "017.17-Task-Born-first-Decision-Model-Zero-cross-carrier-coding-audit.md",
+        "017.17a-GPT-owner-review-execution-stable-and-preregistered-boundary.md"
+      ],
+      "revision": "0014ec768ad718a8f9e7bb1c05c36cd2984c9a3b471205607ed8a76abf73ef2b"
+    },
+    "implementation_base_revision": "b9f8e30aa605e0230fda54aa1189f723d6d07868",
+    "interact": {
+      "canonical_target": "Issue 017 closure and canonical 13",
+      "files_inspected": [],
+      "named_composite": "beta_e = p_e o rho_e o J_e^{-1}",
+      "retrieval_result": "no local checkout or public repository was available and the configured package-registry endpoints were unauthenticated",
+      "revision": "fa6d40ae9542353bf23f1b61bafe5f8ad19377afc2338baba262ba6c15f597a4",
+      "source_retrieved": false
+    }
+  },
+  "executed_on": "2026-09-22",
+  "package": {
+    "name": "decision-model",
+    "version": "1.1.0"
+  },
+  "phase_a_born_realization": {
+    "carrier": "16-dimensional exact diagonal projector representation",
+    "effects": [
+      {
+        "bounded_by_unit": true,
+        "diagonal": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "dimension": 16,
+        "id": "e_yes",
+        "nonzero": true,
+        "positive_semidefinite": true,
+        "projector_identity": true
+      },
+      {
+        "bounded_by_unit": true,
+        "diagonal": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "dimension": 16,
+        "id": "e_no",
+        "nonzero": true,
+        "positive_semidefinite": true,
+        "projector_identity": true
+      }
+    ],
+    "evaluations": [
+      {
+        "distribution": [
+          {
+            "label": "yes",
+            "probability": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          },
+          {
+            "label": "no",
+            "probability": {
+              "denominator": 1,
+              "numerator": 0
+            }
+          }
+        ],
+        "id": "sharp",
+        "normative": true,
+        "ray": {
+          "dimension": 16,
+          "nonzero_coordinates": [
+            {
+              "index": 0,
+              "value": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            }
+          ]
+        },
+        "source_probability": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "squared_norm": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "total": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      {
+        "distribution": [
+          {
+            "label": "yes",
+            "probability": {
+              "denominator": 3,
+              "numerator": 1
+            }
+          },
+          {
+            "label": "no",
+            "probability": {
+              "denominator": 3,
+              "numerator": 2
+            }
+          }
+        ],
+        "id": "non-sharp",
+        "normative": true,
+        "ray": {
+          "dimension": 16,
+          "nonzero_coordinates": [
+            {
+              "index": 0,
+              "value": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            },
+            {
+              "index": 2,
+              "value": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            },
+            {
+              "index": 3,
+              "value": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            }
+          ]
+        },
+        "source_probability": {
+          "denominator": 3,
+          "numerator": 1
+        },
+        "squared_norm": {
+          "denominator": 1,
+          "numerator": 3
+        },
+        "total": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      {
+        "distribution": [
+          {
+            "label": "yes",
+            "probability": {
+              "denominator": 1,
+              "numerator": 0
+            }
+          },
+          {
+            "label": "no",
+            "probability": {
+              "denominator": 1,
+              "numerator": 1
+            }
+          }
+        ],
+        "id": "endpoint-control",
+        "normative": false,
+        "ray": {
+          "dimension": 16,
+          "nonzero_coordinates": [
+            {
+              "index": 2,
+              "value": {
+                "denominator": 1,
+                "numerator": 1
+              }
+            }
+          ]
+        },
+        "source_probability": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "squared_norm": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "total": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      }
+    ],
+    "exact_born_assertions_passed": true,
+    "fixed_test": {
+      "effect_complement_is_unit": true,
+      "labels": [
+        "yes",
+        "no"
+      ],
+      "semantic_verdict": "one fixed typed test evaluated under multiple preparations",
+      "shared_effect_object_identity": true,
+      "shared_test_instance": true
+    },
+    "preparation_kind": "nonzero rational rays with scale-invariant evaluation",
+    "verdict": "pass"
+  },
+  "phase_b_support_control": {
+    "definition": "F_Q(p,a) = 1[omega_p(e_a) == 0]",
+    "required": {
+      "column_order": [
+        "yes",
+        "no"
+      ],
+      "criterion": "nonempty forbidden row and column sets are pairwise identical or disjoint",
+      "criterion_passed": true,
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "row_order": [
+        "sharp",
+        "non-sharp"
+      ],
+      "verdict": "bare support-incidence coloring possible"
+    },
+    "semantic_limit": "colorability does not identify zero probability with Interact illegality",
+    "verdict": "bare support-incidence coloring possible",
+    "with_non_normative_endpoint_control": {
+      "column_order": [
+        "yes",
+        "no"
+      ],
+      "criterion": "nonempty forbidden row and column sets are pairwise identical or disjoint",
+      "criterion_passed": true,
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "row_order": [
+        "sharp",
+        "non-sharp",
+        "endpoint-control"
+      ],
+      "verdict": "bare support-incidence coloring possible"
+    }
+  },
+  "phase_c_interact_coordinate_gate": {
+    "classification": "certified abstract incidence only; executable coordinates unavailable under evidence fence",
+    "coordinates_available": false,
+    "executable_components_available": {
+      "J_e_inverse": false,
+      "beta_e": false,
+      "p_e": false,
+      "rho_e": false
+    },
+    "required_components": [
+      "J_e_inverse",
+      "rho_e",
+      "p_e",
+      "beta_e"
+    ]
+  },
+  "phase_d_support_incidence_hypothesis": {
+    "arbitrary_lookup_or_surrogate_geometry_used": false,
+    "reason": "Phase C coordinate gate is closed",
+    "reversed_orientation_promoted": false,
+    "status": "not testable",
+    "structural_witness": false,
+    "witness_classification": "none; coordinate gate closed",
+    "witness_constructed": false
+  },
+  "phase_e_cross_carrier_audit": {
+    "branch_to_effect_relation": null,
+    "chi_to_omega_relation": null,
+    "reason": "declared Interact source was not retrieved; Phase C closed on execution-time authority availability",
+    "relations_to_audit": [
+      "typed map",
+      "quotient",
+      "functor",
+      "pairing",
+      "embedding",
+      "exact relation"
+    ],
+    "status": "not auditable",
+    "verdict": "No cross-carrier relation was available to or verified by this execution."
+  },
+  "phase_f_algebraic_classification": "not yet well-typed",
+  "schema": "decision-model-01717-audit/v1",
+  "source_fixture": {
+    "answer_order": [
+      "yes",
+      "no"
+    ],
+    "optional_control": {
+      "id": "endpoint-control",
+      "included_in_audit": true,
+      "included_in_product_payload": false,
+      "p": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "question": "Q",
+    "required_cases": [
+      {
+        "id": "sharp",
+        "p": {
+          "denominator": 1,
+          "numerator": 1
+        }
+      },
+      {
+        "id": "non-sharp",
+        "p": {
+          "denominator": 3,
+          "numerator": 1
+        }
+      }
+    ],
+    "schema": "decision-model-zero/v1"
+  }
+}

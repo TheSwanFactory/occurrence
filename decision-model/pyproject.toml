@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "decision-model"
-version = "1.0.0"
+version = "1.1.0"
 description = "Backend-neutral typed state, effect, test, and decision contracts."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -21,6 +21,9 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Typing :: Typed",
 ]
+
+[project.scripts]
+decision-model-zero = "decision_model._zero:main"
 
 [project.urls]
 Homepage = "https://github.com/TheSwanFactory/occurrence"

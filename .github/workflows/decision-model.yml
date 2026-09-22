@@ -205,38 +205,110 @@ jobs:
               metadata_name = next(
                   name for name in names if name.endswith(".dist-info/METADATA")
               )
+              entry_points_name = next(
+                  name for name in names if name.endswith(".dist-info/entry_points.txt")
+              )
               metadata = email.message_from_bytes(archive.read(metadata_name))
+              entry_points = archive.read(entry_points_name).decode()
               assert metadata["Name"] == "decision-model"
               assert metadata["Version"] == os.environ["VERSION"]
               assert not metadata.get_all("Requires-Dist")
               assert "decision_model/__init__.py" in names
+              assert "decision_model/_zero.py" in names
+              assert "decision_model/_audit_01717.py" in names
               assert "decision_model/py.typed" in names
+              assert "decision-model-zero = decision_model._zero:main" in entry_points
               assert not any(name.startswith("topographo/") for name in names)
 
           with tarfile.open(sdists[0]) as archive:
               names = archive.getnames()
               assert any(name.endswith("/LICENSE") for name in names)
               assert any(name.endswith("/README.md") for name in names)
+              assert any(
+                  name.endswith(
+                      "/artifacts/017.17-born-first-cross-carrier-audit.json"
+                  )
+                  for name in names
+              )
           PY
 
-      - name: Verify isolated wheel install
+      - name: Verify isolated wheel install and Decision Model Zero command
         env:
           VERSION: ${{ steps.release.outputs.version }}
         run: |
-          uv pip install --target /tmp/decision-model-install \
+          python -m venv /tmp/decision-model-venv
+          /tmp/decision-model-venv/bin/python -m pip install --no-deps \
             decision-model-dist/*.whl
+          mkdir -p /tmp/decision-model-smoke
           (
-            cd /tmp
-            PYTHONPATH=/tmp/decision-model-install \
-              "${pythonLocation}/bin/python" - <<'PY'
+            cd /tmp/decision-model-smoke
+            unset PYTHONPATH
+            /tmp/decision-model-venv/bin/decision-model-zero \
+              > first.json 2> first.err
+            /tmp/decision-model-venv/bin/decision-model-zero \
+              > second.json 2> second.err
+            test ! -s first.err
+            test ! -s second.err
+            cmp first.json second.json
+            /tmp/decision-model-venv/bin/python - <<'PY'
           import importlib.metadata
+          import json
           import os
+          from pathlib import Path
 
           import decision_model
 
+          expected = {
+              "schema": "decision-model-zero/v1",
+              "backend": "generic-exact",
+              "test": {
+                  "state_domain": "p in Q, 0 <= p <= 1",
+                  "effects": [
+                      {"label": "yes", "id": "identity", "expression": "p"},
+                      {
+                          "label": "no",
+                          "id": "complement",
+                          "expression": "1 - p",
+                      },
+                  ],
+              },
+              "cases": [
+                  {
+                      "id": "sharp",
+                      "state": {"numerator": 1, "denominator": 1},
+                      "distribution": [
+                          {
+                              "label": "yes",
+                              "probability": {"numerator": 1, "denominator": 1},
+                          },
+                          {
+                              "label": "no",
+                              "probability": {"numerator": 0, "denominator": 1},
+                          },
+                      ],
+                      "total": {"numerator": 1, "denominator": 1},
+                  },
+                  {
+                      "id": "non-sharp",
+                      "state": {"numerator": 1, "denominator": 3},
+                      "distribution": [
+                          {
+                              "label": "yes",
+                              "probability": {"numerator": 1, "denominator": 3},
+                          },
+                          {
+                              "label": "no",
+                              "probability": {"numerator": 2, "denominator": 3},
+                          },
+                      ],
+                      "total": {"numerator": 1, "denominator": 1},
+                  },
+              ],
+          }
           assert importlib.metadata.version("decision-model") == os.environ["VERSION"]
           assert decision_model.Probability(1).value == 1
           assert decision_model.resolve_test is not None
+          assert json.loads(Path("first.json").read_bytes()) == expected
           PY
           )
 

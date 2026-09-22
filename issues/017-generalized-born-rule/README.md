@@ -125,15 +125,18 @@ Event enactment remain outside resolver semantics.
    OT Born transport API under `topographo`.
 2. [`017.02`](017.02-decision-model-package-contract.md) — **complete**:
    independent backend-neutral Decision Model 1.0.0 package contract.
-3. [`017.03`](017.03-decision-model-zero-exact-nonlinguistic-demo.md) — next:
-   exact, nonlinguistic, deterministic Decision Model Zero demonstration.
-4. [`017.04`](017.04-decision-model-topographo-backend.md) — then: thin
+3. [`017.03`](017.03-decision-model-zero-exact-nonlinguistic-demo.md) —
+   **complete in 1.1.0**: exact, nonlinguistic, deterministic Decision Model
+   Zero demonstration and installed command.
+4. [`017.04`](017.04-decision-model-topographo-backend.md) — next: thin
    `topographo` backend without overstating the theorem.
 5. [`017.05`](017.05-preparation-and-test-bridges.md) — later: preparation and
    test-interpretation bridges, characterized separately.
 
-Steps 017.03–017.05 remain successor package and research work. They are not
-conditions for this narrow issue's closure.
+Steps 017.04–017.05 remain successor package and research work. They are not
+conditions for this narrow issue's closure. The separate GPT 017.17 audit uses
+Decision Model Zero as an exact fixed-test research control without claiming
+that the planned backend or preparation/test bridges are complete.
 
 ## Acceptance record
 

@@ -3,6 +3,48 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.1.0] - 2026-09-22
+
+### Added
+
+- Add the installed `decision-model-zero` command and its deterministic
+  `decision-model-zero/v1` document. The two ordered fixtures resolve through
+  the existing public `Test` and `resolve_test` contracts using exact
+  `fractions.Fraction` values, unit totals, and no normalization or tolerance.
+- Add the isolated 017.17 Born-first audit, exact fixed 16-dimensional
+  projector/complement test, rational-ray preparations, derived support matrix,
+  equality-complement control, explicit authority-availability gates, and
+  deterministic `decision-model-01717-audit/v1` research artifact.
+- Add focused source and clean-wheel acceptance coverage for exact values,
+  schema/order, successful zero, preparation-independent effect identity,
+  repeatable command bytes, empty stderr, and the installed console entry point.
+
+### Changed
+
+- Advance the independently buildable `decision-model` package and editable
+  lock entry from 1.0.0 to 1.1.0; runtime dependencies and the stable 12-symbol
+  top-level API remain unchanged.
+- Strengthen the distribution smoke test to install the wheel into a fresh
+  virtual environment, invoke `decision-model-zero` twice from a neutral
+  directory with `PYTHONPATH` unset, and validate the complete output.
+
+### Scientific scope
+
+- Decision Model Zero certifies an elementary exact complement test on its
+  declared rational domain. The separate 017.17 audit establishes one fixed
+  typed formal test evaluated under multiple preparations and reports **bare
+  support-incidence coloring possible**.
+- The declared Interact source was unavailable to this execution, so the
+  cross-carrier authority-content audit was not reached and no cross-carrier
+  relation was available to or verified by this execution. The bounded
+  architecture is Born-only and the common algebraic classification remains
+  `not yet well-typed`. This does not claim that the declared authority lacks
+  such a relation or that no relation exists.
+- This version does not provide preparation, test interpretation, arbitrary
+  test-admissibility proofs, backend physics, generalized OT measurement,
+  conditioning, collapse, sampling, policy, intelligent evaluation, or Event
+  enactment.
+
 ## [1.0.0] - 2026-09-21
 
 ### Added
