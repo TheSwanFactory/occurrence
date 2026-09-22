@@ -3,6 +3,46 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.0] - 2026-09-21
+
+### Added
+
+- Add the public `topographo.ot_born_transport` implementation of the exact
+  single-step OT Born transport identity, including immutable diagnostics,
+  explicit exact/near-annihilation behavior, structural validation of the OT
+  operator/complex-structure presentation, deterministic coverage of the
+  committed Kraus-84 family, and a strict scientific fence against presenting
+  the quotient as a complete generalized measurement law.
+- Add the independently buildable `decision-model` 1.0.0 distribution under
+  `packages/decision-model`, exposing the backend-neutral `decision_model`
+  import contract for State, Effect, Test, Probability, Distribution, Resolver,
+  strict resolution, and typed failures. The generic package has no runtime
+  dependency on `topographo`; future adapters may depend on it only in the
+  `decision_model -> topographo` direction.
+- Add dedicated Decision Model lint, static typing, Python 3.11–3.13 test,
+  build, wheel-boundary, isolated-install, and serialized/recoverable trusted-
+  publishing CI. PyPI version 0.0.1 reserved the name without exposing a stable
+  API; this release begins the supported API at 1.0.0.
+
+### Changed
+
+- Advance the `topographo` package and editable lock entry from 0.8.6 to 1.0.0.
+  The major release makes the OT Born transport API a supported public surface;
+  existing dependencies are unchanged.
+- Refactor the canonical OT-II audit to consume the public transport API while
+  preserving the independent Codex and Solomon/Joseph rechecks.
+- Close Issue 017's implementation gap and record the separate 017.02 Decision
+  Model package contract as implemented. Preparation, test interpretation, the
+  topographo backend, and learned bridges remain separately sequenced work.
+
+### Scientific scope
+
+- This release certifies the existing single-transition transport identity and
+  the software invariants of the generic Decision Model contract. It does not
+  claim a complete generalized measurement law, normalized physical outcome
+  family, POVM, collapse rule, path interference, conditioning law, or
+  intelligent evaluation system.
+
 ## [0.8.6] - 2026-09-19
 
 ### Added

@@ -90,6 +90,11 @@ occurrence-theory-audit
 ```
 """
 
+from topographo.born_transport import (
+    BornTransportAnnihilation,
+    BornTransportResult,
+    ot_born_transport,
+)
 from topographo.core import (
     CayleyDicksonAlgebra,
     GateResult,
@@ -99,9 +104,12 @@ from topographo.core import (
 )
 
 __all__ = [
+    "BornTransportAnnihilation",
+    "BornTransportResult",
     "CayleyDicksonAlgebra",
     "GateResult",
     "cayley_dickson_table",
+    "ot_born_transport",
     "signed_basis_table",
     "verify_gates",
 ]

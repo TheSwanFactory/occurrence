@@ -226,11 +226,65 @@ MIT.
 - Training smoke lives in `experiments/tlm_modular/` (torch optional; not a CI GPU job).
 
 
+## Single-step OT Born transport identity
+
+`topographo.ot_born_transport` evaluates Theorem 4.3 for one real unit state
+`x`, one settlement operator `K_a`, and a canonical complex structure `J`, all
+in the same 16-dimensional presentation. For a non-annihilating transition it
+returns an immutable `BornTransportResult` containing
+
+```text
+y = K_a x
+x' = y / ||y||
+cost = ||y||^2
+tau = cost - 1
+s(x') = (x' . e0)^2 + (x' . J e0)^2
+A(z_a, x) = (z_a . x)^2 + ((J z_a) . x)^2,  z_a = K_a e0
+residual = s(x') cost - A(z_a, x)
+```
+
+The transported state is an owned, non-writeable array. Before evaluating the
+quotient, the API checks the OT relations that force it: operator antisymmetry,
+`J^2 = -I`, complex-structure antisymmetry, unit event recovery, and compatibility
+of the transported spine axes with the Hermitian event axes, at tolerance
+`1e-10`. Arbitrary same-shaped matrices are therefore rejected rather than
+returned with a scientifically meaningless residual.
+
+Exact and numerical near-annihilation raise `BornTransportAnnihilation` with
+`kind`, squared `cost`, and squared-cost `threshold`; normalization is not
+attempted first. The default threshold is `1e-12`. Passing
+`annihilation_tolerance=0` requests exact-annihilation handling only. A nonzero
+transition whose positive squared cost underflows float64 is rejected rather
+than returned with a zero cost. Scaled nonunit states are rejected rather than
+silently normalized, because the reported strain is defined relative to a unit
+retained state.
+
+```python
+from topographo import BornTransportAnnihilation, ot_born_transport
+
+try:
+    result = ot_born_transport(x, K_a, J)
+except BornTransportAnnihilation as annihilation:
+    print(annihilation.kind, annihilation.cost)
+else:
+    assert not result.transported_state.flags.writeable
+```
+
+This API is only the established **single-step OT Born transport identity**.
+It does not supply a normalized family of outcomes, sampling law, conditioning,
+projection or collapse, density-matrix evolution, POVM, path interference, or
+multistep measurement composition. In particular, it is not by itself a full
+generalized measurement law.
+
 ## Fixed head (0.8.2)
 
-`topographo.ssd.fixed_head` exposes the Issue-006 configured two-step Fixed
-projection/twirl existence adapter and Theory-27 readout. See
-`experiments/tlm_fixed_head/README.md` for the capacity probe and physical fence.
+`topographo.ssd.fixed_head` is a separate Issue-006 configured **two-step**
+Fixed projection/twirl adapter. Its Theory-27 `readout_probability` evaluates a
+scale-invariant quadratic effect for a word `(b, a)`. It does not transport a
+single state with `K_a`, use the canonical `J` spine, report event strain, or
+implement the single-step identity above. Neither API is an alias or theorem
+claim for the other. See `experiments/tlm_fixed_head/README.md` for that
+adapter's capacity probe and physical fence.
 
 ## Abstract F_2 groups (0.8.3)
 

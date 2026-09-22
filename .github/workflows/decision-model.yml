@@ -1,100 +1,205 @@
-name: claim decision-model on PyPI
+name: decision-model
 
 on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "packages/decision-model/**"
+      - ".github/workflows/decision-model.yml"
+      - "CHANGELOG.md"
   push:
     branches:
-      - sober-refactor
+      - main
     paths:
+      - "packages/decision-model/**"
       - ".github/workflows/decision-model.yml"
+      - "CHANGELOG.md"
 
 permissions:
   contents: read
 
 jobs:
-  claim:
-    name: Publish decision-model 0.0.1 reservation
+  test:
+    name: Test decision-model on Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
-    environment: pypi
-    permissions:
-      contents: read
-      id-token: write
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    env:
+      UV_PYTHON: ${{ matrix.python-version }}
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: "packages/decision-model/uv.lock"
+
       - name: Set up Python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Check package lockfile
+        run: uv lock --project packages/decision-model --check
+
+      - name: Lint package
+        if: matrix.python-version == '3.12'
+        run: >-
+          uv run --project packages/decision-model --frozen ruff check
+          packages/decision-model/src packages/decision-model/tests
+
+      - name: Check shipped typing contract
+        run: >-
+          uv run --project packages/decision-model --frozen mypy --strict
+          packages/decision-model/src/decision_model
+
+      - name: Run package tests
+        run: >-
+          uv run --project packages/decision-model --frozen pytest
+          packages/decision-model/tests
+
+  package:
+    name: Build decision-model
+    runs-on: ubuntu-latest
+    needs: test
+    env:
+      UV_PYTHON: "3.12"
+    outputs:
+      version: ${{ steps.release.outputs.version }}
+      publish: ${{ steps.release.outputs.publish }}
+
+    steps:
+      - name: Check out repository with release history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: "packages/decision-model/uv.lock"
+
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-
-      - name: Build minimal reservation release
+      - name: Validate release version and changelog
+        id: release
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_REF: ${{ github.ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
         run: |
-          python - <<'PY'
+          uv run --project packages/decision-model --frozen python - <<'PY'
+          import json
+          import os
           from pathlib import Path
+          import re
+          import subprocess
+          import tomllib
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
 
-          root = Path("claim")
-          package = root / "src" / "decision_model"
-          package.mkdir(parents=True)
-          (root / "pyproject.toml").write_text(
-              """[build-system]
-          requires = ["setuptools==80.9.0"]
-          build-backend = "setuptools.build_meta"
+          from packaging.version import Version
 
-          [project]
-          name = "decision-model"
-          version = "0.0.1"
-          description = "Typed decision-model contracts; initial namespace reservation."
-          readme = "README.md"
-          requires-python = ">=3.11"
-          license = "MIT"
-          authors = [{ name = "The Swan Factory" }]
-          dependencies = []
-
-          [project.urls]
-          Source = "https://github.com/TheSwanFactory/occurrence"
-          Issues = "https://github.com/TheSwanFactory/occurrence/issues"
-
-          [tool.setuptools]
-          package-dir = { "" = "src" }
-
-          [tool.setuptools.packages.find]
-          where = ["src"]
-          include = ["decision_model*"]
-          """,
-              encoding="utf-8",
+          project = tomllib.loads(
+              Path("packages/decision-model/pyproject.toml").read_text()
+          )["project"]
+          version = project["version"]
+          current = Version(version)
+          changelog = Path("CHANGELOG.md").read_text()
+          heading = re.compile(
+              rf"^## \[{re.escape(version)}\] - \d{{4}}-\d{{2}}-\d{{2}}$",
+              re.MULTILINE,
           )
-          (root / "README.md").write_text(
-              """# decision-model
+          if not heading.search(changelog):
+              raise SystemExit(f"CHANGELOG.md has no dated {version} heading")
 
-          Initial namespace reservation for The Swan Factory's Decision Model package.
+          request = Request(
+              "https://pypi.org/pypi/decision-model/json",
+              headers={"User-Agent": "decision-model-release-check/1"},
+          )
+          try:
+              with urlopen(request, timeout=30) as response:
+                  latest = Version(json.load(response)["info"]["version"])
+          except HTTPError as error:
+              if error.code != 404:
+                  raise
+              latest = None
 
-          The stable 1.0 API is being prepared in
-          [TheSwanFactory/occurrence](https://github.com/TheSwanFactory/occurrence).
-          This 0.0.1 release intentionally exposes no stable behavior.
-          """,
-              encoding="utf-8",
+          event = os.environ["EVENT_NAME"]
+          comparison = (
+              os.environ["BASE_SHA"]
+              if event == "pull_request"
+              else os.environ["BEFORE_SHA"]
+              if event == "push"
+              else ""
           )
-          (package / "__init__.py").write_text(
-              '"""Initial decision-model namespace reservation; no stable API."""\n\n'
-              '__version__ = "0.0.1"\n',
-              encoding="utf-8",
+          if comparison and comparison != "0" * 40:
+              changed = subprocess.run(
+                  [
+                      "git",
+                      "diff",
+                      "--quiet",
+                      comparison,
+                      "HEAD",
+                      "--",
+                      "packages/decision-model",
+                  ],
+                  check=False,
+              ).returncode
+              if changed not in (0, 1):
+                  raise SystemExit("cannot determine whether decision-model changed")
+              package_changed = changed == 1
+          else:
+              package_changed = True
+
+          if latest is not None and current < latest:
+              raise SystemExit(
+                  f"decision-model {version} is older than published {latest}"
+              )
+          if package_changed and event == "pull_request" and latest == current:
+              raise SystemExit(
+                  f"decision-model {version} is already published; bump the version"
+              )
+          publish = (
+              package_changed
+              and event == "push"
+              and os.environ["EVENT_REF"] == "refs/heads/main"
           )
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a") as output:
+              output.write(f"version={version}\n")
+              output.write(f"publish={str(publish).lower()}\n")
           PY
-          uv build --project claim --out-dir claim/dist
 
-      - name: Verify reservation artifacts
+      - name: Build wheel and source distribution
+        run: uv build --project packages/decision-model --out-dir decision-model-dist
+
+      - name: Verify distribution metadata and namespace boundary
+        env:
+          VERSION: ${{ steps.release.outputs.version }}
         run: |
-          python - <<'PY'
+          uv run --project packages/decision-model --frozen python - <<'PY'
           import email
+          import os
           from pathlib import Path
+          import tarfile
           import zipfile
 
-          dist = Path("claim/dist")
+          dist = Path("decision-model-dist")
           wheels = list(dist.glob("*.whl"))
           sdists = list(dist.glob("*.tar.gz"))
           assert len(wheels) == 1, wheels
           assert len(sdists) == 1, sdists
+
           with zipfile.ZipFile(wheels[0]) as archive:
               names = archive.namelist()
               metadata_name = next(
@@ -102,11 +207,143 @@ jobs:
               )
               metadata = email.message_from_bytes(archive.read(metadata_name))
               assert metadata["Name"] == "decision-model"
-              assert metadata["Version"] == "0.0.1"
+              assert metadata["Version"] == os.environ["VERSION"]
+              assert not metadata.get_all("Requires-Dist")
               assert "decision_model/__init__.py" in names
+              assert "decision_model/py.typed" in names
+              assert not any(name.startswith("topographo/") for name in names)
+
+          with tarfile.open(sdists[0]) as archive:
+              names = archive.getnames()
+              assert any(name.endswith("/LICENSE") for name in names)
+              assert any(name.endswith("/README.md") for name in names)
           PY
 
-      - name: Publish reservation with trusted publishing
-        uses: pypa/gh-action-pypi-publish@release/v1
+      - name: Verify isolated wheel install
+        env:
+          VERSION: ${{ steps.release.outputs.version }}
+        run: |
+          uv pip install --target /tmp/decision-model-install \
+            decision-model-dist/*.whl
+          (
+            cd /tmp
+            PYTHONPATH=/tmp/decision-model-install \
+              "${pythonLocation}/bin/python" - <<'PY'
+          import importlib.metadata
+          import os
+
+          import decision_model
+
+          assert importlib.metadata.version("decision-model") == os.environ["VERSION"]
+          assert decision_model.Probability(1).value == 1
+          assert decision_model.resolve_test is not None
+          PY
+          )
+
+      - name: Upload tested distributions
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
-          packages-dir: claim/dist/
+          name: decision-model-python-dist
+          path: decision-model-dist/*
+
+  publish:
+    name: Publish decision-model to PyPI
+    runs-on: ubuntu-latest
+    needs: package
+    if: needs.package.outputs.publish == 'true'
+    concurrency:
+      group: decision-model-pypi-release
+      cancel-in-progress: false
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Download tested distributions
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: decision-model-python-dist
+          path: decision-model-dist
+
+      - name: Reconcile published artifacts
+        id: reconcile
+        env:
+          VERSION: ${{ needs.package.outputs.version }}
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import shutil
+          from urllib.error import HTTPError
+          from urllib.request import Request, urlopen
+
+          dist = Path("decision-model-dist")
+          publish = Path("decision-model-publish")
+          publish.mkdir()
+          artifacts = sorted((*dist.glob("*.whl"), *dist.glob("*.tar.gz")))
+          if len(artifacts) != 2:
+              raise SystemExit(f"expected two artifacts, got {artifacts}")
+
+          endpoint = (
+              "https://pypi.org/pypi/decision-model/"
+              f"{os.environ['VERSION']}/json"
+          )
+          request = Request(
+              endpoint,
+              headers={"User-Agent": "decision-model-release-check/1"},
+          )
+          try:
+              with urlopen(request, timeout=30) as response:
+                  remote = {
+                      item["filename"]: item
+                      for item in json.load(response)["urls"]
+                  }
+          except HTTPError as error:
+              if error.code != 404:
+                  raise
+              remote = {}
+
+          expected = {artifact.name for artifact in artifacts}
+          unexpected = set(remote) - expected
+          if unexpected:
+              raise SystemExit(
+                  f"published release contains unexpected artifacts: {sorted(unexpected)}"
+              )
+          yanked = sorted(
+              name for name, item in remote.items() if item.get("yanked", False)
+          )
+          if yanked:
+              raise SystemExit(f"published release contains yanked artifacts: {yanked}")
+
+          missing = []
+          for artifact in artifacts:
+              digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+              remote_item = remote.get(artifact.name)
+              if remote_item is None:
+                  shutil.copy2(artifact, publish / artifact.name)
+                  missing.append(artifact.name)
+              elif remote_item["digests"]["sha256"] != digest:
+                  raise SystemExit(
+                      f"published {artifact.name} has hash "
+                      f"{remote_item['digests']['sha256']}, not local {digest}; "
+                      "version reuse is forbidden"
+                  )
+
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a") as output:
+              output.write(f"has_missing={str(bool(missing)).lower()}\n")
+          print("missing artifacts:", missing)
+          PY
+
+      - name: Publish verified missing artifacts with trusted publishing
+        if: steps.reconcile.outputs.has_missing == 'true'
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33
+        with:
+          packages-dir: decision-model-publish/

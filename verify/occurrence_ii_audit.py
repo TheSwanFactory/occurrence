@@ -199,25 +199,35 @@ def main():
                 P_S - (np.outer(e0, e0) + np.outer(J @ e0, J @ e0)))),
             tol=1e-9)
 
+    from topographo import BornTransportAnnihilation, ot_born_transport
+
     rng = np.random.default_rng(7)
     worst_mean, worst_born = 0.0, 0.0
+    born_transports = 0
+    born_annihilations = {"exact": 0, "near": 0}
     taus = []
     for _ in range(2000):
-        x = rng.standard_normal(d); x /= np.linalg.norm(x)
+        x = rng.standard_normal(d)
+        x /= np.linalg.norm(x)
         tau_all = np.einsum('ai,ai->a', np.einsum('aij,j->ai', K, x),
                                          np.einsum('aij,j->ai', K, x)) - 1.0
         worst_mean = max(worst_mean, abs(mu @ tau_all))        # E[tau|x] = 0
         taus.extend(tau_all[rng.integers(0, n, 5)])
         i = rng.integers(0, n)
-        Kx = K[i] @ x; nrm2 = Kx @ Kx
-        xp = Kx / np.sqrt(nrm2)
-        s_new = (xp @ e0) ** 2 + (xp @ (J @ e0)) ** 2          # spine share after
-        A = (z[i] @ x) ** 2 + ((J @ z[i]) @ x) ** 2            # |<z,x>_C|^2
-        worst_born = max(worst_born, abs(s_new * nrm2 - A))
+        try:
+            transport = ot_born_transport(x, K[i], J)
+        except BornTransportAnnihilation as annihilation:
+            born_annihilations[annihilation.kind] += 1
+            continue
+        born_transports += 1
+        worst_born = max(worst_born, abs(transport.identity_residual))
     certify("C", "energy conservation  max_x |E[tau | x]|",
             float(worst_mean), tol=1e-9)
+    born_error = worst_born if born_transports else float("inf")
     certify("C", "Born rule  max |s'(1+tau) - |<z,x>_C|^2|",
-            float(worst_born), tol=1e-9)
+            float(born_error), tol=1e-9)
+    print(f"Born transports evaluated: {born_transports}; annihilations skipped: "
+          f"exact={born_annihilations['exact']}, near={born_annihilations['near']}")
     print(f"Strain variance cross-check: Var[tau] = {np.var(taus):.5f}  "
           f"(exact theory 1/18 = {1/18:.5f})")
     print("Transported probability = Hermitian modulus / normalization cost.")

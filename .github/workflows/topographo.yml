@@ -121,8 +121,10 @@ jobs:
       - name: Lint exact machine layers
         run: |
           uv run --frozen ruff check --select E4,E7,E9,F,I \
+            topographo/born_transport.py \
             topographo/core \
             topographo/ssd \
+            topographo/tests/test_born_transport.py \
             topographo/tests/test_exact_machine.py \
             topographo/tests/test_machine_layers.py \
             topographo/tests/test_public_api.py \
@@ -222,6 +224,9 @@ jobs:
           from topographo.ssd import codec, exact, exact_machine, fips_adapter, fips_basic, fixed_head, frames, machine, observers, outcome_runtime, program, projective, seal, structural_control
 
           assert hasattr(topographo, "CayleyDicksonAlgebra")
+          assert hasattr(topographo, "BornTransportAnnihilation")
+          assert hasattr(topographo, "BornTransportResult")
+          assert hasattr(topographo, "ot_born_transport")
           assert hasattr(topographo.exceptional, "cayley_dickson_table")
           # topographo.exceptional reuses the core table; it carries no copy.
           assert topographo.exceptional.cayley_dickson_table is topographo.cayley_dickson_table
