@@ -127,9 +127,16 @@ The isolated private module `decision_model._audit_01717` and the tracked
 Born-first coding audit without changing the public API or Zero product schema.
 They realize one fixed 16-dimensional diagonal projector/complement test under
 multiple exact rational-ray preparations, derive the zero-support matrix, and
-run the equality-complement control. Interact coordinates and a cross-carrier
-map are gated on source authority; the audit does not invent lookup geometry or
-equate zero probability with branch illegality.
+run the equality-complement control. The exact pinned Interact authority then
+supplies a local `Q(i)` coordinate realization of `J_e^{-1}`, `rho_e`, the
+`<sigma,kappa>` quotient, and `beta_e`. The finite support-incidence hypothesis
+passes for fixed answer branches, but its source-to-Interact representatives
+were chosen to fit the table and are classified explicitly as an arbitrary
+plumbing witness. No certified relation connects those representatives to the
+Born preparations or effects.
+
+The audit does not encode `beta_e` as a lookup table, substitute surrogate
+geometry, or equate zero probability with branch illegality.
 
 This is a reproducible research control, not a new generic resolver contract or
 an assertion that `decision-model` implements a generalized OT measurement

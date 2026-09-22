@@ -13,7 +13,7 @@ All notable changes to this project are documented in this file.
   `fractions.Fraction` values, unit totals, and no normalization or tolerance.
 - Add the isolated 017.17 Born-first audit, exact fixed 16-dimensional
   projector/complement test, rational-ray preparations, derived support matrix,
-  equality-complement control, explicit authority-availability gates, and
+  equality-complement control, exact Interact quotient-coordinate gate, and
   deterministic `decision-model-01717-audit/v1` research artifact.
 - Add focused source and clean-wheel acceptance coverage for exact values,
   schema/order, successful zero, preparation-independent effect identity,
@@ -34,12 +34,17 @@ All notable changes to this project are documented in this file.
   declared rational domain. The separate 017.17 audit establishes one fixed
   typed formal test evaluated under multiple preparations and reports **bare
   support-incidence coloring possible**.
-- The declared Interact source was unavailable to this execution, so the
-  cross-carrier authority-content audit was not reached and no cross-carrier
-  relation was available to or verified by this execution. The bounded
-  architecture is Born-only and the common algebraic classification remains
-  `not yet well-typed`. This does not claim that the declared authority lacks
-  such a relation or that no relation exists.
+- The exact pinned Interact authority supplies an executable local realization
+  of `J_e^{-1}`, `rho_e`, the `<sigma,kappa>` quotient `p_e`, and `beta_e`.
+  The finite support-incidence hypothesis passes in both zero/equality and
+  positive-incidence forms, but only through representatives chosen to fit the
+  table; it is explicitly an arbitrary plumbing witness, not a structural
+  Born/Interact bridge or an identification of zero probability with illegality.
+- No cross-carrier relation connecting behavioral class to probability state or
+  branch to formal effect is certified or supplied by the declared authority.
+  The bounded architecture is two valid shadows with no certified bridge, and
+  the common algebraic classification remains `not yet well-typed`. This does
+  not claim that no such relation exists.
 - This version does not provide preparation, test interpretation, arbitrary
   test-admissibility proofs, backend physics, generalized OT measurement,
   conditioning, collapse, sampling, policy, intelligent evaluation, or Event

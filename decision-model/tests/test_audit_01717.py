@@ -6,17 +6,34 @@ from pathlib import Path
 
 from decision_model._audit_01717 import (
     ALL_PREPARATIONS,
+    ANSWER_BRANCHES,
     BARE_COLORING_POSSIBLE,
     BORN_TEST,
+    ENDPOINT_BEHAVIOR,
     ENDPOINT_CONTROL,
-    INTERACT_GATE_CLOSED,
+    GAUSSIAN_ONE,
+    INTERACT_COORDINATES_AVAILABLE,
+    NO_BRANCH,
     NO_EFFECT,
+    NON_SHARP_BEHAVIOR,
     REQUIRED_PREPARATIONS,
+    SHARP_BEHAVIOR,
+    YES_BRANCH,
     YES_EFFECT,
+    ContextChangingPartner,
+    GaussianRational,
+    ProjectivePlanePoint,
+    beta_e,
     build_audit_payload,
     canonical_audit_bytes,
     equality_complement_colorable,
+    j_e,
+    j_e_inverse,
+    p_e,
+    rho_e,
+    support_incidence_witness_holds,
     support_matrix,
+    z_e_contains,
 )
 from decision_model._zero import build_zero_payload
 
@@ -75,7 +92,58 @@ def test_endpoint_control_remains_non_normative_and_outside_zero_payload() -> No
     ]
 
 
-def test_audit_records_every_gate_without_inventing_interact_geometry() -> None:
+def test_exact_interact_coordinate_maps_realize_certified_composite() -> None:
+    positive = ContextChangingPartner(
+        GaussianRational(Fraction(1)),
+        GaussianRational(Fraction(2)),
+    )
+    negative = ContextChangingPartner(
+        GaussianRational(Fraction(-1)),
+        GaussianRational(Fraction(-2)),
+    )
+    phased = ContextChangingPartner(
+        GaussianRational(Fraction(0), Fraction(1)),
+        GaussianRational(Fraction(0), Fraction(2)),
+    )
+    assert positive == negative
+    assert positive != phased
+
+    branch = j_e(positive)
+    phased_branch = j_e(phased)
+    plane = ProjectivePlanePoint(GAUSSIAN_ONE, GaussianRational(Fraction(2)))
+    assert branch != phased_branch
+    assert j_e_inverse(branch) == positive
+    assert j_e(j_e_inverse(branch)) == branch
+    assert rho_e(positive) == plane
+    assert rho_e(phased) == plane
+    assert beta_e(branch) == beta_e(phased_branch)
+    assert p_e(plane) == p_e(plane.sigma())
+    assert p_e(plane) == p_e(plane.kappa())
+    assert plane.sigma().sigma() == plane
+    assert plane.kappa().kappa() == plane
+    assert beta_e(branch) == p_e(rho_e(j_e_inverse(branch)))
+
+
+def test_support_incidence_witness_is_exact_fixed_and_arbitrary() -> None:
+    assert ANSWER_BRANCHES == (("yes", YES_BRANCH), ("no", NO_BRANCH))
+    assert beta_e(NO_BRANCH) == SHARP_BEHAVIOR
+    assert beta_e(YES_BRANCH) == ENDPOINT_BEHAVIOR
+    assert len(SHARP_BEHAVIOR.orbit) == 2
+    assert len(ENDPOINT_BEHAVIOR.orbit) == 4
+    assert len(NON_SHARP_BEHAVIOR.orbit) == 4
+    assert len({SHARP_BEHAVIOR, NON_SHARP_BEHAVIOR, ENDPOINT_BEHAVIOR}) == 3
+
+    assert not z_e_contains(SHARP_BEHAVIOR, NO_BRANCH)
+    assert z_e_contains(SHARP_BEHAVIOR, YES_BRANCH)
+    assert z_e_contains(NON_SHARP_BEHAVIOR, YES_BRANCH)
+    assert z_e_contains(NON_SHARP_BEHAVIOR, NO_BRANCH)
+    assert not z_e_contains(ENDPOINT_BEHAVIOR, YES_BRANCH)
+    assert z_e_contains(ENDPOINT_BEHAVIOR, NO_BRANCH)
+    assert support_incidence_witness_holds(REQUIRED_PREPARATIONS)
+    assert support_incidence_witness_holds(ALL_PREPARATIONS)
+
+
+def test_audit_records_every_gate_without_overstating_the_witness() -> None:
     payload = build_audit_payload()
 
     assert payload["schema"] == "decision-model-01717-audit/v1"
@@ -88,17 +156,29 @@ def test_audit_records_every_gate_without_inventing_interact_geometry() -> None:
         == "one fixed typed test evaluated under multiple preparations"
     )
     assert payload["phase_b_support_control"]["verdict"] == BARE_COLORING_POSSIBLE
-    assert (
-        payload["phase_c_interact_coordinate_gate"]["classification"]
-        == INTERACT_GATE_CLOSED
-    )
+
+    coordinates = payload["phase_c_interact_coordinate_gate"]
+    assert coordinates["classification"] == INTERACT_COORDINATES_AVAILABLE
+    assert coordinates["coordinates_available"]
+    assert all(coordinates["executable_components_verified"].values())
+    assert not coordinates["realization"]["surrogate_geometry_used"]
+    assert not coordinates["realization"]["beta_lookup_table_used"]
+
     hypothesis = payload["phase_d_support_incidence_hypothesis"]
-    assert hypothesis["status"] == "not testable"
-    assert not hypothesis["witness_constructed"]
-    assert not hypothesis["arbitrary_lookup_or_surrogate_geometry_used"]
+    assert hypothesis["status"] == "tested"
+    assert hypothesis["zero_form_passed"]
+    assert hypothesis["positive_form_passed"]
+    assert hypothesis["witness_constructed"]
+    assert hypothesis["witness_classification"] == "arbitrary witness"
+    assert not hypothesis["structural_witness"]
+    assert not hypothesis["source_determines_representatives"]
+    assert hypothesis["answer_branches_fixed_across_preparations"]
+    assert not hypothesis["arbitrary_beta_lookup_used"]
+    assert not hypothesis["surrogate_geometry_used"]
+
     bridge = payload["phase_e_cross_carrier_audit"]
-    assert bridge["status"] == "not auditable"
-    assert bridge["relations_to_audit"] == [
+    assert bridge["status"] == "complete"
+    assert bridge["relations_searched"] == [
         "typed map",
         "quotient",
         "functor",
@@ -108,14 +188,16 @@ def test_audit_records_every_gate_without_inventing_interact_geometry() -> None:
     ]
     assert (
         bridge["verdict"]
-        == "No cross-carrier relation was available to or verified by this execution."
+        == "No cross-carrier relation is certified or supplied by the declared authority."
     )
     assert payload["architectural_classification"] == {
-        "code": "E3",
-        "label": "Born-only TDM",
+        "code": "E2",
+        "label": "two valid shadows, no certified bridge",
+        "witness_scope": "Interact shadow is arbitrary finite plumbing",
         "admission": "important partial positive",
     }
     assert payload["phase_f_algebraic_classification"] == "not yet well-typed"
+    assert all(check["passed"] for check in payload["admission_checks"])
 
 
 def test_committed_artifact_is_exactly_the_executable_audit() -> None:
