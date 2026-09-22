@@ -1,0 +1,511 @@
+{
+  "all_mechanical_checks_pass": true,
+  "authority_audit": {
+    "authorities": [
+      {
+        "finding": "takes [x] as supplied and leaves domain/physical preparation -> [x] open",
+        "uri": "quilt+s3://protology#package=occurrence/theory@b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a&path=27-the-lift-theorem-and-probability-law.md"
+      },
+      {
+        "finding": "Fano/FIPS/SCE source geometry gains no formal target type without an explicit bridge",
+        "uri": "quilt+s3://protology#package=occurrence/theory@b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a&path=41-effect-census-test-admissibility-and-sce-sharp-shadow.md"
+      },
+      {
+        "finding": "Encoding I requires noncanonical U and phi; Encoding II either starts from a forbidden Event vector or lands in CP^7, not P(R^16)",
+        "uri": "quilt+s3://protology#package=occurrence/theory@b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a&path=43-pauli-fano-quantum-representation-boundary.md"
+      },
+      {
+        "finding": "supplies an exact fixed-test evaluator witness, but its source is already p and it does not interpret IncidenceDecision",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@e9ccdfdb1b4cdc6e342197d13b68c4d4c493997b495f4e83c5cceb553943bb60&path=issues/017-jev-pivot/017.18-Kiro-Born-first-Decision-Model-Zero-cross-carrier-audit-result.md"
+      }
+    ],
+    "first_missing_arrow": "source semantics -> distinguished linear/projective preparation data",
+    "missing_typed_bridges": [
+      "source Fano incidence -> distinguished Theory-27 preparation ray",
+      "source automorphism -> certified action on the full preparation carrier",
+      "IncidenceDecision -> distinguished formal OT test"
+    ],
+    "preparation_carrier": "P(V), instantiated as P(R^16) by the exact 017.18 witness",
+    "scope": "No claim is made that no bridge can exist outside the declared evidence fence.",
+    "state_evaluation": "omega_[x](e) = <x,iota(e)x>/<x,x>"
+  },
+  "conditional_construction": {
+    "compiler_family": {
+      "factorization": "Input_Sigma -> {incident, nonincident} -> P(R^16)",
+      "learned_parameter_count": 0,
+      "orbit_classes": [
+        "incident",
+        "nonincident"
+      ],
+      "orbit_sizes": [
+        21,
+        28
+      ],
+      "per_instance_lookup": false,
+      "representatives_are_constitutive_not_declared": true,
+      "type": "C_{r_I,r_N}: Input_Sigma -> P(R^16)"
+    },
+    "conditional_fixed_test": {
+      "effect_source": "decision_model._audit_01717 fixed 017.18 evaluator witness",
+      "formal_test_sum_is_unit": true,
+      "incident_effect": {
+        "bounded_by_unit": true,
+        "dimension": 16,
+        "nonzero_indices": [
+          0,
+          1
+        ],
+        "positive": true,
+        "projector": true,
+        "rank": 2
+      },
+      "labels": [
+        "incident",
+        "nonincident"
+      ],
+      "nonincident_effect": {
+        "bounded_by_unit": true,
+        "dimension": 16,
+        "nonzero_indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "positive": true,
+        "projector": true,
+        "rank": 14
+      },
+      "same_immutable_test_for_all_inputs": true,
+      "slot_bijections_before_semantic_binding": 2,
+      "source_authorized_for_IncidenceDecision": false
+    },
+    "conditional_residue": {
+      "ambient_real_family": {
+        "cardinality": "continuum",
+        "family": "RP^1 x RP^13",
+        "real_dimension": 14
+      },
+      "conditional_dimension_removed": 371,
+      "conditions": "after fixing the imported rank-(2,14) test and its slot binding",
+      "executable_exact_rational_subset": {
+        "cardinality": "countably infinite",
+        "family": "P(Q^2) x P(Q^14)"
+      },
+      "per_instance_correct_fixed_test_dimension": 385,
+      "schema_invariant_correct_fixed_test_dimension": 14
+    },
+    "conditions_not_derived": [
+      "selection of the 017.18 diagonal projector test",
+      "binding IncidenceDecision labels to the two test slots",
+      "one preparation ray for each source relation class"
+    ],
+    "dependency_audit": {
+      "allowed_attribute_reads": [
+        "for_class",
+        "identifier",
+        "semantic_class"
+      ],
+      "interpretation": "this is a conformance construction, not predictive evidence; the decision follows from globally declared source semantics",
+      "no_per_instance_probability_preparation_or_answer_field": true,
+      "no_per_instance_target_argument": true,
+      "observed_attribute_reads": [
+        "for_class",
+        "identifier",
+        "semantic_class"
+      ],
+      "only_allowed_attributes_read": true,
+      "schema_relation_computes_the_complete_binary_decision": true,
+      "signature": [
+        "datum",
+        "source",
+        "representatives"
+      ],
+      "source_datum_fields": [
+        "point",
+        "line"
+      ]
+    },
+    "gates": {
+      "A_valid_preparation_conditional": true,
+      "B_semantic_equivalence_conditional": true,
+      "C_equivariance": null,
+      "C_equivariance_status": "missing bridge: no certified action of the 168 source automorphisms on the full Theory-27 preparation carrier is supplied",
+      "D_distinguishability_conditional": true,
+      "E_one_input_independent_test_conditional": true,
+      "E_source_authorized_test": false,
+      "F_no_direct_per_instance_target_leakage": true,
+      "F_schema_rule_already_determines_decision": true,
+      "exact_rational_evaluation": true,
+      "learned_parameter_count": 0,
+      "task_positive_admitted": false
+    },
+    "representative_compilers": [
+      {
+        "distinguishes_semantic_classes": true,
+        "fixed_test_distribution_census": [
+          {
+            "distribution": [
+              "0",
+              "1"
+            ],
+            "inputs": 28
+          },
+          {
+            "distribution": [
+              "1",
+              "0"
+            ],
+            "inputs": 21
+          }
+        ],
+        "formula": "C(point,line) = r_incident iff incident(point,line), else r_nonincident",
+        "id": "representative-a",
+        "incident_ray": [
+          {
+            "index": 0,
+            "value": "1"
+          }
+        ],
+        "nonincident_ray": [
+          {
+            "index": 2,
+            "value": "1"
+          }
+        ],
+        "schema_equivalence_invariant": true,
+        "valid_preparations": true
+      },
+      {
+        "distinguishes_semantic_classes": true,
+        "fixed_test_distribution_census": [
+          {
+            "distribution": [
+              "0",
+              "1"
+            ],
+            "inputs": 28
+          },
+          {
+            "distribution": [
+              "1",
+              "0"
+            ],
+            "inputs": 21
+          }
+        ],
+        "formula": "C(point,line) = r_incident iff incident(point,line), else r_nonincident",
+        "id": "representative-b",
+        "incident_ray": [
+          {
+            "index": 1,
+            "value": "1"
+          }
+        ],
+        "nonincident_ray": [
+          {
+            "index": 3,
+            "value": "1"
+          }
+        ],
+        "schema_equivalence_invariant": true,
+        "valid_preparations": true
+      }
+    ],
+    "rival_search": {
+      "certified_as_full_OT_representation_gauge": false,
+      "conclusion": "the exhibited rivals reject C3 but do not decide C1 versus C2: they lie in one explicit fixed-test symmetry orbit, and current authority does not identify that test stabilizer with full OT gauge",
+      "identical_conditional_fixed_test_predictions": true,
+      "projectively_distinct": true,
+      "representatives_exhibited": 2,
+      "test_preserving_coordinate_symmetry": {
+        "image_by_source_index": [
+          1,
+          0,
+          3,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "maps_representative_a_to_b": true,
+        "preserves_both_effects": true
+      }
+    },
+    "status": "conditional witness; rejected as a task-level compiler"
+  },
+  "control": {
+    "compiler_failed_closed": true,
+    "declared_automorphism_order": {
+      "derivation": "7! independent point permutations times 7! independent line permutations",
+      "expansion_factor": 151200,
+      "relation_erased": 25401600,
+      "structured": 168
+    },
+    "failure": "IncidenceDecision is undefined without a declared incident relation",
+    "incidence_decision_defined": false,
+    "interpretation": "the relation is load-bearing for the two-class source quotient; retaining its raw rows without a declared meaning does not license use",
+    "name": "relation-erased matched control",
+    "preserved": {
+      "admitted_inputs_identical": true,
+      "lines_identical": true,
+      "opaque_rows_identical": true,
+      "opaque_rows_sha256": "575e58e67edd981ac6ffd3c957c26c8396bf95d537a8052bdf8a9dab415f6563",
+      "points_identical": true
+    },
+    "removed": "the declaration that the 21 opaque rows mean point-line incidence",
+    "same_compiler_entry_point": "compile_datum",
+    "semantic_input_orbits_after_removal": 1,
+    "type_only_orbit_witness": {
+      "equals_all_admitted_inputs": true,
+      "reachable_pairs": 49,
+      "seed": [
+        "P0",
+        "L0"
+      ]
+    }
+  },
+  "declared_derived_constitutive_ledger": {
+    "conditional_after_imported_test_and_slot_binding": {
+      "ambient_real_family": {
+        "cardinality": "continuum",
+        "family": "RP^1 x RP^13",
+        "real_dimension": 14
+      },
+      "conditional_dimension_removed": 371,
+      "conditions": "after fixing the imported rank-(2,14) test and its slot binding",
+      "executable_exact_rational_subset": {
+        "cardinality": "countably infinite",
+        "family": "P(Q^2) x P(Q^14)"
+      },
+      "per_instance_correct_fixed_test_dimension": 385,
+      "schema_invariant_correct_fixed_test_dimension": 14
+    },
+    "declared": [
+      "two opaque seven-element sorts Point and Line",
+      "21 point-line incidences",
+      "49 admitted Point x Line inputs",
+      "incidence-preserving raw-presentation equivalences",
+      "fixed binary IncidenceDecision semantics"
+    ],
+    "derived": [
+      "Fano incidence laws and automorphism group order 168",
+      "two relation classes/orbits of sizes 21 and 28",
+      "a conditional factorization through incident/nonincident",
+      "failure of that factorization when incidence meaning is erased"
+    ],
+    "full_task_residue": {
+      "reason": "the admissible family of source-authorized IncidenceDecision tests and its relation to preparation gauge are both absent",
+      "status": "not typed sharply enough by current authority to quantify"
+    },
+    "still_constitutive": [
+      "selection of a formal OT test for IncidenceDecision",
+      "one of 2 label-to-slot bijections after a binary test is supplied",
+      "selection of preparation representatives",
+      "a target action or equivalence corresponding to source automorphisms"
+    ]
+  },
+  "disposition": "STRONG NEGATIVE: Cempty under the evidence fence; the exact conditional fixed-test witness does not supply the missing constitution bridges",
+  "fixed_test_pipeline": {
+    "distribution_by_semantic_class": {
+      "incident": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "nonincident": {
+        "incident": "0",
+        "nonincident": "1"
+      }
+    },
+    "interpretation": "exact evaluator conformance only; deterministic correctness follows from the complete incidence rule declared in the schema",
+    "pipeline": "Point x Line -> conditional representative -> imported fixed IncidenceDecision-labeled test -> exact distribution",
+    "predictive_accuracy_optimized": false,
+    "source_authorized": false,
+    "task_positive_admitted": false,
+    "training_performed": false,
+    "type_correct_after_constitutive_test_supply": true
+  },
+  "implementation_base_commit": "853f0371f675d911a2988f63c3eaeb5d2901bf6e",
+  "mechanical_checks": {
+    "at_least_two_meaningful_components": true,
+    "complete_machine_readable_type_schema": true,
+    "conditional_distinguishability": true,
+    "conditional_evaluation_exact": true,
+    "conditional_fixed_test_exact": true,
+    "conditional_preparations_valid": true,
+    "conditional_semantic_equivalence": true,
+    "control_preserves_raw_carrier_and_rows": true,
+    "control_type_only_action_is_transitive": true,
+    "datum_has_only_point_and_line_fields": true,
+    "declared_cardinality_matches_generator": true,
+    "declared_orbit_census_matches_relation": true,
+    "each_line_pair_meets_at_one_point": true,
+    "each_point_pair_on_one_line": true,
+    "every_automorphism_preserves_incidence": true,
+    "exact_finite_data": true,
+    "fixed_decision_type": true,
+    "forbidden_target_semantics_declared": true,
+    "forty_nine_admitted_inputs": true,
+    "group_order_is_168": true,
+    "no_direct_per_instance_target_leakage": true,
+    "nontrivial_schema_relation": true,
+    "orbits_match_semantic_classes": true,
+    "preexisting_abstract_authority_named": true,
+    "raw_encoding_equivalence_or_automorphism": true,
+    "rival_symmetry_maps_a_to_b": true,
+    "rival_symmetry_preserves_test": true,
+    "rivals_have_same_conditional_predictions": true,
+    "rivals_projectively_distinct": true,
+    "same_compiler_fails_on_relation_erased_control": true,
+    "semantically_nonequivalent_inputs": true,
+    "seven_distinct_lines": true,
+    "seven_distinct_points": true,
+    "source_byte_hash_matches_local_freeze": true,
+    "three_lines_per_point": true,
+    "three_points_per_line": true,
+    "twenty_one_incident_inputs": true,
+    "two_input_orbits": true,
+    "visible_semantics_declared": true
+  },
+  "reproducibility": {
+    "commands": [
+      "PYTHONPATH=decision-model/src uv run --frozen python issues/017-generalized-born-rule/017.20-Code-attachments/audit_input_constitution.py --check",
+      "PYTHONPATH=decision-model/src uv run --frozen pytest issues/017-generalized-born-rule/017.20-Code-attachments/test_audit_input_constitution.py"
+    ],
+    "interact_imported": false,
+    "learned_parameters": 0,
+    "network_required": false,
+    "optimizer_or_training_imported": false,
+    "runtime": "Python >=3.11; decision-model 1.1.0; standard library otherwise"
+  },
+  "schema": "gpt-01720-input-constitution-audit/v2",
+  "source": {
+    "class_counts": {
+      "incident": 21,
+      "nonincident": 28
+    },
+    "decision_semantics": {
+      "global_schema_rule_completely_determines_binary_decision": true,
+      "per_instance_answer_field_present": false,
+      "predictive_claim_permitted": false
+    },
+    "fixture_selection": {
+      "gates": {
+        "at_least_two_meaningful_components": true,
+        "complete_machine_readable_type_schema": true,
+        "declared_cardinality_matches_generator": true,
+        "declared_orbit_census_matches_relation": true,
+        "exact_finite_data": true,
+        "fixed_decision_type": true,
+        "forbidden_target_semantics_declared": true,
+        "nontrivial_schema_relation": true,
+        "preexisting_abstract_authority_named": true,
+        "raw_encoding_equivalence_or_automorphism": true,
+        "semantically_nonequivalent_inputs": true,
+        "visible_semantics_declared": true
+      },
+      "passes": true,
+      "qualification": "the abstract incidence reduct predates this execution; its Issue-011 genealogy is FIPS-derived, while these source bytes contain no Event, probability, effect, or preparation coordinates",
+      "selection_route": "existing banked GPT abstract finite fixture"
+    },
+    "incidence_laws": {
+      "datum_has_only_point_and_line_fields": true,
+      "each_line_pair_meets_at_one_point": true,
+      "each_point_pair_on_one_line": true,
+      "forty_nine_admitted_inputs": true,
+      "seven_distinct_lines": true,
+      "seven_distinct_points": true,
+      "three_lines_per_point": true,
+      "three_points_per_line": true,
+      "twenty_one_incident_inputs": true
+    },
+    "relation_digest": "575e58e67edd981ac6ffd3c957c26c8396bf95d537a8052bdf8a9dab415f6563"
+  },
+  "source_automorphisms": {
+    "group_order": 168,
+    "input_orbits": [
+      {
+        "semantic_class": "incident",
+        "size": 21,
+        "witnesses": [
+          [
+            "P0",
+            "L0"
+          ],
+          [
+            "P0",
+            "L1"
+          ]
+        ]
+      },
+      {
+        "semantic_class": "nonincident",
+        "size": 28,
+        "witnesses": [
+          [
+            "P0",
+            "L3"
+          ],
+          [
+            "P0",
+            "L4"
+          ]
+        ]
+      }
+    ],
+    "laws": {
+      "every_automorphism_preserves_incidence": true,
+      "group_order_is_168": true,
+      "orbits_match_semantic_classes": true,
+      "two_input_orbits": true
+    },
+    "search_space": 5040
+  },
+  "source_freeze": {
+    "exact_decision_bearing_schema_has_separate_prior_immutable_pin": false,
+    "independent_preregistration_grade": "not established",
+    "local_execution_order": "source bytes were written and hashed before conditional compiler code",
+    "path": "issues/017-generalized-born-rule/017.20-Code-attachments/source_fixture.json",
+    "preexisting_banked_authority": "quilt+s3://protology#package=occurrence/gpt@e9ccdfdb1b4cdc6e342197d13b68c4d4c493997b495f4e83c5cceb553943bb60&path=issues/011-global-fano-fff-discovery/011.02-Kiro-global-Fano-FFF-discovery-result.md",
+    "preexisting_incidence_reduct": true,
+    "schema": "gpt-01720-fano-incidence-source/v1",
+    "sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+    "target_coordinates_in_semantic_payload": false
+  },
+  "task": "occurrence/gpt Issue 017.20",
+  "task_canonicality_verdict": {
+    "C0_boundary": "choosing concrete basis rays without the missing bridges is an arbitrary embedding witness, not a scientific positive",
+    "code": "Cempty",
+    "conditional_classification": "C1 versus C2 unresolved after supplied-test conditioning; the explicit rivals share a fixed-test symmetry orbit that is not certified as the full OT representation gauge",
+    "label": "unavailable under the evidence fence",
+    "reason": "no source-authorized map selects a Theory-27 preparation or an IncidenceDecision formal test; the executable family begins only after those constitutive choices are supplied",
+    "strongest_justified_task_status": true,
+    "symbol": "C\u2205"
+  },
+  "task_positive_admission": false,
+  "training_handoff": {
+    "fixture_scale_binary_decision": "symbolically determined by the Type Schema",
+    "future_condition": "supply an independently authorized source-to-preparation principle or richer test family before charging any residue to Training",
+    "justified_now": false,
+    "reason": "the only quantified ray residue is conditional on an unauthorized test and is invisible to that sole test; no typed training signal selects it"
+  }
+}

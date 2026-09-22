@@ -1,0 +1,105 @@
+{
+  "schema": "gpt-01720-fano-incidence-source/v1",
+  "domain": {
+    "name": "abstract Fano point-line incidence",
+    "description": "The finite projective plane PG(2,2), represented only by two opaque seven-element sorts and their incidence relation.",
+    "source_semantics": "A point-line pair is incident exactly when its two opaque members occur in one declared incidence row. Raw identifiers carry no order, coordinate, probability, or target meaning."
+  },
+  "sorts": {
+    "point": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+    ],
+    "line": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ]
+  },
+  "relations": {
+    "incident": [
+      ["P0", "L0"],
+      ["P1", "L0"],
+      ["P2", "L0"],
+      ["P0", "L1"],
+      ["P3", "L1"],
+      ["P4", "L1"],
+      ["P0", "L2"],
+      ["P5", "L2"],
+      ["P6", "L2"],
+      ["P1", "L3"],
+      ["P3", "L3"],
+      ["P5", "L3"],
+      ["P1", "L4"],
+      ["P4", "L4"],
+      ["P6", "L4"],
+      ["P2", "L5"],
+      ["P3", "L5"],
+      ["P6", "L5"],
+      ["P2", "L6"],
+      ["P4", "L6"],
+      ["P5", "L6"]
+    ]
+  },
+  "admitted_inputs": {
+    "type": "Point × Line",
+    "generator": "Every ordered pair (point, line) from the two declared sorts.",
+    "cardinality": 49
+  },
+  "equivalence": {
+    "raw_encoding_equivalence": "Two encodings are equivalent exactly when a sort-preserving incidence automorphism carries one point-line pair to the other.",
+    "expected_orbits": [
+      {
+        "semantic_class": "incident",
+        "cardinality": 21
+      },
+      {
+        "semantic_class": "nonincident",
+        "cardinality": 28
+      }
+    ]
+  },
+  "automorphisms": {
+    "definition": "All independent point and line permutations that preserve the declared incidence relation.",
+    "expected_group_order": 168
+  },
+  "decision_type": {
+    "name": "IncidenceDecision",
+    "labels": [
+      "incident",
+      "nonincident"
+    ],
+    "rule": "Return incident iff the input pair belongs to the declared incident relation.",
+    "fixed_across_inputs": true
+  },
+  "compiler_visible_semantics": [
+    "sort membership",
+    "the declared point-line incidence relation",
+    "the induced incidence automorphisms and equivalence classes",
+    "the fixed IncidenceDecision type"
+  ],
+  "compiler_forbidden_semantics": [
+    "target probability",
+    "Born expectation value",
+    "OT preparation or ray coordinate",
+    "effect coordinate",
+    "answer label stored as an input field",
+    "per-instance target-state table"
+  ],
+  "preexisting_source_authority": {
+    "banked_gpt_result": "quilt+s3://protology#package=occurrence/gpt@e9ccdfdb1b4cdc6e342197d13b68c4d4c493997b495f4e83c5cceb553943bb60&path=issues/011-global-fano-fff-discovery/011.02-Kiro-global-Fano-FFF-discovery-result.md",
+    "banked_owner_closure": "quilt+s3://protology#package=occurrence/gpt@e9ccdfdb1b4cdc6e342197d13b68c4d4c493997b495f4e83c5cceb553943bb60&path=issues/011-global-fano-fff-discovery/011.05-GPT-Owner-close-and-bank-global-finite-discovery.md",
+    "abstract_implementation": "topographo/core/f2_groups.py",
+    "abstract_implementation_commit": "853f0371f675d911a2988f63c3eaeb5d2901bf6e",
+    "independence_fence": "The frozen object is the abstract unlabeled incidence quotient already recovered and banked by Issue 011. It does not reuse the FIPS Event catalogue, habitat supports, hidden FFF labels, learning targets, or any OT preparation representation."
+  }
+}
