@@ -1,0 +1,613 @@
+{
+  "all_mechanical_checks_pass": true,
+  "ambient_boundary": {
+    "all_scalar_rays_give_delta_s": true,
+    "canonical_ambient_ray_exists": false,
+    "consequence": "the upgrade is real at S(E) but supplies no canonical raw ray, so the 017.20 raw-ray layer is not repaired",
+    "delta_s_ambient_realizers": [
+      {
+        "induces_delta_s": true,
+        "ray": "e1-e2",
+        "value_on_z_matrix": "0",
+        "value_on_z_scalar": "1"
+      },
+      {
+        "induces_delta_s": true,
+        "ray": "e1-e3",
+        "value_on_z_matrix": "0",
+        "value_on_z_scalar": "1"
+      },
+      {
+        "induces_delta_s": true,
+        "ray": "e2-e4",
+        "value_on_z_matrix": "0",
+        "value_on_z_scalar": "1"
+      }
+    ],
+    "fiber_structure": {
+      "cardinality": "continuum",
+      "delta_s_real_dimension": 11,
+      "delta_s_realizers": "P(W-) = RP^11",
+      "tau_M_realizers": "one PO(2) family in U + W+"
+    },
+    "gauge_status": "each fiber is a single orbit of the certified pointwise stabilizer K_pt = O(2) x O(12), which occurrence/fixed 06 calls a gauge candidate relative to the observables rather than certified physical gauge",
+    "same_copy_control": {
+      "induces_tau_M": false,
+      "ray": "u0 + v0",
+      "value_on_g1_is_nonzero": true,
+      "why_it_matters": "the cross-copy convention is load-bearing; the same-copy vector has nonzero g1 coordinate and is not the invariant state"
+    },
+    "tau_M_ambient_realizer": {
+      "coordinates": "e0 - (sqrt(7)/7) * sum_{i=9..15} e_i",
+      "exact_field": "Q(sqrt 7)",
+      "induces_tau_M": true,
+      "is_maximally_entangled_in_U_plus_Wplus": true,
+      "ray": "u0 + v8",
+      "squared_norm": "2",
+      "value_on_z_matrix": "1",
+      "value_on_z_scalar": "0"
+    }
+  },
+  "authority": {
+    "fence_status": "dropped for this turn by explicit instruction",
+    "new_declarations": [
+      "P2 full formal effect interval",
+      "P3 S(E) target",
+      "P4 invariant extension"
+    ],
+    "still_absent": [
+      "physical Test Realization for IncidenceDecision",
+      "a canonical ambient preparation ray",
+      "any nontrivial target action of the source group",
+      "a source rule selecting the central orientation"
+    ],
+    "upstream_used": [
+      {
+        "sha256": "17e07af79a56cea92343a629bf901ef8c930e5a7bfe0572396968fb308a100ce",
+        "supplies": "E is a unital ordered Jordan algebra isomorphic to Sym_2(R) + R; Aut(E,E_+,u) = O(2)/{+-I}; K_pt = O(2) x O(12); multiplicities 2 and 12",
+        "uri": "quilt+s3://protology#package=occurrence/fixed@f11ea77410fc79c8bacd8ba44633270786735ecf08cfff05e855613936b1760b&path=06-reduced-ordered-space-and-liftable-dynamics.md"
+      },
+      {
+        "supplies": "P(V) -> S(E) factorization and formal test typing",
+        "uri": "quilt+s3://protology#package=occurrence/theory@b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a&path=27-the-lift-theorem-and-probability-law.md"
+      },
+      {
+        "supplies": "formal effecthood versus physical realization boundary",
+        "uri": "quilt+s3://protology#package=occurrence/theory@b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a&path=41-effect-census-test-admissibility-and-sce-sharp-shadow.md"
+      },
+      {
+        "supplies": "the C-empty baseline this turn attempts to improve",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@65dca265e5a6d9f0f5937f014a286d361721cd64d37f140ee87d7f2caaf41cbd&path=issues/017-jev-pivot/017.21-Kiro-rigorous-input-Type-Schema-to-OT-preparation-compiler-audit-result.md"
+      }
+    ]
+  },
+  "canonical_test": {
+    "both_in_formal_interval": true,
+    "comparison_to_017_18": "017.18 used an externally supplied rank-(2,14) diagonal projector pair; this test is the intrinsic center with ambient ranks 4 and 12",
+    "derived_not_imported": true,
+    "distinct_from_017_18_witness": true,
+    "effects_sum_to_unit": true,
+    "input_independent": true,
+    "premise_used": "P2 full formal effect interval",
+    "test": [
+      "z_M",
+      "z_s"
+    ],
+    "unordered_and_intrinsic": true
+  },
+  "canonicality_by_layer": {
+    "joint_labeled_compiler_and_test": {
+      "code": "C1",
+      "conditions": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "residue": "exactly 2 inequivalent orientations, one specification bit"
+    },
+    "physical_realization": {
+      "code": "Cempty",
+      "note": "unchanged from 017.21; no physical Test Realization is claimed"
+    },
+    "raw_ambient_ray_compiler": {
+      "code": "C0-or-Cempty",
+      "note": "continuous realizer fibers remain; canonical only if K_pt is declared gauge, which upstream calls a candidate not a certification"
+    },
+    "rejected": {
+      "C2": "target automorphisms cannot swap the nonisomorphic ideals",
+      "unconditional_C3": "the orientation bit is never selected"
+    },
+    "state_after_binding": {
+      "code": "C3",
+      "conditions": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "note": "unique invariant extension of the selected character"
+    },
+    "unordered_central_test": {
+      "code": "C3",
+      "conditions": [
+        "P1",
+        "P2"
+      ],
+      "note": "intrinsic to E; not imported"
+    }
+  },
+  "claim_fences": [
+    "no physical Test Realization or Outcome constitution",
+    "no predictive or accuracy claim; the schema rule already fixes answers",
+    "no training-economy claim",
+    "no assertion that the ambient carrier lacks Fano-equivariant structure",
+    "the result depends on declared premises P2, P3, and P4 and fails without P4"
+  ],
+  "compiler": {
+    "binding_records": [
+      {
+        "binding": "binding-incident-to-z_M",
+        "distinguishes_semantic_classes": true,
+        "distribution_census": [
+          {
+            "distribution": [
+              "0",
+              "1"
+            ],
+            "inputs": 28
+          },
+          {
+            "distribution": [
+              "1",
+              "0"
+            ],
+            "inputs": 21
+          }
+        ],
+        "incident_slot": "z_M",
+        "incident_state": "tau_M",
+        "nonincident_slot": "z_s",
+        "nonincident_state": "delta_s",
+        "source_equivalence_invariant": true,
+        "states_are_valid": true
+      },
+      {
+        "binding": "binding-incident-to-z_s",
+        "distinguishes_semantic_classes": true,
+        "distribution_census": [
+          {
+            "distribution": [
+              "0",
+              "1"
+            ],
+            "inputs": 28
+          },
+          {
+            "distribution": [
+              "1",
+              "0"
+            ],
+            "inputs": 21
+          }
+        ],
+        "incident_slot": "z_s",
+        "incident_state": "delta_s",
+        "nonincident_slot": "z_M",
+        "nonincident_state": "tau_M",
+        "source_equivalence_invariant": true,
+        "states_are_valid": true
+      }
+    ],
+    "compiler": {
+      "codomain": "S(E)",
+      "factorization": "Input_Sigma -> {incident, nonincident} -> central character -> unique invariant extension in S(E)",
+      "learned_parameter_count": 0,
+      "orbit_classes": [
+        "incident",
+        "nonincident"
+      ],
+      "orbit_sizes": [
+        21,
+        28
+      ],
+      "per_instance_lookup": false,
+      "type": "C_beta : Input_Sigma -> S(E)"
+    },
+    "dependency_audit": {
+      "allowed_attribute_reads": [
+        "semantic_class",
+        "slot_for"
+      ],
+      "interpretation": "conformance construction; the binary decision follows from globally declared source semantics, so this is not predictive evidence",
+      "learned_parameter_count": 0,
+      "no_per_instance_probability_preparation_or_answer_field": true,
+      "no_per_instance_target_argument": true,
+      "observed_attribute_reads": [
+        "semantic_class",
+        "slot_for"
+      ],
+      "only_allowed_attributes_read": true,
+      "signature": [
+        "datum",
+        "source",
+        "binding"
+      ]
+    },
+    "gates": {
+      "A_valid_preparation": true,
+      "B_semantic_equivalence": true,
+      "C_equivariance_is_trivial_and_satisfied": true,
+      "C_equivariance_note": "the target action of the source group is provably trivial, so equivariance reduces to constancy on the two orbits, which holds",
+      "D_distinguishability": true,
+      "E_one_input_independent_test": true,
+      "E_test_is_derived_not_imported": true,
+      "F_no_direct_per_instance_target_leakage": true,
+      "exact_rational_evaluation": true,
+      "learned_parameter_count": 0
+    },
+    "rival_search": {
+      "binding_count": 2,
+      "bindings_give_different_states": true,
+      "bindings_give_identical_decision_behavior": true,
+      "conclusion": "after a binding, premise P4 leaves no state-level rival; the only irreducible alternative is the orientation itself, exactly 2 choices",
+      "residue_is_not_gauge": true,
+      "source_automorphisms_cannot_swap_orbits": true,
+      "state_level_rivals_after_binding": 0,
+      "target_automorphisms_cannot_swap_ideals": true
+    }
+  },
+  "control": {
+    "compiler_failed_closed": true,
+    "declared_automorphism_order": {
+      "expansion_factor": 151200,
+      "relation_erased": 25401600,
+      "structured": 168
+    },
+    "failed_before_choosing_a_binding": true,
+    "failure": "IncidenceDecision is undefined without a declared incident relation",
+    "interpretation": "the declared relation remains load-bearing; the canonical target structure does not rescue an untyped source",
+    "name": "relation-erased matched control",
+    "preserved": {
+      "admitted_inputs_identical": true,
+      "lines_identical": true,
+      "opaque_rows_identical": true,
+      "points_identical": true
+    },
+    "removed": "the declaration that the 21 opaque rows mean point-line incidence",
+    "same_compiler_entry_point": "compile_datum",
+    "semantic_input_orbits_after_removal": 1,
+    "type_only_action_is_transitive": true
+  },
+  "derived_center": {
+    "ambient_ranks": {
+      "matrix": 4,
+      "scalar": 12
+    },
+    "both_are_effects": true,
+    "central_idempotent_count": 4,
+    "derivation": "central elements are scalar on the simple Sym_2 ideal, hence (alpha I_2, beta); idempotence forces alpha, beta in {0,1}",
+    "ideal_dimensions": {
+      "matrix": 3,
+      "scalar": 1
+    },
+    "ideals_are_non_isomorphic": true,
+    "minimal_nonzero_proper_count": 2,
+    "no_automorphism_can_swap_them": true,
+    "non_scalar_candidates_rejected": [
+      {
+        "candidate": "offdiag",
+        "is_central": false,
+        "operator_commutes": false
+      },
+      {
+        "candidate": "rank1",
+        "is_central": false,
+        "operator_commutes": false
+      },
+      {
+        "candidate": "skewed",
+        "is_central": false,
+        "operator_commutes": false
+      }
+    ],
+    "orthogonal": true,
+    "sums_to_unit_exactly": true,
+    "swap_obstruction": "the simple ideals have different dimensions 3 and 1 and different ambient ranks 4 and 12, so no order/Jordan automorphism exchanges them",
+    "z_matrix": {
+      "adapted_A": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "adapted_s": "0",
+      "ambient_rank": 4,
+      "g_coordinates": {
+        "g0": "1",
+        "g1": "0",
+        "g3": "1/7",
+        "g4": "1/7"
+      },
+      "id": "z_M",
+      "is_effect": true,
+      "is_jordan_idempotent": true
+    },
+    "z_scalar": {
+      "adapted_A": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "adapted_s": "1",
+      "ambient_rank": 12,
+      "g_coordinates": {
+        "g0": "0",
+        "g1": "0",
+        "g3": "6/7",
+        "g4": "-1/7"
+      },
+      "id": "z_s",
+      "is_effect": true,
+      "is_jordan_idempotent": true
+    }
+  },
+  "disposition": "CONDITIONAL PARTIAL POSITIVE: dropping the fence earns a canonical central test and a binding-unique invariant state compiler into S(E), leaving exactly one orientation bit; it does not earn a canonical ambient ray or any physical bridge",
+  "equivariance": {
+    "consequence_for_equivariance": "equivariance imposes only constancy on the two source orbits, which the compiler satisfies; it cannot force more",
+    "every_homomorphism_is_trivial": true,
+    "proof": "GL(3,2) = PSL(2,7) is nonabelian simple, hence perfect; its image in the solvable group O(2)/{+-I} must lie in the commutator-trivial quotient, so the image is trivial",
+    "scope_limit": {
+      "claim": "no richer Fano structure is observable in E or S(E)",
+      "counterwitness": "168 ambient coordinate permutations acting on e1..e7 by the point action and e9..e15 by the induced line action fix all four Fixed generators, so they are faithful yet invisible to E",
+      "not_claimed": "that the ambient carrier has no Fano-equivariant structure",
+      "why_not_a_compiler": "identifying opaque source labels with those ambient coordinates is itself a constitutive choice and is not canonical"
+    },
+    "source_group_is_perfect": true,
+    "source_group_is_simple_nonabelian": true,
+    "source_group_order": 168,
+    "target_automorphism_group": "Aut(E, E_+, 1_E) = O(2)/{+-I}",
+    "target_group_is_solvable": true
+  },
+  "invariant_states": {
+    "invariant_states": [
+      {
+        "is_state": true,
+        "reflection_invariant": true,
+        "restricts_to_central_character": true,
+        "rotation_invariant": true,
+        "state": "tau_M",
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      },
+      {
+        "is_state": true,
+        "reflection_invariant": true,
+        "restricts_to_central_character": true,
+        "rotation_invariant": true,
+        "state": "delta_s",
+        "value_on_z_matrix": "0",
+        "value_on_z_scalar": "1"
+      }
+    ],
+    "premise_used": "P4 invariant central-character extension",
+    "uniqueness_argument": "an O(2)-invariant density matrix on Sym_2 must be I_2/2, and the scalar ideal carries only delta_s; so each central character has exactly one invariant extension"
+  },
+  "mechanical_checks": {
+    "ambient_ranks_are_4_and_12": true,
+    "bell_ray_realizes_tau_M_exactly": true,
+    "bindings_are_distinct_states": true,
+    "bindings_share_decision_behavior": true,
+    "canonical_test_sums_to_unit": true,
+    "central_idempotents_are_effects": true,
+    "central_idempotents_are_orthogonal": true,
+    "central_idempotents_sum_to_unit": true,
+    "compiler_distinguishes_classes": true,
+    "compiler_exact_fixed_test": true,
+    "compiler_has_no_leakage": true,
+    "compiler_has_zero_learned_parameters": true,
+    "compiler_source_invariant": true,
+    "compiler_states_valid": true,
+    "compiler_test_is_derived": true,
+    "control_action_is_transitive": true,
+    "control_fails_closed": true,
+    "control_preserves_raw_carrier": true,
+    "counterexample_family_reproduces_distribution": true,
+    "counterexample_shows_P4_is_necessary": true,
+    "declared_orbit_census_matches_relation": true,
+    "exactly_four_central_idempotents": true,
+    "exactly_two_bindings": true,
+    "exactly_two_minimal_central_idempotents": true,
+    "invariant_states_are_automorphism_invariant": true,
+    "invariant_states_are_states": true,
+    "invariant_states_restrict_to_characters": true,
+    "multiple_rays_realize_delta_s": true,
+    "no_canonical_ambient_ray": true,
+    "no_state_level_rival_after_binding": true,
+    "premises_recorded": true,
+    "same_copy_control_fails": true,
+    "source_bytes_match_017_20_freeze": true,
+    "source_group_acts_trivially_on_E": true,
+    "source_group_order_is_168": true,
+    "two_source_orbits_21_and_28": true
+  },
+  "premise_necessity": {
+    "all_reproduce_the_central_distribution": true,
+    "conclusion": "without premise P4 the binding-conditioned compiler is a continuum, so unconditional C3 is false and P4 is independently required",
+    "family": "omega_t(A,s) = t*A_11 + (1-t)*A_22",
+    "invariant_members": 1,
+    "only_t_one_half_is_invariant": true,
+    "samples": [
+      {
+        "is_state": true,
+        "reproduces_central_distribution": true,
+        "t": "0",
+        "target_automorphism_invariant": false,
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      },
+      {
+        "is_state": true,
+        "reproduces_central_distribution": true,
+        "t": "1/3",
+        "target_automorphism_invariant": false,
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      },
+      {
+        "is_state": true,
+        "reproduces_central_distribution": true,
+        "t": "1/2",
+        "target_automorphism_invariant": true,
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      },
+      {
+        "is_state": true,
+        "reproduces_central_distribution": true,
+        "t": "2/3",
+        "target_automorphism_invariant": false,
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      },
+      {
+        "is_state": true,
+        "reproduces_central_distribution": true,
+        "t": "1",
+        "target_automorphism_invariant": false,
+        "value_on_z_matrix": "1",
+        "value_on_z_scalar": "0"
+      }
+    ]
+  },
+  "premises": {
+    "added": [
+      {
+        "authority": "occurrence/fixed@f11ea77410fc79c8bacd8ba44633270786735ecf08cfff05e855613936b1760b&path=06-reduced-ordered-space-and-liftable-dynamics.md",
+        "id": "P1",
+        "name": "reduced ordered Jordan effect algebra",
+        "statement": "The target observable space is the certified reduced Fixed span with its inherited unital ordered Jordan structure, E = span{g0,g1,g3,g4} with Phi(E) = Sym_2(R) + R and unit (I_2, 1).",
+        "status": "certified upstream"
+      },
+      {
+        "authority": "Theory 27 formal Test_formal(E) type; Theory 41 keeps formal effecthood distinct from physical realization",
+        "id": "P2",
+        "name": "full formal effect interval",
+        "statement": "The admissible formal effects are the whole order interval [0, 1_E], and a formal test is any finite family of effects summing exactly to 1_E.",
+        "status": "declared by 017.21a; not established as physical Test Realization"
+      },
+      {
+        "authority": "Theory 27 factors evaluation through P(V) -> S(E), then S(E) x Eff(E) -> [0,1]",
+        "id": "P3",
+        "name": "operational state target",
+        "statement": "The compiler codomain is the operational state space S(E) of positive unital functionals on E, not a raw ray of P(R^16). Two ambient rays inducing the same functional on E are the same output.",
+        "status": "declared by 017.21a"
+      },
+      {
+        "id": "P4",
+        "name": "invariant central-character extension",
+        "necessity": "without P4 the binding-conditioned compiler is a continuum, not unique; the omega_t counterexample witnesses this",
+        "statement": "A compiled preparation must be the unique target-automorphism-invariant state extending the selected character of the center of E.",
+        "status": "declared by 017.21a; load-bearing and independently required"
+      }
+    ],
+    "deliberately_unresolved": {
+      "expected_cardinality": 2,
+      "id": "R1",
+      "must_be": "enumerated as inequivalent alternatives, never silently defaulted",
+      "name": "central label orientation",
+      "statement": "Nothing in the source schema or the target algebra selects which source relation class binds to which minimal central idempotent."
+    },
+    "path": "issues/017-generalized-born-rule/017.21a-Code-attachments/declared_premises.json",
+    "schema": "gpt-01721a-unfenced-premises/v1"
+  },
+  "prior_result_commit": "38cd808fe459f7a1e39d9a2ce4f15f55ebf22c5d",
+  "reproducibility": {
+    "commands": [
+      "uv run --frozen python issues/017-generalized-born-rule/017.21a-Code-attachments/audit_central_constitution.py --check",
+      "uv run --frozen pytest issues/017-generalized-born-rule/017.21a-Code-attachments/test_audit_central_constitution.py"
+    ],
+    "exact_arithmetic": "Fraction and Q(sqrt 7)",
+    "interact_imported": false,
+    "learned_parameters": 0,
+    "network_required": false,
+    "numpy_imported": false,
+    "optimizer_or_training_imported": false,
+    "runtime": "Python >=3.11; standard library only"
+  },
+  "residue_ledger": {
+    "declared": [
+      "two opaque seven-element sorts",
+      "21 point-line incidences",
+      "49 admitted inputs",
+      "incidence-preserving presentation equivalence",
+      "fixed binary IncidenceDecision semantics"
+    ],
+    "derived": [
+      "Fano laws, group order 168, two orbits 21 and 28",
+      "the center of E and its two minimal central idempotents",
+      "the canonical unordered binary formal test with ambient ranks 4 and 12",
+      "the unique invariant extension of each central character",
+      "exact deterministic distributions on all 49 inputs",
+      "triviality of every source-group action on E"
+    ],
+    "exact_residue": {
+      "compare_017_21_conditional_residue": {
+        "family": "RP^1 x RP^13",
+        "real_dimension": 14
+      },
+      "improvement": "a 14-real-dimensional conditional family collapses to a 2-element discrete choice at the S(E) layer",
+      "raw_ray_layer_unimproved": true,
+      "specification_bits": 1,
+      "state_level_family_cardinality": 2
+    },
+    "still_constitutive": [
+      "the central orientation bit",
+      "premises P2, P3, and P4 themselves",
+      "any ambient ray representative",
+      "physical test realization"
+    ]
+  },
+  "schema": "gpt-01721a-central-constitution-audit/v1",
+  "source": {
+    "class_counts": {
+      "incident": 21,
+      "nonincident": 28
+    },
+    "declared_orbit_census_matches_relation": true,
+    "no_target_field_in_source": true,
+    "path": "issues/017-generalized-born-rule/017.20-Code-attachments/source_fixture.json",
+    "relation_digest": "575e58e67edd981ac6ffd3c957c26c8396bf95d537a8052bdf8a9dab415f6563",
+    "reused_frozen_017_20_source": true,
+    "sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c"
+  },
+  "source_automorphisms": {
+    "group_order": 168,
+    "orbits": [
+      {
+        "semantic_class": "incident",
+        "size": 21
+      },
+      {
+        "semantic_class": "nonincident",
+        "size": 28
+      }
+    ],
+    "search_space": 5040
+  },
+  "task": "occurrence/gpt Issue 017.20, unfenced follow-up reported as 017.21a",
+  "training_handoff": {
+    "justified_now": false,
+    "reason": "the surviving residue is one discrete orientation bit that is invisible to the declared decision behavior; both bindings produce identical answers, so no typed training signal can prefer one",
+    "what_changed_since_017_21": "the residue is now finite and named rather than a continuum, but it is still not a learning target"
+  }
+}

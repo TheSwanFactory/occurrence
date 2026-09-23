@@ -1,0 +1,75 @@
+{
+  "schema": "gpt-01721a-unfenced-premises/v1",
+  "purpose": "Record, before construction, the extra premises that 017.21a adds once the 017.20 evidence fence is dropped.",
+  "retained_from_017_20": [
+    "the byte-frozen abstract Fano Point x Line source schema and its SHA-256",
+    "zero learned parameters and no training, optimizer, or Interact code",
+    "no per-instance target probability, preparation, effect, or answer field",
+    "invariance under declared raw-presentation equivalence",
+    "one input-independent test for all admitted inputs",
+    "adversarial rival search before any canonicality claim",
+    "explicit declared / derived / still-constitutive residue accounting",
+    "a matched structure-removal control that must fail closed",
+    "no predictive, physical-realization, or training-economy claim"
+  ],
+  "dropped_fence": {
+    "what_was_dropped": "the 017.20 restriction to already-certified bridges under a closed evidence list",
+    "what_that_permits": "deriving a new natural target construction from the reduced effect algebra itself",
+    "what_it_does_not_permit": [
+      "inventing source semantics after inspecting the target",
+      "reverse-engineering the source schema to speak target geometry",
+      "learning or fitting any representation",
+      "claiming physical Test Realization or Outcome constitution"
+    ]
+  },
+  "added_premises": [
+    {
+      "id": "P1",
+      "name": "reduced ordered Jordan effect algebra",
+      "statement": "The target observable space is the certified reduced Fixed span with its inherited unital ordered Jordan structure, E = span{g0,g1,g3,g4} with Phi(E) = Sym_2(R) + R and unit (I_2, 1).",
+      "status": "certified upstream",
+      "authority": "occurrence/fixed@f11ea77410fc79c8bacd8ba44633270786735ecf08cfff05e855613936b1760b&path=06-reduced-ordered-space-and-liftable-dynamics.md"
+    },
+    {
+      "id": "P2",
+      "name": "full formal effect interval",
+      "statement": "The admissible formal effects are the whole order interval [0, 1_E], and a formal test is any finite family of effects summing exactly to 1_E.",
+      "status": "declared by 017.21a; not established as physical Test Realization",
+      "authority": "Theory 27 formal Test_formal(E) type; Theory 41 keeps formal effecthood distinct from physical realization"
+    },
+    {
+      "id": "P3",
+      "name": "operational state target",
+      "statement": "The compiler codomain is the operational state space S(E) of positive unital functionals on E, not a raw ray of P(R^16). Two ambient rays inducing the same functional on E are the same output.",
+      "status": "declared by 017.21a",
+      "authority": "Theory 27 factors evaluation through P(V) -> S(E), then S(E) x Eff(E) -> [0,1]"
+    },
+    {
+      "id": "P4",
+      "name": "invariant central-character extension",
+      "statement": "A compiled preparation must be the unique target-automorphism-invariant state extending the selected character of the center of E.",
+      "status": "declared by 017.21a; load-bearing and independently required",
+      "necessity": "without P4 the binding-conditioned compiler is a continuum, not unique; the omega_t counterexample witnesses this"
+    }
+  ],
+  "deliberately_unresolved": {
+    "id": "R1",
+    "name": "central label orientation",
+    "statement": "Nothing in the source schema or the target algebra selects which source relation class binds to which minimal central idempotent.",
+    "must_be": "enumerated as inequivalent alternatives, never silently defaulted",
+    "expected_cardinality": 2
+  },
+  "preregistered_falsifiers": [
+    "if the two minimal central idempotents are not unique or not automorphism-fixed, the canonical test claim fails",
+    "if some target automorphism swaps the two central idempotents, the residue is gauge and the classification must drop toward C2",
+    "if a positive unital non-invariant state also reproduces the exact central distributions, then P4 is necessary and unconditional C3 must be rejected",
+    "if any ambient ray fiber over a compiled state has more than one element, no canonical raw-ray compiler may be claimed",
+    "if the relation-erased control still yields a compiled state, the source relation was not load-bearing"
+  ],
+  "declared_but_not_claimed": [
+    "physical preparation or measurement realization",
+    "that GL(3,2) acts nontrivially on E or S(E)",
+    "that the ambient 16-dimensional carrier contains no Fano-equivariant structure",
+    "any sample-complexity, compute, parameter, or accuracy advantage"
+  ]
+}
