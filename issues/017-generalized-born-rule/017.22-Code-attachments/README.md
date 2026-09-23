@@ -29,19 +29,25 @@ NumPy, or Interact code. Arithmetic is `fractions.Fraction` plus an exact
 
 ## Premise correction
 
+Adopting the owner correction in `017.21b`, including its `P3a`/`P3b` split:
+
 | ID | 017.21a label | Corrected classification |
 |---|---|---|
 | P1 | certified upstream | unchanged |
 | P2 | "declared here" | **certified OT structure** (Theory 27 §1, Theory 41) |
-| P3 | "declared here" | abstraction-boundary choice, now **justified** by §F |
-| P4 | "declared here, load-bearing" | new principle, but **representative selection**, not behavior |
+| P3a | "declared here" | **certified OT structure**: `S(E)` and its evaluation pairing |
+| P3b | "declared here" | new architectural hypothesis, **audited and upheld** for one-shot evaluation |
+| P4 | "declared here, load-bearing" | new principle, **not promoted to certified law**; representative selection, not behavior |
+
+All six owner disposition items from `017.21b` §13 are answered in
+`A_premise_correction.owner_review_alignment`, with no disagreements.
 
 ## Files
 
 | File | Purpose | SHA-256 |
 |---|---|---|
-| `audit_operational_equivalence.py` | the exact audit | `47ffb383f647ab846c2719190039be5c7f170f9370482d9e40f2895ef3fb3b6c` |
-| `operational_equivalence_audit.json` | canonical machine-readable audit, 70 checks | `e81d7056c4167c44e25d18904d8335da11803935bbf5c8a0be39779d9422f6a2` |
+| `audit_operational_equivalence.py` | the exact audit | `4b7effa69ea23f53b7b00c326332c3f83eabba7655c3616b46bbe81b7914d434` |
+| `operational_equivalence_audit.json` | canonical machine-readable audit, 74 checks | `364d621e7dad0bd90d29d0449ead35a50269166eef830927a4ab7fcf54a214a3` |
 | `orientation_behavior_table.json` | required artifact 3: 98 rows, both orientations × 49 inputs | `7d7c3146d7ed1505cf9364230e9ad68aaa71f55110dd837142911a9724899205` |
 | `test_audit_operational_equivalence.py` | 23 exact and negative-boundary tests | `f03ed78df4179c7db1a8dc0406e9cd1219c931bc8fb139ae163e905dc8384a94` |
 
@@ -60,7 +66,7 @@ to those three files makes the loader refuse to run.
 - one public family per realization over all 49 admitted inputs, for 20
   realizations, with exact `Δ(A_d)` typing;
 - an exhaustive P4 forcing search over 225 grid effects (200 of them non-central)
-  × 169 `λ` pairs, returning **exactly two** solutions;
+  × 169 `λ` pairs, returning **exactly two** solutions, both central;
 - 8 projectively distinct ambient rays inducing `τ_M` and 5 inducing `δ_s`, with
   exact projective-distinctness tests in `Q(√7)`;
 - the successor identifiability and the `θ ↦ 1 − θ` orientation absorption on a

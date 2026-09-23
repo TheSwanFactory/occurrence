@@ -27,18 +27,30 @@
       },
       {
         "017_21a_status": "declared by 017.21a",
-        "corrected_status": "choice of abstraction boundary, mathematically free given certified structure, and now justified rather than declared",
-        "id": "P3",
-        "name": "operational state target",
-        "residual_declarative_content": "identifying two ambient rays with the same induced state as the same compiler output is an identity convention at the realization layer; current TDM vocabulary neither requires nor forbids it",
+        "corrected_status": "certified OT structure",
+        "id": "P3a",
+        "name": "S(E) exists and supports formal evaluation",
+        "split_authority": "the P3a/P3b split is the owner correction in 017.21b sections 3 and 11; this audit adopts it verbatim",
         "unchanged": false,
-        "why": "the mathematics is certified: Theory 27 section 2 gives both P(V) -> S(E) and S(E) x Eff(E) -> [0,1]. What 017.21a added was not new mathematics but a decision about where the compiler's codomain sits. That decision is now earned: one-shot evaluation provably factors through S(E), and S(E) is minimal because Eff(E) separates states"
+        "why": "Theory 27 section 2 gives both P(V) -> S(E) and S(E) x Eff(E) -> [0,1], so the state carrier and its evaluation pairing are certified and were not introduced by 017.21a"
+      },
+      {
+        "017_21a_status": "declared by 017.21a",
+        "audit_requested_by": "017.21b sections 3, 7 and 11",
+        "audit_result": "upheld for one-shot formal evaluation: the factorization is certified, and S(E) is minimal because Eff(E) contains a linear basis of E, so no strictly coarser carrier preserves every formal probability",
+        "corrected_status": "new architectural hypothesis when stated; audited and upheld here",
+        "id": "P3b",
+        "name": "S(E) is the operational one-shot TDM state boundary",
+        "residual_declarative_content": "identifying two ambient rays with the same induced state as the same compiler output is an identity convention at the realization layer; current TDM vocabulary neither requires nor forbids it",
+        "scope_limit": "sufficient for current one-shot formal evaluation does not imply sufficient for dynamics, Interact, physical preparation, or an enlarged effect family",
+        "unchanged": false
       },
       {
         "017_21a_status": "declared by 017.21a; load-bearing and independently required",
         "corrected_status": "genuinely new principle, but a representative-selection principle rather than a behavioral constraint",
         "equivalent_honest_formulation": "no-unsupplied-structure: the compiled state must be definable from the selected central character alone, without choosing a frame in Sym_2(R) that the Type Schema never supplied. The invariant states are exactly the states with no such extra frame content, so this formulation and P4 pick out the same family",
         "exact_role": "lambda -> omega_lambda is a bijection from S(E)/~_Sigma onto the invariant states, so P4 chooses one canonical representative per observational class. It also does real work that 017.21a did not claim: together with the declared deterministic behavior it forces the declared test to be the intrinsic central test",
+        "how_this_audit_settles_it": "negatively for implication and positively for reformulation: the canonicality criterion actually stated in 017.20 does not imply P4, because the source group acts trivially on E; but P4 is equivalent to the no-unsupplied-structure requirement, which is a naturality condition on the compiler rather than an extra symmetry postulate. It remains a principle, not certified law",
         "id": "P4",
         "is_it_forced_by_canonicality": false,
         "is_it_still_load_bearing_for_017_21a_uniqueness": true,
@@ -46,11 +58,50 @@
         "is_it_unnecessary_after_the_operational_quotient": "unnecessary for public behavior, necessary for canonical representative selection",
         "load_bearing_note": "without P4 the realization class is at least an RP^1 family, so 017.21a's omega_t counterexample stands and unconditional C3 remains correctly rejected",
         "name": "invariant central-character extension",
+        "owner_review_question": "017.21b section 4 holds P4 open as a plausible canonicity principle and asks for the relation between P4 and the accepted compiler-canonicity criterion to be settled",
+        "promoted_to_certified_OT_law": false,
         "unchanged": false,
         "why_not_forced": "017.20's canonicality ladder asks for invariance under declared source equivalence and equivariance under source automorphisms. 017.21a itself proves the source group acts trivially on E, so source-side naturality imposes nothing at all on the target. P4 instead demands a fixed point of the target automorphism group, which is a different and additional requirement"
       }
     ],
-    "language_correction": "the 'new declaration' label must be dropped for P2 and softened for P3; only P4 is a new principle, and it is a representative-selection principle, not a probability-fixing axiom",
+    "language_correction": "the 'new declaration' label must be dropped for P2 and split for P3 into certified P3a and audited P3b; only P4 is a new principle, and it is a representative-selection principle, not a probability-fixing axiom",
+    "owner_review_alignment": {
+      "all_owner_corrections_honored": true,
+      "disagreements": [],
+      "items": [
+        {
+          "agreement": true,
+          "audit_resolution": "adopted; see the P2 correction above",
+          "owner_item": "P2 is certified, not newly declared"
+        },
+        {
+          "agreement": true,
+          "audit_resolution": "adopted as the P3a/P3b split; P3b is audited and upheld for one-shot evaluation, with minimality proved",
+          "owner_item": "S(E) is already certified; only its use as the TDM operational boundary is new"
+        },
+        {
+          "agreement": true,
+          "audit_resolution": "audited: not implied by the stated canonicality criterion, equivalent to no-unsupplied-structure, a cross-section selector for the observational quotient, and additionally a forcing condition for centrality of the declared test",
+          "owner_item": "P4 is the single load-bearing new naturality principle and must be audited rather than hidden"
+        },
+        {
+          "agreement": true,
+          "audit_resolution": "confirmed, and strengthened: the bit is one two-point slice of a class containing at least an RP^1 family, it is provably not certified gauge, and in the successor family it is absorbed by theta -> 1 - theta",
+          "owner_item": "the orientation bit is internally real but not currently a justified Training target"
+        },
+        {
+          "agreement": true,
+          "audit_resolution": "confirmed by the level-2 theorem; instance identity is left open by authority and reported as a terminology defect",
+          "owner_item": "ambient-ray nonuniqueness is not by itself a one-shot TDM failure"
+        },
+        {
+          "agreement": true,
+          "audit_resolution": "confirmed in the public-behavior ledger; the successor precondition is stated explicitly",
+          "owner_item": "the fully declared Fano decision rule leaves zero observable Training residue"
+        }
+      ],
+      "review": "017.21b-GPT-owner-review-correct-premises-and-operational-TDM-boundary.md"
+    },
     "prior_premise_artifact": {
       "path": "issues/017-generalized-born-rule/017.21a-Code-attachments/declared_premises.json",
       "schema": "gpt-01721a-unfenced-premises/v1",
@@ -59,15 +110,17 @@
     "summary": {
       "already_certified_OT_structure": [
         "P1",
-        "P2"
+        "P2",
+        "P3a"
       ],
-      "derived_and_now_justified_abstraction_boundary": [
-        "P3"
+      "new_architectural_hypothesis_audited_and_upheld": [
+        "P3b"
       ],
       "new_canonicity_or_naturality_principle": [
         "P4"
       ],
       "new_mathematical_choice": [],
+      "promoted_to_certified_law_by_this_audit": [],
       "unnecessary_after_the_operational_quotient": [],
       "unnecessary_for_public_behavior_only": [
         "P4"
@@ -1103,6 +1156,11 @@
       {
         "supplies": "the result being reclassified",
         "uri": "quilt+s3://protology#package=occurrence/gpt@19a52d803acd6a9f19e7f4aee04d398633028179aad20d916541884cb91774f3&path=issues/017-jev-pivot/017.21a-Kiro-unfenced-central-constitution-follow-up.md"
+      },
+      {
+        "sha256": "6857c15b67ef51d41ca8d5f01bf4677c4018ec8e099ce36f867727a57317c991",
+        "supplies": "the owner correction in force: P2 certified, the P3a/P3b split, P4 held open as a canonicity principle, the orientation bit not a Training target, ambient-ray nonuniqueness not a TDM failure, and zero observable Training residue in the present fixture",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@612b1c4831580de7926792ce6f49ed27a97ce8d081d56602710a665f769aac02&path=issues/017-jev-pivot/017.21b-GPT-owner-review-correct-premises-and-operational-TDM-boundary.md"
       }
     ]
   },
@@ -1127,7 +1185,7 @@
     "what_was_removed": "the semantic meaning of the 21 declared incidence rows"
   },
   "disposition": "STRONG POSITIVE ON THE STATE BOUNDARY WITH AN OPEN INSTANCE-IDENTITY DEFECT: one-shot TDM evaluation factors through S(E) by certified Theory and S(E) is minimal because Eff(E) separates states; both observational equivalences are formalized and verified; the 017.21a orientation bit and the ambient-ray fibers are provably unobservable at the declared boundary and are provably not certified gauge; the Aut(E,E_+,1_E)-invariant states are exactly omega_lambda for lambda in [0,1]; P2 was already certified Theory and P4 is a representative-selection principle that also forces the central test; the two-parameter Fano successor is mathematically earned, conditional on a Type Schema that declares structure without declaring the decision rule",
-  "mechanical_check_count": 70,
+  "mechanical_check_count": 74,
   "mechanical_checks": {
     "017_21a_did_label_P2_and_P3_as_declarations": true,
     "E_Sigma_has_two_members": true,
@@ -1135,8 +1193,10 @@
     "E_Sigma_members_are_effects": true,
     "E_Sigma_members_sum_to_unit": true,
     "E_Sigma_span_is_proper": true,
+    "P3b_is_upheld": true,
     "P4_derives_centrality_of_the_test": true,
     "P4_forces_exactly_two_labeled_realizations": true,
+    "P4_is_not_promoted_to_certified_law": true,
     "P4_search_is_not_vacuous": true,
     "P4_solutions_are_the_two_orientations": true,
     "S_E_is_minimal_for_the_formal_family": true,
@@ -1178,6 +1238,8 @@
     "orientations_share_the_contract": true,
     "orientations_share_the_observable_semantics": true,
     "outside_unit_interval_fails_positivity": true,
+    "owner_review_corrections_are_honored": true,
+    "premise_ledger_splits_P3_into_P3a_and_P3b": true,
     "prior_audit_bytes_match_017_21a": true,
     "prior_audit_reported_two_bindings": true,
     "prior_premises_bytes_match_017_21a": true,

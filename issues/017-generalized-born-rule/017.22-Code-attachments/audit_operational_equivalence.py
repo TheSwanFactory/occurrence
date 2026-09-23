@@ -54,6 +54,12 @@ TASK_GPT_REVISION: Final = (
 PRIMARY_GPT_AUTHORITY: Final = (
     "70617692cbd4f5dea992955307a2afa76d3a18d0d3da9bfc26a5477fb8cc7604"
 )
+OWNER_REVIEW_REVISION: Final = (
+    "612b1c4831580de7926792ce6f49ed27a97ce8d081d56602710a665f769aac02"
+)
+OWNER_REVIEW_SHA256: Final = (
+    "6857c15b67ef51d41ca8d5f01bf4677c4018ec8e099ce36f867727a57317c991"
+)
 THEORY_REVISION_CONSULTED: Final = (
     "27dda92bc42ea84dc7ff384deac86b6a44ada3370bd2a638aaabcd91f7621e09"
 )
@@ -2130,21 +2136,40 @@ def audit_premise_ledger(premises: dict[str, object]) -> dict[str, object]:
             ),
         },
         {
-            "id": "P3",
-            "name": "operational state target",
+            "id": "P3a",
+            "name": "S(E) exists and supports formal evaluation",
+            "017_21a_status": prior_status["P3"],
+            "corrected_status": "certified OT structure",
+            "unchanged": False,
+            "split_authority": (
+                "the P3a/P3b split is the owner correction in 017.21b sections 3 "
+                "and 11; this audit adopts it verbatim"
+            ),
+            "why": (
+                "Theory 27 section 2 gives both P(V) -> S(E) and "
+                "S(E) x Eff(E) -> [0,1], so the state carrier and its evaluation "
+                "pairing are certified and were not introduced by 017.21a"
+            ),
+        },
+        {
+            "id": "P3b",
+            "name": "S(E) is the operational one-shot TDM state boundary",
             "017_21a_status": prior_status["P3"],
             "corrected_status": (
-                "choice of abstraction boundary, mathematically free given "
-                "certified structure, and now justified rather than declared"
+                "new architectural hypothesis when stated; audited and upheld here"
             ),
             "unchanged": False,
-            "why": (
-                "the mathematics is certified: Theory 27 section 2 gives both "
-                "P(V) -> S(E) and S(E) x Eff(E) -> [0,1]. What 017.21a added was not "
-                "new mathematics but a decision about where the compiler's codomain "
-                "sits. That decision is now earned: one-shot evaluation provably "
-                "factors through S(E), and S(E) is minimal because Eff(E) separates "
-                "states"
+            "audit_requested_by": "017.21b sections 3, 7 and 11",
+            "audit_result": (
+                "upheld for one-shot formal evaluation: the factorization is "
+                "certified, and S(E) is minimal because Eff(E) contains a linear "
+                "basis of E, so no strictly coarser carrier preserves every formal "
+                "probability"
+            ),
+            "scope_limit": (
+                "sufficient for current one-shot formal evaluation does not imply "
+                "sufficient for dynamics, Interact, physical preparation, or an "
+                "enlarged effect family"
             ),
             "residual_declarative_content": (
                 "identifying two ambient rays with the same induced state as the same "
@@ -2171,6 +2196,20 @@ def audit_premise_ledger(premises: dict[str, object]) -> dict[str, object]:
                 "which is a different and additional requirement"
             ),
             "is_it_stronger_than_the_stated_canonicality_requirement": True,
+            "promoted_to_certified_OT_law": False,
+            "owner_review_question": (
+                "017.21b section 4 holds P4 open as a plausible canonicity principle "
+                "and asks for the relation between P4 and the accepted "
+                "compiler-canonicity criterion to be settled"
+            ),
+            "how_this_audit_settles_it": (
+                "negatively for implication and positively for reformulation: the "
+                "canonicality criterion actually stated in 017.20 does not imply P4, "
+                "because the source group acts trivially on E; but P4 is equivalent "
+                "to the no-unsupplied-structure requirement, which is a naturality "
+                "condition on the compiler rather than an extra symmetry postulate. "
+                "It remains a principle, not certified law"
+            ),
             "equivalent_honest_formulation": (
                 "no-unsupplied-structure: the compiled state must be definable from "
                 "the selected central character alone, without choosing a frame in "
@@ -2198,6 +2237,72 @@ def audit_premise_ledger(premises: dict[str, object]) -> dict[str, object]:
         },
     ]
 
+    owner_alignment = [
+        {
+            "owner_item": "P2 is certified, not newly declared",
+            "audit_resolution": "adopted; see the P2 correction above",
+            "agreement": True,
+        },
+        {
+            "owner_item": (
+                "S(E) is already certified; only its use as the TDM operational "
+                "boundary is new"
+            ),
+            "audit_resolution": (
+                "adopted as the P3a/P3b split; P3b is audited and upheld for "
+                "one-shot evaluation, with minimality proved"
+            ),
+            "agreement": True,
+        },
+        {
+            "owner_item": (
+                "P4 is the single load-bearing new naturality principle and must be "
+                "audited rather than hidden"
+            ),
+            "audit_resolution": (
+                "audited: not implied by the stated canonicality criterion, "
+                "equivalent to no-unsupplied-structure, a cross-section selector for "
+                "the observational quotient, and additionally a forcing condition for "
+                "centrality of the declared test"
+            ),
+            "agreement": True,
+        },
+        {
+            "owner_item": (
+                "the orientation bit is internally real but not currently a "
+                "justified Training target"
+            ),
+            "audit_resolution": (
+                "confirmed, and strengthened: the bit is one two-point slice of a "
+                "class containing at least an RP^1 family, it is provably not "
+                "certified gauge, and in the successor family it is absorbed by "
+                "theta -> 1 - theta"
+            ),
+            "agreement": True,
+        },
+        {
+            "owner_item": (
+                "ambient-ray nonuniqueness is not by itself a one-shot TDM failure"
+            ),
+            "audit_resolution": (
+                "confirmed by the level-2 theorem; instance identity is left open by "
+                "authority and reported as a terminology defect"
+            ),
+            "agreement": True,
+        },
+        {
+            "owner_item": (
+                "the fully declared Fano decision rule leaves zero observable "
+                "Training residue"
+            ),
+            "audit_resolution": (
+                "confirmed in the public-behavior ledger; the successor precondition "
+                "is stated explicitly"
+            ),
+            "agreement": True,
+        },
+    ]
+
     return {
         "prior_premise_artifact": {
             "path": (
@@ -2212,18 +2317,30 @@ def audit_premise_ledger(premises: dict[str, object]) -> dict[str, object]:
         },
         "corrections": corrections,
         "summary": {
-            "already_certified_OT_structure": ["P1", "P2"],
-            "derived_and_now_justified_abstraction_boundary": ["P3"],
+            "already_certified_OT_structure": ["P1", "P2", "P3a"],
+            "new_architectural_hypothesis_audited_and_upheld": ["P3b"],
             "new_mathematical_choice": [],
             "new_canonicity_or_naturality_principle": ["P4"],
+            "promoted_to_certified_law_by_this_audit": [],
             "unnecessary_after_the_operational_quotient": [],
             "unnecessary_for_public_behavior_only": ["P4"],
         },
         "language_correction": (
-            "the 'new declaration' label must be dropped for P2 and softened for P3; "
-            "only P4 is a new principle, and it is a representative-selection "
-            "principle, not a probability-fixing axiom"
+            "the 'new declaration' label must be dropped for P2 and split for P3 "
+            "into certified P3a and audited P3b; only P4 is a new principle, and it "
+            "is a representative-selection principle, not a probability-fixing axiom"
         ),
+        "owner_review_alignment": {
+            "review": (
+                "017.21b-GPT-owner-review-correct-premises-and-operational-TDM-"
+                "boundary.md"
+            ),
+            "items": owner_alignment,
+            "all_owner_corrections_honored": all(
+                bool(row["agreement"]) for row in owner_alignment
+            ),
+            "disagreements": [],
+        },
     }
 
 
@@ -2718,6 +2835,20 @@ def authority_record() -> dict[str, object]:
                 ),
                 "supplies": "the result being reclassified",
             },
+            {
+                "uri": (
+                    f"quilt+s3://protology#package=occurrence/gpt@{OWNER_REVIEW_REVISION}"
+                    "&path=issues/017-jev-pivot/017.21b-GPT-owner-review-correct-"
+                    "premises-and-operational-TDM-boundary.md"
+                ),
+                "sha256": OWNER_REVIEW_SHA256,
+                "supplies": (
+                    "the owner correction in force: P2 certified, the P3a/P3b split, "
+                    "P4 held open as a canonicity principle, the orientation bit not "
+                    "a Training target, ambient-ray nonuniqueness not a TDM failure, "
+                    "and zero observable Training residue in the present fixture"
+                ),
+            },
         ],
         "local_pins": [
             {
@@ -2940,6 +3071,18 @@ def build_payload() -> dict[str, object]:
             ledger["017_21a_claimed_these_as_its_own_declarations"][key]  # type: ignore[index]
             for key in ("P2", "P3", "P4")
         ),
+        "owner_review_corrections_are_honored": ledger["owner_review_alignment"][  # type: ignore[index]
+            "all_owner_corrections_honored"
+        ],
+        "premise_ledger_splits_P3_into_P3a_and_P3b": {
+            str(row["id"]) for row in ledger["corrections"]  # type: ignore[union-attr]
+        }
+        == {"P1", "P2", "P3a", "P3b", "P4"},
+        "P4_is_not_promoted_to_certified_law": not next(
+            row for row in ledger["corrections"] if row["id"] == "P4"  # type: ignore[index,union-attr]
+        )["promoted_to_certified_OT_law"],
+        "P3b_is_upheld": boundary["one_shot_evaluation_factors_through_S_E"]
+        and boundary["S_E_is_minimal_for_the_full_formal_family"],
         "orientations_share_the_contract": identity["contract_equivalence"][  # type: ignore[index]
             "holds_for_the_two_orientations"
         ],
