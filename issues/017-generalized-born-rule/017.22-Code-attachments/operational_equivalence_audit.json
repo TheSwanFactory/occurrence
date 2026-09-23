@@ -1,0 +1,1235 @@
+{
+  "A_premise_correction": {
+    "017_21a_claimed_these_as_its_own_declarations": {
+      "P1": false,
+      "P2": true,
+      "P3": true,
+      "P4": true
+    },
+    "corrections": [
+      {
+        "017_21a_status": "certified upstream",
+        "authority": "occurrence/fixed@f11ea77410fc79c8bacd8ba44633270786735ecf08cfff05e855613936b1760b&path=06-reduced-ordered-space-and-liftable-dynamics.md",
+        "corrected_status": "certified OT structure",
+        "id": "P1",
+        "name": "reduced ordered Jordan effect algebra",
+        "unchanged": true
+      },
+      {
+        "017_21a_status": "declared by 017.21a; not established as physical Test Realization",
+        "corrected_status": "certified OT structure, not a new declaration",
+        "effect_on_the_017_21a_verdict": "the conditional result is strictly stronger than advertised: one of its three declarations was already authority",
+        "id": "P2",
+        "name": "full formal effect interval",
+        "unchanged": false,
+        "what_remains_correctly_fenced": "formal effecthood is still not physical Test Realization; that fence is Theory 41's, and 017.21a kept it",
+        "why": "Theory 27 section 1 states 'Its formal effect interval is Eff(E) = [0, 1_E]' and section 2 defines Test_formal(E) as every finite family of effects summing to 1_E; Theory 41 restates Eff(E) = {e in E : 0 <= e <= 1_E}. The interval is certified Theory, so 017.21a should not have listed it as its own premise"
+      },
+      {
+        "017_21a_status": "declared by 017.21a",
+        "corrected_status": "choice of abstraction boundary, mathematically free given certified structure, and now justified rather than declared",
+        "id": "P3",
+        "name": "operational state target",
+        "residual_declarative_content": "identifying two ambient rays with the same induced state as the same compiler output is an identity convention at the realization layer; current TDM vocabulary neither requires nor forbids it",
+        "unchanged": false,
+        "why": "the mathematics is certified: Theory 27 section 2 gives both P(V) -> S(E) and S(E) x Eff(E) -> [0,1]. What 017.21a added was not new mathematics but a decision about where the compiler's codomain sits. That decision is now earned: one-shot evaluation provably factors through S(E), and S(E) is minimal because Eff(E) separates states"
+      },
+      {
+        "017_21a_status": "declared by 017.21a; load-bearing and independently required",
+        "corrected_status": "genuinely new principle, but a representative-selection principle rather than a behavioral constraint",
+        "equivalent_honest_formulation": "no-unsupplied-structure: the compiled state must be definable from the selected central character alone, without choosing a frame in Sym_2(R) that the Type Schema never supplied. The invariant states are exactly the states with no such extra frame content, so this formulation and P4 pick out the same family",
+        "exact_role": "lambda -> omega_lambda is a bijection from S(E)/~_Sigma onto the invariant states, so P4 chooses one canonical representative per observational class. It also does real work that 017.21a did not claim: together with the declared deterministic behavior it forces the declared test to be the intrinsic central test",
+        "id": "P4",
+        "is_it_forced_by_canonicality": false,
+        "is_it_still_load_bearing_for_017_21a_uniqueness": true,
+        "is_it_stronger_than_the_stated_canonicality_requirement": true,
+        "is_it_unnecessary_after_the_operational_quotient": "unnecessary for public behavior, necessary for canonical representative selection",
+        "load_bearing_note": "without P4 the realization class is at least an RP^1 family, so 017.21a's omega_t counterexample stands and unconditional C3 remains correctly rejected",
+        "name": "invariant central-character extension",
+        "unchanged": false,
+        "why_not_forced": "017.20's canonicality ladder asks for invariance under declared source equivalence and equivariance under source automorphisms. 017.21a itself proves the source group acts trivially on E, so source-side naturality imposes nothing at all on the target. P4 instead demands a fixed point of the target automorphism group, which is a different and additional requirement"
+      }
+    ],
+    "language_correction": "the 'new declaration' label must be dropped for P2 and softened for P3; only P4 is a new principle, and it is a representative-selection principle, not a probability-fixing axiom",
+    "prior_premise_artifact": {
+      "path": "issues/017-generalized-born-rule/017.21a-Code-attachments/declared_premises.json",
+      "schema": "gpt-01721a-unfenced-premises/v1",
+      "sha256": "3cb2b3f4decba679dffa05ebe72ded9a7b9645b7df8bb4c1e2bd87cd4198e921"
+    },
+    "summary": {
+      "already_certified_OT_structure": [
+        "P1",
+        "P2"
+      ],
+      "derived_and_now_justified_abstraction_boundary": [
+        "P3"
+      ],
+      "new_canonicity_or_naturality_principle": [
+        "P4"
+      ],
+      "new_mathematical_choice": [],
+      "unnecessary_after_the_operational_quotient": [],
+      "unnecessary_for_public_behavior_only": [
+        "P4"
+      ]
+    }
+  },
+  "B_public_semantics": {
+    "admitted_inputs": 49,
+    "answer_labels": [
+      "incident",
+      "nonincident"
+    ],
+    "conformance_note": "the declared schema rule already fixes every answer, so F carries no predictive content here; it is a conformance object",
+    "declared_operations": 1,
+    "every_value_is_a_distribution": true,
+    "every_value_is_exact_rational": true,
+    "is_total": true,
+    "packaging": "for several declared operations, package the maps as one typed family F_R = (F_{R,d})_{d in Ops_Sigma}; the audited Sigma declares one operation, so the family has a single component",
+    "type": "F_{R,d} : Input_{Sigma,d} -> Delta(A_d)",
+    "what_it_is": "the Sigma-semantics of one realization: the complete observable projection of an internal realization onto the declared typed boundary",
+    "what_it_is_not": {
+      "only_one_observable_projection_of_a_richer_instance": "yes: this is the correct reading, and it is why behavioral equivalence must not be equated with artifact identity",
+      "the_identity_of_a_TDM_instance": "no: 017.10 makes instance identity Type Schema + Training, and distinct artifacts can induce one F",
+      "the_semantics_of_a_TDM_contract": "no: the contract is the Type Schema itself, which constrains which families are admissible but does not single one out"
+    }
+  },
+  "C_state_equivalence": {
+    "effect_family": {
+      "E_Sigma": [
+        "z_M",
+        "z_s"
+      ],
+      "E_Sigma_cardinality": 2,
+      "E_Sigma_is_orientation_independent": true,
+      "E_Sigma_orientation_note": "the orientation bit permutes which answer label maps to which central effect; the set E_Sigma is unchanged, so the observational relation defined below does not depend on the orientation",
+      "algebra_dimension": 4,
+      "all_members_are_central": true,
+      "all_members_are_effects": true,
+      "authority_for_the_notation": "occurrence/gpt top-level 15 section 8 already writes E_Sigma subset Eff(E) for the admissible effect/test family induced by a Type Schema",
+      "closure_cardinality": 4,
+      "coarse_grained_closure": [
+        "0_E",
+        "z_M",
+        "z_s",
+        "1_E"
+      ],
+      "declared_operations": [
+        {
+          "admitted_inputs": 49,
+          "answer_count": 2,
+          "answers": [
+            "incident",
+            "nonincident"
+          ],
+          "operation": "IncidenceDecision"
+        }
+      ],
+      "definition": "E_Sigma is the set of formal effects that some declared test of the Type Schema actually evaluates: E_Sigma = image(T) for the declared test realization T, closed under coarse-graining of its slots",
+      "eff_E_spans_the_algebra": {
+        "all_witnesses_are_effects": true,
+        "consequence": "Eff(E) contains a linear basis of E, so the full formal effect family separates states and S(E) admits no further quotient without losing a formal probability",
+        "determinant": "-1/2",
+        "is_a_basis": true,
+        "witness": [
+          "z_s",
+          "z_M",
+          "E11",
+          "G_plus"
+        ]
+      },
+      "members_sum_to_unit": true,
+      "span_dimension": 2,
+      "span_is_proper": true
+    },
+    "relation": {
+      "all_probe_states_are_states": true,
+      "definition": "omega ~_Sigma omega' iff omega(e) = omega'(e) for every e in E_Sigma",
+      "degenerate_fiber": {
+        "fiber_is_the_single_state_delta_s": true,
+        "grid_denominator": 6,
+        "lambda": "0",
+        "proof": "omega(z_M) = r11 + r22 = 0 with r11, r22 >= 0 forces r11 = r22 = 0, and positive semidefiniteness then forces r12^2 <= r11 r22 = 0, so rho = 0 and unitality gives q = 1",
+        "states_on_grid_with_lambda_zero": 1
+      },
+      "fat_fiber_witness": {
+        "all_Sigma_equivalent": true,
+        "consequence": "for the declared test, ~_Sigma is strictly coarser than equality of states: a two-real-dimensional set of states is observationally identical at each lambda > 0",
+        "lambda": "1/2",
+        "pairwise_distinct": true,
+        "separating_effects_outside_E_Sigma": [
+          {
+            "pair": [
+              "rho_e1_half_scalar",
+              "rho_diag_quarter"
+            ],
+            "separated": true,
+            "separating_effect_outside_E_Sigma": "E11"
+          },
+          {
+            "pair": [
+              "rho_e1_half_scalar",
+              "rho_rank1_plus"
+            ],
+            "separated": true,
+            "separating_effect_outside_E_Sigma": "E11"
+          },
+          {
+            "pair": [
+              "rho_diag_quarter",
+              "rho_rank1_plus"
+            ],
+            "separated": true,
+            "separating_effect_outside_E_Sigma": "G_plus"
+          }
+        ],
+        "states": [
+          "rho_e1_half_scalar",
+          "rho_diag_quarter",
+          "rho_rank1_plus"
+        ]
+      },
+      "is_an_equivalence_relation": {
+        "reflexive": true,
+        "symmetric": true,
+        "transitive": true,
+        "why": "the relation is the kernel of the evaluation map omega -> (omega(e))_{e in E_Sigma}, so it is automatically an equivalence relation; the checks above confirm it mechanically"
+      },
+      "observed_class_count": 5,
+      "observed_classes": {
+        "0": [
+          "delta_s",
+          "omega_0"
+        ],
+        "1": [
+          "omega_1",
+          "omega_t_one_third",
+          "omega_t_one_twelfth",
+          "rho_12-5-13",
+          "rho_20-21-29",
+          "rho_3-4-5",
+          "rho_4-3-5",
+          "rho_5-12-13",
+          "rho_7-24-25",
+          "rho_8-15-17",
+          "rho_e1",
+          "rho_e1",
+          "rho_e2",
+          "rho_e2",
+          "tau_M"
+        ],
+        "1/2": [
+          "omega_1/2",
+          "rho_diag_quarter",
+          "rho_e1_half_scalar",
+          "rho_rank1_minus",
+          "rho_rank1_plus",
+          "rho_skew_third"
+        ],
+        "1/3": [
+          "omega_1/3"
+        ],
+        "1/4": [
+          "omega_1/4"
+        ]
+      },
+      "probe_state_count": 25,
+      "quotient_invariant": {
+        "coarse_grained_closure_adds_nothing": true,
+        "formula": "lambda = omega(z_M), and omega(z_s) = 1 - lambda",
+        "lambda_characterizes_the_relation": true,
+        "name": "lambda",
+        "quotient": "S(E) / ~_Sigma is in exact bijection with [0,1]",
+        "range_is_the_unit_interval": true,
+        "why_one_number_suffices": "z_M + z_s = 1_E and every state is unital, so the second declared value is determined by the first"
+      },
+      "special_cases": {
+        "E_Sigma_equals_Eff_E": {
+          "distinct_probe_pairs": 295,
+          "proof": "Eff(E) contains a linear basis of E, so agreement on all of Eff(E) forces equality of the functionals",
+          "relation_becomes_equality": true,
+          "separated_probe_pairs": 295
+        },
+        "one_fixed_finite_test": "many distinct states are observationally identical; the quotient is exactly [0,1] for the 017.21a central test",
+        "the_017_21a_central_test": {
+          "delta_s_lambda": "0",
+          "tau_M_lambda": "1",
+          "the_two_compiled_states_are_not_Sigma_equivalent": true
+        }
+      }
+    }
+  },
+  "D_realization_equivalence": {
+    "P4_forcing": {
+      "centrality_is_derived_not_assumed": true,
+      "closed_form_proof": "omega_lambda(e) = lambda * t + (1 - lambda) * s with t = Tr(A_e)/2 in [0,1] and s = s_e in [0,1]. A convex combination equals 1 only if the active coordinate equals 1, and equals 0 only if the active coordinate equals 0. Requiring both for the same e forces lambda_I and lambda_N into {0,1} with opposite choices; t = 1 with 0 <= A <= I_2 forces A = I_2 and then positivity of the complement forces s = 0, giving e = z_M; symmetrically the other branch gives e = z_s",
+      "consequence": "premise P4 plus the declared deterministic behavior forces the test to be exactly the intrinsic central test and the compiled states to be the two central characters; 017.21a assumed centrality of the test, and it is in fact derivable",
+      "exactly_two_solutions": true,
+      "search_space": {
+        "effect_grid_size": 225,
+        "effects_with_nonzero_off_diagonal": 100,
+        "grid_denominators": {
+          "effects": 4,
+          "lambda": 12
+        },
+        "lambda_grid_size": 13,
+        "lambda_pairs_scanned_per_effect": 169,
+        "non_central_effects_in_grid": 200,
+        "search_is_not_vacuous": true
+      },
+      "solution_count": 2,
+      "solutions": [
+        {
+          "incident_slot_coordinates": [
+            "0",
+            "0",
+            "0",
+            "1"
+          ],
+          "incident_slot_is_central": true,
+          "incident_slot_is_z_M": false,
+          "incident_slot_is_z_s": true,
+          "lambda_incident": "0",
+          "lambda_nonincident": "1"
+        },
+        {
+          "incident_slot_coordinates": [
+            "1",
+            "0",
+            "1",
+            "0"
+          ],
+          "incident_slot_is_central": true,
+          "incident_slot_is_z_M": true,
+          "incident_slot_is_z_s": false,
+          "lambda_incident": "1",
+          "lambda_nonincident": "0"
+        }
+      ],
+      "solutions_are_the_two_orientations": true
+    },
+    "orientation_classification": {
+      "cardinality": 2,
+      "classification": "unobservable internal realization ambiguity under Sigma",
+      "classification_definition": "two complete labeled realizations R and R' are a Sigma-unobservable labeled-realization ambiguity when F_R = F_R' while the internal pair (compiled state, answer-to-effect labeling) differs and no certified symmetry of the target datum carries one to the other",
+      "explicitly_not": {
+        "certified_representation_gauge": "rejected: no element of Aut(E,E_+,1_E) relates them, so calling it gauge would import a symmetry that does not exist",
+        "observable_constitutive_residue": "rejected: the two realizations agree on every admitted input",
+        "physical_gauge": "rejected: no physical Test Realization is certified at all"
+      },
+      "gauge_test": {
+        "central_effects_are_pointwise_fixed": true,
+        "ideal_dimensions": {
+          "z_M": 3,
+          "z_s": 1
+        },
+        "is_certified_representation_gauge": false,
+        "some_automorphism_swaps_the_central_effects": false,
+        "some_automorphism_swaps_the_two_states": false,
+        "structural_reason": "an automorphism permutes the minimal ideals, and the two ideals have different dimensions 3 and 1, so no automorphism can exchange them",
+        "target_automorphism_probes": 11
+      },
+      "questions": {
+        "distinct_as_labeled_internal_OT_realizations": true,
+        "distinct_in_S_E": true,
+        "distinct_under_TDM_observational_equivalence": false,
+        "distinguishable_by_any_Sigma_admitted_observation": false,
+        "states_are_Sigma_equivalent": false
+      },
+      "sharper_statement": "the orientation bit is not a distinguished two-element residue at the observational layer; it is the two-point slice that premise P4 and centrality cut out of an equivalence class containing at least an RP^1 family of Sigma-equivalent realizations",
+      "specification_bits": 1,
+      "the_bit": "which declared answer label binds to which minimal central idempotent",
+      "training_status": "non-training residue under the present Type Schema"
+    },
+    "relation": {
+      "all_outputs_are_distributions": true,
+      "all_realizations_are_well_formed": true,
+      "all_reproduce_the_declared_behavior": true,
+      "checked_realizations": 20,
+      "coordinated_change_witness": {
+        "claim": "the relation allows coordinated internal changes of state and test representation whenever the labeled distribution is unchanged",
+        "class_is_at_least_a_continuum": true,
+        "continuum_reason": "the rank-one projection rivals are indexed by a direction in the real projective line, so the equivalence class of the declared behavior contains at least an RP^1 family of realizations",
+        "orientation_pair": "orientation-incident-to-z_M and orientation-incident-to-z_s change both the compiled state and the answer-to-effect labeling, and the public family is byte-identical",
+        "sharp_rival_pair": "the rank-one projection rivals change the test away from the center and the states away from the invariant family, and the public family is still byte-identical"
+      },
+      "definition": "R ~^TDM_Sigma R' iff F_R = F_R' as functions on every admitted input and every declared operation",
+      "distinct_internal_realizations": 20,
+      "distinct_public_families": 1,
+      "orientations_are_TDM_equivalent": true,
+      "records": [
+        {
+          "description": "017.21a binding-incident-to-z_M",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "z_M",
+          "incident_state": "tau_M",
+          "nonincident_slot": "z_s",
+          "nonincident_state": "delta_s",
+          "realization": "orientation-incident-to-z_M",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": true,
+          "uses_only_invariant_states": true
+        },
+        {
+          "description": "017.21a binding-incident-to-z_s",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "z_s",
+          "incident_state": "delta_s",
+          "nonincident_slot": "z_M",
+          "nonincident_state": "tau_M",
+          "realization": "orientation-incident-to-z_s",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": true,
+          "uses_only_invariant_states": true
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_e1",
+          "incident_state": "omega_P_e1",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-e1",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_e1",
+          "incident_state": "omega_P_e1",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_e1",
+          "realization": "rival-sharp-pair-e1",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_e2",
+          "incident_state": "omega_P_e2",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-e2",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_e2",
+          "incident_state": "omega_P_e2",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_e2",
+          "realization": "rival-sharp-pair-e2",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_3-4-5",
+          "incident_state": "omega_P_3-4-5",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-3-4-5",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_3-4-5",
+          "incident_state": "omega_P_3-4-5",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_3-4-5",
+          "realization": "rival-sharp-pair-3-4-5",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_4-3-5",
+          "incident_state": "omega_P_4-3-5",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-4-3-5",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_4-3-5",
+          "incident_state": "omega_P_4-3-5",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_4-3-5",
+          "realization": "rival-sharp-pair-4-3-5",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_5-12-13",
+          "incident_state": "omega_P_5-12-13",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-5-12-13",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_5-12-13",
+          "incident_state": "omega_P_5-12-13",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_5-12-13",
+          "realization": "rival-sharp-pair-5-12-13",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_12-5-13",
+          "incident_state": "omega_P_12-5-13",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-12-5-13",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_12-5-13",
+          "incident_state": "omega_P_12-5-13",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_12-5-13",
+          "realization": "rival-sharp-pair-12-5-13",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_8-15-17",
+          "incident_state": "omega_P_8-15-17",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-8-15-17",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_8-15-17",
+          "incident_state": "omega_P_8-15-17",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_8-15-17",
+          "realization": "rival-sharp-pair-8-15-17",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_7-24-25",
+          "incident_state": "omega_P_7-24-25",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-7-24-25",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_7-24-25",
+          "incident_state": "omega_P_7-24-25",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_7-24-25",
+          "realization": "rival-sharp-pair-7-24-25",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with the matching pure state and the scalar character",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_20-21-29",
+          "incident_state": "omega_P_20-21-29",
+          "nonincident_slot": "",
+          "nonincident_state": "delta_s",
+          "realization": "rival-sharp-scalar-20-21-29",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        },
+        {
+          "description": "rank-one projection test with both orthogonal pure states; no central effect and no invariant state appears",
+          "every_output_is_a_distribution": true,
+          "incident_slot": "P_20-21-29",
+          "incident_state": "omega_P_20-21-29",
+          "nonincident_slot": "",
+          "nonincident_state": "omega_Pperp_20-21-29",
+          "realization": "rival-sharp-pair-20-21-29",
+          "reproduces_the_declared_behavior": true,
+          "states_are_states": true,
+          "test_is_normalized": true,
+          "test_slots_are_effects": true,
+          "uses_only_central_effects": false,
+          "uses_only_invariant_states": false
+        }
+      ],
+      "relation_checks": {
+        "reflexive": true,
+        "symmetric": true,
+        "transitive": true
+      },
+      "single_equivalence_class": true,
+      "why_it_is_an_equivalence_relation": "it is the kernel of R -> F_R, so reflexivity, symmetry and transitivity are automatic; verified mechanically below"
+    }
+  },
+  "E_ambient_rays": {
+    "forgotten_information": {
+      "ambient_dimension": 16,
+      "delta_s_fiber": "P(W-) = RP^11, real dimension 11",
+      "directions_of_Sym_V_invisible_to_E": 132,
+      "generic_fiber_real_dimension_at_least": 12,
+      "observable_through_the_declared_one_shot_interface": false,
+      "projective_dimension": 15,
+      "state_free_coordinates_after_normalization": 3,
+      "state_moments_retained": 4,
+      "status_of_the_dimension_count": "arithmetic consequence of the rank of the moment map; the discrete witnesses above are exact, the dimension statement is a count",
+      "sym_ambient_dimension": 136,
+      "tau_M_fiber": "one PO(2) family in U + W+"
+    },
+    "level_1_formal_preparation": {
+      "all_sampled_scalar_rays_induce_delta_s": true,
+      "answer": "yes",
+      "delta_s_realizers": [
+        {
+          "induces_delta_s": true,
+          "ray": "e1-e2"
+        },
+        {
+          "induces_delta_s": true,
+          "ray": "e1-e3"
+        },
+        {
+          "induces_delta_s": true,
+          "ray": "e2-e4"
+        },
+        {
+          "induces_delta_s": true,
+          "ray": "e9-e10"
+        },
+        {
+          "induces_delta_s": true,
+          "ray": "e1+e2-2e3"
+        }
+      ],
+      "delta_s_realizers_are_projectively_distinct": true,
+      "projectively_distinct_tau_M_realizers": 8,
+      "question": "are distinct rays in one fiber genuinely distinct supplied preparations under current Theory?",
+      "same_copy_near_miss": {
+        "induces_tau_M": false,
+        "note": "the cross-copy convention is load-bearing; the same-copy vector is not the invariant state",
+        "ray": "u0 + v0"
+      },
+      "tau_M_realizer_count_on_the_sign_grid": 16,
+      "tau_M_realizer_names": [
+        "-1*u0 + -1*u8 + -1*v0 + 1*v8",
+        "-1*u0 + -1*u8 + 1*v0 + -1*v8",
+        "-1*u0 + 0*u8 + 0*v0 + -1*v8",
+        "-1*u0 + 0*u8 + 0*v0 + 1*v8",
+        "-1*u0 + 1*u8 + -1*v0 + -1*v8",
+        "-1*u0 + 1*u8 + 1*v0 + 1*v8",
+        "0*u0 + -1*u8 + -1*v0 + 0*v8",
+        "0*u0 + -1*u8 + 1*v0 + 0*v8"
+      ],
+      "why": "Theory 27 takes the ray [x] in P(V) as the supplied preparation input, so distinct rays are distinct inputs to the theorem even when they induce the same state"
+    },
+    "level_2_formal_evaluation": {
+      "answer": "no, and the statement is a theorem, not an observation",
+      "authority": "Theory 27 section 2 factorization P(V) -> S(E) followed by S(E) x Eff(E) -> [0,1]",
+      "mechanically_checked_on_probe_effects": true,
+      "probe_effect_count": 20,
+      "question": "can any declared TDM test distinguish two rays with the same image in S(E)?",
+      "theorem": "if q([x]) = q([y]) then for every formal test T = {e_i} with e_i in Eff(E) and sum e_i = 1_E, P(i | [x], T) = omega_hat_[x](e_i) = omega_hat_[y](e_i) = P(i | [y], T); the declared IncidenceDecision test is one such T, so no admitted observation separates the fiber"
+    },
+    "level_3_instance_identity": {
+      "017_10_says": "a TDM instance is Type Schema + Training; the Type Schema is the public type boundary and internals may differ radically between implementations",
+      "answer": "no such requirement exists, and no prohibition exists either",
+      "conclusion": "ambient-ray identity is below the declared public boundary and is simply undefined by the current TDM vocabulary; this is a terminology gap, not a derived identity rule",
+      "question": "does 017.10 or top-level 15 require a TDM implementation to preserve which ambient ray realizes omega?",
+      "top_level_15_says": "the Type Schema is part of what object was trained, and Training should constitute a state representation over the declared effect family E_Sigma"
+    },
+    "map": "q : P(V) -> S(E), [x] -> omega_hat_[x], certified by Theory 27",
+    "verdict": "ambient-ray nonuniqueness is a lower-level realization ambiguity that is irrelevant to one-shot evaluation, and simultaneously an unresolved instance-identity question; it is not a blocker for TDM constitution"
+  },
+  "F_state_boundary": {
+    "S_E_is_minimal_for_the_full_formal_family": true,
+    "all_formal_effect_probabilities_preserved": true,
+    "beyond_one_shot_evaluation": {
+      "Interact": "explicitly out of scope and not used to repair anything",
+      "enlarged_effect_families": "Theory 27 section 7 warns that an enriched retained datum may refine the admissible equivalence class, which would require rechecking this boundary",
+      "evaluate_is_not_enact": true,
+      "physical_preparation_realization": "Theory 27 sections 5 and 7 leave the physical map to [x] open, so the ray layer cannot be discarded as meaningless",
+      "recurrent_dynamics": "not settled here; may require more than S(E)"
+    },
+    "forgotten_information_is_observable_under_Sigma": false,
+    "minimality_argument": "Eff(E) contains a linear basis of E, so omega -> (omega(e))_{e in Eff(E)} is injective; any strictly coarser carrier loses a formal probability, hence S(E) is the smallest carrier through which every formal one-shot evaluation factors",
+    "one_shot_authority": "Theory 27 section 2 states the factorization explicitly, so this is certified structure and not a new premise",
+    "one_shot_evaluation_factors_through_S_E": true,
+    "proposed_boundary": "operational TDM state = omega in S(E)",
+    "sufficient_for_the_declared_Sigma": "S(E)/~_Sigma = [0,1] already suffices for the audited Type Schema, so S(E) is finer than the present declaration needs",
+    "three_layer_answer": {
+      "canonical_formal_one_shot_carrier": "S(E)",
+      "declared_Sigma_sufficient_carrier": "[0,1] via lambda = omega(z_M)",
+      "strictly_redundant_for_one_shot_evaluation": "P(V)"
+    },
+    "verdict": "S(E) is the correct and minimal operational state carrier for one-shot formal TDM evaluation; it is not claimed sufficient for autonomous dynamics, enactment, or physical preparation",
+    "what_is_forgotten_from_the_ray": "every component of the rank-one form associated with [x] that is orthogonal to the four-dimensional image of iota"
+  },
+  "G_invariant_family": {
+    "action": "(A, s) -> (Q^T A Q, s); the scalar ideal is fixed pointwise",
+    "all_family_members_are_invariant": true,
+    "all_family_members_are_states": true,
+    "constraint_matrix": {
+      "columns": 4,
+      "kernel_is_spanned_by_those_two": true,
+      "null_space_basis": [
+        [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "null_space_dimension": 2,
+      "rank": 2,
+      "rows": 44,
+      "scalar_direction_in_kernel": true,
+      "trace_direction_in_kernel": true
+    },
+    "cross_section_consequence": "lambda -> omega_lambda is an exact bijection from S(E)/~_Sigma onto the invariant states, so premise P4 selects one canonical representative per observational class rather than constraining behavior",
+    "derivation": "invariance under the whole rotation subgroup kills the spin-2 part of rho, forcing r12 = 0 and r11 = r22; writing rho = (lambda/2) I_2 and imposing unitality gives q = 1 - lambda",
+    "endpoints": {
+      "lambda_0": "delta_s(A, s) = s",
+      "lambda_1": "tau_M(A, s) = Tr(A)/2"
+    },
+    "family": "omega_lambda(A, s) = lambda * Tr(A)/2 + (1 - lambda) * s",
+    "family_records": [
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "0",
+        "value_on_z_M": "0",
+        "value_on_z_s": "1"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1/12",
+        "value_on_z_M": "1/12",
+        "value_on_z_s": "11/12"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1/6",
+        "value_on_z_M": "1/6",
+        "value_on_z_s": "5/6"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1/4",
+        "value_on_z_M": "1/4",
+        "value_on_z_s": "3/4"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1/3",
+        "value_on_z_M": "1/3",
+        "value_on_z_s": "2/3"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "5/12",
+        "value_on_z_M": "5/12",
+        "value_on_z_s": "7/12"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1/2",
+        "value_on_z_M": "1/2",
+        "value_on_z_s": "1/2"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "7/12",
+        "value_on_z_M": "7/12",
+        "value_on_z_s": "5/12"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "2/3",
+        "value_on_z_M": "2/3",
+        "value_on_z_s": "1/3"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "3/4",
+        "value_on_z_M": "3/4",
+        "value_on_z_s": "1/4"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "5/6",
+        "value_on_z_M": "5/6",
+        "value_on_z_s": "1/6"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "11/12",
+        "value_on_z_M": "11/12",
+        "value_on_z_s": "1/12"
+      },
+      {
+        "is_invariant": true,
+        "is_state": true,
+        "lambda": "1",
+        "value_on_z_M": "1",
+        "value_on_z_s": "0"
+      }
+    ],
+    "is_a_cross_section_of_the_observational_quotient": true,
+    "lambda_is_the_value_on_z_M": true,
+    "non_invariant_probe_states": 17,
+    "non_invariant_probe_states_detected": 17,
+    "outside_the_interval": [
+      {
+        "is_state": false,
+        "lambda": "-1/3",
+        "violated": "positivity of rho"
+      },
+      {
+        "is_state": false,
+        "lambda": "4/3",
+        "violated": "positivity of q"
+      }
+    ],
+    "positivity_bounds_lambda_to_unit_interval": true,
+    "probe_count": 11,
+    "target_automorphism_group": "Aut(E, E_+, 1_E) = O(2)/{+-I}",
+    "verdict": "the Aut(E,E_+,1_E)-invariant normalized states are exactly the one-parameter family omega_lambda with lambda in [0,1]"
+  },
+  "H_residue_ledger": {
+    "abstract_OT_realization": {
+      "cardinality": "at least a continuum",
+      "cardinality_under_P4_and_centrality": 2,
+      "exhibited_subfamily": "RP^1 of rank-one projection realizations",
+      "is_certified_gauge": false,
+      "observable_under_Sigma": false,
+      "residue": "the observational equivalence class of labeled realizations (compiled state, answer-to-effect labeling)",
+      "specification_bits_under_P4": 1,
+      "training_eligible": false
+    },
+    "ambient_ray_realization": {
+      "delta_s_fiber": "RP^11, real dimension 11",
+      "gauge_candidate_note": "occurrence/fixed 06 calls the pointwise stabilizer K_pt = O(2) x O(12) a gauge candidate relative to the observables, not certified gauge",
+      "generic_fiber_real_dimension_at_least": 12,
+      "is_certified_gauge": false,
+      "observable_under_Sigma": false,
+      "residue": "the fiber of q : P(V) -> S(E) over the compiled state",
+      "tau_M_fiber": "one PO(2) family",
+      "training_eligible": false
+    },
+    "comparison_with_017_21a": {
+      "017_21a_headline": "one discrete orientation bit at the S(E) layer",
+      "017_22_correction": "the bit is real only relative to P4 and centrality; the observational class it sits inside is at least one dimensional, and in the successor's enlarged family the bit is absorbed by an exact parameter involution"
+    },
+    "physical_realization": {
+      "grade": "C-empty",
+      "observable_under_Sigma": false,
+      "residue": "the entire physical Test Realization and Outcome bridge",
+      "training_eligible": false,
+      "unchanged_since": "017.21"
+    },
+    "public_TDM_behavior": {
+      "cardinality": 1,
+      "observable_under_Sigma": true,
+      "residue": "none",
+      "training_eligible": false,
+      "training_note": "nothing is left to learn at this fixture scale",
+      "why": "the declared schema rule fixes every answer, so exactly one public family F is admissible for the audited Sigma"
+    }
+  },
+  "I_training_relevance": {
+    "admission_test": "a residual may be handed to Training only if it is observable through a declared TDM surface or an explicitly named future target, and is not already derivable or quotientable under the accepted semantics",
+    "candidates": [
+      {
+        "degree_of_freedom": "the central orientation bit",
+        "derivable": false,
+        "observable_under_Sigma": false,
+        "quotientable": true,
+        "verdict": "non-training residue",
+        "why": "both orientations produce identical declared behavior, so no typed loss can prefer one; in the successor family it is absorbed by theta -> 1 - theta"
+      },
+      {
+        "degree_of_freedom": "the ambient preparation ray within a fiber",
+        "derivable": false,
+        "observable_under_Sigma": false,
+        "quotientable": true,
+        "verdict": "non-training residue",
+        "why": "one-shot evaluation provably factors through S(E)"
+      },
+      {
+        "degree_of_freedom": "the non-invariant directions of a compiled state, that is the fiber of ~_Sigma",
+        "derivable": false,
+        "observable_under_Sigma": false,
+        "quotientable": true,
+        "verdict": "non-training residue under the present Sigma",
+        "why": "the declared test observes only lambda; these directions become observable only if Sigma declares a richer E_Sigma"
+      },
+      {
+        "degree_of_freedom": "the central observable lambda per source orbit",
+        "derivable": true,
+        "observable_under_Sigma": true,
+        "quotientable": false,
+        "verdict": "the only legitimate Training target, and only once Sigma stops declaring the decision rule",
+        "why": "lambda = omega(z_M) is a declared answer probability, so it is observable and identifiable; under the current fixture it is derivable from the declared rule and therefore not yet a target"
+      }
+    ],
+    "current_fixture_has_a_nonempty_training_problem": false,
+    "successor_fixture_would_have_one": true
+  },
+  "J_successor": {
+    "absorption_statement": "for every theta, orientation 1 at theta and orientation 2 at (1 - lambda_I, 1 - lambda_N) induce the identical public family, so the 017.21a orientation bit becomes an exact involution of the parameter space rather than an extra degree of freedom; a trained theta absorbs it",
+    "all_probes_are_well_formed_realizations": true,
+    "candidate_family": "omega_lambda(A, s) = lambda Tr(A)/2 + (1 - lambda) s",
+    "candidate_residual": "theta = (lambda_I, lambda_N) in [0,1]^2",
+    "derived_versus_learned_split": {
+      "baseline_burden": "a matched untyped learner must recover the orbit partition from the same source information before it can estimate two numbers",
+      "derived_by_Sigma": "the two-cell orbit partition of the 49 inputs, the automorphism group of order 168, the central test, and the invariant family",
+      "learned_by_Training": "exactly two scalars in [0,1]"
+    },
+    "earned_qualification": "earned as a mathematical handoff: the residual is observable, identifiable, finite dimensional, and orientation free. Not yet earned as a training-economy claim, which requires the matched benchmark",
+    "grid_probed": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "hard_precondition": "the current fixture declares the deterministic rule, which pins theta to an endpoint and leaves nothing to learn. The successor is only a real experiment if the answers supplied to Training are not derivable from Sigma, so the source must declare structure while the answer statistics come from data",
+    "is_the_fixture_mathematically_earned": true,
+    "not_executed_here": {
+      "benchmark_run": false,
+      "model_comparison_run": false,
+      "optimizer_used": false,
+      "training_data_generated": false
+    },
+    "observability_argument": "lambda_I = omega_{lambda_I}(z_M) is literally the declared probability of the answer 'incident' on an incident input, so a nonzero residual is read off the public surface rather than inferred",
+    "orientation_bit_is_absorbed": true,
+    "parameter_count": 2,
+    "probed_theta_count": 25,
+    "theta_is_directly_observable": true,
+    "theta_is_identifiable_from_the_declared_surface": true,
+    "what_it_must_not_declare": [
+      "the decision rule",
+      "any per-orbit probability",
+      "any preparation, effect, or ray coordinate"
+    ],
+    "what_the_successor_Type_Schema_must_declare": [
+      "the Point and Line sorts",
+      "the Fano incidence structure",
+      "the presentation equivalence and its automorphism group",
+      "the induced input orbit quotient",
+      "the answer type IncidenceDecision"
+    ]
+  },
+  "all_mechanical_checks_pass": true,
+  "artifacts": {
+    "orientation_behavior_table": {
+      "path": "issues/017-generalized-born-rule/017.22-Code-attachments/orientation_behavior_table.json",
+      "rows": 98,
+      "schema": "gpt-01722-orientation-behavior-table/v1",
+      "sha256": "7d7c3146d7ed1505cf9364230e9ad68aaa71f55110dd837142911a9724899205"
+    }
+  },
+  "authority": {
+    "local_pins": [
+      {
+        "path": "issues/017-generalized-born-rule/017.20-Code-attachments/source_fixture.json",
+        "sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c"
+      },
+      {
+        "path": "issues/017-generalized-born-rule/017.21a-Code-attachments/declared_premises.json",
+        "sha256": "3cb2b3f4decba679dffa05ebe72ded9a7b9645b7df8bb4c1e2bd87cd4198e921"
+      },
+      {
+        "path": "issues/017-generalized-born-rule/017.21a-Code-attachments/central_constitution_audit.json",
+        "sha256": "e9581c25db9f82dbbba6bb1fe800e3d3b94c92d20fc394ab8adb48ec0d1ff59c"
+      }
+    ],
+    "no_new_premise_introduced": true,
+    "primary_gpt_authority_named_by_the_task": "70617692cbd4f5dea992955307a2afa76d3a18d0d3da9bfc26a5477fb8cc7604",
+    "still_absent": [
+      "a physical Test Realization for IncidenceDecision",
+      "a canonical ambient preparation ray",
+      "a TDM instance-identity rule for zero-training constitutions",
+      "a source rule selecting the central orientation"
+    ],
+    "task": "quilt+s3://protology#package=occurrence/gpt@19a52d803acd6a9f19e7f4aee04d398633028179aad20d916541884cb91774f3&path=issues/017-jev-pivot/017.22-Task-operational-TDM-equivalence-and-S-E-state-boundary-audit.md",
+    "theory_revision_cited_by_017_21a": "b14aeb1bb9e07662e0e6fdde697f728cae3457324c0e2abd0cfd42975b8aac9a",
+    "theory_revision_consulted": "27dda92bc42ea84dc7ff384deac86b6a44ada3370bd2a638aaabcd91f7621e09",
+    "upstream_used": [
+      {
+        "supplies": "Eff(E) = [0,1_E]; Test_formal(E); the factorization P(V) -> S(E) followed by S(E) x Eff(E) -> [0,1]; the explicit fence that physical preparation and measurement realization remain open",
+        "uri": "quilt+s3://protology#package=occurrence/theory@27dda92bc42ea84dc7ff384deac86b6a44ada3370bd2a638aaabcd91f7621e09&path=27-the-lift-theorem-and-probability-law.md"
+      },
+      {
+        "supplies": "formal effect membership Eff(E) = {e in E : 0 <= e <= 1_E}, intrinsic finite common-test extendability, and the formal versus physical boundary",
+        "uri": "quilt+s3://protology#package=occurrence/theory@27dda92bc42ea84dc7ff384deac86b6a44ada3370bd2a638aaabcd91f7621e09&path=41-effect-census-test-admissibility-and-sce-sharp-shadow.md"
+      },
+      {
+        "sha256": "17e07af79a56cea92343a629bf901ef8c930e5a7bfe0572396968fb308a100ce",
+        "supplies": "E is a unital ordered Jordan algebra isomorphic to Sym_2(R) + R; Aut(E,E_+,1_E) = O(2)/{+-I}; K_pt = O(2) x O(12) as a gauge candidate; multiplicities 2 and 12",
+        "uri": "quilt+s3://protology#package=occurrence/fixed@f11ea77410fc79c8bacd8ba44633270786735ecf08cfff05e855613936b1760b&path=06-reduced-ordered-space-and-liftable-dynamics.md"
+      },
+      {
+        "supplies": "the notation E_Sigma subset Eff(E) for a schema-induced effect family, and the reading that Training constitutes a state over that family; also that Type Schema is part of model identity",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@19a52d803acd6a9f19e7f4aee04d398633028179aad20d916541884cb91774f3&path=15-type-the-model-not-merely-the-decision.md"
+      },
+      {
+        "supplies": "TDM, Type Schema, Training, and TSAT; the public typed boundary and the statement that internals may differ between implementations",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@19a52d803acd6a9f19e7f4aee04d398633028179aad20d916541884cb91774f3&path=issues/017-jev-pivot/017.10-GPT-typed-decision-model-type-schema-and-TSAT.md"
+      },
+      {
+        "supplies": "the result being reclassified",
+        "uri": "quilt+s3://protology#package=occurrence/gpt@19a52d803acd6a9f19e7f4aee04d398633028179aad20d916541884cb91774f3&path=issues/017-jev-pivot/017.21a-Kiro-unfenced-central-constitution-follow-up.md"
+      }
+    ]
+  },
+  "claim_fences": [
+    "no physical Test Realization or Outcome constitution is claimed",
+    "no predictive, accuracy, or training-economy claim is made",
+    "operational equivalence is not called gauge; no certified symmetry relates the two orientations",
+    "public behavioral equivalence is not equated with TSAT instance identity",
+    "nothing is trained, and no data or benchmark is generated",
+    "the S(E) boundary is claimed for one-shot evaluation only; Evaluate is not Enact"
+  ],
+  "control": {
+    "consequence": "the public semantic object F_R cannot even be formed without the declared relation, so E_Sigma and both equivalence relations inherit that dependency",
+    "failure_message": "IncidenceDecision is undefined without a declared incident relation",
+    "public_family_fails_closed": true,
+    "what_was_preserved": {
+      "all_21_rows_as_opaque_payload": true,
+      "all_49_admitted_inputs": true,
+      "both_typed_sorts": true,
+      "the_declared_answer_labels": true
+    },
+    "what_was_removed": "the semantic meaning of the 21 declared incidence rows"
+  },
+  "disposition": "STRONG POSITIVE ON THE STATE BOUNDARY WITH AN OPEN INSTANCE-IDENTITY DEFECT: one-shot TDM evaluation factors through S(E) by certified Theory and S(E) is minimal because Eff(E) separates states; both observational equivalences are formalized and verified; the 017.21a orientation bit and the ambient-ray fibers are provably unobservable at the declared boundary and are provably not certified gauge; the Aut(E,E_+,1_E)-invariant states are exactly omega_lambda for lambda in [0,1]; P2 was already certified Theory and P4 is a representative-selection principle that also forces the central test; the two-parameter Fano successor is mathematically earned, conditional on a Type Schema that declares structure without declaring the decision rule",
+  "mechanical_check_count": 70,
+  "mechanical_checks": {
+    "017_21a_did_label_P2_and_P3_as_declarations": true,
+    "E_Sigma_has_two_members": true,
+    "E_Sigma_members_are_central": true,
+    "E_Sigma_members_are_effects": true,
+    "E_Sigma_members_sum_to_unit": true,
+    "E_Sigma_span_is_proper": true,
+    "P4_derives_centrality_of_the_test": true,
+    "P4_forces_exactly_two_labeled_realizations": true,
+    "P4_search_is_not_vacuous": true,
+    "P4_solutions_are_the_two_orientations": true,
+    "S_E_is_minimal_for_the_formal_family": true,
+    "all_probe_states_are_states": true,
+    "all_realizations_form_one_class": true,
+    "all_realizations_reproduce_declared_behavior": true,
+    "all_realizations_well_formed": true,
+    "central_effects_are_pointwise_fixed": true,
+    "central_test_separates_the_two_compiled_states": true,
+    "class_contains_more_than_the_two_orientations": true,
+    "coarse_graining_does_not_refine_the_quotient": true,
+    "control_fails_closed": true,
+    "control_preserves_the_raw_carrier": true,
+    "delta_s_rays_are_projectively_distinct": true,
+    "eff_E_contains_a_basis": true,
+    "eff_E_separation_makes_the_relation_equality": true,
+    "every_non_invariant_probe_is_detected": true,
+    "fat_fiber_is_observationally_identical": true,
+    "fat_fiber_is_separated_outside_E_Sigma": true,
+    "fat_fiber_members_are_distinct_states": true,
+    "fiber_is_invisible_on_every_probe_effect": true,
+    "invariance_constraint_rank_is_two": true,
+    "invariant_family_is_a_cross_section": true,
+    "invariant_kernel_is_trace_plus_scalar": true,
+    "lambda_equals_value_on_z_M": true,
+    "lambda_zero_fiber_is_a_single_state": true,
+    "multiple_rays_realize_delta_s": true,
+    "multiple_rays_realize_tau_M": true,
+    "no_automorphism_swaps_the_central_effects": true,
+    "no_training_executed": true,
+    "omega_lambda_are_all_invariant": true,
+    "omega_lambda_are_all_states": true,
+    "orientation_bit_is_absorbed_by_theta": true,
+    "orientation_is_not_certified_gauge": true,
+    "orientation_is_unobservable": true,
+    "orientation_states_are_distinct_in_S_E": true,
+    "orientation_states_are_not_Sigma_equivalent": true,
+    "orientations_are_TDM_equivalent": true,
+    "orientations_share_the_contract": true,
+    "orientations_share_the_observable_semantics": true,
+    "outside_unit_interval_fails_positivity": true,
+    "prior_audit_bytes_match_017_21a": true,
+    "prior_audit_reported_two_bindings": true,
+    "prior_premises_bytes_match_017_21a": true,
+    "public_family_is_exact": true,
+    "public_family_is_total": true,
+    "public_family_is_typed": true,
+    "quotient_is_the_unit_interval": true,
+    "ray_information_is_not_observable_under_Sigma": true,
+    "realization_relation_is_an_equivalence": true,
+    "same_copy_near_miss_fails": true,
+    "sigma_relation_is_an_equivalence": true,
+    "sigma_relation_is_exactly_equal_lambda": true,
+    "source_bytes_match_017_20_freeze": true,
+    "source_group_order_is_168": true,
+    "successor_probes_are_well_formed": true,
+    "table_internal_columns_differ": true,
+    "table_public_columns_agree": true,
+    "table_row_count_is_98": true,
+    "theta_is_directly_observable": true,
+    "theta_is_identifiable": true,
+    "two_source_orbits_21_and_28": true
+  },
+  "prior_result_commit": "349e4db9d46be431e9f5f40808f594ae108ab6a8",
+  "reproducibility": {
+    "commands": [
+      "uv run --frozen python issues/017-generalized-born-rule/017.22-Code-attachments/audit_operational_equivalence.py --check",
+      "uv run --frozen pytest issues/017-generalized-born-rule/017.22-Code-attachments/test_audit_operational_equivalence.py"
+    ],
+    "exact_arithmetic": "Fraction and Q(sqrt 7)",
+    "interact_imported": false,
+    "learned_parameters": 0,
+    "network_required": false,
+    "numpy_imported": false,
+    "optimizer_or_training_imported": false,
+    "runtime": "Python >=3.11; standard library only"
+  },
+  "schema": "gpt-01722-operational-equivalence-audit/v1",
+  "source": {
+    "admitted_inputs": 49,
+    "automorphism_group_order": 168,
+    "orbits": [
+      {
+        "semantic_class": "incident",
+        "size": 21
+      },
+      {
+        "semantic_class": "nonincident",
+        "size": 28
+      }
+    ],
+    "schema": "gpt-01720-fano-incidence-source/v1",
+    "sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c"
+  },
+  "task": "occurrence/gpt Issue 017.22 operational TDM equivalence and the S(E) state boundary"
+}

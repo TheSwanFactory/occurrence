@@ -1,0 +1,2285 @@
+{
+  "admitted_inputs": 49,
+  "answer_labels": [
+    "incident",
+    "nonincident"
+  ],
+  "distribution_census": {
+    "orientation-incident-to-z_M": {
+      "0|1": 28,
+      "1|0": 21
+    },
+    "orientation-incident-to-z_s": {
+      "0|1": 28,
+      "1|0": 21
+    }
+  },
+  "internal_state_columns_differ_across_orientations": true,
+  "operation": "IncidenceDecision",
+  "orientations": [
+    "orientation-incident-to-z_M",
+    "orientation-incident-to-z_s"
+  ],
+  "prior_result_commit": "349e4db9d46be431e9f5f40808f594ae108ab6a8",
+  "public_columns_agree_across_orientations": true,
+  "row_count": 98,
+  "rows": [
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_M",
+        "nonincident": "z_s"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_M",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P0",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P1",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P2",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P3",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P4",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P5",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L0",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L1",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L2",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L3",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L4",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "delta_s",
+      "line": "L5",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "1",
+        "nonincident": "0"
+      },
+      "semantic_class": "incident",
+      "source_orbit": 0,
+      "state_coordinates": {
+        "q": "1",
+        "r11": "0",
+        "r12": "0",
+        "r22": "0"
+      },
+      "total": "1"
+    },
+    {
+      "answer_to_effect": {
+        "incident": "z_s",
+        "nonincident": "z_M"
+      },
+      "compiled_state": "tau_M",
+      "line": "L6",
+      "orientation": "orientation-incident-to-z_s",
+      "point": "P6",
+      "public_distribution": {
+        "incident": "0",
+        "nonincident": "1"
+      },
+      "semantic_class": "nonincident",
+      "source_orbit": 1,
+      "state_coordinates": {
+        "q": "0",
+        "r11": "1/2",
+        "r12": "0",
+        "r22": "1/2"
+      },
+      "total": "1"
+    }
+  ],
+  "schema": "gpt-01722-orientation-behavior-table/v1",
+  "source_sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+  "task": "occurrence/gpt Issue 017.22 required artifact 3"
+}
