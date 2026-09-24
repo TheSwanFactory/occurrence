@@ -1,0 +1,117 @@
+{
+  "schema": "gpt-01724-fano-successor-type-schema/v1",
+  "domain": {
+    "name": "abstract Fano point-line incidence, successor presentation",
+    "description": "The finite projective plane PG(2,2), represented only by two opaque seven-element sorts and their incidence relation. This successor presentation declares source structure and an answer type, and declares no map from inputs to answers.",
+    "source_semantics": "A point-line pair is marked exactly when its two opaque members occur in one declared incidence row. Raw identifiers carry no order, coordinate, probability, or answer meaning.",
+    "predecessor": "gpt-01720-fano-incidence-source/v1",
+    "predecessor_sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+    "difference_from_predecessor": "The predecessor declared a total decision rule over the admitted inputs. This successor removes it. The sorts, the relation, the admitted inputs, the presentation equivalence, and the automorphism definition are carried over unchanged."
+  },
+  "sorts": {
+    "point": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+    ],
+    "line": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ]
+  },
+  "relations": {
+    "incident": [
+      ["P0", "L0"],
+      ["P1", "L0"],
+      ["P2", "L0"],
+      ["P0", "L1"],
+      ["P3", "L1"],
+      ["P4", "L1"],
+      ["P0", "L2"],
+      ["P5", "L2"],
+      ["P6", "L2"],
+      ["P1", "L3"],
+      ["P3", "L3"],
+      ["P5", "L3"],
+      ["P1", "L4"],
+      ["P4", "L4"],
+      ["P6", "L4"],
+      ["P2", "L5"],
+      ["P3", "L5"],
+      ["P6", "L5"],
+      ["P2", "L6"],
+      ["P4", "L6"],
+      ["P5", "L6"]
+    ]
+  },
+  "admitted_inputs": {
+    "type": "Point × Line",
+    "generator": "Every ordered pair (point, line) from the two declared sorts.",
+    "cardinality": 49
+  },
+  "equivalence": {
+    "raw_presentation_equivalence": "Two raw presentations of an admitted input are equivalent exactly when a sort-preserving incidence automorphism carries one point-line pair to the other.",
+    "quotient_status": "derivable",
+    "quotient_is_declared_here": false
+  },
+  "automorphisms": {
+    "definition": "All independent point and line permutations that preserve the declared incident relation.",
+    "expected_group_order": 168,
+    "expectation_status": "redundant self-check on a quantity the compiler derives independently from the sorts and the relation alone"
+  },
+  "derivable_self_checks": {
+    "expected_orbit_count": 2,
+    "expected_orbit_cardinalities": [21, 28],
+    "naming_constraint": "Derived classes are reported as O_0 and O_1, ordered by cardinality then by least member. The names are bookkeeping and carry no answer meaning.",
+    "expectation_status": "redundant self-check; the compiler reads only sorts and relations and must reproduce these numbers without consulting this block"
+  },
+  "answer_type": {
+    "name": "BinaryAnswer",
+    "labels": [
+      "a_0",
+      "a_1"
+    ],
+    "arity": 2,
+    "semantics": "Two neutral, unordered, mutually exclusive and exhaustive answer labels. The labels are opaque names with no source meaning and no declared relationship to any sort, relation, or derived class."
+  },
+  "not_declared_here": [
+    "any total or partial assignment from admitted inputs to answer labels",
+    "any statement that the declared relation determines an answer label",
+    "any scalar answer frequency",
+    "any preparation coordinate",
+    "any effect coordinate",
+    "any ambient ray",
+    "any central orientation",
+    "any decision procedure of any kind"
+  ],
+  "compiler_visible_semantics": [
+    "sort membership",
+    "the declared point-line incident relation",
+    "the induced incidence automorphisms and the induced equivalence classes on admitted inputs",
+    "the arity and the neutral labels of the answer type"
+  ],
+  "compiler_forbidden_semantics": [
+    "answer frequency",
+    "Born expectation value",
+    "OT preparation or ray coordinate",
+    "effect coordinate",
+    "answer label stored as an input field",
+    "per-instance answer table",
+    "per-class answer table"
+  ],
+  "preexisting_source_authority": {
+    "banked_gpt_result": "quilt+s3://protology#package=occurrence/gpt@e9ccdfdb1b4cdc6e342197d13b68c4d4c493997b495f4e83c5cceb553943bb60&path=issues/011-global-fano-fff-discovery/011.02-Kiro-global-Fano-FFF-discovery-result.md",
+    "abstract_implementation": "topographo/core/f2_groups.py",
+    "abstract_implementation_commit": "853f0371f675d911a2988f63c3eaeb5d2901bf6e",
+    "independence_fence": "The frozen object is the abstract unlabeled incidence quotient already recovered and banked by Issue 011. It does not reuse the FIPS Event catalogue, habitat supports, hidden FFF labels, learning targets, or any OT preparation representation."
+  }
+}

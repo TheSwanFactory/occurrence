@@ -1,0 +1,42 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.20-Code-attachments/source_fixture.json": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+      "preregistration.json": "32fa75c0856cf13b3bbecf1eaf0619d851f8db69edc199015e94750176a575f9",
+      "successor_schema.json": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d"
+    },
+    "inherits": [
+      "017.23 operational TDM equivalence and the S(E) state boundary",
+      "017.21a canonical central test and binding-unique state compiler",
+      "017.20 rigorous input Type Schema fixture"
+    ],
+    "primary_gpt_authority_named_by_the_task": "11afecd32724bb061f845c9c20393a38be804c7d6ef6f9814c584d931da2cd8d",
+    "prior_result_commit": "e10ce4fffe26d9003c19b5375599f11a989269c6",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "derivation_reuse": {
+    "cached_across_training_runs": true,
+    "computed_once_per_type_schema": true,
+    "derivations_performed": 1,
+    "model_fits_served_by_that_one_derivation": 100800,
+    "reused_across_the_sample_size_sweep": true
+  },
+  "environment": {
+    "numpy": "2.5.1",
+    "numpy_used_only_for": "condition U and the parity certificates",
+    "python": "3.12.11"
+  },
+  "honest_accounting": "compilation is not free. On this 49-input fixture the one-off derivation cost is reported next to the fitting cost it serves; the ratio is a property of a tiny fixture and is not a production economics claim.",
+  "schema": "gpt-01724-cost-report/v1",
+  "seconds": {
+    "automorphism_and_class_derivation": 0.004104791,
+    "closed_form_fitting": 10.188778375,
+    "fairness_frontier_diagnostic": 69.5793079161,
+    "generic_group_closure": 0.001862,
+    "learned_fitting": 274.6982661672,
+    "relational_encoding_build": 4.3333e-05,
+    "schema_parse": 0.0007744581,
+    "secondary_estimator_fitting": 2.149068875,
+    "total_wall_clock": 358.137863375
+  }
+}

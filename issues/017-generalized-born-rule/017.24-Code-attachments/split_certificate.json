@@ -1,0 +1,474 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.20-Code-attachments/source_fixture.json": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+      "preregistration.json": "32fa75c0856cf13b3bbecf1eaf0619d851f8db69edc199015e94750176a575f9",
+      "successor_schema.json": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d"
+    },
+    "inherits": [
+      "017.23 operational TDM equivalence and the S(E) state boundary",
+      "017.21a canonical central test and binding-unique state compiler",
+      "017.20 rigorous input Type Schema fixture"
+    ],
+    "primary_gpt_authority_named_by_the_task": "11afecd32724bb061f845c9c20393a38be804c7d6ef6f9814c584d931da2cd8d",
+    "prior_result_commit": "e10ce4fffe26d9003c19b5375599f11a989269c6",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "checks": {
+    "both_classes_are_represented_among_held_out_identities": true,
+    "both_classes_are_represented_among_seen_identities": true,
+    "every_condition_receives_the_same_split": true,
+    "split_generation_is_deterministic_in_the_seed": true,
+    "splits_are_label_free": true,
+    "train_pool_and_held_out_are_disjoint": true
+  },
+  "regime_A": {
+    "eval_weights": [
+      "3/7",
+      "4/7"
+    ],
+    "evaluation_sets": [
+      {
+        "name": "aggregate",
+        "size": 49
+      },
+      {
+        "name": "O_0",
+        "size": 21
+      },
+      {
+        "name": "O_1",
+        "size": 28
+      }
+    ],
+    "train_pool_size": 49,
+    "train_weights": [
+      "3/7",
+      "4/7"
+    ]
+  },
+  "regime_B": {
+    "eval_weights": [
+      "2/5",
+      "3/5"
+    ],
+    "held_out_identities": 10,
+    "holdout_per_class": [
+      4,
+      6
+    ],
+    "seen_identities": 39,
+    "seen_identities_by_class": [
+      17,
+      22
+    ],
+    "train_weights": [
+      "17/39",
+      "22/39"
+    ],
+    "witnesses": [
+      {
+        "held_out": [
+          [
+            "P0",
+            "L4"
+          ],
+          [
+            "P1",
+            "L5"
+          ],
+          [
+            "P2",
+            "L0"
+          ],
+          [
+            "P2",
+            "L4"
+          ],
+          [
+            "P3",
+            "L2"
+          ],
+          [
+            "P3",
+            "L3"
+          ],
+          [
+            "P3",
+            "L5"
+          ],
+          [
+            "P5",
+            "L3"
+          ],
+          [
+            "P5",
+            "L4"
+          ],
+          [
+            "P6",
+            "L1"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360923,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L4"
+          ],
+          [
+            "P2",
+            "L3"
+          ],
+          [
+            "P3",
+            "L0"
+          ],
+          [
+            "P3",
+            "L1"
+          ],
+          [
+            "P3",
+            "L2"
+          ],
+          [
+            "P4",
+            "L2"
+          ],
+          [
+            "P4",
+            "L6"
+          ],
+          [
+            "P5",
+            "L6"
+          ],
+          [
+            "P6",
+            "L5"
+          ],
+          [
+            "P6",
+            "L6"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360924,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L2"
+          ],
+          [
+            "P1",
+            "L2"
+          ],
+          [
+            "P1",
+            "L4"
+          ],
+          [
+            "P2",
+            "L1"
+          ],
+          [
+            "P2",
+            "L4"
+          ],
+          [
+            "P2",
+            "L6"
+          ],
+          [
+            "P3",
+            "L2"
+          ],
+          [
+            "P4",
+            "L3"
+          ],
+          [
+            "P4",
+            "L5"
+          ],
+          [
+            "P6",
+            "L4"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360925,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L3"
+          ],
+          [
+            "P2",
+            "L0"
+          ],
+          [
+            "P2",
+            "L5"
+          ],
+          [
+            "P3",
+            "L0"
+          ],
+          [
+            "P3",
+            "L4"
+          ],
+          [
+            "P3",
+            "L5"
+          ],
+          [
+            "P4",
+            "L0"
+          ],
+          [
+            "P5",
+            "L0"
+          ],
+          [
+            "P5",
+            "L3"
+          ],
+          [
+            "P6",
+            "L1"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360926,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L1"
+          ],
+          [
+            "P0",
+            "L3"
+          ],
+          [
+            "P0",
+            "L4"
+          ],
+          [
+            "P2",
+            "L3"
+          ],
+          [
+            "P3",
+            "L1"
+          ],
+          [
+            "P3",
+            "L5"
+          ],
+          [
+            "P4",
+            "L1"
+          ],
+          [
+            "P4",
+            "L3"
+          ],
+          [
+            "P5",
+            "L1"
+          ],
+          [
+            "P5",
+            "L4"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360927,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L4"
+          ],
+          [
+            "P1",
+            "L1"
+          ],
+          [
+            "P1",
+            "L5"
+          ],
+          [
+            "P2",
+            "L2"
+          ],
+          [
+            "P2",
+            "L4"
+          ],
+          [
+            "P2",
+            "L5"
+          ],
+          [
+            "P3",
+            "L0"
+          ],
+          [
+            "P4",
+            "L1"
+          ],
+          [
+            "P4",
+            "L4"
+          ],
+          [
+            "P6",
+            "L5"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360928,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L0"
+          ],
+          [
+            "P0",
+            "L2"
+          ],
+          [
+            "P0",
+            "L4"
+          ],
+          [
+            "P1",
+            "L4"
+          ],
+          [
+            "P3",
+            "L0"
+          ],
+          [
+            "P4",
+            "L2"
+          ],
+          [
+            "P4",
+            "L3"
+          ],
+          [
+            "P5",
+            "L0"
+          ],
+          [
+            "P6",
+            "L2"
+          ],
+          [
+            "P6",
+            "L3"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360929,
+        "seen_identities": 39
+      },
+      {
+        "held_out": [
+          [
+            "P0",
+            "L3"
+          ],
+          [
+            "P1",
+            "L0"
+          ],
+          [
+            "P1",
+            "L6"
+          ],
+          [
+            "P3",
+            "L0"
+          ],
+          [
+            "P3",
+            "L3"
+          ],
+          [
+            "P3",
+            "L5"
+          ],
+          [
+            "P4",
+            "L3"
+          ],
+          [
+            "P5",
+            "L4"
+          ],
+          [
+            "P6",
+            "L2"
+          ],
+          [
+            "P6",
+            "L3"
+          ]
+        ],
+        "held_out_by_class": [
+          4,
+          6
+        ],
+        "seed": 20360930,
+        "seen_identities": 39
+      }
+    ]
+  },
+  "schema": "gpt-01724-split-certificate/v1",
+  "seed_formula": "base + 1000000 * theta_index + 100000 * regime_index + 1000 * n_index + replicate, base = 20260923"
+}

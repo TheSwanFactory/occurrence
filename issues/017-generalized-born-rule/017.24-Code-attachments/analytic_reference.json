@@ -1,0 +1,880 @@
+{
+  "analytic_sweeps": {
+    "primary_quarters|A": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.5623351446,
+      "eval_weights": [
+        "3/7",
+        "4/7"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.25,
+          "estimator_variance_at_expected_count": [
+            0.0232988166,
+            0.0233333333
+          ],
+          "exact_expected_excess_nll": 0.0862432794,
+          "expected_class_counts": [
+            1.7142857143,
+            2.2857142857
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.125,
+          "estimator_variance_at_expected_count": [
+            0.0218144044,
+            0.0198487713
+          ],
+          "exact_expected_excess_nll": 0.0641140517,
+          "expected_class_counts": [
+            3.4285714286,
+            4.5714285714
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.0625,
+          "estimator_variance_at_expected_count": [
+            0.0163891779,
+            0.0138067061
+          ],
+          "exact_expected_excess_nll": 0.0434659292,
+          "expected_class_counts": [
+            6.8571428571,
+            9.1428571429
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.03125,
+          "estimator_variance_at_expected_count": [
+            0.0104132231,
+            0.0083316802
+          ],
+          "exact_expected_excess_nll": 0.0264815953,
+          "expected_class_counts": [
+            13.7142857143,
+            18.2857142857
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.015625,
+          "estimator_variance_at_expected_count": [
+            0.0059383542,
+            0.0046090535
+          ],
+          "exact_expected_excess_nll": 0.0145002338,
+          "expected_class_counts": [
+            27.4285714286,
+            36.5714285714
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0078125,
+          "estimator_variance_at_expected_count": [
+            0.0031817378,
+            0.0024288337
+          ],
+          "exact_expected_excess_nll": 0.0075353818,
+          "expected_class_counts": [
+            54.8571428571,
+            73.1428571429
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.00390625,
+          "estimator_variance_at_expected_count": [
+            0.0016483409,
+            0.0012473966
+          ],
+          "exact_expected_excess_nll": 0.0038371981,
+          "expected_class_counts": [
+            109.7142857143,
+            146.2857142857
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.001953125,
+          "estimator_variance_at_expected_count": [
+            0.0008391259,
+            0.0006321963
+          ],
+          "exact_expected_excess_nll": 0.0019358818,
+          "expected_class_counts": [
+            219.4285714286,
+            292.5714285714
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009765625,
+          "estimator_variance_at_expected_count": [
+            0.0004233784,
+            0.0003182553
+          ],
+          "exact_expected_excess_nll": 0.0009722537,
+          "expected_class_counts": [
+            438.8571428571,
+            585.1428571429
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "3/7",
+        "4/7"
+      ]
+    },
+    "primary_quarters|B": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.5623351446,
+      "eval_weights": [
+        "2/5",
+        "3/5"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.2476604278,
+          "estimator_variance_at_expected_count": [
+            0.0233275474,
+            0.0233524459
+          ],
+          "exact_expected_excess_nll": 0.0860296229,
+          "expected_class_counts": [
+            1.7435897436,
+            2.2564102564
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.1238302139,
+          "estimator_variance_at_expected_count": [
+            0.0217158704,
+            0.0199485399
+          ],
+          "exact_expected_excess_nll": 0.0638532777,
+          "expected_class_counts": [
+            3.4871794872,
+            4.5128205128
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.061915107,
+          "estimator_variance_at_expected_count": [
+            0.0162367347,
+            0.0139210384
+          ],
+          "exact_expected_excess_nll": 0.0432395681,
+          "expected_class_counts": [
+            6.9743589744,
+            9.0256410256
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.0309575535,
+          "estimator_variance_at_expected_count": [
+            0.0102821518,
+            0.0084183123
+          ],
+          "exact_expected_excess_nll": 0.0262990608,
+          "expected_class_counts": [
+            13.9487179487,
+            18.0512820513
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.0154787767,
+          "estimator_variance_at_expected_count": [
+            0.0058519105,
+            0.0046626296
+          ],
+          "exact_expected_excess_nll": 0.0143781323,
+          "expected_class_counts": [
+            27.8974358974,
+            36.1025641026
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0077393884,
+          "estimator_variance_at_expected_count": [
+            0.0031319653,
+            0.002458677
+          ],
+          "exact_expected_excess_nll": 0.007467884,
+          "expected_class_counts": [
+            55.7948717949,
+            72.2051282051
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.0038696942,
+          "estimator_variance_at_expected_count": [
+            0.0016216134,
+            0.001263154
+          ],
+          "exact_expected_excess_nll": 0.0038020206,
+          "expected_class_counts": [
+            111.5897435897,
+            144.4102564103
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.0019348471,
+          "estimator_variance_at_expected_count": [
+            0.0008252735,
+            0.0006402937
+          ],
+          "exact_expected_excess_nll": 0.001917946,
+          "expected_class_counts": [
+            223.1794871795,
+            288.8205128205
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009674235,
+          "estimator_variance_at_expected_count": [
+            0.0004163263,
+            0.0003223599
+          ],
+          "exact_expected_excess_nll": 0.0009632,
+          "expected_class_counts": [
+            446.358974359,
+            577.641025641
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "17/39",
+        "22/39"
+      ]
+    },
+    "secondary_fifths|A": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.673011667,
+      "eval_weights": [
+        "3/7",
+        "4/7"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.25,
+          "estimator_variance_at_expected_count": [
+            0.0298224852,
+            0.0298666667
+          ],
+          "exact_expected_excess_nll": 0.0664002789,
+          "expected_class_counts": [
+            1.7142857143,
+            2.2857142857
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.125,
+          "estimator_variance_at_expected_count": [
+            0.0279224377,
+            0.0254064272
+          ],
+          "exact_expected_excess_nll": 0.0633411068,
+          "expected_class_counts": [
+            3.4285714286,
+            4.5714285714
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.0625,
+          "estimator_variance_at_expected_count": [
+            0.0209781478,
+            0.0176725838
+          ],
+          "exact_expected_excess_nll": 0.0461064911,
+          "expected_class_counts": [
+            6.8571428571,
+            9.1428571429
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.03125,
+          "estimator_variance_at_expected_count": [
+            0.0133289256,
+            0.0106645507
+          ],
+          "exact_expected_excess_nll": 0.0272559358,
+          "expected_class_counts": [
+            13.7142857143,
+            18.2857142857
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.015625,
+          "estimator_variance_at_expected_count": [
+            0.0076010934,
+            0.0058995885
+          ],
+          "exact_expected_excess_nll": 0.0146288201,
+          "expected_class_counts": [
+            27.4285714286,
+            36.5714285714
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0078125,
+          "estimator_variance_at_expected_count": [
+            0.0040726244,
+            0.0031089072
+          ],
+          "exact_expected_excess_nll": 0.0075624716,
+          "expected_class_counts": [
+            54.8571428571,
+            73.1428571429
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.00390625,
+          "estimator_variance_at_expected_count": [
+            0.0021098763,
+            0.0015966677
+          ],
+          "exact_expected_excess_nll": 0.0038435798,
+          "expected_class_counts": [
+            109.7142857143,
+            146.2857142857
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.001953125,
+          "estimator_variance_at_expected_count": [
+            0.0010740812,
+            0.0008092113
+          ],
+          "exact_expected_excess_nll": 0.0019374351,
+          "expected_class_counts": [
+            219.4285714286,
+            292.5714285714
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009765625,
+          "estimator_variance_at_expected_count": [
+            0.0005419243,
+            0.0004073668
+          ],
+          "exact_expected_excess_nll": 0.0009726371,
+          "expected_class_counts": [
+            438.8571428571,
+            585.1428571429
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "3/7",
+        "4/7"
+      ]
+    },
+    "secondary_fifths|B": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.673011667,
+      "eval_weights": [
+        "2/5",
+        "3/5"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.2476604278,
+          "estimator_variance_at_expected_count": [
+            0.0298592606,
+            0.0298911308
+          ],
+          "exact_expected_excess_nll": 0.0665634062,
+          "expected_class_counts": [
+            1.7435897436,
+            2.2564102564
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.1238302139,
+          "estimator_variance_at_expected_count": [
+            0.0277963141,
+            0.0255341311
+          ],
+          "exact_expected_excess_nll": 0.0633237538,
+          "expected_class_counts": [
+            3.4871794872,
+            4.5128205128
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.061915107,
+          "estimator_variance_at_expected_count": [
+            0.0207830204,
+            0.0178189292
+          ],
+          "exact_expected_excess_nll": 0.0458946245,
+          "expected_class_counts": [
+            6.9743589744,
+            9.0256410256
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.0309575535,
+          "estimator_variance_at_expected_count": [
+            0.0131611542,
+            0.0107754397
+          ],
+          "exact_expected_excess_nll": 0.0270492228,
+          "expected_class_counts": [
+            13.9487179487,
+            18.0512820513
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.0154787767,
+          "estimator_variance_at_expected_count": [
+            0.0074904454,
+            0.0059681659
+          ],
+          "exact_expected_excess_nll": 0.0145025757,
+          "expected_class_counts": [
+            27.8974358974,
+            36.1025641026
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0077393884,
+          "estimator_variance_at_expected_count": [
+            0.0040089156,
+            0.0031471065
+          ],
+          "exact_expected_excess_nll": 0.0074942866,
+          "expected_class_counts": [
+            55.7948717949,
+            72.2051282051
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.0038696942,
+          "estimator_variance_at_expected_count": [
+            0.0020756651,
+            0.0016168371
+          ],
+          "exact_expected_excess_nll": 0.0038082503,
+          "expected_class_counts": [
+            111.5897435897,
+            144.4102564103
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.0019348471,
+          "estimator_variance_at_expected_count": [
+            0.0010563501,
+            0.0008195759
+          ],
+          "exact_expected_excess_nll": 0.0019194632,
+          "expected_class_counts": [
+            223.1794871795,
+            288.8205128205
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009674235,
+          "estimator_variance_at_expected_count": [
+            0.0005328976,
+            0.0004126207
+          ],
+          "exact_expected_excess_nll": 0.0009635746,
+          "expected_class_counts": [
+            446.358974359,
+            577.641025641
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "17/39",
+        "22/39"
+      ]
+    },
+    "secondary_thirds|A": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.6365141683,
+      "eval_weights": [
+        "3/7",
+        "4/7"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.25,
+          "estimator_variance_at_expected_count": [
+            0.0276134122,
+            0.027654321
+          ],
+          "exact_expected_excess_nll": 0.0722299558,
+          "expected_class_counts": [
+            1.7142857143,
+            2.2857142857
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.125,
+          "estimator_variance_at_expected_count": [
+            0.025854109,
+            0.0235244696
+          ],
+          "exact_expected_excess_nll": 0.0631027333,
+          "expected_class_counts": [
+            3.4285714286,
+            4.5714285714
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.0625,
+          "estimator_variance_at_expected_count": [
+            0.0194242109,
+            0.0163635035
+          ],
+          "exact_expected_excess_nll": 0.0452040333,
+          "expected_class_counts": [
+            6.8571428571,
+            9.1428571429
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.03125,
+          "estimator_variance_at_expected_count": [
+            0.0123415978,
+            0.009874584
+          ],
+          "exact_expected_excess_nll": 0.0270499518,
+          "expected_class_counts": [
+            13.7142857143,
+            18.2857142857
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.015625,
+          "estimator_variance_at_expected_count": [
+            0.0070380495,
+            0.0054625819
+          ],
+          "exact_expected_excess_nll": 0.014594302,
+          "expected_class_counts": [
+            27.4285714286,
+            36.5714285714
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0078125,
+          "estimator_variance_at_expected_count": [
+            0.0037709485,
+            0.0028786177
+          ],
+          "exact_expected_excess_nll": 0.0075548676,
+          "expected_class_counts": [
+            54.8571428571,
+            73.1428571429
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.00390625,
+          "estimator_variance_at_expected_count": [
+            0.0019535892,
+            0.001478396
+          ],
+          "exact_expected_excess_nll": 0.0038417703,
+          "expected_class_counts": [
+            109.7142857143,
+            146.2857142857
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.001953125,
+          "estimator_variance_at_expected_count": [
+            0.0009945196,
+            0.0007492697
+          ],
+          "exact_expected_excess_nll": 0.0019369929,
+          "expected_class_counts": [
+            219.4285714286,
+            292.5714285714
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009765625,
+          "estimator_variance_at_expected_count": [
+            0.0005017818,
+            0.0003771914
+          ],
+          "exact_expected_excess_nll": 0.0009725278,
+          "expected_class_counts": [
+            438.8571428571,
+            585.1428571429
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "3/7",
+        "4/7"
+      ]
+    },
+    "secondary_thirds|B": {
+      "asymptotic_law": "E[excess NLL] ~ sum_c eval_w_c / (2 n train_w_c); with matched weights and two classes this is exactly d/(2n) = 1/n",
+      "bayes_optimal_nll": 0.6365141683,
+      "eval_weights": [
+        "2/5",
+        "3/5"
+      ],
+      "sweep": [
+        {
+          "asymptotic_prediction": 0.2476604278,
+          "estimator_variance_at_expected_count": [
+            0.0276474636,
+            0.027676973
+          ],
+          "exact_expected_excess_nll": 0.0722659604,
+          "expected_class_counts": [
+            1.7435897436,
+            2.2564102564
+          ],
+          "n": 4
+        },
+        {
+          "asymptotic_prediction": 0.1238302139,
+          "estimator_variance_at_expected_count": [
+            0.0257373279,
+            0.023642714
+          ],
+          "exact_expected_excess_nll": 0.0630072204,
+          "expected_class_counts": [
+            3.4871794872,
+            4.5128205128
+          ],
+          "n": 8
+        },
+        {
+          "asymptotic_prediction": 0.061915107,
+          "estimator_variance_at_expected_count": [
+            0.0192435374,
+            0.0164990085
+          ],
+          "exact_expected_excess_nll": 0.0449937269,
+          "expected_class_counts": [
+            6.9743589744,
+            9.0256410256
+          ],
+          "n": 16
+        },
+        {
+          "asymptotic_prediction": 0.0309575535,
+          "estimator_variance_at_expected_count": [
+            0.0121862539,
+            0.009977259
+          ],
+          "exact_expected_excess_nll": 0.0268509187,
+          "expected_class_counts": [
+            13.9487179487,
+            18.0512820513
+          ],
+          "n": 32
+        },
+        {
+          "asymptotic_prediction": 0.0154787767,
+          "estimator_variance_at_expected_count": [
+            0.0069355976,
+            0.0055260795
+          ],
+          "exact_expected_excess_nll": 0.0144690824,
+          "expected_class_counts": [
+            27.8974358974,
+            36.1025641026
+          ],
+          "n": 64
+        },
+        {
+          "asymptotic_prediction": 0.0077393884,
+          "estimator_variance_at_expected_count": [
+            0.0037119589,
+            0.0029139875
+          ],
+          "exact_expected_excess_nll": 0.0074868721,
+          "expected_class_counts": [
+            55.7948717949,
+            72.2051282051
+          ],
+          "n": 128
+        },
+        {
+          "asymptotic_prediction": 0.0038696942,
+          "estimator_variance_at_expected_count": [
+            0.0019219121,
+            0.0014970714
+          ],
+          "exact_expected_excess_nll": 0.0038064836,
+          "expected_class_counts": [
+            111.5897435897,
+            144.4102564103
+          ],
+          "n": 256
+        },
+        {
+          "asymptotic_prediction": 0.0019348471,
+          "estimator_variance_at_expected_count": [
+            0.0009781019,
+            0.0007588666
+          ],
+          "exact_expected_excess_nll": 0.0019190312,
+          "expected_class_counts": [
+            223.1794871795,
+            288.8205128205
+          ],
+          "n": 512
+        },
+        {
+          "asymptotic_prediction": 0.0009674235,
+          "estimator_variance_at_expected_count": [
+            0.0004934237,
+            0.0003820562
+          ],
+          "exact_expected_excess_nll": 0.0009634678,
+          "expected_class_counts": [
+            446.358974359,
+            577.641025641
+          ],
+          "n": 1024
+        }
+      ],
+      "train_weights": [
+        "17/39",
+        "22/39"
+      ]
+    }
+  },
+  "asymptotic_floors": {
+    "primary_quarters": {
+      "regime_A_saturated": 0.0,
+      "regime_A_scrambled_compiler": 0.0213570671,
+      "regime_A_wrong_compiler": 0.1067838198,
+      "regime_B_saturated_on_unseen_identities": 0.1308120359,
+      "regime_B_typed_on_unseen_identities": 0.0
+    },
+    "secondary_fifths": {
+      "regime_A_saturated": 0.0,
+      "regime_A_scrambled_compiler": 0.0032874308,
+      "regime_A_wrong_compiler": 0.016320502,
+      "regime_B_saturated_on_unseen_identities": 0.0201355136,
+      "regime_B_typed_on_unseen_identities": 0.0
+    },
+    "secondary_thirds": {
+      "regime_A_saturated": 0.0,
+      "regime_A_scrambled_compiler": 0.0092462061,
+      "regime_A_wrong_compiler": 0.0460083737,
+      "regime_B_saturated_on_unseen_identities": 0.0566330123,
+      "regime_B_typed_on_unseen_identities": 0.0
+    }
+  },
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.20-Code-attachments/source_fixture.json": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c",
+      "preregistration.json": "32fa75c0856cf13b3bbecf1eaf0619d851f8db69edc199015e94750176a575f9",
+      "successor_schema.json": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d"
+    },
+    "inherits": [
+      "017.23 operational TDM equivalence and the S(E) state boundary",
+      "017.21a canonical central test and binding-unique state compiler",
+      "017.20 rigorous input Type Schema fixture"
+    ],
+    "primary_gpt_authority_named_by_the_task": "11afecd32724bb061f845c9c20393a38be804c7d6ef6f9814c584d931da2cd8d",
+    "prior_result_commit": "e10ce4fffe26d9003c19b5375599f11a989269c6",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "estimator": "beta(1,1) posterior mean, (k + 1) / (m + 2)",
+  "floor_note": "a floor is the excess log loss a partition cannot escape with unlimited labels; the regime B rows use a fixed illustrative one-in-five holdout so the typed and saturated floors are comparable at a glance",
+  "method": "exact finite double sum over the binomial class-count lattice and the binomial success lattice; no simulation",
+  "schema": "gpt-01724-analytic-reference/v1",
+  "scrambled_reference_structure": {
+    "class_cardinalities": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "class_count": 42,
+    "group_order": 2
+  }
+}

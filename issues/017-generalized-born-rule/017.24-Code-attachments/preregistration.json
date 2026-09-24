@@ -1,0 +1,283 @@
+{
+  "schema": "gpt-01724-training-economy-preregistration/v1",
+  "task": "occurrence/gpt Issue 017.24 first matched TDM training-economy experiment",
+  "frozen_before": "any label was generated; the executable refuses to run unless this file hashes to the value pinned in training_economy.py",
+  "research_question": "How much labeled-data burden disappears when the Type Schema compiles the input structure before Training rather than asking Training to discover the same organization?",
+  "source": {
+    "successor_type_schema": "successor_schema.json",
+    "successor_type_schema_schema": "gpt-01724-fano-successor-type-schema/v1",
+    "successor_type_schema_sha256": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d",
+    "predecessor_fixture": "../017.20-Code-attachments/source_fixture.json",
+    "predecessor_fixture_sha256": "20176b9043516e704fbffec84d01f515f008630aef9398d0f44d3cf96886d71c"
+  },
+  "compiled_hypothesis_family": {
+    "central_test": {
+      "z_M": "(I_2, 0)",
+      "z_s": "(0, 1)"
+    },
+    "invariant_state_family": "omega_lambda(A, s) = lambda * Tr(A)/2 + (1 - lambda) * s, lambda in [0, 1]",
+    "compiled_model": "C_theta(x) = omega_{lambda_{o(x)}} where o(x) is the schema-derived class of x",
+    "public_probability": "P(a_0 | x) = lambda_{o(x)}",
+    "orientation": "the complementary orientation is the exact reparameterization theta -> 1 - theta and is not a third parameter",
+    "learned_degrees_of_freedom": 2
+  },
+  "ground_truth": {
+    "interior_only": true,
+    "endpoints_forbidden_in_every_reported_cell": true,
+    "theta_star": [
+      {
+        "id": "primary_quarters",
+        "role": "primary",
+        "lambda_0": "1/4",
+        "lambda_1": "3/4"
+      },
+      {
+        "id": "secondary_thirds",
+        "role": "secondary",
+        "lambda_0": "1/3",
+        "lambda_1": "2/3"
+      },
+      {
+        "id": "secondary_fifths",
+        "role": "secondary",
+        "lambda_0": "2/5",
+        "lambda_1": "3/5"
+      }
+    ],
+    "index_convention": "lambda_0 is attached to the derived class O_0 and lambda_1 to O_1, where the classes are ordered by cardinality then by least member. No condition receives theta_star.",
+    "observation_protocol": [
+      "sample an admitted input x under the regime sampling design",
+      "the generator alone computes the hidden derived class o(x)",
+      "sample y in {a_0, a_1} from Bernoulli(lambda*_{o(x)}) for a_0",
+      "expose only (x, y) to every learner"
+    ]
+  },
+  "regimes": {
+    "A": {
+      "name": "repeated-observation prediction",
+      "train_sampling": "uniform with replacement over all 49 admitted inputs",
+      "evaluation": "exact expected held-out loss under the uniform distribution on all 49 admitted inputs, computed in closed form rather than by a fresh finite sample",
+      "evaluation_justification": "the exact expectation is the large-fresh-sample limit required by the task and removes evaluation sampling noise; a Monte-Carlo cross-check is part of the test suite"
+    },
+    "B": {
+      "name": "held-out input identity",
+      "holdout_design": "stratified over derived classes: 4 held-out identities from O_0 and 6 from O_1, giving 10 held-out and 39 seen identities, drawn per replicate from the replicate seed",
+      "holdout_is_label_free": true,
+      "train_sampling": "uniform with replacement over the 39 seen identities only",
+      "evaluation": "exact expected held-out loss under the uniform distribution on the 10 unseen identities, reported for O_0 held-out identities, O_1 held-out identities, and aggregate",
+      "guarantee": "both derived classes are represented among the seen identities and among the held-out identities in every replicate"
+    }
+  },
+  "conditions": {
+    "T": {
+      "name": "typed compiled TDM",
+      "information": "the full successor Type Schema, plus the labeled observations",
+      "preprocessing": "the exact schema compiler, run on sorts and relations only, with no label ever in scope",
+      "hypothesis_family": "the compiled TDM family above",
+      "learned_scalars": 2,
+      "estimation": "closed form, one Bernoulli estimate per derived class"
+    },
+    "O": {
+      "name": "oracle-class control",
+      "information": "the already-derived class identifier o(x) per observation, plus the labeled observations",
+      "preprocessing": "none; neither OT nor the Type Schema compiler is invoked",
+      "hypothesis_family": "two independent Bernoulli parameters, no Born formula",
+      "learned_scalars": 2,
+      "estimation": "closed form, identical estimator to T",
+      "purpose": "any advantage T has over uncompiled baselines must be an advantage of the compiled representation and parameter sharing, not of the Born formula; a material T versus O difference is an implementation bug"
+    },
+    "U": {
+      "name": "same-information uncompiled learner",
+      "information_given": [
+        "the point identity of the query",
+        "the line identity of the query",
+        "the complete declared incidence structure, supplied as the query point's incidence row over all seven lines and the query line's incidence column over all seven points",
+        "the labeled observations"
+      ],
+      "information_withheld": [
+        "the derived class identifier",
+        "the precomputed two-cell quotient",
+        "any hand-written same-class or adjacency feature of the query pair",
+        "theta_star"
+      ],
+      "architecture": {
+        "kind": "generic feed-forward relational learner over the declared structure",
+        "input_dimension": 28,
+        "input_blocks": [
+          "one-hot of the query point, 7",
+          "one-hot of the query line, 7",
+          "incidence row of the query point over the seven lines, 7",
+          "incidence column of the query line over the seven points, 7"
+        ],
+        "hidden": "one ReLU layer of width 16",
+        "output": "one logit, sigmoid, interpreted as P(a_0 | x)",
+        "no_parameter_tying": "the learner has full per-identity capacity and is not restricted to class-invariant functions; the two-class structure is nowhere encoded",
+        "expressiveness_certificates": [
+          "the exact derived-class indicator is realizable by an explicit weight setting, so the condition is not information-starved",
+          "a single-pair indicator is realizable by an explicit weight setting, so the condition is not class-tied"
+        ]
+      },
+      "objective": "mean binary cross-entropy on P(a_0), the same proper scoring rule used for evaluation",
+      "regularization": "L2 penalty over all parameters including intercepts, so that as the penalty grows the model shrinks toward probability one half, which is exactly the beta(1,1) prior mean every closed-form condition uses. Matching the shrinkage target across conditions prevents U from being penalised at small n by an unregularised intercept that can saturate",
+      "optimizer": {
+        "name": "Adam",
+        "learning_rate": 0.03,
+        "beta_1": 0.9,
+        "beta_2": 0.999,
+        "epsilon": 1e-08,
+        "batching": "full batch",
+        "steps": 1200
+      },
+      "initialization": "numpy default_rng(init_seed); weights normal with standard deviation sqrt(2 / fan_in); biases zero",
+      "prediction_clipping": [1e-06, 0.999999],
+      "candidate_ladder": {
+        "purpose": "a nested generic complexity ladder over the same declared encoding, so that a competent practitioner's model-selection step is available to the baseline",
+        "constant": "one parameter; the intercept only",
+        "linear": "29 parameters; logistic regression on the 28 declared features. Provably cannot express the class indicator, because every feature column is a function of the query point alone or of the query line alone",
+        "quadratic": "407 parameters; logistic regression on the mechanically generated degree-two expansion of the same 28 features. Deliberately over-strong: the span of this basis contains the class structure, because the marked-pair indicator equals sum_k row_k(point) * onehot_k(line). It is included so the headline comparison runs against the strongest information-parity baseline short of handing the quotient over, and it is labeled as such wherever it is reported",
+        "mlp": "481 parameters; the one-hidden-layer ReLU network described above"
+      },
+      "step_budget": 1200,
+      "checkpoint_interval": 20,
+      "ridge_grid": [0.001, 0.01, 0.1, 1.0, 10.0],
+      "variants": {
+        "U_fixed": "MLP only, ridge 0.001, no model selection; report the parameters after the full step budget",
+        "U_earlystop": "MLP only, ridge 0.001, internal label-only early stopping",
+        "U_selected": "MLP only, internal label-only selection over the ridge grid and the checkpoint grid",
+        "U_quadratic": "the degree-two logistic candidate, internal label-only selection over the ridge grid and the checkpoint grid",
+        "U_ladder": "internal label-only selection over the whole candidate ladder, the ridge grid, and the checkpoint grid"
+      },
+      "internal_validation_split": "n_val = max(1, round(0.25 n)) of the training observations, held out from fitting and used only to select among candidates, ridges, and checkpoints. No evaluation output and no theta_star is ever in scope",
+      "fairness_rule": "the headline fairness comparison against T uses, in each cell, whichever preregistered U variant performs better; this is deliberately conservative against the training-economy thesis",
+      "fairness_frontier_diagnostic": "for the primary theta_star and both regimes, additionally fit every candidate and ridge on all n observations with no internal split, and report the hindsight-optimal ridge per candidate as U_oracle_ridge. This uses evaluation output and is therefore NOT a legitimate baseline and NOT used to decide the verdict. It is reported to demonstrate that U was converged, that the ridge grid brackets its optimum, and that the measured gap is not an optimization artifact. The verdict additionally reports the T-versus-U_oracle_ridge comparison as a robustness row",
+      "hyperparameter_freeze": "every number above is fixed by this file before any label is generated in the final replicate bank, and is never selected against any evaluation output",
+      "amendment_disclosure": {
+        "what_changed": "the U family was enlarged from two variants (U_fixed, U_earlystop) to five by adding U_selected, U_quadratic, and U_ladder; the step budget moved from 600 to 1200; a ridge grid and a candidate ladder were added; the learned replicate count was raised from 30 to 100",
+        "why": "an exploratory pilot on a reduced grid showed that the original fixed-budget U was worse than a one-parameter constant predictor, which is an optimization and regularization failure rather than an information limit. Section 14 of the task makes the competence of the baseline decisive, so the baseline was strengthened. The ridge grid was then extended upward to 10.0 so that it brackets U's optimum at every sample size rather than only at the large ones; at the top of that range U converges to the one-parameter constant model, so no further extension can help it",
+        "direction": "every change strengthens the baseline and therefore works against the training-economy thesis; none was chosen to favour it",
+        "what_was_not_done": "no hyperparameter value was selected by comparing evaluation outputs across candidate settings; the ridge grid and step budget are round numbers fixed a priori, and the model-selection procedure that consumes them uses training labels only",
+        "when": "before any label of the final replicate bank was generated; the pilot used a reduced grid and its outputs are not reported as results",
+        "auditability": "the fairness frontier diagnostic reports the full regularization path, so a reader can check independently that the grid brackets U's optimum and that U was converged"
+      }
+    },
+    "S": {
+      "name": "saturated pair model",
+      "information": "the pair identity and the labeled observations",
+      "hypothesis_family": "one independent Bernoulli parameter per admitted pair",
+      "learned_scalars": 49,
+      "estimation": "closed form, identical estimator to T",
+      "status": "ablation, not the fairness-critical baseline; T beating S is not evidence for the strong thesis"
+    },
+    "G": {
+      "name": "generic symmetry learner",
+      "information": "the full automorphism action on admitted inputs, supplied as a set of permutations, plus the labeled observations",
+      "information_withheld": "the class quotient itself",
+      "algorithm": "a free scalar per admitted input, constrained by a generic invariance-enforcing algorithm: union-find closure of the admitted inputs under the supplied permutations, then one Beta prior per surviving free parameter",
+      "prediction": "the constrained maximum-a-posteriori probability per free parameter",
+      "purpose": "decide whether the gain comes from the Type Schema as such or from any generic symmetry-aware mechanism supplied the same group; a collapse to the same two-parameter sufficient statistic is an informative result, not a failure"
+    }
+  },
+  "estimator": {
+    "primary": {
+      "name": "beta(1,1) posterior mean",
+      "formula": "(k + 1) / (m + 2)",
+      "unobserved_parameter_value": 0.5
+    },
+    "secondary": {
+      "name": "beta(1/2,1/2) posterior mean",
+      "formula": "(k + 0.5) / (m + 1)",
+      "unobserved_parameter_value": 0.5
+    },
+    "applies_to": ["T", "O", "S", "G"],
+    "rationale": "one clipping-free convention shared by every Bernoulli condition, so no held-out log loss is infinite merely by estimator choice"
+  },
+  "sample_sizes": [4, 8, 16, 32, 64, 128, 256, 512, 1024],
+  "replicates": {
+    "closed_form_conditions": 400,
+    "learned_conditions": 100,
+    "mismatch_disclosure": "U is run at 100 frozen replicates rather than 400; its uncertainty bars are wider for that reason alone and must not be compared as though the replicate counts matched. Every T-versus-U comparison is made on the matched-replicate statistic, so the two conditions are compared on byte-identical observations and splits"
+  },
+  "seeds": {
+    "base": 20260923,
+    "observation_seed": "base + 1000000 * theta_index + 100000 * regime_index + 1000 * n_index + replicate",
+    "initialization_seed": "observation_seed + 500000000",
+    "generator": "python random.Random for observation and split sampling; numpy default_rng for learner initialization"
+  },
+  "metrics": {
+    "primary_1": {
+      "name": "excess held-out negative log likelihood",
+      "definition": "held-out NLL minus the Bayes-optimal NLL under theta_star",
+      "logarithm": "natural",
+      "reported": ["mean", "median", "95 percent normal-approximation confidence interval on the mean"]
+    },
+    "primary_2": {
+      "name": "labeled examples to threshold",
+      "thresholds": [0.02, 0.01],
+      "rule": "the smallest sample size on the declared grid whose mean excess NLL is at or below the threshold",
+      "secondary_rule": "a log-linear interpolated crossing between adjacent grid points, declared here in advance"
+    },
+    "primary_3": {
+      "name": "held-out-identity transfer",
+      "definition": "Regime B excess NLL and Brier on pair identities never seen in Training, reported for O_0, O_1, and aggregate"
+    },
+    "secondary": [
+      "Brier score",
+      "expected calibration error over 10 equal-width bins on [0,1]",
+      "absolute parameter error per exposed class probability",
+      "number of learned scalar degrees of freedom",
+      "fit time",
+      "compile time",
+      "total time"
+    ]
+  },
+  "controls": {
+    "scrambled_structure": {
+      "construction": "a deterministic ensemble of 20 relabelings that each preserve 7 point labels, 7 line labels, 21 marked pairs and 49 admitted pairs, and that are not incidence automorphisms of the declared relation",
+      "procedure": "recompute the compiler from each scrambled schema rather than reusing the declared quotient",
+      "expectation": "the typed advantage must follow the structure actually declared; a two-class result must not be forced where the scrambled relation does not have one"
+    },
+    "relation_erased": {
+      "construction": "preserve both sorts, all 49 admitted pairs, all 21 rows as opaque payload, and the answer labels, removing only the relational meaning of the rows",
+      "expectation": "the exact compiler must fail closed and must not silently recover the two-class quotient from label positions"
+    },
+    "wrong_compiler": {
+      "construction": "a deliberately non-automorphism-respecting two-cell partition with the same 21 and 28 cardinalities, obtained by exchanging the 7 lexicographically least members of each true class",
+      "expectation": "if correct source structure matters, the wrong partition must degrade against data generated from the true class structure; a similar performance would show that parameter tying alone explains the result"
+    }
+  },
+  "cost_accounting": ["schema parse time", "automorphism and class derivation time", "model fitting time", "total wall-clock time", "whether derivation is computed once, cached, and reused across the sweep"],
+  "success_conditions": {
+    "strong_positive": "T and O agree and T reaches the preregistered thresholds with materially fewer labels than the better information-parity U variant, with the advantage shrinking sharply once U or G obtains the same structural quotient",
+    "narrow_positive": "T beats S dramatically but does not beat U or G once the source information is used competently",
+    "null": "U learns the quotient essentially immediately and matches T in labeled-data burden",
+    "negative": "T is less data-efficient or less robust than U under fair information parity, or its advantage requires leaking the quotient or the answer relation into the Type Schema"
+  },
+  "verdict_rule": {
+    "material_advantage": "a factor of two or more fewer labeled examples on the declared grid to reach mean excess NLL at or below 0.02, required in both regimes at the primary theta_star",
+    "strong_positive_requires": [
+      "T and O agree exactly",
+      "T holds a material advantage over the better preregistered U variant in both regimes",
+      "G, supplied the same group, matches T"
+    ],
+    "decided_on": "the better preregistered U variant only; the hindsight-optimal U_oracle_ridge is reported as a robustness row and never decides the verdict",
+    "narrow_positive_requires": [
+      "T holds a material advantage over S",
+      "T holds no material advantage over the better preregistered U variant"
+    ],
+    "null_requires": [
+      "the better preregistered U variant reaches each threshold at the same grid point as T"
+    ],
+    "negative_requires": [
+      "the better preregistered U variant reaches a threshold at a strictly smaller grid point than T, or T's advantage requires leaking the quotient or the answer relation into the Type Schema"
+    ]
+  },
+  "forbidden_conclusions": [
+    "language-scale sample-efficiency gains",
+    "superiority to LLMs or SLMs",
+    "physical realization of the OT test",
+    "autonomous dynamics",
+    "that every useful Type Schema admits a compact compiler",
+    "that OT is uniquely responsible for any gain"
+  ],
+  "stop_condition": "stop after the matched finite experiment and its controls; do not scale to language, embeddings, transformers, or external corpora; do not resolve Issue 018"
+}
