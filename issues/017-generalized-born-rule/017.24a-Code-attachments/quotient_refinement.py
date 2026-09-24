@@ -611,6 +611,77 @@ class ConditionSpec:
     kind: str
 
 
+def build_wrong_partition(
+    fixture: Fixture,
+) -> tuple[tuple[int, ...], dict[str, object]]:
+    """A partition with the derived cardinalities that respects no automorphism.
+
+    POST-FREEZE CORRECTION, disclosed in the 017.25a result. The inherited
+    017.24 control assumed a two-class structure and raises on a four-class
+    fixture, so it is generalized here rather than in the byte-pinned shared
+    module. The generalization moves the ``k`` lexicographically least members of
+    each derived class into the next class cyclically, with one common ``k`` so
+    that every cardinality is preserved exactly. On a two-class fixture with
+    ``k = 7`` it reproduces the 017.24 construction member for member, which is
+    asserted mechanically, so the correction cannot have loosened the control.
+    """
+    structure = fixture.structure
+    classes = [sorted(members) for members in structure.classes]
+    exchanged = min(max(1, len(members) // 3) for members in classes)
+    assigned: dict[Datum, int] = {}
+    count = len(classes)
+    for index, members in enumerate(classes):
+        for position, datum in enumerate(members):
+            if position < exchanged:
+                assigned[datum] = (index + 1) % count
+            else:
+                assigned[datum] = index
+    partition = tuple(assigned[datum] for datum in structure.inputs)
+    sizes = [partition.count(cell) for cell in range(count)]
+    if sizes != list(structure.cardinalities):
+        raise RuntimeError(
+            f"wrong-compiler control changed the cardinalities: {sizes} "
+            f"against {list(structure.cardinalities)}"
+        )
+    position_of = {datum: index for index, datum in enumerate(structure.inputs)}
+    violations = 0
+    for automorphism in structure.automorphisms:
+        for datum in structure.inputs:
+            moved = automorphism.apply(datum, structure.schema)
+            if partition[position_of[datum]] != partition[position_of[moved]]:
+                violations += 1
+    mixing = []
+    for cell in range(count):
+        members = [
+            index for index, value in enumerate(partition) if value == cell
+        ]
+        counts = [0] * count
+        for index in members:
+            counts[structure.class_of_index[index]] += 1
+        mixing.append(
+            {"cell": f"W_{cell}", "size": len(members), "true_class_counts": counts}
+        )
+    reproduces_017_24 = None
+    if count == 2:
+        inherited, _ = shared.build_wrong_partition(structure)
+        reproduces_017_24 = inherited == partition
+    return partition, {
+        "construction": (
+            f"move the {exchanged} lexicographically least members of each "
+            "derived class into the next class cyclically, preserving every "
+            "cardinality"
+        ),
+        "members_exchanged_per_class": exchanged,
+        "cardinalities": list(structure.cardinalities),
+        "respects_the_declared_automorphisms": violations == 0,
+        "automorphism_violations_counted": violations,
+        "cell_composition": mixing,
+        "reproduces_the_017_24_control_on_a_two_class_fixture": (
+            reproduces_017_24
+        ),
+    }
+
+
 def build_conditions(fixture: Fixture) -> tuple[ConditionSpec, ...]:
     """Every closed-form condition for one fixture, sharing one estimator."""
     structure = fixture.structure
@@ -641,8 +712,12 @@ def build_conditions(fixture: Fixture) -> tuple[ConditionSpec, ...]:
                 f"L_{name}", partition, len(set(partition)), "bernoulli"
             )
         )
-    wrong, _ = shared.build_wrong_partition(structure)
-    specs.append(ConditionSpec("W_wrong_compiler", wrong, 2, "tdm"))
+    wrong, _ = build_wrong_partition(fixture)
+    specs.append(
+        ConditionSpec(
+            "W_wrong_compiler", wrong, fixture.class_count, "tdm"
+        )
+    )
     scrambled = shared.compile_classes(
         shared.build_scrambled_schemas(fixture.schema, 1)[0]
     )
@@ -1468,8 +1543,13 @@ def decide_verdict(
                 )
                 for dof, rung in order
             ]
+            # ``values`` is ordered by ascending free-parameter count, and the
+            # banked preregistration predicts mean excess NLL to be monotone
+            # *increasing* in that count. POST-FREEZE CORRECTION: this
+            # comparison was written the other way round, which contradicted the
+            # preregistration's own text and is disclosed in the 017.25a result.
             ascending = all(
-                values[index][2] >= values[index + 1][2]
+                values[index][2] <= values[index + 1][2]
                 for index in range(len(values) - 1)
             )
             monotone &= ascending
@@ -1478,7 +1558,7 @@ def decide_verdict(
                     {"dof": dof, "rung": rung, "mean_excess": _round(value)}
                     for dof, rung, value in values
                 ],
-                "monotone_decreasing_in_declared_symmetry": ascending,
+                "monotone_increasing_in_free_parameters": ascending,
             }
         ladder[fixture] = {
             "rungs_by_free_parameters": [
@@ -1747,6 +1827,23 @@ def run_everything(quick: bool = False) -> Bundle:
         "learned_replicate_floor_respected": learned >= 100 or quick,
         "U_relation_was_run": any(
             key.endswith("|U_relation") for key in cells
+        ),
+        "wrong_compiler_control_preserves_every_cardinality": all(
+            list(fixture.structure.cardinalities)
+            == build_wrong_partition(fixture)[1]["cardinalities"]
+            for fixture in fixtures
+        ),
+        "wrong_compiler_control_respects_no_automorphism": all(
+            not build_wrong_partition(fixture)[1][
+                "respects_the_declared_automorphisms"
+            ]
+            for fixture in fixtures
+        ),
+        "post_freeze_wrong_compiler_fix_reproduces_the_017_24_control": (
+            build_wrong_partition(fixtures[0])[1][
+                "reproduces_the_017_24_control_on_a_two_class_fixture"
+            ]
+            is True
         ),
     }
     if not all(checks.values()):

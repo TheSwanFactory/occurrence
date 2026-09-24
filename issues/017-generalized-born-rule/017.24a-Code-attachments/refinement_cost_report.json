@@ -1,0 +1,25 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.24-Code-attachments/training_economy.py": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+      "preregistration.json": "4a49500eed41dcd831f96fa5b6ef33467e179c2b25cde59f0ab7fb544f0c7aa4",
+      "refinement_schema.json": "31a6d0000582c6d40522111dfc0e1fd87244e4afc6e428bc845fefe25ed755bb"
+    },
+    "follows_up": "quilt+s3://protology#package=occurrence/gpt@e06607dcecc911842378dae213629843fa6c4075ebe8d17198013cdc7000e7a5&path=issues/017-jev-pivot/017.25-Kiro-first-matched-TDM-training-economy-experiment-result.md",
+    "kind": "Kiro-initiated follow-up, in the 017.21a precedent",
+    "prior_result_commit": "26905341915fe277bfe819c30c4b6a3f5250b170",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "environment": {
+    "numpy": "2.5.1",
+    "python": "3.12.11"
+  },
+  "schema": "gpt-01724a-refinement-cost-report/v1",
+  "seconds": {
+    "closed_form_fitting": 15.461554083,
+    "compile_both_fixtures_and_all_ladder_rungs": 0.0124633331,
+    "exact_reference": 11.985937,
+    "learned_fitting": 295.514694375,
+    "total_wall_clock": 322.982747125
+  }
+}

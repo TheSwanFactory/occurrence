@@ -1,0 +1,255 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.24-Code-attachments/training_economy.py": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+      "preregistration.json": "4a49500eed41dcd831f96fa5b6ef33467e179c2b25cde59f0ab7fb544f0c7aa4",
+      "refinement_schema.json": "31a6d0000582c6d40522111dfc0e1fd87244e4afc6e428bc845fefe25ed755bb"
+    },
+    "follows_up": "quilt+s3://protology#package=occurrence/gpt@e06607dcecc911842378dae213629843fa6c4075ebe8d17198013cdc7000e7a5&path=issues/017-jev-pivot/017.25-Kiro-first-matched-TDM-training-economy-experiment-result.md",
+    "kind": "Kiro-initiated follow-up, in the 017.21a precedent",
+    "prior_result_commit": "26905341915fe277bfe819c30c4b6a3f5250b170",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "fixtures": [
+    {
+      "admitted_inputs": 49,
+      "automorphism_group_order": 168,
+      "declared_symmetry_ladder": [
+        {
+          "class_cardinalities": "singletons",
+          "closed_order": 1,
+          "free_parameters": 49,
+          "rung": "rung_1"
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "closed_order": 7,
+          "free_parameters": 7,
+          "rung": "rung_7"
+        },
+        {
+          "class_cardinalities": [
+            7,
+            21,
+            21
+          ],
+          "closed_order": 21,
+          "free_parameters": 3,
+          "rung": "rung_21"
+        },
+        {
+          "class_cardinalities": [
+            21,
+            28
+          ],
+          "closed_order": 168,
+          "free_parameters": 2,
+          "rung": "rung_168"
+        }
+      ],
+      "derived_class_cardinalities": [
+        21,
+        28
+      ],
+      "derived_class_count": 2,
+      "derived_partition_strictly_refines_the_relation": false,
+      "every_derived_class_lies_inside_the_relation_or_outside_it": true,
+      "fixture": "fano",
+      "holdout_per_class": [
+        4,
+        6
+      ],
+      "ladder_is_monotone_in_free_parameters": true,
+      "lines": 7,
+      "marked_pairs": 21,
+      "points": 7,
+      "relation_partition_cardinalities": [
+        21,
+        28
+      ],
+      "relation_split_by_derived_classes": {
+        "inside": [
+          21
+        ],
+        "outside": [
+          28
+        ]
+      },
+      "schema": "gpt-01724-fano-successor-type-schema/v1",
+      "subgroup_choice_independence": [
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "free_parameters": 7
+        }
+      ],
+      "theta_star": [
+        "1/4",
+        "3/4"
+      ]
+    },
+    {
+      "admitted_inputs": 49,
+      "automorphism_group_order": 14,
+      "declared_symmetry_ladder": [
+        {
+          "class_cardinalities": "singletons",
+          "closed_order": 1,
+          "free_parameters": 49,
+          "rung": "rung_1"
+        },
+        {
+          "class_cardinalities": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "closed_order": 7,
+          "free_parameters": 7,
+          "rung": "rung_7"
+        },
+        {
+          "class_cardinalities": [
+            7,
+            14,
+            14,
+            14
+          ],
+          "closed_order": 14,
+          "free_parameters": 4,
+          "rung": "rung_14"
+        }
+      ],
+      "derived_class_cardinalities": [
+        7,
+        14,
+        14,
+        14
+      ],
+      "derived_class_count": 4,
+      "derived_partition_strictly_refines_the_relation": true,
+      "every_derived_class_lies_inside_the_relation_or_outside_it": true,
+      "fixture": "circulant",
+      "holdout_per_class": [
+        2,
+        3,
+        3,
+        3
+      ],
+      "ladder_is_monotone_in_free_parameters": true,
+      "lines": 7,
+      "marked_pairs": 21,
+      "points": 7,
+      "relation_partition_cardinalities": [
+        21,
+        28
+      ],
+      "relation_split_by_derived_classes": {
+        "inside": [
+          7,
+          14
+        ],
+        "outside": [
+          14,
+          14
+        ]
+      },
+      "schema": "gpt-01724a-circulant-refinement-type-schema/v1",
+      "subgroup_choice_independence": [],
+      "theta_star": [
+        "1/8",
+        "3/8",
+        "5/8",
+        "7/8"
+      ]
+    }
+  ],
+  "matched_cardinalities": {
+    "admitted_inputs": 49,
+    "identical_across_fixtures": true,
+    "lines": 7,
+    "marked_pairs": 21,
+    "points": 7
+  },
+  "schema": "gpt-01724a-refinement-compiler-certificate/v1",
+  "the_separation_this_turn_measures": "on the Fano fixture the derived partition equals the declared relation and its complement, so a relation-indexed learner is indistinguishable from the compiled one; on the circulant fixture the derived partition strictly refines the relation, so it is not"
+}

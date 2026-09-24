@@ -1,0 +1,1460 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.24-Code-attachments/training_economy.py": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+      "preregistration.json": "4a49500eed41dcd831f96fa5b6ef33467e179c2b25cde59f0ab7fb544f0c7aa4",
+      "refinement_schema.json": "31a6d0000582c6d40522111dfc0e1fd87244e4afc6e428bc845fefe25ed755bb"
+    },
+    "follows_up": "quilt+s3://protology#package=occurrence/gpt@e06607dcecc911842378dae213629843fa6c4075ebe8d17198013cdc7000e7a5&path=issues/017-jev-pivot/017.25-Kiro-first-matched-TDM-training-economy-experiment-result.md",
+    "kind": "Kiro-initiated follow-up, in the 017.21a precedent",
+    "prior_result_commit": "26905341915fe277bfe819c30c4b6a3f5250b170",
+    "task": "quilt+s3://protology#package=occurrence/gpt@d2d6fc93d3b1e689b571afdd8e7fc75662d1c9a63c8168a474d694899c4eff26&path=issues/017-jev-pivot/017.24-Task-first-matched-TDM-training-economy-experiment.md"
+  },
+  "coarse_compiler_control": {
+    "circulant": {
+      "coarse_compiler_floor": 0.0573372299,
+      "compiled_at": "the full automorphism quotient, which is a legitimate group quotient but coarser than the world",
+      "compiled_free_parameters": 4,
+      "correct_rung_floor": 0.0,
+      "lesson": "respecting a symmetry is not sufficient; the symmetry the schema declares has to be the one that generated the world",
+      "theta_star": [
+        "1/14",
+        "3/14",
+        "5/14",
+        "1/2",
+        "9/14",
+        "11/14",
+        "13/14"
+      ],
+      "world_generated_from": "the 7-parameter rung"
+    },
+    "fano": {
+      "coarse_compiler_floor": 0.0573372299,
+      "compiled_at": "the full automorphism quotient, which is a legitimate group quotient but coarser than the world",
+      "compiled_free_parameters": 2,
+      "correct_rung_floor": 0.0,
+      "lesson": "respecting a symmetry is not sufficient; the symmetry the schema declares has to be the one that generated the world",
+      "theta_star": [
+        "1/14",
+        "3/14",
+        "5/14",
+        "1/2",
+        "9/14",
+        "11/14",
+        "13/14"
+      ],
+      "world_generated_from": "the 7-parameter rung"
+    }
+  },
+  "estimator": "beta(1,1) posterior mean",
+  "method": "excess log loss is additive across cells and a cell's estimator depends only on its own observation count, which is marginally binomial, so the expectation is a finite sum per cell. Valid for any number of classes and for partitions too coarse for the truth.",
+  "predictions": {
+    "circulant|A|L_rung_1": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 49,
+      "cells_reached_by_training": 49,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 6.125,
+          "exact_expected_excess_nll": 0.1506492633,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 3.0625,
+          "exact_expected_excess_nll": 0.1477502608,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.53125,
+          "exact_expected_excess_nll": 0.1422090503,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.765625,
+          "exact_expected_excess_nll": 0.13207117,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3828125,
+          "exact_expected_excess_nll": 0.1150012805,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.19140625,
+          "exact_expected_excess_nll": 0.0902270178,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.095703125,
+          "exact_expected_excess_nll": 0.0618063947,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0478515625,
+          "exact_expected_excess_nll": 0.0374977,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0239257812,
+          "exact_expected_excess_nll": 0.0211774625,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|A|L_rung_14": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 4,
+      "cells_reached_by_training": 4,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.5,
+          "exact_expected_excess_nll": 0.1252001072,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.103497568,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0744817422,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0459757894,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0259147532,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0141593755,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0074750033,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038278227,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0019339448,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|A|L_rung_7": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 7,
+      "cells_reached_by_training": 7,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.875,
+          "exact_expected_excess_nll": 0.1341010605,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.4375,
+          "exact_expected_excess_nll": 0.1183021723,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.21875,
+          "exact_expected_excess_nll": 0.0947395857,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.109375,
+          "exact_expected_excess_nll": 0.066560718,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0546875,
+          "exact_expected_excess_nll": 0.0412481401,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.02734375,
+          "exact_expected_excess_nll": 0.023622275,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.013671875,
+          "exact_expected_excess_nll": 0.0128106303,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0068359375,
+          "exact_expected_excess_nll": 0.0066374101,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0034179688,
+          "exact_expected_excess_nll": 0.0033695307,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|A|R": {
+      "asymptotic_floor": 0.0405269852,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.1220441924,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.1037158815,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0844026896,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0672169063,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.055062142,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0480691396,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0443657476,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0424632448,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0414993319,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|A|S": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 49,
+      "cells_reached_by_training": 49,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 6.125,
+          "exact_expected_excess_nll": 0.1506492633,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 3.0625,
+          "exact_expected_excess_nll": 0.1477502608,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.53125,
+          "exact_expected_excess_nll": 0.1422090503,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.765625,
+          "exact_expected_excess_nll": 0.13207117,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3828125,
+          "exact_expected_excess_nll": 0.1150012805,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.19140625,
+          "exact_expected_excess_nll": 0.0902270178,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.095703125,
+          "exact_expected_excess_nll": 0.0618063947,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0478515625,
+          "exact_expected_excess_nll": 0.0374977,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0239257812,
+          "exact_expected_excess_nll": 0.0211774625,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|A|T": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5395090623,
+      "cells": 4,
+      "cells_reached_by_training": 4,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.5,
+          "exact_expected_excess_nll": 0.1252001072,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.103497568,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0744817422,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0459757894,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0259147532,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0141593755,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0074750033,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038278227,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0019339448,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|L_rung_1": {
+      "asymptotic_floor": 0.161035341,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 49,
+      "cells_reached_by_training": 38,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 4.75,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 2.375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.1875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.59375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.296875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.1484375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.07421875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.037109375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0185546875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|L_rung_14": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 4,
+      "cells_reached_by_training": 4,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.5,
+          "exact_expected_excess_nll": 0.1314206821,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.1087329011,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0782249139,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0480330391,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.026842012,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0146705962,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.007806455,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0040158957,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0020320733,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|L_rung_7": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 7,
+      "cells_reached_by_training": 7,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.875,
+          "exact_expected_excess_nll": 0.1402890308,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.4375,
+          "exact_expected_excess_nll": 0.123484058,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.21875,
+          "exact_expected_excess_nll": 0.098430773,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.109375,
+          "exact_expected_excess_nll": 0.0686443283,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0546875,
+          "exact_expected_excess_nll": 0.0422880641,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.02734375,
+          "exact_expected_excess_nll": 0.0242372292,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.013671875,
+          "exact_expected_excess_nll": 0.0132104932,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0068359375,
+          "exact_expected_excess_nll": 0.0068659953,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0034179688,
+          "exact_expected_excess_nll": 0.0034891686,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|R": {
+      "asymptotic_floor": 0.0424946298,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.1282226816,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.1088944781,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0883237351,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0701974124,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0575444082,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0502973646,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0464645846,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0444967191,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0434999506,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|S": {
+      "asymptotic_floor": 0.161035341,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 49,
+      "cells_reached_by_training": 38,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 4.75,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 2.375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.1875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.59375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.296875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.1484375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.07421875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.037109375,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0185546875,
+          "exact_expected_excess_nll": 0.161035341,
+          "n": 1024
+        }
+      ]
+    },
+    "circulant|B|T": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5321118396,
+      "cells": 4,
+      "cells_reached_by_training": 4,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.5,
+          "exact_expected_excess_nll": 0.1314206821,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.1087329011,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0782249139,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0480330391,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.026842012,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0146705962,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.007806455,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0040158957,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0020320733,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|L_rung_1": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 49,
+      "cells_reached_by_training": 49,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 6.125,
+          "exact_expected_excess_nll": 0.1285667223,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 3.0625,
+          "exact_expected_excess_nll": 0.126374739,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.53125,
+          "exact_expected_excess_nll": 0.1221478209,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.765625,
+          "exact_expected_excess_nll": 0.1142985896,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3828125,
+          "exact_expected_excess_nll": 0.1008037395,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.19140625,
+          "exact_expected_excess_nll": 0.080846745,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.095703125,
+          "exact_expected_excess_nll": 0.0578441375,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0478515625,
+          "exact_expected_excess_nll": 0.0374160109,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0239257812,
+          "exact_expected_excess_nll": 0.0216256959,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|L_rung_168": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0862432794,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0641140517,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0434659292,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0264815953,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0145002338,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0075353818,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038371981,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0019358818,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009722537,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|L_rung_21": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 3,
+      "cells_reached_by_training": 3,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.375,
+          "exact_expected_excess_nll": 0.0951704272,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.1875,
+          "exact_expected_excess_nll": 0.0746094988,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.09375,
+          "exact_expected_excess_nll": 0.0533680414,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.046875,
+          "exact_expected_excess_nll": 0.0346184461,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0234375,
+          "exact_expected_excess_nll": 0.0201852494,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.01171875,
+          "exact_expected_excess_nll": 0.0109521942,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.005859375,
+          "exact_expected_excess_nll": 0.0056782109,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0029296875,
+          "exact_expected_excess_nll": 0.0028851206,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0014648438,
+          "exact_expected_excess_nll": 0.0014537712,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|L_rung_7": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 7,
+      "cells_reached_by_training": 7,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.875,
+          "exact_expected_excess_nll": 0.1159285075,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.4375,
+          "exact_expected_excess_nll": 0.1034780239,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.21875,
+          "exact_expected_excess_nll": 0.0845050051,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.109375,
+          "exact_expected_excess_nll": 0.0617031093,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0546875,
+          "exact_expected_excess_nll": 0.0407716561,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.02734375,
+          "exact_expected_excess_nll": 0.0241417602,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.013671875,
+          "exact_expected_excess_nll": 0.0129417775,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0068359375,
+          "exact_expected_excess_nll": 0.0066582066,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0034179688,
+          "exact_expected_excess_nll": 0.0033739902,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|R": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0862432794,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0641140517,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0434659292,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0264815953,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0145002338,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0075353818,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038371981,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0019358818,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009722537,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|S": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 49,
+      "cells_reached_by_training": 49,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 6.125,
+          "exact_expected_excess_nll": 0.1285667223,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 3.0625,
+          "exact_expected_excess_nll": 0.126374739,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.53125,
+          "exact_expected_excess_nll": 0.1221478209,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.765625,
+          "exact_expected_excess_nll": 0.1142985896,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3828125,
+          "exact_expected_excess_nll": 0.1008037395,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.19140625,
+          "exact_expected_excess_nll": 0.080846745,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.095703125,
+          "exact_expected_excess_nll": 0.0578441375,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0478515625,
+          "exact_expected_excess_nll": 0.0374160109,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0239257812,
+          "exact_expected_excess_nll": 0.0216256959,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|A|T": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0862432794,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0641140517,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0434659292,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0264815953,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0145002338,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.0075353818,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038371981,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.0019358818,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009722537,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|L_rung_1": {
+      "asymptotic_floor": 0.1308120359,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 49,
+      "cells_reached_by_training": 39,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 4.875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 2.4375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.21875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.609375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3046875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.15234375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.076171875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0380859375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0190429688,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|L_rung_168": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0860296229,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0638532777,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0432395681,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0262990608,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0143781323,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.007467884,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038020206,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.001917946,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009632,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|L_rung_21": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 3,
+      "cells_reached_by_training": 3,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.375,
+          "exact_expected_excess_nll": 0.0944857593,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.1875,
+          "exact_expected_excess_nll": 0.0735183185,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.09375,
+          "exact_expected_excess_nll": 0.0520274859,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.046875,
+          "exact_expected_excess_nll": 0.0333802692,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0234375,
+          "exact_expected_excess_nll": 0.0191924435,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.01171875,
+          "exact_expected_excess_nll": 0.0102759683,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.005859375,
+          "exact_expected_excess_nll": 0.0052958868,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0029296875,
+          "exact_expected_excess_nll": 0.0026849207,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0014648438,
+          "exact_expected_excess_nll": 0.0013515429,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|L_rung_7": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 7,
+      "cells_reached_by_training": 7,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.875,
+          "exact_expected_excess_nll": 0.117384892,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.4375,
+          "exact_expected_excess_nll": 0.1059756683,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.21875,
+          "exact_expected_excess_nll": 0.0881562397,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.109375,
+          "exact_expected_excess_nll": 0.0657801873,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0546875,
+          "exact_expected_excess_nll": 0.0442738505,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.02734375,
+          "exact_expected_excess_nll": 0.0268308291,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.013671875,
+          "exact_expected_excess_nll": 0.0146308263,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0068359375,
+          "exact_expected_excess_nll": 0.0075711478,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0034179688,
+          "exact_expected_excess_nll": 0.0038454957,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|R": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0860296229,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0638532777,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0432395681,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0262990608,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0143781323,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.007467884,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038020206,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.001917946,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009632,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|S": {
+      "asymptotic_floor": 0.1308120359,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 49,
+      "cells_reached_by_training": 39,
+      "floor_is_zero": false,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 4.875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 2.4375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 1.21875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.609375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.3046875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.15234375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.076171875,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0380859375,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0190429688,
+          "exact_expected_excess_nll": 0.1308120359,
+          "n": 1024
+        }
+      ]
+    },
+    "fano|B|T": {
+      "asymptotic_floor": 0.0,
+      "bayes_optimal_nll": 0.5623351446,
+      "cells": 2,
+      "cells_reached_by_training": 2,
+      "floor_is_zero": true,
+      "sweep": [
+        {
+          "asymptotic_dof_over_2n": 0.25,
+          "exact_expected_excess_nll": 0.0860296229,
+          "n": 4
+        },
+        {
+          "asymptotic_dof_over_2n": 0.125,
+          "exact_expected_excess_nll": 0.0638532777,
+          "n": 8
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0625,
+          "exact_expected_excess_nll": 0.0432395681,
+          "n": 16
+        },
+        {
+          "asymptotic_dof_over_2n": 0.03125,
+          "exact_expected_excess_nll": 0.0262990608,
+          "n": 32
+        },
+        {
+          "asymptotic_dof_over_2n": 0.015625,
+          "exact_expected_excess_nll": 0.0143781323,
+          "n": 64
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0078125,
+          "exact_expected_excess_nll": 0.007467884,
+          "n": 128
+        },
+        {
+          "asymptotic_dof_over_2n": 0.00390625,
+          "exact_expected_excess_nll": 0.0038020206,
+          "n": 256
+        },
+        {
+          "asymptotic_dof_over_2n": 0.001953125,
+          "exact_expected_excess_nll": 0.001917946,
+          "n": 512
+        },
+        {
+          "asymptotic_dof_over_2n": 0.0009765625,
+          "exact_expected_excess_nll": 0.0009632,
+          "n": 1024
+        }
+      ]
+    }
+  },
+  "regime_B_note": "regime B predictions use the canonical first split from the declared seed; the measured regime B result averages over random stratified splits, so only partitions that are unions of derived classes are expected to match exactly",
+  "schema": "gpt-01724a-generalized-exact-reference/v1",
+  "status": "computed exactly from the frozen schemas with no simulation and no label; frozen before the experiment ran"
+}

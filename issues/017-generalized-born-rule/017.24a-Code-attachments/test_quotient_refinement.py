@@ -430,6 +430,35 @@ def test_a_legitimate_but_too_coarse_quotient_still_pays_a_floor(
         assert abs(float(block["correct_rung_floor"])) < 1e-12
 
 
+def test_the_generalized_wrong_compiler_reproduces_the_017_24_control(fano):
+    """The post-freeze correction must not have loosened the inherited control."""
+    partition, certificate = refine.build_wrong_partition(fano)
+    inherited, _ = shared.build_wrong_partition(fano.structure)
+    assert partition == inherited
+    assert certificate["reproduces_the_017_24_control_on_a_two_class_fixture"]
+    assert certificate["members_exchanged_per_class"] == 7
+    assert certificate["automorphism_violations_counted"] == 3332
+
+
+def test_the_generalized_wrong_compiler_works_on_four_classes(circulant):
+    partition, certificate = refine.build_wrong_partition(circulant)
+    assert certificate["cardinalities"] == [7, 14, 14, 14]
+    assert sorted(partition.count(c) for c in set(partition)) == [7, 14, 14, 14]
+    assert not certificate["respects_the_declared_automorphisms"]
+    assert certificate["automorphism_violations_counted"] > 0
+    for cell in certificate["cell_composition"]:
+        assert sum(1 for c in cell["true_class_counts"] if c) >= 2, (
+            "every cell must mix at least two derived classes"
+        )
+    everything = tuple(range(49))
+    truths = [float(v) for v in refine.evenly_spaced_theta(4)]
+    floor = shared.asymptotic_floor(
+        partition, 4, truths, circulant.structure.class_of_index,
+        everything, everything, ONE, ONE,
+    )
+    assert floor > 0.01, "a symmetry-breaking partition must carry a floor"
+
+
 def test_the_inherited_controls_still_fail_closed(circulant):
     erased = shared.build_relation_erased(circulant.schema)
     with pytest.raises(shared.MissingDeclaredRelation):
@@ -529,6 +558,30 @@ def test_the_frozen_predictions_match_the_executable(fano, circulant):
 
 
 # --- artifacts, once phase two has produced them --------------------------
+
+
+def test_the_dose_response_direction_matches_the_banked_preregistration():
+    """Pin the direction of the monotonicity clause against the frozen text.
+
+    The banked preregistration predicts mean excess NLL to be monotone
+    *increasing* in the number of free parameters. The first implementation of
+    the check compared the other way round; this test makes that class of error
+    impossible to reintroduce silently.
+    """
+    document = refine.load_preregistration()
+    text = document["declared_predictions"]["dose_response_prediction"]
+    assert "monotone increasing in the number of free parameters" in text
+    if not refine.RESULTS_PATH.exists():
+        pytest.skip("results artifact not written yet")
+    results = json.loads(refine.RESULTS_PATH.read_text())
+    for fixture in ("fano", "circulant"):
+        block = results["J_verdict"]["dose_response"][fixture]
+        for detail in block["detail"].values():
+            values = [row["mean_excess"] for row in detail["by_free_parameters"]]
+            dofs = [row["dof"] for row in detail["by_free_parameters"]]
+            assert dofs == sorted(dofs)
+            assert values == sorted(values), (fixture, dofs, values)
+            assert detail["monotone_increasing_in_free_parameters"]
 
 
 def test_the_structural_artifacts_match_the_executable(fano, circulant):
