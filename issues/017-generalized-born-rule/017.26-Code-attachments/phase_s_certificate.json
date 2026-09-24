@@ -1,0 +1,1003 @@
+{
+  "all_mechanical_checks_pass": true,
+  "authority": {
+    "byte_pinned_inputs": {
+      "world_a_schema.json": "9f5262583012fb01aa4a9508d3abe3bfd9bb8135bd172d8342dc755004e7fc67",
+      "world_b_schema.json": "79412d9349c9413831bb44cae6bcd332ae265a6928facb2d7a7ec161c0b32b5d"
+    },
+    "execution_contract": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26b-GPT-owner-tightening-derived-symmetry-execution-contract.md",
+    "inherits": [
+      "017.25a the compiled quotient is separable from the declared relation",
+      "017.25 the first matched TDM training-economy experiment",
+      "017.23 operational TDM equivalence and the S(E) state boundary"
+    ],
+    "prior_quilt_revision": "adbc039c6b9459f92991caa4810890104670affafd62284cc2371a8181ecf84a",
+    "prior_result_commit": "2cb043a7c92ad16b9e9df784fce82d3d61531b24",
+    "review_carried_into_the_contract": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26a-Canary-review-derived-symmetry-compiler-boundary.md",
+    "task": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26-Task-derived-symmetry-from-typed-world-structure.md"
+  },
+  "compiler": {
+    "dispatch_audit": {
+      "compiler_path": [
+        "world_from_document",
+        "preserves_every_primitive",
+        "_flatten",
+        "_all_duties",
+        "_variable_order",
+        "prepare",
+        "_check_depth",
+        "_walk",
+        "count_morphisms",
+        "enumerate_morphisms",
+        "exists_morphism_sending",
+        "derive_orbit_quotient",
+        "compile_world"
+      ],
+      "compiler_path_sha256": "c73d357f96fcc81035ead101c8d444a8c2969c1fa585ac348393b726494ffdf9",
+      "declared_identifiers_appearing_in_the_compiler": [],
+      "declared_identifiers_checked": 34,
+      "every_declared_kind_has_a_generated_rule": true,
+      "forbidden_substrings_checked": [
+        "expected_cardinal",
+        "expected_class",
+        "expected_free",
+        "expected_group",
+        "expected_orbit"
+      ],
+      "forbidden_tokens_checked": [
+        "adjacent",
+        "answer",
+        "answers",
+        "district",
+        "districts",
+        "generator",
+        "generators",
+        "incidence",
+        "incident",
+        "label",
+        "labels",
+        "observation",
+        "observations",
+        "seed",
+        "seeds",
+        "theta",
+        "train",
+        "training"
+      ],
+      "forbidden_vocabulary_appearing_in_the_compiler": [],
+      "no_declared_identifier_appears_in_the_compiler": true,
+      "no_fixture_or_expectation_or_label_vocabulary_appears": true,
+      "preservation_rule_keys": [
+        "constant",
+        "operation",
+        "relation"
+      ],
+      "preservation_rules": {
+        "constant": "for a declared constant c : C, a candidate tuple of carrier bijections g preserves c exactly when g_C(c) = c",
+        "operation": "for a declared operation f : C_1 x ... x C_n -> B, a candidate tuple of carrier bijections g preserves f exactly when g_B(f(a_1, ..., a_n)) = f(g_{C_1}(a_1), ..., g_{C_n}(a_n)) holds for every tuple (a_1, ..., a_n) of C_1 x ... x C_n",
+        "relation": "for a declared relation R over carriers (C_1, ..., C_n), a candidate tuple of carrier bijections g preserves R exactly when R(a_1, ..., a_n) <=> R(g_{C_1}(a_1), ..., g_{C_n}(a_n)) holds for every tuple (a_1, ..., a_n) of C_1 x ... x C_n"
+      },
+      "primitive_kinds_declared_across_every_world": [
+        "constant",
+        "operation",
+        "relation"
+      ]
+    },
+    "quotient_rule": "q_Sigma(x) = q_Sigma(y) exactly when some derived structure-preserving map carries x to y, asked one ordered pair at a time so that the group never has to be materialized",
+    "search": "exhaustive backtracking over the full product of symmetric groups on the declared carriers, rejecting a branch only when a declared obligation is already violated; when no obligation remains outstanding the subtree size is counted in closed form, which is what keeps a world with an erased primitive tractable",
+    "variable_order_rule": "at each step take the unassigned variable that makes the largest number of ground obligations fully determined, breaking ties by index. The order affects only how much pruning happens, never which leaves exist.",
+    "what_the_compiler_is_not": "Q_aut is one preregistered exact structural compiler, not a claim that automorphism orbits are the canonical or universal quotient a typed decision model ought to use. 017.26b section 2 requires it to be named an automorphism-orbit compiler, and definability, context, congruence, bisimulation-like, and task-relative constructions are left entirely open."
+  },
+  "cross_fixture_witness": {
+    "carrier_cardinalities_exercised": [
+      3,
+      7,
+      9
+    ],
+    "perturbed_worlds": [
+      "erase:incident",
+      "scramble:incident",
+      "break:Point",
+      "erase:adjacent",
+      "erase:district",
+      "scramble:adjacent",
+      "scramble:district",
+      "break:District"
+    ],
+    "primary_worlds": [
+      "A",
+      "B"
+    ],
+    "primitive_kinds_exercised": [
+      "constant",
+      "operation",
+      "relation"
+    ],
+    "requirement": "017.26b section 3.2 asks that the same compiler be shown consuming the single-relation fixture, the richer multi-primitive fixture, and the source perturbations",
+    "worlds_compiled_by_the_one_path": 10
+  },
+  "fixtures": [
+    {
+      "A_declared": {
+        "admitted_input_type": "Point x Line",
+        "admitted_inputs": 49,
+        "carriers": [
+          {
+            "cardinality": 7,
+            "name": "Point"
+          },
+          {
+            "cardinality": 7,
+            "name": "Line"
+          }
+        ],
+        "declaration_ledger": [
+          {
+            "declares": "a carrier named Point with 7 declared elements",
+            "field": "sorts/Point",
+            "why": "an opaque seven-element carrier of points",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "a carrier named Line with 7 declared elements",
+            "field": "sorts/Line",
+            "why": "an opaque seven-element carrier of lines",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "a primitive of kind relation",
+            "field": "primitives/incident",
+            "why": "the declared incidence relation: which points lie on which lines",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "the product type an admitted input inhabits: Point x Line",
+            "field": "admitted_inputs",
+            "why": "the type of question the world admits is part of specifying the world's interface, and it names no answer and no frequency",
+            "would_belong_with_no_model_ever_trained": true
+          }
+        ],
+        "primitives": [
+          {
+            "kind": "relation",
+            "name": "incident",
+            "rows_declared": 21,
+            "signature": [
+              "Point",
+              "Line"
+            ]
+          }
+        ]
+      },
+      "B_anti_shortcut_audit": {
+        "denial_covers_symmetry_and_equivalence": true,
+        "denials_declared": 12,
+        "every_top_level_key_is_whitelisted": true,
+        "floats_found_in_the_structural_subtree": [],
+        "forbidden_vocabulary_checked": [
+          "answer",
+          "automorph",
+          "canonical",
+          "class",
+          "equivalen",
+          "frequency",
+          "generator",
+          "group",
+          "invariant",
+          "label",
+          "orbit",
+          "parameter",
+          "partition",
+          "probabilit",
+          "quotient",
+          "represent",
+          "share",
+          "stabili",
+          "symmetr",
+          "target",
+          "theta",
+          "tying"
+        ],
+        "forbidden_vocabulary_found_in_the_structural_subtree": [],
+        "no_numeric_probability_can_hide_in_the_structure": true,
+        "structural_keys_audited": [
+          "sorts",
+          "primitives",
+          "admitted_inputs"
+        ],
+        "structural_subtree_is_clean": true,
+        "the_binding_form_of_this_audit": "the vocabulary scan is necessary but not sufficient on its own. The binding form is the key-stripping test in the independence audit: the derived group and quotient are unchanged when every key outside sorts, primitives, and admitted_inputs is deleted, so no metadata anywhere else in the document can be load-bearing whatever it says.",
+        "unexpected_top_level_keys": []
+      },
+      "C_derived_before_any_label": {
+        "cell_naming_rule": "cells are numbered by cardinality and then by least member in declared input order; the names are bookkeeping and carry no meaning",
+        "cells": {
+          "Q_0": [
+            "P0L1",
+            "P1L2",
+            "P2L3",
+            "P3L4",
+            "P4L5",
+            "P5L6",
+            "P6L0"
+          ],
+          "Q_1": [
+            "P0L0",
+            "P0L2",
+            "P1L1",
+            "P1L3",
+            "P2L2",
+            "P2L4",
+            "P3L3",
+            "P3L5",
+            "P4L4",
+            "P4L6",
+            "P5L0",
+            "P5L5",
+            "P6L1",
+            "P6L6"
+          ],
+          "Q_2": [
+            "P0L3",
+            "P0L6",
+            "P1L0",
+            "P1L4",
+            "P2L1",
+            "P2L5",
+            "P3L2",
+            "P3L6",
+            "P4L0",
+            "P4L3",
+            "P5L1",
+            "P5L4",
+            "P6L2",
+            "P6L5"
+          ],
+          "Q_3": [
+            "P0L4",
+            "P0L5",
+            "P1L5",
+            "P1L6",
+            "P2L0",
+            "P2L6",
+            "P3L0",
+            "P3L1",
+            "P4L1",
+            "P4L2",
+            "P5L2",
+            "P5L3",
+            "P6L3",
+            "P6L4"
+          ]
+        },
+        "group_was_materialized": true,
+        "input_cell_cardinalities": [
+          7,
+          14,
+          14,
+          14
+        ],
+        "input_cell_count": 4,
+        "maximality_witness": {
+          "elements_rechecked_independently": 14,
+          "every_derived_element_preserves_every_primitive": true,
+          "quotient_derived_twice_by_different_routes": {
+            "route_one": "ask, for each ordered pair of admitted inputs, whether a structure-preserving map carries one to the other; this never materializes the group and so remains exact when the group is far too large to enumerate",
+            "route_two": "close the admitted inputs under every materialized element by union-find; available only when the group is small enough",
+            "routes_agree": true
+          },
+          "random_search_for_a_missed_element": {
+            "exhaustive_neighbourhood_scan": {
+              "construction": "compose every derived element with every transposition of every carrier, which exhausts the elements lying at Cayley distance one from the derived group in the product of symmetric groups",
+              "neighbours_preserving_every_primitive": 0,
+              "neighbours_tested": 588,
+              "the_derived_group_has_no_structure_preserving_neighbour": true
+            },
+            "group_was_materialized_for_this_check": true,
+            "no_larger_group_was_found": true,
+            "uniform_sampling": {
+              "honest_reading": "with a group this small inside a product of symmetric groups this large, uniform sampling is expected to find nothing at all, and it found nothing at all. On its own this is a weak witness and is reported as one; the exhaustive neighbourhood scan below is the one that carries weight.",
+              "samples": 200000,
+              "samples_preserving_every_primitive": 0,
+              "samples_preserving_everything_but_absent_from_the_group": 0,
+              "samples_violating_some_primitive": 200000
+            }
+          },
+          "second_exhaustive_decomposition": {
+            "agrees_with_the_primary_search": true,
+            "available": true,
+            "carrier_enumerated_outright": "Line",
+            "order_summed_over_cosets": 14,
+            "permutations_enumerated": 5040
+          },
+          "soundness_of_the_search": "the search iterates every injective assignment of every carrier and rejects a branch only when a declared obligation is already violated, so it cannot discard a structure-preserving map",
+          "unpruned_brute_force_on_a_reduced_world": {
+            "candidates_accepted_by_unpruned_brute_force": 1,
+            "element_sets_agree": true,
+            "full_product_of_symmetric_groups": 576,
+            "group_order_from_the_pruned_search": 1,
+            "orders_agree": true,
+            "reading": "the pruned search returns exactly the elements an exhaustive unpruned enumeration accepts, so its pruning discards only genuine violations",
+            "reduced_carrier_sizes": {
+              "Line": 4,
+              "Point": 4
+            }
+          }
+        },
+        "structure_preserving_group_order": 14
+      },
+      "D_disclosed_non_local_adversary": {
+        "cell_count": 4,
+        "cell_sizes": [
+          7,
+          14,
+          14,
+          14
+        ],
+        "construction": "iterated pair refinement over the admitted inputs: colours start from the declared facts an input's own components satisfy, and are refined by the multiset over every other admitted input of the declared facts the pair jointly satisfies together with that input's current colour",
+        "is_coarser_than_or_equal_to_the_derived_quotient": true,
+        "iterations_to_fixpoint": 2,
+        "reading": "if this recovers q_Sigma it does not make the derivation cheaper in kind, because it is itself a deterministic pre-label structural derivation and not a statistic a learner reads off an input. It makes the derivation cheaper in cost, which is a tractability finding and is reported as one.",
+        "recovers_the_derived_quotient": true,
+        "why_it_is_outside_L_k": "it is a global fixpoint over the whole admitted-input set rather than a source-local bounded-depth feature of a single input, so it is not generated by the L_k grammar. 017.26b section 8 forbids condition R from computing a global structural quotient or anything equivalent to one, which is exactly what this is."
+      },
+      "D_frozen_shortcut_language": {
+        "any_single_feature_recovers_the_quotient": false,
+        "bound_on_this_claim": "failure here establishes only that q_Sigma is not recoverable inside the preregistered source-local language L_k at depth k. It does not establish that no cheaper derivation exists, and the disclosed non-local adversary below is reported precisely so that the bound is not mistaken for exhaustiveness.",
+        "depth_k": 2,
+        "distinct_induced_partitions": 2,
+        "features_by_kind": {
+          "count": 2,
+          "count_comparison": 2,
+          "relation_atom": 1
+        },
+        "features_that_recover_the_quotient": [],
+        "finest_single_feature_cell_count": 2,
+        "finest_single_feature_cell_sizes": [
+          21,
+          28
+        ],
+        "grammar": "typed terms over the input components and the declared constants, closed under the declared operations to depth k; then every declared relation on every type-correct term tuple, every type-correct equality between distinct terms, a local count feature for every relation, argument position, and type-correct filling of the other positions, a fibre-size count for every operation and every term of its codomain, and the equality and order comparisons between count features",
+        "joint_partition_cell_count": 2,
+        "joint_partition_cell_sizes": [
+          21,
+          28
+        ],
+        "language_size": 5,
+        "term_count": 2,
+        "terms": [
+          {
+            "carrier": "Point",
+            "depth": 0,
+            "expression": "x0"
+          },
+          {
+            "carrier": "Line",
+            "depth": 0,
+            "expression": "x1"
+          }
+        ],
+        "the_quotient_determines_every_feature": true,
+        "the_whole_language_read_jointly_recovers_the_quotient": false,
+        "why_coarser_is_the_only_possibility": "every feature of L_k is a term over the declared primitives, so every feature is invariant under every structure-preserving map, so its partition is coarser than or equal to the orbit partition. Recovering q_Sigma therefore means equalling it, and failing to recover it means being strictly coarser."
+      },
+      "E_independence_of_the_derivation": {
+        "key_stripping": {
+          "group_order": 14,
+          "group_order_is_identical": true,
+          "keys_deleted": [
+            "answer_type",
+            "compiler_visible_semantics",
+            "domain",
+            "fixture",
+            "independence_fence",
+            "not_declared_here",
+            "role",
+            "schema"
+          ],
+          "keys_kept": [
+            "sorts",
+            "primitives",
+            "admitted_inputs"
+          ],
+          "prose_descriptions_deleted": true,
+          "quotient_is_identical": true
+        },
+        "reading": "the derived group and quotient survive renaming every declared name and deleting every non-structural key, so the derivation is a function of the declared structure alone",
+        "relabelling": {
+          "group_order": 14,
+          "group_order_is_identical": true,
+          "quotient_is_identical": true,
+          "what_was_renamed": "every carrier, every element of every carrier, and every primitive, to meaningless codes"
+        }
+      },
+      "F_source_perturbations": [
+        {
+          "cell_count": 1,
+          "cell_sizes": [
+            49
+          ],
+          "frozen_direction": "grows",
+          "frozen_rationale": "removing the only declared primitive leaves nothing to preserve, so every pair of carrier bijections qualifies and the admitted inputs collapse to a single cell",
+          "group_order": 25401600,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "erase:incident",
+          "prediction_held": true,
+          "primary_refines_the_quotient": true,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": false,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 49,
+          "cell_sizes": null,
+          "frozen_direction": "differs",
+          "frozen_rationale": "a relation of the same cardinality that is not isomorphic to the declared one must produce a different quotient; if it produced the same one the compiler would be reading cardinality rather than structure",
+          "group_order": 1,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "scramble:incident",
+          "prediction_held": true,
+          "primary_refines_the_quotient": false,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": true,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 25,
+          "cell_sizes": null,
+          "frozen_direction": "shrinks",
+          "frozen_rationale": "distinguishing one element of a carrier can only remove structure-preserving maps, never add them, so the new group is a subgroup and the quotient refines",
+          "group_order": 2,
+          "new_group_is_a_subgroup_of_the_primary": true,
+          "perturbation": "break:Point",
+          "prediction_held": true,
+          "primary_refines_the_quotient": false,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": true,
+          "recompiled_from_scratch": true
+        }
+      ],
+      "G_joint_load_bearing": {
+        "every_primitive_is_load_bearing": true,
+        "per_primitive": [
+          {
+            "cell_count_with": 4,
+            "cell_count_without": 1,
+            "erasure_was_compiled": true,
+            "group_order_with": 14,
+            "group_order_without": 25401600,
+            "group_strictly_enlarges_when_erased": true,
+            "is_load_bearing": true,
+            "kind": "relation",
+            "primitive": "incident",
+            "quotient_strictly_coarsens_when_erased": true
+          }
+        ],
+        "primitive_count": 1,
+        "primitives_are_jointly_load_bearing": false,
+        "test": "a primitive is load-bearing when deleting it strictly enlarges the derived group or strictly coarsens the derived quotient; the primitives are jointly load-bearing when that holds for every one of them and there is more than one"
+      },
+      "fixture": "A",
+      "role": "single-relation control fixture",
+      "schema": "gpt-01726-single-relation-world/v1",
+      "sha256": "9f5262583012fb01aa4a9508d3abe3bfd9bb8135bd172d8342dc755004e7fc67"
+    },
+    {
+      "A_declared": {
+        "admitted_input_type": "Site x District",
+        "admitted_inputs": 27,
+        "carriers": [
+          {
+            "cardinality": 9,
+            "name": "Site"
+          },
+          {
+            "cardinality": 3,
+            "name": "District"
+          }
+        ],
+        "declaration_ledger": [
+          {
+            "declares": "a carrier named Site with 9 declared elements",
+            "field": "sorts/Site",
+            "why": "an opaque nine-element carrier of sites",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "a carrier named District with 3 declared elements",
+            "field": "sorts/District",
+            "why": "an opaque three-element carrier of districts",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "a primitive of kind relation",
+            "field": "primitives/adjacent",
+            "why": "the declared neighbour relation along the corridor, listed in both directions",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "a primitive of kind operation",
+            "field": "primitives/district",
+            "why": "the declared total map sending each site to the district it lies in",
+            "would_belong_with_no_model_ever_trained": true
+          },
+          {
+            "declares": "the product type an admitted input inhabits: Site x District",
+            "field": "admitted_inputs",
+            "why": "the type of question the world admits is part of specifying the world's interface, and it names no answer and no frequency",
+            "would_belong_with_no_model_ever_trained": true
+          }
+        ],
+        "primitives": [
+          {
+            "kind": "relation",
+            "name": "adjacent",
+            "rows_declared": 18,
+            "signature": [
+              "Site",
+              "Site"
+            ]
+          },
+          {
+            "kind": "operation",
+            "name": "district",
+            "rows_declared": 9,
+            "signature": [
+              "Site",
+              "-> District"
+            ]
+          }
+        ]
+      },
+      "B_anti_shortcut_audit": {
+        "denial_covers_symmetry_and_equivalence": true,
+        "denials_declared": 12,
+        "every_top_level_key_is_whitelisted": true,
+        "floats_found_in_the_structural_subtree": [],
+        "forbidden_vocabulary_checked": [
+          "answer",
+          "automorph",
+          "canonical",
+          "class",
+          "equivalen",
+          "frequency",
+          "generator",
+          "group",
+          "invariant",
+          "label",
+          "orbit",
+          "parameter",
+          "partition",
+          "probabilit",
+          "quotient",
+          "represent",
+          "share",
+          "stabili",
+          "symmetr",
+          "target",
+          "theta",
+          "tying"
+        ],
+        "forbidden_vocabulary_found_in_the_structural_subtree": [],
+        "no_numeric_probability_can_hide_in_the_structure": true,
+        "structural_keys_audited": [
+          "sorts",
+          "primitives",
+          "admitted_inputs"
+        ],
+        "structural_subtree_is_clean": true,
+        "the_binding_form_of_this_audit": "the vocabulary scan is necessary but not sufficient on its own. The binding form is the key-stripping test in the independence audit: the derived group and quotient are unchanged when every key outside sorts, primitives, and admitted_inputs is deleted, so no metadata anywhere else in the document can be load-bearing whatever it says.",
+        "unexpected_top_level_keys": []
+      },
+      "C_derived_before_any_label": {
+        "cell_naming_rule": "cells are numbered by cardinality and then by least member in declared input order; the names are bookkeeping and carry no meaning",
+        "cells": {
+          "Q_0": [
+            "A1D0",
+            "A4D1",
+            "A7D2"
+          ],
+          "Q_1": [
+            "A0D0",
+            "A2D0",
+            "A3D1",
+            "A5D1",
+            "A6D2",
+            "A8D2"
+          ],
+          "Q_2": [
+            "A0D1",
+            "A2D2",
+            "A3D2",
+            "A5D0",
+            "A6D0",
+            "A8D1"
+          ],
+          "Q_3": [
+            "A0D2",
+            "A2D1",
+            "A3D0",
+            "A5D2",
+            "A6D1",
+            "A8D0"
+          ],
+          "Q_4": [
+            "A1D1",
+            "A1D2",
+            "A4D0",
+            "A4D2",
+            "A7D0",
+            "A7D1"
+          ]
+        },
+        "group_was_materialized": true,
+        "input_cell_cardinalities": [
+          3,
+          6,
+          6,
+          6,
+          6
+        ],
+        "input_cell_count": 5,
+        "maximality_witness": {
+          "elements_rechecked_independently": 6,
+          "every_derived_element_preserves_every_primitive": true,
+          "quotient_derived_twice_by_different_routes": {
+            "route_one": "ask, for each ordered pair of admitted inputs, whether a structure-preserving map carries one to the other; this never materializes the group and so remains exact when the group is far too large to enumerate",
+            "route_two": "close the admitted inputs under every materialized element by union-find; available only when the group is small enough",
+            "routes_agree": true
+          },
+          "random_search_for_a_missed_element": {
+            "exhaustive_neighbourhood_scan": {
+              "construction": "compose every derived element with every transposition of every carrier, which exhausts the elements lying at Cayley distance one from the derived group in the product of symmetric groups",
+              "neighbours_preserving_every_primitive": 0,
+              "neighbours_tested": 234,
+              "the_derived_group_has_no_structure_preserving_neighbour": true
+            },
+            "group_was_materialized_for_this_check": true,
+            "no_larger_group_was_found": true,
+            "uniform_sampling": {
+              "honest_reading": "with a group this small inside a product of symmetric groups this large, uniform sampling is expected to find nothing at all, and it found nothing at all. On its own this is a weak witness and is reported as one; the exhaustive neighbourhood scan below is the one that carries weight.",
+              "samples": 200000,
+              "samples_preserving_every_primitive": 0,
+              "samples_preserving_everything_but_absent_from_the_group": 0,
+              "samples_violating_some_primitive": 200000
+            }
+          },
+          "second_exhaustive_decomposition": {
+            "agrees_with_the_primary_search": true,
+            "available": true,
+            "carrier_enumerated_outright": "District",
+            "order_summed_over_cosets": 6,
+            "permutations_enumerated": 6
+          },
+          "soundness_of_the_search": "the search iterates every injective assignment of every carrier and rejects a branch only when a declared obligation is already violated, so it cannot discard a structure-preserving map",
+          "unpruned_brute_force_on_a_reduced_world": {
+            "candidates_accepted_by_unpruned_brute_force": 2,
+            "element_sets_agree": true,
+            "full_product_of_symmetric_groups": 1440,
+            "group_order_from_the_pruned_search": 2,
+            "orders_agree": true,
+            "reading": "the pruned search returns exactly the elements an exhaustive unpruned enumeration accepts, so its pruning discards only genuine violations",
+            "reduced_carrier_sizes": {
+              "District": 2,
+              "Site": 6
+            }
+          }
+        },
+        "structure_preserving_group_order": 6
+      },
+      "D_disclosed_non_local_adversary": {
+        "cell_count": 5,
+        "cell_sizes": [
+          3,
+          6,
+          6,
+          6,
+          6
+        ],
+        "construction": "iterated pair refinement over the admitted inputs: colours start from the declared facts an input's own components satisfy, and are refined by the multiset over every other admitted input of the declared facts the pair jointly satisfies together with that input's current colour",
+        "is_coarser_than_or_equal_to_the_derived_quotient": true,
+        "iterations_to_fixpoint": 2,
+        "reading": "if this recovers q_Sigma it does not make the derivation cheaper in kind, because it is itself a deterministic pre-label structural derivation and not a statistic a learner reads off an input. It makes the derivation cheaper in cost, which is a tractability finding and is reported as one.",
+        "recovers_the_derived_quotient": true,
+        "why_it_is_outside_L_k": "it is a global fixpoint over the whole admitted-input set rather than a source-local bounded-depth feature of a single input, so it is not generated by the L_k grammar. 017.26b section 8 forbids condition R from computing a global structural quotient or anything equivalent to one, which is exactly what this is."
+      },
+      "D_frozen_shortcut_language": {
+        "any_single_feature_recovers_the_quotient": false,
+        "bound_on_this_claim": "failure here establishes only that q_Sigma is not recoverable inside the preregistered source-local language L_k at depth k. It does not establish that no cheaper derivation exists, and the disclosed non-local adversary below is reported precisely so that the bound is not mistaken for exhaustiveness.",
+        "depth_k": 2,
+        "distinct_induced_partitions": 2,
+        "features_by_kind": {
+          "count": 4,
+          "count_comparison": 12,
+          "equality_atom": 1,
+          "relation_atom": 1
+        },
+        "features_that_recover_the_quotient": [],
+        "finest_single_feature_cell_count": 2,
+        "finest_single_feature_cell_sizes": [
+          9,
+          18
+        ],
+        "grammar": "typed terms over the input components and the declared constants, closed under the declared operations to depth k; then every declared relation on every type-correct term tuple, every type-correct equality between distinct terms, a local count feature for every relation, argument position, and type-correct filling of the other positions, a fibre-size count for every operation and every term of its codomain, and the equality and order comparisons between count features",
+        "joint_partition_cell_count": 2,
+        "joint_partition_cell_sizes": [
+          9,
+          18
+        ],
+        "language_size": 18,
+        "term_count": 3,
+        "terms": [
+          {
+            "carrier": "Site",
+            "depth": 0,
+            "expression": "x0"
+          },
+          {
+            "carrier": "District",
+            "depth": 0,
+            "expression": "x1"
+          },
+          {
+            "carrier": "District",
+            "depth": 1,
+            "expression": "district(x0)"
+          }
+        ],
+        "the_quotient_determines_every_feature": true,
+        "the_whole_language_read_jointly_recovers_the_quotient": false,
+        "why_coarser_is_the_only_possibility": "every feature of L_k is a term over the declared primitives, so every feature is invariant under every structure-preserving map, so its partition is coarser than or equal to the orbit partition. Recovering q_Sigma therefore means equalling it, and failing to recover it means being strictly coarser."
+      },
+      "E_independence_of_the_derivation": {
+        "key_stripping": {
+          "group_order": 6,
+          "group_order_is_identical": true,
+          "keys_deleted": [
+            "answer_type",
+            "compiler_visible_semantics",
+            "domain",
+            "fixture",
+            "independence_fence",
+            "not_declared_here",
+            "role",
+            "schema"
+          ],
+          "keys_kept": [
+            "sorts",
+            "primitives",
+            "admitted_inputs"
+          ],
+          "prose_descriptions_deleted": true,
+          "quotient_is_identical": true
+        },
+        "reading": "the derived group and quotient survive renaming every declared name and deleting every non-structural key, so the derivation is a function of the declared structure alone",
+        "relabelling": {
+          "group_order": 6,
+          "group_order_is_identical": true,
+          "quotient_is_identical": true,
+          "what_was_renamed": "every carrier, every element of every carrier, and every primitive, to meaningless codes"
+        }
+      },
+      "F_source_perturbations": [
+        {
+          "cell_count": 2,
+          "cell_sizes": [
+            9,
+            18
+          ],
+          "frozen_direction": "grows",
+          "frozen_rationale": "without the neighbour relation only the declared total map constrains the carriers, so every fibre-respecting pair qualifies and the quotient coarsens",
+          "group_order": 1296,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "erase:adjacent",
+          "prediction_held": true,
+          "primary_refines_the_quotient": true,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": false,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 1,
+          "cell_sizes": [
+            27
+          ],
+          "frozen_direction": "grows",
+          "frozen_rationale": "without the declared total map only the neighbour relation constrains the larger carrier and the smaller carrier is entirely free, so the quotient coarsens",
+          "group_order": 108,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "erase:district",
+          "prediction_held": true,
+          "primary_refines_the_quotient": true,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": false,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 27,
+          "cell_sizes": null,
+          "frozen_direction": "differs",
+          "frozen_rationale": "a neighbour relation of the same cardinality that is not isomorphic to the declared one must produce a different quotient",
+          "group_order": 1,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "scramble:adjacent",
+          "prediction_held": true,
+          "primary_refines_the_quotient": false,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": true,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 27,
+          "cell_sizes": null,
+          "frozen_direction": "differs",
+          "frozen_rationale": "a total map with the same fibre-size multiset but a different assignment must produce a different quotient",
+          "group_order": 1,
+          "new_group_is_a_subgroup_of_the_primary": null,
+          "perturbation": "scramble:district",
+          "prediction_held": true,
+          "primary_refines_the_quotient": false,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": true,
+          "recompiled_from_scratch": true
+        },
+        {
+          "cell_count": 14,
+          "cell_sizes": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "frozen_direction": "shrinks",
+          "frozen_rationale": "distinguishing one element of the smaller carrier can only remove structure-preserving maps, so the new group is a subgroup and the quotient refines",
+          "group_order": 2,
+          "new_group_is_a_subgroup_of_the_primary": true,
+          "perturbation": "break:District",
+          "prediction_held": true,
+          "primary_refines_the_quotient": false,
+          "quotient_differs_from_the_primary": true,
+          "quotient_refines_the_primary": true,
+          "recompiled_from_scratch": true
+        }
+      ],
+      "G_joint_load_bearing": {
+        "every_primitive_is_load_bearing": true,
+        "per_primitive": [
+          {
+            "cell_count_with": 5,
+            "cell_count_without": 2,
+            "erasure_was_compiled": true,
+            "group_order_with": 6,
+            "group_order_without": 1296,
+            "group_strictly_enlarges_when_erased": true,
+            "is_load_bearing": true,
+            "kind": "relation",
+            "primitive": "adjacent",
+            "quotient_strictly_coarsens_when_erased": true
+          },
+          {
+            "cell_count_with": 5,
+            "cell_count_without": 1,
+            "erasure_was_compiled": true,
+            "group_order_with": 6,
+            "group_order_without": 108,
+            "group_strictly_enlarges_when_erased": true,
+            "is_load_bearing": true,
+            "kind": "operation",
+            "primitive": "district",
+            "quotient_strictly_coarsens_when_erased": true
+          }
+        ],
+        "primitive_count": 2,
+        "primitives_are_jointly_load_bearing": true,
+        "test": "a primitive is load-bearing when deleting it strictly enlarges the derived group or strictly coarsens the derived quotient; the primitives are jointly load-bearing when that holds for every one of them and there is more than one"
+      },
+      "fixture": "B",
+      "role": "richer multi-primitive fixture required by 017.26b section 5 for a Strong positive",
+      "schema": "gpt-01726-multi-primitive-world/v1",
+      "sha256": "79412d9349c9413831bb44cae6bcd332ae265a6928facb2d7a7ec161c0b32b5d"
+    }
+  ],
+  "mechanical_check_count": 37,
+  "mechanical_checks": {
+    "both_world_documents_match_their_pins": true,
+    "every_declared_primitive_kind_has_a_generated_rule": true,
+    "fixture_A_a_second_exhaustive_decomposition_agrees": true,
+    "fixture_A_declares_no_float_in_its_structure": true,
+    "fixture_A_declares_no_forbidden_metadata": true,
+    "fixture_A_derivation_survives_deleting_non_structural_keys": true,
+    "fixture_A_derivation_survives_relabelling_every_name": true,
+    "fixture_A_every_declared_primitive_is_load_bearing": true,
+    "fixture_A_every_derived_element_preserves_every_primitive": true,
+    "fixture_A_every_perturbation_matched_its_frozen_direction": true,
+    "fixture_A_group_is_nontrivial": true,
+    "fixture_A_quotient_is_neither_one_cell_nor_all_singletons": true,
+    "fixture_A_random_search_found_no_larger_group": true,
+    "fixture_A_the_frozen_shortcut_language_does_not_recover_the_quotient": true,
+    "fixture_A_the_two_quotient_routes_agree": true,
+    "fixture_A_unpruned_brute_force_agrees_on_a_reduced_world": true,
+    "fixture_B_a_second_exhaustive_decomposition_agrees": true,
+    "fixture_B_declares_no_float_in_its_structure": true,
+    "fixture_B_declares_no_forbidden_metadata": true,
+    "fixture_B_derivation_survives_deleting_non_structural_keys": true,
+    "fixture_B_derivation_survives_relabelling_every_name": true,
+    "fixture_B_every_declared_primitive_is_load_bearing": true,
+    "fixture_B_every_derived_element_preserves_every_primitive": true,
+    "fixture_B_every_perturbation_matched_its_frozen_direction": true,
+    "fixture_B_group_is_nontrivial": true,
+    "fixture_B_quotient_is_neither_one_cell_nor_all_singletons": true,
+    "fixture_B_random_search_found_no_larger_group": true,
+    "fixture_B_the_frozen_shortcut_language_does_not_recover_the_quotient": true,
+    "fixture_B_the_two_quotient_routes_agree": true,
+    "fixture_B_unpruned_brute_force_agrees_on_a_reduced_world": true,
+    "no_declared_identifier_appears_in_the_compiler": true,
+    "no_fixture_expectation_or_label_vocabulary_in_the_compiler": true,
+    "no_target_parameter_vector_appears_in_this_module": true,
+    "the_richer_fixture_has_more_than_one_declared_primitive": true,
+    "the_richer_fixture_is_jointly_load_bearing": true,
+    "the_same_compiler_consumed_every_world_and_every_perturbation": true,
+    "this_module_imports_no_statistical_module": true
+  },
+  "phase": "S",
+  "phase_fence": {
+    "imports_no_statistical_module": true,
+    "module_sha256": "e7074a60ed460b7b98d7f234e3af06aec169e5ae526e477c62e1e8799d0f2e3b",
+    "no_target_parameter_vector_appears_in_this_module": true,
+    "token_searched_for": "theta_star",
+    "top_level_imports": [
+      "__future__",
+      "argparse",
+      "collections",
+      "dataclasses",
+      "hashlib",
+      "inspect",
+      "itertools",
+      "json",
+      "math",
+      "pathlib",
+      "random",
+      "re",
+      "sys",
+      "time",
+      "typing"
+    ],
+    "what_does_not_exist_yet": [
+      "any target probability per derived cell",
+      "any label",
+      "any label-generation seed",
+      "any train or test split",
+      "any learner, estimator, or hyperparameter",
+      "any threshold or verdict on labelled-data burden"
+    ],
+    "what_exists_at_this_freeze": [
+      "the declared world documents",
+      "the generic schema-semantic compiler",
+      "the derived groups and input quotients",
+      "the frozen bounded shortcut language L_k and its audit",
+      "the disclosed non-local adversary and its result",
+      "the declared source perturbations and their frozen directions",
+      "the compile costs"
+    ],
+    "why_the_import_graph_is_the_binding_form": "the byte-pinned 017.24 implementation contains generate_observations. This module does not import it, so the claim that no label was in scope during derivation is a property of the import graph rather than a promise about discipline. The Phase T module is a separate file which pins this one."
+  },
+  "schema": "gpt-01726-phase-s-structure-freeze/v1",
+  "what_this_freeze_does_not_establish": [
+    "that the automorphism-orbit quotient is the right compiler for any world other than these two",
+    "that no cheaper derivation of q_Sigma exists; the disclosed non-local adversary already recovers it on both fixtures, which is a tractability finding banked here rather than discovered later",
+    "anything at all about labelled-data burden, which Phase T measures and which no quantity in this file could speak to",
+    "that either fixture is representative of anything beyond itself",
+    "tractability of this compiler at larger carrier cardinalities"
+  ],
+  "what_this_is": "the structure-only freeze required by 017.26b section 7. Every quantity here is derived from ordinary declared world structure before any target probability or label seed exists."
+}

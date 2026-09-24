@@ -1,0 +1,45 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "world_a_schema.json": "9f5262583012fb01aa4a9508d3abe3bfd9bb8135bd172d8342dc755004e7fc67",
+      "world_b_schema.json": "79412d9349c9413831bb44cae6bcd332ae265a6928facb2d7a7ec161c0b32b5d"
+    },
+    "execution_contract": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26b-GPT-owner-tightening-derived-symmetry-execution-contract.md",
+    "inherits": [
+      "017.25a the compiled quotient is separable from the declared relation",
+      "017.25 the first matched TDM training-economy experiment",
+      "017.23 operational TDM equivalence and the S(E) state boundary"
+    ],
+    "prior_quilt_revision": "adbc039c6b9459f92991caa4810890104670affafd62284cc2371a8181ecf84a",
+    "prior_result_commit": "2cb043a7c92ad16b9e9df784fce82d3d61531b24",
+    "review_carried_into_the_contract": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26a-Canary-review-derived-symmetry-compiler-boundary.md",
+    "task": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26-Task-derived-symmetry-from-typed-world-structure.md"
+  },
+  "environment": {
+    "python": "3.12.11"
+  },
+  "note": "derivation is cheap on these worlds and that is not evidence it stays cheap. The search is exhaustive over a product of symmetric groups, so cost grows factorially in carrier cardinality in the worst case, and tractability at larger schema sizes is an open item rather than a result.",
+  "per_fixture": [
+    {
+      "admitted_inputs": 49,
+      "compile_seconds": 0.007343,
+      "derived_group_order": 14,
+      "fixture": "A",
+      "full_product_of_symmetric_groups": 25401600,
+      "perturbation_recompile_seconds": 0.552289
+    },
+    {
+      "admitted_inputs": 27,
+      "compile_seconds": 0.00648,
+      "derived_group_order": 6,
+      "fixture": "B",
+      "full_product_of_symmetric_groups": 2177280,
+      "perturbation_recompile_seconds": 0.165433
+    }
+  ],
+  "phase": "S",
+  "schema": "gpt-01726-phase-s-cost-report/v1",
+  "seconds": {
+    "total_wall_clock_including_every_audit": 4.488461
+  }
+}

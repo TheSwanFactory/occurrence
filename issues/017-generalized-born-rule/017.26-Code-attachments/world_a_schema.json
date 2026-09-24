@@ -1,0 +1,175 @@
+{
+  "admitted_inputs": {
+    "cardinality": 49,
+    "description": "an admitted input is an ordered pair naming one point and one line",
+    "product": [
+      "Point",
+      "Line"
+    ]
+  },
+  "answer_type": {
+    "arity": 2,
+    "labels": [
+      "a_0",
+      "a_1"
+    ],
+    "name": "BinaryAnswer",
+    "semantics": "Two neutral, unordered, mutually exclusive and exhaustive answer labels. The labels are opaque names with no declared relationship to any carrier, primitive, or input."
+  },
+  "compiler_visible_semantics": [
+    "the declared carriers and their elements",
+    "the declared kind and signature of each primitive",
+    "the declared extension of each primitive",
+    "the declared admitted-input product"
+  ],
+  "domain": {
+    "description": "Two opaque seven-element carriers and one declared binary incidence relation with 21 rows. Nothing else is declared.",
+    "name": "an abstract finite point-line incidence world on seven points and seven lines",
+    "reuse_note": "This is the same 21-row circulant incidence relation used by the 017.24a fixture, restated here in a generic typed signature with every piece of symmetry and equivalence metadata removed. 017.26b section 5 admits that reuse on condition that the relation alone suffices for the generic compiler and that the bounded shortcut language does not collapse the intended separation. Both conditions are tested, not assumed.",
+    "source_semantics": "A point lies on a line exactly when the pair occurs in one declared row of the incident relation. The identifiers are opaque names. The integers appearing inside them carry no declared arithmetic, no order, and no coordinate; the relation is declared extensionally by listing its rows.",
+    "would_these_facts_belong_without_any_model": "Yes. A carrier of points, a carrier of lines, and a statement of which points lie on which lines is the ordinary content of an incidence structure. None of it mentions a prediction, a label, a frequency, or a parameter."
+  },
+  "fixture": "A",
+  "independence_fence": "This schema is a self-contained abstract incidence structure. It reuses no catalogue, corpus, hidden label, or learning target.",
+  "not_declared_here": [
+    "any automorphism group or permutation group",
+    "any group generator or generating set",
+    "any orbit, orbit identifier, or orbit cardinality",
+    "any equivalence relation over admitted inputs",
+    "any presentation-equivalence declaration",
+    "any canonical representative or canonical labelling",
+    "any parameter-sharing or parameter-tying instruction",
+    "any statement that two admitted inputs should share a statistic",
+    "any expected group order or expected class count",
+    "any answer frequency, target probability, or answer rule",
+    "any assignment from admitted inputs to answer labels",
+    "any target-derived feature"
+  ],
+  "primitives": [
+    {
+      "description": "the declared incidence relation: which points lie on which lines",
+      "extension": [
+        [
+          "P0",
+          "L0"
+        ],
+        [
+          "P0",
+          "L1"
+        ],
+        [
+          "P0",
+          "L2"
+        ],
+        [
+          "P1",
+          "L1"
+        ],
+        [
+          "P1",
+          "L2"
+        ],
+        [
+          "P1",
+          "L3"
+        ],
+        [
+          "P2",
+          "L2"
+        ],
+        [
+          "P2",
+          "L3"
+        ],
+        [
+          "P2",
+          "L4"
+        ],
+        [
+          "P3",
+          "L3"
+        ],
+        [
+          "P3",
+          "L4"
+        ],
+        [
+          "P3",
+          "L5"
+        ],
+        [
+          "P4",
+          "L4"
+        ],
+        [
+          "P4",
+          "L5"
+        ],
+        [
+          "P4",
+          "L6"
+        ],
+        [
+          "P5",
+          "L0"
+        ],
+        [
+          "P5",
+          "L5"
+        ],
+        [
+          "P5",
+          "L6"
+        ],
+        [
+          "P6",
+          "L0"
+        ],
+        [
+          "P6",
+          "L1"
+        ],
+        [
+          "P6",
+          "L6"
+        ]
+      ],
+      "kind": "relation",
+      "name": "incident",
+      "signature": [
+        "Point",
+        "Line"
+      ]
+    }
+  ],
+  "role": "single-relation control fixture",
+  "schema": "gpt-01726-single-relation-world/v1",
+  "sorts": [
+    {
+      "description": "an opaque seven-element carrier of points",
+      "elements": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "name": "Point"
+    },
+    {
+      "description": "an opaque seven-element carrier of lines",
+      "elements": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6"
+      ],
+      "name": "Line"
+    }
+  ]
+}

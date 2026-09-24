@@ -1,0 +1,226 @@
+{
+  "admitted_inputs": {
+    "cardinality": 27,
+    "description": "an admitted input is an ordered pair naming one site and one district",
+    "product": [
+      "Site",
+      "District"
+    ]
+  },
+  "answer_type": {
+    "arity": 2,
+    "labels": [
+      "a_0",
+      "a_1"
+    ],
+    "name": "BinaryAnswer",
+    "semantics": "Two neutral, unordered, mutually exclusive and exhaustive answer labels. The labels are opaque names with no declared relationship to any carrier, primitive, or input."
+  },
+  "compiler_visible_semantics": [
+    "the declared carriers and their elements",
+    "the declared kind and signature of each primitive",
+    "the declared extension of each primitive",
+    "the declared admitted-input product"
+  ],
+  "domain": {
+    "description": "Two carriers and two primitives of different kinds. Nine sites are arranged so that each site is adjacent to exactly two others around a single closed corridor, and every site lies in exactly one of three districts, each district being a run of three consecutive sites.",
+    "name": "a finite ring corridor of nine sites carrying a declared district map",
+    "source_semantics": "The adjacent relation states which sites are immediate neighbours along the corridor. The district operation states which district each site lies in. The identifiers are opaque names carrying no declared arithmetic; both primitives are declared extensionally.",
+    "why_two_primitives": "017.26b section 5 requires a Strong positive to rest on a fixture whose useful invariance arises from JOINT preservation of more than one typed primitive. Here the adjacent relation constrains local neighbour structure and the district operation constrains a global three-fold block structure, and neither is recoverable from the other. The joint-load-bearing test in section 5 is executed mechanically against this schema, not asserted.",
+    "would_these_facts_belong_without_any_model": "Yes. Which sites neighbour which, and which administrative district each site lies in, are ordinary facts about a physical corridor. A surveyor would record both whether or not anyone ever fitted a model to anything."
+  },
+  "fixture": "B",
+  "independence_fence": "This schema is a self-contained abstract corridor. It reuses no catalogue, corpus, hidden label, or learning target, and it is not a renaming of the fixture A incidence relation: it has different carrier cardinalities, a different admitted-input cardinality, and a primitive of a different kind.",
+  "not_declared_here": [
+    "any automorphism group or permutation group",
+    "any group generator or generating set",
+    "any orbit, orbit identifier, or orbit cardinality",
+    "any equivalence relation over admitted inputs",
+    "any presentation-equivalence declaration",
+    "any canonical representative or canonical labelling",
+    "any parameter-sharing or parameter-tying instruction",
+    "any statement that two admitted inputs should share a statistic",
+    "any expected group order or expected class count",
+    "any answer frequency, target probability, or answer rule",
+    "any assignment from admitted inputs to answer labels",
+    "any target-derived feature"
+  ],
+  "primitives": [
+    {
+      "description": "the declared neighbour relation along the corridor, listed in both directions",
+      "extension": [
+        [
+          "A0",
+          "A1"
+        ],
+        [
+          "A0",
+          "A8"
+        ],
+        [
+          "A1",
+          "A0"
+        ],
+        [
+          "A1",
+          "A2"
+        ],
+        [
+          "A2",
+          "A1"
+        ],
+        [
+          "A2",
+          "A3"
+        ],
+        [
+          "A3",
+          "A2"
+        ],
+        [
+          "A3",
+          "A4"
+        ],
+        [
+          "A4",
+          "A3"
+        ],
+        [
+          "A4",
+          "A5"
+        ],
+        [
+          "A5",
+          "A4"
+        ],
+        [
+          "A5",
+          "A6"
+        ],
+        [
+          "A6",
+          "A5"
+        ],
+        [
+          "A6",
+          "A7"
+        ],
+        [
+          "A7",
+          "A6"
+        ],
+        [
+          "A7",
+          "A8"
+        ],
+        [
+          "A8",
+          "A0"
+        ],
+        [
+          "A8",
+          "A7"
+        ]
+      ],
+      "kind": "relation",
+      "name": "adjacent",
+      "signature": [
+        "Site",
+        "Site"
+      ]
+    },
+    {
+      "codomain": "District",
+      "description": "the declared total map sending each site to the district it lies in",
+      "domain": [
+        "Site"
+      ],
+      "graph": [
+        {
+          "arguments": [
+            "A0"
+          ],
+          "value": "D0"
+        },
+        {
+          "arguments": [
+            "A1"
+          ],
+          "value": "D0"
+        },
+        {
+          "arguments": [
+            "A2"
+          ],
+          "value": "D0"
+        },
+        {
+          "arguments": [
+            "A3"
+          ],
+          "value": "D1"
+        },
+        {
+          "arguments": [
+            "A4"
+          ],
+          "value": "D1"
+        },
+        {
+          "arguments": [
+            "A5"
+          ],
+          "value": "D1"
+        },
+        {
+          "arguments": [
+            "A6"
+          ],
+          "value": "D2"
+        },
+        {
+          "arguments": [
+            "A7"
+          ],
+          "value": "D2"
+        },
+        {
+          "arguments": [
+            "A8"
+          ],
+          "value": "D2"
+        }
+      ],
+      "kind": "operation",
+      "name": "district"
+    }
+  ],
+  "role": "richer multi-primitive fixture required by 017.26b section 5 for a Strong positive",
+  "schema": "gpt-01726-multi-primitive-world/v1",
+  "sorts": [
+    {
+      "description": "an opaque nine-element carrier of sites",
+      "elements": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "name": "Site"
+    },
+    {
+      "description": "an opaque three-element carrier of districts",
+      "elements": [
+        "D0",
+        "D1",
+        "D2"
+      ],
+      "name": "District"
+    }
+  ]
+}
