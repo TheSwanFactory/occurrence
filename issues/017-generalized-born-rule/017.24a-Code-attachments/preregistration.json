@@ -1,0 +1,173 @@
+{
+  "schema": "gpt-01724a-refinement-preregistration/v1",
+  "turn": "occurrence/gpt Issue 017.24a, Kiro-initiated follow-up to the 017.25 result",
+  "frozen_before": "any label of the circulant fixture was generated; this file and the module that pins it are committed before the experiment runs",
+  "precedent": "017.21a, a Kiro-initiated unfenced follow-up that went past the fence of its own prior result",
+  "what_this_turn_changes": {
+    "defect_addressed": "017.25 section B confessed that on the Fano successor Aut(Sigma') is transitive on marked and on unmarked pairs, so the derived class partition coincides with the declared relation together with its complement. Every number in 017.25 is therefore equally consistent with a cheaper story: that the gain comes from indexing parameters by a relation the schema already states, with no derivation involved.",
+    "measurement_that_was_missing": "a condition indexed by the declared relation alone, run on a fixture where the derived quotient strictly refines that relation",
+    "additions": [
+      "a new frozen fixture Sigma'' whose derived quotient strictly refines the declared relation, matched to the Fano successor on every cardinality",
+      "condition R, two parameters indexed by the declared relation itself",
+      "a declared-symmetry ladder that turns the binary compiled-versus-uncompiled contrast into a dose-response curve",
+      "condition U_relation, the uncompiled learner handed the relation membership bit as an explicit feature",
+      "a generalized exact reference valid for any number of classes and for partitions too coarse for the truth"
+    ],
+    "shared_implementation": "the estimator, hidden generator, split builder, exact evaluation, uncompiled learner, and scramble and erasure controls are imported byte-pinned from the 017.24 attachments, so any difference in outcome is attributable to the fixture and the new conditions and not to a reimplementation",
+    "shared_module_sha256": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+    "prior_result_commit": "26905341915fe277bfe819c30c4b6a3f5250b170",
+    "prior_quilt_revision": "e06607dcecc911842378dae213629843fa6c4075ebe8d17198013cdc7000e7a5"
+  },
+  "research_question": "Does the measured training-economy advantage come from compiling a derived quotient, or only from indexing parameters by the relation the Type Schema already declares?",
+  "fixtures": [
+    {
+      "id": "fano",
+      "role": "control fixture, carried over unchanged from 017.24",
+      "schema": "gpt-01724-fano-successor-type-schema/v1",
+      "sha256": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d",
+      "automorphism_group_order": 168,
+      "derived_classes": [21, 28],
+      "derived_quotient_strictly_refines_the_relation": false,
+      "holdout_per_class": [4, 6],
+      "theta_star": ["1/4", "3/4"]
+    },
+    {
+      "id": "circulant",
+      "role": "treatment fixture, new in this turn",
+      "schema": "gpt-01724a-circulant-refinement-type-schema/v1",
+      "sha256": "31a6d0000582c6d40522111dfc0e1fd87244e4afc6e428bc845fefe25ed755bb",
+      "automorphism_group_order": 14,
+      "derived_classes": [7, 14, 14, 14],
+      "derived_quotient_strictly_refines_the_relation": true,
+      "relation_split": {"marked_21_splits_into": [7, 14], "unmarked_28_splits_into": [14, 14]},
+      "holdout_per_class": [2, 3, 3, 3],
+      "theta_star": ["1/8", "3/8", "5/8", "7/8"]
+    }
+  ],
+  "matched_design": "both fixtures have 7 points, 7 lines, 21 marked pairs, and 49 admitted inputs, so the contrast is not confounded by size. Both are run through the same code with the same estimator, the same sample-size grid, the same replicate counts, and the same controls.",
+  "ground_truth": {
+    "rule": "lambda*_c = (2c + 1) / (2k) for k derived classes, indexed in the canonical class order",
+    "rationale": "evenly spaced strictly interior values, fixed by a rule rather than chosen, so no separation is selected to flatter any condition",
+    "interior_only": true,
+    "generated_from": "the full automorphism quotient of each fixture",
+    "index_convention": "classes ordered by cardinality then by least member; no condition receives theta_star",
+    "secondary_separations": {
+      "rule": "lambda*_c = 1/2 + (2c + 1 - k) * s / (2k) for contraction s in {1/2, 1/4}, keeping the ordering and the interior constraint",
+      "purpose": "check that no conclusion depends on the width of the separation"
+    }
+  },
+  "conditions": {
+    "T": {
+      "name": "typed compiled TDM at the full declared symmetry",
+      "parameters": "k, the number of derived classes",
+      "path": "estimate one lambda per derived class, then evaluate the certified invariant state and intrinsic central test"
+    },
+    "O": {
+      "name": "oracle class control",
+      "parameters": "k",
+      "path": "same estimator, no compiler, no OT, no Born formula"
+    },
+    "R": {
+      "name": "relation-indexed learner",
+      "parameters": 2,
+      "path": "two parameters indexed by membership in the declared relation, nothing derived",
+      "purpose": "this is the condition 017.24 lacked. It names the cheaper explanation of the 017.25 result. On the Fano fixture its asymptotic floor is exactly zero, so it is indistinguishable from T; on the circulant fixture it carries a strictly positive floor. The contrast between those two facts is the whole point of this turn."
+    },
+    "L_rungs": {
+      "name": "declared-symmetry ladder",
+      "parameters": "whatever survives closure of the declared generating set",
+      "fano_rungs": {"rung_1": 49, "rung_7": 7, "rung_21": 3, "rung_168": 2},
+      "circulant_rungs": {"rung_1": 49, "rung_7": 7, "rung_14": 4},
+      "generator_source": "the circulant declares its generators extensionally in Sigma''. The 017.20 Fano presentation does not use the circulant labeling, so its rung generators are derived from the compiled group by a deterministic rule: sort the group, then greedily take the least element that grows the closure to the next requested order. Subgroups of a given order in that group are conjugate, so the derived class counts do not depend on the choice, and that independence is verified mechanically.",
+      "purpose": "convert a binary contrast into a dose-response curve. Every rung at least as fine as the truth has zero floor, so the rungs differ only in labeled-data burden, and the prediction dof/(2n) is fixed in advance."
+    },
+    "S": {"name": "saturated pair model", "parameters": 49, "status": "ablation, identical to rung_1"},
+    "G": {"name": "generic symmetry learner", "parameters": "k", "path": "union-find closure over the supplied full group, no quotient named"},
+    "U_family": {
+      "name": "same-information uncompiled learners",
+      "inherited_from_017_24": ["U_fixed", "U_earlystop", "U_selected", "U_quadratic", "U_ladder"],
+      "new_variant": {
+        "U_relation": "the uncompiled learner with the relation membership bit appended to its 28 declared features, selected over the ridge grid by internal label-only validation. This is the strongest read-the-relation baseline: it does not have to discover the relation as an interaction, it is handed it. On the circulant fixture it should inherit R's floor unless it also recovers the refinement."
+      },
+      "U_best": "per cell, whichever preregistered U variant performs better; deliberately conservative against the thesis"
+    }
+  },
+  "regimes": {
+    "A": "train and evaluate under the uniform distribution on all 49 admitted inputs; exact expected loss in closed form",
+    "B": "hold out whole pair identities, stratified by derived class with the per-fixture holdout vector; train only on observations from the seen identities; evaluate exactly on the unseen identities, reported per class and aggregate"
+  },
+  "estimator": {
+    "primary": "beta(1,1) posterior mean, (k + 1) / (m + 2)",
+    "secondary": "beta(1/2,1/2) posterior mean",
+    "applies_to": ["T", "O", "R", "every ladder rung", "S", "G"],
+    "unobserved_parameter_value": 0.5
+  },
+  "sample_sizes": [4, 8, 16, 32, 64, 128, 256, 512, 1024],
+  "replicates": {"closed_form_conditions": 400, "learned_conditions": 100},
+  "seeds": {
+    "base": 20260924,
+    "note": "a different base from 017.24, so this turn's observations are independent of the banked ones"
+  },
+  "metrics": {
+    "primary_1": "excess expected held-out NLL against the Bayes-optimal NLL under theta*",
+    "primary_2": "labeled examples to reach mean excess NLL at or below 0.02 and 0.01, smallest point on the declared grid",
+    "primary_3": "held-out-identity transfer in regime B, per class and aggregate",
+    "primary_4": "the asymptotic floor of each partition, computed exactly rather than estimated",
+    "secondary": ["Brier score", "10-bin calibration error", "parameter error where exposed", "degrees of freedom", "compile and fit time"]
+  },
+  "declared_predictions": {
+    "status": "computed exactly from the frozen schemas before any label exists; these are predictions, not results, and the run either reproduces them or falsifies the implementation",
+    "method": "generalized exact reference: excess log loss is additive across cells, and a cell's estimator depends only on its own observation count, which is marginally binomial, so the expectation is a finite sum per cell with no simulation and no joint lattice",
+    "regime_A_exact_expected_excess_nll": {
+      "fano": {
+        "T": {"4": 0.0862, "64": 0.0145, "1024": 0.0010, "n_at_0.02": 64, "n_at_0.01": 128, "floor": 0.0},
+        "R": {"4": 0.0862, "64": 0.0145, "1024": 0.0010, "n_at_0.02": 64, "n_at_0.01": 128, "floor": 0.0},
+        "L_rung_1": {"1024": 0.0216, "n_at_0.02": null, "floor": 0.0},
+        "L_rung_7": {"1024": 0.0034, "n_at_0.02": 256, "floor": 0.0},
+        "L_rung_21": {"1024": 0.0015, "n_at_0.02": 128, "floor": 0.0},
+        "L_rung_168": {"1024": 0.0010, "n_at_0.02": 64, "floor": 0.0}
+      },
+      "circulant": {
+        "T": {"4": 0.1252, "64": 0.0259, "1024": 0.0019, "n_at_0.02": 128, "n_at_0.01": 256, "floor": 0.0},
+        "R": {"4": 0.1220, "64": 0.0551, "1024": 0.0415, "n_at_0.02": null, "n_at_0.01": null, "floor": 0.040527},
+        "L_rung_1": {"1024": 0.0212, "n_at_0.02": null, "floor": 0.0},
+        "L_rung_7": {"1024": 0.0034, "n_at_0.02": 256, "floor": 0.0},
+        "L_rung_14": {"1024": 0.0019, "n_at_0.02": 128, "floor": 0.0}
+      }
+    },
+    "regime_B_floors_on_unseen_identities": {
+      "fano": {"T": 0.0, "R": 0.0, "S": 0.130812, "L_rung_7": 0.0, "L_rung_21": 0.0},
+      "circulant": {"T": 0.0, "R": 0.042495, "S": 0.161035, "L_rung_7": 0.0, "L_rung_14": 0.0}
+    },
+    "headline_prediction": "R is exactly indistinguishable from T on the Fano fixture at every sample size, and is separated from T on the circulant fixture by a floor of 0.0405 in regime A and 0.0425 in regime B that no amount of data removes",
+    "dose_response_prediction": "within each fixture, mean excess NLL at fixed n is monotone increasing in the number of free parameters surviving the declared symmetry, and approaches dof/(2n) for the rungs whose quotient is at least as fine as the truth",
+    "crossing_prediction": "on the circulant fixture R, having two parameters against T's four, is expected to beat T at n = 4 only, with T ahead from n = 8 onward. A later crossing, or an R advantage extending past n = 16, would weaken the 017.25 story rather than strengthen it.",
+    "falsification": "if the measured curves do not reproduce these exact values within sampling error, the implementation is wrong and the turn reports that instead of a scientific finding"
+  },
+  "verdict_rule": {
+    "separation_established": "R equals T within sampling error on the Fano fixture AND R is separated from T on the circulant fixture by a margin that exceeds its exactly computed floor minus sampling error",
+    "compilation_is_load_bearing": "on the circulant fixture, T reaches a preregistered threshold that R never reaches on the declared grid",
+    "dose_response_confirmed": "the measured ordering of mean excess NLL across ladder rungs matches the ordering of their free-parameter counts at every sample size from 16 upward",
+    "outcome_if_all_three_hold": "the 017.25 training-economy claim is upheld and strengthened: the advantage is attributable to a derived quotient and not merely to the declared relation",
+    "outcome_if_the_first_fails": "the 017.25 claim is downgraded, because the relation-indexed learner would then be an adequate account of it",
+    "outcome_if_the_second_fails": "compilation is not load-bearing on this fixture either, and the confessed degeneracy of 017.24 becomes a general limitation rather than a fixture artifact",
+    "honest_ceiling": "even if all three hold, the finding remains a statement about two finite 49-input fixtures"
+  },
+  "controls": {
+    "inherited": "the scrambled-structure ensemble, the relation-erased fail-closed check, and the wrong-compiler partition, all reused byte-pinned from 017.24 and recomputed for the circulant fixture",
+    "new": {
+      "coarse_compiler": "a partition strictly coarser than the truth but still automorphism-respecting, namely ladder rung whose quotient merges classes with different lambda*, which must carry a positive floor even though it is a legitimate group quotient",
+      "purpose": "shows that respecting symmetry is not sufficient; the symmetry that is declared has to be the one that generates the data"
+    }
+  },
+  "forbidden_conclusions": [
+    "language-scale sample-efficiency gains",
+    "superiority to LLMs or SLMs",
+    "physical realization of the OT test",
+    "autonomous dynamics",
+    "that every useful Type Schema admits a compact compiler",
+    "that OT is uniquely responsible for any gain",
+    "that either fixture is representative of anything beyond itself"
+  ],
+  "stop_condition": "stop after the two matched fixtures, the ladder, and the controls; do not scale to language, embeddings, transformers, or external corpora; do not resolve Issue 018"
+}

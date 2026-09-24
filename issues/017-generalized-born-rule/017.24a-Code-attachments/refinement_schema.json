@@ -1,0 +1,160 @@
+{
+  "schema": "gpt-01724a-circulant-refinement-type-schema/v1",
+  "domain": {
+    "name": "abstract circulant point-line incidence on Z/7 with difference set {0,1,2}",
+    "description": "Two opaque seven-element sorts and a 21-row incidence relation, matched to the 017.24 Fano successor on every cardinality but deliberately not a projective plane.",
+    "source_semantics": "A point-line pair is marked exactly when its two opaque members occur in one declared incidence row. Raw identifiers carry no order, coordinate, probability, or answer meaning. The integers in the identifier names carry no declared arithmetic; the relation is declared extensionally by its 21 rows.",
+    "why_this_fixture": "On the 017.24 Fano successor the automorphism group is transitive on marked and on unmarked pairs, so the derived class partition coincides with the declared relation together with its complement. That degeneracy makes 017.24 unable to separate compiling a derived quotient from indexing by the relation the schema already states. Here the derived partition strictly refines the declared relation, so the two are separated by construction.",
+    "matched_to": "gpt-01724-fano-successor-type-schema/v1",
+    "matched_to_sha256": "149778bf5b8cca166ab77d3f33e9368191a58b33af9d1c15075f9ff41312a81d",
+    "matched_cardinalities": {
+      "points": 7,
+      "lines": 7,
+      "marked_pairs": 21,
+      "admitted_inputs": 49
+    }
+  },
+  "sorts": {
+    "point": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6"
+    ],
+    "line": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ]
+  },
+  "relations": {
+    "incident": [
+      ["P0", "L0"],
+      ["P0", "L1"],
+      ["P0", "L2"],
+      ["P1", "L1"],
+      ["P1", "L2"],
+      ["P1", "L3"],
+      ["P2", "L2"],
+      ["P2", "L3"],
+      ["P2", "L4"],
+      ["P3", "L3"],
+      ["P3", "L4"],
+      ["P3", "L5"],
+      ["P4", "L4"],
+      ["P4", "L5"],
+      ["P4", "L6"],
+      ["P5", "L5"],
+      ["P5", "L6"],
+      ["P5", "L0"],
+      ["P6", "L6"],
+      ["P6", "L0"],
+      ["P6", "L1"]
+    ]
+  },
+  "admitted_inputs": {
+    "type": "Point × Line",
+    "generator": "Every ordered pair (point, line) from the two declared sorts.",
+    "cardinality": 49
+  },
+  "equivalence": {
+    "raw_presentation_equivalence": "Two raw presentations of an admitted input are equivalent exactly when a sort-preserving incidence automorphism carries one point-line pair to the other.",
+    "quotient_status": "derivable",
+    "quotient_is_declared_here": false
+  },
+  "automorphisms": {
+    "definition": "All independent point and line permutations that preserve the declared incident relation.",
+    "expected_group_order": 14,
+    "expectation_status": "redundant self-check on a quantity the compiler derives independently from the sorts and the relation alone"
+  },
+  "declared_symmetry_ladder": {
+    "purpose": "Each rung is a distinct declaration of how much presentation equivalence the Type Schema states. A rung declares a generating set; the compiler closes it and derives the surviving free parameters. The ladder is the dose axis for the experiment: more declared symmetry, fewer parameters left for Training.",
+    "closure_rule": "close the declared generating set under composition, then partition the admitted inputs into the classes of the closure's action",
+    "rungs": [
+      {
+        "name": "rung_1",
+        "declared_generators": [],
+        "expected_closed_order": 1,
+        "expected_free_parameters": 49
+      },
+      {
+        "name": "rung_7",
+        "declared_generators": ["tau"],
+        "expected_closed_order": 7,
+        "expected_free_parameters": 7
+      },
+      {
+        "name": "rung_14",
+        "declared_generators": ["tau", "sigma"],
+        "expected_closed_order": 14,
+        "expected_free_parameters": 4,
+        "coincides_with_full_automorphism_group": true
+      }
+    ],
+    "generators": {
+      "tau": {
+        "point_images": ["P1", "P2", "P3", "P4", "P5", "P6", "P0"],
+        "line_images": ["L1", "L2", "L3", "L4", "L5", "L6", "L0"]
+      },
+      "sigma": {
+        "point_images": ["P0", "P6", "P5", "P4", "P3", "P2", "P1"],
+        "line_images": ["L2", "L1", "L0", "L6", "L5", "L4", "L3"]
+      }
+    }
+  },
+  "derivable_self_checks": {
+    "expected_class_count": 4,
+    "expected_class_cardinalities": [7, 14, 14, 14],
+    "expected_relation_split": {
+      "marked_pairs_split_into": [7, 14],
+      "unmarked_pairs_split_into": [14, 14],
+      "derived_partition_strictly_refines_the_declared_relation": true
+    },
+    "naming_constraint": "Derived classes are reported as O_0 through O_3, ordered by cardinality then by least member. The names are bookkeeping and carry no answer meaning.",
+    "expectation_status": "redundant self-check; the compiler reads only sorts and relations and must reproduce these numbers without consulting this block"
+  },
+  "answer_type": {
+    "name": "BinaryAnswer",
+    "labels": [
+      "a_0",
+      "a_1"
+    ],
+    "arity": 2,
+    "semantics": "Two neutral, unordered, mutually exclusive and exhaustive answer labels. The answer type is binary regardless of how many classes the compiler derives; a class carries a frequency of a_0, not an answer of its own. The labels are opaque names with no source meaning and no declared relationship to any sort, relation, or derived class."
+  },
+  "not_declared_here": [
+    "any total or partial assignment from admitted inputs to answer labels",
+    "any statement that the declared relation determines an answer label",
+    "any statement that a derived class determines an answer label",
+    "any scalar answer frequency",
+    "any preparation coordinate",
+    "any effect coordinate",
+    "any ambient ray",
+    "any central orientation",
+    "any decision procedure of any kind"
+  ],
+  "compiler_visible_semantics": [
+    "sort membership",
+    "the declared point-line incident relation",
+    "the declared generating set of the rung being compiled",
+    "the induced equivalence classes on admitted inputs",
+    "the arity and the neutral labels of the answer type"
+  ],
+  "compiler_forbidden_semantics": [
+    "answer frequency",
+    "Born expectation value",
+    "OT preparation or ray coordinate",
+    "effect coordinate",
+    "answer label stored as an input field",
+    "per-instance answer table",
+    "per-class answer table"
+  ],
+  "independence_fence": "This fixture is constructed for 017.24a and reuses no banked catalogue, habitat support, hidden label, or learning target. It is an abstract circulant incidence structure, chosen because its automorphism group is transitive on neither the marked nor the unmarked pairs."
+}
