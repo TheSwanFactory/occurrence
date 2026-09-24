@@ -1,0 +1,1740 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.26-Code-attachments/derived_symmetry.py": "e7074a60ed460b7b98d7f234e3af06aec169e5ae526e477c62e1e8799d0f2e3b",
+      "../017.26-Code-attachments/phase_s_certificate.json": "f2e36998f0e5715d785d5dd0a86790fc32604040334c8250d2fd6c845c29709a"
+    },
+    "prior_result": "quilt+s3://protology#package=occurrence/gpt@16f56ff72b50adf1361618dfa92b66b3501377d8d2abe19a749cf1cebcc9fe55&path=issues/017-jev-pivot/017.27-Kiro-derived-symmetry-from-typed-world-structure-result.md",
+    "prior_result_commit": "2817b8c1a1d0e6b10d4ea6ac16d1bbce35df06a8",
+    "task": "quilt+s3://protology#package=occurrence/gpt@e5289c582121bda62394321bf73b4b476f9bb23c49eb6efd19044c14366009f1&path=issues/017-jev-pivot/017.28-Task-compiler-scope-refinement-versus-exact-automorphism.md"
+  },
+  "environment": {
+    "python": "3.12.11"
+  },
+  "exact_over_refinement_time_ratio": {
+    "max": 618.127218,
+    "median": 0.789666,
+    "min": 0.033392
+  },
+  "per_family_scaling": {
+    "bipartite_incidence": [
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.000776,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.001733,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          10
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 25,
+        "family": "bipartite_incidence",
+        "group_order": 10,
+        "position": 22,
+        "total_carrier_elements": 10,
+        "world": "bipartite_incidence:n=5:offsets=0-1"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.00082,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.001591,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          15
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 25,
+        "family": "bipartite_incidence",
+        "group_order": 10,
+        "position": 23,
+        "total_carrier_elements": 10,
+        "world": "bipartite_incidence:n=5:offsets=0-1-2"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.001402,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.003115,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          12
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 36,
+        "family": "bipartite_incidence",
+        "group_order": 12,
+        "position": 24,
+        "total_carrier_elements": 12,
+        "world": "bipartite_incidence:n=6:offsets=0-1"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.001645,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.003346,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 36,
+        "family": "bipartite_incidence",
+        "group_order": 12,
+        "position": 25,
+        "total_carrier_elements": 12,
+        "world": "bipartite_incidence:n=6:offsets=0-1-2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.002598,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.00329,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 36,
+        "family": "bipartite_incidence",
+        "group_order": 24,
+        "position": 26,
+        "total_carrier_elements": 12,
+        "world": "bipartite_incidence:n=6:offsets=0-1-3"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.002414,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.006689,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          14
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 49,
+        "family": "bipartite_incidence",
+        "group_order": 14,
+        "position": 27,
+        "total_carrier_elements": 14,
+        "world": "bipartite_incidence:n=7:offsets=0-1"
+      },
+      {
+        "Q_aut_cells": 2,
+        "Q_aut_seconds": 0.012644,
+        "Q_ref_cells": 2,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.005681,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          28
+        ],
+        "dof_under_Q_aut": 2,
+        "dof_under_Q_ref": 2,
+        "dof_under_a_saturated_model": 49,
+        "family": "bipartite_incidence",
+        "group_order": 168,
+        "position": 28,
+        "total_carrier_elements": 14,
+        "world": "bipartite_incidence:n=7:offsets=0-1-2-4"
+      },
+      {
+        "Q_aut_cells": 2,
+        "Q_aut_seconds": 0.012022,
+        "Q_ref_cells": 2,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.00607,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          21
+        ],
+        "dof_under_Q_aut": 2,
+        "dof_under_Q_ref": 2,
+        "dof_under_a_saturated_model": 49,
+        "family": "bipartite_incidence",
+        "group_order": 168,
+        "position": 29,
+        "total_carrier_elements": 14,
+        "world": "bipartite_incidence:n=7:offsets=0-1-3"
+      },
+      {
+        "Q_aut_cells": 8,
+        "Q_aut_seconds": 0.00737,
+        "Q_ref_cells": 8,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.011068,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          32
+        ],
+        "dof_under_Q_aut": 8,
+        "dof_under_Q_ref": 8,
+        "dof_under_a_saturated_model": 64,
+        "family": "bipartite_incidence",
+        "group_order": 8,
+        "position": 30,
+        "total_carrier_elements": 16,
+        "world": "bipartite_incidence:n=8:offsets=0-1-2-4"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.01203,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.010062,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          24
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 64,
+        "family": "bipartite_incidence",
+        "group_order": 48,
+        "position": 31,
+        "total_carrier_elements": 16,
+        "world": "bipartite_incidence:n=8:offsets=0-1-3"
+      },
+      {
+        "Q_aut_cells": 9,
+        "Q_aut_seconds": 0.012623,
+        "Q_ref_cells": 9,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.019007,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 9,
+        "dof_under_Q_ref": 9,
+        "dof_under_a_saturated_model": 81,
+        "family": "bipartite_incidence",
+        "group_order": 9,
+        "position": 32,
+        "total_carrier_elements": 18,
+        "world": "bipartite_incidence:n=9:offsets=0-1-2-4"
+      },
+      {
+        "Q_aut_cells": 9,
+        "Q_aut_seconds": 0.016583,
+        "Q_ref_cells": 9,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.016987,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          27
+        ],
+        "dof_under_Q_aut": 9,
+        "dof_under_Q_ref": 9,
+        "dof_under_a_saturated_model": 81,
+        "family": "bipartite_incidence",
+        "group_order": 9,
+        "position": 33,
+        "total_carrier_elements": 18,
+        "world": "bipartite_incidence:n=9:offsets=0-1-3"
+      },
+      {
+        "Q_aut_cells": 11,
+        "Q_aut_seconds": 0.039291,
+        "Q_ref_cells": 11,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.038421,
+        "admitted_inputs": 121,
+        "declared_primitive_rows": [
+          33
+        ],
+        "dof_under_Q_aut": 11,
+        "dof_under_Q_ref": 11,
+        "dof_under_a_saturated_model": 121,
+        "family": "bipartite_incidence",
+        "group_order": 11,
+        "position": 34,
+        "total_carrier_elements": 22,
+        "world": "bipartite_incidence:n=11:offsets=0-1-3"
+      }
+    ],
+    "circulant_graph": [
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.000407,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.00336,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          10
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 25,
+        "family": "circulant_graph",
+        "group_order": 10,
+        "position": 0,
+        "total_carrier_elements": 5,
+        "world": "circulant_graph:n=5:offsets=1"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.000411,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.003018,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          10
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 25,
+        "family": "circulant_graph",
+        "group_order": 10,
+        "position": 1,
+        "total_carrier_elements": 5,
+        "world": "circulant_graph:n=5:offsets=2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.000659,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.006618,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          12
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 36,
+        "family": "circulant_graph",
+        "group_order": 12,
+        "position": 2,
+        "total_carrier_elements": 6,
+        "world": "circulant_graph:n=6:offsets=1"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.002575,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.006454,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 36,
+        "family": "circulant_graph",
+        "group_order": 72,
+        "position": 3,
+        "total_carrier_elements": 6,
+        "world": "circulant_graph:n=6:offsets=1-3"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.002484,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.006237,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          12
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 36,
+        "family": "circulant_graph",
+        "group_order": 72,
+        "position": 4,
+        "total_carrier_elements": 6,
+        "world": "circulant_graph:n=6:offsets=2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.000676,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.006753,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 36,
+        "family": "circulant_graph",
+        "group_order": 12,
+        "position": 5,
+        "total_carrier_elements": 6,
+        "world": "circulant_graph:n=6:offsets=2-3"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.000914,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.012155,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          14
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 49,
+        "family": "circulant_graph",
+        "group_order": 14,
+        "position": 6,
+        "total_carrier_elements": 7,
+        "world": "circulant_graph:n=7:offsets=1"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.001312,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.012627,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          28
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 49,
+        "family": "circulant_graph",
+        "group_order": 14,
+        "position": 7,
+        "total_carrier_elements": 7,
+        "world": "circulant_graph:n=7:offsets=1-2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.00165,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.012385,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          28
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 49,
+        "family": "circulant_graph",
+        "group_order": 14,
+        "position": 8,
+        "total_carrier_elements": 7,
+        "world": "circulant_graph:n=7:offsets=1-3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.001555,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.020225,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          16
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "circulant_graph",
+        "group_order": 16,
+        "position": 9,
+        "total_carrier_elements": 8,
+        "world": "circulant_graph:n=8:offsets=1"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.001993,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.021212,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          32
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "circulant_graph",
+        "group_order": 16,
+        "position": 10,
+        "total_carrier_elements": 8,
+        "world": "circulant_graph:n=8:offsets=1-2"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.024495,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.022081,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          48
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 64,
+        "family": "circulant_graph",
+        "group_order": 384,
+        "position": 11,
+        "total_carrier_elements": 8,
+        "world": "circulant_graph:n=8:offsets=1-2-3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.002658,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.020869,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          24
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "circulant_graph",
+        "group_order": 16,
+        "position": 12,
+        "total_carrier_elements": 8,
+        "world": "circulant_graph:n=8:offsets=1-4"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.002721,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.021765,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          32
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "circulant_graph",
+        "group_order": 16,
+        "position": 13,
+        "total_carrier_elements": 8,
+        "world": "circulant_graph:n=8:offsets=2-3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.00244,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.033062,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 81,
+        "family": "circulant_graph",
+        "group_order": 18,
+        "position": 14,
+        "total_carrier_elements": 9,
+        "world": "circulant_graph:n=9:offsets=1"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.005111,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.034286,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 81,
+        "family": "circulant_graph",
+        "group_order": 18,
+        "position": 15,
+        "total_carrier_elements": 9,
+        "world": "circulant_graph:n=9:offsets=1-3"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.09231,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.033256,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          18
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 81,
+        "family": "circulant_graph",
+        "group_order": 1296,
+        "position": 16,
+        "total_carrier_elements": 9,
+        "world": "circulant_graph:n=9:offsets=3"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.003318,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.052759,
+        "admitted_inputs": 100,
+        "declared_primitive_rows": [
+          20
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 100,
+        "family": "circulant_graph",
+        "group_order": 20,
+        "position": 17,
+        "total_carrier_elements": 10,
+        "world": "circulant_graph:n=10:offsets=1"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.005791,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.050646,
+        "admitted_inputs": 100,
+        "declared_primitive_rows": [
+          30
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 100,
+        "family": "circulant_graph",
+        "group_order": 20,
+        "position": 18,
+        "total_carrier_elements": 10,
+        "world": "circulant_graph:n=10:offsets=1-5"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.009434,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.050826,
+        "admitted_inputs": 100,
+        "declared_primitive_rows": [
+          30
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 100,
+        "family": "circulant_graph",
+        "group_order": 20,
+        "position": 19,
+        "total_carrier_elements": 10,
+        "world": "circulant_graph:n=10:offsets=2-5"
+      },
+      {
+        "Q_aut_cells": 7,
+        "Q_aut_seconds": 0.012744,
+        "Q_ref_cells": 7,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.102962,
+        "admitted_inputs": 144,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 7,
+        "dof_under_Q_ref": 7,
+        "dof_under_a_saturated_model": 144,
+        "family": "circulant_graph",
+        "group_order": 24,
+        "position": 20,
+        "total_carrier_elements": 12,
+        "world": "circulant_graph:n=12:offsets=1-6"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.023385,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.109738,
+        "admitted_inputs": 144,
+        "declared_primitive_rows": [
+          48
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 144,
+        "family": "circulant_graph",
+        "group_order": 48,
+        "position": 21,
+        "total_carrier_elements": 12,
+        "world": "circulant_graph:n=12:offsets=3-4"
+      }
+    ],
+    "composite_product": [
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.00161,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.001402,
+        "admitted_inputs": 18,
+        "declared_primitive_rows": [
+          12,
+          9,
+          6
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 18,
+        "family": "composite_product",
+        "group_order": 36,
+        "position": 82,
+        "total_carrier_elements": 15,
+        "world": "composite_product:n=6:m=3:offsets=1"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.002531,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.00131,
+        "admitted_inputs": 18,
+        "declared_primitive_rows": [
+          18,
+          9,
+          6
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 18,
+        "family": "composite_product",
+        "group_order": 36,
+        "position": 83,
+        "total_carrier_elements": 15,
+        "world": "composite_product:n=6:m=3:offsets=1-3"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.006259,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.003026,
+        "admitted_inputs": 27,
+        "declared_primitive_rows": [
+          36,
+          9,
+          9
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 27,
+        "family": "composite_product",
+        "group_order": 54,
+        "position": 84,
+        "total_carrier_elements": 18,
+        "world": "composite_product:n=9:m=3:offsets=1-3"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.004398,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.004162,
+        "admitted_inputs": 32,
+        "declared_primitive_rows": [
+          16,
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 32,
+        "family": "composite_product",
+        "group_order": 64,
+        "position": 85,
+        "total_carrier_elements": 20,
+        "world": "composite_product:n=8:m=4:offsets=1"
+      },
+      {
+        "Q_aut_cells": 13,
+        "Q_aut_seconds": 0.005053,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.010625,
+        "admitted_inputs": 50,
+        "declared_primitive_rows": [
+          20,
+          25,
+          10
+        ],
+        "dof_under_Q_aut": 13,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 50,
+        "family": "composite_product",
+        "group_order": 4,
+        "position": 86,
+        "total_carrier_elements": 25,
+        "world": "composite_product:n=10:m=5:offsets=1"
+      }
+    ],
+    "corridor": [
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.000501,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.00056,
+        "admitted_inputs": 12,
+        "declared_primitive_rows": [
+          12,
+          6
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 12,
+        "family": "corridor",
+        "group_order": 4,
+        "position": 73,
+        "total_carrier_elements": 8,
+        "world": "corridor:n=6:m=2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.001212,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.00095,
+        "admitted_inputs": 16,
+        "declared_primitive_rows": [
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 16,
+        "family": "corridor",
+        "group_order": 4,
+        "position": 75,
+        "total_carrier_elements": 10,
+        "world": "corridor:n=8:m=2"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.000579,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.001182,
+        "admitted_inputs": 18,
+        "declared_primitive_rows": [
+          12,
+          6
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 18,
+        "family": "corridor",
+        "group_order": 6,
+        "position": 74,
+        "total_carrier_elements": 9,
+        "world": "corridor:n=6:m=3"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.002539,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.001547,
+        "admitted_inputs": 20,
+        "declared_primitive_rows": [
+          20,
+          10
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 20,
+        "family": "corridor",
+        "group_order": 4,
+        "position": 78,
+        "total_carrier_elements": 12,
+        "world": "corridor:n=10:m=2"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.001956,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.002733,
+        "admitted_inputs": 27,
+        "declared_primitive_rows": [
+          18,
+          9
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 27,
+        "family": "corridor",
+        "group_order": 6,
+        "position": 77,
+        "total_carrier_elements": 12,
+        "world": "corridor:n=9:m=3"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.001397,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.003915,
+        "admitted_inputs": 32,
+        "declared_primitive_rows": [
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 32,
+        "family": "corridor",
+        "group_order": 8,
+        "position": 76,
+        "total_carrier_elements": 12,
+        "world": "corridor:n=8:m=4"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.004863,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.005066,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          24,
+          12
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 36,
+        "family": "corridor",
+        "group_order": 6,
+        "position": 80,
+        "total_carrier_elements": 15,
+        "world": "corridor:n=12:m=3"
+      },
+      {
+        "Q_aut_cells": 7,
+        "Q_aut_seconds": 0.004788,
+        "Q_ref_cells": 7,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.008712,
+        "admitted_inputs": 48,
+        "declared_primitive_rows": [
+          24,
+          12
+        ],
+        "dof_under_Q_aut": 7,
+        "dof_under_Q_ref": 7,
+        "dof_under_a_saturated_model": 48,
+        "family": "corridor",
+        "group_order": 8,
+        "position": 81,
+        "total_carrier_elements": 16,
+        "world": "corridor:n=12:m=4"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.002812,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 4,
+        "Q_ref_seconds": 0.009536,
+        "admitted_inputs": 50,
+        "declared_primitive_rows": [
+          20,
+          10
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 50,
+        "family": "corridor",
+        "group_order": 10,
+        "position": 79,
+        "total_carrier_elements": 15,
+        "world": "corridor:n=10:m=5"
+      }
+    ],
+    "quasigroup": [
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.002949,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.000845,
+        "admitted_inputs": 16,
+        "declared_primitive_rows": [
+          16
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 16,
+        "family": "quasigroup",
+        "group_order": 96,
+        "position": 35,
+        "total_carrier_elements": 12,
+        "world": "quasigroup:n=4:square=0"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.001731,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.000923,
+        "admitted_inputs": 16,
+        "declared_primitive_rows": [
+          16
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 16,
+        "family": "quasigroup",
+        "group_order": 32,
+        "position": 36,
+        "total_carrier_elements": 12,
+        "world": "quasigroup:n=4:square=1"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.001752,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.000831,
+        "admitted_inputs": 16,
+        "declared_primitive_rows": [
+          16
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 16,
+        "family": "quasigroup",
+        "group_order": 32,
+        "position": 37,
+        "total_carrier_elements": 12,
+        "world": "quasigroup:n=4:square=2"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.001727,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.0008,
+        "admitted_inputs": 16,
+        "declared_primitive_rows": [
+          16
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 16,
+        "family": "quasigroup",
+        "group_order": 32,
+        "position": 38,
+        "total_carrier_elements": 12,
+        "world": "quasigroup:n=4:square=3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.008447,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.002186,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 39,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=0"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.008136,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.002144,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 40,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=1"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.00815,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.002221,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 41,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=2"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.008623,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.002135,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 42,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.008309,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.002193,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 43,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=4"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.008491,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.00215,
+        "admitted_inputs": 25,
+        "declared_primitive_rows": [
+          25
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 25,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 44,
+        "total_carrier_elements": 15,
+        "world": "quasigroup:n=5:square=5"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 0.07059,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.004532,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 72,
+        "position": 45,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=0"
+      },
+      {
+        "Q_aut_cells": 2,
+        "Q_aut_seconds": 0.067952,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.004622,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 2,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 24,
+        "position": 46,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=1"
+      },
+      {
+        "Q_aut_cells": 2,
+        "Q_aut_seconds": 0.067692,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.004471,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 2,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 24,
+        "position": 47,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=2"
+      },
+      {
+        "Q_aut_cells": 2,
+        "Q_aut_seconds": 0.068404,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.004508,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 2,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 24,
+        "position": 48,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=3"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 0.067825,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.004795,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 36,
+        "position": 49,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=4"
+      },
+      {
+        "Q_aut_cells": 10,
+        "Q_aut_seconds": 0.063559,
+        "Q_ref_cells": 10,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.004888,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          36
+        ],
+        "dof_under_Q_aut": 10,
+        "dof_under_Q_ref": 10,
+        "dof_under_a_saturated_model": 36,
+        "family": "quasigroup",
+        "group_order": 4,
+        "position": 50,
+        "total_carrier_elements": 18,
+        "world": "quasigroup:n=6:square=5"
+      },
+      {
+        "Q_aut_cells": 7,
+        "Q_aut_seconds": 0.63353,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.009439,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 7,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 12,
+        "position": 51,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=0"
+      },
+      {
+        "Q_aut_cells": 29,
+        "Q_aut_seconds": 0.619532,
+        "Q_ref_cells": 29,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.009536,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 29,
+        "dof_under_Q_ref": 29,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 2,
+        "position": 52,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=1"
+      },
+      {
+        "Q_aut_cells": 29,
+        "Q_aut_seconds": 0.612166,
+        "Q_ref_cells": 29,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.00976,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 29,
+        "dof_under_Q_ref": 29,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 2,
+        "position": 53,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=2"
+      },
+      {
+        "Q_aut_cells": 29,
+        "Q_aut_seconds": 0.627454,
+        "Q_ref_cells": 29,
+        "Q_ref_rounds": 4,
+        "Q_ref_seconds": 0.010606,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 29,
+        "dof_under_Q_ref": 29,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 2,
+        "position": 54,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=3"
+      },
+      {
+        "Q_aut_cells": 29,
+        "Q_aut_seconds": 0.623597,
+        "Q_ref_cells": 29,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.009749,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 29,
+        "dof_under_Q_ref": 29,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 2,
+        "position": 55,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=4"
+      },
+      {
+        "Q_aut_cells": 49,
+        "Q_aut_seconds": 0.616073,
+        "Q_ref_cells": 49,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.009644,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          49
+        ],
+        "dof_under_Q_aut": 49,
+        "dof_under_Q_ref": 49,
+        "dof_under_a_saturated_model": 49,
+        "family": "quasigroup",
+        "group_order": 1,
+        "position": 56,
+        "total_carrier_elements": 21,
+        "world": "quasigroup:n=7:square=5"
+      },
+      {
+        "Q_aut_cells": 1,
+        "Q_aut_seconds": 9.999444,
+        "Q_ref_cells": 1,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.016177,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 1,
+        "dof_under_Q_ref": 1,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 10752,
+        "position": 57,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=0"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 8.469704,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.018717,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 96,
+        "position": 58,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=1"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 8.274889,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.019506,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 96,
+        "position": 59,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=2"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 8.207041,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.017115,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 128,
+        "position": 60,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=3"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 8.373476,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 3,
+        "Q_ref_seconds": 0.017459,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 96,
+        "position": 61,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=4"
+      },
+      {
+        "Q_aut_cells": 3,
+        "Q_aut_seconds": 8.146898,
+        "Q_ref_cells": 3,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.017253,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          64
+        ],
+        "dof_under_Q_aut": 3,
+        "dof_under_Q_ref": 3,
+        "dof_under_a_saturated_model": 64,
+        "family": "quasigroup",
+        "group_order": 128,
+        "position": 62,
+        "total_carrier_elements": 24,
+        "world": "quasigroup:n=8:square=5"
+      }
+    ],
+    "two_relation_graph": [
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.000655,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.012418,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          12,
+          6
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 36,
+        "family": "two_relation_graph",
+        "group_order": 6,
+        "position": 63,
+        "total_carrier_elements": 6,
+        "world": "two_relation_graph:n=6:offsets=1_2"
+      },
+      {
+        "Q_aut_cells": 4,
+        "Q_aut_seconds": 0.001021,
+        "Q_ref_cells": 4,
+        "Q_ref_rounds": 1,
+        "Q_ref_seconds": 0.011639,
+        "admitted_inputs": 36,
+        "declared_primitive_rows": [
+          12,
+          6
+        ],
+        "dof_under_Q_aut": 4,
+        "dof_under_Q_ref": 4,
+        "dof_under_a_saturated_model": 36,
+        "family": "two_relation_graph",
+        "group_order": 12,
+        "position": 64,
+        "total_carrier_elements": 6,
+        "world": "two_relation_graph:n=6:offsets=1_3"
+      },
+      {
+        "Q_aut_cells": 7,
+        "Q_aut_seconds": 0.000951,
+        "Q_ref_cells": 7,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.020752,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          14,
+          7
+        ],
+        "dof_under_Q_aut": 7,
+        "dof_under_Q_ref": 7,
+        "dof_under_a_saturated_model": 49,
+        "family": "two_relation_graph",
+        "group_order": 7,
+        "position": 65,
+        "total_carrier_elements": 7,
+        "world": "two_relation_graph:n=7:offsets=1_2"
+      },
+      {
+        "Q_aut_cells": 7,
+        "Q_aut_seconds": 0.001107,
+        "Q_ref_cells": 7,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.021147,
+        "admitted_inputs": 49,
+        "declared_primitive_rows": [
+          14,
+          7
+        ],
+        "dof_under_Q_aut": 7,
+        "dof_under_Q_ref": 7,
+        "dof_under_a_saturated_model": 49,
+        "family": "two_relation_graph",
+        "group_order": 7,
+        "position": 66,
+        "total_carrier_elements": 7,
+        "world": "two_relation_graph:n=7:offsets=1_3"
+      },
+      {
+        "Q_aut_cells": 8,
+        "Q_aut_seconds": 0.001338,
+        "Q_ref_cells": 8,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.038174,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 8,
+        "dof_under_Q_ref": 8,
+        "dof_under_a_saturated_model": 64,
+        "family": "two_relation_graph",
+        "group_order": 8,
+        "position": 67,
+        "total_carrier_elements": 8,
+        "world": "two_relation_graph:n=8:offsets=1_2"
+      },
+      {
+        "Q_aut_cells": 5,
+        "Q_aut_seconds": 0.002103,
+        "Q_ref_cells": 5,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.037504,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 5,
+        "dof_under_Q_ref": 5,
+        "dof_under_a_saturated_model": 64,
+        "family": "two_relation_graph",
+        "group_order": 16,
+        "position": 68,
+        "total_carrier_elements": 8,
+        "world": "two_relation_graph:n=8:offsets=1_4"
+      },
+      {
+        "Q_aut_cells": 8,
+        "Q_aut_seconds": 0.001604,
+        "Q_ref_cells": 8,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.036366,
+        "admitted_inputs": 64,
+        "declared_primitive_rows": [
+          16,
+          8
+        ],
+        "dof_under_Q_aut": 8,
+        "dof_under_Q_ref": 8,
+        "dof_under_a_saturated_model": 64,
+        "family": "two_relation_graph",
+        "group_order": 8,
+        "position": 69,
+        "total_carrier_elements": 8,
+        "world": "two_relation_graph:n=8:offsets=2_3"
+      },
+      {
+        "Q_aut_cells": 9,
+        "Q_aut_seconds": 0.002181,
+        "Q_ref_cells": 9,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.057584,
+        "admitted_inputs": 81,
+        "declared_primitive_rows": [
+          18,
+          9
+        ],
+        "dof_under_Q_aut": 9,
+        "dof_under_Q_ref": 9,
+        "dof_under_a_saturated_model": 81,
+        "family": "two_relation_graph",
+        "group_order": 9,
+        "position": 70,
+        "total_carrier_elements": 9,
+        "world": "two_relation_graph:n=9:offsets=1_3"
+      },
+      {
+        "Q_aut_cells": 10,
+        "Q_aut_seconds": 0.002871,
+        "Q_ref_cells": 10,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.085978,
+        "admitted_inputs": 100,
+        "declared_primitive_rows": [
+          20,
+          10
+        ],
+        "dof_under_Q_aut": 10,
+        "dof_under_Q_ref": 10,
+        "dof_under_a_saturated_model": 100,
+        "family": "two_relation_graph",
+        "group_order": 10,
+        "position": 71,
+        "total_carrier_elements": 10,
+        "world": "two_relation_graph:n=10:offsets=1_2"
+      },
+      {
+        "Q_aut_cells": 6,
+        "Q_aut_seconds": 0.004233,
+        "Q_ref_cells": 6,
+        "Q_ref_rounds": 2,
+        "Q_ref_seconds": 0.084637,
+        "admitted_inputs": 100,
+        "declared_primitive_rows": [
+          20,
+          10
+        ],
+        "dof_under_Q_aut": 6,
+        "dof_under_Q_ref": 6,
+        "dof_under_a_saturated_model": 100,
+        "family": "two_relation_graph",
+        "group_order": 20,
+        "position": 72,
+        "total_carrier_elements": 10,
+        "world": "two_relation_graph:n=10:offsets=1_5"
+      }
+    ]
+  },
+  "per_world_columns_required_by_section_11": [
+    "schema size as total declared carrier elements",
+    "|X_Sigma| as admitted_inputs",
+    "declared primitive sizes as declared_primitive_rows",
+    "Q_ref rounds",
+    "Q_ref time",
+    "Q_aut time",
+    "Q_ref cell count",
+    "Q_aut orbit count",
+    "statistical degrees of freedom under each"
+  ],
+  "phase": "S",
+  "reading": "these are measured wall-clock numbers on the searched sizes and nothing is extrapolated beyond them. The refinement is polynomial by construction; the exact compiler searches a product of symmetric groups and is factorial in carrier cardinality in the worst case, which is why the declared size bounds exist. Where the exact compiler looks cheap here it is because sound pruning happens to be effective on a highly structured world, not because the worst case improved",
+  "schema": "gpt-01728-phase-s-cost-report/v1",
+  "seconds": {
+    "canonicality_audits": 4.651409,
+    "equality_replay": 0.022817,
+    "search": 58.854386,
+    "total_wall_clock": 63.659664,
+    "witnesses_and_counterfactuals": 0.113533
+  },
+  "total_Q_aut_seconds": 56.047964,
+  "total_Q_ref_seconds": 1.440484,
+  "worst_single_world": "quasigroup:n=8:square=0",
+  "worst_single_world_Q_aut_seconds": 9.999444
+}
