@@ -1,0 +1,29 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.24-Code-attachments/training_economy.py": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+      "../017.24a-Code-attachments/quotient_refinement.py": "9fcf033500b33cc9665a58ab04a24e6d7921417a5789cc7039550823eda7085f",
+      "compiler_scope.py": "d8a57e810676b74fbd07395542afda8682c417082a371f2a138f02d3b13fd525",
+      "phase_s_certificate.json": "5dff9481109cb70b84b0669c37e4a4fc9a235201c6a4e926a6ec9cfcdfb56275",
+      "preregistration.json": "cb3915f8daa687c1fe97f9d248f1402bf68de9790b269f3e0474b95b0a09b1cc"
+    },
+    "phase_s_commit": "b973940a12be7effc4fd71a43e3d4bd9a4f17eca",
+    "phase_s_freeze": "quilt+s3://protology#package=occurrence/gpt@3f0fcafe36df11bd2c80c9c988b584de3078a3c100aecb607d11b6bac526044b&path=issues/017-jev-pivot/017.28a-Kiro-phase-S-compiler-scope-freeze.md",
+    "prior_result_commit": "2817b8c1a1d0e6b10d4ea6ac16d1bbce35df06a8",
+    "task": "quilt+s3://protology#package=occurrence/gpt@e5289c582121bda62394321bf73b4b476f9bb23c49eb6efd19044c14366009f1&path=issues/017-jev-pivot/017.28-Task-compiler-scope-refinement-versus-exact-automorphism.md"
+  },
+  "environment": {
+    "python": "3.12.11"
+  },
+  "fits": 220000,
+  "phase": "T",
+  "schema": "gpt-01728-phase-t-cost-report/v1",
+  "seconds": {
+    "assemble_and_recompile_the_designated_fixtures": 0.075079375,
+    "closed_form_sweep": 10.625853667,
+    "exact_reference_and_approximation_floors": 2.878225584,
+    "secondary_prior_sweep": 0.699213375,
+    "total_wall_clock": 14.280480917
+  },
+  "structural_compilation_cost_from_phase_S": "see phase_s_cost_report.json; compilation cost is a Phase S measurement and is not re-measured here"
+}

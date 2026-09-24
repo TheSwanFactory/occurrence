@@ -52,10 +52,56 @@ def test_the_017_26_certificate_pin_holds() -> None:
     )
 
 
-def test_no_label_generator_is_reachable() -> None:
-    audit = scope.source_fence_audit()
-    assert audit["no_label_generator_is_reachable"]
-    assert audit["modules_matching_a_label_bearing_name"] == []
+def test_no_label_generator_is_reachable_in_a_clean_process() -> None:
+    """The fence is about this module's import graph, so isolate the process.
+
+    POST-FREEZE CORRECTION to this test file only, disclosed in the result. The
+    module's ``source_fence_audit`` scans ``sys.modules``, which is process-global.
+    Running the Phase T tests in the same pytest process legitimately loads the
+    017.24 label generator -- Phase T is supposed to -- and that would make an
+    in-process assertion here fail for a reason that has nothing to do with Phase
+    S. Spawning a clean interpreter that loads only ``compiler_scope`` is the
+    check that was always intended, and it is strictly stronger: it shows that
+    importing Phase S *by itself* pulls in no label generator.
+    ``compiler_scope.py`` and ``phase_s_certificate.json`` are untouched and
+    their pins still hold.
+    """
+    import subprocess
+    import textwrap
+
+    program = textwrap.dedent(
+        f"""
+        import importlib.util, json, sys
+        spec = importlib.util.spec_from_file_location("only_scope", {str(MODULE_PATH)!r})
+        module = importlib.util.module_from_spec(spec)
+        sys.modules["only_scope"] = module
+        spec.loader.exec_module(module)
+        audit = module.source_fence_audit()
+        print(json.dumps({{
+            "reachable": audit["no_label_generator_is_reachable"],
+            "matching": audit["modules_matching_a_label_bearing_name"],
+            "tokens": audit["forbidden_tokens_found"],
+        }}))
+        """
+    )
+    completed = subprocess.run(
+        [sys.executable, "-c", program],
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    audit = json.loads(completed.stdout.strip().splitlines()[-1])
+    assert audit["reachable"]
+    assert audit["matching"] == []
+    assert audit["tokens"] == []
+
+
+def test_the_banked_certificate_recorded_a_clean_fence() -> None:
+    """The freeze was written by a clean process, and it says so."""
+    certificate = json.loads(scope.CERTIFICATE_PATH.read_text())
+    fences = certificate["F_canonicality"]["source_fences"]
+    assert fences["no_label_generator_is_reachable"]
+    assert fences["modules_matching_a_label_bearing_name"] == []
 
 
 def test_no_target_vocabulary_on_the_refinement_or_generator_path() -> None:
