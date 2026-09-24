@@ -1,0 +1,30 @@
+{
+  "authority": {
+    "byte_pinned_inputs": {
+      "../017.24-Code-attachments/training_economy.py": "821d263a6401f8bc3b929e0e855fe6533dbdd573ecc7f07bab669495a9167e79",
+      "../017.24a-Code-attachments/quotient_refinement.py": "9fcf033500b33cc9665a58ab04a24e6d7921417a5789cc7039550823eda7085f",
+      "derived_symmetry.py": "e7074a60ed460b7b98d7f234e3af06aec169e5ae526e477c62e1e8799d0f2e3b",
+      "phase_s_certificate.json": "f2e36998f0e5715d785d5dd0a86790fc32604040334c8250d2fd6c845c29709a",
+      "preregistration.json": "55dc5c7a452d2b6ef4cb7429d4e0111ac54c598b317fc7006d576ba1f52735d1"
+    },
+    "execution_contract": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26b-GPT-owner-tightening-derived-symmetry-execution-contract.md",
+    "phase_s_commit": "08437b1b418c89dc7c2974a172a4ef965406ca65",
+    "phase_s_freeze": "quilt+s3://protology#package=occurrence/gpt@57da798c3beee322e425f613c8e61496b3d9ab74655dc1367388b8219a3682af&path=issues/017-jev-pivot/017.26c-Kiro-phase-S-structure-freeze.md",
+    "prior_result_commit": "2cb043a7c92ad16b9e9df784fce82d3d61531b24",
+    "task": "quilt+s3://protology#package=occurrence/gpt@be3d592a9c1a975f52cc292d6bfb6689c8c63d3c8bfadcbe796c427f1399657b&path=issues/017-jev-pivot/017.26-Task-derived-symmetry-from-typed-world-structure.md"
+  },
+  "environment": {
+    "numpy": "2.5.1",
+    "python": "3.12.11"
+  },
+  "phase": "T",
+  "reading": "derivation cost is the compile column and it is a fraction of a second on both worlds, against minutes of fitting. That is a fact about these worlds and not a general claim: the search is exhaustive over a product of symmetric groups and is factorial in carrier cardinality in the worst case.",
+  "schema": "gpt-01726-phase-t-cost-report/v1",
+  "seconds": {
+    "closed_form_fitting": 6.0505629999,
+    "compile_and_assemble": 0.2877724161,
+    "exact_reference": 11.7157832081,
+    "learned_fitting": 284.8980973328,
+    "total_wall_clock": 303.1971313339
+  }
+}

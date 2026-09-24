@@ -1,0 +1,500 @@
+{
+  "conditions": {
+    "C_scrambled_compiler": {
+      "name": "scrambled-world quotient",
+      "path": "replace one primitive with a non-isomorphic one of the same cardinality, recompile, fit that quotient",
+      "purpose": "shows the compiler follows declared structure and not superficial counts"
+    },
+    "D": {
+      "name": "derived structural compiler",
+      "parameters": "k, the number of derived cells: 4 on A and 5 on B",
+      "path": "run the Phase S compiler, derive Aut(A_Sigma), derive the orbit quotient, fit one observable probability per derived cell",
+      "receives": "the declared world only"
+    },
+    "H": {
+      "name": "handed-quotient oracle",
+      "parameters": "k",
+      "path": "read the cell membership lists out of the committed Phase S certificate without calling the compiler, then fit with the identical estimator",
+      "receives": "q_Sigma outright",
+      "required_check": "predictions_D = predictions_H in every replicate. 017.26b section 8 requires the turn to stop and repair rather than interpret if they differ."
+    },
+    "P_without_X": {
+      "name": "single-primitive coarser quotient",
+      "path": "erase one declared primitive, recompile from scratch, fit one probability per cell of the resulting coarser quotient",
+      "purpose": "017.26b section 10 requires that no coarser partition produced by any individual primitive be sufficient. These conditions measure that rather than assert it."
+    },
+    "R": {
+      "forbidden": "Aut(A_Sigma), canonical labelling, and any equivalent global structural quotient, including the disclosed pair refinement, per 017.26b section 8",
+      "name": "preregistered shortcut learner",
+      "parameters": 2,
+      "path": "one observable probability per L_k cell",
+      "purpose": "the explicit cheaper-explanation adversary. Its exact floor is 0.040527 on A and 0.054445 on B, so it provably cannot reach the truth on either fixture.",
+      "receives": "the frozen L_k partition of the admitted inputs"
+    },
+    "S": {
+      "name": "saturated model",
+      "parameters": "one per admitted input, 49 on A and 27 on B",
+      "status": "ablation, and a fair uncompiled comparator in regime A"
+    },
+    "U_family": {
+      "U_best": "per cell, whichever preregistered variant performed best; deliberately conservative against the thesis, and the row the burden criterion is scored against",
+      "U_shortcut": "handed the frozen L_k feature values outright as extra columns, so it does not have to discover the cheap statistic",
+      "name": "same-information generic learners",
+      "not_crippled": "a span certificate exhibits weights making the quadratic design compute every cell indicator exactly, and a single-input indicator too",
+      "receives": "a label-free encoding containing the complete declared extension of every primitive, plus a model-selection ladder",
+      "variants": [
+        "U_fixed",
+        "U_earlystop",
+        "U_selected",
+        "U_quadratic",
+        "U_ladder",
+        "U_shortcut"
+      ]
+    },
+    "W_wrong_compiler": {
+      "name": "cardinality-matched wrong partition",
+      "path": "move the k lexicographically least members of each derived cell into the next cell cyclically, preserving every cardinality",
+      "purpose": "shows that having the right number of parameters in the right sizes is not the mechanism"
+    }
+  },
+  "controls": {
+    "inherited": "the scramble and the cardinality-matched wrong partition, generalized to any number of cells",
+    "new": {
+      "handed_oracle_by_a_second_path": "H reads the banked certificate rather than calling the compiler, so D equals H tests reproduction of the freeze and not merely a shared code path",
+      "single_primitive_quotients": "one condition per declared primitive, carrying the quotient that survives erasing it. On Fixture B the frozen L_k partition turns out to coincide exactly with the quotient that survives erasing adjacent, which is a fact about the fixture worth reporting rather than hiding."
+    }
+  },
+  "declared_predictions": {
+    "D_equals_H_prediction": "bit-identical exact predictions in all 14400 replicate comparisons, because H is handed the same partition D derives and the estimator is shared",
+    "control_predictions": "W_wrong_compiler carries a strictly positive floor on both fixtures despite having exactly the derived number of cells in exactly the derived cardinalities. C_scrambled_compiler carries a positive floor on A and degenerates to the saturated model on B, because a scrambled world has no symmetry at all.",
+    "falsification": "if the measured curves do not reproduce these exact values within four standard errors in every regime A cell, the implementation is wrong and this turn reports that instead of a scientific finding",
+    "headline_prediction": "D reaches 0.02 excess NLL at n = 128 and 0.01 at n = 256 on both fixtures. R never reaches 0.02 on either, being floored at 0.040527 on A and 0.054445 on B. S never reaches 0.02 on A and first reaches it at n = 1024 on B.",
+    "method": "the generalized 017.24a exact reference, imported byte-pinned: excess log loss is additive across cells and a cell's estimator depends only on its own observation count, which is marginally binomial",
+    "prediction_that_cuts_against_the_thesis": "at n = 4 the two-parameter R is expected to beat the four-parameter D on Fixture A, 0.1220 against 0.1252, because four parameters estimated from four labels is worse than two. That advantage is predicted to exist at n = 4 and only there, and not to exist at all on Fixture B, where D is already ahead at n = 4 at 0.1343 against 0.1382. An R advantage extending past n = 8 on either fixture would weaken this turn's story rather than strengthen it.",
+    "regime_A_exact_expected_excess_nll": {
+      "A": {
+        "C_scrambled_compiler": {
+          "1024": 0.0451787574,
+          "4": 0.1523156925,
+          "64": 0.1288967943,
+          "cells": 42,
+          "floor": 0.0267723691,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "D": {
+          "1024": 0.0019339448,
+          "4": 0.1252001072,
+          "64": 0.0259147532,
+          "cells": 4,
+          "floor": 0.0,
+          "n_at_0.01": 256,
+          "n_at_0.02": 128
+        },
+        "H": {
+          "1024": 0.0019339448,
+          "4": 0.1252001072,
+          "64": 0.0259147532,
+          "cells": 4,
+          "floor": 0.0,
+          "n_at_0.01": 256,
+          "n_at_0.02": 128
+        },
+        "P_without_incident": {
+          "1024": 0.1483743771,
+          "4": 0.2137470387,
+          "64": 0.155401022,
+          "cells": 1,
+          "floor": 0.1478872898,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "R": {
+          "1024": 0.0414993319,
+          "4": 0.1220441924,
+          "64": 0.055062142,
+          "cells": 2,
+          "floor": 0.0405269852,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "S": {
+          "1024": 0.0211774625,
+          "4": 0.1506492633,
+          "64": 0.1150012805,
+          "cells": 49,
+          "floor": 0.0,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "W_wrong_compiler": {
+          "1024": 0.0563741271,
+          "4": 0.1445328238,
+          "64": 0.0810456767,
+          "cells": 4,
+          "floor": 0.0544368629,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        }
+      },
+      "B": {
+        "C_scrambled_compiler": {
+          "1024": 0.0123665247,
+          "4": 0.1535044832,
+          "64": 0.0961572939,
+          "cells": 27,
+          "floor": 0.0,
+          "n_at_0.01": null,
+          "n_at_0.02": 1024
+        },
+        "D": {
+          "1024": 0.0024105967,
+          "4": 0.1342664098,
+          "64": 0.0318476195,
+          "cells": 5,
+          "floor": 0.0,
+          "n_at_0.01": 256,
+          "n_at_0.02": 128
+        },
+        "H": {
+          "1024": 0.0024105967,
+          "4": 0.1342664098,
+          "64": 0.0318476195,
+          "cells": 5,
+          "floor": 0.0,
+          "n_at_0.01": 256,
+          "n_at_0.02": 128
+        },
+        "P_without_adjacent": {
+          "1024": 0.0554167664,
+          "4": 0.1382126495,
+          "64": 0.0688159609,
+          "cells": 2,
+          "floor": 0.0544448519,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "P_without_district": {
+          "1024": 0.1557894895,
+          "4": 0.2212617295,
+          "64": 0.1628164459,
+          "cells": 1,
+          "floor": 0.155302401,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "R": {
+          "1024": 0.0554167664,
+          "4": 0.1382126495,
+          "64": 0.0688159609,
+          "cells": 2,
+          "floor": 0.0544448519,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        },
+        "S": {
+          "1024": 0.0123665247,
+          "4": 0.1535044832,
+          "64": 0.0961572939,
+          "cells": 27,
+          "floor": 0.0,
+          "n_at_0.01": null,
+          "n_at_0.02": 1024
+        },
+        "W_wrong_compiler": {
+          "1024": 0.0526628021,
+          "4": 0.1479914048,
+          "64": 0.0820036342,
+          "cells": 5,
+          "floor": 0.0502457227,
+          "n_at_0.01": null,
+          "n_at_0.02": null
+        }
+      }
+    },
+    "regime_B_asymptotic_floors_on_unseen_identities": {
+      "A": {
+        "C_scrambled_compiler": {
+          "floor_max": 0.3575788949,
+          "floor_mean_over_every_split": 0.213981742,
+          "floor_min": 0.1436831327
+        },
+        "D": {
+          "floor_max": 0.0,
+          "floor_mean_over_every_split": 0.0,
+          "floor_min": 0.0
+        },
+        "H": {
+          "floor_max": 0.0,
+          "floor_mean_over_every_split": 0.0,
+          "floor_min": 0.0
+        },
+        "P_without_incident": {
+          "floor_max": 0.1599845171,
+          "floor_mean_over_every_split": 0.1599845171,
+          "floor_min": 0.1599845171
+        },
+        "R": {
+          "floor_max": 0.0424946298,
+          "floor_mean_over_every_split": 0.0424946298,
+          "floor_min": 0.0424946298
+        },
+        "S": {
+          "floor_max": 0.161035341,
+          "floor_mean_over_every_split": 0.161035341,
+          "floor_min": 0.161035341
+        },
+        "W_wrong_compiler": {
+          "floor_max": 0.3041319557,
+          "floor_mean_over_every_split": 0.0709129114,
+          "floor_min": 0.0299225079
+        }
+      },
+      "B": {
+        "C_scrambled_compiler": {
+          "floor_max": 0.1592582373,
+          "floor_mean_over_every_split": 0.1592582373,
+          "floor_min": 0.1592582373
+        },
+        "D": {
+          "floor_max": 0.0,
+          "floor_mean_over_every_split": 0.0,
+          "floor_min": 0.0
+        },
+        "H": {
+          "floor_max": 0.0,
+          "floor_mean_over_every_split": 0.0,
+          "floor_min": 0.0
+        },
+        "P_without_adjacent": {
+          "floor_max": 0.0544448519,
+          "floor_mean_over_every_split": 0.0544448519,
+          "floor_min": 0.0544448519
+        },
+        "P_without_district": {
+          "floor_max": 0.155302401,
+          "floor_mean_over_every_split": 0.155302401,
+          "floor_min": 0.155302401
+        },
+        "R": {
+          "floor_max": 0.0544448519,
+          "floor_mean_over_every_split": 0.0544448519,
+          "floor_min": 0.0544448519
+        },
+        "S": {
+          "floor_max": 0.1592582373,
+          "floor_mean_over_every_split": 0.1592582373,
+          "floor_min": 0.1592582373
+        },
+        "W_wrong_compiler": {
+          "floor_max": 0.2441360641,
+          "floor_mean_over_every_split": 0.1028599996,
+          "floor_min": 0.0177138854
+        }
+      }
+    },
+    "regime_B_saturated_prediction": "S carries a floor of 0.161 on A and 0.159 on B against D's exact zero, because a per-identity model has nothing to say about an identity it never saw",
+    "status": "computed in closed form from theta_star and the derived quotients, with no simulation and no label anywhere in the computation"
+  },
+  "estimator": {
+    "applies_to": [
+      "D",
+      "H",
+      "R",
+      "S",
+      "every P_without_X",
+      "W_wrong_compiler",
+      "C_scrambled_compiler"
+    ],
+    "fairness": "every condition is refit from the same per-input sufficient counts of the same observations, which enforces identical labelled data structurally rather than by convention",
+    "primary": "beta(1,1) posterior mean, (k + 1) / (m + 2)",
+    "secondary": "beta(1/2,1/2) posterior mean",
+    "unobserved_parameter_value": 0.5
+  },
+  "fixtures": [
+    {
+      "admitted_inputs": 49,
+      "carriers": {
+        "Line": 7,
+        "Point": 7
+      },
+      "derived_cells": [
+        7,
+        14,
+        14,
+        14
+      ],
+      "derived_group_order": 14,
+      "derived_quotient_strictly_refines_the_shortcut_partition": true,
+      "frozen_shortcut_language_partition": [
+        21,
+        28
+      ],
+      "holdout_per_cell": [
+        2,
+        3,
+        3,
+        3
+      ],
+      "id": "A",
+      "primitives": [
+        "incident : relation over Point x Line, 21 rows"
+      ],
+      "role": "single-relation control; cannot earn a Strong positive alone",
+      "schema": "gpt-01726-single-relation-world/v1",
+      "sha256": "9f5262583012fb01aa4a9508d3abe3bfd9bb8135bd172d8342dc755004e7fc67",
+      "theta_star": [
+        "1/8",
+        "3/8",
+        "5/8",
+        "7/8"
+      ]
+    },
+    {
+      "admitted_inputs": 27,
+      "carriers": {
+        "District": 3,
+        "Site": 9
+      },
+      "derived_cells": [
+        3,
+        6,
+        6,
+        6,
+        6
+      ],
+      "derived_group_order": 6,
+      "derived_quotient_strictly_refines_the_shortcut_partition": true,
+      "frozen_shortcut_language_partition": [
+        9,
+        18
+      ],
+      "holdout_per_cell": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "id": "B",
+      "joint_load_bearing": "erasing adjacent takes |Aut| from 6 to 1296 and the quotient from 5 cells to 2; erasing district takes it to 108 and to 1 cell. Neither primitive is decoration.",
+      "primitives": [
+        "adjacent : relation over Site x Site, 18 rows",
+        "district : operation Site -> District, total"
+      ],
+      "role": "richer multi-primitive world, required by 017.26b section 5 for a Strong positive",
+      "schema": "gpt-01726-multi-primitive-world/v1",
+      "sha256": "79412d9349c9413831bb44cae6bcd332ae265a6928facb2d7a7ec161c0b32b5d",
+      "theta_star": [
+        "1/10",
+        "3/10",
+        "1/2",
+        "7/10",
+        "9/10"
+      ]
+    }
+  ],
+  "forbidden_conclusions": [
+    "that Training requires N labels unless a schema compiler supplies the quotient",
+    "that the schema contains information unavailable to U; D and U receive the same source information and D additionally receives a deterministic symbolic algorithm",
+    "any learner-independent sample-complexity claim",
+    "that TDM compilation is automorphism quotienting; Q_aut is one preregistered exact structural compiler and other schema-derived quotients are untouched",
+    "that no cheaper derivation of q_Sigma exists; one already does and is disclosed in the Phase S freeze",
+    "language-scale sample-efficiency gains, or any comparison to a language model",
+    "that OT is responsible for any measured gain",
+    "that either fixture is representative of anything beyond itself"
+  ],
+  "frozen_before": "any label of either fixture was generated. This file and the module that pins it are committed before the experiment runs.",
+  "ground_truth": {
+    "chosen_when": "after the Phase S freeze was committed and banked, as 017.26b section 7 requires",
+    "generated_from": "the derived automorphism-orbit quotient of each world",
+    "index_convention": "cells ordered by cardinality then by least member in declared input order; no condition receives theta_star",
+    "interior_only": true,
+    "rationale": "evenly spaced strictly interior values fixed by a rule rather than chosen, so no separation is selected to flatter any condition. The same rule 017.24a used, so the two turns are comparable.",
+    "rule": "lambda*_c = (2c + 1) / (2k) for k derived cells, indexed in the canonical cell order",
+    "secondary_estimator": "beta(1/2,1/2) on a reduced grid, to check that no conclusion depends on the prior",
+    "section_10_constraints_verified": "every probability interior, not all equal, and every coarser partition any single primitive or the frozen L_k can support carries a strictly positive asymptotic floor. Verified mechanically, reported in the results as the sufficiency certificate."
+  },
+  "metrics": {
+    "cost": [
+      "compile seconds",
+      "exact reference seconds",
+      "closed-form fit seconds",
+      "learned fit seconds"
+    ],
+    "primary": "excess held-out negative log loss against the Bayes-optimal predictor",
+    "secondary": [
+      "Brier score",
+      "ten-bin calibration error",
+      "per-cell excess NLL"
+    ]
+  },
+  "phase_fence": {
+    "how_the_fence_is_enforced": "the Phase S module imports no statistical module, so it cannot have seen a label; the Phase T module imports the Phase S module byte-pinned, so the group and quotient measured against here are provably the ones banked before theta_star existed.",
+    "phase_s_certificate_sha256": "f2e36998f0e5715d785d5dd0a86790fc32604040334c8250d2fd6c845c29709a",
+    "phase_s_commit": "08437b1b418c89dc7c2974a172a4ef965406ca65",
+    "phase_s_module_sha256": "e7074a60ed460b7b98d7f234e3af06aec169e5ae526e477c62e1e8799d0f2e3b",
+    "phase_s_quilt_revision": "57da798c3beee322e425f613c8e61496b3d9ab74655dc1367388b8219a3682af",
+    "requirement": "017.26b section 7 requires the Phase S structural freeze to be committed before theta_star and label seeds are introduced, and forbids Phase T from beginning until then.",
+    "what_theta_star_could_not_have_influenced": [
+      "the declared worlds",
+      "the compiler and its preservation rules",
+      "the derived groups and input quotients",
+      "the frozen shortcut language L_k and its audit",
+      "the disclosed non-local adversary result",
+      "the source perturbations and their frozen directions"
+    ]
+  },
+  "regimes": {
+    "A": "train and evaluate under the uniform distribution on every admitted input; exact expected loss in closed form",
+    "B": "hold out whole input identities stratified by derived cell with the per-fixture holdout vector; train only on observations from seen identities; evaluate exactly on the unseen ones"
+  },
+  "replicates": {
+    "closed_form_conditions": 400,
+    "learned_conditions": 100
+  },
+  "research_question": "Can a generic compiler derive useful invariance from an ordinary typed description of a world before any target exists, and is that invariance worth anything in labelled-data burden once a target does exist?",
+  "sample_sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "schema": "gpt-01726-phase-t-preregistration/v1",
+  "seeds": {
+    "base": 20260927,
+    "learner_initialization_offset": 500000000,
+    "note": "a base distinct from 017.24 at 20260923 and 017.24a at 20260924, so this turn's observations are independent of every banked one"
+  },
+  "stop_condition": "stop after the first clean test of derived rather than declared symmetry on these two worlds. Do not scale the fixtures for realism, do not move to embeddings, text, transformers, or external corpora, and do not resolve Issue 018.",
+  "turn": "occurrence/gpt Issue 017.26 Phase T, executed under the 017.26b owner execution contract",
+  "verdict_rule": {
+    "burden_criterion": "in regime A, the smallest declared n at which mean excess NLL reaches 0.02. Material means the comparator needs at least twice as many labels as D, or never reaches the threshold on the declared grid. Scored against U_best and S, and required on both fixtures rather than one, which is stricter than the contract asks.",
+    "cheap_statistic_collapse": "a frozen L_k statistic recovers the relevant quotient on a key fixture",
+    "honest_ceiling": "even if every criterion holds, the finding remains a statement about two finite worlds of 49 and 27 admitted inputs",
+    "implementation_defect": "checked first and outranking every scientific verdict; D not equalling H is the trigger",
+    "negative": "the quotient requires undeclared symmetry knowledge, generic compilation fails, the perturbations do not behave as predicted, or the derived quotient is not useful under fair controls",
+    "source": "017.26b section 11",
+    "strong_positive_requires_all_seven": [
+      "no symmetry or equivalence metadata is declared",
+      "generic schema-semantic compilation derived the exact groups and input quotients before theta_star existed",
+      "D equals H statistically",
+      "the relevant quotient is not recoverable by the frozen L_k",
+      "source perturbations changed or preserved the compiler output exactly as structural preservation predicts",
+      "the richer fixture demonstrates joint primitive load-bearing",
+      "D shows materially lower labelled-data burden than at least one fair uncompiled comparator on a preregistered predictive criterion"
+    ],
+    "structural_positive": "criteria one to six hold and the burden criterion fails, or only the single-relation fixture succeeds"
+  },
+  "what_this_turn_changes_against_017_25a": {
+    "continuity_check": "on Fixture A the frozen L_k partition turns out to be the 21/28 relation partition, and its exact floor 0.040527 reproduces the 017.24a circulant floor to every reported digit under the same theta_star rule. That agreement is a cross-check on the shared machinery and is reported as one.",
+    "fixture_added": "a richer world whose invariance arises from joint preservation of two primitives of different kinds, which 017.26b section 5 makes mandatory for a Strong positive.",
+    "second_shortcut_removed": "017.25a's cheaper-explanation adversary was a single hand-chosen statistic, the relation bit. Here it is a preregistered finite language L_k enumerated exhaustively from the declared primitives.",
+    "shortcut_removed": "017.25a handed the compiler a declared generating set. Here nothing symmetric is declared at all: the compiler derives Aut(A_Sigma) from the declared kinds and signatures of ordinary primitives."
+  }
+}
