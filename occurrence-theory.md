@@ -5,6 +5,8 @@
 **E. N. Prabhakar** ([Radical Centrism](https://radicalcentrism.org) / [iHack.us](https://ihack.us))
 with **Bench d'Claude** (Anthropic) and **Précis d'ChatGPT** (OpenAI)
 
+**Version 1.4 — October 4, 2026**
+
 **Ledger notation.** Every substantive claim carries exactly one tag:
 **[T]** theorem (proof from stated identities); **[C]** computation (exact numerical certificate, threshold 10⁻¹²); **[M]** measurement (Monte Carlo, with error bars); **[I]** interpretation; **[X]** conjecture. Claims without tags are definitions or conventions.
 
@@ -39,6 +41,8 @@ The discipline throughout: *discovery* is what the algebra forces; *orientation*
 ## 3. Sedenion Settlement Dynamics
 
 **Definition 3.1.** Let 𝕊 = A₄ be the 16-dimensional Cayley–Dickson algebra over ℝ (γ = −1 at each doubling), with basis e₀,…,e₁₅, positive-definite form ⟨·,·⟩, conjugation x̄ = 2⟨x,e₀⟩e₀ − x, and left/right multiplication operators L_x, R_x. Call x *pure* if ⟨x,e₀⟩ = 0. Write M_x := L_xᵀL_x and T_x := L_{x²} − L_x² (the **alternator**).
+
+**Metric provenance remark.** The displayed positive form is the constituted Euclidean form `g_E`. It is reconstructible from multiplication alone: `Re(x)=tr(L_x)/16`, conjugation follows from Re, and `g_E(x,y)=Re(x·ȳ)`. This does not make `g_E` uniquely canonical: multiplication also supplies non-proportional natural symmetric forms, including a positive-definite one. Consequently conjugation and purity are algebraically reconstructible without taking an inner product as primitive, while the paper's strain/positive-channel formulas remain statements of the constituted Euclidean theory.
 
 **Theorem 3.2 (structure; Eakin–Sathaye 1990, verified).** Aut(𝕊) = G₂ × S₃, acting with isotypic decomposition 𝕊 = 1 ⊕ 1′ ⊕ (7 ⊗ 2): the identity line ℝe₀, the axis line ℝe₈ (carrying the sign character of S₃), and the 14-dimensional pencil W. Consequences [T]: 𝕊 has exactly eight Aut-invariant subspaces; ℝe₈ is the unique invariant line other than ℝe₀; the spine S = span{e₀, e₈} is the unique invariant plane. S is a subalgebra isomorphic to ℂ; ψ (the generator of S₃/⟨τ⟩) restricts to S as complex conjugation, giving the exact sequence 1 → ⟨τ⟩ → S₃ → Gal(ℂ/ℝ) → 1.
 
@@ -93,6 +97,8 @@ Every eigenvalue lies in (1/7)·{0, ±1, ±3, ±2√3, ±7}; every multiplicity 
 ## 4. Orientation
 
 **Definition 4.1.** An **orientation** of SSD is the designation of one argument of the product as *retained* (carried recursively forward) and the other as *sampled* (drawn i.i.d. from (Σ, μ)). The oriented process on rays is x_{t+1} = z_t x_t / ‖z_t x_t‖, z_t ∼ μ.
+
+Intrinsically, the crack and recurrence are projective: the Event object is the zero-divisor ray `[z]` and the successor is `[zx]`; the unit and normalized formulas choose the `g_E` representatives used in this paper.
 
 **Philosophical note.** The orientation is not an additional algebraic operation. It is an assignment of operational roles to an already existing algebraic product — a choice of *interpretation*, not a choice of *mathematics*. This is the precise distinction between discovery (SSD) and definition (OT).
 
